@@ -150,4 +150,15 @@
     <string name="content_pack_section">КОНТЕНТ-ПАК</string>
     <string name="numeric_answer_hint">Введи число</string>
     <string name="submit_answer">Проверить ответ</string>
+    <string name="multi_choice_hint">Выбери все верные варианты и проверь</string>
+    <string name="daily_plan">План подготовки на сегодня</string>
+    <string name="daily_plan_summary">%1$d заданий · %2$d повторений подошли</string>
+    <string name="daily_plan_focus">Фокус: %1$s</string>
+    <string name="daily_plan_start">Начать план на сегодня</string>
+    <string name="workshop_home">База · построено %1$d/%2$d</string>
+    <string name="workshop_title">База-мастерская</string>
+    <string name="workshop_caption">Строй постоянную базу за кристаллы, заработанные учёбой. Постройки не меняют сложность и результаты заданий.</string>
+    <string name="workshop_built">Построено</string>
+    <string name="workshop_build">Построить · 💎 %1$d · уровень %2$d</string>
+    <string name="workshop_level_needed">Для этой постройки нужен уровень %1$d.</string>
 </resources>

@@ -63,6 +63,7 @@ public class MainActivity extends Activity {
     private ActivityStore activity;
     private ShopStore shop;
     private DigitalRewardStore digitalRewards;
+    private WorkshopStore workshop;
     private MiniGameHost miniGames;
     private UpdateManager updater;
 
@@ -91,6 +92,7 @@ public class MainActivity extends Activity {
         activity = new ActivityStore(this);
         shop = new ShopStore(this, economy);
         digitalRewards = new DigitalRewardStore(this, economy);
+        workshop = new WorkshopStore(this, economy);
         miniGames = new MiniGameHost(this, economy);
         audio = new AudioEngine(this);
         rewards = new RewardFx(this);
@@ -152,6 +154,8 @@ public class MainActivity extends Activity {
         root.addView(activityCard());
         root.addView(space(10));
         root.addView(nextFocusCard());
+        root.addView(space(10));
+        root.addView(dailyPlanCard());
         root.addView(space(16));
 
         Button play = primaryButton(getString(R.string.play));
@@ -201,6 +205,13 @@ public class MainActivity extends Activity {
         LinearLayout.LayoutParams slp = matchWrap();
         slp.topMargin = dp(8);
         root.addView(shopButton, slp);
+
+        Button workshopButton = secondaryButton(getString(R.string.workshop_home,
+                workshop.builtCount(), workshop.items().size()));
+        workshopButton.setOnClickListener(v -> showWorkshop());
+        LinearLayout.LayoutParams wlp = matchWrap();
+        wlp.topMargin = dp(8);
+        root.addView(workshopButton, wlp);
 
         Button gameBreak = secondaryButton(getString(R.string.play_break, playCredits.balance()));
         gameBreak.setEnabled(playCredits.canStartGame());
@@ -435,9 +446,7 @@ public class MainActivity extends Activity {
             input.setHint(getString(R.string.numeric_answer_hint));
             input.setTextSize(22);
             input.setSingleLine(true);
-            input.setInputType(InputType.TYPE_CLASS_NUMBER
-                    | InputType.TYPE_NUMBER_FLAG_DECIMAL
-                    | InputType.TYPE_NUMBER_FLAG_SIGNED);
+            input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
             input.setPadding(dp(16), dp(12), dp(16), dp(12));
             input.setBackground(roundRect(CARD, 14, 1, SOFT));
             root.addView(input, matchWrap());
@@ -452,6 +461,36 @@ public class MainActivity extends Activity {
                 submit.setEnabled(false);
                 handleAnswerResult(root, q, correct, -1,
                         Collections.emptyList(), contextForAnswer);
+            });
+        } else if ("multi_choice".equals(q.interaction)) {
+            TextView hint = text(getString(R.string.multi_choice_hint), 13, MUTED, Typeface.BOLD);
+            hint.setPadding(0, 0, 0, dp(8));
+            root.addView(hint);
+            Set<Integer> selected = new HashSet<>();
+            for (int i = 0; i < q.options.size(); i++) {
+                final int answerIndex = i;
+                Button button = answerButton(q.options.get(i));
+                LinearLayout.LayoutParams blp = matchWrap();
+                blp.bottomMargin = dp(10);
+                root.addView(button, blp);
+                answerButtons.add(button);
+                button.setOnClickListener(v -> {
+                    if (selected.contains(answerIndex)) {
+                        selected.remove(answerIndex);
+                        button.setBackground(roundRect(CARD, 14, 1, SOFT));
+                    } else {
+                        selected.add(answerIndex);
+                        button.setBackground(roundRect(Color.rgb(225, 232, 255), 14, 2, PRIMARY));
+                    }
+                });
+            }
+            Button submit = primaryButton(getString(R.string.submit_answer));
+            root.addView(submit, matchWrap());
+            submit.setOnClickListener(v -> {
+                submit.setEnabled(false);
+                for (Button button : answerButtons) button.setEnabled(false);
+                handleAnswerResult(root, q, q.acceptsIndices(selected), -1,
+                        answerButtons, contextForAnswer);
             });
         } else {
             for (int i = 0; i < q.options.size(); i++) {
@@ -532,7 +571,7 @@ public class MainActivity extends Activity {
         for (int i = 0; i < buttons.size(); i++) {
             Button b = buttons.get(i);
             b.setEnabled(false);
-            if (i == q.correctIndex) {
+            if (i == q.correctIndex || ("multi_choice".equals(q.interaction) && q.correctIndices.contains(i))) {
                 b.setBackground(roundRect(Color.rgb(221, 245, 234), 14, 2, GOOD));
                 b.setTextColor(Color.rgb(15, 105, 67));
             } else if (i == chosen) {
@@ -1048,6 +1087,72 @@ public class MainActivity extends Activity {
         }
 
         setScrollable(root);
+    }
+
+    private View dailyPlanCard() {
+        PreparationPlan plan = PreparationPlan.create(progress, trainingTarget);
+        LinearLayout card = column();
+        card.setPadding(dp(18), dp(15), dp(18), dp(15));
+        card.setBackground(roundRect(CARD, 18, 1, SOFT));
+        card.addView(text(getString(R.string.daily_plan), 17, INK, Typeface.BOLD));
+        card.addView(text(getString(R.string.daily_plan_summary, plan.questionsToday, plan.dueReviews),
+                14, MUTED, Typeface.NORMAL));
+        List<String> labels = new ArrayList<>();
+        for (String id : plan.focusKnowledge) labels.add(QuestionBank.knowledgeLabel(id, Locale.getDefault()));
+        card.addView(text(getString(R.string.daily_plan_focus, android.text.TextUtils.join(" · ", labels)),
+                13, PRIMARY, Typeface.BOLD));
+        Button start = primaryButton(getString(R.string.daily_plan_start));
+        LinearLayout.LayoutParams lp = matchWrap();
+        lp.topMargin = dp(10);
+        card.addView(start, lp);
+        start.setOnClickListener(v -> startSession(getString(R.string.daily_plan),
+                QuestionBank.adaptiveSession(progress, plan.questionsToday, System.currentTimeMillis() / 86400000L)));
+        return card;
+    }
+
+    private void showWorkshop() {
+        LinearLayout root = column();
+        root.setPadding(dp(20), dp(20), dp(20), dp(30));
+        Button back = compactButton("←");
+        back.setOnClickListener(v -> showHome());
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
+        root.addView(space(14));
+        root.addView(text(getString(R.string.workshop_title), 28, INK, Typeface.BOLD));
+        root.addView(text(getString(R.string.workshop_caption), 14, MUTED, Typeface.NORMAL));
+        root.addView(text(getString(R.string.shop_balance_fmt, economy.balance()), 18, PRIMARY, Typeface.BOLD));
+        root.addView(space(14));
+        for (WorkshopItem item : workshop.items()) root.addView(workshopCard(item));
+        setScrollable(root);
+    }
+
+    private View workshopCard(WorkshopItem item) {
+        LinearLayout card = column();
+        card.setPadding(dp(16), dp(14), dp(16), dp(14));
+        card.setBackground(roundRect(CARD, 14, 1, SOFT));
+        card.addView(text(item.icon + "  " + item.name(Locale.getDefault()), 19, INK, Typeface.BOLD));
+        card.addView(text(item.description(Locale.getDefault()), 14, MUTED, Typeface.NORMAL));
+        Button action;
+        if (workshop.isBuilt(item)) {
+            action = secondaryButton(getString(R.string.workshop_built));
+            action.setEnabled(false);
+        } else {
+            action = secondaryButton(getString(R.string.workshop_build, item.priceCrystals, item.requiredLevel));
+            action.setOnClickListener(v -> {
+                String result = workshop.build(item, progress.level());
+                if ("built".equals(result)) showWorkshop();
+                else new AlertDialog.Builder(this)
+                        .setMessage("level".equals(result) ? getString(R.string.workshop_level_needed, item.requiredLevel)
+                                : getString(R.string.shop_not_enough))
+                        .setPositiveButton(getString(R.string.got_it), null).show();
+            });
+        }
+        LinearLayout.LayoutParams actionLp = matchWrap();
+        actionLp.topMargin = dp(9);
+        card.addView(action, actionLp);
+        LinearLayout.LayoutParams cardLp = matchWrap();
+        cardLp.bottomMargin = dp(9);
+        card.setLayoutParams(cardLp);
+        return card;
     }
 
     private View shopItemCard(ShopItem item) {

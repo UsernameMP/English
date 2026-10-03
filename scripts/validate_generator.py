@@ -70,5 +70,24 @@ with tempfile.TemporaryDirectory() as tmp:
         fail("numeric generator output must not contain answer options")
     if not numeric.get("answer"):
         fail("numeric generator output needs accepted answers")
+    if (numeric.get("answer_policy") or {}).get("tolerance") != 0:
+        fail("numeric drafts must declare an exact default tolerance")
+
+    multi_out = pathlib.Path(tmp) / "generated_multi.json"
+    subprocess.run([
+        sys.executable, str(GENERATOR),
+        "--subject", "informatics",
+        "--grade", "6",
+        "--knowledge", "CS.LOGIC.BOOLEAN",
+        "--interaction", "multi_choice",
+        "--seed", "ci-multi",
+        "--output", str(multi_out),
+    ], check=True)
+    multi = json.loads(multi_out.read_text(encoding="utf-8"))
+    option_ids = {option.get("id") for option in multi.get("options", [])}
+    if multi.get("interaction") != "multi_choice" or len(multi.get("answer", [])) < 2:
+        fail("multi_choice generator output needs multiple answers")
+    if any(answer not in option_ids for answer in multi["answer"]):
+        fail("multi_choice answers must reference option IDs")
 
 print("OK: generator schema/example/CLI")

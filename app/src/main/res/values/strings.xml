@@ -150,4 +150,15 @@
     <string name="content_pack_section">CONTENT PACK</string>
     <string name="numeric_answer_hint">Enter a number</string>
     <string name="submit_answer">Check answer</string>
+    <string name="multi_choice_hint">Select every correct option, then check</string>
+    <string name="daily_plan">Today’s preparation plan</string>
+    <string name="daily_plan_summary">%1$d questions · %2$d reviews due</string>
+    <string name="daily_plan_focus">Focus: %1$s</string>
+    <string name="daily_plan_start">Start today’s plan</string>
+    <string name="workshop_home">Workshop · %1$d/%2$d built</string>
+    <string name="workshop_title">Workshop Base</string>
+    <string name="workshop_caption">Build a lasting base with crystals earned through learning. Structures never change task difficulty or scores.</string>
+    <string name="workshop_built">Built</string>
+    <string name="workshop_build">Build · 💎 %1$d · level %2$d</string>
+    <string name="workshop_level_needed">Reach level %1$d to build this structure.</string>
 </resources>

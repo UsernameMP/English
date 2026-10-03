@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json
+import hashlib
 import pathlib
 import sys
 
@@ -19,6 +20,7 @@ LICENSES = ROOT / "app/src/main/assets/content/licenses.json"
 PRODUCTS = ROOT / "app/src/main/assets/commerce/products.json"
 KNOWLEDGE = ROOT / "app/src/main/assets/content/knowledge_units.json"
 BLUEPRINTS = ROOT / "app/src/main/assets/content/competition_blueprints.json"
+WORKSHOP = ROOT / "app/src/main/assets/game/workshop_catalog.json"
 
 def fail(msg):
     print(f"CONTENT ERROR: {msg}", file=sys.stderr)
@@ -60,7 +62,7 @@ seen_prompts = {}
 seen_listening_scripts = {}
 seen_audio_paths = {}
 dialogues = 0
-supported = {"single_choice", "numeric"}
+supported = {"single_choice", "multi_choice", "numeric"}
 modes = {"grammar", "reading", "listening", "story"}
 skills = set()
 listening = 0
@@ -121,7 +123,7 @@ for i, q in enumerate(questions):
     answers = q.get("answer")
     if not isinstance(answers, list) or not answers:
         fail(f"{qid}: at least one answer is required")
-    if q.get("interaction") == "single_choice":
+    if q.get("interaction") in {"single_choice", "multi_choice"}:
         options = q.get("options")
         if not isinstance(options, list) or len(options) < 2:
             fail(f"{qid}: single_choice needs at least two options")
@@ -130,11 +132,23 @@ for i, q in enumerate(questions):
             fail(f"{qid}: option ids must be unique")
         if any(not isinstance(o.get("text"), str) or not o["text"].strip() for o in options):
             fail(f"{qid}: option text is empty")
-        if len(answers) != 1 or answers[0] not in option_ids:
-            fail(f"{qid}: single_choice answer must reference exactly one option")
+        if any(answer not in option_ids for answer in answers) or len(answers) != len(set(answers)):
+            fail(f"{qid}: choice answers must reference unique option ids")
+        if q.get("interaction") == "single_choice" and len(answers) != 1:
+            fail(f"{qid}: single_choice must reference exactly one option")
+        if q.get("interaction") == "multi_choice" and len(answers) < 2:
+            fail(f"{qid}: multi_choice must reference at least two options")
     elif q.get("interaction") == "numeric":
         if any(not isinstance(answer, str) or not answer.strip() for answer in answers):
             fail(f"{qid}: numeric accepted answers must be non-empty strings")
+        policy = q.get("answer_policy") or {}
+        tolerance = policy.get("tolerance", 0)
+        if not isinstance(tolerance, (int, float)) or tolerance < 0:
+            fail(f"{qid}: numeric tolerance must be non-negative")
+        if "min" in policy and "max" in policy and policy["min"] > policy["max"]:
+            fail(f"{qid}: numeric range min exceeds max")
+        if "unit" in policy and (not isinstance(policy["unit"], str) or not policy["unit"].strip()):
+            fail(f"{qid}: numeric unit must be a non-empty string")
 
     fb = q.get("feedback") or {}
     for field in ("short", "full", "rule"):
@@ -352,8 +366,14 @@ for catalog_pack in catalog_pack_list:
     path = ROOT / "app/src/main/assets" / str(asset)
     if not path.exists():
         fail(f"catalog pack asset not found: {asset}")
+    raw_pack = path.read_bytes()
+    digest = hashlib.sha256(raw_pack).hexdigest()
+    if catalog_pack.get("sha256") != digest:
+        fail(f"{catalog_pack.get('id')}: catalog SHA-256 mismatch")
     with path.open(encoding="utf-8") as f:
         candidate_bank = json.load(f)
+    if catalog_pack.get("content_version") != candidate_bank.get("content_version"):
+        fail(f"{catalog_pack.get('id')}: catalog content_version mismatch")
     loaded_pack_banks[catalog_pack.get("id")] = candidate_bank
     candidate_pack = candidate_bank.get("pack") or {}
     if candidate_pack.get("id") != catalog_pack.get("id"):
@@ -381,15 +401,28 @@ for catalog_pack in catalog_pack_list:
         answers = question.get("answer")
         if not isinstance(answers, list) or not answers:
             fail(f"{qid}: answer list is required")
-        if interaction == "single_choice":
+        if interaction in {"single_choice", "multi_choice"}:
             options = question.get("options")
             if not isinstance(options, list) or len(options) < 2:
-                fail(f"{qid}: single_choice needs at least two options")
+                fail(f"{qid}: choice task needs at least two options")
             option_ids = [option.get("id") for option in options]
-            if len(answers) != 1 or answers[0] not in option_ids:
-                fail(f"{qid}: invalid single_choice answer")
-        if interaction == "numeric" and any(not str(answer).strip() for answer in answers):
-            fail(f"{qid}: empty numeric answer")
+            if len(option_ids) != len(set(option_ids)) or any(answer not in option_ids for answer in answers):
+                fail(f"{qid}: invalid choice answer")
+            if interaction == "single_choice" and len(answers) != 1:
+                fail(f"{qid}: single_choice needs one answer")
+            if interaction == "multi_choice" and len(answers) < 2:
+                fail(f"{qid}: multi_choice needs at least two answers")
+        if interaction == "numeric":
+            if any(not str(answer).strip() for answer in answers):
+                fail(f"{qid}: empty numeric answer")
+            policy = question.get("answer_policy") or {}
+            tolerance = policy.get("tolerance", 0)
+            if not isinstance(tolerance, (int, float)) or tolerance < 0:
+                fail(f"{qid}: invalid numeric tolerance")
+            if "min" in policy and "max" in policy and policy["min"] > policy["max"]:
+                fail(f"{qid}: invalid numeric range")
+            if "unit" in policy and (not isinstance(policy["unit"], str) or not policy["unit"].strip()):
+                fail(f"{qid}: invalid numeric unit")
 
 with BLUEPRINTS.open(encoding="utf-8") as f:
     blueprint_catalog = json.load(f)
@@ -522,6 +555,24 @@ for license_id, row in licenses.items():
 for pack_id, catalog_pack in catalog_packs.items():
     if catalog_pack.get("enabled") and catalog_pack.get("license_id") not in licenses:
         fail(f"enabled pack has no verified license: {pack_id}")
+
+with WORKSHOP.open(encoding="utf-8") as f:
+    workshop = json.load(f)
+structures = workshop.get("structures")
+if not isinstance(structures, list) or not structures:
+    fail("workshop structures must be a non-empty array")
+structure_ids = set()
+for structure in structures:
+    structure_id = structure.get("id")
+    if not isinstance(structure_id, str) or not structure_id or structure_id in structure_ids:
+        fail(f"invalid or duplicate workshop structure: {structure_id!r}")
+    structure_ids.add(structure_id)
+    if not isinstance(structure.get("price_crystals"), int) or structure["price_crystals"] < 0:
+        fail(f"{structure_id}: invalid workshop price")
+    if not isinstance(structure.get("required_level"), int) or structure["required_level"] < 1:
+        fail(f"{structure_id}: invalid required level")
+    if not isinstance(structure.get("name"), dict) or not structure["name"].get("en"):
+        fail(f"{structure_id}: localized workshop name required")
 
 with PRODUCTS.open(encoding="utf-8") as f:
     product_catalog = json.load(f)

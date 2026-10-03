@@ -18,6 +18,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.HashSet;
 import java.util.Set;
+import java.security.MessageDigest;
 
 public final class QuestionBank {
     private static final String CATALOG_ASSET = "content/catalog.json";
@@ -50,7 +51,9 @@ public final class QuestionBank {
                 JSONObject candidate = packs.getJSONObject(i);
                 if (!candidate.optBoolean("enabled", true)) continue;
                 String candidateId = candidate.getString("id");
-                JSONObject candidateBank = new JSONObject(readAsset(context, candidate.getString("asset")));
+                String candidateRaw = readAsset(context, candidate.getString("asset"));
+                verifyPackIntegrity(candidate, candidateRaw);
+                JSONObject candidateBank = new JSONObject(candidateRaw);
                 if (entitlements.accessDecision(
                         candidateId,
                         candidate.optString("subject", ""),
@@ -93,7 +96,9 @@ public final class QuestionBank {
             }
 
             String asset = catalogPack.getString("asset");
-            JSONObject bank = new JSONObject(readAsset(context, asset));
+            String bankRaw = readAsset(context, asset);
+            verifyPackIntegrity(catalogPack, bankRaw);
+            JSONObject bank = new JSONObject(bankRaw);
             JSONObject packJson = bank.getJSONObject("pack");
             currentPack = parsePack(packJson, asset);
 
@@ -170,11 +175,23 @@ public final class QuestionBank {
                 List<String> acceptedAnswers = new ArrayList<>();
                 for (int j = 0; j < answers.length(); j++) acceptedAnswers.add(answers.getString(j));
                 String interaction = o.optString("interaction", "single_choice");
-                int correctIndex = "single_choice".equals(interaction)
-                        ? optionIds.indexOf(answers.getString(0)) : -1;
-                if ("single_choice".equals(interaction) && correctIndex < 0) {
-                    throw new IllegalStateException("Unknown answer id in " + o.getString("id"));
+                List<Integer> correctIndices = new ArrayList<>();
+                if ("single_choice".equals(interaction) || "multi_choice".equals(interaction)) {
+                    for (String answer : acceptedAnswers) {
+                        int index = optionIds.indexOf(answer);
+                        if (index < 0) throw new IllegalStateException("Unknown answer id in " + o.getString("id"));
+                        if (!correctIndices.contains(index)) correctIndices.add(index);
+                    }
                 }
+                int correctIndex = correctIndices.size() == 1 ? correctIndices.get(0) : -1;
+
+                JSONObject answerPolicy = o.optJSONObject("answer_policy");
+                double tolerance = answerPolicy == null ? 0.0 : answerPolicy.optDouble("tolerance", 0.0);
+                Double minimum = answerPolicy != null && answerPolicy.has("min")
+                        ? answerPolicy.getDouble("min") : null;
+                Double maximum = answerPolicy != null && answerPolicy.has("max")
+                        ? answerPolicy.getDouble("max") : null;
+                String unit = answerPolicy == null ? "" : answerPolicy.optString("unit", "");
 
                 JSONObject feedback = o.getJSONObject("feedback");
                 JSONObject source = o.optJSONObject("source");
@@ -195,7 +212,12 @@ public final class QuestionBank {
                         text,
                         options,
                         correctIndex,
+                        correctIndices,
                         acceptedAnswers,
+                        tolerance,
+                        minimum,
+                        maximum,
+                        unit,
                         localizedField(feedback, "short", Locale.getDefault()),
                         localizedField(feedback, "full", Locale.getDefault()),
                         localizedField(feedback, "rule", Locale.getDefault()),
@@ -359,6 +381,29 @@ public final class QuestionBank {
     public static double blueprintWeight(String knowledgeId) {
         ensureInit();
         return blueprintWeights.getOrDefault(knowledgeId, 0.0);
+    }
+
+    public static Map<String, Double> blueprintWeights() {
+        ensureInit();
+        return new LinkedHashMap<>(blueprintWeights);
+    }
+
+    private static void verifyPackIntegrity(JSONObject catalogPack, String raw) throws Exception {
+        String expected = catalogPack.optString("sha256", "");
+        String version = catalogPack.optString("content_version", "");
+        if (expected.isEmpty() || version.isEmpty()) {
+            throw new IllegalStateException("Pack integrity metadata is missing: " + catalogPack.optString("id"));
+        }
+        MessageDigest digest = MessageDigest.getInstance("SHA-256");
+        StringBuilder actual = new StringBuilder();
+        for (byte b : digest.digest(raw.getBytes(StandardCharsets.UTF_8))) actual.append(String.format(Locale.ROOT, "%02x", b));
+        if (!expected.equals(actual.toString())) {
+            throw new IllegalStateException("Pack digest mismatch: " + catalogPack.optString("id"));
+        }
+        JSONObject bank = new JSONObject(raw);
+        if (!version.equals(bank.optString("content_version", ""))) {
+            throw new IllegalStateException("Pack content version mismatch: " + catalogPack.optString("id"));
+        }
     }
 
     public static List<Question> sprint(int count, long seed) {

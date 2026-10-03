@@ -64,6 +64,16 @@
             }
           },
           "answer": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "answer_policy": {
+            "type": "object",
+            "properties": {
+              "tolerance": {"type": "number", "minimum": 0},
+              "min": {"type": "number"},
+              "max": {"type": "number"},
+              "unit": {"type": "string", "minLength": 1}
+            },
+            "additionalProperties": false
+          },
           "feedback": {
             "type": "object",
             "required": ["short", "full", "rule"],
