@@ -65,4 +65,14 @@
     <string name="listening_title">Listening</string>
     <string name="story_mode">✦  Story builder</string>
     <string name="story_title">Story builder</string>
+    <string name="dictionary_fmt">Dictionary · %1$d</string>
+    <string name="dictionary_title">My dictionary</string>
+    <string name="dictionary_empty">Nothing saved yet. Tap an unfamiliar word in a task and add it here.</string>
+    <string name="dictionary_add">+ Add to dictionary</string>
+    <string name="dictionary_remove">Remove from dictionary</string>
+    <string name="dictionary_close">Close</string>
+    <string name="dictionary_definition">MEANING</string>
+    <string name="dictionary_example">EXAMPLE</string>
+    <string name="vocab_prompt">What does “%1$s” mean?</string>
+    <string name="personal_dictionary">Personal dictionary</string>
 </resources>

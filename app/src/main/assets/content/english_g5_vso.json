@@ -9945,6 +9945,16 @@
         "en": "Story structure"
       },
       "relations": []
+    },
+    {
+      "id": "ENG.VOCAB.PERSONAL",
+      "kind": "concept",
+      "legacy_skill": "vocabulary",
+      "labels": {
+        "ru": "личный словарь",
+        "en": "Personal vocabulary"
+      },
+      "relations": []
     }
   ]
 }

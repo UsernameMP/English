@@ -1,0 +1,820 @@
+{
+  "schema_version": "1.0",
+  "language": "en",
+  "entries": [
+    {
+      "lemma": "crow",
+      "forms": [
+        "crow",
+        "crows"
+      ],
+      "phonetic": "/krəʊ/",
+      "translation": {
+        "ru": "ворона",
+        "en": "a large black bird"
+      },
+      "definition": {
+        "en": "a large black bird",
+        "ru": "a large black bird"
+      },
+      "example": "The crow sat in a tree."
+    },
+    {
+      "lemma": "praise",
+      "forms": [
+        "praise",
+        "praised",
+        "praises",
+        "praising"
+      ],
+      "phonetic": "/preɪz/",
+      "translation": {
+        "ru": "хвалить",
+        "en": "to say that someone or something is good"
+      },
+      "definition": {
+        "en": "to say that someone or something is good",
+        "ru": "to say that someone or something is good"
+      },
+      "example": "The teacher praised her answer."
+    },
+    {
+      "lemma": "voice",
+      "forms": [
+        "voice",
+        "voices"
+      ],
+      "phonetic": "/vɔɪs/",
+      "translation": {
+        "ru": "голос",
+        "en": "the sound you make when speaking or singing"
+      },
+      "definition": {
+        "en": "the sound you make when speaking or singing",
+        "ru": "the sound you make when speaking or singing"
+      },
+      "example": "He has a quiet voice."
+    },
+    {
+      "lemma": "crowded",
+      "forms": [
+        "crowded"
+      ],
+      "phonetic": "/ˈkraʊdɪd/",
+      "translation": {
+        "ru": "переполненный",
+        "en": "full of people"
+      },
+      "definition": {
+        "en": "full of people",
+        "ru": "full of people"
+      },
+      "example": "The library was crowded."
+    },
+    {
+      "lemma": "museum",
+      "forms": [
+        "museum",
+        "museums"
+      ],
+      "phonetic": "/mjuːˈziːəm/",
+      "translation": {
+        "ru": "музей",
+        "en": "a place where important or interesting objects are shown"
+      },
+      "definition": {
+        "en": "a place where important or interesting objects are shown",
+        "ru": "a place where important or interesting objects are shown"
+      },
+      "example": "We visited the science museum."
+    },
+    {
+      "lemma": "bench",
+      "forms": [
+        "bench",
+        "benches"
+      ],
+      "phonetic": "/bentʃ/",
+      "translation": {
+        "ru": "скамейка",
+        "en": "a long seat for several people"
+      },
+      "definition": {
+        "en": "a long seat for several people",
+        "ru": "a long seat for several people"
+      },
+      "example": "She sat on a park bench."
+    },
+    {
+      "lemma": "chapter",
+      "forms": [
+        "chapter",
+        "chapters"
+      ],
+      "phonetic": "/ˈtʃæptə/",
+      "translation": {
+        "ru": "глава",
+        "en": "one main part of a book"
+      },
+      "definition": {
+        "en": "one main part of a book",
+        "ru": "one main part of a book"
+      },
+      "example": "I finished two chapters."
+    },
+    {
+      "lemma": "forecast",
+      "forms": [
+        "forecast",
+        "forecasts"
+      ],
+      "phonetic": "/ˈfɔːkɑːst/",
+      "translation": {
+        "ru": "прогноз",
+        "en": "a statement about what is expected to happen"
+      },
+      "definition": {
+        "en": "a statement about what is expected to happen",
+        "ru": "a statement about what is expected to happen"
+      },
+      "example": "The weather forecast changed."
+    },
+    {
+      "lemma": "expect",
+      "forms": [
+        "expect",
+        "expected",
+        "expects",
+        "expecting"
+      ],
+      "phonetic": "/ɪkˈspekt/",
+      "translation": {
+        "ru": "ожидать",
+        "en": "to think that something will happen"
+      },
+      "definition": {
+        "en": "to think that something will happen",
+        "ru": "to think that something will happen"
+      },
+      "example": "We expect rain in the afternoon."
+    },
+    {
+      "lemma": "dry",
+      "forms": [
+        "dry",
+        "drier",
+        "driest"
+      ],
+      "phonetic": "/draɪ/",
+      "translation": {
+        "ru": "сухой",
+        "en": "not wet"
+      },
+      "definition": {
+        "en": "not wet",
+        "ru": "not wet"
+      },
+      "example": "Sunday was cool but dry."
+    },
+    {
+      "lemma": "wallet",
+      "forms": [
+        "wallet",
+        "wallets"
+      ],
+      "phonetic": "/ˈwɒlɪt/",
+      "translation": {
+        "ru": "кошелёк",
+        "en": "a small case for money and cards"
+      },
+      "definition": {
+        "en": "a small case for money and cards",
+        "ru": "a small case for money and cards"
+      },
+      "example": "Nora found a wallet."
+    },
+    {
+      "lemma": "receptionist",
+      "forms": [
+        "receptionist",
+        "receptionists"
+      ],
+      "phonetic": "/rɪˈsepʃənɪst/",
+      "translation": {
+        "ru": "администратор",
+        "en": "a person who receives visitors in an office or hotel"
+      },
+      "definition": {
+        "en": "a person who receives visitors in an office or hotel",
+        "ru": "a person who receives visitors in an office or hotel"
+      },
+      "example": "She gave the wallet to the receptionist."
+    },
+    {
+      "lemma": "worried",
+      "forms": [
+        "worried",
+        "worry",
+        "worries",
+        "worrying"
+      ],
+      "phonetic": "/ˈwʌrid/",
+      "translation": {
+        "ru": "обеспокоенный",
+        "en": "unhappy because you think something may be wrong"
+      },
+      "definition": {
+        "en": "unhappy because you think something may be wrong",
+        "ru": "unhappy because you think something may be wrong"
+      },
+      "example": "The boy looked worried."
+    },
+    {
+      "lemma": "suitable",
+      "forms": [
+        "suitable"
+      ],
+      "phonetic": "/ˈsuːtəbl/",
+      "translation": {
+        "ru": "подходящий",
+        "en": "right or acceptable for a particular purpose"
+      },
+      "definition": {
+        "en": "right or acceptable for a particular purpose",
+        "ru": "right or acceptable for a particular purpose"
+      },
+      "example": "The film is suitable for children."
+    },
+    {
+      "lemma": "inventor",
+      "forms": [
+        "inventor",
+        "inventors"
+      ],
+      "phonetic": "/ɪnˈventə/",
+      "translation": {
+        "ru": "изобретатель",
+        "en": "a person who creates a new device or idea"
+      },
+      "definition": {
+        "en": "a person who creates a new device or idea",
+        "ru": "a person who creates a new device or idea"
+      },
+      "example": "The film is about young inventors."
+    },
+    {
+      "lemma": "documentary",
+      "forms": [
+        "documentary",
+        "documentaries"
+      ],
+      "phonetic": "/ˌdɒkjʊˈmentri/",
+      "translation": {
+        "ru": "документальный фильм",
+        "en": "a film that gives facts about real events or subjects"
+      },
+      "definition": {
+        "en": "a film that gives facts about real events or subjects",
+        "ru": "a film that gives facts about real events or subjects"
+      },
+      "example": "We watched a science documentary."
+    },
+    {
+      "lemma": "beginner",
+      "forms": [
+        "beginner",
+        "beginners"
+      ],
+      "phonetic": "/bɪˈɡɪnə/",
+      "translation": {
+        "ru": "новичок",
+        "en": "a person who is starting to learn something"
+      },
+      "definition": {
+        "en": "a person who is starting to learn something",
+        "ru": "a person who is starting to learn something"
+      },
+      "example": "Beginners may join the chess club."
+    },
+    {
+      "lemma": "rehearsal",
+      "forms": [
+        "rehearsal",
+        "rehearsals"
+      ],
+      "phonetic": "/rɪˈhɜːsl/",
+      "translation": {
+        "ru": "репетиция",
+        "en": "a practice before a performance"
+      },
+      "definition": {
+        "en": "a practice before a performance",
+        "ru": "a practice before a performance"
+      },
+      "example": "The hall is used for a concert rehearsal."
+    },
+    {
+      "lemma": "strange",
+      "forms": [
+        "strange",
+        "stranger",
+        "strangest"
+      ],
+      "phonetic": "/streɪndʒ/",
+      "translation": {
+        "ru": "странный",
+        "en": "unusual or unexpected"
+      },
+      "definition": {
+        "en": "unusual or unexpected",
+        "ru": "unusual or unexpected"
+      },
+      "example": "I heard a strange noise."
+    },
+    {
+      "lemma": "frightened",
+      "forms": [
+        "frightened"
+      ],
+      "phonetic": "/ˈfraɪtnd/",
+      "translation": {
+        "ru": "испуганный",
+        "en": "afraid or scared"
+      },
+      "definition": {
+        "en": "afraid or scared",
+        "ru": "afraid or scared"
+      },
+      "example": "The dog looked frightened."
+    },
+    {
+      "lemma": "dangerous",
+      "forms": [
+        "dangerous"
+      ],
+      "phonetic": "/ˈdeɪndʒərəs/",
+      "translation": {
+        "ru": "опасный",
+        "en": "likely to cause harm"
+      },
+      "definition": {
+        "en": "likely to cause harm",
+        "ru": "likely to cause harm"
+      },
+      "example": "The icy road was dangerous."
+    },
+    {
+      "lemma": "icy",
+      "forms": [
+        "icy",
+        "icier",
+        "iciest"
+      ],
+      "phonetic": "/ˈaɪsi/",
+      "translation": {
+        "ru": "обледенелый",
+        "en": "covered with ice"
+      },
+      "definition": {
+        "en": "covered with ice",
+        "ru": "covered with ice"
+      },
+      "example": "The road was icy."
+    },
+    {
+      "lemma": "crash",
+      "forms": [
+        "crash",
+        "crashed",
+        "crashes",
+        "crashing"
+      ],
+      "phonetic": "/kræʃ/",
+      "translation": {
+        "ru": "грохот; столкновение",
+        "en": "a sudden loud noise or collision"
+      },
+      "definition": {
+        "en": "a sudden loud noise or collision",
+        "ru": "a sudden loud noise or collision"
+      },
+      "example": "I heard a crash in the kitchen."
+    },
+    {
+      "lemma": "missing",
+      "forms": [
+        "missing",
+        "miss",
+        "missed",
+        "misses"
+      ],
+      "phonetic": "/ˈmɪsɪŋ/",
+      "translation": {
+        "ru": "пропавший",
+        "en": "not where it should be"
+      },
+      "definition": {
+        "en": "not where it should be",
+        "ru": "not where it should be"
+      },
+      "example": "We found the missing key."
+    },
+    {
+      "lemma": "owner",
+      "forms": [
+        "owner",
+        "owners"
+      ],
+      "phonetic": "/ˈəʊnə/",
+      "translation": {
+        "ru": "владелец",
+        "en": "a person who owns something"
+      },
+      "definition": {
+        "en": "a person who owns something",
+        "ru": "a person who owns something"
+      },
+      "example": "The owner thanked us."
+    },
+    {
+      "lemma": "locker",
+      "forms": [
+        "locker",
+        "lockers"
+      ],
+      "phonetic": "/ˈlɒkə/",
+      "translation": {
+        "ru": "шкафчик",
+        "en": "a small lockable cupboard"
+      },
+      "definition": {
+        "en": "a small lockable cupboard",
+        "ru": "a small lockable cupboard"
+      },
+      "example": "Your trainers are in the locker."
+    },
+    {
+      "lemma": "quarter",
+      "forms": [
+        "quarter",
+        "quarters"
+      ],
+      "phonetic": "/ˈkwɔːtə/",
+      "translation": {
+        "ru": "четверть",
+        "en": "one of four equal parts; fifteen minutes"
+      },
+      "definition": {
+        "en": "one of four equal parts; fifteen minutes",
+        "ru": "one of four equal parts; fifteen minutes"
+      },
+      "example": "Meet me at a quarter to four."
+    },
+    {
+      "lemma": "instead",
+      "forms": [
+        "instead"
+      ],
+      "phonetic": "/ɪnˈsted/",
+      "translation": {
+        "ru": "вместо этого",
+        "en": "in place of something else"
+      },
+      "definition": {
+        "en": "in place of something else",
+        "ru": "in place of something else"
+      },
+      "example": "We bought apples instead."
+    },
+    {
+      "lemma": "join",
+      "forms": [
+        "join",
+        "joined",
+        "joins",
+        "joining"
+      ],
+      "phonetic": "/dʒɔɪn/",
+      "translation": {
+        "ru": "присоединиться",
+        "en": "to become part of a group or activity"
+      },
+      "definition": {
+        "en": "to become part of a group or activity",
+        "ru": "to become part of a group or activity"
+      },
+      "example": "She joined the art club."
+    },
+    {
+      "lemma": "cloud",
+      "forms": [
+        "cloud",
+        "clouds"
+      ],
+      "phonetic": "/klaʊd/",
+      "translation": {
+        "ru": "облако",
+        "en": "a white or grey mass in the sky"
+      },
+      "definition": {
+        "en": "a white or grey mass in the sky",
+        "ru": "a white or grey mass in the sky"
+      },
+      "example": "Clouds arrived at lunchtime."
+    },
+    {
+      "lemma": "arrive",
+      "forms": [
+        "arrive",
+        "arrived",
+        "arrives",
+        "arriving"
+      ],
+      "phonetic": "/əˈraɪv/",
+      "translation": {
+        "ru": "прибывать",
+        "en": "to reach a place"
+      },
+      "definition": {
+        "en": "to reach a place",
+        "ru": "to reach a place"
+      },
+      "example": "We arrived before lunch."
+    },
+    {
+      "lemma": "discuss",
+      "forms": [
+        "discuss",
+        "discussed",
+        "discusses",
+        "discussing"
+      ],
+      "phonetic": "/dɪˈskʌs/",
+      "translation": {
+        "ru": "обсуждать",
+        "en": "to talk about something with other people"
+      },
+      "definition": {
+        "en": "to talk about something with other people",
+        "ru": "to talk about something with other people"
+      },
+      "example": "We will discuss the questions in class."
+    },
+    {
+      "lemma": "garage",
+      "forms": [
+        "garage",
+        "garages"
+      ],
+      "phonetic": "/ˈɡærɑːʒ/",
+      "translation": {
+        "ru": "гараж; автосервис",
+        "en": "a place where cars are kept or repaired"
+      },
+      "definition": {
+        "en": "a place where cars are kept or repaired",
+        "ru": "a place where cars are kept or repaired"
+      },
+      "example": "The car is at the garage."
+    },
+    {
+      "lemma": "storm",
+      "forms": [
+        "storm",
+        "storms"
+      ],
+      "phonetic": "/stɔːm/",
+      "translation": {
+        "ru": "буря",
+        "en": "very bad weather with strong wind or rain"
+      },
+      "definition": {
+        "en": "very bad weather with strong wind or rain",
+        "ru": "very bad weather with strong wind or rain"
+      },
+      "example": "The storm was getting stronger."
+    },
+    {
+      "lemma": "strong",
+      "forms": [
+        "strong",
+        "stronger",
+        "strongest"
+      ],
+      "phonetic": "/strɒŋ/",
+      "translation": {
+        "ru": "сильный",
+        "en": "having a lot of power"
+      },
+      "definition": {
+        "en": "having a lot of power",
+        "ru": "having a lot of power"
+      },
+      "example": "The wind became stronger."
+    },
+    {
+      "lemma": "finally",
+      "forms": [
+        "finally"
+      ],
+      "phonetic": "/ˈfaɪnəli/",
+      "translation": {
+        "ru": "наконец",
+        "en": "after a long time or at the end"
+      },
+      "definition": {
+        "en": "after a long time or at the end",
+        "ru": "after a long time or at the end"
+      },
+      "example": "Finally, we could go home."
+    },
+    {
+      "lemma": "evidence",
+      "forms": [
+        "evidence"
+      ],
+      "phonetic": "/ˈevɪdəns/",
+      "translation": {
+        "ru": "доказательство",
+        "en": "information that shows something is true"
+      },
+      "definition": {
+        "en": "information that shows something is true",
+        "ru": "information that shows something is true"
+      },
+      "example": "Find evidence in the text."
+    },
+    {
+      "lemma": "highlight",
+      "forms": [
+        "highlight",
+        "highlighted",
+        "highlights",
+        "highlighting"
+      ],
+      "phonetic": "/ˈhaɪlaɪt/",
+      "translation": {
+        "ru": "выделять",
+        "en": "to make something easy to notice"
+      },
+      "definition": {
+        "en": "to make something easy to notice",
+        "ru": "to make something easy to notice"
+      },
+      "example": "The app highlights the answer."
+    },
+    {
+      "lemma": "purpose",
+      "forms": [
+        "purpose",
+        "purposes"
+      ],
+      "phonetic": "/ˈpɜːpəs/",
+      "translation": {
+        "ru": "цель",
+        "en": "the reason why something is done"
+      },
+      "definition": {
+        "en": "the reason why something is done",
+        "ru": "the reason why something is done"
+      },
+      "example": "To plus a verb can show purpose."
+    },
+    {
+      "lemma": "duration",
+      "forms": [
+        "duration",
+        "durations"
+      ],
+      "phonetic": "/djʊˈreɪʃn/",
+      "translation": {
+        "ru": "продолжительность",
+        "en": "the amount of time something lasts"
+      },
+      "definition": {
+        "en": "the amount of time something lasts",
+        "ru": "the amount of time something lasts"
+      },
+      "example": "For is used with a duration."
+    },
+    {
+      "lemma": "habit",
+      "forms": [
+        "habit",
+        "habits"
+      ],
+      "phonetic": "/ˈhæbɪt/",
+      "translation": {
+        "ru": "привычка",
+        "en": "something you do regularly"
+      },
+      "definition": {
+        "en": "something you do regularly",
+        "ru": "something you do regularly"
+      },
+      "example": "Present Simple often describes a habit."
+    },
+    {
+      "lemma": "unique",
+      "forms": [
+        "unique"
+      ],
+      "phonetic": "/juːˈniːk/",
+      "translation": {
+        "ru": "уникальный",
+        "en": "being the only one of its kind"
+      },
+      "definition": {
+        "en": "being the only one of its kind",
+        "ru": "being the only one of its kind"
+      },
+      "example": "Use the for a unique thing."
+    },
+    {
+      "lemma": "specific",
+      "forms": [
+        "specific"
+      ],
+      "phonetic": "/spəˈsɪfɪk/",
+      "translation": {
+        "ru": "конкретный",
+        "en": "clearly identified or particular"
+      },
+      "definition": {
+        "en": "clearly identified or particular",
+        "ru": "clearly identified or particular"
+      },
+      "example": "The can refer to a specific thing."
+    },
+    {
+      "lemma": "immediately",
+      "forms": [
+        "immediately"
+      ],
+      "phonetic": "/ɪˈmiːdiətli/",
+      "translation": {
+        "ru": "немедленно",
+        "en": "at once; without waiting"
+      },
+      "definition": {
+        "en": "at once; without waiting",
+        "ru": "at once; without waiting"
+      },
+      "example": "I knew the answer immediately."
+    },
+    {
+      "lemma": "regularly",
+      "forms": [
+        "regularly"
+      ],
+      "phonetic": "/ˈreɡjələli/",
+      "translation": {
+        "ru": "регулярно",
+        "en": "again and again at usual times"
+      },
+      "definition": {
+        "en": "again and again at usual times",
+        "ru": "again and again at usual times"
+      },
+      "example": "She regularly reads after school."
+    },
+    {
+      "lemma": "improve",
+      "forms": [
+        "improve",
+        "improved",
+        "improves",
+        "improving"
+      ],
+      "phonetic": "/ɪmˈpruːv/",
+      "translation": {
+        "ru": "улучшать",
+        "en": "to become or make something better"
+      },
+      "definition": {
+        "en": "to become or make something better",
+        "ru": "to become or make something better"
+      },
+      "example": "Practice helps you improve."
+    },
+    {
+      "lemma": "remember",
+      "forms": [
+        "remember",
+        "remembered",
+        "remembers",
+        "remembering"
+      ],
+      "phonetic": "/rɪˈmembə/",
+      "translation": {
+        "ru": "помнить",
+        "en": "to keep something in your mind"
+      },
+      "definition": {
+        "en": "to keep something in your mind",
+        "ru": "to keep something in your mind"
+      },
+      "example": "Try to remember the rule."
+    }
+  ]
+}
