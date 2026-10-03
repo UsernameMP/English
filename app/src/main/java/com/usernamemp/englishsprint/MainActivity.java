@@ -1,6 +1,7 @@
 package com.usernamemp.englishsprint;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
@@ -52,6 +53,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        QuestionBank.init(this);
         progress = new ProgressStore(this);
         audio = new AudioEngine(this);
         rewards = new RewardFx(this);
@@ -75,47 +77,64 @@ public class MainActivity extends Activity {
     private void showHome() {
         audio.stop();
         LinearLayout root = column();
-        root.setPadding(dp(20), dp(18), dp(20), dp(28));
+        root.setPadding(dp(20), dp(18), dp(20), dp(30));
 
-        TextView title = text("ENGLISH SPRINT", 28, INK, Typeface.BOLD);
-        root.addView(title);
+        LinearLayout header = row();
+        LinearLayout titles = column();
+        titles.addView(text("ENGLISH SPRINT", 29, INK, Typeface.BOLD));
+        titles.addView(text("ВсОШ · 5–6 класс · Татарстан", 14, MUTED, Typeface.NORMAL));
+        header.addView(titles, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
 
-        TextView sub = text("ВсОШ · 5–6 класс · Татарстан", 15, MUTED, Typeface.NORMAL);
-        root.addView(sub);
-        root.addView(space(12));
+        Button settings = compactButton("⚙");
+        settings.setOnClickListener(v -> showSettings());
+        header.addView(settings, new LinearLayout.LayoutParams(dp(52), dp(44)));
+        root.addView(header);
 
         int days = daysUntilTarget();
         TextView deadline = text(days >= 0
-                ? "До 9 октября: " + days + dayWord(days)
-                : "Режим тренировки", 15, BAD, Typeface.BOLD);
+                ? "9 октября · осталось " + days + dayWord(days)
+                : "Тренировочный режим", 14, PRIMARY, Typeface.BOLD);
+        deadline.setPadding(0, dp(10), 0, 0);
         root.addView(deadline);
 
-        root.addView(space(18));
+        root.addView(space(16));
         root.addView(progressCard());
-        root.addView(space(18));
+        root.addView(space(16));
 
-        root.addView(menuButton("⚡ Быстрый тренинг · 15", "Слабые темы повторяются чаще", () ->
-                startSession("Быстрый тренинг", QuestionBank.adaptiveSession(progress, 15, System.nanoTime()))));
+        Button play = primaryButton("▶  ИГРАТЬ");
+        play.setTextSize(22);
+        play.setMinHeight(dp(72));
+        play.setOnClickListener(v -> startSession("Быстрый тренинг",
+                QuestionBank.adaptiveSession(progress, 15, System.nanoTime())));
+        root.addView(play, matchWrap());
 
-        root.addView(menuButton("A+  Грамматика · 20", "be · have/has · do/does · времена · артикли", () ->
+        TextView playHint = text("15 быстрых вопросов · приложение само выбирает, что повторить",
+                13, MUTED, Typeface.NORMAL);
+        playHint.setGravity(Gravity.CENTER);
+        playHint.setPadding(0, dp(7), 0, dp(16));
+        root.addView(playHint);
+
+        TextView modes = text("РЕЖИМЫ", 13, MUTED, Typeface.BOLD);
+        root.addView(modes);
+        root.addView(space(8));
+
+        root.addView(menuButton("A+  Грамматика", "База + олимпиадные конструкции", () ->
                 startSession("Грамматика", shuffled(QuestionBank.byType(Question.Type.GRAMMAR), 20))));
 
-        root.addView(menuButton("⌕  Reading · 10", "После ответа подсветим доказательство в тексте", () ->
+        root.addView(menuButton("⌕  Reading", "Ищем доказательство прямо в тексте", () ->
                 startSession("Reading", shuffled(QuestionBank.byType(Question.Type.READING), 10))));
 
-        root.addView(menuButton("▶  Listening · 10", "Офлайн · два прослушивания на вопрос", () ->
+        root.addView(menuButton("▶  Listening", "Офлайн · два прослушивания", () ->
                 startSession("Listening", shuffled(QuestionBank.byType(Question.Type.LISTENING), 10))));
 
-        root.addView(menuButton("✦  Story builder · 10", "Письмо без клавиатуры: связки, логика, времена", () ->
+        root.addView(menuButton("✦  Story builder", "Логика рассказа без клавиатуры", () ->
                 startSession("Story builder", shuffled(QuestionBank.byType(Question.Type.STORY), 10))));
 
-        root.addView(menuButton("★  Олимпиадный спринт · 22", "Listening + Reading + Use of English + Story", () ->
-                startSession("Олимпиадный спринт", QuestionBank.sprint(22, System.nanoTime()))));
-
-        root.addView(space(8));
         Button progressButton = secondaryButton("Карта навыков");
         progressButton.setOnClickListener(v -> showProgress());
-        root.addView(progressButton, matchWrap());
+        LinearLayout.LayoutParams plp = matchWrap();
+        plp.topMargin = dp(4);
+        root.addView(progressButton, plp);
 
         setScrollable(root);
     }
@@ -302,8 +321,8 @@ public class MainActivity extends Activity {
                 b.setBackground(roundRect(Color.rgb(221, 245, 234), 14, 2, GOOD));
                 b.setTextColor(Color.rgb(15, 105, 67));
             } else if (i == chosen) {
-                b.setBackground(roundRect(Color.rgb(252, 228, 231), 14, 2, BAD));
-                b.setTextColor(BAD);
+                b.setBackground(roundRect(Color.rgb(255, 244, 215), 14, 2, Color.rgb(210, 160, 60)));
+                b.setTextColor(Color.rgb(135, 88, 15));
             }
         }
 
@@ -314,7 +333,7 @@ public class MainActivity extends Activity {
         LinearLayout feedback = column();
         feedback.setPadding(dp(16), dp(14), dp(16), dp(14));
         feedback.setBackground(roundRect(
-                correct ? Color.rgb(232, 248, 240) : Color.rgb(255, 239, 241),
+                correct ? Color.rgb(232, 248, 240) : Color.rgb(246, 247, 251),
                 14, 0, Color.TRANSPARENT));
 
         TextView verdict = text(reaction.symbol + "  " + reaction.headline,
@@ -335,9 +354,20 @@ public class MainActivity extends Activity {
         }
 
         if (!q.explanation.isEmpty()) {
-            TextView expl = text(q.explanation, 14, INK, Typeface.NORMAL);
-            expl.setPadding(0, dp(6), 0, 0);
+            TextView expl = text(q.explanation, 17, INK, Typeface.BOLD);
+            expl.setLineSpacing(dp(3), 1.05f);
+            expl.setPadding(0, dp(9), 0, 0);
             feedback.addView(expl);
+        }
+
+        if (!q.explanationFull.isEmpty()) {
+            Button why = secondaryButton("Почему?");
+            why.setTextSize(15);
+            why.setMinHeight(dp(46));
+            why.setOnClickListener(v -> showExplanationDialog(q));
+            LinearLayout.LayoutParams wlp = matchWrap();
+            wlp.topMargin = dp(10);
+            feedback.addView(why, wlp);
         }
 
         LinearLayout.LayoutParams fLp = matchWrap();
@@ -381,7 +411,7 @@ public class MainActivity extends Activity {
 
         root.addView(space(22));
 
-        TextView weakTitle = text("Что повторять", 20, INK, Typeface.BOLD);
+        TextView weakTitle = text("Что прокачиваем дальше", 20, INK, Typeface.BOLD);
         root.addView(weakTitle);
         root.addView(space(8));
 
@@ -395,9 +425,9 @@ public class MainActivity extends Activity {
         for (Map.Entry<String, int[]> e : entries) {
             int[] s = e.getValue();
             if (shown >= 4) break;
-            int pct = s[0] == 0 ? 0 : Math.round(s[1] * 100f / s[0]);
-            TextView row = text(skillName(e.getKey()) + "   " + pct + "%", 16,
-                    pct < 70 ? BAD : INK, pct < 70 ? Typeface.BOLD : Typeface.NORMAL);
+            ProgressStore.SkillState skillState = progress.state(e.getKey());
+            TextView row = text(skillName(e.getKey()) + "   ·   " + skillState.label, 16,
+                    INK, Typeface.NORMAL);
             row.setPadding(0, dp(6), 0, dp(6));
             root.addView(row);
             shown++;
@@ -429,25 +459,32 @@ public class MainActivity extends Activity {
 
         root.addView(space(14));
         root.addView(text("Карта навыков", 28, INK, Typeface.BOLD));
-        root.addView(text("Красное — туда приложение будет возвращать чаще.",
+        root.addView(text("Никаких оценок до тех пор, пока тема реально не проверена.",
                 14, MUTED, Typeface.NORMAL));
         root.addView(space(16));
 
-        List<String> skills = new ArrayList<>();
-        Collections.addAll(skills, QuestionBank.SKILLS);
-        skills.sort(Comparator.comparingDouble(progress::mastery));
+        List<String> skills = new ArrayList<>(QuestionBank.skills());
+        skills.sort((a, b) -> {
+            int state = Integer.compare(progress.state(a).ordinal(), progress.state(b).ordinal());
+            if (state != 0) return state;
+            return Integer.compare(progress.attempts(a), progress.attempts(b));
+        });
 
         for (String skill : skills) {
-            double m = progress.mastery(skill);
-            int pct = (int) Math.round(m * 100);
+            ProgressStore.SkillState state = progress.state(skill);
             LinearLayout line = row();
-            line.setPadding(dp(14), dp(12), dp(14), dp(12));
+            line.setPadding(dp(14), dp(13), dp(14), dp(13));
             line.setBackground(roundRect(CARD, 12, 1, SOFT));
 
             TextView name = text(skillName(skill), 15, INK, Typeface.BOLD);
-            TextView value = text(pct + "%", 15,
-                    pct < 55 ? BAD : pct < 75 ? Color.rgb(170, 110, 20) : GOOD,
-                    Typeface.BOLD);
+            int stateColor;
+            switch (state) {
+                case CONFIDENT: stateColor = GOOD; break;
+                case GROWING: stateColor = Color.rgb(176, 119, 20); break;
+                case LEARNING: stateColor = PRIMARY; break;
+                default: stateColor = MUTED;
+            }
+            TextView value = text(state.label, 14, stateColor, Typeface.BOLD);
             line.addView(name, new LinearLayout.LayoutParams(0,
                     ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
             line.addView(value);
@@ -456,6 +493,84 @@ public class MainActivity extends Activity {
             lp.bottomMargin = dp(7);
             root.addView(line, lp);
         }
+
+        setScrollable(root);
+    }
+
+    private void showExplanationDialog(Question q) {
+        LinearLayout box = column();
+        box.setPadding(dp(22), dp(18), dp(22), dp(12));
+
+        TextView ruleTitle = text("ПРАВИЛО", 12, PRIMARY, Typeface.BOLD);
+        box.addView(ruleTitle);
+
+        TextView rule = text(q.rule.isEmpty() ? q.explanation : q.rule,
+                21, INK, Typeface.BOLD);
+        rule.setPadding(0, dp(7), 0, dp(16));
+        rule.setLineSpacing(dp(3), 1.05f);
+        box.addView(rule);
+
+        TextView whyTitle = text("ПОЧЕМУ ЗДЕСЬ ТАК", 12, MUTED, Typeface.BOLD);
+        box.addView(whyTitle);
+
+        TextView full = text(q.explanationFull, 17, INK, Typeface.NORMAL);
+        full.setLineSpacing(dp(5), 1.06f);
+        full.setPadding(0, dp(7), 0, dp(8));
+        box.addView(full);
+
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setView(box)
+                .setPositiveButton("Понятно", null)
+                .create();
+        dialog.setOnShowListener(d -> {
+            if (dialog.getWindow() != null) {
+                dialog.getWindow().setLayout(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT);
+            }
+        });
+        dialog.show();
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setLayout(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT);
+        }
+    }
+
+    private void showSettings() {
+        LinearLayout root = column();
+        root.setPadding(dp(20), dp(20), dp(20), dp(28));
+
+        Button back = compactButton("←");
+        back.setOnClickListener(v -> showHome());
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
+        root.addView(space(14));
+        root.addView(text("Настройки", 28, INK, Typeface.BOLD));
+        root.addView(text("Игровые эффекты можно отключить, обучение останется тем же.",
+                14, MUTED, Typeface.NORMAL));
+        root.addView(space(18));
+
+        android.widget.Switch sound = new android.widget.Switch(this);
+        sound.setText("Звуки комбо");
+        sound.setTextSize(17);
+        sound.setChecked(getSharedPreferences("english_sprint_settings", MODE_PRIVATE)
+                .getBoolean("sound", true));
+        sound.setPadding(dp(12), dp(12), dp(12), dp(12));
+        sound.setOnCheckedChangeListener((buttonView, isChecked) ->
+                getSharedPreferences("english_sprint_settings", MODE_PRIVATE)
+                        .edit().putBoolean("sound", isChecked).apply());
+        root.addView(sound, matchWrap());
+
+        android.widget.Switch haptic = new android.widget.Switch(this);
+        haptic.setText("Виброотклик");
+        haptic.setTextSize(17);
+        haptic.setChecked(getSharedPreferences("english_sprint_settings", MODE_PRIVATE)
+                .getBoolean("haptic", true));
+        haptic.setPadding(dp(12), dp(12), dp(12), dp(12));
+        haptic.setOnCheckedChangeListener((buttonView, isChecked) ->
+                getSharedPreferences("english_sprint_settings", MODE_PRIVATE)
+                        .edit().putBoolean("haptic", isChecked).apply());
+        root.addView(haptic, matchWrap());
 
         setScrollable(root);
     }
