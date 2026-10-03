@@ -65,4 +65,14 @@
     <string name="listening_title">Listening</string>
     <string name="story_mode">✦  Story builder</string>
     <string name="story_title">Story builder</string>
+    <string name="dictionary_fmt">Словарь · %1$d</string>
+    <string name="dictionary_title">Мой словарь</string>
+    <string name="dictionary_empty">Пока пусто. Нажимай на незнакомые слова в заданиях и добавляй их сюда.</string>
+    <string name="dictionary_add">+ В словарь</string>
+    <string name="dictionary_remove">Убрать из словаря</string>
+    <string name="dictionary_close">Закрыть</string>
+    <string name="dictionary_definition">ЗНАЧЕНИЕ</string>
+    <string name="dictionary_example">ПРИМЕР</string>
+    <string name="vocab_prompt">Что значит «%1$s»?</string>
+    <string name="personal_dictionary">Личный словарь</string>
 </resources>
