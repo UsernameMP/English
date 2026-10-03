@@ -53,10 +53,7 @@ public final class RewardFx {
     public RewardFx(Activity activity) {
         this.activity = activity;
         this.settings = activity.getSharedPreferences("english_sprint_settings", Activity.MODE_PRIVATE);
-        try {
-            tone = new ToneGenerator(AudioManager.STREAM_MUSIC, 55);
-        } catch (Exception ignored) {
-        }
+        rebuildTone(settings.getInt("volume", 80));
     }
 
     public Reaction reaction(boolean correct, int combo) {
@@ -92,6 +89,7 @@ public final class RewardFx {
     }
 
     public String quoteForMistake() {
+        if (!settings.getBoolean("quotes", true)) return "";
         if (random.nextInt(3) != 0) return "";
         String[] q = QUOTES[random.nextInt(QUOTES.length)];
         return "“" + q[0] + "”\n" + q[1];
@@ -99,13 +97,40 @@ public final class RewardFx {
 
     public void play(Reaction reaction, boolean correct, int combo) {
         if (correct && (combo == 3 || combo == 5 || combo == 8 || combo == 10 || combo == 15)) {
-            majorBurst(reaction);
+            majorBurst(reaction, combo);
         } else {
             smallPulse(reaction, correct);
         }
     }
 
-    private void majorBurst(Reaction reaction) {
+    public int volume() {
+        return settings.getInt("volume", 80);
+    }
+
+    public void setVolume(int volume) {
+        int safe = Math.max(0, Math.min(100, volume));
+        settings.edit().putInt("volume", safe).apply();
+        rebuildTone(safe);
+    }
+
+    public void playNewRecord(int combo) {
+        majorBurst(new Reaction("🏅",
+                activity.getString(R.string.new_record),
+                activity.getString(R.string.new_record_sub, combo), true), Math.max(combo, 10));
+    }
+
+    private void rebuildTone(int volume) {
+        if (tone != null) {
+            try { tone.release(); } catch (Exception ignored) {}
+            tone = null;
+        }
+        try {
+            tone = new ToneGenerator(AudioManager.STREAM_MUSIC, volume);
+        } catch (Exception ignored) {
+        }
+    }
+
+    private void majorBurst(Reaction reaction, int combo) {
         View decor = activity.getWindow().getDecorView();
         if (settings.getBoolean("haptic", true)) {
             decor.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
@@ -113,10 +138,15 @@ public final class RewardFx {
 
         if (tone != null && settings.getBoolean("sound", true)) {
             try {
-                tone.startTone(ToneGenerator.TONE_PROP_ACK, 180);
+                tone.startTone(ToneGenerator.TONE_PROP_ACK, 150);
                 handler.postDelayed(() -> {
-                    try { tone.startTone(ToneGenerator.TONE_PROP_ACK, 180); } catch (Exception ignored) {}
-                }, 170);
+                    try { tone.startTone(ToneGenerator.TONE_PROP_BEEP2, 130); } catch (Exception ignored) {}
+                }, 145);
+                if (combo >= 8) {
+                    handler.postDelayed(() -> {
+                        try { tone.startTone(ToneGenerator.TONE_PROP_ACK, 180); } catch (Exception ignored) {}
+                    }, 285);
+                }
             } catch (Exception ignored) {
             }
         }

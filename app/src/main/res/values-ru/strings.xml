@@ -75,4 +75,10 @@
     <string name="dictionary_example">ПРИМЕР</string>
     <string name="vocab_prompt">Что значит «%1$s»?</string>
     <string name="personal_dictionary">Личный словарь</string>
+    <string name="effects_volume_fmt">Громкость эффектов: %1$d%%</string>
+    <string name="quotes_setting">Мотивационные цитаты</string>
+    <string name="reinforcement_scheduled">Это правило ещё встретится через несколько вопросов.</string>
+    <string name="reinforced">✓ ЗАКРЕПЛЕНО</string>
+    <string name="new_record">НОВЫЙ РЕКОРД</string>
+    <string name="new_record_sub">Лучшая серия теперь ×%1$d</string>
 </resources>
