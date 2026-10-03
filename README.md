@@ -2,6 +2,17 @@
 
 Offline Android trainer for fast preparation for the school stage of the English Olympiad (Tatarstan, 5–6 grades).
 
+## v0.6
+
+- Listening play/replay action moved substantially lower into the real thumb reach zone;
+- positive-answer audio replaced with a short synthesized rising chime instead of weak system beeps;
+- break-game rotation now cycles through Match-3, Memory pairs and Spark without immediate repeats;
+- Match-3: 6×6 gem board with swaps, matches, cascades, refill and no-move reshuffle;
+- Memory: 4×4 / 8 pairs with a bounded timer;
+- first stable pilot signing chain uses the public AOSP test key (deliberately non-production);
+- CI publishes a raw APK plus `latest.json` on the `apk-dist` branch;
+- app checks the direct update channel, verifies package/version/signature, downloads and invokes Android's update installer.
+
 ## v0.5
 
 - Listening primary action moved into a lower thumb-friendly task action zone;
@@ -40,18 +51,22 @@ The Android renderer currently uses tap-only single-choice interactions. The con
 
 ## Build
 
-GitHub Actions builds a debug APK on every push to `main`.
+GitHub Actions builds a stable pilot-signed release APK on every push to `main`.
 
-Open **Actions → Android APK → latest run → Artifacts → `english-sprint-v0.5.0`.**.
+The workflow also publishes:
+- `apk-dist/english-sprint-latest.apk` for direct download (no ZIP wrapper);
+- `apk-dist/latest.json` for the in-app updater.
 
-The CI workflow validates the content bank and generates bundled neural WAV listening files with Piper. The installed APK does not need Internet for listening.
+The pilot signing key is the public AOSP test key and is intentionally unsuitable for production. Store releases will use a separate production signing chain.
+
+The CI workflow validates the content bank and generates bundled neural WAV listening files with Piper. Listening remains fully offline; Internet is only used for update checks/downloads.
 
 ## Local build
 
 Requirements: JDK 17, Android SDK, Gradle 8.9.
 
 ```bash
-gradle :app:assembleDebug
+gradle :app:assembleRelease
 ```
 
 If bundled listening WAVs are absent, the app falls back to Android TextToSpeech.
