@@ -43,6 +43,8 @@ if not isinstance(questions, list) or not questions:
 seen = set()
 seen_prompts = {}
 seen_listening_scripts = {}
+seen_audio_paths = {}
+dialogues = 0
 supported = {"single_choice"}
 modes = {"grammar", "reading", "listening", "story"}
 skills = set()
@@ -138,11 +140,43 @@ for i, q in enumerate(questions):
 
     if q.get("mode") == "listening":
         listening += 1
-        if not stimulus.get("audio"):
+        audio_path = stimulus.get("audio")
+        script = stimulus.get("script")
+        if not audio_path:
             fail(f"{qid}: listening requires stimulus.audio")
-        if not stimulus.get("script"):
+        if not script:
             fail(f"{qid}: listening requires stimulus.script")
-        normalized_script = " ".join(stimulus["script"].lower().split())
+        if audio_path in seen_audio_paths:
+            fail(f"{qid}: audio path reused by {seen_audio_paths[audio_path]}")
+        seen_audio_paths[audio_path] = qid
+
+        pace = stimulus.get("pace", "normal")
+        if pace not in {"slow", "normal"}:
+            fail(f"{qid}: invalid listening pace {pace!r}")
+
+        segments = stimulus.get("segments")
+        if segments is not None:
+            dialogues += 1
+            if not isinstance(segments, list) or len(segments) < 2:
+                fail(f"{qid}: dialogue requires at least two segments")
+            segment_texts = []
+            voices = set()
+            for segment in segments:
+                if segment.get("voice") not in {"lessac", "ryan"}:
+                    fail(f"{qid}: unsupported segment voice {segment.get('voice')!r}")
+                if not isinstance(segment.get("text"), str) or not segment["text"].strip():
+                    fail(f"{qid}: empty dialogue segment")
+                voices.add(segment["voice"])
+                segment_texts.append(segment["text"])
+            if len(voices) < 2:
+                fail(f"{qid}: dialogue must use at least two voices")
+            if " ".join(segment_texts).strip() != script.strip():
+                fail(f"{qid}: dialogue segments must exactly reconstruct stimulus.script")
+        else:
+            if stimulus.get("voice") not in {"lessac", "ryan"}:
+                fail(f"{qid}: monologue voice must be lessac or ryan")
+
+        normalized_script = " ".join(script.lower().split())
         if normalized_script in seen_listening_scripts:
             fail(f"{qid}: duplicate listening script also used by {seen_listening_scripts[normalized_script]}")
         seen_listening_scripts[normalized_script] = qid
@@ -179,4 +213,4 @@ for entry in entries:
             fail(f"dictionary form {form!r} belongs to both {forms[normalized]} and {lemma}")
         forms[normalized] = lemma
 
-print(f"OK: pack={pack['id']}, {len(questions)} questions, {len(unit_ids)} knowledge units, {len(skills)} tags, {listening} listening items, {len(entries)} dictionary entries")
+print(f"OK: pack={pack['id']}, {len(questions)} questions, {len(unit_ids)} knowledge units, {len(skills)} tags, {listening} listening items ({dialogues} dialogues), {len(entries)} dictionary entries")
