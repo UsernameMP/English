@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "items": [
+    {
+      "sku": "ebook.word_detective.v1",
+      "type": "owned_ebook",
+      "price_crystals": 2000,
+      "enabled": true,
+      "rights": {
+        "status": "owned_original",
+        "territory": "worldwide"
+      },
+      "name": {
+        "en": "Word Detective: 8 Mini Mysteries",
+        "ru": "Word Detective: 8 мини-детективов"
+      },
+      "description": {
+        "en": "An original short English reader included with the app.",
+        "ru": "Оригинальная короткая книга на английском внутри приложения."
+      },
+      "fulfillment": {
+        "mode": "asset",
+        "asset": "rewards/word_detective.html"
+      }
+    },
+    {
+      "sku": "partner.ebook.giftcode.placeholder",
+      "type": "partner_code",
+      "price_crystals": 2000,
+      "enabled": false,
+      "backend_required": true,
+      "rights": {
+        "status": "required_before_enable"
+      },
+      "name": {
+        "en": "Partner e-book gift code",
+        "ru": "Подарочный код на электронную книгу"
+      },
+      "description": {
+        "en": "Disabled until partner rights and secure server redemption are configured.",
+        "ru": "Будет доступно после договора с партнёром и серверной выдачи кодов."
+      },
+      "fulfillment": {
+        "mode": "remote_code"
+      }
+    },
+    {
+      "sku": "telegram.stickers.placeholder",
+      "type": "telegram_sticker_pack",
+      "price_crystals": 900,
+      "enabled": false,
+      "backend_required": false,
+      "rights": {
+        "status": "original_art_required"
+      },
+      "name": {
+        "en": "Telegram sticker pack",
+        "ru": "Стикер-пак Telegram"
+      },
+      "description": {
+        "en": "Reserved for original artwork.",
+        "ru": "Зарезервировано под оригинальный набор стикеров."
+      },
+      "fulfillment": {
+        "mode": "external_url"
+      }
+    }
+  ]
+}
