@@ -101,7 +101,7 @@ public final class RewardFx {
         if (correct && (combo == 3 || combo == 5 || combo == 8 || combo == 10 || combo == 15)) {
             majorBurst(reaction);
         } else {
-            smallPulse(reaction);
+            smallPulse(reaction, correct);
         }
     }
 
@@ -180,12 +180,10 @@ public final class RewardFx {
         }, 900);
     }
 
-    private void smallPulse(Reaction reaction) {
+    private void smallPulse(Reaction reaction, boolean positive) {
         if (tone != null && settings.getBoolean("sound", true)) {
             try {
-                tone.startTone(reaction.headline.equals("ТОЧНО")
-                        ? ToneGenerator.TONE_PROP_BEEP
-                        : ToneGenerator.TONE_PROP_NACK, 65);
+                tone.startTone(positive ? ToneGenerator.TONE_PROP_BEEP : ToneGenerator.TONE_PROP_NACK, 65);
             } catch (Exception ignored) {
             }
         }
@@ -194,8 +192,7 @@ public final class RewardFx {
         if (host == null) return;
 
         TextView chip = label(reaction.symbol + "  " + reaction.headline, 15,
-                reaction.headline.equals("ТОЧНО") || reaction.headline.equals("ЕСТЬ СЕРИЯ")
-                        ? Color.rgb(15, 105, 67) : Color.rgb(96, 105, 122),
+                positive ? Color.rgb(15, 105, 67) : Color.rgb(96, 105, 122),
                 Typeface.BOLD);
         chip.setPadding(dp(16), dp(10), dp(16), dp(10));
         chip.setBackground(Shapes.round(Color.WHITE, dp(24), dp(1), Color.rgb(225, 229, 239)));
