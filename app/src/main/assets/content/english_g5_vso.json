@@ -53,7 +53,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.BE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "be"
+      ]
     },
     {
       "id": "be_002",
@@ -103,7 +112,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.BE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "be"
+      ]
     },
     {
       "id": "be_003",
@@ -153,7 +171,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.BE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "be"
+      ]
     },
     {
       "id": "be_004",
@@ -203,7 +230,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.BE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "be"
+      ]
     },
     {
       "id": "be_005",
@@ -253,7 +289,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.BE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "be"
+      ]
     },
     {
       "id": "be_006",
@@ -303,7 +348,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.BE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "be"
+      ]
     },
     {
       "id": "be_007",
@@ -353,7 +407,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.BE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "be"
+      ]
     },
     {
       "id": "be_008",
@@ -403,7 +466,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.BE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "be"
+      ]
     },
     {
       "id": "be_009",
@@ -453,7 +525,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.BE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "be"
+      ]
     },
     {
       "id": "be_010",
@@ -503,7 +584,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.BE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "be"
+      ]
     },
     {
       "id": "have_has_011",
@@ -553,7 +643,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.HAVE_HAS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "have_has"
+      ]
     },
     {
       "id": "have_has_012",
@@ -603,7 +702,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.HAVE_HAS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "have_has"
+      ]
     },
     {
       "id": "have_has_013",
@@ -653,7 +761,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.HAVE_HAS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "have_has"
+      ]
     },
     {
       "id": "have_has_014",
@@ -703,7 +820,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.HAVE_HAS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "have_has"
+      ]
     },
     {
       "id": "have_has_015",
@@ -753,7 +879,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.HAVE_HAS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "have_has"
+      ]
     },
     {
       "id": "have_has_016",
@@ -803,7 +938,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.HAVE_HAS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "have_has"
+      ]
     },
     {
       "id": "have_has_017",
@@ -853,7 +997,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.HAVE_HAS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "have_has"
+      ]
     },
     {
       "id": "have_has_018",
@@ -903,7 +1056,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.HAVE_HAS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "have_has"
+      ]
     },
     {
       "id": "have_has_019",
@@ -953,7 +1115,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.HAVE_HAS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "have_has"
+      ]
     },
     {
       "id": "have_has_020",
@@ -1003,7 +1174,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.HAVE_HAS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "have_has"
+      ]
     },
     {
       "id": "do_does_021",
@@ -1053,7 +1233,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.DO_DOES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "do_does"
+      ]
     },
     {
       "id": "do_does_022",
@@ -1103,7 +1292,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.DO_DOES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "do_does"
+      ]
     },
     {
       "id": "do_does_023",
@@ -1153,7 +1351,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.DO_DOES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "do_does"
+      ]
     },
     {
       "id": "do_does_024",
@@ -1203,7 +1410,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.DO_DOES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "do_does"
+      ]
     },
     {
       "id": "do_does_025",
@@ -1253,7 +1469,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.DO_DOES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "do_does"
+      ]
     },
     {
       "id": "do_does_026",
@@ -1303,7 +1528,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.DO_DOES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "do_does"
+      ]
     },
     {
       "id": "do_does_027",
@@ -1353,7 +1587,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.DO_DOES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "do_does"
+      ]
     },
     {
       "id": "do_does_028",
@@ -1403,7 +1646,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.DO_DOES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "do_does"
+      ]
     },
     {
       "id": "articles_029",
@@ -1453,7 +1705,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.ARTICLES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "articles"
+      ]
     },
     {
       "id": "articles_030",
@@ -1503,7 +1764,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.ARTICLES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "articles"
+      ]
     },
     {
       "id": "articles_031",
@@ -1553,7 +1823,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.ARTICLES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "articles"
+      ]
     },
     {
       "id": "articles_032",
@@ -1603,7 +1882,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.ARTICLES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "articles"
+      ]
     },
     {
       "id": "articles_033",
@@ -1653,7 +1941,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.ARTICLES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "articles"
+      ]
     },
     {
       "id": "articles_034",
@@ -1703,7 +2000,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.ARTICLES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "articles"
+      ]
     },
     {
       "id": "articles_035",
@@ -1753,7 +2059,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.ARTICLES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "articles"
+      ]
     },
     {
       "id": "articles_036",
@@ -1803,7 +2118,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.ARTICLES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "articles"
+      ]
     },
     {
       "id": "articles_037",
@@ -1853,7 +2177,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.ARTICLES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "articles"
+      ]
     },
     {
       "id": "articles_038",
@@ -1903,7 +2236,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.ARTICLES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "articles"
+      ]
     },
     {
       "id": "articles_039",
@@ -1953,7 +2295,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.ARTICLES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "articles"
+      ]
     },
     {
       "id": "articles_040",
@@ -2003,7 +2354,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.ARTICLES",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "articles"
+      ]
     },
     {
       "id": "pronouns_041",
@@ -2053,7 +2413,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PRONOUNS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "pronouns"
+      ]
     },
     {
       "id": "pronouns_042",
@@ -2103,7 +2472,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PRONOUNS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "pronouns"
+      ]
     },
     {
       "id": "pronouns_043",
@@ -2153,7 +2531,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PRONOUNS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "pronouns"
+      ]
     },
     {
       "id": "pronouns_044",
@@ -2203,7 +2590,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PRONOUNS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "pronouns"
+      ]
     },
     {
       "id": "pronouns_045",
@@ -2253,7 +2649,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PRONOUNS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "pronouns"
+      ]
     },
     {
       "id": "pronouns_046",
@@ -2303,7 +2708,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PRONOUNS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "pronouns"
+      ]
     },
     {
       "id": "pronouns_047",
@@ -2353,7 +2767,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PRONOUNS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "pronouns"
+      ]
     },
     {
       "id": "pronouns_048",
@@ -2403,7 +2826,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PRONOUNS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "pronouns"
+      ]
     },
     {
       "id": "present_simple_049",
@@ -2453,7 +2885,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_simple"
+      ]
     },
     {
       "id": "present_simple_050",
@@ -2503,7 +2944,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_simple"
+      ]
     },
     {
       "id": "present_simple_051",
@@ -2553,7 +3003,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_simple"
+      ]
     },
     {
       "id": "present_simple_052",
@@ -2603,7 +3062,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_simple"
+      ]
     },
     {
       "id": "present_simple_053",
@@ -2653,7 +3121,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_simple"
+      ]
     },
     {
       "id": "present_simple_054",
@@ -2703,7 +3180,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_simple"
+      ]
     },
     {
       "id": "present_simple_055",
@@ -2753,7 +3239,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_simple"
+      ]
     },
     {
       "id": "present_simple_056",
@@ -2803,7 +3298,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_simple"
+      ]
     },
     {
       "id": "present_continuous_057",
@@ -2853,7 +3357,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_CONTINUOUS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_continuous"
+      ]
     },
     {
       "id": "present_continuous_058",
@@ -2903,7 +3416,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_CONTINUOUS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_continuous"
+      ]
     },
     {
       "id": "present_continuous_059",
@@ -2953,7 +3475,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_CONTINUOUS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_continuous"
+      ]
     },
     {
       "id": "present_continuous_060",
@@ -3003,7 +3534,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_CONTINUOUS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_continuous"
+      ]
     },
     {
       "id": "present_continuous_061",
@@ -3053,7 +3593,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_CONTINUOUS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_continuous"
+      ]
     },
     {
       "id": "present_continuous_062",
@@ -3103,7 +3652,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_CONTINUOUS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_continuous"
+      ]
     },
     {
       "id": "present_continuous_063",
@@ -3153,7 +3711,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_CONTINUOUS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_continuous"
+      ]
     },
     {
       "id": "present_continuous_064",
@@ -3203,7 +3770,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PRESENT_CONTINUOUS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "present_continuous"
+      ]
     },
     {
       "id": "past_simple_065",
@@ -3253,7 +3829,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_simple"
+      ]
     },
     {
       "id": "past_simple_066",
@@ -3303,7 +3888,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_simple"
+      ]
     },
     {
       "id": "past_simple_067",
@@ -3353,7 +3947,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_simple"
+      ]
     },
     {
       "id": "past_simple_068",
@@ -3403,7 +4006,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_simple"
+      ]
     },
     {
       "id": "past_simple_069",
@@ -3453,7 +4065,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_simple"
+      ]
     },
     {
       "id": "past_simple_070",
@@ -3503,7 +4124,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_simple"
+      ]
     },
     {
       "id": "past_simple_071",
@@ -3553,7 +4183,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_simple"
+      ]
     },
     {
       "id": "past_simple_072",
@@ -3603,7 +4242,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_simple"
+      ]
     },
     {
       "id": "past_simple_073",
@@ -3653,7 +4301,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_simple"
+      ]
     },
     {
       "id": "past_simple_074",
@@ -3703,7 +4360,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_SIMPLE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_simple"
+      ]
     },
     {
       "id": "past_continuous_075",
@@ -3753,7 +4419,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_CONTINUOUS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_continuous"
+      ]
     },
     {
       "id": "past_continuous_076",
@@ -3803,7 +4478,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_CONTINUOUS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_continuous"
+      ]
     },
     {
       "id": "past_continuous_077",
@@ -3853,7 +4537,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_CONTINUOUS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_continuous"
+      ]
     },
     {
       "id": "past_continuous_078",
@@ -3903,7 +4596,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_CONTINUOUS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_continuous"
+      ]
     },
     {
       "id": "past_continuous_079",
@@ -3953,7 +4655,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_CONTINUOUS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_continuous"
+      ]
     },
     {
       "id": "past_continuous_080",
@@ -4003,7 +4714,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.TENSE.PAST_CONTINUOUS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "past_continuous"
+      ]
     },
     {
       "id": "prepositions_081",
@@ -4053,7 +4773,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PREPOSITIONS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "prepositions"
+      ]
     },
     {
       "id": "prepositions_082",
@@ -4103,7 +4832,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PREPOSITIONS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "prepositions"
+      ]
     },
     {
       "id": "prepositions_083",
@@ -4153,7 +4891,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PREPOSITIONS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "prepositions"
+      ]
     },
     {
       "id": "prepositions_084",
@@ -4203,7 +4950,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PREPOSITIONS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "prepositions"
+      ]
     },
     {
       "id": "prepositions_085",
@@ -4253,7 +5009,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PREPOSITIONS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "prepositions"
+      ]
     },
     {
       "id": "prepositions_086",
@@ -4303,7 +5068,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PREPOSITIONS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "prepositions"
+      ]
     },
     {
       "id": "prepositions_087",
@@ -4353,7 +5127,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PREPOSITIONS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "prepositions"
+      ]
     },
     {
       "id": "prepositions_088",
@@ -4403,7 +5186,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PREPOSITIONS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "prepositions"
+      ]
     },
     {
       "id": "prepositions_089",
@@ -4453,7 +5245,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PREPOSITIONS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "prepositions"
+      ]
     },
     {
       "id": "prepositions_090",
@@ -4503,7 +5304,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.PREPOSITIONS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "prepositions"
+      ]
     },
     {
       "id": "comparison_091",
@@ -4553,7 +5363,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.COMPARISON",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "comparison"
+      ]
     },
     {
       "id": "comparison_092",
@@ -4603,7 +5422,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.COMPARISON",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "comparison"
+      ]
     },
     {
       "id": "comparison_093",
@@ -4653,7 +5481,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.COMPARISON",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "comparison"
+      ]
     },
     {
       "id": "comparison_094",
@@ -4703,7 +5540,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.COMPARISON",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "comparison"
+      ]
     },
     {
       "id": "comparison_095",
@@ -4753,7 +5599,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.COMPARISON",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "comparison"
+      ]
     },
     {
       "id": "comparison_096",
@@ -4803,7 +5658,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.COMPARISON",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "comparison"
+      ]
     },
     {
       "id": "comparison_097",
@@ -4853,7 +5717,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.COMPARISON",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "comparison"
+      ]
     },
     {
       "id": "comparison_098",
@@ -4903,7 +5776,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.COMPARISON",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "comparison"
+      ]
     },
     {
       "id": "some_any_099",
@@ -4953,7 +5835,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.QUANTIFIERS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "some_any"
+      ]
     },
     {
       "id": "some_any_100",
@@ -5003,7 +5894,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.QUANTIFIERS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "some_any"
+      ]
     },
     {
       "id": "some_any_101",
@@ -5053,7 +5953,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.QUANTIFIERS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "some_any"
+      ]
     },
     {
       "id": "some_any_102",
@@ -5103,7 +6012,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.QUANTIFIERS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "some_any"
+      ]
     },
     {
       "id": "some_any_103",
@@ -5153,7 +6071,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.QUANTIFIERS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "some_any"
+      ]
     },
     {
       "id": "some_any_104",
@@ -5203,7 +6130,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.QUANTIFIERS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "some_any"
+      ]
     },
     {
       "id": "some_any_105",
@@ -5253,7 +6189,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.QUANTIFIERS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "some_any"
+      ]
     },
     {
       "id": "some_any_106",
@@ -5303,7 +6248,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.QUANTIFIERS",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "some_any"
+      ]
     },
     {
       "id": "olympiad_1",
@@ -5353,7 +6307,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.OLYMPIAD",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "olympiad_grammar"
+      ]
     },
     {
       "id": "olympiad_2",
@@ -5403,7 +6366,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.OLYMPIAD",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "olympiad_grammar"
+      ]
     },
     {
       "id": "olympiad_3",
@@ -5453,7 +6425,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.OLYMPIAD",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "olympiad_grammar"
+      ]
     },
     {
       "id": "olympiad_4",
@@ -5503,7 +6484,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.OLYMPIAD",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "olympiad_grammar"
+      ]
     },
     {
       "id": "olympiad_5",
@@ -5553,7 +6543,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.OLYMPIAD",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "olympiad_grammar"
+      ]
     },
     {
       "id": "olympiad_6",
@@ -5603,7 +6602,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.OLYMPIAD",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "olympiad_grammar"
+      ]
     },
     {
       "id": "olympiad_7",
@@ -5653,7 +6661,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.OLYMPIAD",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "olympiad_grammar"
+      ]
     },
     {
       "id": "olympiad_8",
@@ -5703,7 +6720,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.GRAMMAR.OLYMPIAD",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "olympiad_grammar"
+      ]
     },
     {
       "id": "reading_1",
@@ -5753,7 +6779,16 @@
       "evidence": "The library was crowded, so she walked to the small park behind the museum.",
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading"
+      ]
     },
     {
       "id": "reading_2",
@@ -5803,7 +6838,16 @@
       "evidence": "She sat on a bench under a large tree",
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading"
+      ]
     },
     {
       "id": "reading_3",
@@ -5853,7 +6897,16 @@
       "evidence": "heavy rain was expected",
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading"
+      ]
     },
     {
       "id": "reading_4",
@@ -5903,7 +6956,16 @@
       "evidence": "Sunday morning was cool but dry",
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading"
+      ]
     },
     {
       "id": "reading_5",
@@ -5953,7 +7015,16 @@
       "evidence": "there was a student card with a name on it",
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading"
+      ]
     },
     {
       "id": "reading_6",
@@ -6003,7 +7074,16 @@
       "evidence": "Nora gave the wallet to the receptionist.",
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading"
+      ]
     },
     {
       "id": "reading_7",
@@ -6053,7 +7133,16 @@
       "evidence": "funny with his younger sister. The film should be shorter than two hours and suitable for children.",
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading"
+      ]
     },
     {
       "id": "reading_8",
@@ -6103,7 +7192,16 @@
       "evidence": "The film should be shorter than two hours and suitable for children.",
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading"
+      ]
     },
     {
       "id": "reading_9",
@@ -6153,7 +7251,16 @@
       "evidence": "This week the meeting will start thirty minutes later",
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading"
+      ]
     },
     {
       "id": "reading_10",
@@ -6203,7 +7310,16 @@
       "evidence": "New players may come even if they do not know all the rules.",
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading"
+      ]
     },
     {
       "id": "reading_11",
@@ -6253,7 +7369,16 @@
       "evidence": "The fox wanted the cheese, so he praised the crow's beautiful voice",
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading"
+      ]
     },
     {
       "id": "reading_12",
@@ -6303,7 +7428,16 @@
       "evidence": "The crow opened her beak, the cheese fell",
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading"
+      ]
     },
     {
       "id": "listening_01",
@@ -6354,7 +7488,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening"
+      ]
     },
     {
       "id": "listening_02",
@@ -6405,7 +7548,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening"
+      ]
     },
     {
       "id": "listening_03",
@@ -6456,7 +7608,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening"
+      ]
     },
     {
       "id": "listening_04",
@@ -6507,7 +7668,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening"
+      ]
     },
     {
       "id": "listening_05",
@@ -6558,7 +7728,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening"
+      ]
     },
     {
       "id": "listening_06",
@@ -6609,7 +7788,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening"
+      ]
     },
     {
       "id": "listening_07",
@@ -6660,7 +7848,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening"
+      ]
     },
     {
       "id": "listening_08",
@@ -6711,7 +7908,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening"
+      ]
     },
     {
       "id": "listening_09",
@@ -6762,7 +7968,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening"
+      ]
     },
     {
       "id": "listening_10",
@@ -6813,7 +8028,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening"
+      ]
     },
     {
       "id": "listening_11",
@@ -6864,7 +8088,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening"
+      ]
     },
     {
       "id": "listening_12",
@@ -6915,7 +8148,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening"
+      ]
     },
     {
       "id": "story_01",
@@ -6965,7 +8207,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story"
+      ]
     },
     {
       "id": "story_02",
@@ -7015,7 +8266,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story"
+      ]
     },
     {
       "id": "story_03",
@@ -7065,7 +8325,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story"
+      ]
     },
     {
       "id": "story_04",
@@ -7115,7 +8384,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story"
+      ]
     },
     {
       "id": "story_05",
@@ -7165,7 +8443,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story"
+      ]
     },
     {
       "id": "story_06",
@@ -7215,7 +8502,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story"
+      ]
     },
     {
       "id": "story_07",
@@ -7265,7 +8561,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story"
+      ]
     },
     {
       "id": "story_08",
@@ -7315,7 +8620,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story"
+      ]
     },
     {
       "id": "story_09",
@@ -7365,7 +8679,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story"
+      ]
     },
     {
       "id": "story_10",
@@ -7415,7 +8738,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story"
+      ]
     },
     {
       "id": "story_11",
@@ -7465,7 +8797,16 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story"
+      ]
     },
     {
       "id": "story_12",
@@ -7515,7 +8856,195 @@
       "evidence": null,
       "review": {
         "status": "verified"
-      }
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story"
+      ]
+    }
+  ],
+  "pack": {
+    "id": "english.vsosh.5-6.ru.2026",
+    "subject": "english",
+    "grade_min": 5,
+    "grade_max": 6,
+    "competition": "VSOSh",
+    "region": "Tatarstan",
+    "season": "2026-2027",
+    "title": {
+      "ru": "English Sprint",
+      "en": "English Sprint"
+    },
+    "subtitle": {
+      "ru": "ВсОШ · 5–6 класс · Татарстан",
+      "en": "VSOSh · Grades 5–6 · Tatarstan"
+    }
+  },
+  "knowledge_units": [
+    {
+      "id": "ENG.GRAMMAR.BE",
+      "kind": "concept",
+      "legacy_skill": "be",
+      "labels": {
+        "ru": "am / is / are · was / were",
+        "en": "am / is / are · was / were"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.GRAMMAR.HAVE_HAS",
+      "kind": "concept",
+      "legacy_skill": "have_has",
+      "labels": {
+        "ru": "have / has",
+        "en": "have / has"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.GRAMMAR.DO_DOES",
+      "kind": "concept",
+      "legacy_skill": "do_does",
+      "labels": {
+        "ru": "do / does",
+        "en": "do / does"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.GRAMMAR.ARTICLES",
+      "kind": "concept",
+      "legacy_skill": "articles",
+      "labels": {
+        "ru": "a / an / the",
+        "en": "a / an / the"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.GRAMMAR.PRONOUNS",
+      "kind": "concept",
+      "legacy_skill": "pronouns",
+      "labels": {
+        "ru": "местоимения",
+        "en": "pronouns"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.GRAMMAR.TENSE.PRESENT_SIMPLE",
+      "kind": "concept",
+      "legacy_skill": "present_simple",
+      "labels": {
+        "ru": "Present Simple",
+        "en": "Present Simple"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.GRAMMAR.TENSE.PRESENT_CONTINUOUS",
+      "kind": "concept",
+      "legacy_skill": "present_continuous",
+      "labels": {
+        "ru": "Present Continuous",
+        "en": "Present Continuous"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.GRAMMAR.TENSE.PAST_SIMPLE",
+      "kind": "concept",
+      "legacy_skill": "past_simple",
+      "labels": {
+        "ru": "Past Simple",
+        "en": "Past Simple"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.GRAMMAR.TENSE.PAST_CONTINUOUS",
+      "kind": "concept",
+      "legacy_skill": "past_continuous",
+      "labels": {
+        "ru": "Past Continuous",
+        "en": "Past Continuous"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.GRAMMAR.PREPOSITIONS",
+      "kind": "concept",
+      "legacy_skill": "prepositions",
+      "labels": {
+        "ru": "предлоги",
+        "en": "prepositions"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.GRAMMAR.COMPARISON",
+      "kind": "concept",
+      "legacy_skill": "comparison",
+      "labels": {
+        "ru": "сравнения",
+        "en": "comparisons"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.GRAMMAR.QUANTIFIERS",
+      "kind": "concept",
+      "legacy_skill": "some_any",
+      "labels": {
+        "ru": "some / any · much / many",
+        "en": "quantifiers"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.GRAMMAR.OLYMPIAD",
+      "kind": "concept",
+      "legacy_skill": "olympiad_grammar",
+      "labels": {
+        "ru": "олимпиадная грамматика",
+        "en": "olympiad grammar"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.READING.COMPREHENSION",
+      "kind": "concept",
+      "legacy_skill": "reading",
+      "labels": {
+        "ru": "Reading",
+        "en": "Reading comprehension"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.LISTENING.COMPREHENSION",
+      "kind": "concept",
+      "legacy_skill": "listening",
+      "labels": {
+        "ru": "Listening",
+        "en": "Listening comprehension"
+      },
+      "relations": []
+    },
+    {
+      "id": "ENG.WRITING.STORY_STRUCTURE",
+      "kind": "concept",
+      "legacy_skill": "story",
+      "labels": {
+        "ru": "Story builder",
+        "en": "Story structure"
+      },
+      "relations": []
     }
   ]
 }

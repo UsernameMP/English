@@ -22,3 +22,18 @@ Run before committing content:
 ```bash
 python3 scripts/validate_content.py
 ```
+
+
+## Product packs and Knowledge Atlas compatibility
+
+The app loads a pack through `assets/content/catalog.json`. A pack owns product metadata (subject, grade range, competition, season) and can be swapped without changing the question renderer.
+
+Every shipping question also references one or more stable `knowledge_units`:
+
+```json
+"knowledge": [
+  {"id": "ENG.GRAMMAR.ARTICLES", "weight": 1.0}
+]
+```
+
+Legacy skill strings remain as tags for compatibility only. Learner mastery is migrated to knowledge-unit IDs so future packs can reuse the same knowledge node across grades and, later, across subjects.
