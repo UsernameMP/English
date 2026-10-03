@@ -33,6 +33,7 @@ public final class ShopStore {
         this.economy = economy;
         this.prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
         load();
+        reconcilePurchases();
     }
 
     public List<ShopItem> items() { return Collections.unmodifiableList(items); }
@@ -94,6 +95,18 @@ public final class ShopStore {
     public String soundPack() {
         ShopItem item = bySku.get(equippedSku("sound"));
         return item == null ? "default" : item.payload.optString("pack", "default");
+    }
+
+    private void reconcilePurchases() {
+        Set<String> owned = ownedSet();
+        boolean changed = false;
+        for (ShopItem item : items) {
+            if (!owned.contains(item.sku) && economy.hasDebit("shop_purchase", item.sku)) {
+                owned.add(item.sku);
+                changed = true;
+            }
+        }
+        if (changed) prefs.edit().putStringSet("owned", owned).apply();
     }
 
     private Set<String> ownedSet() {
