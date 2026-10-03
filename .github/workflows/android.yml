@@ -1,4 +1,4 @@
-name: Android APK
+name: Android Pilot APK
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -45,16 +45,71 @@ jobs:
       - name: Generate offline neural listening WAVs
         run: bash scripts/generate_audio.sh
 
-      - name: Build debug APK
-        run: gradle :app:assembleDebug --stacktrace
+      - name: Build unsigned release APK
+        run: gradle :app:assembleRelease --stacktrace
 
-      - name: Rename APK
-        run: cp app/build/outputs/apk/debug/app-debug.apk english-sprint-v0.5.1-debug.apk
+      - name: Fetch public AOSP pilot signing key
+        run: |
+          mkdir -p "$RUNNER_TEMP/aosp-testkey"
+          curl -L --fail --retry 3 \
+            "https://android.googlesource.com/platform/build/+/refs/heads/main/target/product/security/testkey.pk8?format=TEXT" \
+            | base64 -d > "$RUNNER_TEMP/aosp-testkey/testkey.pk8"
+          curl -L --fail --retry 3 \
+            "https://android.googlesource.com/platform/build/+/refs/heads/main/target/product/security/testkey.x509.pem?format=TEXT" \
+            | base64 -d > "$RUNNER_TEMP/aosp-testkey/testkey.x509.pem"
 
-      - name: Upload APK
+      - name: Sign stable pilot APK
+        run: |
+          BUILD_TOOLS="$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n1)"
+          UNSIGNED="app/build/outputs/apk/release/app-release-unsigned.apk"
+          ALIGNED="$RUNNER_TEMP/english-sprint-aligned.apk"
+          APK="english-sprint-v0.6.0-pilot.apk"
+
+          "$BUILD_TOOLS/zipalign" -f -p 4 "$UNSIGNED" "$ALIGNED"
+          "$BUILD_TOOLS/apksigner" sign \
+            --key "$RUNNER_TEMP/aosp-testkey/testkey.pk8" \
+            --cert "$RUNNER_TEMP/aosp-testkey/testkey.x509.pem" \
+            --out "$APK" \
+            "$ALIGNED"
+
+          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs "$APK"
+
+      - name: Upload CI artifact
         uses: actions/upload-artifact@v4
         with:
-          name: english-sprint-v0.5.1
-          path: english-sprint-v0.5.1-debug.apk
+          name: english-sprint-v0.6.0-pilot
+          path: english-sprint-v0.6.0-pilot.apk
           if-no-files-found: error
           retention-days: 14
+
+      - name: Publish direct APK update channel
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          VERSION_NAME="$(sed -n 's/.*versionName "\([^"]*\)".*/\1/p' app/build.gradle | head -n1)"
+          VERSION_CODE="$(sed -n 's/.*versionCode \([0-9][0-9]*\).*/\1/p' app/build.gradle | head -n1)"
+          APK="english-sprint-v0.6.0-pilot.apk"
+          SIZE="$(stat -c%s "$APK")"
+
+          mkdir -p /tmp/english-sprint-dist
+          cp "$APK" /tmp/english-sprint-dist/english-sprint-latest.apk
+          cp "$APK" "/tmp/english-sprint-dist/english-sprint-v${VERSION_NAME}-pilot.apk"
+
+          cat > /tmp/english-sprint-dist/latest.json <<EOF
+          {
+            "versionName": "${VERSION_NAME}",
+            "versionCode": ${VERSION_CODE},
+            "apkUrl": "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/apk-dist/english-sprint-latest.apk",
+            "sizeBytes": ${SIZE},
+            "commit": "${GITHUB_SHA}"
+          }
+          EOF
+
+          git config user.name "English Sprint CI"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout --orphan apk-dist-publish
+          git rm -rf . || true
+          git clean -fdx
+          cp /tmp/english-sprint-dist/* .
+          git add english-sprint-latest.apk "english-sprint-v${VERSION_NAME}-pilot.apk" latest.json
+          git commit -m "Publish English Sprint v${VERSION_NAME} pilot"
+          git push origin HEAD:apk-dist --force

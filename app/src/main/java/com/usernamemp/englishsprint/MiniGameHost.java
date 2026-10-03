@@ -10,8 +10,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import android.content.SharedPreferences;
 
 public final class MiniGameHost {
     private final Context context;
@@ -22,10 +25,15 @@ public final class MiniGameHost {
     private boolean enabled = false;
     private int breakIntervalQuestions = 10;
     private String defaultGame = "";
+    private String selectionStrategy = "round_robin";
+    private final SharedPreferences prefs;
 
     public MiniGameHost(Context context, EconomyStore economy) {
         this.context = context.getApplicationContext();
         this.economy = economy;
+        this.prefs = this.context.getSharedPreferences("english_sprint_minigames", Context.MODE_PRIVATE);
+        register(new Match3MiniGame());
+        register(new MemoryMiniGame());
         register(new TapSparkMiniGame());
         loadConfig();
     }
@@ -36,18 +44,18 @@ public final class MiniGameHost {
                 && breakIntervalQuestions > 0
                 && answeredInSession > 0
                 && answeredInSession % breakIntervalQuestions == 0
-                && games.containsKey(defaultGame)
-                && configs.containsKey(defaultGame)
-                && configs.get(defaultGame).enabled;
+                && !enabledGameIds().isEmpty();
     }
 
     public void startBreak(Activity activity, Runnable onFinished) {
-        MiniGame game = games.get(defaultGame);
-        MiniGameConfig config = configs.get(defaultGame);
+        String selected = selectNextGameId();
+        MiniGame game = games.get(selected);
+        MiniGameConfig config = configs.get(selected);
         if (game == null || config == null || !config.enabled) {
             onFinished.run();
             return;
         }
+        prefs.edit().putString("last_game_id", selected).apply();
         game.start(activity, config, economy, onFinished);
     }
 
@@ -56,8 +64,33 @@ public final class MiniGameHost {
     }
 
     public String defaultTitle(Locale locale) {
-        MiniGameConfig config = configs.get(defaultGame);
+        String selected = selectNextGameId();
+        MiniGameConfig config = configs.get(selected);
         return config == null ? "" : config.title(locale);
+    }
+
+    private List<String> enabledGameIds() {
+        List<String> ids = new ArrayList<>();
+        for (Map.Entry<String, MiniGameConfig> entry : configs.entrySet()) {
+            if (entry.getValue().enabled && games.containsKey(entry.getKey())) ids.add(entry.getKey());
+        }
+        return ids;
+    }
+
+    private String selectNextGameId() {
+        List<String> ids = enabledGameIds();
+        if (ids.isEmpty()) return defaultGame;
+        if (ids.size() == 1) return ids.get(0);
+
+        String last = prefs.getString("last_game_id", "");
+        int lastIndex = ids.indexOf(last);
+
+        if ("round_robin".equals(selectionStrategy)) {
+            return ids.get((lastIndex + 1 + ids.size()) % ids.size());
+        }
+
+        // Fallback strategy: deterministic no-repeat rotation.
+        return ids.get((lastIndex + 1 + ids.size()) % ids.size());
     }
 
     private void register(MiniGame game) {
@@ -70,6 +103,7 @@ public final class MiniGameHost {
             enabled = root.optBoolean("enabled", false);
             breakIntervalQuestions = Math.max(1, root.optInt("break_interval_questions", 10));
             defaultGame = root.optString("default_game", "");
+            selectionStrategy = root.optString("selection_strategy", "round_robin");
 
             JSONArray array = root.optJSONArray("games");
             if (array == null) return;

@@ -56,6 +56,7 @@ public class MainActivity extends Activity {
     private ShopStore shop;
     private DigitalRewardStore digitalRewards;
     private MiniGameHost miniGames;
+    private UpdateManager updater;
 
     private List<Question> session = new ArrayList<>();
     private int questionIndex = 0;
@@ -81,6 +82,7 @@ public class MainActivity extends Activity {
         miniGames = new MiniGameHost(this, economy);
         audio = new AudioEngine(this);
         rewards = new RewardFx(this);
+        updater = new UpdateManager(this);
         getWindow().setStatusBarColor(BG);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         showHome();
@@ -121,6 +123,30 @@ public class MainActivity extends Activity {
                 : getString(R.string.training_mode), 14, PRIMARY, Typeface.BOLD);
         deadline.setPadding(0, dp(10), 0, 0);
         root.addView(deadline);
+
+        LinearLayout updateRow = row();
+        TextView installedVersion = text(getString(R.string.update_version_fmt, BuildConfig.VERSION_NAME),
+                12, MUTED, Typeface.NORMAL);
+        updateRow.addView(installedVersion,
+                new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
+        Button updateButton = secondaryButton(getString(R.string.update_check));
+        updateButton.setTextSize(13);
+        updateButton.setMinHeight(dp(42));
+        updateButton.setOnClickListener(v -> updater.showCheckDialog());
+        updateRow.addView(updateButton,
+                new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, dp(44)));
+        LinearLayout.LayoutParams ulp = matchWrap();
+        ulp.topMargin = dp(8);
+        root.addView(updateRow, ulp);
+
+        updater.check((info, error) -> {
+            if (info != null && error == null) {
+                updateButton.setText(getString(R.string.update_button_available, info.version));
+                updateButton.setTextColor(Color.WHITE);
+                updateButton.setBackground(roundRect(PRIMARY,
+                        shop == null ? 14 : shop.buttonRadius(14), 0, Color.TRANSPARENT));
+            }
+        });
 
         root.addView(space(16));
         root.addView(progressCard());
@@ -312,7 +338,7 @@ public class MainActivity extends Activity {
         if (q.type == Question.Type.LISTENING) {
             root.addView(thumbZoneSpacer());
             Button play = primaryButton(getString(R.string.listen_first));
-            play.setMinHeight(dp(66));
+            play.setMinHeight(dp(72));
             play.setOnClickListener(v -> {
                 if (listensLeft[0] <= 0) return;
                 audio.play(q);
@@ -793,18 +819,14 @@ public class MainActivity extends Activity {
     private View thumbZoneSpacer() {
         Space spacer = new Space(this);
         int screenHeight = getResources().getDisplayMetrics().heightPixels;
-        int heightPx = Math.max(dp(56), Math.min(dp(105), screenHeight / 10));
+        int heightPx = Math.max(dp(125), Math.min(dp(210), Math.round(screenHeight * 0.22f)));
         spacer.setLayoutParams(new LinearLayout.LayoutParams(1, heightPx));
         return spacer;
     }
 
     private View taskActionZone(View action) {
         LinearLayout zone = column();
-        zone.setPadding(dp(8), dp(8), dp(8), dp(10));
-        TextView label = text(getString(R.string.task_listen_hint), 11, MUTED, Typeface.BOLD);
-        label.setGravity(Gravity.CENTER);
-        label.setPadding(0, 0, 0, dp(6));
-        zone.addView(label);
+        zone.setPadding(dp(4), dp(4), dp(4), dp(8));
         zone.addView(action, matchWrap());
         return zone;
     }

@@ -112,4 +112,19 @@
     <string name="minigame_continue">Continue training</string>
     <string name="minigame_setting">Mini-game break after learning blocks</string>
     <string name="task_listen_hint">LISTENING ACTION</string>
+    <string name="match3_hint">Tap one gem, then an adjacent gem. Make lines of 3+.</string>
+    <string name="match3_shuffle">No moves · reshuffling</string>
+    <string name="memory_hint">Find all matching pairs before time runs out.</string>
+    <string name="memory_pairs_fmt">Pairs: %1$d / 8</string>
+    <string name="update_check">↻ Check for update</string>
+    <string name="update_checking">Checking for update…</string>
+    <string name="update_none">You already have the latest pilot version.</string>
+    <string name="update_available">Update available: %1$s · %2$s</string>
+    <string name="update_download">Download &amp; install</string>
+    <string name="update_downloading">Downloading update…</string>
+    <string name="update_bad_apk">Downloaded APK failed package/signature/version verification.</string>
+    <string name="update_enable_installs">Allow English Sprint to install updates, then tap update again.</string>
+    <string name="update_failed">Update check/download failed. Try again.</string>
+    <string name="update_version_fmt">Installed: %1$s</string>
+    <string name="update_button_available">⬇ %1$s</string>
 </resources>

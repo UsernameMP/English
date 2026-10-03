@@ -286,6 +286,9 @@ with MINIGAMES.open(encoding="utf-8") as f:
 interval = minigames.get("break_interval_questions")
 if not isinstance(interval, int) or interval < 1:
     fail("mini-game break interval must be >= 1")
+strategy = minigames.get("selection_strategy", "round_robin")
+if strategy not in {"round_robin"}:
+    fail(f"unsupported mini-game selection strategy: {strategy!r}")
 games = minigames.get("games")
 if not isinstance(games, list) or not games:
     fail("mini-game config needs at least one game")
@@ -306,6 +309,12 @@ for game in games:
             fail(f"{gid}: {field} must be non-negative integer")
 if minigames.get("default_game") not in game_ids:
     fail("default mini-game must exist in games")
+enabled_games = {g.get("id") for g in games if g.get("enabled")}
+if len(enabled_games) < 3:
+    fail("v0.6 requires at least three enabled break games")
+for required_game in {"match3", "memory", "tap_spark"}:
+    if required_game not in enabled_games:
+        fail(f"required v0.6 mini-game is disabled/missing: {required_game}")
 
 print(
     f"OK: pack={pack['id']}, {len(questions)} questions, {len(unit_ids)} knowledge units, "
