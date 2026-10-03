@@ -59,4 +59,10 @@
     <string name="reaction_saved_sub">The correct answer is highlighted. Keep moving.</string>
     <string name="reaction_next_round">NEXT ROUND</string>
     <string name="reaction_next_round_sub">One mistake does not define the streak.</string>
+    <string name="reading_mode">⌕  Reading</string>
+    <string name="reading_title">Reading</string>
+    <string name="listening_mode">▶  Listening</string>
+    <string name="listening_title">Listening</string>
+    <string name="story_mode">✦  Story builder</string>
+    <string name="story_title">Story builder</string>
 </resources>
