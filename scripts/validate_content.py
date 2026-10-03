@@ -13,6 +13,28 @@ def fail(msg):
 with BANK.open(encoding="utf-8") as f:
     bank = json.load(f)
 
+pack = bank.get("pack")
+if not isinstance(pack, dict):
+    fail("pack metadata is required")
+for field in ("id", "subject", "grade_min", "grade_max", "season", "title", "subtitle"):
+    if field not in pack:
+        fail(f"pack.{field} is required")
+
+units = bank.get("knowledge_units")
+if not isinstance(units, list) or not units:
+    fail("knowledge_units must be a non-empty array")
+
+unit_ids = set()
+for unit in units:
+    uid = unit.get("id")
+    if not isinstance(uid, str) or not uid:
+        fail("knowledge unit id is required")
+    if uid in unit_ids:
+        fail(f"duplicate knowledge unit: {uid}")
+    unit_ids.add(uid)
+    if not isinstance(unit.get("labels"), dict) or not unit["labels"]:
+        fail(f"{uid}: labels are required")
+
 questions = bank.get("questions")
 if not isinstance(questions, list) or not questions:
     fail("questions must be a non-empty array")
@@ -41,6 +63,21 @@ for i, q in enumerate(questions):
     if not isinstance(qskills, list) or not qskills:
         fail(f"{qid}: at least one skill is required")
     skills.update(qskills)
+
+    knowledge = q.get("knowledge")
+    if not isinstance(knowledge, list) or not knowledge:
+        fail(f"{qid}: at least one knowledge reference is required")
+    total_weight = 0.0
+    for ref in knowledge:
+        kid = ref.get("id")
+        weight = ref.get("weight")
+        if kid not in unit_ids:
+            fail(f"{qid}: unknown knowledge unit {kid!r}")
+        if not isinstance(weight, (int, float)) or weight <= 0 or weight > 1:
+            fail(f"{qid}: invalid knowledge weight for {kid}")
+        total_weight += float(weight)
+    if total_weight > 1.000001:
+        fail(f"{qid}: knowledge weights exceed 1.0")
 
     prompt = q.get("prompt")
     if not isinstance(prompt, str) or not prompt.strip():
@@ -85,4 +122,4 @@ for i, q in enumerate(questions):
         if not stimulus.get("script"):
             fail(f"{qid}: listening requires stimulus.script")
 
-print(f"OK: {len(questions)} questions, {len(skills)} skills, {listening} listening items")
+print(f"OK: pack={pack['id']}, {len(questions)} questions, {len(unit_ids)} knowledge units, {len(skills)} tags, {listening} listening items")
