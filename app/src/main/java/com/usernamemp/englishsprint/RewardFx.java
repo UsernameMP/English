@@ -138,14 +138,21 @@ public final class RewardFx {
 
         if (tone != null && settings.getBoolean("sound", true)) {
             try {
-                tone.startTone(ToneGenerator.TONE_PROP_ACK, 150);
+                String pack = soundPack();
+                int first = "soft".equals(pack) ? ToneGenerator.TONE_PROP_BEEP
+                        : "arcade".equals(pack) ? ToneGenerator.TONE_PROP_ACK
+                        : ToneGenerator.TONE_PROP_ACK;
+                int second = "soft".equals(pack) ? ToneGenerator.TONE_PROP_BEEP2
+                        : "arcade".equals(pack) ? ToneGenerator.TONE_PROP_PROMPT
+                        : ToneGenerator.TONE_PROP_BEEP2;
+                tone.startTone(first, "soft".equals(pack) ? 120 : 160);
                 handler.postDelayed(() -> {
-                    try { tone.startTone(ToneGenerator.TONE_PROP_BEEP2, 130); } catch (Exception ignored) {}
+                    try { tone.startTone(second, "soft".equals(pack) ? 105 : 145); } catch (Exception ignored) {}
                 }, 145);
-                if (combo >= 8) {
+                if (combo >= 8 && !"soft".equals(pack)) {
                     handler.postDelayed(() -> {
-                        try { tone.startTone(ToneGenerator.TONE_PROP_ACK, 180); } catch (Exception ignored) {}
-                    }, 285);
+                        try { tone.startTone(ToneGenerator.TONE_PROP_ACK, 185); } catch (Exception ignored) {}
+                    }, 290);
                 }
             } catch (Exception ignored) {
             }
@@ -213,7 +220,12 @@ public final class RewardFx {
     private void smallPulse(Reaction reaction, boolean positive) {
         if (tone != null && settings.getBoolean("sound", true)) {
             try {
-                tone.startTone(positive ? ToneGenerator.TONE_PROP_BEEP : ToneGenerator.TONE_PROP_NACK, 65);
+                String pack = soundPack();
+                int positiveTone = "arcade".equals(pack) ? ToneGenerator.TONE_PROP_ACK
+                        : "soft".equals(pack) ? ToneGenerator.TONE_PROP_BEEP2
+                        : ToneGenerator.TONE_PROP_BEEP;
+                tone.startTone(positive ? positiveTone : ToneGenerator.TONE_PROP_NACK,
+                        "soft".equals(pack) ? 55 : 75);
             } catch (Exception ignored) {
             }
         }
@@ -258,6 +270,11 @@ public final class RewardFx {
             });
             out.start();
         }, 520);
+    }
+
+    private String soundPack() {
+        return activity.getSharedPreferences(ShopStore.PREFS, Activity.MODE_PRIVATE)
+                .getString("equipped_sound", "default");
     }
 
     public void shutdown() {
