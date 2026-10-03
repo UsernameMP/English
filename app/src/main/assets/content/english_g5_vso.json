@@ -5800,7 +5800,7 @@
         "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
         "rule": "Ищи смысл, а не одинаковые слова."
       },
-      "evidence": "She sat on a bench under a large tree.",
+      "evidence": "She sat on a bench under a large tree",
       "review": {
         "status": "verified"
       }
