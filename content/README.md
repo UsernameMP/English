@@ -37,3 +37,22 @@ Every shipping question also references one or more stable `knowledge_units`:
 ```
 
 Legacy skill strings remain as tags for compatibility only. Learner mastery is migrated to knowledge-unit IDs so future packs can reuse the same knowledge node across grades and, later, across subjects.
+
+
+## Localization
+
+UI language and learning-content language are separate concerns.
+
+Android UI copy lives in `res/values*/strings.xml`. Initial locales are `en` and `ru`.
+
+Question feedback fields are locale maps rather than duplicated questions:
+
+```json
+"feedback": {
+  "short": {"ru": "...", "en": "..."},
+  "full": {"ru": "...", "en": "..."},
+  "rule": {"ru": "...", "en": "..."}
+}
+```
+
+The runtime selects the device/app locale, then falls back to English, Russian, or the first available translation. This allows future `uz`, `kk`, `vi`, `zh` and other locales without cloning the underlying exercise.
