@@ -6,7 +6,9 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.media.AudioFormat;
 import android.media.AudioManager;
+import android.media.AudioTrack;
 import android.media.ToneGenerator;
 import android.os.Handler;
 import android.os.Looper;
@@ -136,26 +138,8 @@ public final class RewardFx {
             decor.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
         }
 
-        if (tone != null && settings.getBoolean("sound", true)) {
-            try {
-                String pack = soundPack();
-                int first = "soft".equals(pack) ? ToneGenerator.TONE_PROP_BEEP
-                        : "arcade".equals(pack) ? ToneGenerator.TONE_PROP_ACK
-                        : ToneGenerator.TONE_PROP_ACK;
-                int second = "soft".equals(pack) ? ToneGenerator.TONE_PROP_BEEP2
-                        : "arcade".equals(pack) ? ToneGenerator.TONE_PROP_PROMPT
-                        : ToneGenerator.TONE_PROP_BEEP2;
-                tone.startTone(first, "soft".equals(pack) ? 120 : 160);
-                handler.postDelayed(() -> {
-                    try { tone.startTone(second, "soft".equals(pack) ? 105 : 145); } catch (Exception ignored) {}
-                }, 145);
-                if (combo >= 8 && !"soft".equals(pack)) {
-                    handler.postDelayed(() -> {
-                        try { tone.startTone(ToneGenerator.TONE_PROP_ACK, 185); } catch (Exception ignored) {}
-                    }, 290);
-                }
-            } catch (Exception ignored) {
-            }
+        if (settings.getBoolean("sound", true)) {
+            playPositiveChime(true, combo);
         }
 
         FrameLayout host = activity.findViewById(android.R.id.content);
@@ -218,15 +202,11 @@ public final class RewardFx {
     }
 
     private void smallPulse(Reaction reaction, boolean positive) {
-        if (tone != null && settings.getBoolean("sound", true)) {
-            try {
-                String pack = soundPack();
-                int positiveTone = "arcade".equals(pack) ? ToneGenerator.TONE_PROP_ACK
-                        : "soft".equals(pack) ? ToneGenerator.TONE_PROP_BEEP2
-                        : ToneGenerator.TONE_PROP_BEEP;
-                tone.startTone(positive ? positiveTone : ToneGenerator.TONE_PROP_NACK,
-                        "soft".equals(pack) ? 55 : 75);
-            } catch (Exception ignored) {
+        if (settings.getBoolean("sound", true)) {
+            if (positive) {
+                playPositiveChime(false, 1);
+            } else if (tone != null) {
+                try { tone.startTone(ToneGenerator.TONE_PROP_NACK, 70); } catch (Exception ignored) {}
             }
         }
 
@@ -270,6 +250,79 @@ public final class RewardFx {
             });
             out.start();
         }, 520);
+    }
+
+    private void playPositiveChime(boolean major, int combo) {
+        final int volume = Math.max(0, Math.min(100, settings.getInt("volume", 80)));
+        final String pack = soundPack();
+
+        new Thread(() -> {
+            try {
+                double[] notes;
+                int noteMs;
+                if ("soft".equals(pack)) {
+                    notes = major ? new double[]{659.25, 783.99, 987.77, 1318.51}
+                            : new double[]{783.99, 987.77, 1174.66};
+                    noteMs = major ? 105 : 70;
+                } else if ("arcade".equals(pack)) {
+                    notes = major ? new double[]{783.99, 1046.50, 1318.51, 1760.00}
+                            : new double[]{987.77, 1318.51, 1567.98};
+                    noteMs = major ? 90 : 62;
+                } else {
+                    notes = major ? new double[]{659.25, 880.00, 1174.66, 1567.98}
+                            : new double[]{880.00, 1174.66, 1567.98};
+                    noteMs = major ? 95 : 65;
+                }
+
+                if (major && combo >= 10) {
+                    notes = new double[]{659.25, 880.00, 1174.66, 1567.98, 2093.00};
+                }
+
+                byte[] pcm = buildChime(notes, noteMs, major ? 22 : 14, volume / 100.0);
+                AudioTrack track = new AudioTrack(
+                        AudioManager.STREAM_MUSIC,
+                        22050,
+                        AudioFormat.CHANNEL_OUT_MONO,
+                        AudioFormat.ENCODING_PCM_16BIT,
+                        pcm.length,
+                        AudioTrack.MODE_STATIC
+                );
+                track.write(pcm, 0, pcm.length);
+                track.play();
+                Thread.sleep(Math.max(220, notes.length * (noteMs + (major ? 22 : 14)) + 90L));
+                try { track.stop(); } catch (Exception ignored) {}
+                track.release();
+            } catch (Exception ignored) {
+            }
+        }, major ? "reward-chime-major" : "reward-chime").start();
+    }
+
+    private byte[] buildChime(double[] frequencies, int noteMs, int gapMs, double volume) {
+        final int sampleRate = 22050;
+        int noteSamples = sampleRate * noteMs / 1000;
+        int gapSamples = sampleRate * gapMs / 1000;
+        int total = frequencies.length * (noteSamples + gapSamples);
+        byte[] out = new byte[total * 2];
+        int offset = 0;
+
+        for (double frequency : frequencies) {
+            for (int i = 0; i < noteSamples; i++) {
+                double t = i / (double) sampleRate;
+                double attack = Math.min(1.0, i / (sampleRate * 0.010));
+                double release = Math.min(1.0, (noteSamples - i) / (sampleRate * 0.025));
+                double envelope = Math.max(0.0, Math.min(attack, release));
+                double fundamental = Math.sin(2.0 * Math.PI * frequency * t);
+                double sparkle = 0.22 * Math.sin(2.0 * Math.PI * frequency * 2.0 * t);
+                short sample = (short) (Short.MAX_VALUE * 0.36 * volume * envelope * (fundamental + sparkle));
+                out[offset++] = (byte) (sample & 0xff);
+                out[offset++] = (byte) ((sample >> 8) & 0xff);
+            }
+            for (int i = 0; i < gapSamples; i++) {
+                out[offset++] = 0;
+                out[offset++] = 0;
+            }
+        }
+        return out;
     }
 
     private String soundPack() {
