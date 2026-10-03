@@ -1,0 +1,61 @@
+{
+  "id": "gen_math_example_001",
+  "subject": "math",
+  "grade_min": 5,
+  "grade_max": 5,
+  "competition": "sample olympiad",
+  "season": "2026-2027",
+  "interaction": "single_choice",
+  "mode": "problem",
+  "difficulty": 2,
+  "prompt": "Which number is divisible by both 3 and 4?",
+  "stimulus": {},
+  "knowledge": [
+    {
+      "id": "MATH.NUMBER.DIVISIBILITY",
+      "weight": 1
+    }
+  ],
+  "prerequisites": [
+    "MATH.NUMBER.MULTIPLICATION"
+  ],
+  "options": [
+    {
+      "id": "a",
+      "text": "18"
+    },
+    {
+      "id": "b",
+      "text": "24"
+    },
+    {
+      "id": "c",
+      "text": "27"
+    }
+  ],
+  "answer": [
+    "b"
+  ],
+  "feedback": {
+    "short": {
+      "en": "24",
+      "ru": "24"
+    },
+    "full": {
+      "en": "24 is divisible by 3 and 4.",
+      "ru": "24 делится и на 3, и на 4."
+    },
+    "rule": {
+      "en": "A common multiple must satisfy both divisibility tests.",
+      "ru": "Общее кратное должно проходить оба признака делимости."
+    }
+  },
+  "source": {
+    "competition": "sample olympiad",
+    "region": "",
+    "year": ""
+  },
+  "review": {
+    "status": "draft"
+  }
+}
