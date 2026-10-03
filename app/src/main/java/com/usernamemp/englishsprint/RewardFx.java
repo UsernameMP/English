@@ -313,7 +313,7 @@ public final class RewardFx {
                 double envelope = Math.max(0.0, Math.min(attack, release));
                 double fundamental = Math.sin(2.0 * Math.PI * frequency * t);
                 double sparkle = 0.22 * Math.sin(2.0 * Math.PI * frequency * 2.0 * t);
-                short sample = (short) (Short.MAX_VALUE * 0.36 * volume * envelope * (fundamental + sparkle));
+                short sample = (short) (Short.MAX_VALUE * 0.48 * volume * envelope * (fundamental + sparkle));
                 out[offset++] = (byte) (sample & 0xff);
                 out[offset++] = (byte) ((sample >> 8) & 0xff);
             }

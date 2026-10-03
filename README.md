@@ -2,6 +2,20 @@
 
 Offline Android trainer for fast preparation for the school stage of the English Olympiad (Tatarstan, 5–6 grades).
 
+## v0.6.1
+
+- Match-3 now animates swap, invalid return, match pop, drop/refill, cascades and reshuffle with dedicated game sounds;
+- Listening keeps prompt/answers at normal top position while only the blue Listen action is pinned low in the thumb zone;
+- positive answer chimes are slightly louder;
+- update controls moved from Home to Settings;
+- Reading text is plain black; any tapped English word highlights temporarily and opens dictionary lookup;
+- dictionary is local-first with online fallback via dictionaryapi.dev and persistent cache;
+- CI artifact/APK naming now follows versionName dynamically.
+
+## Versioning policy
+
+Stay on the `0.6.x` line for iterative MVP builds. Android `versionCode` still increments every build. Do not bump to `0.7.0` without explicit product-owner approval.
+
 ## v0.6
 
 - Listening play/replay action moved substantially lower into the real thumb reach zone;

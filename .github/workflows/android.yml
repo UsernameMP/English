@@ -45,6 +45,14 @@ jobs:
       - name: Generate offline neural listening WAVs
         run: bash scripts/generate_audio.sh
 
+      - name: Read app version
+        run: |
+          VERSION_NAME="$(sed -n 's/.*versionName "\([^"]*\)".*/\1/p' app/build.gradle | head -n1)"
+          VERSION_CODE="$(sed -n 's/.*versionCode \([0-9][0-9]*\).*/\1/p' app/build.gradle | head -n1)"
+          echo "VERSION_NAME=$VERSION_NAME" >> "$GITHUB_ENV"
+          echo "VERSION_CODE=$VERSION_CODE" >> "$GITHUB_ENV"
+          echo "APK_NAME=english-sprint-v${VERSION_NAME}-pilot.apk" >> "$GITHUB_ENV"
+
       - name: Build unsigned release APK
         run: gradle :app:assembleRelease --stacktrace
 
@@ -63,7 +71,7 @@ jobs:
           BUILD_TOOLS="$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n1)"
           UNSIGNED="app/build/outputs/apk/release/app-release-unsigned.apk"
           ALIGNED="$RUNNER_TEMP/english-sprint-aligned.apk"
-          APK="english-sprint-v0.6.0-pilot.apk"
+          APK="$APK_NAME"
 
           "$BUILD_TOOLS/zipalign" -f -p 4 "$UNSIGNED" "$ALIGNED"
           "$BUILD_TOOLS/apksigner" sign \
@@ -77,17 +85,15 @@ jobs:
       - name: Upload CI artifact
         uses: actions/upload-artifact@v4
         with:
-          name: english-sprint-v0.6.0-pilot
-          path: english-sprint-v0.6.0-pilot.apk
+          name: english-sprint-v${{ env.VERSION_NAME }}-pilot
+          path: ${{ env.APK_NAME }}
           if-no-files-found: error
           retention-days: 14
 
       - name: Publish direct APK update channel
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          VERSION_NAME="$(sed -n 's/.*versionName "\([^"]*\)".*/\1/p' app/build.gradle | head -n1)"
-          VERSION_CODE="$(sed -n 's/.*versionCode \([0-9][0-9]*\).*/\1/p' app/build.gradle | head -n1)"
-          APK="english-sprint-v0.6.0-pilot.apk"
+          APK="$APK_NAME"
           SIZE="$(stat -c%s "$APK")"
 
           mkdir -p /tmp/english-sprint-dist
