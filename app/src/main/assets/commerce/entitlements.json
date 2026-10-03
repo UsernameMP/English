@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "grants": [
+    {
+      "id": "pilot.english.g5g6.vsosh",
+      "source": "pilot",
+      "active": true,
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "competition": "VSOSh",
+      "season": "2026-2027",
+      "pack_ids": [
+        "english.vsosh.5-6.ru.2026"
+      ],
+      "device_policy": "local_pilot"
+    }
+  ]
+}
