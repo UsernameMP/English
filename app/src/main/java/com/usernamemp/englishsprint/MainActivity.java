@@ -93,6 +93,12 @@ public class MainActivity extends Activity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        if (updater != null) updater.tryInstallPendingUpdate();
+    }
+
+    @Override
     protected void onDestroy() {
         audio.shutdown();
         rewards.shutdown();
