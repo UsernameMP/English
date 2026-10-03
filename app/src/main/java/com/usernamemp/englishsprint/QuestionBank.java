@@ -48,7 +48,13 @@ public final class QuestionBank {
             }
 
             EntitlementStore entitlements = new EntitlementStore(context);
-            if (!entitlements.canAccessPack(defaultPackId)) {
+            if (!entitlements.canAccessPack(
+                    defaultPackId,
+                    catalogPack.optString("subject", ""),
+                    catalogPack.optInt("grade_min", 1),
+                    catalogPack.optInt("grade_max", 12),
+                    catalogPack.optString("competition", ""),
+                    catalogPack.optString("season", ""))) {
                 throw new IllegalStateException("No entitlement for content pack: " + defaultPackId);
             }
 
