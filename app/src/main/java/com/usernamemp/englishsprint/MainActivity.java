@@ -81,8 +81,9 @@ public class MainActivity extends Activity {
 
         LinearLayout header = row();
         LinearLayout titles = column();
-        titles.addView(text("ENGLISH SPRINT", 29, INK, Typeface.BOLD));
-        titles.addView(text("ВсОШ · 5–6 класс · Татарстан", 14, MUTED, Typeface.NORMAL));
+        ContentPack pack = QuestionBank.currentPack();
+        titles.addView(text(pack.title(Locale.getDefault()), 29, INK, Typeface.BOLD));
+        titles.addView(text(pack.subtitle(Locale.getDefault()), 14, MUTED, Typeface.NORMAL));
         header.addView(titles, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
 
         Button settings = compactButton("⚙");
@@ -463,7 +464,7 @@ public class MainActivity extends Activity {
                 14, MUTED, Typeface.NORMAL));
         root.addView(space(16));
 
-        List<String> skills = new ArrayList<>(QuestionBank.skills());
+        List<String> skills = new ArrayList<>(QuestionBank.knowledgeIds());
         skills.sort((a, b) -> {
             int state = Integer.compare(progress.state(a).ordinal(), progress.state(b).ordinal());
             if (state != 0) return state;
@@ -602,6 +603,8 @@ public class MainActivity extends Activity {
     }
 
     private String skillName(String skill) {
+        KnowledgeUnit unit = QuestionBank.knowledgeUnit(skill);
+        if (unit != null) return unit.label(Locale.getDefault());
         switch (skill) {
             case "be": return "am / is / are · was / were";
             case "have_has": return "have / has";
