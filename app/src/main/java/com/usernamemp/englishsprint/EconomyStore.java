@@ -108,6 +108,21 @@ public final class EconomyStore {
         }
     }
 
+    public boolean hasDebit(String reason, String source) {
+        JSONArray entries = ledger();
+        for (int i = entries.length() - 1; i >= 0; i--) {
+            try {
+                JSONObject tx = entries.getJSONObject(i);
+                if (tx.optInt("delta", 0) < 0
+                        && reason.equals(tx.optString("reason", ""))
+                        && source.equals(tx.optString("source", ""))) {
+                    return true;
+                }
+            } catch (Exception ignored) {}
+        }
+        return false;
+    }
+
     private void appendLedger(SharedPreferences.Editor editor, int delta, String reason, String source) {
         JSONArray oldLedger = ledger();
         JSONArray trimmed = new JSONArray();
