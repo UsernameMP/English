@@ -30,6 +30,7 @@ public final class DigitalRewardStore {
         this.economy = economy;
         this.prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
         load();
+        reconcileOwnedRedemptions();
     }
 
     public List<DigitalRewardItem> items() {
@@ -63,6 +64,20 @@ public final class DigitalRewardStore {
         if (!isRedeemed(item) || item.asset.isEmpty()) return "";
         try { return readAsset(item.asset); }
         catch (Exception e) { return ""; }
+    }
+
+    private void reconcileOwnedRedemptions() {
+        Set<String> redeemed = redeemedSet();
+        boolean changed = false;
+        for (DigitalRewardItem item : items) {
+            if (!redeemed.contains(item.sku)
+                    && canRedeemLocally(item)
+                    && economy.hasDebit("digital_reward", item.sku)) {
+                redeemed.add(item.sku);
+                changed = true;
+            }
+        }
+        if (changed) prefs.edit().putStringSet("redeemed", redeemed).apply();
     }
 
     private Set<String> redeemedSet() {
