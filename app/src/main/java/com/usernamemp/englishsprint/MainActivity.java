@@ -553,7 +553,9 @@ public class MainActivity extends Activity {
     private List<Question> quickSession() {
         long seed = System.nanoTime();
         List<Question> base = QuestionBank.adaptiveSession(progress, 15, seed);
-        return dictionary.mixVocabulary(base, 2, seed + 17);
+        List<Question> mixed = dictionary.mixVocabulary(base, 2, seed + 17);
+        if (mixed.size() > 15) return new ArrayList<>(mixed.subList(0, 15));
+        return mixed;
     }
 
     private void enableDictionaryLinks(TextView view, String source) {
