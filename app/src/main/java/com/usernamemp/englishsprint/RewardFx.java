@@ -4,6 +4,7 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.graphics.Color;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.media.ToneGenerator;
@@ -44,12 +45,14 @@ public final class RewardFx {
     };
 
     private final Activity activity;
+    private final SharedPreferences settings;
     private final Random random = new Random();
     private final Handler handler = new Handler(Looper.getMainLooper());
     private ToneGenerator tone;
 
     public RewardFx(Activity activity) {
         this.activity = activity;
+        this.settings = activity.getSharedPreferences("english_sprint_settings", Activity.MODE_PRIVATE);
         try {
             tone = new ToneGenerator(AudioManager.STREAM_MUSIC, 55);
         } catch (Exception ignored) {
@@ -93,9 +96,11 @@ public final class RewardFx {
 
     private void majorBurst(Reaction reaction) {
         View decor = activity.getWindow().getDecorView();
-        decor.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+        if (settings.getBoolean("haptic", true)) {
+            decor.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+        }
 
-        if (tone != null) {
+        if (tone != null && settings.getBoolean("sound", true)) {
             try {
                 tone.startTone(ToneGenerator.TONE_PROP_ACK, 180);
                 handler.postDelayed(() -> {
@@ -165,7 +170,7 @@ public final class RewardFx {
     }
 
     private void smallPulse(Reaction reaction) {
-        if (tone != null) {
+        if (tone != null && settings.getBoolean("sound", true)) {
             try {
                 tone.startTone(reaction.headline.equals("ТОЧНО")
                         ? ToneGenerator.TONE_PROP_BEEP
