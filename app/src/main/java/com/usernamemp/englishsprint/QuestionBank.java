@@ -251,7 +251,7 @@ public final class QuestionBank {
         out.addAll(list.subList(0, Math.min(count, list.size())));
     }
 
-    private static ContentPack parsePack(JSONObject pack, String asset) {
+    private static ContentPack parsePack(JSONObject pack, String asset) throws Exception {
         return new ContentPack(
                 pack.getString("id"),
                 asset,
