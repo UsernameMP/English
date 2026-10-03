@@ -122,14 +122,14 @@ public class MainActivity extends Activity {
         root.addView(menuButton(getString(R.string.grammar_mode), getString(R.string.grammar_caption), () ->
                 startSession(getString(R.string.grammar_title), shuffled(QuestionBank.byType(Question.Type.GRAMMAR), 20))));
 
-        root.addView(menuButton("⌕  Reading", getString(R.string.reading_caption), () ->
-                startSession("Reading", shuffled(QuestionBank.byType(Question.Type.READING), 10))));
+        root.addView(menuButton(getString(R.string.reading_mode), getString(R.string.reading_caption), () ->
+                startSession(getString(R.string.reading_title), shuffled(QuestionBank.byType(Question.Type.READING), 10))));
 
-        root.addView(menuButton("▶  Listening", getString(R.string.listening_caption), () ->
-                startSession("Listening", shuffled(QuestionBank.byType(Question.Type.LISTENING), 10))));
+        root.addView(menuButton(getString(R.string.listening_mode), getString(R.string.listening_caption), () ->
+                startSession(getString(R.string.listening_title), shuffled(QuestionBank.byType(Question.Type.LISTENING), 10))));
 
-        root.addView(menuButton("✦  Story builder", getString(R.string.story_caption), () ->
-                startSession("Story builder", shuffled(QuestionBank.byType(Question.Type.STORY), 10))));
+        root.addView(menuButton(getString(R.string.story_mode), getString(R.string.story_caption), () ->
+                startSession(getString(R.string.story_title), shuffled(QuestionBank.byType(Question.Type.STORY), 10))));
 
         Button progressButton = secondaryButton(getString(R.string.skill_map));
         progressButton.setOnClickListener(v -> showProgress());
