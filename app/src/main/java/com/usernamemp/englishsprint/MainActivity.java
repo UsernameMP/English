@@ -691,6 +691,26 @@ public class MainActivity extends Activity {
         full.setPadding(0, dp(7), 0, dp(8));
         box.addView(full);
 
+        TextView assessedTitle = text(getString(R.string.knowledge_assessed), 12, MUTED, Typeface.BOLD);
+        assessedTitle.setPadding(0, dp(14), 0, dp(5));
+        box.addView(assessedTitle);
+        List<String> assessedLabels = new ArrayList<>();
+        for (KnowledgeRef ref : q.knowledge) {
+            assessedLabels.add(QuestionBank.knowledgeLabel(ref.id, Locale.getDefault()));
+        }
+        box.addView(text(String.join(" · ", assessedLabels), 15, INK, Typeface.NORMAL));
+
+        TextView prerequisiteTitle = text(getString(R.string.knowledge_prerequisites), 12, MUTED, Typeface.BOLD);
+        prerequisiteTitle.setPadding(0, dp(14), 0, dp(5));
+        box.addView(prerequisiteTitle);
+        List<String> prerequisiteLabels = new ArrayList<>();
+        for (String id : q.prerequisites) {
+            prerequisiteLabels.add(QuestionBank.knowledgeLabel(id, Locale.getDefault()));
+        }
+        box.addView(text(prerequisiteLabels.isEmpty()
+                ? getString(R.string.knowledge_none)
+                : String.join(" · ", prerequisiteLabels), 15, INK, Typeface.NORMAL));
+
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setView(box)
                 .setPositiveButton(getString(R.string.got_it), null)
