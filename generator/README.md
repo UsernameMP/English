@@ -20,3 +20,5 @@ python3 generator/generate_task.py \
   --seed 42 \
   --output /tmp/task.json
 ```
+
+For a numeric STEM draft, add `--interaction numeric`. The generated object contains accepted answers and no choice options.

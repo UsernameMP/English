@@ -44,10 +44,29 @@ public final class ProgressStore {
         int recentMistakes = prefs.getInt(base + "recent_mistakes", 0);
         recentMistakes = correct ? Math.max(0, recentMistakes - 1) : Math.min(8, recentMistakes + 2);
 
+        long now = System.currentTimeMillis();
+        int previousInterval = prefs.getInt(base + "review_interval_days", 0);
+        int nextInterval;
+        long nextReview;
+        if (correct) {
+            if (previousInterval < 1) nextInterval = 1;
+            else if (previousInterval < 3) nextInterval = 3;
+            else if (previousInterval < 7) nextInterval = 7;
+            else if (previousInterval < 14) nextInterval = 14;
+            else nextInterval = 30;
+            nextReview = now + nextInterval * 24L * 60L * 60L * 1000L;
+        } else {
+            nextInterval = 0;
+            nextReview = now + 6L * 60L * 60L * 1000L;
+        }
+
         editor
                 .putInt(base + "attempts", attempts)
                 .putInt(base + "correct", rights)
-                .putInt(base + "recent_mistakes", recentMistakes);
+                .putInt(base + "recent_mistakes", recentMistakes)
+                .putLong(base + "last_seen_at", now)
+                .putLong(base + "next_review_at", nextReview)
+                .putInt(base + "review_interval_days", nextInterval);
     }
 
     public double mastery(String skillOrKnowledge) {
@@ -98,6 +117,20 @@ public final class ProgressStore {
 
     public int recentMistakesKnowledge(String knowledgeId) {
         return prefs.getInt(knowledgeBase(knowledgeId) + "recent_mistakes", 0);
+    }
+
+    public long nextReviewAt(String knowledgeId) {
+        return prefs.getLong(knowledgeBase(knowledgeId) + "next_review_at", 0L);
+    }
+
+    public boolean isDue(String knowledgeId) {
+        if (attemptsKnowledge(knowledgeId) == 0) return false;
+        long next = nextReviewAt(knowledgeId);
+        return next > 0L && next <= System.currentTimeMillis();
+    }
+
+    public int reviewIntervalDays(String knowledgeId) {
+        return prefs.getInt(knowledgeBase(knowledgeId) + "review_interval_days", 0);
     }
 
     public SkillState state(String skillOrKnowledge) {

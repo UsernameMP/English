@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "blueprints": [
+    {
+      "pack_id": "english.vsosh.5-6.ru.2026",
+      "coverage": [
+        {"knowledge_id":"ENG.GRAMMAR.ARTICLES","weight":0.25},
+        {"knowledge_id":"ENG.GRAMMAR.TENSE.PAST_SIMPLE","weight":0.25},
+        {"knowledge_id":"ENG.READING.COMPREHENSION","weight":0.25},
+        {"knowledge_id":"ENG.LISTENING.COMPREHENSION","weight":0.25}
+      ]
+    },
+    {
+      "pack_id": "informatics.olympiad.5-7.global.2026",
+      "coverage": [
+        {"knowledge_id":"CS.LOGIC.BOOLEAN","weight":0.20},
+        {"knowledge_id":"CS.ALGORITHMS.TRACING","weight":0.30},
+        {"knowledge_id":"CS.DATA.BINARY","weight":0.20},
+        {"knowledge_id":"CS.ALGORITHMS.COMPLEXITY.INTRO","weight":0.30}
+      ]
+    },
+    {
+      "pack_id": "english.olympiad.6-7.global.2026",
+      "coverage": [
+        {"knowledge_id":"ENG.GRAMMAR.ARTICLES","weight":0.20},
+        {"knowledge_id":"ENG.GRAMMAR.TENSE.PAST_SIMPLE","weight":0.20},
+        {"knowledge_id":"ENG.GRAMMAR.QUANTIFIERS","weight":0.20},
+        {"knowledge_id":"ENG.READING.COMPREHENSION","weight":0.40}
+      ]
+    }
+  ]
+}

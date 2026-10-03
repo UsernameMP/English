@@ -53,4 +53,22 @@ with tempfile.TemporaryDirectory() as tmp:
     if generated["review"]["status"] != "draft":
         fail("generator must never emit published content directly")
 
+    numeric_out = pathlib.Path(tmp) / "generated_numeric.json"
+    subprocess.run([
+        sys.executable, str(GENERATOR),
+        "--subject", "informatics",
+        "--grade", "6",
+        "--competition", "Olympiad pilot",
+        "--season", "2026-2027",
+        "--knowledge", "CS.ALGORITHMS.TRACING",
+        "--interaction", "numeric",
+        "--seed", "ci-numeric",
+        "--output", str(numeric_out),
+    ], check=True)
+    numeric = json.loads(numeric_out.read_text(encoding="utf-8"))
+    if numeric.get("interaction") != "numeric" or "options" in numeric:
+        fail("numeric generator output must not contain answer options")
+    if not numeric.get("answer"):
+        fail("numeric generator output needs accepted answers")
+
 print("OK: generator schema/example/CLI")

@@ -17,6 +17,8 @@ ENTITLEMENTS = ROOT / "app/src/main/assets/commerce/entitlements.json"
 TARGETS = ROOT / "app/src/main/assets/content/training_targets.json"
 LICENSES = ROOT / "app/src/main/assets/content/licenses.json"
 PRODUCTS = ROOT / "app/src/main/assets/commerce/products.json"
+KNOWLEDGE = ROOT / "app/src/main/assets/content/knowledge_units.json"
+BLUEPRINTS = ROOT / "app/src/main/assets/content/competition_blueprints.json"
 
 def fail(msg):
     print(f"CONTENT ERROR: {msg}", file=sys.stderr)
@@ -32,7 +34,9 @@ for field in ("id", "subject", "grade_min", "grade_max", "season", "title", "sub
     if field not in pack:
         fail(f"pack.{field} is required")
 
-units = bank.get("knowledge_units")
+with KNOWLEDGE.open(encoding="utf-8") as f:
+    knowledge_registry = json.load(f)
+units = knowledge_registry.get("knowledge_units")
 if not isinstance(units, list) or not units:
     fail("knowledge_units must be a non-empty array")
 
@@ -56,7 +60,7 @@ seen_prompts = {}
 seen_listening_scripts = {}
 seen_audio_paths = {}
 dialogues = 0
-supported = {"single_choice"}
+supported = {"single_choice", "numeric"}
 modes = {"grammar", "reading", "listening", "story"}
 skills = set()
 listening = 0
@@ -114,20 +118,23 @@ for i, q in enumerate(questions):
         fail(f"{qid}: duplicate prompt for same knowledge as {seen_prompts[duplicate_key]}")
     seen_prompts[duplicate_key] = qid
 
-    options = q.get("options")
-    if not isinstance(options, list) or len(options) < 2:
-        fail(f"{qid}: at least two options are required")
-    option_ids = [o.get("id") for o in options]
-    if len(option_ids) != len(set(option_ids)):
-        fail(f"{qid}: option ids must be unique")
-    if any(not isinstance(o.get("text"), str) or not o["text"].strip() for o in options):
-        fail(f"{qid}: option text is empty")
-
     answers = q.get("answer")
-    if not isinstance(answers, list) or len(answers) != 1:
-        fail(f"{qid}: single_choice needs exactly one answer")
-    if answers[0] not in option_ids:
-        fail(f"{qid}: answer {answers[0]!r} is not an option id")
+    if not isinstance(answers, list) or not answers:
+        fail(f"{qid}: at least one answer is required")
+    if q.get("interaction") == "single_choice":
+        options = q.get("options")
+        if not isinstance(options, list) or len(options) < 2:
+            fail(f"{qid}: single_choice needs at least two options")
+        option_ids = [o.get("id") for o in options]
+        if len(option_ids) != len(set(option_ids)):
+            fail(f"{qid}: option ids must be unique")
+        if any(not isinstance(o.get("text"), str) or not o["text"].strip() for o in options):
+            fail(f"{qid}: option text is empty")
+        if len(answers) != 1 or answers[0] not in option_ids:
+            fail(f"{qid}: single_choice answer must reference exactly one option")
+    elif q.get("interaction") == "numeric":
+        if any(not isinstance(answer, str) or not answer.strip() for answer in answers):
+            fail(f"{qid}: numeric accepted answers must be non-empty strings")
 
     fb = q.get("feedback") or {}
     for field in ("short", "full", "rule"):
@@ -338,7 +345,7 @@ catalog_pack_list = catalog.get("packs", [])
 if not isinstance(catalog_pack_list, list) or not catalog_pack_list:
     fail("catalog packs must be a non-empty array")
 
-global_unit_ids = set()
+global_unit_ids = set(unit_ids)
 loaded_pack_banks = {}
 for catalog_pack in catalog_pack_list:
     asset = catalog_pack.get("asset")
@@ -353,12 +360,6 @@ for catalog_pack in catalog_pack_list:
         fail(f"catalog/bank id mismatch for {catalog_pack.get('id')}")
     if candidate_pack.get("subject") != catalog_pack.get("subject"):
         fail(f"catalog/bank subject mismatch for {catalog_pack.get('id')}")
-    for unit in candidate_bank.get("knowledge_units", []):
-        uid = unit.get("id")
-        if uid in global_unit_ids:
-            fail(f"knowledge unit must be globally unique across packs: {uid}")
-        global_unit_ids.add(uid)
-    candidate_ids = {u.get("id") for u in candidate_bank.get("knowledge_units", [])}
     candidate_questions = candidate_bank.get("questions")
     if not isinstance(candidate_questions, list) or not candidate_questions:
         fail(f"{catalog_pack.get('id')}: questions must be non-empty")
@@ -366,16 +367,68 @@ for catalog_pack in catalog_pack_list:
         qid = question.get("id")
         if question.get("subject") != candidate_pack.get("subject"):
             fail(f"{qid}: subject does not match its pack")
-        if question.get("interaction") != "single_choice":
-            fail(f"{qid}: runtime currently supports single_choice")
+        interaction = question.get("interaction")
+        if interaction not in supported:
+            fail(f"{qid}: unsupported interaction {interaction!r}")
         if (question.get("review") or {}).get("status") != "published":
             fail(f"{qid}: only published questions may ship")
         for ref in question.get("knowledge", []):
-            if ref.get("id") not in candidate_ids:
-                fail(f"{qid}: assessed knowledge is outside its pack: {ref.get('id')}")
+            if ref.get("id") not in global_unit_ids:
+                fail(f"{qid}: unknown assessed knowledge: {ref.get('id')}")
         for prerequisite in question.get("prerequisites", []):
-            if prerequisite not in global_unit_ids and prerequisite not in candidate_ids:
+            if prerequisite not in global_unit_ids:
                 fail(f"{qid}: unknown prerequisite {prerequisite}")
+        answers = question.get("answer")
+        if not isinstance(answers, list) or not answers:
+            fail(f"{qid}: answer list is required")
+        if interaction == "single_choice":
+            options = question.get("options")
+            if not isinstance(options, list) or len(options) < 2:
+                fail(f"{qid}: single_choice needs at least two options")
+            option_ids = [option.get("id") for option in options]
+            if len(answers) != 1 or answers[0] not in option_ids:
+                fail(f"{qid}: invalid single_choice answer")
+        if interaction == "numeric" and any(not str(answer).strip() for answer in answers):
+            fail(f"{qid}: empty numeric answer")
+
+with BLUEPRINTS.open(encoding="utf-8") as f:
+    blueprint_catalog = json.load(f)
+blueprints = blueprint_catalog.get("blueprints")
+if not isinstance(blueprints, list):
+    fail("competition blueprints must be an array")
+blueprints_by_pack = {blueprint.get("pack_id"): blueprint for blueprint in blueprints}
+for catalog_pack in catalog_pack_list:
+    if not catalog_pack.get("enabled"):
+        continue
+    pack_id = catalog_pack.get("id")
+    blueprint = blueprints_by_pack.get(pack_id)
+    if blueprint is None:
+        fail(f"enabled pack has no competition blueprint: {pack_id}")
+    coverage = blueprint.get("coverage")
+    if not isinstance(coverage, list) or not coverage:
+        fail(f"{pack_id}: blueprint coverage must be non-empty")
+    assessed_ids = {
+        ref.get("id")
+        for question in loaded_pack_banks[pack_id].get("questions", [])
+        for ref in question.get("knowledge", [])
+    }
+    total = 0.0
+    seen_coverage = set()
+    for row in coverage:
+        knowledge_id = row.get("knowledge_id")
+        weight = row.get("weight")
+        if knowledge_id in seen_coverage:
+            fail(f"{pack_id}: duplicate blueprint unit {knowledge_id}")
+        seen_coverage.add(knowledge_id)
+        if knowledge_id not in global_unit_ids:
+            fail(f"{pack_id}: unknown blueprint unit {knowledge_id}")
+        if knowledge_id not in assessed_ids:
+            fail(f"{pack_id}: blueprint unit has no assessing task: {knowledge_id}")
+        if not isinstance(weight, (int, float)) or weight <= 0:
+            fail(f"{pack_id}: blueprint weights must be positive")
+        total += float(weight)
+    if abs(total - 1.0) > 0.000001:
+        fail(f"{pack_id}: blueprint weights must sum to 1.0, got {total}")
 
 with ATLAS.open(encoding="utf-8") as f:
     atlas = json.load(f)

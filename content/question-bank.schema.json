@@ -3,7 +3,7 @@
   "$id": "https://english-sprint.local/question-bank.schema.json",
   "title": "Olympiad Content Pack",
   "type": "object",
-  "required": ["schema_version", "bank_id", "content_version", "pack", "knowledge_units", "questions"],
+  "required": ["schema_version", "bank_id", "content_version", "pack", "questions"],
   "properties": {
     "schema_version": {"type": "string"},
     "bank_id": {"type": "string"},
@@ -23,27 +23,12 @@
         "subtitle": {"$ref": "#/$defs/localizedText"}
       }
     },
-    "knowledge_units": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "object",
-        "required": ["id", "kind", "labels"],
-        "properties": {
-          "id": {"type": "string", "pattern": "^[A-Z0-9_.-]+$"},
-          "kind": {"type": "string"},
-          "legacy_skill": {"type": "string"},
-          "labels": {"$ref": "#/$defs/localizedText"},
-          "relations": {"type": "array"}
-        }
-      }
-    },
     "questions": {
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["id", "subject", "grade_min", "grade_max", "interaction", "mode", "skills", "knowledge", "prompt", "options", "answer", "feedback", "review"],
+        "required": ["id", "subject", "grade_min", "grade_max", "interaction", "mode", "skills", "knowledge", "prompt", "answer", "feedback", "review"],
         "properties": {
           "id": {"type": "string", "minLength": 1},
           "subject": {"type": "string", "minLength": 1},

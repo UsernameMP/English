@@ -28,6 +28,18 @@
         "informatics.olympiad.5-7.global.2026"
       ],
       "device_policy": "local_pilot"
+    },
+    {
+      "id": "pilot.english.g6g7.bridge",
+      "source": "pilot",
+      "active": true,
+      "subject": "english",
+      "grade_min": 6,
+      "grade_max": 7,
+      "competition": "Olympiad bridge",
+      "season": "2026-2027",
+      "pack_ids": ["english.olympiad.6-7.global.2026"],
+      "device_policy": "local_pilot"
     }
   ]
 }
