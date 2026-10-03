@@ -2,7 +2,7 @@ package com.usernamemp.englishsprint;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.PackageInstaller;
+import android.content.pm.PackageInstaller;
 import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.Context;
