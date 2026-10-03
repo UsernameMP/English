@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://english-sprint.local/question-bank.schema.json",
+  "title": "Olympiad Question Bank",
+  "type": "object",
+  "required": ["schema_version", "bank_id", "content_version", "questions"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "bank_id": {"type": "string"},
+    "content_version": {"type": "string"},
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id","subject","grade_min","grade_max","interaction","mode","skills","prompt","options","answer","feedback","review"],
+        "properties": {
+          "id": {"type":"string","minLength":1},
+          "subject": {"type":"string","minLength":1},
+          "grade_min": {"type":"integer","minimum":1},
+          "grade_max": {"type":"integer","minimum":1},
+          "interaction": {"enum":["single_choice","multi_choice","true_false","matching","sequence","numeric","free_response"]},
+          "mode": {"enum":["grammar","reading","listening","story"]},
+          "skills": {"type":"array","minItems":1,"items":{"type":"string"}},
+          "prompt": {"type":"string","minLength":1},
+          "options": {
+            "type":"array","minItems":2,
+            "items":{"type":"object","required":["id","text"],"properties":{"id":{"type":"string"},"text":{"type":"string"}}}
+          },
+          "answer": {"type":"array","minItems":1,"items":{"type":"string"}},
+          "feedback": {
+            "type":"object","required":["short","full","rule"],
+            "properties":{"short":{"type":"string","minLength":1},"full":{"type":"string","minLength":1},"rule":{"type":"string","minLength":1}}
+          },
+          "review":{"type":"object","required":["status"],"properties":{"status":{"enum":["draft","review","verified","rejected"]}}}
+        }
+      }
+    }
+  }
+}
