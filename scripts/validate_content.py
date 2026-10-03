@@ -10,6 +10,11 @@ ECONOMY = ROOT / "app/src/main/assets/game/economy.json"
 SHOP = ROOT / "app/src/main/assets/game/shop_catalog.json"
 REWARDS = ROOT / "app/src/main/assets/game/reward_catalog.json"
 MINIGAMES = ROOT / "app/src/main/assets/game/minigames.json"
+PLAY_CREDITS = ROOT / "app/src/main/assets/game/play_credits.json"
+ATLAS = ROOT / "app/src/main/assets/content/knowledge_atlas.json"
+CATALOG = ROOT / "app/src/main/assets/content/catalog.json"
+ENTITLEMENTS = ROOT / "app/src/main/assets/commerce/entitlements.json"
+TARGETS = ROOT / "app/src/main/assets/content/training_targets.json"
 
 def fail(msg):
     print(f"CONTENT ERROR: {msg}", file=sys.stderr)
@@ -87,6 +92,15 @@ for i, q in enumerate(questions):
         total_weight += float(weight)
     if total_weight > 1.000001:
         fail(f"{qid}: knowledge weights exceed 1.0")
+
+    prerequisites = q.get("prerequisites")
+    if not isinstance(prerequisites, list):
+        fail(f"{qid}: prerequisites must be an array")
+    if len(prerequisites) != len(set(prerequisites)):
+        fail(f"{qid}: duplicate prerequisite ids")
+    for prerequisite in prerequisites:
+        if prerequisite not in unit_ids:
+            fail(f"{qid}: unknown prerequisite knowledge unit {prerequisite!r}")
 
     prompt = q.get("prompt")
     if not isinstance(prompt, str) or not prompt.strip():
@@ -316,9 +330,106 @@ for required_game in {"match3", "memory", "tap_spark"}:
     if required_game not in enabled_games:
         fail(f"required v0.6 mini-game is disabled/missing: {required_game}")
 
+with ATLAS.open(encoding="utf-8") as f:
+    atlas = json.load(f)
+
+allowed_relations = {
+    "requires", "uses", "is_part_of", "generalizes", "specializes",
+    "equivalent_to", "often_confused_with", "applied_in", "assessed_by"
+}
+relations = atlas.get("relations")
+if not isinstance(relations, list):
+    fail("knowledge atlas relations must be an array")
+
+requires_graph = {uid: [] for uid in unit_ids}
+seen_relations = set()
+for relation in relations:
+    src = relation.get("from")
+    rel_type = relation.get("type")
+    dst = relation.get("to")
+    if src not in unit_ids or dst not in unit_ids:
+        fail(f"knowledge atlas relation references unknown unit: {src!r} -> {dst!r}")
+    if rel_type not in allowed_relations:
+        fail(f"unsupported knowledge relation type: {rel_type!r}")
+    key = (src, rel_type, dst)
+    if key in seen_relations:
+        fail(f"duplicate knowledge relation: {key}")
+    seen_relations.add(key)
+    if rel_type == "requires":
+        requires_graph[src].append(dst)
+
+visiting = set()
+done = set()
+def visit_requires(node):
+    if node in done:
+        return
+    if node in visiting:
+        fail(f"requires cycle detected at {node}")
+    visiting.add(node)
+    for nxt in requires_graph.get(node, []):
+        visit_requires(nxt)
+    visiting.remove(node)
+    done.add(node)
+
+for uid in unit_ids:
+    visit_requires(uid)
+
+with PLAY_CREDITS.open(encoding="utf-8") as f:
+    play_credits = json.load(f)
+for field in ("questions_per_credit", "max_balance", "game_session_cost"):
+    value = play_credits.get(field)
+    if not isinstance(value, int) or value < 1:
+        fail(f"play_credits.{field} must be a positive integer")
+if play_credits["game_session_cost"] > play_credits["max_balance"]:
+    fail("game_session_cost cannot exceed max_balance")
+
+with CATALOG.open(encoding="utf-8") as f:
+    catalog = json.load(f)
+default_pack = catalog.get("default_pack")
+catalog_packs = {p.get("id"): p for p in catalog.get("packs", [])}
+if default_pack not in catalog_packs:
+    fail("catalog default_pack is missing")
+
+with ENTITLEMENTS.open(encoding="utf-8") as f:
+    entitlement_catalog = json.load(f)
+grants = entitlement_catalog.get("grants")
+if not isinstance(grants, list) or not grants:
+    fail("entitlements.grants must be non-empty")
+default_access = False
+for grant in grants:
+    if not grant.get("active"):
+        continue
+    pack_ids = grant.get("pack_ids", [])
+    if not isinstance(pack_ids, list):
+        fail(f"entitlement {grant.get('id')}: pack_ids must be an array")
+    if default_pack in pack_ids:
+        default_access = True
+if not default_access:
+    fail("default pack must be accessible through at least one active entitlement")
+
+with TARGETS.open(encoding="utf-8") as f:
+    targets_catalog = json.load(f)
+targets = targets_catalog.get("targets")
+if not isinstance(targets, list) or not targets:
+    fail("training targets must be non-empty")
+target_for_default = None
+for target in targets:
+    if target.get("pack_id") == default_pack:
+        target_for_default = target
+        break
+if target_for_default is None:
+    fail("default pack needs a training target")
+target_date = target_for_default.get("target_date")
+if not isinstance(target_date, str) or len(target_date.split("-")) != 3:
+    fail("training target target_date must be YYYY-MM-DD")
+if target_for_default.get("mode") not in {"competition", "general"}:
+    fail("training target mode must be competition/general")
+
 print(
     f"OK: pack={pack['id']}, {len(questions)} questions, {len(unit_ids)} knowledge units, "
-    f"{len(skills)} tags, {listening} listening items ({dialogues} dialogues), "
+    f"{len(relations)} atlas relations, {len(skills)} tags, "
+    f"{listening} listening items ({dialogues} dialogues), "
     f"{len(entries)} dictionary entries, {len(shop_items)} shop items, "
-    f"{len(digital_items)} digital rewards, {len(games)} mini-games"
+    f"{len(digital_items)} digital rewards, {len(games)} mini-games, "
+    f"{len(grants)} entitlement grants"
 )

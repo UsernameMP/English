@@ -23,6 +23,7 @@ public final class QuestionBank {
     private static List<Question> cache = Collections.emptyList();
     private static List<String> skills = Collections.emptyList();
     private static Map<String, KnowledgeUnit> knowledgeUnits = Collections.emptyMap();
+    private static KnowledgeAtlas knowledgeAtlas;
     private static ContentPack currentPack;
 
     private QuestionBank() {}
@@ -44,6 +45,17 @@ public final class QuestionBank {
             }
             if (catalogPack == null) {
                 throw new IllegalStateException("Default content pack not found: " + defaultPackId);
+            }
+
+            EntitlementStore entitlements = new EntitlementStore(context);
+            if (!entitlements.canAccessPack(
+                    defaultPackId,
+                    catalogPack.optString("subject", ""),
+                    catalogPack.optInt("grade_min", 1),
+                    catalogPack.optInt("grade_max", 12),
+                    catalogPack.optString("competition", ""),
+                    catalogPack.optString("season", ""))) {
+                throw new IllegalStateException("No entitlement for content pack: " + defaultPackId);
             }
 
             String asset = catalogPack.getString("asset");
@@ -72,6 +84,8 @@ public final class QuestionBank {
                 }
             }
 
+            knowledgeAtlas = new KnowledgeAtlas(context, units.keySet());
+
             JSONArray array = bank.getJSONArray("questions");
             List<Question> loaded = new ArrayList<>();
 
@@ -96,6 +110,22 @@ public final class QuestionBank {
                 }
                 if (knowledge.isEmpty()) {
                     throw new IllegalStateException("Question has no knowledge unit: " + o.getString("id"));
+                }
+
+                List<String> prerequisites = new ArrayList<>();
+                JSONArray prerequisiteJson = o.optJSONArray("prerequisites");
+                if (prerequisiteJson != null) {
+                    for (int j = 0; j < prerequisiteJson.length(); j++) {
+                        String prerequisite = prerequisiteJson.getString(j);
+                        if (!units.containsKey(prerequisite)) {
+                            throw new IllegalStateException("Unknown prerequisite " + prerequisite
+                                    + " in " + o.getString("id"));
+                        }
+                        if (!prerequisites.contains(prerequisite)) prerequisites.add(prerequisite);
+                    }
+                }
+                if (prerequisites.isEmpty()) {
+                    prerequisites.addAll(knowledgeAtlas.prerequisitesFor(knowledge));
                 }
 
                 JSONObject stimulus = o.optJSONObject("stimulus");
@@ -131,6 +161,7 @@ public final class QuestionBank {
                         o.optString("interaction", "single_choice"),
                         questionSkills,
                         knowledge,
+                        prerequisites,
                         mapType(o.optString("mode", "grammar")),
                         o.optInt("difficulty", 1),
                         o.getString("prompt"),
@@ -181,6 +212,16 @@ public final class QuestionBank {
     public static KnowledgeUnit knowledgeUnit(String id) {
         ensureInit();
         return knowledgeUnits.get(id);
+    }
+
+    public static List<String> prerequisitesForKnowledge(String id) {
+        ensureInit();
+        return knowledgeAtlas == null ? Collections.emptyList() : knowledgeAtlas.prerequisitesFor(id);
+    }
+
+    public static List<KnowledgeRelation> knowledgeRelations() {
+        ensureInit();
+        return knowledgeAtlas == null ? Collections.emptyList() : knowledgeAtlas.all();
     }
 
     public static String knowledgeLabel(String id, Locale locale) {

@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "relation_types": [
+    "requires",
+    "uses",
+    "is_part_of",
+    "generalizes",
+    "specializes",
+    "equivalent_to",
+    "often_confused_with",
+    "applied_in",
+    "assessed_by"
+  ],
+  "relations": [
+    {
+      "from": "ENG.GRAMMAR.TENSE.PRESENT_CONTINUOUS",
+      "type": "requires",
+      "to": "ENG.GRAMMAR.BE"
+    },
+    {
+      "from": "ENG.GRAMMAR.TENSE.PAST_CONTINUOUS",
+      "type": "requires",
+      "to": "ENG.GRAMMAR.BE"
+    },
+    {
+      "from": "ENG.GRAMMAR.TENSE.PRESENT_SIMPLE",
+      "type": "uses",
+      "to": "ENG.GRAMMAR.DO_DOES"
+    },
+    {
+      "from": "ENG.GRAMMAR.OLYMPIAD",
+      "type": "uses",
+      "to": "ENG.GRAMMAR.ARTICLES"
+    },
+    {
+      "from": "ENG.GRAMMAR.OLYMPIAD",
+      "type": "uses",
+      "to": "ENG.GRAMMAR.PRONOUNS"
+    },
+    {
+      "from": "ENG.GRAMMAR.OLYMPIAD",
+      "type": "uses",
+      "to": "ENG.GRAMMAR.PREPOSITIONS"
+    },
+    {
+      "from": "ENG.GRAMMAR.OLYMPIAD",
+      "type": "uses",
+      "to": "ENG.GRAMMAR.COMPARISON"
+    },
+    {
+      "from": "ENG.GRAMMAR.OLYMPIAD",
+      "type": "uses",
+      "to": "ENG.GRAMMAR.QUANTIFIERS"
+    },
+    {
+      "from": "ENG.WRITING.STORY_STRUCTURE",
+      "type": "requires",
+      "to": "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+    },
+    {
+      "from": "ENG.READING.COMPREHENSION",
+      "type": "uses",
+      "to": "ENG.VOCAB.PERSONAL"
+    },
+    {
+      "from": "ENG.LISTENING.COMPREHENSION",
+      "type": "uses",
+      "to": "ENG.VOCAB.PERSONAL"
+    }
+  ]
+}

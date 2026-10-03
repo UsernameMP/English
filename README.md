@@ -2,6 +2,27 @@
 
 Offline Android trainer for fast preparation for the school stage of the English Olympiad (Tatarstan, 5–6 grades).
 
+## v0.6.3
+
+- XP, crystals and game-session rights are now three separate persistent resources;
+- every completed learning block can earn a bounded 🎮 play credit, and starting a mini-game consumes one;
+- Knowledge Atlas is a separate global relation graph with typed edges and acyclic `requires` validation;
+- every shipped question now has explicit `prerequisites`; `knowledge` remains the assessed knowledge set;
+- question explanations show both assessed knowledge and prerequisites;
+- training target is persistent and editable: subject/grade/competition mode and target date are no longer hard-coded in MainActivity;
+- content access now goes through a payment-provider-neutral entitlement abstraction;
+- current English pilot pack is granted by a local pilot entitlement;
+- `generator/` defines the canonical generated-question schema and deterministic draft generator;
+- CI validates generator output, Atlas references/cycles, prerequisites, play-credit config, entitlements and training targets.
+
+### Architectural boundaries
+
+`content packs` contain questions and pack metadata.  
+`knowledge_atlas.json` contains cross-pack knowledge relationships.  
+`commerce/entitlements.json` describes what content is accessible; future Google Play / App Store / RU-CIS payment adapters will only produce entitlements and will not be embedded into the learning engine.  
+`generator/` creates draft question JSON and can later be driven by human editors, imports or LLM pipelines. It never publishes directly.  
+Game engines consume game-session rights and do not own educational content.
+
 ## v0.6.2
 
 - updater keeps download + package/version/signature verification but hands the verified APK to the visible Android system installer via FileProvider;

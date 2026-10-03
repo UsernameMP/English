@@ -56,6 +56,8 @@ public class MainActivity extends Activity {
     private DictionaryStore dictionary;
     private DictionaryRepository dictionaryRepository;
     private EconomyStore economy;
+    private PlayCreditStore playCredits;
+    private TrainingTargetStore trainingTarget;
     private ShopStore shop;
     private DigitalRewardStore digitalRewards;
     private MiniGameHost miniGames;
@@ -81,6 +83,8 @@ public class MainActivity extends Activity {
         dictionary = new DictionaryStore(this);
         dictionaryRepository = new DictionaryRepository(this, dictionary);
         economy = new EconomyStore(this);
+        playCredits = new PlayCreditStore(this);
+        trainingTarget = new TrainingTargetStore(this, QuestionBank.currentPack());
         shop = new ShopStore(this, economy);
         digitalRewards = new DigitalRewardStore(this, economy);
         miniGames = new MiniGameHost(this, economy);
@@ -127,11 +131,15 @@ public class MainActivity extends Activity {
         header.addView(settings, new LinearLayout.LayoutParams(dp(52), dp(44)));
         root.addView(header);
 
-        int days = daysUntilTarget();
+        int days = trainingTarget.daysRemaining();
+        TextView targetSummary = text(trainingTarget.summary(), 13, MUTED, Typeface.BOLD);
+        targetSummary.setPadding(0, dp(8), 0, 0);
+        root.addView(targetSummary);
+
         TextView deadline = text(days >= 0
                 ? getString(R.string.deadline_remaining, days)
                 : getString(R.string.training_mode), 14, PRIMARY, Typeface.BOLD);
-        deadline.setPadding(0, dp(10), 0, 0);
+        deadline.setPadding(0, dp(5), 0, 0);
         root.addView(deadline);
 
         root.addView(space(16));
@@ -178,6 +186,17 @@ public class MainActivity extends Activity {
         slp.topMargin = dp(8);
         root.addView(shopButton, slp);
 
+        Button gameBreak = secondaryButton(getString(R.string.play_break, playCredits.balance()));
+        gameBreak.setEnabled(playCredits.canStartGame());
+        gameBreak.setOnClickListener(v -> {
+            if (playCredits.consumeGameSession()) {
+                miniGames.startBreak(this, this::showHome);
+            }
+        });
+        LinearLayout.LayoutParams glp = matchWrap();
+        glp.topMargin = dp(8);
+        root.addView(gameBreak, glp);
+
         Button dictionaryButton = secondaryButton(getString(R.string.dictionary_fmt, dictionary.savedCount()));
         dictionaryButton.setOnClickListener(v -> showDictionary());
         LinearLayout.LayoutParams dlp = matchWrap();
@@ -195,7 +214,9 @@ public class MainActivity extends Activity {
 
         LinearLayout top = row();
         TextView level = text(getString(R.string.level_fmt, progress.level()), 18, INK, Typeface.BOLD);
-        TextView resources = text(progress.xp() + " XP   ·   " + getString(R.string.crystals_fmt, economy.balance()),
+        TextView resources = text(progress.xp() + " XP   ·   "
+                        + getString(R.string.crystals_fmt, economy.balance()) + "   ·   "
+                        + getString(R.string.play_credits_fmt, playCredits.balance()),
                 16, PRIMARY, Typeface.BOLD);
         top.addView(level, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
         top.addView(resources);
@@ -375,6 +396,7 @@ public class MainActivity extends Activity {
         boolean becameConfident = beforeState != ProgressStore.SkillState.CONFIDENT
                 && afterState == ProgressStore.SkillState.CONFIDENT;
         sessionAnswered++;
+        boolean playCreditEarned = playCredits.awardForLearningProgress(sessionAnswered);
 
         boolean reinforcementScheduled = !correct && scheduleReinforcement(q);
         RewardFx.Reaction reaction = rewards.reaction(correct, progress.combo());
@@ -441,6 +463,12 @@ public class MainActivity extends Activity {
             feedback.addView(crystals);
         }
 
+        if (playCreditEarned) {
+            TextView credit = text(getString(R.string.play_credit_earned), 15, PRIMARY, Typeface.BOLD);
+            credit.setPadding(0, dp(7), 0, 0);
+            feedback.addView(credit);
+        }
+
         if (reinforcementScheduled) {
             TextView repair = text(getString(R.string.reinforcement_scheduled), 14, PRIMARY, Typeface.BOLD);
             repair.setPadding(0, dp(8), 0, 0);
@@ -489,7 +517,9 @@ public class MainActivity extends Activity {
             questionIndex++;
             boolean miniGamesEnabled = getSharedPreferences("english_sprint_settings", MODE_PRIVATE)
                     .getBoolean("minigames", true);
-            if (miniGamesEnabled && miniGames.shouldOfferBreak(sessionAnswered, hasMore)) {
+            if (miniGamesEnabled
+                    && miniGames.shouldOfferBreak(sessionAnswered, hasMore)
+                    && playCredits.consumeGameSession()) {
                 miniGames.startBreak(this, this::showQuestion);
             } else {
                 showQuestion();
@@ -660,6 +690,26 @@ public class MainActivity extends Activity {
         full.setLineSpacing(dp(5), 1.06f);
         full.setPadding(0, dp(7), 0, dp(8));
         box.addView(full);
+
+        TextView assessedTitle = text(getString(R.string.knowledge_assessed), 12, MUTED, Typeface.BOLD);
+        assessedTitle.setPadding(0, dp(14), 0, dp(5));
+        box.addView(assessedTitle);
+        List<String> assessedLabels = new ArrayList<>();
+        for (KnowledgeRef ref : q.knowledge) {
+            assessedLabels.add(QuestionBank.knowledgeLabel(ref.id, Locale.getDefault()));
+        }
+        box.addView(text(String.join(" · ", assessedLabels), 15, INK, Typeface.NORMAL));
+
+        TextView prerequisiteTitle = text(getString(R.string.knowledge_prerequisites), 12, MUTED, Typeface.BOLD);
+        prerequisiteTitle.setPadding(0, dp(14), 0, dp(5));
+        box.addView(prerequisiteTitle);
+        List<String> prerequisiteLabels = new ArrayList<>();
+        for (String id : q.prerequisites) {
+            prerequisiteLabels.add(QuestionBank.knowledgeLabel(id, Locale.getDefault()));
+        }
+        box.addView(text(prerequisiteLabels.isEmpty()
+                ? getString(R.string.knowledge_none)
+                : String.join(" · ", prerequisiteLabels), 15, INK, Typeface.NORMAL));
 
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setView(box)
@@ -1118,6 +1168,34 @@ public class MainActivity extends Activity {
                         .edit().putBoolean("haptic", isChecked).apply());
         root.addView(haptic, matchWrap());
 
+        TextView targetTitle = text(getString(R.string.target_section), 13, MUTED, Typeface.BOLD);
+        targetTitle.setPadding(dp(12), dp(22), dp(12), dp(6));
+        root.addView(targetTitle, matchWrap());
+
+        TextView targetSummary = text(trainingTarget.summary(), 16, INK, Typeface.BOLD);
+        targetSummary.setPadding(dp(12), dp(4), dp(12), dp(2));
+        root.addView(targetSummary, matchWrap());
+
+        TextView targetDate = text(getString(R.string.target_date_label, trainingTarget.targetDate()),
+                14, MUTED, Typeface.NORMAL);
+        targetDate.setPadding(dp(12), dp(2), dp(12), dp(8));
+        root.addView(targetDate, matchWrap());
+
+        android.widget.Switch targetMode = new android.widget.Switch(this);
+        targetMode.setText(getString(R.string.target_specific_mode));
+        targetMode.setTextSize(16);
+        targetMode.setChecked(TrainingTargetStore.MODE_COMPETITION.equals(trainingTarget.mode()));
+        targetMode.setPadding(dp(12), dp(8), dp(12), dp(8));
+        targetMode.setOnCheckedChangeListener((buttonView, isChecked) ->
+                trainingTarget.setMode(isChecked
+                        ? TrainingTargetStore.MODE_COMPETITION
+                        : TrainingTargetStore.MODE_GENERAL));
+        root.addView(targetMode, matchWrap());
+
+        Button targetDateButton = secondaryButton(getString(R.string.target_set_date));
+        targetDateButton.setOnClickListener(v -> showTargetDatePicker());
+        root.addView(targetDateButton, matchWrap());
+
         TextView updatesTitle = text(getString(R.string.updates_section), 13, MUTED, Typeface.BOLD);
         updatesTitle.setPadding(dp(12), dp(22), dp(12), dp(6));
         root.addView(updatesTitle, matchWrap());
@@ -1188,18 +1266,29 @@ public class MainActivity extends Activity {
         return unit == null ? skill : unit.label(Locale.getDefault());
     }
 
-    private int daysUntilTarget() {
-        Calendar now = Calendar.getInstance();
-        Calendar target = Calendar.getInstance();
-        target.set(2026, Calendar.OCTOBER, 9, 0, 0, 0);
-        target.set(Calendar.MILLISECOND, 0);
-        Calendar today = (Calendar) now.clone();
-        today.set(Calendar.HOUR_OF_DAY, 0);
-        today.set(Calendar.MINUTE, 0);
-        today.set(Calendar.SECOND, 0);
-        today.set(Calendar.MILLISECOND, 0);
-        long delta = target.getTimeInMillis() - today.getTimeInMillis();
-        return (int) Math.floor(delta / 86400000.0);
+    private void showTargetDatePicker() {
+        Calendar initial = Calendar.getInstance();
+        String raw = trainingTarget.targetDate();
+        try {
+            String[] parts = raw.split("-");
+            if (parts.length == 3) {
+                initial.set(Integer.parseInt(parts[0]),
+                        Integer.parseInt(parts[1]) - 1,
+                        Integer.parseInt(parts[2]));
+            }
+        } catch (Exception ignored) {
+        }
+
+        new android.app.DatePickerDialog(
+                this,
+                (view, year, month, day) -> {
+                    trainingTarget.setTargetDate(year, month, day);
+                    showSettings();
+                },
+                initial.get(Calendar.YEAR),
+                initial.get(Calendar.MONTH),
+                initial.get(Calendar.DAY_OF_MONTH)
+        ).show();
     }
 
     private LinearLayout column() {

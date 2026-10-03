@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/UsernameMP/English/generator/question_schema.json",
+  "title": "English Sprint generated question",
+  "type": "object",
+  "required": [
+    "id",
+    "subject",
+    "grade_min",
+    "grade_max",
+    "interaction",
+    "mode",
+    "difficulty",
+    "prompt",
+    "knowledge",
+    "prerequisites",
+    "options",
+    "answer",
+    "feedback",
+    "source",
+    "review"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 1
+    },
+    "grade_min": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+    },
+    "grade_max": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+    },
+    "competition": {
+      "type": "string"
+    },
+    "season": {
+      "type": "string"
+    },
+    "interaction": {
+      "enum": [
+        "single_choice",
+        "multi_choice",
+        "numeric",
+        "short_text"
+      ]
+    },
+    "mode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "difficulty": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stimulus": {
+      "type": "object"
+    },
+    "knowledge": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "weight"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "weight": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "options": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "text"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "answer": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "feedback": {
+      "type": "object",
+      "required": [
+        "short",
+        "full",
+        "rule"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "competition": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "year": {
+          "type": "string"
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "draft",
+            "reviewed",
+            "published"
+          ]
+        }
+      }
+    }
+  }
+}

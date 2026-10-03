@@ -131,4 +131,14 @@
     <string name="updates_section">UPDATES</string>
     <string name="update_enable_installs">Allow English Sprint to install apps. When you return, the verified update installer will open automatically.</string>
     <string name="update_installer_missing">Android package installer could not be opened on this device.</string>
+    <string name="play_credits_fmt">🎮 %1$d</string>
+    <string name="play_credit_earned">Game session earned · +1 🎮</string>
+    <string name="play_break">Play mini-game · 🎮 %1$d</string>
+    <string name="target_section">TRAINING TARGET</string>
+    <string name="target_date_label">Target date: %1$s</string>
+    <string name="target_set_date">Change target date</string>
+    <string name="target_specific_mode">Prepare for selected olympiad</string>
+    <string name="knowledge_assessed">ASSESSED KNOWLEDGE</string>
+    <string name="knowledge_prerequisites">PREREQUISITES</string>
+    <string name="knowledge_none">None</string>
 </resources>

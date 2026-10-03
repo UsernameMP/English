@@ -15,6 +15,7 @@ public final class Question {
     public final String skill;
     public final List<String> skills;
     public final List<KnowledgeRef> knowledge;
+    public final List<String> prerequisites;
     public final Type type;
     public final int difficulty;
     public final String prompt;
@@ -65,6 +66,60 @@ public final class Question {
         this.skills = Collections.unmodifiableList(new ArrayList<>(skills));
         this.skill = skills.isEmpty() ? "general" : skills.get(0);
         this.knowledge = Collections.unmodifiableList(new ArrayList<>(knowledge));
+        this.prerequisites = Collections.emptyList();
+        this.type = type;
+        this.difficulty = difficulty;
+        this.prompt = prompt;
+        this.context = context == null ? "" : context;
+        this.options = Collections.unmodifiableList(new ArrayList<>(options));
+        this.correctIndex = correctIndex;
+        this.explanation = explanation == null ? "" : explanation;
+        this.explanationFull = explanationFull == null ? "" : explanationFull;
+        this.rule = rule == null ? "" : rule;
+        this.evidence = evidence == null ? "" : evidence;
+        this.audioAsset = audioAsset == null ? "" : audioAsset;
+        this.speechText = speechText == null ? "" : speechText;
+        this.sourceCompetition = sourceCompetition == null ? "" : sourceCompetition;
+        this.sourceRegion = sourceRegion == null ? "" : sourceRegion;
+        this.sourceYear = sourceYear == null ? "" : sourceYear;
+        this.verified = verified;
+    }
+
+    public Question(
+            String id,
+            String subject,
+            int gradeMin,
+            int gradeMax,
+            String interaction,
+            List<String> skills,
+            List<KnowledgeRef> knowledge,
+            List<String> prerequisites,
+            Type type,
+            int difficulty,
+            String prompt,
+            String context,
+            List<String> options,
+            int correctIndex,
+            String explanation,
+            String explanationFull,
+            String rule,
+            String evidence,
+            String audioAsset,
+            String speechText,
+            String sourceCompetition,
+            String sourceRegion,
+            String sourceYear,
+            boolean verified
+    ) {
+        this.id = id;
+        this.subject = subject;
+        this.gradeMin = gradeMin;
+        this.gradeMax = gradeMax;
+        this.interaction = interaction;
+        this.skills = Collections.unmodifiableList(new ArrayList<>(skills));
+        this.skill = skills.isEmpty() ? "general" : skills.get(0);
+        this.knowledge = Collections.unmodifiableList(new ArrayList<>(knowledge));
+        this.prerequisites = Collections.unmodifiableList(new ArrayList<>(prerequisites));
         this.type = type;
         this.difficulty = difficulty;
         this.prompt = prompt;

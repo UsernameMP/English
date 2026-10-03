@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "targets": [
+    {
+      "pack_id": "english.vsosh.5-6.ru.2026",
+      "subject": "english",
+      "grade": 5,
+      "competition": "VSOSh",
+      "region": "Tatarstan",
+      "season": "2026-2027",
+      "target_date": "2026-10-09",
+      "mode": "competition"
+    }
+  ]
+}
