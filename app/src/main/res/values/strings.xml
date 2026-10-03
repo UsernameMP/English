@@ -75,4 +75,10 @@
     <string name="dictionary_example">EXAMPLE</string>
     <string name="vocab_prompt">What does “%1$s” mean?</string>
     <string name="personal_dictionary">Personal dictionary</string>
+    <string name="effects_volume_fmt">Effects volume: %1$d%%</string>
+    <string name="quotes_setting">Motivational quotes</string>
+    <string name="reinforcement_scheduled">This rule will return in a few questions.</string>
+    <string name="reinforced">✓ REINFORCED</string>
+    <string name="new_record">NEW RECORD</string>
+    <string name="new_record_sub">Best streak is now ×%1$d</string>
 </resources>
