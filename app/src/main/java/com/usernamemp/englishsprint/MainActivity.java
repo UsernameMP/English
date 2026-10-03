@@ -41,6 +41,7 @@ public class MainActivity extends Activity {
 
     private ProgressStore progress;
     private AudioEngine audio;
+    private RewardFx rewards;
 
     private List<Question> session = new ArrayList<>();
     private int questionIndex = 0;
@@ -53,6 +54,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         progress = new ProgressStore(this);
         audio = new AudioEngine(this);
+        rewards = new RewardFx(this);
         getWindow().setStatusBarColor(BG);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         showHome();
@@ -61,6 +63,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onDestroy() {
         audio.shutdown();
+        rewards.shutdown();
         super.onDestroy();
     }
 
@@ -91,22 +94,22 @@ public class MainActivity extends Activity {
         root.addView(progressCard());
         root.addView(space(18));
 
-        root.addView(menuButton("Быстрый тренинг · 15", "Слабые темы повторяются чаще", () ->
+        root.addView(menuButton("⚡ Быстрый тренинг · 15", "Слабые темы повторяются чаще", () ->
                 startSession("Быстрый тренинг", QuestionBank.adaptiveSession(progress, 15, System.nanoTime()))));
 
-        root.addView(menuButton("Грамматика · 20", "be · have/has · do/does · времена · артикли", () ->
+        root.addView(menuButton("A+  Грамматика · 20", "be · have/has · do/does · времена · артикли", () ->
                 startSession("Грамматика", shuffled(QuestionBank.byType(Question.Type.GRAMMAR), 20))));
 
-        root.addView(menuButton("Reading · 10", "После ответа подсветим доказательство в тексте", () ->
+        root.addView(menuButton("⌕  Reading · 10", "После ответа подсветим доказательство в тексте", () ->
                 startSession("Reading", shuffled(QuestionBank.byType(Question.Type.READING), 10))));
 
-        root.addView(menuButton("Listening · 10", "Офлайн · два прослушивания на вопрос", () ->
+        root.addView(menuButton("▶  Listening · 10", "Офлайн · два прослушивания на вопрос", () ->
                 startSession("Listening", shuffled(QuestionBank.byType(Question.Type.LISTENING), 10))));
 
-        root.addView(menuButton("Story builder · 10", "Письмо без клавиатуры: связки, логика, времена", () ->
+        root.addView(menuButton("✦  Story builder · 10", "Письмо без клавиатуры: связки, логика, времена", () ->
                 startSession("Story builder", shuffled(QuestionBank.byType(Question.Type.STORY), 10))));
 
-        root.addView(menuButton("Олимпиадный спринт · 22", "Listening + Reading + Use of English + Story", () ->
+        root.addView(menuButton("★  Олимпиадный спринт · 22", "Listening + Reading + Use of English + Story", () ->
                 startSession("Олимпиадный спринт", QuestionBank.sprint(22, System.nanoTime()))));
 
         root.addView(space(8));
@@ -143,6 +146,12 @@ public class MainActivity extends Activity {
         LinearLayout.LayoutParams statsLp = matchWrap();
         statsLp.topMargin = dp(10);
         card.addView(stats, statsLp);
+
+        TextView rank = text("Титул: " + rankForCombo(progress.bestCombo()),
+                13, PRIMARY, Typeface.BOLD);
+        LinearLayout.LayoutParams rankLp = matchWrap();
+        rankLp.topMargin = dp(6);
+        card.addView(rank, rankLp);
 
         return card;
     }
@@ -278,6 +287,8 @@ public class MainActivity extends Activity {
                               List<Button> buttons, TextView contextView) {
         boolean correct = q.isCorrect(chosen);
         progress.record(q, correct);
+        RewardFx.Reaction reaction = rewards.reaction(correct, progress.combo());
+        rewards.play(correct, progress.combo());
         if (correct) sessionCorrect++;
 
         int[] stats = sessionStats.computeIfAbsent(q.skill, k -> new int[]{0, 0});
@@ -306,10 +317,22 @@ public class MainActivity extends Activity {
                 correct ? Color.rgb(232, 248, 240) : Color.rgb(255, 239, 241),
                 14, 0, Color.TRANSPARENT));
 
-        TextView verdict = text(correct ? "Верно · +" + (10 + Math.min(progress.combo(), 10) * 2) + " XP"
-                        : "Ошибка · правильный ответ подсвечен",
-                16, correct ? GOOD : BAD, Typeface.BOLD);
+        TextView verdict = text(reaction.symbol + "  " + reaction.headline,
+                17, correct ? GOOD : MUTED, Typeface.BOLD);
         feedback.addView(verdict);
+
+        TextView reactionLine = text(reaction.subline, 14, INK, Typeface.NORMAL);
+        reactionLine.setPadding(0, dp(5), 0, 0);
+        feedback.addView(reactionLine);
+
+        if (!correct) {
+            String quote = rewards.quoteForMistake();
+            if (!quote.isEmpty()) {
+                TextView quoteView = text(quote, 13, MUTED, Typeface.NORMAL);
+                quoteView.setPadding(0, dp(9), 0, 0);
+                feedback.addView(quoteView);
+            }
+        }
 
         if (!q.explanation.isEmpty()) {
             TextView expl = text(q.explanation, 14, INK, Typeface.NORMAL);
@@ -452,6 +475,15 @@ public class MainActivity extends Activity {
         Collections.shuffle(list, new Random(System.nanoTime()));
         if (list.size() > max) return new ArrayList<>(list.subList(0, max));
         return list;
+    }
+
+    private String rankForCombo(int combo) {
+        if (combo >= 15) return "НЕУДЕРЖИМЫЙ";
+        if (combo >= 10) return "ЛЕГЕНДА";
+        if (combo >= 8) return "МАШИНА";
+        if (combo >= 5) return "ПЯТЬ ПОДРЯД";
+        if (combo >= 3) return "РАЗОГРЕВ";
+        return "НОВИЧОК";
     }
 
     private String skillName(String skill) {
