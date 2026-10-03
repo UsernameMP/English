@@ -112,4 +112,18 @@
     <string name="minigame_continue">Продолжить тренировку</string>
     <string name="minigame_setting">Мини-игра после учебного блока</string>
     <string name="task_listen_hint">АУДИРОВАНИЕ</string>
+    <string name="match3_hint">Нажми на кристалл, затем на соседний. Собирай линии из 3+.</string>
+    <string name="match3_shuffle">Ходов нет · перемешиваем</string>
+    <string name="memory_hint">Найди все одинаковые пары, пока не закончилось время.</string>
+    <string name="memory_pairs_fmt">Пары: %1$d / 8</string>
+    <string name="update_check">↻ Проверить обновление</string>
+    <string name="update_checking">Проверяем обновление…</string>
+    <string name="update_none">У тебя уже последняя пилотная версия.</string>
+    <string name="update_available">Доступно обновление: %1$s · %2$s</string>
+    <string name="update_download">Скачать и установить</string>
+    <string name="update_downloading">Скачиваем обновление…</string>
+    <string name="update_bad_apk">Скачанный APK не прошёл проверку пакета, подписи или версии.</string>
+    <string name="update_enable_installs">Разреши English Sprint устанавливать обновления и нажми обновление ещё раз.</string>
+    <string name="update_failed">Не удалось проверить или скачать обновление. Попробуй ещё раз.</string>
+    <string name="update_version_fmt">Установлено: %1$s</string>
 </resources>
