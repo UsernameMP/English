@@ -11,7 +11,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Checkout
@@ -31,22 +31,28 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - name: Generate offline listening WAVs
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y espeak-ng
-          bash scripts/generate_audio.sh
+      - name: Validate content bank
+        run: python3 scripts/validate_content.py
+
+      - name: Cache neural TTS
+        uses: actions/cache@v4
+        with:
+          path: .cache/piper
+          key: piper-en-us-lessac-medium-v1
+
+      - name: Generate offline neural listening WAVs
+        run: bash scripts/generate_audio.sh
 
       - name: Build debug APK
         run: gradle :app:assembleDebug --stacktrace
 
       - name: Rename APK
-        run: cp app/build/outputs/apk/debug/app-debug.apk english-sprint-v0.2.0-debug.apk
+        run: cp app/build/outputs/apk/debug/app-debug.apk english-sprint-v0.3.0-debug.apk
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: english-sprint-debug
-          path: english-sprint-v0.2.0-debug.apk
+          name: english-sprint-v0.3.0
+          path: english-sprint-v0.3.0-debug.apk
           if-no-files-found: error
           retention-days: 14
