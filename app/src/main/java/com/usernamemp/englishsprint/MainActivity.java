@@ -232,6 +232,7 @@ public class MainActivity extends Activity {
             clp.topMargin = dp(16);
             root.addView(contextView, clp);
         }
+        final TextView contextForAnswer = contextView;
 
         int[] listensLeft = {2};
         if (q.type == Question.Type.LISTENING) {
@@ -260,7 +261,7 @@ public class MainActivity extends Activity {
             root.addView(b, blp);
             answerButtons.add(b);
             b.setOnClickListener(v -> handleAnswer(
-                    root, q, answerIndex, answerButtons, contextView));
+                    root, q, answerIndex, answerButtons, contextForAnswer));
         }
 
         TextView footer = text("XP " + progress.xp() + "   ·   combo ×" + progress.combo(),
