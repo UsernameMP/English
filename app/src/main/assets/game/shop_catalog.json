@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "items": [
+    {
+      "sku": "bg.sky",
+      "type": "background",
+      "price_crystals": 160,
+      "name": {
+        "en": "Sky",
+        "ru": "Небо"
+      },
+      "description": {
+        "en": "Cool light-blue background",
+        "ru": "Светло-голубой фон"
+      },
+      "payload": {
+        "color": "#EEF5FF"
+      }
+    },
+    {
+      "sku": "bg.mint",
+      "type": "background",
+      "price_crystals": 180,
+      "name": {
+        "en": "Mint",
+        "ru": "Мята"
+      },
+      "description": {
+        "en": "Soft mint background",
+        "ru": "Мягкий мятный фон"
+      },
+      "payload": {
+        "color": "#EFFAF4"
+      }
+    },
+    {
+      "sku": "bg.peach",
+      "type": "background",
+      "price_crystals": 200,
+      "name": {
+        "en": "Peach",
+        "ru": "Персик"
+      },
+      "description": {
+        "en": "Warm peach background",
+        "ru": "Тёплый персиковый фон"
+      },
+      "payload": {
+        "color": "#FFF4EC"
+      }
+    },
+    {
+      "sku": "button.pill",
+      "type": "button",
+      "price_crystals": 220,
+      "name": {
+        "en": "Pill buttons",
+        "ru": "Кнопки-капсулы"
+      },
+      "description": {
+        "en": "Rounder answer and action buttons",
+        "ru": "Более округлые кнопки"
+      },
+      "payload": {
+        "radius": 26
+      }
+    },
+    {
+      "sku": "button.arcade",
+      "type": "button",
+      "price_crystals": 260,
+      "name": {
+        "en": "Arcade buttons",
+        "ru": "Аркадные кнопки"
+      },
+      "description": {
+        "en": "Compact arcade-style corners",
+        "ru": "Более резкие аркадные углы"
+      },
+      "payload": {
+        "radius": 8
+      }
+    },
+    {
+      "sku": "sound.soft",
+      "type": "sound",
+      "price_crystals": 240,
+      "name": {
+        "en": "Soft sounds",
+        "ru": "Мягкий звук"
+      },
+      "description": {
+        "en": "Calmer reward tones",
+        "ru": "Спокойные звуки наград"
+      },
+      "payload": {
+        "pack": "soft"
+      }
+    },
+    {
+      "sku": "sound.arcade",
+      "type": "sound",
+      "price_crystals": 300,
+      "name": {
+        "en": "Arcade sounds",
+        "ru": "Аркадный звук"
+      },
+      "description": {
+        "en": "Sharper game-like reward tones",
+        "ru": "Более яркие игровые звуки"
+      },
+      "payload": {
+        "pack": "arcade"
+      }
+    },
+    {
+      "sku": "frame.gold",
+      "type": "frame",
+      "price_crystals": 450,
+      "name": {
+        "en": "Gold frame",
+        "ru": "Золотая рамка"
+      },
+      "description": {
+        "en": "Gold outline around the progress card",
+        "ru": "Золотая рамка карточки прогресса"
+      },
+      "payload": {
+        "color": "#D7A72E"
+      }
+    },
+    {
+      "sku": "title.sprinter",
+      "type": "title",
+      "price_crystals": 350,
+      "name": {
+        "en": "SPRINTER",
+        "ru": "СПРИНТЕР"
+      },
+      "description": {
+        "en": "Equip a custom profile title",
+        "ru": "Особый титул профиля"
+      },
+      "payload": {
+        "label": {
+          "en": "SPRINTER",
+          "ru": "СПРИНТЕР"
+        }
+      }
+    }
+  ]
+}

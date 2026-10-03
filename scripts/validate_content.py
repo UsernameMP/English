@@ -6,6 +6,10 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 BANK = ROOT / "app/src/main/assets/content/english_g5_vso.json"
 DICTIONARY = ROOT / "app/src/main/assets/content/dictionary_en.json"
+ECONOMY = ROOT / "app/src/main/assets/game/economy.json"
+SHOP = ROOT / "app/src/main/assets/game/shop_catalog.json"
+REWARDS = ROOT / "app/src/main/assets/game/reward_catalog.json"
+MINIGAMES = ROOT / "app/src/main/assets/game/minigames.json"
 
 def fail(msg):
     print(f"CONTENT ERROR: {msg}", file=sys.stderr)
@@ -213,4 +217,99 @@ for entry in entries:
             fail(f"dictionary form {form!r} belongs to both {forms[normalized]} and {lemma}")
         forms[normalized] = lemma
 
-print(f"OK: pack={pack['id']}, {len(questions)} questions, {len(unit_ids)} knowledge units, {len(skills)} tags, {listening} listening items ({dialogues} dialogues), {len(entries)} dictionary entries")
+with ECONOMY.open(encoding="utf-8") as f:
+    economy = json.load(f)
+reward_values = economy.get("rewards")
+if not isinstance(reward_values, dict) or not reward_values:
+    fail("economy rewards must be a non-empty object")
+for key, value in reward_values.items():
+    if not isinstance(value, int) or value < 0:
+        fail(f"economy reward {key}: must be a non-negative integer")
+
+with SHOP.open(encoding="utf-8") as f:
+    shop = json.load(f)
+shop_items = shop.get("items")
+if not isinstance(shop_items, list) or len(shop_items) < 6:
+    fail("shop must contain at least 6 items")
+shop_skus = set()
+allowed_shop_types = {"background", "button", "sound", "frame", "title", "reaction"}
+for item in shop_items:
+    sku = item.get("sku")
+    if not isinstance(sku, str) or not sku:
+        fail("shop item requires sku")
+    if sku in shop_skus:
+        fail(f"duplicate shop sku: {sku}")
+    shop_skus.add(sku)
+    if item.get("type") not in allowed_shop_types:
+        fail(f"{sku}: unsupported shop type {item.get('type')!r}")
+    price = item.get("price_crystals")
+    if not isinstance(price, int) or price < 0:
+        fail(f"{sku}: price must be a non-negative integer")
+    if not isinstance(item.get("name"), dict) or not item["name"]:
+        fail(f"{sku}: localized name required")
+    if not isinstance(item.get("payload"), dict):
+        fail(f"{sku}: payload object required")
+
+with REWARDS.open(encoding="utf-8") as f:
+    reward_catalog = json.load(f)
+digital_items = reward_catalog.get("items")
+if not isinstance(digital_items, list) or not digital_items:
+    fail("digital reward catalog must contain items")
+digital_skus = set()
+for item in digital_items:
+    sku = item.get("sku")
+    if not isinstance(sku, str) or not sku:
+        fail("digital reward requires sku")
+    if sku in digital_skus or sku in shop_skus:
+        fail(f"duplicate reward sku: {sku}")
+    digital_skus.add(sku)
+    price = item.get("price_crystals")
+    if not isinstance(price, int) or price < 0:
+        fail(f"{sku}: price must be a non-negative integer")
+    rights = item.get("rights") or {}
+    fulfillment = item.get("fulfillment") or {}
+    if item.get("enabled"):
+        if item.get("backend_required"):
+            fail(f"{sku}: backend-required external reward must remain disabled in offline MVP")
+        if rights.get("status") != "owned_original":
+            fail(f"{sku}: enabled offline reward must be owned_original")
+        if fulfillment.get("mode") != "asset":
+            fail(f"{sku}: enabled offline reward must use asset fulfillment")
+        asset = fulfillment.get("asset")
+        if not isinstance(asset, str) or not asset:
+            fail(f"{sku}: enabled asset reward needs asset path")
+        if not (ROOT / "app/src/main/assets" / asset).exists():
+            fail(f"{sku}: reward asset not found: {asset}")
+
+with MINIGAMES.open(encoding="utf-8") as f:
+    minigames = json.load(f)
+interval = minigames.get("break_interval_questions")
+if not isinstance(interval, int) or interval < 1:
+    fail("mini-game break interval must be >= 1")
+games = minigames.get("games")
+if not isinstance(games, list) or not games:
+    fail("mini-game config needs at least one game")
+game_ids = set()
+for game in games:
+    gid = game.get("id")
+    if not isinstance(gid, str) or not gid:
+        fail("mini-game id is required")
+    if gid in game_ids:
+        fail(f"duplicate mini-game id: {gid}")
+    game_ids.add(gid)
+    duration = game.get("duration_seconds")
+    if not isinstance(duration, int) or not 5 <= duration <= 60:
+        fail(f"{gid}: duration must be 5..60 seconds")
+    for field in ("completion_reward", "score_bonus_every", "score_bonus_cap"):
+        value = game.get(field)
+        if not isinstance(value, int) or value < 0:
+            fail(f"{gid}: {field} must be non-negative integer")
+if minigames.get("default_game") not in game_ids:
+    fail("default mini-game must exist in games")
+
+print(
+    f"OK: pack={pack['id']}, {len(questions)} questions, {len(unit_ids)} knowledge units, "
+    f"{len(skills)} tags, {listening} listening items ({dialogues} dialogues), "
+    f"{len(entries)} dictionary entries, {len(shop_items)} shop items, "
+    f"{len(digital_items)} digital rewards, {len(games)} mini-games"
+)

@@ -8,6 +8,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
+import android.text.Html;
 import android.text.style.BackgroundColorSpan;
 import android.text.style.ClickableSpan;
 import android.text.method.LinkMovementMethod;
@@ -51,6 +52,10 @@ public class MainActivity extends Activity {
     private AudioEngine audio;
     private RewardFx rewards;
     private DictionaryStore dictionary;
+    private EconomyStore economy;
+    private ShopStore shop;
+    private DigitalRewardStore digitalRewards;
+    private MiniGameHost miniGames;
 
     private List<Question> session = new ArrayList<>();
     private int questionIndex = 0;
@@ -62,6 +67,7 @@ public class MainActivity extends Activity {
     private final Random sessionRandom = new Random();
     private int sessionBestBefore = 0;
     private boolean newRecordCelebrated = false;
+    private int sessionAnswered = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +75,10 @@ public class MainActivity extends Activity {
         QuestionBank.init(this);
         progress = new ProgressStore(this);
         dictionary = new DictionaryStore(this);
+        economy = new EconomyStore(this);
+        shop = new ShopStore(this, economy);
+        digitalRewards = new DigitalRewardStore(this, economy);
+        miniGames = new MiniGameHost(this, economy);
         audio = new AudioEngine(this);
         rewards = new RewardFx(this);
         getWindow().setStatusBarColor(BG);
@@ -150,6 +160,12 @@ public class MainActivity extends Activity {
         plp.topMargin = dp(4);
         root.addView(progressButton, plp);
 
+        Button shopButton = secondaryButton(getString(R.string.shop) + "   ·   " + getString(R.string.crystals_fmt, economy.balance()));
+        shopButton.setOnClickListener(v -> showShop());
+        LinearLayout.LayoutParams slp = matchWrap();
+        slp.topMargin = dp(8);
+        root.addView(shopButton, slp);
+
         Button dictionaryButton = secondaryButton(getString(R.string.dictionary_fmt, dictionary.savedCount()));
         dictionaryButton.setOnClickListener(v -> showDictionary());
         LinearLayout.LayoutParams dlp = matchWrap();
@@ -162,13 +178,15 @@ public class MainActivity extends Activity {
     private View progressCard() {
         LinearLayout card = column();
         card.setPadding(dp(18), dp(16), dp(18), dp(16));
-        card.setBackground(roundRect(CARD, 18, 0, Color.TRANSPARENT));
+        int frameStroke = shop == null ? Color.TRANSPARENT : shop.frameStrokeColor(Color.TRANSPARENT);
+        card.setBackground(roundRect(CARD, 18, frameStroke == Color.TRANSPARENT ? 0 : 2, frameStroke));
 
         LinearLayout top = row();
         TextView level = text(getString(R.string.level_fmt, progress.level()), 18, INK, Typeface.BOLD);
-        TextView xp = text(progress.xp() + " XP", 16, PRIMARY, Typeface.BOLD);
+        TextView resources = text(progress.xp() + " XP   ·   " + getString(R.string.crystals_fmt, economy.balance()),
+                16, PRIMARY, Typeface.BOLD);
         top.addView(level, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
-        top.addView(xp);
+        top.addView(resources);
         card.addView(top);
 
         ProgressBar bar = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
@@ -185,7 +203,9 @@ public class MainActivity extends Activity {
         statsLp.topMargin = dp(10);
         card.addView(stats, statsLp);
 
-        TextView rank = text(getString(R.string.rank_fmt, rankForCombo(progress.bestCombo())),
+        String equippedTitle = shop == null ? "" : shop.customTitle(Locale.getDefault());
+        String rankValue = equippedTitle.isEmpty() ? rankForCombo(progress.bestCombo()) : equippedTitle;
+        TextView rank = text(getString(R.string.rank_fmt, rankValue),
                 13, PRIMARY, Typeface.BOLD);
         LinearLayout.LayoutParams rankLp = matchWrap();
         rankLp.topMargin = dp(6);
@@ -224,6 +244,7 @@ public class MainActivity extends Activity {
         reinforcementQuestionIds.clear();
         sessionBestBefore = progress.bestCombo();
         newRecordCelebrated = false;
+        sessionAnswered = 0;
         showQuestion();
     }
 
@@ -289,8 +310,9 @@ public class MainActivity extends Activity {
 
         int[] listensLeft = {2};
         if (q.type == Question.Type.LISTENING) {
-            root.addView(space(16));
+            root.addView(thumbZoneSpacer());
             Button play = primaryButton(getString(R.string.listen_first));
+            play.setMinHeight(dp(66));
             play.setOnClickListener(v -> {
                 if (listensLeft[0] <= 0) return;
                 audio.play(q);
@@ -300,10 +322,11 @@ public class MainActivity extends Activity {
                         : getString(R.string.listens_used));
                 if (listensLeft[0] == 0) play.setEnabled(false);
             });
-            root.addView(play, matchWrap());
+            root.addView(taskActionZone(play), matchWrap());
+            root.addView(space(14));
+        } else {
+            root.addView(space(18));
         }
-
-        root.addView(space(18));
 
         List<Button> answerButtons = new ArrayList<>();
         for (int i = 0; i < q.options.size(); i++) {
@@ -317,7 +340,8 @@ public class MainActivity extends Activity {
                     root, q, answerIndex, answerButtons, contextForAnswer));
         }
 
-        TextView footer = text("XP " + progress.xp() + "   ·   combo ×" + progress.combo(),
+        TextView footer = text("XP " + progress.xp() + "   ·   " + getString(R.string.crystals_fmt, economy.balance())
+                        + "   ·   combo ×" + progress.combo(),
                 13, MUTED, Typeface.BOLD);
         footer.setGravity(Gravity.CENTER);
         LinearLayout.LayoutParams flp = matchWrap();
@@ -331,7 +355,12 @@ public class MainActivity extends Activity {
                               List<Button> buttons, TextView contextView) {
         boolean correct = q.isCorrect(chosen);
         boolean reinforcement = reinforcementQuestionIds.remove(q.id);
+        ProgressStore.SkillState beforeState = progress.state(q.primaryKnowledgeId());
         progress.record(q, correct);
+        ProgressStore.SkillState afterState = progress.state(q.primaryKnowledgeId());
+        boolean becameConfident = beforeState != ProgressStore.SkillState.CONFIDENT
+                && afterState == ProgressStore.SkillState.CONFIDENT;
+        sessionAnswered++;
 
         boolean reinforcementScheduled = !correct && scheduleReinforcement(q);
         RewardFx.Reaction reaction = rewards.reaction(correct, progress.combo());
@@ -347,6 +376,16 @@ public class MainActivity extends Activity {
             rewards.play(reaction, correct, progress.combo());
         }
         if (correct) sessionCorrect++;
+
+        int crystalGain = economy.awardLearning(
+                correct,
+                progress.combo(),
+                newRecord,
+                becameConfident,
+                reinforcement && correct,
+                sessionAnswered,
+                q.id
+        );
 
         int[] stats = sessionStats.computeIfAbsent(q.skill, k -> new int[]{0, 0});
         stats[0]++;
@@ -381,6 +420,12 @@ public class MainActivity extends Activity {
         TextView reactionLine = text(reaction.subline, 14, INK, Typeface.NORMAL);
         reactionLine.setPadding(0, dp(5), 0, 0);
         feedback.addView(reactionLine);
+
+        if (crystalGain > 0) {
+            TextView crystals = text(getString(R.string.crystals_gain_fmt, crystalGain), 16, PRIMARY, Typeface.BOLD);
+            crystals.setPadding(0, dp(7), 0, 0);
+            feedback.addView(crystals);
+        }
 
         if (reinforcementScheduled) {
             TextView repair = text(getString(R.string.reinforcement_scheduled), 14, PRIMARY, Typeface.BOLD);
@@ -426,8 +471,15 @@ public class MainActivity extends Activity {
 
         Button next = primaryButton(questionIndex + 1 < session.size() ? getString(R.string.next) : getString(R.string.result));
         next.setOnClickListener(v -> {
+            boolean hasMore = questionIndex + 1 < session.size();
             questionIndex++;
-            showQuestion();
+            boolean miniGamesEnabled = getSharedPreferences("english_sprint_settings", MODE_PRIVATE)
+                    .getBoolean("minigames", true);
+            if (miniGamesEnabled && miniGames.shouldOfferBreak(sessionAnswered, hasMore)) {
+                miniGames.startBreak(this, this::showQuestion);
+            } else {
+                showQuestion();
+            }
         });
         LinearLayout.LayoutParams nlp = matchWrap();
         nlp.topMargin = dp(12);
@@ -738,6 +790,201 @@ public class MainActivity extends Activity {
         setScrollable(root);
     }
 
+    private View thumbZoneSpacer() {
+        Space spacer = new Space(this);
+        int screenHeight = getResources().getDisplayMetrics().heightPixels;
+        int heightPx = Math.max(dp(56), Math.min(dp(105), screenHeight / 10));
+        spacer.setLayoutParams(new LinearLayout.LayoutParams(1, heightPx));
+        return spacer;
+    }
+
+    private View taskActionZone(View action) {
+        LinearLayout zone = column();
+        zone.setPadding(dp(8), dp(8), dp(8), dp(10));
+        TextView label = text(getString(R.string.task_listen_hint), 11, MUTED, Typeface.BOLD);
+        label.setGravity(Gravity.CENTER);
+        label.setPadding(0, 0, 0, dp(6));
+        zone.addView(label);
+        zone.addView(action, matchWrap());
+        return zone;
+    }
+
+    private void showShop() {
+        LinearLayout root = column();
+        root.setPadding(dp(20), dp(20), dp(20), dp(30));
+
+        Button back = compactButton("←");
+        back.setOnClickListener(v -> showHome());
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
+        root.addView(space(14));
+        root.addView(text(getString(R.string.shop_title), 28, INK, Typeface.BOLD));
+        root.addView(text(getString(R.string.shop_balance_fmt, economy.balance()), 18, PRIMARY, Typeface.BOLD));
+        root.addView(space(16));
+
+        for (ShopItem item : shop.items()) {
+            root.addView(shopItemCard(item));
+        }
+
+        root.addView(space(18));
+        root.addView(text(getString(R.string.digital_rewards), 22, INK, Typeface.BOLD));
+        TextView security = text(getString(R.string.reward_local_security_note), 13, MUTED, Typeface.NORMAL);
+        security.setLineSpacing(dp(3), 1.04f);
+        security.setPadding(0, dp(5), 0, dp(12));
+        root.addView(security);
+
+        for (DigitalRewardItem item : digitalRewards.items()) {
+            root.addView(digitalRewardCard(item));
+        }
+
+        setScrollable(root);
+    }
+
+    private View shopItemCard(ShopItem item) {
+        LinearLayout card = column();
+        card.setPadding(dp(16), dp(14), dp(16), dp(14));
+
+        int previewColor = CARD;
+        if ("background".equals(item.type)) {
+            try { previewColor = Color.parseColor(item.payload.optString("color")); }
+            catch (Exception ignored) {}
+        }
+        card.setBackground(roundRect(previewColor, 14, 1, SOFT));
+
+        LinearLayout head = row();
+        head.addView(text(item.name(Locale.getDefault()), 18, INK, Typeface.BOLD),
+                new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
+        head.addView(text("💎 " + item.priceCrystals, 15, PRIMARY, Typeface.BOLD));
+        card.addView(head);
+
+        TextView desc = text(item.description(Locale.getDefault()), 14, MUTED, Typeface.NORMAL);
+        desc.setPadding(0, dp(5), 0, dp(10));
+        card.addView(desc);
+
+        Button action;
+        if (shop.isEquipped(item)) {
+            action = secondaryButton(getString(R.string.shop_equipped));
+            action.setEnabled(false);
+        } else if (shop.isOwned(item)) {
+            action = secondaryButton(getString(R.string.shop_equip));
+            action.setOnClickListener(v -> {
+                shop.buyAndEquip(item);
+                showShop();
+            });
+        } else {
+            action = secondaryButton(getString(R.string.shop_buy_fmt, item.priceCrystals));
+            action.setOnClickListener(v -> confirmShopPurchase(item));
+        }
+        card.addView(action, matchWrap());
+
+        LinearLayout.LayoutParams lp = matchWrap();
+        lp.bottomMargin = dp(9);
+        card.setLayoutParams(lp);
+        return card;
+    }
+
+    private void confirmShopPurchase(ShopItem item) {
+        new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.shop_confirm_title, item.name(Locale.getDefault())))
+                .setMessage(getString(R.string.shop_confirm_body, item.priceCrystals))
+                .setPositiveButton(getString(R.string.shop_confirm), (dialog, which) -> {
+                    if (shop.buyAndEquip(item)) {
+                        showShop();
+                    } else {
+                        new AlertDialog.Builder(this)
+                                .setMessage(getString(R.string.shop_not_enough))
+                                .setPositiveButton(getString(R.string.got_it), null)
+                                .show();
+                    }
+                })
+                .setNegativeButton(getString(R.string.dictionary_close), null)
+                .show();
+    }
+
+    private View digitalRewardCard(DigitalRewardItem item) {
+        LinearLayout card = column();
+        card.setPadding(dp(16), dp(14), dp(16), dp(14));
+        card.setBackground(roundRect(CARD, 14, 1, SOFT));
+
+        LinearLayout head = row();
+        head.addView(text(item.name(Locale.getDefault()), 17, INK, Typeface.BOLD),
+                new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
+        head.addView(text("💎 " + item.priceCrystals, 15, PRIMARY, Typeface.BOLD));
+        card.addView(head);
+
+        TextView desc = text(item.description(Locale.getDefault()), 14, MUTED, Typeface.NORMAL);
+        desc.setPadding(0, dp(5), 0, dp(10));
+        card.addView(desc);
+
+        Button action;
+        if (digitalRewards.isRedeemed(item)) {
+            action = secondaryButton(getString(R.string.reward_open));
+            action.setOnClickListener(v -> showOwnedReward(item));
+        } else if (digitalRewards.canRedeemLocally(item)) {
+            action = secondaryButton(getString(R.string.reward_redeem_fmt, item.priceCrystals));
+            action.setOnClickListener(v -> confirmDigitalReward(item));
+        } else {
+            action = secondaryButton(item.backendRequired
+                    ? getString(R.string.reward_locked_secure)
+                    : getString(R.string.reward_locked_rights));
+            action.setEnabled(false);
+        }
+        card.addView(action, matchWrap());
+
+        LinearLayout.LayoutParams lp = matchWrap();
+        lp.bottomMargin = dp(9);
+        card.setLayoutParams(lp);
+        return card;
+    }
+
+    private void confirmDigitalReward(DigitalRewardItem item) {
+        new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.reward_redeem_title, item.name(Locale.getDefault())))
+                .setMessage(getString(R.string.reward_redeem_body, item.priceCrystals))
+                .setPositiveButton(getString(R.string.shop_confirm), (dialog, which) -> {
+                    if (digitalRewards.redeemOwnedAsset(item)) {
+                        showOwnedReward(item);
+                    } else {
+                        new AlertDialog.Builder(this)
+                                .setMessage(getString(R.string.shop_not_enough))
+                                .setPositiveButton(getString(R.string.got_it), null)
+                                .show();
+                    }
+                })
+                .setNegativeButton(getString(R.string.dictionary_close), null)
+                .show();
+    }
+
+    private void showOwnedReward(DigitalRewardItem item) {
+        String html = digitalRewards.readOwnedAsset(item);
+        if (html.isEmpty()) {
+            showShop();
+            return;
+        }
+
+        LinearLayout root = column();
+        root.setPadding(dp(20), dp(20), dp(20), dp(30));
+
+        Button back = compactButton("←");
+        back.setOnClickListener(v -> showShop());
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
+        root.addView(space(12));
+        root.addView(text(item.name(Locale.getDefault()), 25, INK, Typeface.BOLD));
+        root.addView(space(10));
+
+        TextView content = text("", 17, INK, Typeface.NORMAL);
+        content.setLineSpacing(dp(5), 1.06f);
+        content.setText(Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY));
+        root.addView(content, matchWrap());
+
+        Button close = primaryButton(getString(R.string.reward_book_close));
+        close.setOnClickListener(v -> showShop());
+        LinearLayout.LayoutParams lp = matchWrap();
+        lp.topMargin = dp(18);
+        root.addView(close, lp);
+
+        setScrollable(root);
+    }
+
     private void showSettings() {
         LinearLayout root = column();
         root.setPadding(dp(20), dp(20), dp(20), dp(28));
@@ -791,6 +1038,17 @@ public class MainActivity extends Activity {
                 getSharedPreferences("english_sprint_settings", MODE_PRIVATE)
                         .edit().putBoolean("quotes", isChecked).apply());
         root.addView(quotes, matchWrap());
+
+        android.widget.Switch miniGameSwitch = new android.widget.Switch(this);
+        miniGameSwitch.setText(getString(R.string.minigame_setting));
+        miniGameSwitch.setTextSize(17);
+        miniGameSwitch.setChecked(getSharedPreferences("english_sprint_settings", MODE_PRIVATE)
+                .getBoolean("minigames", true));
+        miniGameSwitch.setPadding(dp(12), dp(12), dp(12), dp(12));
+        miniGameSwitch.setOnCheckedChangeListener((buttonView, isChecked) ->
+                getSharedPreferences("english_sprint_settings", MODE_PRIVATE)
+                        .edit().putBoolean("minigames", isChecked).apply());
+        root.addView(miniGameSwitch, matchWrap());
 
         android.widget.Switch haptic = new android.widget.Switch(this);
         haptic.setText(getString(R.string.haptics));
@@ -867,7 +1125,7 @@ public class MainActivity extends Activity {
     private LinearLayout column() {
         LinearLayout l = new LinearLayout(this);
         l.setOrientation(LinearLayout.VERTICAL);
-        l.setBackgroundColor(BG);
+        l.setBackgroundColor(shop == null ? BG : shop.backgroundColor(BG));
         return l;
     }
 
@@ -881,7 +1139,7 @@ public class MainActivity extends Activity {
     private void setScrollable(LinearLayout content) {
         ScrollView scroll = new ScrollView(this);
         scroll.setFillViewport(true);
-        scroll.setBackgroundColor(BG);
+        scroll.setBackgroundColor(shop == null ? BG : shop.backgroundColor(BG));
         scroll.addView(content, new ScrollView.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         setContentView(scroll);
@@ -905,7 +1163,7 @@ public class MainActivity extends Activity {
         b.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
         b.setPadding(dp(18), dp(10), dp(18), dp(10));
         b.setMinHeight(dp(64));
-        b.setBackground(roundRect(CARD, 14, 1, SOFT));
+        b.setBackground(roundRect(CARD, shop == null ? 14 : shop.buttonRadius(14), 1, SOFT));
         return b;
     }
 
@@ -917,7 +1175,7 @@ public class MainActivity extends Activity {
         b.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         b.setAllCaps(false);
         b.setMinHeight(dp(58));
-        b.setBackground(roundRect(PRIMARY, 14, 0, Color.TRANSPARENT));
+        b.setBackground(roundRect(PRIMARY, shop == null ? 14 : shop.buttonRadius(14), 0, Color.TRANSPARENT));
         return b;
     }
 
@@ -928,7 +1186,7 @@ public class MainActivity extends Activity {
         b.setTextColor(INK);
         b.setAllCaps(false);
         b.setMinHeight(dp(54));
-        b.setBackground(roundRect(CARD, 14, 1, SOFT));
+        b.setBackground(roundRect(CARD, shop == null ? 14 : shop.buttonRadius(14), 1, SOFT));
         return b;
     }
 

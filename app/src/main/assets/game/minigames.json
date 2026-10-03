@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "enabled": true,
+  "break_interval_questions": 10,
+  "default_game": "tap_spark",
+  "games": [
+    {
+      "id": "tap_spark",
+      "enabled": true,
+      "title": {
+        "en": "Spark Break",
+        "ru": "Искры"
+      },
+      "duration_seconds": 45,
+      "completion_reward": 5,
+      "score_bonus_every": 10,
+      "score_bonus_cap": 5
+    }
+  ]
+}
