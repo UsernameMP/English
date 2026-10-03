@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.BackgroundColorSpan;
+import android.text.style.ClickableSpan;
+import android.text.method.LinkMovementMethod;
+import android.text.TextPaint;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +31,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MainActivity extends Activity {
     private static final int BG = Color.rgb(246, 247, 251);
@@ -43,6 +48,7 @@ public class MainActivity extends Activity {
     private ProgressStore progress;
     private AudioEngine audio;
     private RewardFx rewards;
+    private DictionaryStore dictionary;
 
     private List<Question> session = new ArrayList<>();
     private int questionIndex = 0;
@@ -55,6 +61,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         QuestionBank.init(this);
         progress = new ProgressStore(this);
+        dictionary = new DictionaryStore(this);
         audio = new AudioEngine(this);
         rewards = new RewardFx(this);
         getWindow().setStatusBarColor(BG);
@@ -105,8 +112,7 @@ public class MainActivity extends Activity {
         Button play = primaryButton(getString(R.string.play));
         play.setTextSize(22);
         play.setMinHeight(dp(72));
-        play.setOnClickListener(v -> startSession(getString(R.string.quick_training),
-                QuestionBank.adaptiveSession(progress, 15, System.nanoTime())));
+        play.setOnClickListener(v -> startSession(getString(R.string.quick_training), quickSession()));
         root.addView(play, matchWrap());
 
         TextView playHint = text(getString(R.string.play_hint),
@@ -136,6 +142,12 @@ public class MainActivity extends Activity {
         LinearLayout.LayoutParams plp = matchWrap();
         plp.topMargin = dp(4);
         root.addView(progressButton, plp);
+
+        Button dictionaryButton = secondaryButton(getString(R.string.dictionary_fmt, dictionary.savedCount()));
+        dictionaryButton.setOnClickListener(v -> showDictionary());
+        LinearLayout.LayoutParams dlp = matchWrap();
+        dlp.topMargin = dp(8);
+        root.addView(dictionaryButton, dlp);
 
         setScrollable(root);
     }
@@ -248,12 +260,14 @@ public class MainActivity extends Activity {
 
         TextView prompt = text(q.prompt, 24, INK, Typeface.BOLD);
         prompt.setLineSpacing(0, 1.08f);
+        enableDictionaryLinks(prompt, q.prompt);
         root.addView(prompt);
 
         TextView contextView = null;
         if (!q.context.isEmpty()) {
             contextView = text(q.context, 17, INK, Typeface.NORMAL);
             contextView.setLineSpacing(dp(4), 1.05f);
+            enableDictionaryLinks(contextView, q.context);
             contextView.setPadding(dp(16), dp(14), dp(16), dp(14));
             contextView.setBackground(roundRect(Color.rgb(238, 241, 247), 14, 0, Color.TRANSPARENT));
             LinearLayout.LayoutParams clp = matchWrap();
@@ -436,8 +450,7 @@ public class MainActivity extends Activity {
         root.addView(space(20));
 
         Button again = primaryButton(getString(R.string.another_quick));
-        again.setOnClickListener(v -> startSession(getString(R.string.quick_training),
-                QuestionBank.adaptiveSession(progress, 15, System.nanoTime())));
+        again.setOnClickListener(v -> startSession(getString(R.string.quick_training), quickSession()));
         root.addView(again, matchWrap());
 
         Button home = secondaryButton(getString(R.string.home));
@@ -535,6 +548,128 @@ public class MainActivity extends Activity {
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT);
         }
+    }
+
+    private List<Question> quickSession() {
+        long seed = System.nanoTime();
+        List<Question> base = QuestionBank.adaptiveSession(progress, 15, seed);
+        return dictionary.mixVocabulary(base, 2, seed + 17);
+    }
+
+    private void enableDictionaryLinks(TextView view, String source) {
+        if (source == null || source.isEmpty()) return;
+        SpannableString span = new SpannableString(source);
+        Matcher matcher = Pattern.compile("[A-Za-z][A-Za-z'’-]*").matcher(source);
+        boolean hasLinks = false;
+        while (matcher.find()) {
+            final DictionaryEntry entry = dictionary.lookup(matcher.group());
+            if (entry == null) continue;
+            hasLinks = true;
+            span.setSpan(new ClickableSpan() {
+                @Override
+                public void onClick(View widget) {
+                    showDictionaryEntry(entry);
+                }
+
+                @Override
+                public void updateDrawState(TextPaint ds) {
+                    ds.setColor(PRIMARY);
+                    ds.setUnderlineText(true);
+                }
+            }, matcher.start(), matcher.end(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+        if (hasLinks) {
+            view.setText(span);
+            view.setMovementMethod(LinkMovementMethod.getInstance());
+            view.setHighlightColor(Color.TRANSPARENT);
+        }
+    }
+
+    private void showDictionaryEntry(DictionaryEntry entry) {
+        LinearLayout box = column();
+        box.setPadding(dp(22), dp(18), dp(22), dp(10));
+
+        TextView word = text(entry.lemma, 28, INK, Typeface.BOLD);
+        box.addView(word);
+
+        if (!entry.phonetic.isEmpty()) {
+            TextView phonetic = text(entry.phonetic, 16, MUTED, Typeface.NORMAL);
+            phonetic.setPadding(0, dp(3), 0, dp(12));
+            box.addView(phonetic);
+        }
+
+        TextView translation = text(entry.translation(Locale.getDefault()), 21, PRIMARY, Typeface.BOLD);
+        box.addView(translation);
+
+        TextView definitionTitle = text(getString(R.string.dictionary_definition), 12, MUTED, Typeface.BOLD);
+        definitionTitle.setPadding(0, dp(16), 0, dp(4));
+        box.addView(definitionTitle);
+        TextView definition = text(entry.definition(Locale.getDefault()), 17, INK, Typeface.NORMAL);
+        definition.setLineSpacing(dp(4), 1.05f);
+        box.addView(definition);
+
+        if (!entry.example.isEmpty()) {
+            TextView exampleTitle = text(getString(R.string.dictionary_example), 12, MUTED, Typeface.BOLD);
+            exampleTitle.setPadding(0, dp(16), 0, dp(4));
+            box.addView(exampleTitle);
+            TextView example = text(entry.example, 16, INK, Typeface.ITALIC);
+            example.setLineSpacing(dp(3), 1.04f);
+            box.addView(example);
+        }
+
+        boolean saved = dictionary.isSaved(entry);
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setView(box)
+                .setPositiveButton(saved ? getString(R.string.dictionary_remove) : getString(R.string.dictionary_add),
+                        (d, which) -> {
+                            if (saved) dictionary.remove(entry); else dictionary.save(entry);
+                        })
+                .setNegativeButton(getString(R.string.dictionary_close), null)
+                .create();
+        dialog.show();
+    }
+
+    private void showDictionary() {
+        LinearLayout root = column();
+        root.setPadding(dp(20), dp(20), dp(20), dp(28));
+
+        Button back = compactButton("←");
+        back.setOnClickListener(v -> showHome());
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
+        root.addView(space(14));
+        root.addView(text(getString(R.string.dictionary_title), 28, INK, Typeface.BOLD));
+        root.addView(space(14));
+
+        List<DictionaryEntry> saved = dictionary.savedEntries();
+        if (saved.isEmpty()) {
+            TextView empty = text(getString(R.string.dictionary_empty), 16, MUTED, Typeface.NORMAL);
+            empty.setLineSpacing(dp(4), 1.05f);
+            root.addView(empty);
+        } else {
+            for (DictionaryEntry entry : saved) {
+                LinearLayout card = column();
+                card.setPadding(dp(16), dp(13), dp(16), dp(13));
+                card.setBackground(roundRect(CARD, 14, 1, SOFT));
+                card.setOnClickListener(v -> showDictionaryEntry(entry));
+                card.setClickable(true);
+
+                LinearLayout row = row();
+                row.addView(text(entry.lemma, 18, INK, Typeface.BOLD),
+                        new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
+                row.addView(text(entry.phonetic, 14, MUTED, Typeface.NORMAL));
+                card.addView(row);
+
+                TextView translation = text(entry.translation(Locale.getDefault()), 15, PRIMARY, Typeface.BOLD);
+                translation.setPadding(0, dp(4), 0, 0);
+                card.addView(translation);
+
+                LinearLayout.LayoutParams lp = matchWrap();
+                lp.bottomMargin = dp(8);
+                root.addView(card, lp);
+            }
+        }
+
+        setScrollable(root);
     }
 
     private void showSettings() {
