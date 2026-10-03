@@ -14,6 +14,7 @@ public final class Question {
     public final String interaction;
     public final String skill;
     public final List<String> skills;
+    public final List<KnowledgeRef> knowledge;
     public final Type type;
     public final int difficulty;
     public final String prompt;
@@ -38,6 +39,7 @@ public final class Question {
             int gradeMax,
             String interaction,
             List<String> skills,
+            List<KnowledgeRef> knowledge,
             Type type,
             int difficulty,
             String prompt,
@@ -62,6 +64,7 @@ public final class Question {
         this.interaction = interaction;
         this.skills = Collections.unmodifiableList(new ArrayList<>(skills));
         this.skill = skills.isEmpty() ? "general" : skills.get(0);
+        this.knowledge = Collections.unmodifiableList(new ArrayList<>(knowledge));
         this.type = type;
         this.difficulty = difficulty;
         this.prompt = prompt;
@@ -78,6 +81,10 @@ public final class Question {
         this.sourceRegion = sourceRegion == null ? "" : sourceRegion;
         this.sourceYear = sourceYear == null ? "" : sourceYear;
         this.verified = verified;
+    }
+
+    public String primaryKnowledgeId() {
+        return knowledge.isEmpty() ? skill : knowledge.get(0).id;
     }
 
     public boolean isCorrect(int index) {
