@@ -61,20 +61,31 @@ public final class RewardFx {
 
     public Reaction reaction(boolean correct, int combo) {
         if (correct) {
-            if (combo >= 15) return new Reaction("🏆", "НЕУДЕРЖИМЫЙ", "Серия ×" + combo + ". Это уже режим чемпиона.", true);
-            if (combo >= 10) return new Reaction("⚡", "ЛЕГЕНДА", "10 правильных подряд. Серия ×" + combo, true);
-            if (combo >= 8) return new Reaction("🔥", "МАШИНА", "Ни одной ошибки. Серия ×" + combo, true);
-            if (combo >= 5) return new Reaction("🥊", "ПЯТЬ ПОДРЯД", "Серия ×" + combo + ". Темп держится.", true);
-            if (combo == 3) return new Reaction("👍", "РАЗОГРЕВ", "Три правильных подряд.", true);
-            if (combo == 2) return new Reaction("+", "ЕСТЬ СЕРИЯ", "×2", false);
-            return new Reaction("+", "ТОЧНО", "+XP", false);
+            if (combo >= 15) return new Reaction("🏆",
+                    activity.getString(R.string.rank_unstoppable),
+                    activity.getString(R.string.reaction_unstoppable_sub, combo), true);
+            if (combo >= 10) return new Reaction("⚡",
+                    activity.getString(R.string.rank_legend),
+                    activity.getString(R.string.reaction_legend_sub, combo), true);
+            if (combo >= 8) return new Reaction("🔥",
+                    activity.getString(R.string.rank_machine),
+                    activity.getString(R.string.reaction_machine_sub, combo), true);
+            if (combo >= 5) return new Reaction("🥊",
+                    activity.getString(R.string.rank_five),
+                    activity.getString(R.string.reaction_five_sub, combo), true);
+            if (combo == 3) return new Reaction("👍",
+                    activity.getString(R.string.rank_warmup),
+                    activity.getString(R.string.reaction_warmup_sub), true);
+            if (combo == 2) return new Reaction("+",
+                    activity.getString(R.string.reaction_streak), "×2", false);
+            return new Reaction("+", activity.getString(R.string.reaction_correct), "+XP", false);
         }
 
         String[][] lines = {
-                {"↻", "НОРМАЛЬНО", "Ошибка поймана. Следующий вопрос."},
-                {"→", "ДАЛЬШЕ", "Сейчас важнее запомнить правило, чем счёт."},
-                {"◉", "ЗАПОМНИЛИ", "Правильный ответ уже подсвечен. Едем дальше."},
-                {"↗", "СЛЕДУЮЩИЙ РАУНД", "Одна ошибка серию не определяет."}
+                {"↻", activity.getString(R.string.reaction_ok), activity.getString(R.string.reaction_ok_sub)},
+                {"→", activity.getString(R.string.reaction_next), activity.getString(R.string.reaction_next_sub)},
+                {"◉", activity.getString(R.string.reaction_saved), activity.getString(R.string.reaction_saved_sub)},
+                {"↗", activity.getString(R.string.reaction_next_round), activity.getString(R.string.reaction_next_round_sub)}
         };
         String[] line = lines[random.nextInt(lines.length)];
         return new Reaction(line[0], line[1], line[2], false);
