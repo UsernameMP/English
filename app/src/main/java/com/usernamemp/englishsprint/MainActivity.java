@@ -271,7 +271,7 @@ public class MainActivity extends Activity {
                 audio.play(q);
                 listensLeft[0]--;
                 play.setText(listensLeft[0] > 0
-                        ? "▶  Слушать ещё · осталось " + listensLeft[0]
+                        ? getString(R.string.listen_again_fmt, listensLeft[0])
                         : getString(R.string.listens_used));
                 if (listensLeft[0] == 0) play.setEnabled(false);
             });
@@ -426,7 +426,7 @@ public class MainActivity extends Activity {
             int[] s = e.getValue();
             if (shown >= 4) break;
             ProgressStore.SkillState skillState = progress.state(e.getKey());
-            TextView row = text(skillName(e.getKey()) + "   ·   " + skillState.label, 16,
+            TextView row = text(skillName(e.getKey()) + "   ·   " + skillStateLabel(skillState), 16,
                     INK, Typeface.NORMAL);
             row.setPadding(0, dp(6), 0, dp(6));
             root.addView(row);
@@ -484,7 +484,7 @@ public class MainActivity extends Activity {
                 case LEARNING: stateColor = PRIMARY; break;
                 default: stateColor = MUTED;
             }
-            TextView value = text(state.label, 14, stateColor, Typeface.BOLD);
+            TextView value = text(skillStateLabel(state), 14, stateColor, Typeface.BOLD);
             line.addView(name, new LinearLayout.LayoutParams(0,
                     ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
             line.addView(value);
@@ -590,6 +590,15 @@ public class MainActivity extends Activity {
         Collections.shuffle(list, new Random(System.nanoTime()));
         if (list.size() > max) return new ArrayList<>(list.subList(0, max));
         return list;
+    }
+
+    private String skillStateLabel(ProgressStore.SkillState state) {
+        switch (state) {
+            case CONFIDENT: return getString(R.string.state_confident);
+            case GROWING: return getString(R.string.state_growing);
+            case LEARNING: return getString(R.string.state_learning);
+            default: return getString(R.string.state_not_checked);
+        }
     }
 
     private String rankForCombo(int combo) {
