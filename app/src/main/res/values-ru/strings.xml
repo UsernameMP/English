@@ -59,4 +59,10 @@
     <string name="reaction_saved_sub">Правильный ответ уже подсвечен. Едем дальше.</string>
     <string name="reaction_next_round">СЛЕДУЮЩИЙ РАУНД</string>
     <string name="reaction_next_round_sub">Одна ошибка серию не определяет.</string>
+    <string name="reading_mode">⌕  Reading</string>
+    <string name="reading_title">Reading</string>
+    <string name="listening_mode">▶  Listening</string>
+    <string name="listening_title">Listening</string>
+    <string name="story_mode">✦  Story builder</string>
+    <string name="story_title">Story builder</string>
 </resources>
