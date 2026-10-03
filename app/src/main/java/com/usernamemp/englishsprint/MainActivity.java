@@ -2,6 +2,7 @@ package com.usernamemp.englishsprint;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
@@ -17,6 +18,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
@@ -52,6 +54,7 @@ public class MainActivity extends Activity {
     private AudioEngine audio;
     private RewardFx rewards;
     private DictionaryStore dictionary;
+    private DictionaryRepository dictionaryRepository;
     private EconomyStore economy;
     private ShopStore shop;
     private DigitalRewardStore digitalRewards;
@@ -76,6 +79,7 @@ public class MainActivity extends Activity {
         QuestionBank.init(this);
         progress = new ProgressStore(this);
         dictionary = new DictionaryStore(this);
+        dictionaryRepository = new DictionaryRepository(this, dictionary);
         economy = new EconomyStore(this);
         shop = new ShopStore(this, economy);
         digitalRewards = new DigitalRewardStore(this, economy);
@@ -123,30 +127,6 @@ public class MainActivity extends Activity {
                 : getString(R.string.training_mode), 14, PRIMARY, Typeface.BOLD);
         deadline.setPadding(0, dp(10), 0, 0);
         root.addView(deadline);
-
-        LinearLayout updateRow = row();
-        TextView installedVersion = text(getString(R.string.update_version_fmt, BuildConfig.VERSION_NAME),
-                12, MUTED, Typeface.NORMAL);
-        updateRow.addView(installedVersion,
-                new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
-        Button updateButton = secondaryButton(getString(R.string.update_check));
-        updateButton.setTextSize(13);
-        updateButton.setMinHeight(dp(42));
-        updateButton.setOnClickListener(v -> updater.showCheckDialog());
-        updateRow.addView(updateButton,
-                new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, dp(44)));
-        LinearLayout.LayoutParams ulp = matchWrap();
-        ulp.topMargin = dp(8);
-        root.addView(updateRow, ulp);
-
-        updater.check((info, error) -> {
-            if (info != null && error == null) {
-                updateButton.setText(getString(R.string.update_button_available, info.version));
-                updateButton.setTextColor(Color.WHITE);
-                updateButton.setBackground(roundRect(PRIMARY,
-                        shop == null ? 14 : shop.buttonRadius(14), 0, Color.TRANSPARENT));
-            }
-        });
 
         root.addView(space(16));
         root.addView(progressCard());
@@ -335,8 +315,8 @@ public class MainActivity extends Activity {
         final TextView contextForAnswer = contextView;
 
         int[] listensLeft = {2};
+        Button listeningAction = null;
         if (q.type == Question.Type.LISTENING) {
-            root.addView(thumbZoneSpacer());
             Button play = primaryButton(getString(R.string.listen_first));
             play.setMinHeight(dp(72));
             play.setOnClickListener(v -> {
@@ -348,11 +328,9 @@ public class MainActivity extends Activity {
                         : getString(R.string.listens_used));
                 if (listensLeft[0] == 0) play.setEnabled(false);
             });
-            root.addView(taskActionZone(play), matchWrap());
-            root.addView(space(14));
-        } else {
-            root.addView(space(18));
+            listeningAction = play;
         }
+        root.addView(space(18));
 
         List<Button> answerButtons = new ArrayList<>();
         for (int i = 0; i < q.options.size(); i++) {
@@ -374,7 +352,11 @@ public class MainActivity extends Activity {
         flp.topMargin = dp(8);
         root.addView(footer, flp);
 
-        setScrollable(root);
+        if (listeningAction != null) {
+            setQuestionScrollable(root, listeningAction);
+        } else {
+            setScrollable(root);
+        }
     }
 
     private void handleAnswer(LinearLayout root, Question q, int chosen,
@@ -702,34 +684,70 @@ public class MainActivity extends Activity {
 
     private void enableDictionaryLinks(TextView view, String source) {
         if (source == null || source.isEmpty()) return;
+
         SpannableString span = new SpannableString(source);
         Matcher matcher = Pattern.compile("[A-Za-z][A-Za-z'’-]*").matcher(source);
-        boolean hasLinks = false;
+        boolean hasWords = false;
+
         while (matcher.find()) {
-            final DictionaryEntry entry = dictionary.lookup(matcher.group());
-            if (entry == null) continue;
-            hasLinks = true;
+            final int start = matcher.start();
+            final int end = matcher.end();
+            final String token = matcher.group();
+            hasWords = true;
+
             span.setSpan(new ClickableSpan() {
                 @Override
                 public void onClick(View widget) {
-                    showDictionaryEntry(entry);
+                    lookupDictionaryWord(view, source, start, end, token);
                 }
 
                 @Override
                 public void updateDrawState(TextPaint ds) {
-                    ds.setColor(PRIMARY);
-                    ds.setUnderlineText(true);
+                    ds.setColor(INK);
+                    ds.setUnderlineText(false);
                 }
-            }, matcher.start(), matcher.end(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         }
-        if (hasLinks) {
-            view.setText(span);
+
+        view.setText(span);
+        if (hasWords) {
             view.setMovementMethod(LinkMovementMethod.getInstance());
             view.setHighlightColor(Color.TRANSPARENT);
         }
     }
 
+    private void lookupDictionaryWord(TextView view, String source, int start, int end, String token) {
+        SpannableString highlighted = new SpannableString(source);
+        highlighted.setSpan(new BackgroundColorSpan(HIGHLIGHT), start, end,
+                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        view.setText(highlighted);
+
+        ProgressDialog loading = ProgressDialog.show(
+                this, null, getString(R.string.dictionary_loading, token), true, false);
+
+        dictionaryRepository.lookup(token, (entry, fromNetwork, error) -> {
+            loading.dismiss();
+
+            if (entry != null) {
+                dictionary.save(entry);
+                showDictionaryEntry(entry, () -> enableDictionaryLinks(view, source));
+                return;
+            }
+
+            new AlertDialog.Builder(this)
+                    .setTitle(token)
+                    .setMessage(getString(R.string.dictionary_unavailable))
+                    .setPositiveButton(getString(R.string.got_it), null)
+                    .setOnDismissListener(dialog -> enableDictionaryLinks(view, source))
+                    .show();
+        });
+    }
+
     private void showDictionaryEntry(DictionaryEntry entry) {
+        showDictionaryEntry(entry, null);
+    }
+
+    private void showDictionaryEntry(DictionaryEntry entry, Runnable onDismiss) {
         LinearLayout box = column();
         box.setPadding(dp(22), dp(18), dp(22), dp(10));
 
@@ -770,6 +788,7 @@ public class MainActivity extends Activity {
                         })
                 .setNegativeButton(getString(R.string.dictionary_close), null)
                 .create();
+        if (onDismiss != null) dialog.setOnDismissListener(d -> onDismiss.run());
         dialog.show();
     }
 
@@ -816,19 +835,29 @@ public class MainActivity extends Activity {
         setScrollable(root);
     }
 
-    private View thumbZoneSpacer() {
-        Space spacer = new Space(this);
-        int screenHeight = getResources().getDisplayMetrics().heightPixels;
-        int heightPx = Math.max(dp(125), Math.min(dp(210), Math.round(screenHeight * 0.22f)));
-        spacer.setLayoutParams(new LinearLayout.LayoutParams(1, heightPx));
-        return spacer;
-    }
+    private void setQuestionScrollable(LinearLayout content, Button listeningAction) {
+        int background = shop == null ? BG : shop.backgroundColor(BG);
+        content.setPadding(dp(18), dp(14), dp(18), dp(132));
 
-    private View taskActionZone(View action) {
-        LinearLayout zone = column();
-        zone.setPadding(dp(4), dp(4), dp(4), dp(8));
-        zone.addView(action, matchWrap());
-        return zone;
+        ScrollView scroll = new ScrollView(this);
+        scroll.setFillViewport(true);
+        scroll.setBackgroundColor(background);
+        scroll.addView(content, new ScrollView.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+
+        FrameLayout shell = new FrameLayout(this);
+        shell.setBackgroundColor(background);
+        shell.addView(scroll, new FrameLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+
+        FrameLayout.LayoutParams actionLp = new FrameLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, dp(72), Gravity.BOTTOM);
+        actionLp.leftMargin = dp(18);
+        actionLp.rightMargin = dp(18);
+        actionLp.bottomMargin = dp(24);
+        shell.addView(listeningAction, actionLp);
+
+        setContentView(shell);
     }
 
     private void showShop() {
@@ -1082,6 +1111,29 @@ public class MainActivity extends Activity {
                 getSharedPreferences("english_sprint_settings", MODE_PRIVATE)
                         .edit().putBoolean("haptic", isChecked).apply());
         root.addView(haptic, matchWrap());
+
+        TextView updatesTitle = text(getString(R.string.updates_section), 13, MUTED, Typeface.BOLD);
+        updatesTitle.setPadding(dp(12), dp(22), dp(12), dp(6));
+        root.addView(updatesTitle, matchWrap());
+
+        TextView installedVersion = text(
+                getString(R.string.update_version_fmt, BuildConfig.VERSION_NAME),
+                15, INK, Typeface.NORMAL);
+        installedVersion.setPadding(dp(12), dp(4), dp(12), dp(8));
+        root.addView(installedVersion, matchWrap());
+
+        Button updateButton = secondaryButton(getString(R.string.update_check));
+        updateButton.setOnClickListener(v -> updater.showCheckDialog());
+        root.addView(updateButton, matchWrap());
+
+        updater.check((info, error) -> {
+            if (info != null && error == null) {
+                updateButton.setText(getString(R.string.update_button_available, info.version));
+                updateButton.setTextColor(Color.WHITE);
+                updateButton.setBackground(roundRect(PRIMARY,
+                        shop == null ? 14 : shop.buttonRadius(14), 0, Color.TRANSPARENT));
+            }
+        });
 
         setScrollable(root);
     }
