@@ -100,7 +100,14 @@ for i, q in enumerate(questions):
 
     fb = q.get("feedback") or {}
     for field in ("short", "full", "rule"):
-        if not isinstance(fb.get(field), str) or not fb[field].strip():
+        value = fb.get(field)
+        if isinstance(value, str):
+            valid = bool(value.strip())
+        elif isinstance(value, dict):
+            valid = any(isinstance(text, str) and text.strip() for text in value.values())
+        else:
+            valid = False
+        if not valid:
             fail(f"{qid}: feedback.{field} is required")
 
     review = q.get("review") or {}
