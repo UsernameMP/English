@@ -138,4 +138,7 @@
     <string name="target_date_label">Target date: %1$s</string>
     <string name="target_set_date">Change target date</string>
     <string name="target_specific_mode">Prepare for selected olympiad</string>
+    <string name="knowledge_assessed">ASSESSED KNOWLEDGE</string>
+    <string name="knowledge_prerequisites">PREREQUISITES</string>
+    <string name="knowledge_none">None</string>
 </resources>
