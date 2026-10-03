@@ -126,4 +126,5 @@
     <string name="update_enable_installs">Разреши English Sprint устанавливать обновления и нажми обновление ещё раз.</string>
     <string name="update_failed">Не удалось проверить или скачать обновление. Попробуй ещё раз.</string>
     <string name="update_version_fmt">Установлено: %1$s</string>
+    <string name="update_button_available">⬇ %1$s</string>
 </resources>
