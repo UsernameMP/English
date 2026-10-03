@@ -1,9 +1,34 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "enabled": true,
   "break_interval_questions": 10,
-  "default_game": "tap_spark",
+  "selection_strategy": "round_robin",
+  "default_game": "match3",
   "games": [
+    {
+      "id": "match3",
+      "enabled": true,
+      "title": {
+        "en": "Gem Match",
+        "ru": "Три в ряд"
+      },
+      "duration_seconds": 50,
+      "completion_reward": 5,
+      "score_bonus_every": 18,
+      "score_bonus_cap": 5
+    },
+    {
+      "id": "memory",
+      "enabled": true,
+      "title": {
+        "en": "Memory Pairs",
+        "ru": "Пары"
+      },
+      "duration_seconds": 50,
+      "completion_reward": 5,
+      "score_bonus_every": 2,
+      "score_bonus_cap": 5
+    },
     {
       "id": "tap_spark",
       "enabled": true,
@@ -11,10 +36,10 @@
         "en": "Spark Break",
         "ru": "Искры"
       },
-      "duration_seconds": 45,
-      "completion_reward": 5,
-      "score_bonus_every": 10,
-      "score_bonus_cap": 5
+      "duration_seconds": 35,
+      "completion_reward": 4,
+      "score_bonus_every": 12,
+      "score_bonus_cap": 4
     }
   ]
 }
