@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "currency": "crystal",
+  "rewards": {
+    "correct_answer": 2,
+    "completed_10_questions": 15,
+    "combo_3": 3,
+    "combo_5": 6,
+    "combo_8": 10,
+    "combo_10": 15,
+    "combo_15": 25,
+    "new_record": 10,
+    "knowledge_confident": 30,
+    "reinforced": 8,
+    "minigame_complete": 5,
+    "minigame_score_bonus_cap": 5
+  }
+}
