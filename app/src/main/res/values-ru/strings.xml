@@ -141,4 +141,11 @@
     <string name="knowledge_assessed">ПРОВЕРЯЕМЫЕ ЗНАНИЯ</string>
     <string name="knowledge_prerequisites">ЧТО НУЖНО ЗНАТЬ</string>
     <string name="knowledge_none">Нет обязательных предпосылок</string>
+    <string name="olympiad_practice">Олимпиадный тренинг</string>
+    <string name="olympiad_practice_caption">Адаптивный набор из выбранного контент-пака</string>
+    <string name="activity_week">ПОСЛЕДНИЕ 7 ДНЕЙ · пропуски нейтральны</string>
+    <string name="activity_month">Этот месяц</string>
+    <string name="activity_month_summary">Активных дней: %1$d\nВопросов: %2$d\nПравильных: %3$d\nПолучено XP: %4$d\nПолучено кристаллов: %5$d\nЗавершено сессий: %6$d</string>
+    <string name="next_focus">СЛЕДУЮЩИЙ ФОКУС · сначала предпосылки</string>
+    <string name="content_pack_section">КОНТЕНТ-ПАК</string>
 </resources>

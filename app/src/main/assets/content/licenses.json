@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "licenses": [
+    {
+      "id": "project.original.v1",
+      "rights_type": "owned_original",
+      "active": true,
+      "distribution_allowed": true,
+      "derivatives_allowed": true,
+      "territories": ["worldwide"],
+      "attribution": "English Sprint original training content",
+      "source_url": ""
+    }
+  ]
+}

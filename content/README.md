@@ -7,7 +7,7 @@ Current bank: `app/src/main/assets/content/english_g5_vso.json`.
 Core fields:
 - `subject`, `grade_min`, `grade_max`
 - `interaction`: UI interaction type
-- `mode`: grammar / reading / listening / story
+- `mode`: subject-neutral `practice`, or specialized grammar / reading / listening / story
 - `skills[]`: adaptive-learning tags
 - `stimulus.text/audio/image`
 - `prompt`, `options[]`, `answer[]`
@@ -27,6 +27,10 @@ python3 scripts/validate_content.py
 ## Product packs and Knowledge Atlas compatibility
 
 The app loads a pack through `assets/content/catalog.json`. A pack owns product metadata (subject, grade range, competition, season) and can be swapped without changing the question renderer.
+
+The catalog is entitlement-filtered at runtime. Selection is persistent, while XP and Knowledge Unit evidence remain global. `licenses.json` is a release gate: every enabled pack must reference active, distributable rights. Content provenance is separate from both task JSON and commerce state.
+
+`commerce/products.json` describes provider-neutral saleable scopes for pilot, Google Play, App Store, RU/CIS and promo adapters. Checkout remains disabled until a provider-specific legal, receipt-verification and store implementation exists.
 
 Every shipping question also references one or more stable `knowledge_units`:
 

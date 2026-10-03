@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public final class Question {
-    public enum Type { GRAMMAR, READING, LISTENING, STORY }
+    public enum Type { PRACTICE, GRAMMAR, READING, LISTENING, STORY }
 
     public final String id;
     public final String subject;

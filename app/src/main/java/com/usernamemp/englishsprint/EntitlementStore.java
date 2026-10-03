@@ -13,6 +13,20 @@ import java.util.Collections;
 import java.util.List;
 
 public final class EntitlementStore {
+    public static final class AccessDecision {
+        public final boolean allowed;
+        public final String grantId;
+        public final String source;
+        public final String reason;
+
+        AccessDecision(boolean allowed, String grantId, String source, String reason) {
+            this.allowed = allowed;
+            this.grantId = grantId;
+            this.source = source;
+            this.reason = reason;
+        }
+    }
+
     public static final class Grant {
         public final String id;
         public final String source;
@@ -79,10 +93,17 @@ public final class EntitlementStore {
 
     public boolean canAccessPack(String packId, String subject, int gradeMin, int gradeMax,
                                  String competition, String season) {
+        return accessDecision(packId, subject, gradeMin, gradeMax, competition, season).allowed;
+    }
+
+    public AccessDecision accessDecision(String packId, String subject, int gradeMin, int gradeMax,
+                                         String competition, String season) {
         for (Grant grant : grants) {
-            if (grant.matches(packId, subject, gradeMin, gradeMax, competition, season)) return true;
+            if (grant.matches(packId, subject, gradeMin, gradeMax, competition, season)) {
+                return new AccessDecision(true, grant.id, grant.source, "grant_matched");
+            }
         }
-        return false;
+        return new AccessDecision(false, "", "", "no_active_grant");
     }
 
     private static String readAsset(Context context, String path) throws Exception {

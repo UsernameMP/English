@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "bank_id": "informatics-olympiad-5-7-pilot",
+  "title": "Informatics Olympiad Pilot",
+  "locale": "en",
+  "content_version": "0.1.0",
+  "pack": {
+    "id": "informatics.olympiad.5-7.global.2026",
+    "subject": "informatics",
+    "grade_min": 5,
+    "grade_max": 7,
+    "competition": "Olympiad pilot",
+    "region": "Global",
+    "season": "2026-2027",
+    "title": {"en": "Informatics Sprint", "ru": "Informatics Sprint"},
+    "subtitle": {"en": "Olympiad pilot · Grades 5–7", "ru": "Олимпиадный пилот · 5–7 класс"}
+  },
+  "knowledge_units": [
+    {"id": "CS.LOGIC.BOOLEAN", "kind": "concept", "legacy_skill": "boolean", "labels": {"en": "Boolean logic", "ru": "Логика высказываний"}},
+    {"id": "CS.ALGORITHMS.TRACING", "kind": "method", "legacy_skill": "tracing", "labels": {"en": "Algorithm tracing", "ru": "Трассировка алгоритма"}},
+    {"id": "CS.DATA.BINARY", "kind": "representation", "legacy_skill": "binary", "labels": {"en": "Binary representation", "ru": "Двоичная запись"}},
+    {"id": "CS.ALGORITHMS.COMPLEXITY.INTRO", "kind": "concept", "legacy_skill": "complexity", "labels": {"en": "Counting operations", "ru": "Подсчёт операций"}}
+  ],
+  "questions": [
+    {
+      "id": "cs_bool_001", "subject": "informatics", "grade_min": 5, "grade_max": 7,
+      "interaction": "single_choice", "mode": "practice", "skills": ["boolean"], "difficulty": 1,
+      "source": {"competition": "Olympiad pilot", "region": "Global", "year": "training", "original": true},
+      "stimulus": {}, "prompt": "Which value makes (A AND true) equal true?",
+      "options": [{"id": "a", "text": "A = true"}, {"id": "b", "text": "A = false"}, {"id": "c", "text": "Either value"}],
+      "answer": ["a"],
+      "feedback": {"short": {"en": "AND is true only when both operands are true.", "ru": "AND истинно, только когда истинны оба операнда."}, "full": {"en": "The second operand is already true, so the expression copies A.", "ru": "Второй операнд уже истинен, поэтому выражение совпадает с A."}, "rule": {"en": "true AND true = true.", "ru": "true AND true = true."}},
+      "review": {"status": "published"}, "knowledge": [{"id": "CS.LOGIC.BOOLEAN", "weight": 1}], "prerequisites": []
+    },
+    {
+      "id": "cs_bool_002", "subject": "informatics", "grade_min": 5, "grade_max": 7,
+      "interaction": "single_choice", "mode": "practice", "skills": ["boolean"], "difficulty": 2,
+      "source": {"competition": "Olympiad pilot", "region": "Global", "year": "training", "original": true},
+      "stimulus": {}, "prompt": "What is NOT (true OR false)?",
+      "options": [{"id": "a", "text": "true"}, {"id": "b", "text": "false"}], "answer": ["b"],
+      "feedback": {"short": {"en": "Evaluate OR first, then negate.", "ru": "Сначала вычисли OR, затем отрицание."}, "full": {"en": "true OR false is true; NOT true is false.", "ru": "true OR false даёт true; NOT true даёт false."}, "rule": {"en": "Parentheses are evaluated before NOT.", "ru": "Скобки вычисляются до NOT."}},
+      "review": {"status": "published"}, "knowledge": [{"id": "CS.LOGIC.BOOLEAN", "weight": 1}], "prerequisites": []
+    },
+    {
+      "id": "cs_trace_001", "subject": "informatics", "grade_min": 5, "grade_max": 7,
+      "interaction": "single_choice", "mode": "practice", "skills": ["tracing"], "difficulty": 1,
+      "source": {"competition": "Olympiad pilot", "region": "Global", "year": "training", "original": true},
+      "stimulus": {"text": "x = 3; x = x + 2; x = x × 2"}, "prompt": "What is the final value of x?",
+      "options": [{"id": "a", "text": "7"}, {"id": "b", "text": "10"}, {"id": "c", "text": "12"}], "answer": ["b"],
+      "feedback": {"short": {"en": "Follow assignments in order.", "ru": "Выполняй присваивания по порядку."}, "full": {"en": "3 becomes 5, then 5 × 2 becomes 10.", "ru": "3 превращается в 5, затем 5 × 2 даёт 10."}, "rule": {"en": "Each assignment changes the current state.", "ru": "Каждое присваивание меняет текущее состояние."}},
+      "review": {"status": "published"}, "knowledge": [{"id": "CS.ALGORITHMS.TRACING", "weight": 1}], "prerequisites": []
+    },
+    {
+      "id": "cs_trace_002", "subject": "informatics", "grade_min": 5, "grade_max": 7,
+      "interaction": "single_choice", "mode": "practice", "skills": ["tracing"], "difficulty": 2,
+      "source": {"competition": "Olympiad pilot", "region": "Global", "year": "training", "original": true},
+      "stimulus": {"text": "s = 0; repeat 4 times: s = s + 3"}, "prompt": "What is the final value of s?",
+      "options": [{"id": "a", "text": "7"}, {"id": "b", "text": "12"}, {"id": "c", "text": "16"}], "answer": ["b"],
+      "feedback": {"short": {"en": "Apply the loop body four times.", "ru": "Выполни тело цикла четыре раза."}, "full": {"en": "The values are 3, 6, 9 and 12.", "ru": "Значения: 3, 6, 9 и 12."}, "rule": {"en": "A repeat loop applies the same state change repeatedly.", "ru": "Цикл повторяет одно изменение состояния."}},
+      "review": {"status": "published"}, "knowledge": [{"id": "CS.ALGORITHMS.TRACING", "weight": 1}], "prerequisites": []
+    },
+    {
+      "id": "cs_binary_001", "subject": "informatics", "grade_min": 5, "grade_max": 7,
+      "interaction": "single_choice", "mode": "practice", "skills": ["binary"], "difficulty": 1,
+      "source": {"competition": "Olympiad pilot", "region": "Global", "year": "training", "original": true},
+      "stimulus": {}, "prompt": "What decimal number is binary 101?",
+      "options": [{"id": "a", "text": "4"}, {"id": "b", "text": "5"}, {"id": "c", "text": "6"}], "answer": ["b"],
+      "feedback": {"short": {"en": "Use place values 4, 2 and 1.", "ru": "Используй разряды 4, 2 и 1."}, "full": {"en": "101₂ = 1×4 + 0×2 + 1×1 = 5.", "ru": "101₂ = 1×4 + 0×2 + 1×1 = 5."}, "rule": {"en": "Binary place values are powers of two.", "ru": "Разряды двоичной записи — степени двойки."}},
+      "review": {"status": "published"}, "knowledge": [{"id": "CS.DATA.BINARY", "weight": 1}], "prerequisites": []
+    },
+    {
+      "id": "cs_binary_002", "subject": "informatics", "grade_min": 5, "grade_max": 7,
+      "interaction": "single_choice", "mode": "practice", "skills": ["binary"], "difficulty": 2,
+      "source": {"competition": "Olympiad pilot", "region": "Global", "year": "training", "original": true},
+      "stimulus": {}, "prompt": "Which binary representation equals decimal 6?",
+      "options": [{"id": "a", "text": "101"}, {"id": "b", "text": "110"}, {"id": "c", "text": "111"}], "answer": ["b"],
+      "feedback": {"short": {"en": "Decompose 6 into powers of two.", "ru": "Разложи 6 на степени двойки."}, "full": {"en": "6 = 4 + 2 + 0, so the bits are 110.", "ru": "6 = 4 + 2 + 0, поэтому запись — 110."}, "rule": {"en": "Write one for each included power of two.", "ru": "Ставь единицу у каждой используемой степени двойки."}},
+      "review": {"status": "published"}, "knowledge": [{"id": "CS.DATA.BINARY", "weight": 1}], "prerequisites": []
+    },
+    {
+      "id": "cs_complexity_001", "subject": "informatics", "grade_min": 5, "grade_max": 7,
+      "interaction": "single_choice", "mode": "practice", "skills": ["complexity"], "difficulty": 2,
+      "source": {"competition": "Olympiad pilot", "region": "Global", "year": "training", "original": true},
+      "stimulus": {"text": "repeat n times: print('*')"}, "prompt": "How many print operations occur?",
+      "options": [{"id": "a", "text": "1"}, {"id": "b", "text": "n"}, {"id": "c", "text": "n × n"}], "answer": ["b"],
+      "feedback": {"short": {"en": "Count one operation per iteration.", "ru": "Посчитай одну операцию на итерацию."}, "full": {"en": "The loop has n iterations and prints once in each.", "ru": "Цикл делает n итераций и печатает один раз на каждой."}, "rule": {"en": "Total operations = iterations × operations per iteration.", "ru": "Число операций = итерации × операции на итерацию."}},
+      "review": {"status": "published"}, "knowledge": [{"id": "CS.ALGORITHMS.COMPLEXITY.INTRO", "weight": 1}], "prerequisites": ["CS.ALGORITHMS.TRACING"]
+    },
+    {
+      "id": "cs_complexity_002", "subject": "informatics", "grade_min": 5, "grade_max": 7,
+      "interaction": "single_choice", "mode": "practice", "skills": ["complexity"], "difficulty": 3,
+      "source": {"competition": "Olympiad pilot", "region": "Global", "year": "training", "original": true},
+      "stimulus": {"text": "repeat 3 times: repeat 4 times: add 1"}, "prompt": "How many additions occur?",
+      "options": [{"id": "a", "text": "7"}, {"id": "b", "text": "12"}, {"id": "c", "text": "16"}], "answer": ["b"],
+      "feedback": {"short": {"en": "Multiply the nested loop counts.", "ru": "Перемножь числа повторов вложенных циклов."}, "full": {"en": "For each of 3 outer iterations, the inner loop adds 4 times: 3 × 4 = 12.", "ru": "На каждой из 3 внешних итераций внутренний цикл выполняет 4 сложения: 3 × 4 = 12."}, "rule": {"en": "Nested fixed loops multiply operation counts.", "ru": "Вложенные фиксированные циклы перемножают число операций."}},
+      "review": {"status": "published"}, "knowledge": [{"id": "CS.ALGORITHMS.COMPLEXITY.INTRO", "weight": 1}], "prerequisites": ["CS.ALGORITHMS.TRACING"]
+    }
+  ]
+}

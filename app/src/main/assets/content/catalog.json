@@ -10,6 +10,18 @@
       "grade_max": 6,
       "competition": "VSOSh",
       "season": "2026-2027",
+      "license_id": "project.original.v1",
+      "enabled": true
+    },
+    {
+      "id": "informatics.olympiad.5-7.global.2026",
+      "asset": "content/informatics_g5_7_pilot.json",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "competition": "Olympiad pilot",
+      "season": "2026-2027",
+      "license_id": "project.original.v1",
       "enabled": true
     }
   ]

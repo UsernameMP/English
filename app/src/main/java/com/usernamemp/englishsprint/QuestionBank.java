@@ -16,6 +16,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
+import java.util.HashSet;
+import java.util.Set;
 
 public final class QuestionBank {
     private static final String CATALOG_ASSET = "content/catalog.json";
@@ -25,6 +27,7 @@ public final class QuestionBank {
     private static Map<String, KnowledgeUnit> knowledgeUnits = Collections.emptyMap();
     private static KnowledgeAtlas knowledgeAtlas;
     private static ContentPack currentPack;
+    private static List<ContentPack> availablePacks = Collections.emptyList();
 
     private QuestionBank() {}
 
@@ -35,27 +38,59 @@ public final class QuestionBank {
             String defaultPackId = catalog.getString("default_pack");
             JSONArray packs = catalog.getJSONArray("packs");
 
+            EntitlementStore entitlements = new EntitlementStore(context);
+            List<ContentPack> accessible = new ArrayList<>();
+            Set<String> globalUnitIds = new HashSet<>();
+            Map<String, JSONObject> catalogEntries = new LinkedHashMap<>();
+            for (int i = 0; i < packs.length(); i++) {
+                JSONObject candidate = packs.getJSONObject(i);
+                if (!candidate.optBoolean("enabled", true)) continue;
+                String candidateId = candidate.getString("id");
+                catalogEntries.put(candidateId, candidate);
+                JSONObject candidateBank = new JSONObject(readAsset(context, candidate.getString("asset")));
+                JSONArray candidateUnits = candidateBank.getJSONArray("knowledge_units");
+                for (int j = 0; j < candidateUnits.length(); j++) {
+                    globalUnitIds.add(candidateUnits.getJSONObject(j).getString("id"));
+                }
+                if (entitlements.accessDecision(
+                        candidateId,
+                        candidate.optString("subject", ""),
+                        candidate.optInt("grade_min", 1),
+                        candidate.optInt("grade_max", 12),
+                        candidate.optString("competition", ""),
+                        candidate.optString("season", "")).allowed) {
+                    accessible.add(parsePack(candidateBank.getJSONObject("pack"), candidate.getString("asset")));
+                }
+            }
+            if (accessible.isEmpty()) throw new IllegalStateException("No accessible content packs");
+            availablePacks = Collections.unmodifiableList(accessible);
+
+            String selectedPackId = context.getSharedPreferences("english_sprint_settings", Context.MODE_PRIVATE)
+                    .getString("selected_pack", defaultPackId);
+            boolean selectedAccessible = false;
+            for (ContentPack pack : accessible) if (pack.id.equals(selectedPackId)) selectedAccessible = true;
+            if (!selectedAccessible) selectedPackId = defaultPackId;
+
             JSONObject catalogPack = null;
             for (int i = 0; i < packs.length(); i++) {
                 JSONObject candidate = packs.getJSONObject(i);
-                if (defaultPackId.equals(candidate.getString("id"))) {
+                if (selectedPackId.equals(candidate.getString("id"))) {
                     catalogPack = candidate;
                     break;
                 }
             }
             if (catalogPack == null) {
-                throw new IllegalStateException("Default content pack not found: " + defaultPackId);
+                throw new IllegalStateException("Selected content pack not found: " + selectedPackId);
             }
 
-            EntitlementStore entitlements = new EntitlementStore(context);
             if (!entitlements.canAccessPack(
-                    defaultPackId,
+                    selectedPackId,
                     catalogPack.optString("subject", ""),
                     catalogPack.optInt("grade_min", 1),
                     catalogPack.optInt("grade_max", 12),
                     catalogPack.optString("competition", ""),
                     catalogPack.optString("season", ""))) {
-                throw new IllegalStateException("No entitlement for content pack: " + defaultPackId);
+                throw new IllegalStateException("No entitlement for content pack: " + selectedPackId);
             }
 
             String asset = catalogPack.getString("asset");
@@ -84,7 +119,7 @@ public final class QuestionBank {
                 }
             }
 
-            knowledgeAtlas = new KnowledgeAtlas(context, units.keySet());
+            knowledgeAtlas = new KnowledgeAtlas(context, globalUnitIds);
 
             JSONArray array = bank.getJSONArray("questions");
             List<Question> loaded = new ArrayList<>();
@@ -194,6 +229,25 @@ public final class QuestionBank {
         return currentPack;
     }
 
+    public static List<ContentPack> availablePacks() {
+        ensureInit();
+        return availablePacks;
+    }
+
+    public static synchronized void selectPack(Context context, String packId) {
+        boolean allowed = false;
+        for (ContentPack pack : availablePacks) if (pack.id.equals(packId)) allowed = true;
+        if (!allowed) throw new IllegalArgumentException("Pack is not accessible: " + packId);
+        context.getSharedPreferences("english_sprint_settings", Context.MODE_PRIVATE)
+                .edit().putString("selected_pack", packId).apply();
+        cache = Collections.emptyList();
+        skills = Collections.emptyList();
+        knowledgeUnits = Collections.emptyMap();
+        knowledgeAtlas = null;
+        currentPack = null;
+        init(context);
+    }
+
     public static List<Question> all() {
         ensureInit();
         return cache;
@@ -255,9 +309,7 @@ public final class QuestionBank {
         List<Question> pool = new ArrayList<>(cache);
         Collections.shuffle(pool, random);
 
-        pool.sort(Comparator.comparingDouble(q ->
-                progress.masteryKnowledge(q.primaryKnowledgeId())
-                        - Math.min(progress.recentMistakesKnowledge(q.primaryKnowledgeId()), 4) * 0.08));
+        pool.sort(Comparator.comparingDouble(q -> adaptivePriority(q, progress)));
 
         List<Question> result = new ArrayList<>();
         List<String> recentKnowledge = new ArrayList<>();
@@ -272,6 +324,34 @@ public final class QuestionBank {
             if (result.size() >= count) break;
         }
         return result;
+    }
+
+    public static List<String> recommendedKnowledge(ProgressStore progress, int count) {
+        List<Question> questions = adaptiveSession(progress, Math.max(count * 3, count), 42L);
+        List<String> result = new ArrayList<>();
+        for (Question q : questions) {
+            for (String prerequisite : q.prerequisites) {
+                if (progress.masteryKnowledge(prerequisite) < 0.65 && !result.contains(prerequisite)) {
+                    result.add(prerequisite);
+                    if (result.size() >= count) return result;
+                }
+            }
+            String assessed = q.primaryKnowledgeId();
+            if (!result.contains(assessed)) result.add(assessed);
+            if (result.size() >= count) return result;
+        }
+        return result;
+    }
+
+    private static double adaptivePriority(Question q, ProgressStore progress) {
+        double direct = progress.masteryKnowledge(q.primaryKnowledgeId())
+                - Math.min(progress.recentMistakesKnowledge(q.primaryKnowledgeId()), 4) * 0.08;
+        double blocked = 0.0;
+        for (String prerequisite : q.prerequisites) {
+            blocked += Math.max(0.0, 0.65 - progress.masteryKnowledge(prerequisite));
+        }
+        if (!q.prerequisites.isEmpty()) blocked /= q.prerequisites.size();
+        return direct + blocked * 1.5;
     }
 
     public static List<Question> sprint(int count, long seed) {
@@ -340,7 +420,8 @@ public final class QuestionBank {
             case "reading": return Question.Type.READING;
             case "listening": return Question.Type.LISTENING;
             case "story": return Question.Type.STORY;
-            default: return Question.Type.GRAMMAR;
+            case "grammar": return Question.Type.GRAMMAR;
+            default: return Question.Type.PRACTICE;
         }
     }
 

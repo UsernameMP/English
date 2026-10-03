@@ -15,6 +15,8 @@ ATLAS = ROOT / "app/src/main/assets/content/knowledge_atlas.json"
 CATALOG = ROOT / "app/src/main/assets/content/catalog.json"
 ENTITLEMENTS = ROOT / "app/src/main/assets/commerce/entitlements.json"
 TARGETS = ROOT / "app/src/main/assets/content/training_targets.json"
+LICENSES = ROOT / "app/src/main/assets/content/licenses.json"
+PRODUCTS = ROOT / "app/src/main/assets/commerce/products.json"
 
 def fail(msg):
     print(f"CONTENT ERROR: {msg}", file=sys.stderr)
@@ -330,6 +332,51 @@ for required_game in {"match3", "memory", "tap_spark"}:
     if required_game not in enabled_games:
         fail(f"required v0.6 mini-game is disabled/missing: {required_game}")
 
+with CATALOG.open(encoding="utf-8") as f:
+    catalog = json.load(f)
+catalog_pack_list = catalog.get("packs", [])
+if not isinstance(catalog_pack_list, list) or not catalog_pack_list:
+    fail("catalog packs must be a non-empty array")
+
+global_unit_ids = set()
+loaded_pack_banks = {}
+for catalog_pack in catalog_pack_list:
+    asset = catalog_pack.get("asset")
+    path = ROOT / "app/src/main/assets" / str(asset)
+    if not path.exists():
+        fail(f"catalog pack asset not found: {asset}")
+    with path.open(encoding="utf-8") as f:
+        candidate_bank = json.load(f)
+    loaded_pack_banks[catalog_pack.get("id")] = candidate_bank
+    candidate_pack = candidate_bank.get("pack") or {}
+    if candidate_pack.get("id") != catalog_pack.get("id"):
+        fail(f"catalog/bank id mismatch for {catalog_pack.get('id')}")
+    if candidate_pack.get("subject") != catalog_pack.get("subject"):
+        fail(f"catalog/bank subject mismatch for {catalog_pack.get('id')}")
+    for unit in candidate_bank.get("knowledge_units", []):
+        uid = unit.get("id")
+        if uid in global_unit_ids:
+            fail(f"knowledge unit must be globally unique across packs: {uid}")
+        global_unit_ids.add(uid)
+    candidate_ids = {u.get("id") for u in candidate_bank.get("knowledge_units", [])}
+    candidate_questions = candidate_bank.get("questions")
+    if not isinstance(candidate_questions, list) or not candidate_questions:
+        fail(f"{catalog_pack.get('id')}: questions must be non-empty")
+    for question in candidate_questions:
+        qid = question.get("id")
+        if question.get("subject") != candidate_pack.get("subject"):
+            fail(f"{qid}: subject does not match its pack")
+        if question.get("interaction") != "single_choice":
+            fail(f"{qid}: runtime currently supports single_choice")
+        if (question.get("review") or {}).get("status") != "published":
+            fail(f"{qid}: only published questions may ship")
+        for ref in question.get("knowledge", []):
+            if ref.get("id") not in candidate_ids:
+                fail(f"{qid}: assessed knowledge is outside its pack: {ref.get('id')}")
+        for prerequisite in question.get("prerequisites", []):
+            if prerequisite not in global_unit_ids and prerequisite not in candidate_ids:
+                fail(f"{qid}: unknown prerequisite {prerequisite}")
+
 with ATLAS.open(encoding="utf-8") as f:
     atlas = json.load(f)
 
@@ -341,13 +388,13 @@ relations = atlas.get("relations")
 if not isinstance(relations, list):
     fail("knowledge atlas relations must be an array")
 
-requires_graph = {uid: [] for uid in unit_ids}
+requires_graph = {uid: [] for uid in global_unit_ids}
 seen_relations = set()
 for relation in relations:
     src = relation.get("from")
     rel_type = relation.get("type")
     dst = relation.get("to")
-    if src not in unit_ids or dst not in unit_ids:
+    if src not in global_unit_ids or dst not in global_unit_ids:
         fail(f"knowledge atlas relation references unknown unit: {src!r} -> {dst!r}")
     if rel_type not in allowed_relations:
         fail(f"unsupported knowledge relation type: {rel_type!r}")
@@ -371,7 +418,7 @@ def visit_requires(node):
     visiting.remove(node)
     done.add(node)
 
-for uid in unit_ids:
+for uid in global_unit_ids:
     visit_requires(uid)
 
 with PLAY_CREDITS.open(encoding="utf-8") as f:
@@ -383,8 +430,6 @@ for field in ("questions_per_credit", "max_balance", "game_session_cost"):
 if play_credits["game_session_cost"] > play_credits["max_balance"]:
     fail("game_session_cost cannot exceed max_balance")
 
-with CATALOG.open(encoding="utf-8") as f:
-    catalog = json.load(f)
 default_pack = catalog.get("default_pack")
 catalog_packs = {p.get("id"): p for p in catalog.get("packs", [])}
 if default_pack not in catalog_packs:
@@ -395,41 +440,80 @@ with ENTITLEMENTS.open(encoding="utf-8") as f:
 grants = entitlement_catalog.get("grants")
 if not isinstance(grants, list) or not grants:
     fail("entitlements.grants must be non-empty")
-default_access = False
+accessible_pack_ids = set()
 for grant in grants:
     if not grant.get("active"):
         continue
     pack_ids = grant.get("pack_ids", [])
     if not isinstance(pack_ids, list):
         fail(f"entitlement {grant.get('id')}: pack_ids must be an array")
-    if default_pack in pack_ids:
-        default_access = True
-if not default_access:
-    fail("default pack must be accessible through at least one active entitlement")
+    accessible_pack_ids.update(pack_ids)
+for pack_id, catalog_pack in catalog_packs.items():
+    if catalog_pack.get("enabled") and pack_id not in accessible_pack_ids:
+        fail(f"enabled pack has no active entitlement grant: {pack_id}")
+
+with LICENSES.open(encoding="utf-8") as f:
+    license_manifest = json.load(f)
+license_rows = license_manifest.get("licenses")
+if not isinstance(license_rows, list) or not license_rows:
+    fail("license manifest must be non-empty")
+licenses = {row.get("id"): row for row in license_rows}
+allowed_rights = {"owned_original", "licensed", "public_domain", "open_license"}
+for license_id, row in licenses.items():
+    if row.get("rights_type") not in allowed_rights:
+        fail(f"license {license_id}: unsupported or unverified rights type")
+    if not row.get("active") or not row.get("distribution_allowed"):
+        fail(f"license {license_id}: inactive or non-distributable")
+    if not isinstance(row.get("territories"), list) or not row.get("territories"):
+        fail(f"license {license_id}: territories are required")
+for pack_id, catalog_pack in catalog_packs.items():
+    if catalog_pack.get("enabled") and catalog_pack.get("license_id") not in licenses:
+        fail(f"enabled pack has no verified license: {pack_id}")
+
+with PRODUCTS.open(encoding="utf-8") as f:
+    product_catalog = json.load(f)
+allowed_providers = {"pilot", "google_play", "app_store", "ru_cis", "promo"}
+if set(product_catalog.get("providers", [])) != allowed_providers:
+    fail("product provider registry must explicitly contain all supported adapters")
+product_ids = set()
+for product in product_catalog.get("products", []):
+    product_id = product.get("id")
+    if not product_id or product_id in product_ids:
+        fail(f"invalid or duplicate product id: {product_id}")
+    product_ids.add(product_id)
+    if product.get("provider") not in allowed_providers:
+        fail(f"{product_id}: unsupported provider")
+    if product.get("checkout_enabled"):
+        fail(f"{product_id}: real checkout must remain disabled in the pilot")
+    scope = product.get("scope") or {}
+    for pack_id in scope.get("pack_ids", []):
+        if pack_id not in catalog_packs:
+            fail(f"{product_id}: unknown pack in scope: {pack_id}")
 
 with TARGETS.open(encoding="utf-8") as f:
     targets_catalog = json.load(f)
 targets = targets_catalog.get("targets")
 if not isinstance(targets, list) or not targets:
     fail("training targets must be non-empty")
-target_for_default = None
-for target in targets:
-    if target.get("pack_id") == default_pack:
-        target_for_default = target
-        break
-if target_for_default is None:
-    fail("default pack needs a training target")
-target_date = target_for_default.get("target_date")
-if not isinstance(target_date, str) or len(target_date.split("-")) != 3:
-    fail("training target target_date must be YYYY-MM-DD")
-if target_for_default.get("mode") not in {"competition", "general"}:
-    fail("training target mode must be competition/general")
+targets_by_pack = {target.get("pack_id"): target for target in targets}
+for pack_id, catalog_pack in catalog_packs.items():
+    if not catalog_pack.get("enabled"):
+        continue
+    target = targets_by_pack.get(pack_id)
+    if target is None:
+        fail(f"enabled pack needs a training target: {pack_id}")
+    target_date = target.get("target_date")
+    if not isinstance(target_date, str) or len(target_date.split("-")) != 3:
+        fail(f"{pack_id}: training target date must be YYYY-MM-DD")
+    if target.get("mode") not in {"competition", "general"}:
+        fail(f"{pack_id}: training target mode must be competition/general")
 
 print(
     f"OK: pack={pack['id']}, {len(questions)} questions, {len(unit_ids)} knowledge units, "
+    f"{len(catalog_packs)} packs, {len(global_unit_ids)} global knowledge units, "
     f"{len(relations)} atlas relations, {len(skills)} tags, "
     f"{listening} listening items ({dialogues} dialogues), "
     f"{len(entries)} dictionary entries, {len(shop_items)} shop items, "
     f"{len(digital_items)} digital rewards, {len(games)} mini-games, "
-    f"{len(grants)} entitlement grants"
+    f"{len(grants)} entitlement grants, {len(product_ids)} products, {len(licenses)} licenses"
 )
