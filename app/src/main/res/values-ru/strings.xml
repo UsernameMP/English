@@ -138,4 +138,7 @@
     <string name="target_date_label">Дата цели: %1$s</string>
     <string name="target_set_date">Изменить дату цели</string>
     <string name="target_specific_mode">Готовиться к выбранной олимпиаде</string>
+    <string name="knowledge_assessed">ПРОВЕРЯЕМЫЕ ЗНАНИЯ</string>
+    <string name="knowledge_prerequisites">ЧТО НУЖНО ЗНАТЬ</string>
+    <string name="knowledge_none">Нет обязательных предпосылок</string>
 </resources>
