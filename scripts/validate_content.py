@@ -5,6 +5,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 BANK = ROOT / "app/src/main/assets/content/english_g5_vso.json"
+DICTIONARY = ROOT / "app/src/main/assets/content/dictionary_en.json"
 
 def fail(msg):
     print(f"CONTENT ERROR: {msg}", file=sys.stderr)
@@ -129,4 +130,36 @@ for i, q in enumerate(questions):
         if not stimulus.get("script"):
             fail(f"{qid}: listening requires stimulus.script")
 
-print(f"OK: pack={pack['id']}, {len(questions)} questions, {len(unit_ids)} knowledge units, {len(skills)} tags, {listening} listening items")
+with DICTIONARY.open(encoding="utf-8") as f:
+    dictionary = json.load(f)
+
+entries = dictionary.get("entries")
+if not isinstance(entries, list) or not entries:
+    fail("dictionary entries must be a non-empty array")
+
+lemmas = set()
+forms = {}
+for entry in entries:
+    lemma = entry.get("lemma")
+    if not isinstance(lemma, str) or not lemma.strip():
+        fail("dictionary entry has no lemma")
+    if lemma in lemmas:
+        fail(f"dictionary duplicate lemma: {lemma}")
+    lemmas.add(lemma)
+
+    translation = entry.get("translation")
+    definition = entry.get("definition")
+    if not isinstance(translation, dict) or not translation:
+        fail(f"dictionary {lemma}: translation map required")
+    if not isinstance(definition, dict) or not definition:
+        fail(f"dictionary {lemma}: definition map required")
+    if not entry.get("example"):
+        fail(f"dictionary {lemma}: example required")
+
+    for form in entry.get("forms", []):
+        normalized = form.lower().strip()
+        if normalized in forms and forms[normalized] != lemma:
+            fail(f"dictionary form {form!r} belongs to both {forms[normalized]} and {lemma}")
+        forms[normalized] = lemma
+
+print(f"OK: pack={pack['id']}, {len(questions)} questions, {len(unit_ids)} knowledge units, {len(skills)} tags, {listening} listening items, {len(entries)} dictionary entries")
