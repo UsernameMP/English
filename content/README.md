@@ -56,3 +56,10 @@ Question feedback fields are locale maps rather than duplicated questions:
 ```
 
 The runtime selects the device/app locale, then falls back to English, Russian, or the first available translation. This allows future `uz`, `kk`, `vi`, `zh` and other locales without cloning the underlying exercise.
+
+
+## Personal dictionary
+
+English packs may ship an offline learner dictionary in `assets/content/dictionary_en.json`. Known words become tappable in task text. A learner can save a word locally; saved words are then eligible for vocabulary questions mixed into adaptive quick sessions.
+
+Dictionary entries support forms/inflections, phonetics, localized translations/definitions and an example sentence. The dictionary is validated in CI together with the question bank.
