@@ -37,9 +37,10 @@ public final class ProgressStore {
         String base = "skill_" + skill + "_";
         int attempts = prefs.getInt(base + "attempts", 0);
         int correct = prefs.getInt(base + "correct", 0);
-        if (attempts == 0) return 0.35;
-        // Bayesian smoothing prevents a single lucky answer from marking a skill as mastered.
-        return (correct + 2.0) / (attempts + 4.0);
+        if (attempts == 0) return 0.50;
+        // Beta(1,1) smoothing: first wrong answer drops mastery below unseen skills,
+        // first correct answer raises it above unseen skills.
+        return (correct + 1.0) / (attempts + 2.0);
     }
 
     public int attempts(String skill) {
