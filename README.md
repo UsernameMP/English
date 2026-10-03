@@ -2,6 +2,12 @@
 
 Offline Android trainer for fast preparation for the school stage of the English Olympiad (Tatarstan, 5–6 grades).
 
+## v0.6.2
+
+- updater keeps download + package/version/signature verification but hands the verified APK to the visible Android system installer via FileProvider;
+- if per-app unknown-source permission is missing, the verified APK is retained and installation resumes automatically after returning from Settings;
+- removes the fragile PackageInstaller.Session callback path that could fail silently on MIUI/POCO.
+
 ## v0.6.1
 
 - Match-3 now animates swap, invalid return, match pop, drop/refill, cascades and reshuffle with dedicated game sounds;
