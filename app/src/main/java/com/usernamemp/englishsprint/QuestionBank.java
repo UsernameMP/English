@@ -52,12 +52,11 @@ public final class QuestionBank {
         List<Question> pool = new ArrayList<>(all());
         Random random = new Random(seed);
         Collections.shuffle(pool, random);
-
-        pool.sort((a, b) -> {
-            double sa = progress.mastery(a.skill) + random.nextDouble() * 0.22;
-            double sb = progress.mastery(b.skill) + random.nextDouble() * 0.22;
-            return Double.compare(sa, sb);
-        });
+        // Collections.sort is stable, so shuffling first randomizes ties without
+        // using a non-deterministic comparator.
+        pool.sort((a, b) -> Double.compare(
+                progress.mastery(a.skill),
+                progress.mastery(b.skill)));
 
         // Keep the short session broad: no single weak skill may consume the entire run.
         List<Question> result = new ArrayList<>();
