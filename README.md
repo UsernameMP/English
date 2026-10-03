@@ -2,26 +2,27 @@
 
 Offline Android trainer for fast preparation for the school stage of the English Olympiad (Tatarstan, 5–6 grades).
 
-## MVP goals
+## v0.3
 
-- no text input: all answers are taps;
-- 10–15 minute adaptive sessions;
-- grammar micro-skills: be, have/has, do/does, articles, pronouns, tenses, prepositions, comparison, some/any;
-- reading with evidence highlighting after the answer;
-- story-builder exercises to prepare for the writing section without typing;
-- offline listening;
-- XP, streak/combo, levels and mastery by skill;
-- olympiad sprint mode.
+- canonical subject-independent JSON content bank;
+- 150 verified training questions;
+- CI content validator;
+- adaptive weak-skill repetition without a visible "mistakes" mode;
+- neutral skill map: untested topics are not shown as failures;
+- large "Why?" explanations;
+- game-first home screen, XP, ranks and combo effects;
+- offline listening generated with a neural Piper voice;
+- sound and haptic settings.
 
-The first version is intentionally compact because the target preparation date is 9 October 2026.
+The Android renderer currently uses tap-only single-choice interactions. The content schema already reserves future interaction types for other olympiad subjects.
 
 ## Build
 
 GitHub Actions builds a debug APK on every push to `main`.
 
-Open **Actions → Android APK → latest run → Artifacts → english-sprint-debug**.
+Open **Actions → Android APK → latest run → Artifacts → `english-sprint-v0.3.0`.**.
 
-The CI workflow generates bundled WAV listening files with `espeak-ng`, so the produced APK does not need Internet for listening.
+The CI workflow validates the content bank and generates bundled neural WAV listening files with Piper. The installed APK does not need Internet for listening.
 
 ## Local build
 
