@@ -288,7 +288,7 @@ public class MainActivity extends Activity {
         boolean correct = q.isCorrect(chosen);
         progress.record(q, correct);
         RewardFx.Reaction reaction = rewards.reaction(correct, progress.combo());
-        rewards.play(correct, progress.combo());
+        rewards.play(reaction, correct, progress.combo());
         if (correct) sessionCorrect++;
 
         int[] stats = sessionStats.computeIfAbsent(q.skill, k -> new int[]{0, 0});
