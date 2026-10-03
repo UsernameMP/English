@@ -36,6 +36,9 @@ jobs:
       - name: Validate content bank
         run: python3 scripts/validate_content.py
 
+      - name: Validate task generator
+        run: python3 scripts/validate_generator.py
+
       - name: Cache neural TTS
         uses: actions/cache@v4
         with:
