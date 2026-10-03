@@ -83,9 +83,9 @@
             "type": "object",
             "required": ["short", "full", "rule"],
             "properties": {
-              "short": {"type": "string", "minLength": 1},
-              "full": {"type": "string", "minLength": 1},
-              "rule": {"type": "string", "minLength": 1}
+              "short": {"$ref": "#/$defs/localizedText"},
+              "full": {"$ref": "#/$defs/localizedText"},
+              "rule": {"$ref": "#/$defs/localizedText"}
             }
           },
           "review": {

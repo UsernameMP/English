@@ -137,9 +137,9 @@ public final class QuestionBank {
                         text,
                         options,
                         correctIndex,
-                        feedback.optString("short", ""),
-                        feedback.optString("full", ""),
-                        feedback.optString("rule", ""),
+                        localizedField(feedback, "short", Locale.getDefault()),
+                        localizedField(feedback, "full", Locale.getDefault()),
+                        localizedField(feedback, "rule", Locale.getDefault()),
                         o.isNull("evidence") ? "" : o.optString("evidence", ""),
                         audio,
                         script,
@@ -264,6 +264,23 @@ public final class QuestionBank {
                 parseStringMap(pack.optJSONObject("title")),
                 parseStringMap(pack.optJSONObject("subtitle"))
         );
+    }
+
+    private static String localizedField(JSONObject object, String key, Locale locale) {
+        Object value = object.opt(key);
+        if (value instanceof JSONObject) {
+            JSONObject localized = (JSONObject) value;
+            String lang = locale == null ? "en" : locale.getLanguage();
+            String text = localized.optString(lang, "");
+            if (text.isEmpty()) text = localized.optString("en", "");
+            if (text.isEmpty()) text = localized.optString("ru", "");
+            if (text.isEmpty()) {
+                java.util.Iterator<String> keys = localized.keys();
+                if (keys.hasNext()) text = localized.optString(keys.next(), "");
+            }
+            return text;
+        }
+        return object.optString(key, "");
     }
 
     private static Map<String, String> parseStringMap(JSONObject object) {

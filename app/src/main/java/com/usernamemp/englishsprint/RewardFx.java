@@ -61,20 +61,31 @@ public final class RewardFx {
 
     public Reaction reaction(boolean correct, int combo) {
         if (correct) {
-            if (combo >= 15) return new Reaction("🏆", "НЕУДЕРЖИМЫЙ", "Серия ×" + combo + ". Это уже режим чемпиона.", true);
-            if (combo >= 10) return new Reaction("⚡", "ЛЕГЕНДА", "10 правильных подряд. Серия ×" + combo, true);
-            if (combo >= 8) return new Reaction("🔥", "МАШИНА", "Ни одной ошибки. Серия ×" + combo, true);
-            if (combo >= 5) return new Reaction("🥊", "ПЯТЬ ПОДРЯД", "Серия ×" + combo + ". Темп держится.", true);
-            if (combo == 3) return new Reaction("👍", "РАЗОГРЕВ", "Три правильных подряд.", true);
-            if (combo == 2) return new Reaction("+", "ЕСТЬ СЕРИЯ", "×2", false);
-            return new Reaction("+", "ТОЧНО", "+XP", false);
+            if (combo >= 15) return new Reaction("🏆",
+                    activity.getString(R.string.rank_unstoppable),
+                    activity.getString(R.string.reaction_unstoppable_sub, combo), true);
+            if (combo >= 10) return new Reaction("⚡",
+                    activity.getString(R.string.rank_legend),
+                    activity.getString(R.string.reaction_legend_sub, combo), true);
+            if (combo >= 8) return new Reaction("🔥",
+                    activity.getString(R.string.rank_machine),
+                    activity.getString(R.string.reaction_machine_sub, combo), true);
+            if (combo >= 5) return new Reaction("🥊",
+                    activity.getString(R.string.rank_five),
+                    activity.getString(R.string.reaction_five_sub, combo), true);
+            if (combo == 3) return new Reaction("👍",
+                    activity.getString(R.string.rank_warmup),
+                    activity.getString(R.string.reaction_warmup_sub), true);
+            if (combo == 2) return new Reaction("+",
+                    activity.getString(R.string.reaction_streak), "×2", false);
+            return new Reaction("+", activity.getString(R.string.reaction_correct), "+XP", false);
         }
 
         String[][] lines = {
-                {"↻", "НОРМАЛЬНО", "Ошибка поймана. Следующий вопрос."},
-                {"→", "ДАЛЬШЕ", "Сейчас важнее запомнить правило, чем счёт."},
-                {"◉", "ЗАПОМНИЛИ", "Правильный ответ уже подсвечен. Едем дальше."},
-                {"↗", "СЛЕДУЮЩИЙ РАУНД", "Одна ошибка серию не определяет."}
+                {"↻", activity.getString(R.string.reaction_ok), activity.getString(R.string.reaction_ok_sub)},
+                {"→", activity.getString(R.string.reaction_next), activity.getString(R.string.reaction_next_sub)},
+                {"◉", activity.getString(R.string.reaction_saved), activity.getString(R.string.reaction_saved_sub)},
+                {"↗", activity.getString(R.string.reaction_next_round), activity.getString(R.string.reaction_next_round_sub)}
         };
         String[] line = lines[random.nextInt(lines.length)];
         return new Reaction(line[0], line[1], line[2], false);
@@ -90,7 +101,7 @@ public final class RewardFx {
         if (correct && (combo == 3 || combo == 5 || combo == 8 || combo == 10 || combo == 15)) {
             majorBurst(reaction);
         } else {
-            smallPulse(reaction);
+            smallPulse(reaction, correct);
         }
     }
 
@@ -169,12 +180,10 @@ public final class RewardFx {
         }, 900);
     }
 
-    private void smallPulse(Reaction reaction) {
+    private void smallPulse(Reaction reaction, boolean positive) {
         if (tone != null && settings.getBoolean("sound", true)) {
             try {
-                tone.startTone(reaction.headline.equals("ТОЧНО")
-                        ? ToneGenerator.TONE_PROP_BEEP
-                        : ToneGenerator.TONE_PROP_NACK, 65);
+                tone.startTone(positive ? ToneGenerator.TONE_PROP_BEEP : ToneGenerator.TONE_PROP_NACK, 65);
             } catch (Exception ignored) {
             }
         }
@@ -183,8 +192,7 @@ public final class RewardFx {
         if (host == null) return;
 
         TextView chip = label(reaction.symbol + "  " + reaction.headline, 15,
-                reaction.headline.equals("ТОЧНО") || reaction.headline.equals("ЕСТЬ СЕРИЯ")
-                        ? Color.rgb(15, 105, 67) : Color.rgb(96, 105, 122),
+                positive ? Color.rgb(15, 105, 67) : Color.rgb(96, 105, 122),
                 Typeface.BOLD);
         chip.setPadding(dp(16), dp(10), dp(16), dp(10));
         chip.setBackground(Shapes.round(Color.WHITE, dp(24), dp(1), Color.rgb(225, 229, 239)));

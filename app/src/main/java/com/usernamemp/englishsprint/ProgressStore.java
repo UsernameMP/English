@@ -110,13 +110,10 @@ public final class ProgressStore {
     }
 
     public enum SkillState {
-        NOT_CHECKED("Ещё не проверено"),
-        LEARNING("Разбираемся"),
-        GROWING("Набираем форму"),
-        CONFIDENT("Уверенно");
-
-        public final String label;
-        SkillState(String label) { this.label = label; }
+        NOT_CHECKED,
+        LEARNING,
+        GROWING,
+        CONFIDENT
     }
 
     public int xp() { return prefs.getInt("xp", 0); }

@@ -46,9 +46,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Выбери форму to be по подлежащему.",
-        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
-        "rule": "to be согласуется с подлежащим."
+        "short": {
+          "ru": "Выбери форму to be по подлежащему."
+        },
+        "full": {
+          "ru": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were."
+        },
+        "rule": {
+          "ru": "to be согласуется с подлежащим."
+        }
       },
       "evidence": null,
       "review": {
@@ -105,9 +111,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Выбери форму to be по подлежащему.",
-        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
-        "rule": "to be согласуется с подлежащим."
+        "short": {
+          "ru": "Выбери форму to be по подлежащему."
+        },
+        "full": {
+          "ru": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were."
+        },
+        "rule": {
+          "ru": "to be согласуется с подлежащим."
+        }
       },
       "evidence": null,
       "review": {
@@ -164,9 +176,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Выбери форму to be по подлежащему.",
-        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
-        "rule": "to be согласуется с подлежащим."
+        "short": {
+          "ru": "Выбери форму to be по подлежащему."
+        },
+        "full": {
+          "ru": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were."
+        },
+        "rule": {
+          "ru": "to be согласуется с подлежащим."
+        }
       },
       "evidence": null,
       "review": {
@@ -223,9 +241,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Выбери форму to be по подлежащему.",
-        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
-        "rule": "to be согласуется с подлежащим."
+        "short": {
+          "ru": "Выбери форму to be по подлежащему."
+        },
+        "full": {
+          "ru": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were."
+        },
+        "rule": {
+          "ru": "to be согласуется с подлежащим."
+        }
       },
       "evidence": null,
       "review": {
@@ -282,9 +306,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Выбери форму to be по подлежащему.",
-        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
-        "rule": "to be согласуется с подлежащим."
+        "short": {
+          "ru": "Выбери форму to be по подлежащему."
+        },
+        "full": {
+          "ru": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were."
+        },
+        "rule": {
+          "ru": "to be согласуется с подлежащим."
+        }
       },
       "evidence": null,
       "review": {
@@ -341,9 +371,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Выбери форму to be по подлежащему.",
-        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
-        "rule": "to be согласуется с подлежащим."
+        "short": {
+          "ru": "Выбери форму to be по подлежащему."
+        },
+        "full": {
+          "ru": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were."
+        },
+        "rule": {
+          "ru": "to be согласуется с подлежащим."
+        }
       },
       "evidence": null,
       "review": {
@@ -400,9 +436,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Выбери форму to be по подлежащему.",
-        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
-        "rule": "to be согласуется с подлежащим."
+        "short": {
+          "ru": "Выбери форму to be по подлежащему."
+        },
+        "full": {
+          "ru": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were."
+        },
+        "rule": {
+          "ru": "to be согласуется с подлежащим."
+        }
       },
       "evidence": null,
       "review": {
@@ -459,9 +501,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Выбери форму to be по подлежащему.",
-        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
-        "rule": "to be согласуется с подлежащим."
+        "short": {
+          "ru": "Выбери форму to be по подлежащему."
+        },
+        "full": {
+          "ru": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were."
+        },
+        "rule": {
+          "ru": "to be согласуется с подлежащим."
+        }
       },
       "evidence": null,
       "review": {
@@ -518,9 +566,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Выбери форму to be по подлежащему.",
-        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
-        "rule": "to be согласуется с подлежащим."
+        "short": {
+          "ru": "Выбери форму to be по подлежащему."
+        },
+        "full": {
+          "ru": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were."
+        },
+        "rule": {
+          "ru": "to be согласуется с подлежащим."
+        }
       },
       "evidence": null,
       "review": {
@@ -577,9 +631,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Выбери форму to be по подлежащему.",
-        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
-        "rule": "to be согласуется с подлежащим."
+        "short": {
+          "ru": "Выбери форму to be по подлежащему."
+        },
+        "full": {
+          "ru": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were."
+        },
+        "rule": {
+          "ru": "to be согласуется с подлежащим."
+        }
       },
       "evidence": null,
       "review": {
@@ -636,9 +696,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Смотри на подлежащее.",
-        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
-        "rule": "he/she/it → has; остальные → have."
+        "short": {
+          "ru": "Смотри на подлежащее."
+        },
+        "full": {
+          "ru": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has."
+        },
+        "rule": {
+          "ru": "he/she/it → has; остальные → have."
+        }
       },
       "evidence": null,
       "review": {
@@ -695,9 +761,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Смотри на подлежащее.",
-        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
-        "rule": "he/she/it → has; остальные → have."
+        "short": {
+          "ru": "Смотри на подлежащее."
+        },
+        "full": {
+          "ru": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has."
+        },
+        "rule": {
+          "ru": "he/she/it → has; остальные → have."
+        }
       },
       "evidence": null,
       "review": {
@@ -754,9 +826,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Смотри на подлежащее.",
-        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
-        "rule": "he/she/it → has; остальные → have."
+        "short": {
+          "ru": "Смотри на подлежащее."
+        },
+        "full": {
+          "ru": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has."
+        },
+        "rule": {
+          "ru": "he/she/it → has; остальные → have."
+        }
       },
       "evidence": null,
       "review": {
@@ -813,9 +891,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Смотри на подлежащее.",
-        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
-        "rule": "he/she/it → has; остальные → have."
+        "short": {
+          "ru": "Смотри на подлежащее."
+        },
+        "full": {
+          "ru": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has."
+        },
+        "rule": {
+          "ru": "he/she/it → has; остальные → have."
+        }
       },
       "evidence": null,
       "review": {
@@ -872,9 +956,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Смотри на подлежащее.",
-        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
-        "rule": "he/she/it → has; остальные → have."
+        "short": {
+          "ru": "Смотри на подлежащее."
+        },
+        "full": {
+          "ru": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has."
+        },
+        "rule": {
+          "ru": "he/she/it → has; остальные → have."
+        }
       },
       "evidence": null,
       "review": {
@@ -931,9 +1021,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Смотри на подлежащее.",
-        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
-        "rule": "he/she/it → has; остальные → have."
+        "short": {
+          "ru": "Смотри на подлежащее."
+        },
+        "full": {
+          "ru": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has."
+        },
+        "rule": {
+          "ru": "he/she/it → has; остальные → have."
+        }
       },
       "evidence": null,
       "review": {
@@ -990,9 +1086,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Смотри на подлежащее.",
-        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
-        "rule": "he/she/it → has; остальные → have."
+        "short": {
+          "ru": "Смотри на подлежащее."
+        },
+        "full": {
+          "ru": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has."
+        },
+        "rule": {
+          "ru": "he/she/it → has; остальные → have."
+        }
       },
       "evidence": null,
       "review": {
@@ -1049,9 +1151,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Смотри на подлежащее.",
-        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
-        "rule": "he/she/it → has; остальные → have."
+        "short": {
+          "ru": "Смотри на подлежащее."
+        },
+        "full": {
+          "ru": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has."
+        },
+        "rule": {
+          "ru": "he/she/it → has; остальные → have."
+        }
       },
       "evidence": null,
       "review": {
@@ -1108,9 +1216,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Смотри на подлежащее.",
-        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
-        "rule": "he/she/it → has; остальные → have."
+        "short": {
+          "ru": "Смотри на подлежащее."
+        },
+        "full": {
+          "ru": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has."
+        },
+        "rule": {
+          "ru": "he/she/it → has; остальные → have."
+        }
       },
       "evidence": null,
       "review": {
@@ -1167,9 +1281,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Смотри на подлежащее.",
-        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
-        "rule": "he/she/it → has; остальные → have."
+        "short": {
+          "ru": "Смотри на подлежащее."
+        },
+        "full": {
+          "ru": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has."
+        },
+        "rule": {
+          "ru": "he/she/it → has; остальные → have."
+        }
       },
       "evidence": null,
       "review": {
@@ -1226,9 +1346,15 @@
         "a"
       ],
       "feedback": {
-        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
-        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
-        "rule": "do: I/you/we/they; does: he/she/it."
+        "short": {
+          "ru": "В вопросе Present Simple нужен вспомогательный глагол."
+        },
+        "full": {
+          "ru": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s."
+        },
+        "rule": {
+          "ru": "do: I/you/we/they; does: he/she/it."
+        }
       },
       "evidence": null,
       "review": {
@@ -1285,9 +1411,15 @@
         "b"
       ],
       "feedback": {
-        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
-        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
-        "rule": "do: I/you/we/they; does: he/she/it."
+        "short": {
+          "ru": "В вопросе Present Simple нужен вспомогательный глагол."
+        },
+        "full": {
+          "ru": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s."
+        },
+        "rule": {
+          "ru": "do: I/you/we/they; does: he/she/it."
+        }
       },
       "evidence": null,
       "review": {
@@ -1344,9 +1476,15 @@
         "a"
       ],
       "feedback": {
-        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
-        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
-        "rule": "do: I/you/we/they; does: he/she/it."
+        "short": {
+          "ru": "В вопросе Present Simple нужен вспомогательный глагол."
+        },
+        "full": {
+          "ru": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s."
+        },
+        "rule": {
+          "ru": "do: I/you/we/they; does: he/she/it."
+        }
       },
       "evidence": null,
       "review": {
@@ -1403,9 +1541,15 @@
         "b"
       ],
       "feedback": {
-        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
-        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
-        "rule": "do: I/you/we/they; does: he/she/it."
+        "short": {
+          "ru": "В вопросе Present Simple нужен вспомогательный глагол."
+        },
+        "full": {
+          "ru": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s."
+        },
+        "rule": {
+          "ru": "do: I/you/we/they; does: he/she/it."
+        }
       },
       "evidence": null,
       "review": {
@@ -1462,9 +1606,15 @@
         "a"
       ],
       "feedback": {
-        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
-        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
-        "rule": "do: I/you/we/they; does: he/she/it."
+        "short": {
+          "ru": "В вопросе Present Simple нужен вспомогательный глагол."
+        },
+        "full": {
+          "ru": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s."
+        },
+        "rule": {
+          "ru": "do: I/you/we/they; does: he/she/it."
+        }
       },
       "evidence": null,
       "review": {
@@ -1521,9 +1671,15 @@
         "b"
       ],
       "feedback": {
-        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
-        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
-        "rule": "do: I/you/we/they; does: he/she/it."
+        "short": {
+          "ru": "В вопросе Present Simple нужен вспомогательный глагол."
+        },
+        "full": {
+          "ru": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s."
+        },
+        "rule": {
+          "ru": "do: I/you/we/they; does: he/she/it."
+        }
       },
       "evidence": null,
       "review": {
@@ -1580,9 +1736,15 @@
         "b"
       ],
       "feedback": {
-        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
-        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
-        "rule": "do: I/you/we/they; does: he/she/it."
+        "short": {
+          "ru": "В вопросе Present Simple нужен вспомогательный глагол."
+        },
+        "full": {
+          "ru": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s."
+        },
+        "rule": {
+          "ru": "do: I/you/we/they; does: he/she/it."
+        }
       },
       "evidence": null,
       "review": {
@@ -1639,9 +1801,15 @@
         "a"
       ],
       "feedback": {
-        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
-        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
-        "rule": "do: I/you/we/they; does: he/she/it."
+        "short": {
+          "ru": "В вопросе Present Simple нужен вспомогательный глагол."
+        },
+        "full": {
+          "ru": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s."
+        },
+        "rule": {
+          "ru": "do: I/you/we/they; does: he/she/it."
+        }
       },
       "evidence": null,
       "review": {
@@ -1698,9 +1866,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Смотри на звук и на то, конкретный ли предмет.",
-        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
-        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+        "short": {
+          "ru": "Смотри на звук и на то, конкретный ли предмет."
+        },
+        "full": {
+          "ru": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный."
+        },
+        "rule": {
+          "ru": "a + consonant sound; an + vowel sound; the + specific/unique."
+        }
       },
       "evidence": null,
       "review": {
@@ -1757,9 +1931,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Смотри на звук и на то, конкретный ли предмет.",
-        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
-        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+        "short": {
+          "ru": "Смотри на звук и на то, конкретный ли предмет."
+        },
+        "full": {
+          "ru": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный."
+        },
+        "rule": {
+          "ru": "a + consonant sound; an + vowel sound; the + specific/unique."
+        }
       },
       "evidence": null,
       "review": {
@@ -1816,9 +1996,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Смотри на звук и на то, конкретный ли предмет.",
-        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
-        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+        "short": {
+          "ru": "Смотри на звук и на то, конкретный ли предмет."
+        },
+        "full": {
+          "ru": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный."
+        },
+        "rule": {
+          "ru": "a + consonant sound; an + vowel sound; the + specific/unique."
+        }
       },
       "evidence": null,
       "review": {
@@ -1875,9 +2061,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Смотри на звук и на то, конкретный ли предмет.",
-        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
-        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+        "short": {
+          "ru": "Смотри на звук и на то, конкретный ли предмет."
+        },
+        "full": {
+          "ru": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный."
+        },
+        "rule": {
+          "ru": "a + consonant sound; an + vowel sound; the + specific/unique."
+        }
       },
       "evidence": null,
       "review": {
@@ -1934,9 +2126,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Смотри на звук и на то, конкретный ли предмет.",
-        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
-        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+        "short": {
+          "ru": "Смотри на звук и на то, конкретный ли предмет."
+        },
+        "full": {
+          "ru": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный."
+        },
+        "rule": {
+          "ru": "a + consonant sound; an + vowel sound; the + specific/unique."
+        }
       },
       "evidence": null,
       "review": {
@@ -1993,9 +2191,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Смотри на звук и на то, конкретный ли предмет.",
-        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
-        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+        "short": {
+          "ru": "Смотри на звук и на то, конкретный ли предмет."
+        },
+        "full": {
+          "ru": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный."
+        },
+        "rule": {
+          "ru": "a + consonant sound; an + vowel sound; the + specific/unique."
+        }
       },
       "evidence": null,
       "review": {
@@ -2052,9 +2256,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Смотри на звук и на то, конкретный ли предмет.",
-        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
-        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+        "short": {
+          "ru": "Смотри на звук и на то, конкретный ли предмет."
+        },
+        "full": {
+          "ru": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный."
+        },
+        "rule": {
+          "ru": "a + consonant sound; an + vowel sound; the + specific/unique."
+        }
       },
       "evidence": null,
       "review": {
@@ -2111,9 +2321,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Смотри на звук и на то, конкретный ли предмет.",
-        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
-        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+        "short": {
+          "ru": "Смотри на звук и на то, конкретный ли предмет."
+        },
+        "full": {
+          "ru": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный."
+        },
+        "rule": {
+          "ru": "a + consonant sound; an + vowel sound; the + specific/unique."
+        }
       },
       "evidence": null,
       "review": {
@@ -2170,9 +2386,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Смотри на звук и на то, конкретный ли предмет.",
-        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
-        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+        "short": {
+          "ru": "Смотри на звук и на то, конкретный ли предмет."
+        },
+        "full": {
+          "ru": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный."
+        },
+        "rule": {
+          "ru": "a + consonant sound; an + vowel sound; the + specific/unique."
+        }
       },
       "evidence": null,
       "review": {
@@ -2229,9 +2451,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Смотри на звук и на то, конкретный ли предмет.",
-        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
-        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+        "short": {
+          "ru": "Смотри на звук и на то, конкретный ли предмет."
+        },
+        "full": {
+          "ru": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный."
+        },
+        "rule": {
+          "ru": "a + consonant sound; an + vowel sound; the + specific/unique."
+        }
       },
       "evidence": null,
       "review": {
@@ -2288,9 +2516,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Смотри на звук и на то, конкретный ли предмет.",
-        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
-        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+        "short": {
+          "ru": "Смотри на звук и на то, конкретный ли предмет."
+        },
+        "full": {
+          "ru": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный."
+        },
+        "rule": {
+          "ru": "a + consonant sound; an + vowel sound; the + specific/unique."
+        }
       },
       "evidence": null,
       "review": {
@@ -2347,9 +2581,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Смотри на звук и на то, конкретный ли предмет.",
-        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
-        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+        "short": {
+          "ru": "Смотри на звук и на то, конкретный ли предмет."
+        },
+        "full": {
+          "ru": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный."
+        },
+        "rule": {
+          "ru": "a + consonant sound; an + vowel sound; the + specific/unique."
+        }
       },
       "evidence": null,
       "review": {
@@ -2406,9 +2646,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Нужна правильная форма местоимения.",
-        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
-        "rule": "Форма местоимения зависит от роли в предложении."
+        "short": {
+          "ru": "Нужна правильная форма местоимения."
+        },
+        "full": {
+          "ru": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs."
+        },
+        "rule": {
+          "ru": "Форма местоимения зависит от роли в предложении."
+        }
       },
       "evidence": null,
       "review": {
@@ -2465,9 +2711,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Нужна правильная форма местоимения.",
-        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
-        "rule": "Форма местоимения зависит от роли в предложении."
+        "short": {
+          "ru": "Нужна правильная форма местоимения."
+        },
+        "full": {
+          "ru": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs."
+        },
+        "rule": {
+          "ru": "Форма местоимения зависит от роли в предложении."
+        }
       },
       "evidence": null,
       "review": {
@@ -2524,9 +2776,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Нужна правильная форма местоимения.",
-        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
-        "rule": "Форма местоимения зависит от роли в предложении."
+        "short": {
+          "ru": "Нужна правильная форма местоимения."
+        },
+        "full": {
+          "ru": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs."
+        },
+        "rule": {
+          "ru": "Форма местоимения зависит от роли в предложении."
+        }
       },
       "evidence": null,
       "review": {
@@ -2583,9 +2841,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Нужна правильная форма местоимения.",
-        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
-        "rule": "Форма местоимения зависит от роли в предложении."
+        "short": {
+          "ru": "Нужна правильная форма местоимения."
+        },
+        "full": {
+          "ru": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs."
+        },
+        "rule": {
+          "ru": "Форма местоимения зависит от роли в предложении."
+        }
       },
       "evidence": null,
       "review": {
@@ -2642,9 +2906,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Нужна правильная форма местоимения.",
-        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
-        "rule": "Форма местоимения зависит от роли в предложении."
+        "short": {
+          "ru": "Нужна правильная форма местоимения."
+        },
+        "full": {
+          "ru": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs."
+        },
+        "rule": {
+          "ru": "Форма местоимения зависит от роли в предложении."
+        }
       },
       "evidence": null,
       "review": {
@@ -2701,9 +2971,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Нужна правильная форма местоимения.",
-        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
-        "rule": "Форма местоимения зависит от роли в предложении."
+        "short": {
+          "ru": "Нужна правильная форма местоимения."
+        },
+        "full": {
+          "ru": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs."
+        },
+        "rule": {
+          "ru": "Форма местоимения зависит от роли в предложении."
+        }
       },
       "evidence": null,
       "review": {
@@ -2760,9 +3036,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Нужна правильная форма местоимения.",
-        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
-        "rule": "Форма местоимения зависит от роли в предложении."
+        "short": {
+          "ru": "Нужна правильная форма местоимения."
+        },
+        "full": {
+          "ru": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs."
+        },
+        "rule": {
+          "ru": "Форма местоимения зависит от роли в предложении."
+        }
       },
       "evidence": null,
       "review": {
@@ -2819,9 +3101,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Нужна правильная форма местоимения.",
-        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
-        "rule": "Форма местоимения зависит от роли в предложении."
+        "short": {
+          "ru": "Нужна правильная форма местоимения."
+        },
+        "full": {
+          "ru": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs."
+        },
+        "rule": {
+          "ru": "Форма местоимения зависит от роли в предложении."
+        }
       },
       "evidence": null,
       "review": {
@@ -2878,9 +3166,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Это привычка или факт.",
-        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
-        "rule": "habit/fact → Present Simple."
+        "short": {
+          "ru": "Это привычка или факт."
+        },
+        "full": {
+          "ru": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es."
+        },
+        "rule": {
+          "ru": "habit/fact → Present Simple."
+        }
       },
       "evidence": null,
       "review": {
@@ -2937,9 +3231,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Это привычка или факт.",
-        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
-        "rule": "habit/fact → Present Simple."
+        "short": {
+          "ru": "Это привычка или факт."
+        },
+        "full": {
+          "ru": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es."
+        },
+        "rule": {
+          "ru": "habit/fact → Present Simple."
+        }
       },
       "evidence": null,
       "review": {
@@ -2996,9 +3296,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Это привычка или факт.",
-        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
-        "rule": "habit/fact → Present Simple."
+        "short": {
+          "ru": "Это привычка или факт."
+        },
+        "full": {
+          "ru": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es."
+        },
+        "rule": {
+          "ru": "habit/fact → Present Simple."
+        }
       },
       "evidence": null,
       "review": {
@@ -3055,9 +3361,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Это привычка или факт.",
-        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
-        "rule": "habit/fact → Present Simple."
+        "short": {
+          "ru": "Это привычка или факт."
+        },
+        "full": {
+          "ru": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es."
+        },
+        "rule": {
+          "ru": "habit/fact → Present Simple."
+        }
       },
       "evidence": null,
       "review": {
@@ -3114,9 +3426,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Это привычка или факт.",
-        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
-        "rule": "habit/fact → Present Simple."
+        "short": {
+          "ru": "Это привычка или факт."
+        },
+        "full": {
+          "ru": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es."
+        },
+        "rule": {
+          "ru": "habit/fact → Present Simple."
+        }
       },
       "evidence": null,
       "review": {
@@ -3173,9 +3491,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Это привычка или факт.",
-        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
-        "rule": "habit/fact → Present Simple."
+        "short": {
+          "ru": "Это привычка или факт."
+        },
+        "full": {
+          "ru": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es."
+        },
+        "rule": {
+          "ru": "habit/fact → Present Simple."
+        }
       },
       "evidence": null,
       "review": {
@@ -3232,9 +3556,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Это привычка или факт.",
-        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
-        "rule": "habit/fact → Present Simple."
+        "short": {
+          "ru": "Это привычка или факт."
+        },
+        "full": {
+          "ru": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es."
+        },
+        "rule": {
+          "ru": "habit/fact → Present Simple."
+        }
       },
       "evidence": null,
       "review": {
@@ -3291,9 +3621,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Это привычка или факт.",
-        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
-        "rule": "habit/fact → Present Simple."
+        "short": {
+          "ru": "Это привычка или факт."
+        },
+        "full": {
+          "ru": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es."
+        },
+        "rule": {
+          "ru": "habit/fact → Present Simple."
+        }
       },
       "evidence": null,
       "review": {
@@ -3350,9 +3686,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие происходит прямо сейчас.",
-        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
-        "rule": "now → am/is/are + V-ing."
+        "short": {
+          "ru": "Действие происходит прямо сейчас."
+        },
+        "full": {
+          "ru": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!"
+        },
+        "rule": {
+          "ru": "now → am/is/are + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -3409,9 +3751,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие происходит прямо сейчас.",
-        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
-        "rule": "now → am/is/are + V-ing."
+        "short": {
+          "ru": "Действие происходит прямо сейчас."
+        },
+        "full": {
+          "ru": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!"
+        },
+        "rule": {
+          "ru": "now → am/is/are + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -3468,9 +3816,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие происходит прямо сейчас.",
-        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
-        "rule": "now → am/is/are + V-ing."
+        "short": {
+          "ru": "Действие происходит прямо сейчас."
+        },
+        "full": {
+          "ru": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!"
+        },
+        "rule": {
+          "ru": "now → am/is/are + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -3527,9 +3881,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие происходит прямо сейчас.",
-        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
-        "rule": "now → am/is/are + V-ing."
+        "short": {
+          "ru": "Действие происходит прямо сейчас."
+        },
+        "full": {
+          "ru": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!"
+        },
+        "rule": {
+          "ru": "now → am/is/are + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -3586,9 +3946,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие происходит прямо сейчас.",
-        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
-        "rule": "now → am/is/are + V-ing."
+        "short": {
+          "ru": "Действие происходит прямо сейчас."
+        },
+        "full": {
+          "ru": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!"
+        },
+        "rule": {
+          "ru": "now → am/is/are + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -3645,9 +4011,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие происходит прямо сейчас.",
-        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
-        "rule": "now → am/is/are + V-ing."
+        "short": {
+          "ru": "Действие происходит прямо сейчас."
+        },
+        "full": {
+          "ru": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!"
+        },
+        "rule": {
+          "ru": "now → am/is/are + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -3704,9 +4076,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие происходит прямо сейчас.",
-        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
-        "rule": "now → am/is/are + V-ing."
+        "short": {
+          "ru": "Действие происходит прямо сейчас."
+        },
+        "full": {
+          "ru": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!"
+        },
+        "rule": {
+          "ru": "now → am/is/are + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -3763,9 +4141,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие происходит прямо сейчас.",
-        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
-        "rule": "now → am/is/are + V-ing."
+        "short": {
+          "ru": "Действие происходит прямо сейчас."
+        },
+        "full": {
+          "ru": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!"
+        },
+        "rule": {
+          "ru": "now → am/is/are + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -3822,9 +4206,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие уже закончилось.",
-        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
-        "rule": "finished past action → V2 / -ed."
+        "short": {
+          "ru": "Действие уже закончилось."
+        },
+        "full": {
+          "ru": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made."
+        },
+        "rule": {
+          "ru": "finished past action → V2 / -ed."
+        }
       },
       "evidence": null,
       "review": {
@@ -3881,9 +4271,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие уже закончилось.",
-        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
-        "rule": "finished past action → V2 / -ed."
+        "short": {
+          "ru": "Действие уже закончилось."
+        },
+        "full": {
+          "ru": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made."
+        },
+        "rule": {
+          "ru": "finished past action → V2 / -ed."
+        }
       },
       "evidence": null,
       "review": {
@@ -3940,9 +4336,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие уже закончилось.",
-        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
-        "rule": "finished past action → V2 / -ed."
+        "short": {
+          "ru": "Действие уже закончилось."
+        },
+        "full": {
+          "ru": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made."
+        },
+        "rule": {
+          "ru": "finished past action → V2 / -ed."
+        }
       },
       "evidence": null,
       "review": {
@@ -3999,9 +4401,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие уже закончилось.",
-        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
-        "rule": "finished past action → V2 / -ed."
+        "short": {
+          "ru": "Действие уже закончилось."
+        },
+        "full": {
+          "ru": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made."
+        },
+        "rule": {
+          "ru": "finished past action → V2 / -ed."
+        }
       },
       "evidence": null,
       "review": {
@@ -4058,9 +4466,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие уже закончилось.",
-        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
-        "rule": "finished past action → V2 / -ed."
+        "short": {
+          "ru": "Действие уже закончилось."
+        },
+        "full": {
+          "ru": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made."
+        },
+        "rule": {
+          "ru": "finished past action → V2 / -ed."
+        }
       },
       "evidence": null,
       "review": {
@@ -4117,9 +4531,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Действие уже закончилось.",
-        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
-        "rule": "finished past action → V2 / -ed."
+        "short": {
+          "ru": "Действие уже закончилось."
+        },
+        "full": {
+          "ru": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made."
+        },
+        "rule": {
+          "ru": "finished past action → V2 / -ed."
+        }
       },
       "evidence": null,
       "review": {
@@ -4176,9 +4596,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие уже закончилось.",
-        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
-        "rule": "finished past action → V2 / -ed."
+        "short": {
+          "ru": "Действие уже закончилось."
+        },
+        "full": {
+          "ru": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made."
+        },
+        "rule": {
+          "ru": "finished past action → V2 / -ed."
+        }
       },
       "evidence": null,
       "review": {
@@ -4235,9 +4661,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие уже закончилось.",
-        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
-        "rule": "finished past action → V2 / -ed."
+        "short": {
+          "ru": "Действие уже закончилось."
+        },
+        "full": {
+          "ru": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made."
+        },
+        "rule": {
+          "ru": "finished past action → V2 / -ed."
+        }
       },
       "evidence": null,
       "review": {
@@ -4294,9 +4726,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Действие уже закончилось.",
-        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
-        "rule": "finished past action → V2 / -ed."
+        "short": {
+          "ru": "Действие уже закончилось."
+        },
+        "full": {
+          "ru": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made."
+        },
+        "rule": {
+          "ru": "finished past action → V2 / -ed."
+        }
       },
       "evidence": null,
       "review": {
@@ -4353,9 +4791,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Действие уже закончилось.",
-        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
-        "rule": "finished past action → V2 / -ed."
+        "short": {
+          "ru": "Действие уже закончилось."
+        },
+        "full": {
+          "ru": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made."
+        },
+        "rule": {
+          "ru": "finished past action → V2 / -ed."
+        }
       },
       "evidence": null,
       "review": {
@@ -4412,9 +4856,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие шло в определённый момент прошлого.",
-        "full": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple.",
-        "rule": "was/were + V-ing."
+        "short": {
+          "ru": "Действие шло в определённый момент прошлого."
+        },
+        "full": {
+          "ru": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple."
+        },
+        "rule": {
+          "ru": "was/were + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -4471,9 +4921,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие шло в определённый момент прошлого.",
-        "full": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple.",
-        "rule": "was/were + V-ing."
+        "short": {
+          "ru": "Действие шло в определённый момент прошлого."
+        },
+        "full": {
+          "ru": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple."
+        },
+        "rule": {
+          "ru": "was/were + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -4530,9 +4986,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие шло в определённый момент прошлого.",
-        "full": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple.",
-        "rule": "was/were + V-ing."
+        "short": {
+          "ru": "Действие шло в определённый момент прошлого."
+        },
+        "full": {
+          "ru": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple."
+        },
+        "rule": {
+          "ru": "was/were + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -4589,9 +5051,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Действие шло в определённый момент прошлого.",
-        "full": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple.",
-        "rule": "was/were + V-ing."
+        "short": {
+          "ru": "Действие шло в определённый момент прошлого."
+        },
+        "full": {
+          "ru": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple."
+        },
+        "rule": {
+          "ru": "was/were + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -4648,9 +5116,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Действие шло в определённый момент прошлого.",
-        "full": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple.",
-        "rule": "was/were + V-ing."
+        "short": {
+          "ru": "Действие шло в определённый момент прошлого."
+        },
+        "full": {
+          "ru": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple."
+        },
+        "rule": {
+          "ru": "was/were + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -4707,9 +5181,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Действие шло в определённый момент прошлого.",
-        "full": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple.",
-        "rule": "was/were + V-ing."
+        "short": {
+          "ru": "Действие шло в определённый момент прошлого."
+        },
+        "full": {
+          "ru": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple."
+        },
+        "rule": {
+          "ru": "was/were + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -4766,9 +5246,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Запоминай сочетание целиком.",
-        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
-        "rule": "Учить предлог вместе с фразой."
+        "short": {
+          "ru": "Запоминай сочетание целиком."
+        },
+        "full": {
+          "ru": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки."
+        },
+        "rule": {
+          "ru": "Учить предлог вместе с фразой."
+        }
       },
       "evidence": null,
       "review": {
@@ -4825,9 +5311,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Запоминай сочетание целиком.",
-        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
-        "rule": "Учить предлог вместе с фразой."
+        "short": {
+          "ru": "Запоминай сочетание целиком."
+        },
+        "full": {
+          "ru": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки."
+        },
+        "rule": {
+          "ru": "Учить предлог вместе с фразой."
+        }
       },
       "evidence": null,
       "review": {
@@ -4884,9 +5376,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Запоминай сочетание целиком.",
-        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
-        "rule": "Учить предлог вместе с фразой."
+        "short": {
+          "ru": "Запоминай сочетание целиком."
+        },
+        "full": {
+          "ru": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки."
+        },
+        "rule": {
+          "ru": "Учить предлог вместе с фразой."
+        }
       },
       "evidence": null,
       "review": {
@@ -4943,9 +5441,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Запоминай сочетание целиком.",
-        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
-        "rule": "Учить предлог вместе с фразой."
+        "short": {
+          "ru": "Запоминай сочетание целиком."
+        },
+        "full": {
+          "ru": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки."
+        },
+        "rule": {
+          "ru": "Учить предлог вместе с фразой."
+        }
       },
       "evidence": null,
       "review": {
@@ -5002,9 +5506,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Запоминай сочетание целиком.",
-        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
-        "rule": "Учить предлог вместе с фразой."
+        "short": {
+          "ru": "Запоминай сочетание целиком."
+        },
+        "full": {
+          "ru": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки."
+        },
+        "rule": {
+          "ru": "Учить предлог вместе с фразой."
+        }
       },
       "evidence": null,
       "review": {
@@ -5061,9 +5571,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Запоминай сочетание целиком.",
-        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
-        "rule": "Учить предлог вместе с фразой."
+        "short": {
+          "ru": "Запоминай сочетание целиком."
+        },
+        "full": {
+          "ru": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки."
+        },
+        "rule": {
+          "ru": "Учить предлог вместе с фразой."
+        }
       },
       "evidence": null,
       "review": {
@@ -5120,9 +5636,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Запоминай сочетание целиком.",
-        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
-        "rule": "Учить предлог вместе с фразой."
+        "short": {
+          "ru": "Запоминай сочетание целиком."
+        },
+        "full": {
+          "ru": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки."
+        },
+        "rule": {
+          "ru": "Учить предлог вместе с фразой."
+        }
       },
       "evidence": null,
       "review": {
@@ -5179,9 +5701,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Запоминай сочетание целиком.",
-        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
-        "rule": "Учить предлог вместе с фразой."
+        "short": {
+          "ru": "Запоминай сочетание целиком."
+        },
+        "full": {
+          "ru": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки."
+        },
+        "rule": {
+          "ru": "Учить предлог вместе с фразой."
+        }
       },
       "evidence": null,
       "review": {
@@ -5238,9 +5766,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Запоминай сочетание целиком.",
-        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
-        "rule": "Учить предлог вместе с фразой."
+        "short": {
+          "ru": "Запоминай сочетание целиком."
+        },
+        "full": {
+          "ru": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки."
+        },
+        "rule": {
+          "ru": "Учить предлог вместе с фразой."
+        }
       },
       "evidence": null,
       "review": {
@@ -5297,9 +5831,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Запоминай сочетание целиком.",
-        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
-        "rule": "Учить предлог вместе с фразой."
+        "short": {
+          "ru": "Запоминай сочетание целиком."
+        },
+        "full": {
+          "ru": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки."
+        },
+        "rule": {
+          "ru": "Учить предлог вместе с фразой."
+        }
       },
       "evidence": null,
       "review": {
@@ -5356,9 +5896,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
-        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
-        "rule": "than → comparative; the → superlative."
+        "short": {
+          "ru": "Сравниваем два объекта или выбираем самый сильный признак."
+        },
+        "full": {
+          "ru": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best."
+        },
+        "rule": {
+          "ru": "than → comparative; the → superlative."
+        }
       },
       "evidence": null,
       "review": {
@@ -5415,9 +5961,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
-        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
-        "rule": "than → comparative; the → superlative."
+        "short": {
+          "ru": "Сравниваем два объекта или выбираем самый сильный признак."
+        },
+        "full": {
+          "ru": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best."
+        },
+        "rule": {
+          "ru": "than → comparative; the → superlative."
+        }
       },
       "evidence": null,
       "review": {
@@ -5474,9 +6026,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
-        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
-        "rule": "than → comparative; the → superlative."
+        "short": {
+          "ru": "Сравниваем два объекта или выбираем самый сильный признак."
+        },
+        "full": {
+          "ru": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best."
+        },
+        "rule": {
+          "ru": "than → comparative; the → superlative."
+        }
       },
       "evidence": null,
       "review": {
@@ -5533,9 +6091,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
-        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
-        "rule": "than → comparative; the → superlative."
+        "short": {
+          "ru": "Сравниваем два объекта или выбираем самый сильный признак."
+        },
+        "full": {
+          "ru": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best."
+        },
+        "rule": {
+          "ru": "than → comparative; the → superlative."
+        }
       },
       "evidence": null,
       "review": {
@@ -5592,9 +6156,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
-        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
-        "rule": "than → comparative; the → superlative."
+        "short": {
+          "ru": "Сравниваем два объекта или выбираем самый сильный признак."
+        },
+        "full": {
+          "ru": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best."
+        },
+        "rule": {
+          "ru": "than → comparative; the → superlative."
+        }
       },
       "evidence": null,
       "review": {
@@ -5651,9 +6221,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
-        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
-        "rule": "than → comparative; the → superlative."
+        "short": {
+          "ru": "Сравниваем два объекта или выбираем самый сильный признак."
+        },
+        "full": {
+          "ru": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best."
+        },
+        "rule": {
+          "ru": "than → comparative; the → superlative."
+        }
       },
       "evidence": null,
       "review": {
@@ -5710,9 +6286,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
-        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
-        "rule": "than → comparative; the → superlative."
+        "short": {
+          "ru": "Сравниваем два объекта или выбираем самый сильный признак."
+        },
+        "full": {
+          "ru": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best."
+        },
+        "rule": {
+          "ru": "than → comparative; the → superlative."
+        }
       },
       "evidence": null,
       "review": {
@@ -5769,9 +6351,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
-        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
-        "rule": "than → comparative; the → superlative."
+        "short": {
+          "ru": "Сравниваем два объекта или выбираем самый сильный признак."
+        },
+        "full": {
+          "ru": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best."
+        },
+        "rule": {
+          "ru": "than → comparative; the → superlative."
+        }
       },
       "evidence": null,
       "review": {
@@ -5828,9 +6416,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Определи тип предложения и существительного.",
-        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
-        "rule": "some/any; many=countable, much=uncountable."
+        "short": {
+          "ru": "Определи тип предложения и существительного."
+        },
+        "full": {
+          "ru": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми."
+        },
+        "rule": {
+          "ru": "some/any; many=countable, much=uncountable."
+        }
       },
       "evidence": null,
       "review": {
@@ -5887,9 +6481,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Определи тип предложения и существительного.",
-        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
-        "rule": "some/any; many=countable, much=uncountable."
+        "short": {
+          "ru": "Определи тип предложения и существительного."
+        },
+        "full": {
+          "ru": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми."
+        },
+        "rule": {
+          "ru": "some/any; many=countable, much=uncountable."
+        }
       },
       "evidence": null,
       "review": {
@@ -5946,9 +6546,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Определи тип предложения и существительного.",
-        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
-        "rule": "some/any; many=countable, much=uncountable."
+        "short": {
+          "ru": "Определи тип предложения и существительного."
+        },
+        "full": {
+          "ru": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми."
+        },
+        "rule": {
+          "ru": "some/any; many=countable, much=uncountable."
+        }
       },
       "evidence": null,
       "review": {
@@ -6005,9 +6611,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Определи тип предложения и существительного.",
-        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
-        "rule": "some/any; many=countable, much=uncountable."
+        "short": {
+          "ru": "Определи тип предложения и существительного."
+        },
+        "full": {
+          "ru": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми."
+        },
+        "rule": {
+          "ru": "some/any; many=countable, much=uncountable."
+        }
       },
       "evidence": null,
       "review": {
@@ -6064,9 +6676,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Определи тип предложения и существительного.",
-        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
-        "rule": "some/any; many=countable, much=uncountable."
+        "short": {
+          "ru": "Определи тип предложения и существительного."
+        },
+        "full": {
+          "ru": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми."
+        },
+        "rule": {
+          "ru": "some/any; many=countable, much=uncountable."
+        }
       },
       "evidence": null,
       "review": {
@@ -6123,9 +6741,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Определи тип предложения и существительного.",
-        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
-        "rule": "some/any; many=countable, much=uncountable."
+        "short": {
+          "ru": "Определи тип предложения и существительного."
+        },
+        "full": {
+          "ru": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми."
+        },
+        "rule": {
+          "ru": "some/any; many=countable, much=uncountable."
+        }
       },
       "evidence": null,
       "review": {
@@ -6182,9 +6806,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Определи тип предложения и существительного.",
-        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
-        "rule": "some/any; many=countable, much=uncountable."
+        "short": {
+          "ru": "Определи тип предложения и существительного."
+        },
+        "full": {
+          "ru": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми."
+        },
+        "rule": {
+          "ru": "some/any; many=countable, much=uncountable."
+        }
       },
       "evidence": null,
       "review": {
@@ -6241,9 +6871,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Определи тип предложения и существительного.",
-        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
-        "rule": "some/any; many=countable, much=uncountable."
+        "short": {
+          "ru": "Определи тип предложения и существительного."
+        },
+        "full": {
+          "ru": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми."
+        },
+        "rule": {
+          "ru": "some/any; many=countable, much=uncountable."
+        }
       },
       "evidence": null,
       "review": {
@@ -6300,9 +6936,15 @@
         "b"
       ],
       "feedback": {
-        "short": "for + период времени",
-        "full": "For отвечает на вопрос «как долго»: for three years. Since указывает точку начала: since 2023.",
-        "rule": "for + duration; since + starting point."
+        "short": {
+          "ru": "for + период времени"
+        },
+        "full": {
+          "ru": "For отвечает на вопрос «как долго»: for three years. Since указывает точку начала: since 2023."
+        },
+        "rule": {
+          "ru": "for + duration; since + starting point."
+        }
       },
       "evidence": null,
       "review": {
@@ -6359,9 +7001,15 @@
         "a"
       ],
       "feedback": {
-        "short": "2022 — точка начала.",
-        "full": "Since используется с точкой начала действия: since 2022.",
-        "rule": "since + starting point."
+        "short": {
+          "ru": "2022 — точка начала."
+        },
+        "full": {
+          "ru": "Since используется с точкой начала действия: since 2022."
+        },
+        "rule": {
+          "ru": "since + starting point."
+        }
       },
       "evidence": null,
       "review": {
@@ -6418,9 +7066,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Нужна конструкция used to.",
-        "full": "Used to + verb описывает привычку или состояние в прошлом, которого сейчас уже нет.",
-        "rule": "used to + V."
+        "short": {
+          "ru": "Нужна конструкция used to."
+        },
+        "full": {
+          "ru": "Used to + verb описывает привычку или состояние в прошлом, которого сейчас уже нет."
+        },
+        "rule": {
+          "ru": "used to + V."
+        }
       },
       "evidence": null,
       "review": {
@@ -6477,9 +7131,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Это First Conditional.",
-        "full": "В реальном условии о будущем: If + Present Simple, затем will + verb.",
-        "rule": "If + Present Simple → will + V."
+        "short": {
+          "ru": "Это First Conditional."
+        },
+        "full": {
+          "ru": "В реальном условии о будущем: If + Present Simple, затем will + verb."
+        },
+        "rule": {
+          "ru": "If + Present Simple → will + V."
+        }
       },
       "evidence": null,
       "review": {
@@ -6536,9 +7196,15 @@
         "a"
       ],
       "feedback": {
-        "short": "После before здесь нужна форма -ing.",
-        "full": "После предлога before естественно использовать герундий: before going to bed.",
-        "rule": "before/after + V-ing."
+        "short": {
+          "ru": "После before здесь нужна форма -ing."
+        },
+        "full": {
+          "ru": "После предлога before естественно использовать герундий: before going to bed."
+        },
+        "rule": {
+          "ru": "before/after + V-ing."
+        }
       },
       "evidence": null,
       "review": {
@@ -6595,9 +7261,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Это цель действия.",
-        "full": "To + infinitive выражает цель: went to the kitchen to get water.",
-        "rule": "to + V = purpose."
+        "short": {
+          "ru": "Это цель действия."
+        },
+        "full": {
+          "ru": "To + infinitive выражает цель: went to the kitchen to get water."
+        },
+        "rule": {
+          "ru": "to + V = purpose."
+        }
       },
       "evidence": null,
       "review": {
@@ -6654,9 +7326,15 @@
         "b"
       ],
       "feedback": {
-        "short": "После has нужна третья форма.",
-        "full": "Present Perfect = have/has + V3. See → saw → seen.",
-        "rule": "have/has + V3."
+        "short": {
+          "ru": "После has нужна третья форма."
+        },
+        "full": {
+          "ru": "Present Perfect = have/has + V3. See → saw → seen."
+        },
+        "rule": {
+          "ru": "have/has + V3."
+        }
       },
       "evidence": null,
       "review": {
@@ -6713,9 +7391,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Есть than — нужен comparative.",
-        "full": "Для длинных прилагательных comparative строится через more: more difficult than.",
-        "rule": "more + adjective + than."
+        "short": {
+          "ru": "Есть than — нужен comparative."
+        },
+        "full": {
+          "ru": "Для длинных прилагательных comparative строится через more: more difficult than."
+        },
+        "rule": {
+          "ru": "more + adjective + than."
+        }
       },
       "evidence": null,
       "review": {
@@ -6772,9 +7456,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Найди фразу-доказательство в тексте.",
-        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
-        "rule": "Ищи смысл, а не одинаковые слова."
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
       },
       "evidence": "The library was crowded, so she walked to the small park behind the museum.",
       "review": {
@@ -6831,9 +7521,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Найди фразу-доказательство в тексте.",
-        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
-        "rule": "Ищи смысл, а не одинаковые слова."
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
       },
       "evidence": "She sat on a bench under a large tree",
       "review": {
@@ -6890,9 +7586,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Найди фразу-доказательство в тексте.",
-        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
-        "rule": "Ищи смысл, а не одинаковые слова."
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
       },
       "evidence": "heavy rain was expected",
       "review": {
@@ -6949,9 +7651,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Найди фразу-доказательство в тексте.",
-        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
-        "rule": "Ищи смысл, а не одинаковые слова."
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
       },
       "evidence": "Sunday morning was cool but dry",
       "review": {
@@ -7008,9 +7716,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Найди фразу-доказательство в тексте.",
-        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
-        "rule": "Ищи смысл, а не одинаковые слова."
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
       },
       "evidence": "there was a student card with a name on it",
       "review": {
@@ -7067,9 +7781,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Найди фразу-доказательство в тексте.",
-        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
-        "rule": "Ищи смысл, а не одинаковые слова."
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
       },
       "evidence": "Nora gave the wallet to the receptionist.",
       "review": {
@@ -7126,9 +7846,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Найди фразу-доказательство в тексте.",
-        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
-        "rule": "Ищи смысл, а не одинаковые слова."
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
       },
       "evidence": "funny with his younger sister. The film should be shorter than two hours and suitable for children.",
       "review": {
@@ -7185,9 +7911,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Найди фразу-доказательство в тексте.",
-        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
-        "rule": "Ищи смысл, а не одинаковые слова."
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
       },
       "evidence": "The film should be shorter than two hours and suitable for children.",
       "review": {
@@ -7244,9 +7976,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Найди фразу-доказательство в тексте.",
-        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
-        "rule": "Ищи смысл, а не одинаковые слова."
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
       },
       "evidence": "This week the meeting will start thirty minutes later",
       "review": {
@@ -7303,9 +8041,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Найди фразу-доказательство в тексте.",
-        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
-        "rule": "Ищи смысл, а не одинаковые слова."
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
       },
       "evidence": "New players may come even if they do not know all the rules.",
       "review": {
@@ -7362,9 +8106,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Найди фразу-доказательство в тексте.",
-        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
-        "rule": "Ищи смысл, а не одинаковые слова."
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
       },
       "evidence": "The fox wanted the cheese, so he praised the crow's beautiful voice",
       "review": {
@@ -7421,9 +8171,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Найди фразу-доказательство в тексте.",
-        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
-        "rule": "Ищи смысл, а не одинаковые слова."
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
       },
       "evidence": "The crow opened her beak, the cheese fell",
       "review": {
@@ -7481,9 +8237,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Слушай ключевую деталь, а не каждое слово.",
-        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
-        "rule": "Слушай изменение решения и ключевую деталь."
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
       },
       "evidence": null,
       "review": {
@@ -7541,9 +8303,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Слушай ключевую деталь, а не каждое слово.",
-        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
-        "rule": "Слушай изменение решения и ключевую деталь."
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
       },
       "evidence": null,
       "review": {
@@ -7601,9 +8369,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Слушай ключевую деталь, а не каждое слово.",
-        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
-        "rule": "Слушай изменение решения и ключевую деталь."
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
       },
       "evidence": null,
       "review": {
@@ -7661,9 +8435,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Слушай ключевую деталь, а не каждое слово.",
-        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
-        "rule": "Слушай изменение решения и ключевую деталь."
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
       },
       "evidence": null,
       "review": {
@@ -7721,9 +8501,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Слушай ключевую деталь, а не каждое слово.",
-        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
-        "rule": "Слушай изменение решения и ключевую деталь."
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
       },
       "evidence": null,
       "review": {
@@ -7781,9 +8567,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Слушай ключевую деталь, а не каждое слово.",
-        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
-        "rule": "Слушай изменение решения и ключевую деталь."
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
       },
       "evidence": null,
       "review": {
@@ -7841,9 +8633,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Слушай ключевую деталь, а не каждое слово.",
-        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
-        "rule": "Слушай изменение решения и ключевую деталь."
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
       },
       "evidence": null,
       "review": {
@@ -7901,9 +8699,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Слушай ключевую деталь, а не каждое слово.",
-        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
-        "rule": "Слушай изменение решения и ключевую деталь."
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
       },
       "evidence": null,
       "review": {
@@ -7961,9 +8765,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Слушай ключевую деталь, а не каждое слово.",
-        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
-        "rule": "Слушай изменение решения и ключевую деталь."
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
       },
       "evidence": null,
       "review": {
@@ -8021,9 +8831,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Слушай ключевую деталь, а не каждое слово.",
-        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
-        "rule": "Слушай изменение решения и ключевую деталь."
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
       },
       "evidence": null,
       "review": {
@@ -8081,9 +8897,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Слушай ключевую деталь, а не каждое слово.",
-        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
-        "rule": "Слушай изменение решения и ключевую деталь."
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
       },
       "evidence": null,
       "review": {
@@ -8141,9 +8963,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Слушай ключевую деталь, а не каждое слово.",
-        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
-        "rule": "Слушай изменение решения и ключевую деталь."
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
       },
       "evidence": null,
       "review": {
@@ -8200,9 +9028,15 @@
         "b"
       ],
       "feedback": {
-        "short": "When естественно связывает момент и событие.",
-        "full": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого.",
-        "rule": "when + event."
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
       },
       "evidence": null,
       "review": {
@@ -8259,9 +9093,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Продолжение должно двигать историю.",
-        "full": "Третья фраза продолжает событие и отвечает на возникшее напряжение: что было за спиной?",
-        "rule": "Следующее предложение развивает событие."
+        "short": {
+          "ru": "Продолжение должно двигать историю."
+        },
+        "full": {
+          "ru": "Третья фраза продолжает событие и отвечает на возникшее напряжение: что было за спиной?"
+        },
+        "rule": {
+          "ru": "Следующее предложение развивает событие."
+        }
       },
       "evidence": null,
       "review": {
@@ -8318,9 +9158,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Здесь нужен контраст.",
-        "full": "Хотел выйти, но шёл сильный дождь: but противопоставляет две идеи.",
-        "rule": "but = contrast."
+        "short": {
+          "ru": "Здесь нужен контраст."
+        },
+        "full": {
+          "ru": "Хотел выйти, но шёл сильный дождь: but противопоставляет две идеи."
+        },
+        "rule": {
+          "ru": "but = contrast."
+        }
       },
       "evidence": null,
       "review": {
@@ -8377,9 +9223,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Рассказ уже идёт в прошлом.",
-        "full": "Went out задаёт Past Simple, поэтому естественное продолжение — looked.",
-        "rule": "Story tense must stay consistent."
+        "short": {
+          "ru": "Рассказ уже идёт в прошлом."
+        },
+        "full": {
+          "ru": "Went out задаёт Past Simple, поэтому естественное продолжение — looked."
+        },
+        "rule": {
+          "ru": "Story tense must stay consistent."
+        }
       },
       "evidence": null,
       "review": {
@@ -8436,9 +9288,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Финал должен закрыть главный конфликт.",
-        "full": "История была о потерянном щенке. Хороший финал показывает, что проблема решена.",
-        "rule": "Ending closes the main problem."
+        "short": {
+          "ru": "Финал должен закрыть главный конфликт."
+        },
+        "full": {
+          "ru": "История была о потерянном щенке. Хороший финал показывает, что проблема решена."
+        },
+        "rule": {
+          "ru": "Ending closes the main problem."
+        }
       },
       "evidence": null,
       "review": {
@@ -8495,9 +9353,15 @@
         "a"
       ],
       "feedback": {
-        "short": "While хорошо вводит длительный фон.",
-        "full": "While + Past Continuous задаёт действие в процессе, на фоне которого произошло короткое событие.",
-        "rule": "while + Past Continuous."
+        "short": {
+          "ru": "While хорошо вводит длительный фон."
+        },
+        "full": {
+          "ru": "While + Past Continuous задаёт действие в процессе, на фоне которого произошло короткое событие."
+        },
+        "rule": {
+          "ru": "while + Past Continuous."
+        }
       },
       "evidence": null,
       "review": {
@@ -8554,9 +9418,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Начало последовательности — First.",
-        "full": "First начинает цепочку действий; then продолжает её.",
-        "rule": "First → Then → Finally."
+        "short": {
+          "ru": "Начало последовательности — First."
+        },
+        "full": {
+          "ru": "First начинает цепочку действий; then продолжает её."
+        },
+        "rule": {
+          "ru": "First → Then → Finally."
+        }
       },
       "evidence": null,
       "review": {
@@ -8613,9 +9483,15 @@
         "a"
       ],
       "feedback": {
-        "short": "После because нужна причина.",
-        "full": "The storm was getting stronger объясняет решение остаться внутри.",
-        "rule": "because + reason."
+        "short": {
+          "ru": "После because нужна причина."
+        },
+        "full": {
+          "ru": "The storm was getting stronger объясняет решение остаться внутри."
+        },
+        "rule": {
+          "ru": "because + reason."
+        }
       },
       "evidence": null,
       "review": {
@@ -8672,9 +9548,15 @@
         "c"
       ],
       "feedback": {
-        "short": "Местоимение убирает повтор.",
-        "full": "После первого упоминания dog можно использовать it и объединить признаки.",
-        "rule": "Use pronouns to avoid repetition."
+        "short": {
+          "ru": "Местоимение убирает повтор."
+        },
+        "full": {
+          "ru": "После первого упоминания dog можно использовать it и объединить признаки."
+        },
+        "rule": {
+          "ru": "Use pronouns to avoid repetition."
+        }
       },
       "evidence": null,
       "review": {
@@ -8731,9 +9613,15 @@
         "b"
       ],
       "feedback": {
-        "short": "Покажи опасность через ситуацию.",
-        "full": "Вторая фраза не просто называет dangerous, а объясняет, почему ситуация опасна.",
-        "rule": "Show meaning through context."
+        "short": {
+          "ru": "Покажи опасность через ситуацию."
+        },
+        "full": {
+          "ru": "Вторая фраза не просто называет dangerous, а объясняет, почему ситуация опасна."
+        },
+        "rule": {
+          "ru": "Show meaning through context."
+        }
       },
       "evidence": null,
       "review": {
@@ -8790,9 +9678,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Продолжение отвечает на событие.",
-        "full": "После crash читатель ожидает объяснение, что произошло.",
-        "rule": "Continue the causal chain."
+        "short": {
+          "ru": "Продолжение отвечает на событие."
+        },
+        "full": {
+          "ru": "После crash читатель ожидает объяснение, что произошло."
+        },
+        "rule": {
+          "ru": "Continue the causal chain."
+        }
       },
       "evidence": null,
       "review": {
@@ -8849,9 +9743,15 @@
         "a"
       ],
       "feedback": {
-        "short": "Это завершение истории.",
-        "full": "Finally показывает последнюю стадию последовательности событий.",
-        "rule": "Finally = final step."
+        "short": {
+          "ru": "Это завершение истории."
+        },
+        "full": {
+          "ru": "Finally показывает последнюю стадию последовательности событий."
+        },
+        "rule": {
+          "ru": "Finally = final step."
+        }
       },
       "evidence": null,
       "review": {
