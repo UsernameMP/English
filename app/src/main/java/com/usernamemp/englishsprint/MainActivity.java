@@ -58,6 +58,7 @@ public class MainActivity extends Activity {
     private EconomyStore economy;
     private PlayCreditStore playCredits;
     private TrainingTargetStore trainingTarget;
+    private ActivityStore activity;
     private ShopStore shop;
     private DigitalRewardStore digitalRewards;
     private MiniGameHost miniGames;
@@ -85,6 +86,7 @@ public class MainActivity extends Activity {
         economy = new EconomyStore(this);
         playCredits = new PlayCreditStore(this);
         trainingTarget = new TrainingTargetStore(this, QuestionBank.currentPack());
+        activity = new ActivityStore(this);
         shop = new ShopStore(this, economy);
         digitalRewards = new DigitalRewardStore(this, economy);
         miniGames = new MiniGameHost(this, economy);
@@ -144,6 +146,10 @@ public class MainActivity extends Activity {
 
         root.addView(space(16));
         root.addView(progressCard());
+        root.addView(space(10));
+        root.addView(activityCard());
+        root.addView(space(10));
+        root.addView(nextFocusCard());
         root.addView(space(16));
 
         Button play = primaryButton(getString(R.string.play));
@@ -162,17 +168,21 @@ public class MainActivity extends Activity {
         root.addView(modes);
         root.addView(space(8));
 
-        root.addView(menuButton(getString(R.string.grammar_mode), getString(R.string.grammar_caption), () ->
-                startSession(getString(R.string.grammar_title), shuffled(QuestionBank.byType(Question.Type.GRAMMAR), 20))));
-
-        root.addView(menuButton(getString(R.string.reading_mode), getString(R.string.reading_caption), () ->
-                startSession(getString(R.string.reading_title), shuffled(QuestionBank.byType(Question.Type.READING), 10))));
-
-        root.addView(menuButton(getString(R.string.listening_mode), getString(R.string.listening_caption), () ->
-                startSession(getString(R.string.listening_title), shuffled(QuestionBank.byType(Question.Type.LISTENING), 10))));
-
-        root.addView(menuButton(getString(R.string.story_mode), getString(R.string.story_caption), () ->
-                startSession(getString(R.string.story_title), shuffled(QuestionBank.byType(Question.Type.STORY), 10))));
+        if ("english".equals(pack.subject)) {
+            root.addView(menuButton(getString(R.string.grammar_mode), getString(R.string.grammar_caption), () ->
+                    startSession(getString(R.string.grammar_title), shuffled(QuestionBank.byType(Question.Type.GRAMMAR), 20))));
+            root.addView(menuButton(getString(R.string.reading_mode), getString(R.string.reading_caption), () ->
+                    startSession(getString(R.string.reading_title), shuffled(QuestionBank.byType(Question.Type.READING), 10))));
+            root.addView(menuButton(getString(R.string.listening_mode), getString(R.string.listening_caption), () ->
+                    startSession(getString(R.string.listening_title), shuffled(QuestionBank.byType(Question.Type.LISTENING), 10))));
+            root.addView(menuButton(getString(R.string.story_mode), getString(R.string.story_caption), () ->
+                    startSession(getString(R.string.story_title), shuffled(QuestionBank.byType(Question.Type.STORY), 10))));
+        } else {
+            root.addView(menuButton(getString(R.string.olympiad_practice),
+                    getString(R.string.olympiad_practice_caption), () ->
+                            startSession(getString(R.string.olympiad_practice),
+                                    shuffled(QuestionBank.all(), 15))));
+        }
 
         Button progressButton = secondaryButton(getString(R.string.skill_map));
         progressButton.setOnClickListener(v -> showProgress());
@@ -197,11 +207,13 @@ public class MainActivity extends Activity {
         glp.topMargin = dp(8);
         root.addView(gameBreak, glp);
 
-        Button dictionaryButton = secondaryButton(getString(R.string.dictionary_fmt, dictionary.savedCount()));
-        dictionaryButton.setOnClickListener(v -> showDictionary());
-        LinearLayout.LayoutParams dlp = matchWrap();
-        dlp.topMargin = dp(8);
-        root.addView(dictionaryButton, dlp);
+        if ("english".equals(pack.subject)) {
+            Button dictionaryButton = secondaryButton(getString(R.string.dictionary_fmt, dictionary.savedCount()));
+            dictionaryButton.setOnClickListener(v -> showDictionary());
+            LinearLayout.LayoutParams dlp = matchWrap();
+            dlp.topMargin = dp(8);
+            root.addView(dictionaryButton, dlp);
+        }
 
         setScrollable(root);
     }
@@ -245,6 +257,58 @@ public class MainActivity extends Activity {
         card.addView(rank, rankLp);
 
         return card;
+    }
+
+    private View activityCard() {
+        LinearLayout card = column();
+        card.setPadding(dp(16), dp(13), dp(16), dp(13));
+        card.setBackground(roundRect(CARD, 16, 1, SOFT));
+        card.addView(text(getString(R.string.activity_week), 13, MUTED, Typeface.BOLD));
+        LinearLayout strip = row();
+        Calendar calendar = Calendar.getInstance();
+        List<ActivityStore.Day> days = activity.recentDays(7);
+        for (ActivityStore.Day day : days) {
+            TextView marker = text(day.date.substring(8) + (day.active() ? "  ✓" : "  ·"),
+                    13, day.active() ? GOOD : MUTED, Typeface.BOLD);
+            marker.setGravity(Gravity.CENTER);
+            strip.addView(marker, new LinearLayout.LayoutParams(0, dp(38), 1f));
+        }
+        card.addView(strip);
+        card.setClickable(true);
+        card.setOnClickListener(v -> showActivityMonth());
+        return card;
+    }
+
+    private View nextFocusCard() {
+        LinearLayout card = column();
+        card.setPadding(dp(16), dp(13), dp(16), dp(13));
+        card.setBackground(roundRect(Color.rgb(232, 237, 255), 16, 0, Color.TRANSPARENT));
+        card.addView(text(getString(R.string.next_focus), 13, PRIMARY, Typeface.BOLD));
+        List<String> focus = QuestionBank.recommendedKnowledge(progress, 3);
+        for (String id : focus) {
+            TextView line = text("• " + QuestionBank.knowledgeLabel(id, Locale.getDefault()),
+                    15, INK, Typeface.NORMAL);
+            line.setPadding(0, dp(4), 0, 0);
+            card.addView(line);
+        }
+        return card;
+    }
+
+    private void showActivityMonth() {
+        List<ActivityStore.Day> days = activity.currentMonth();
+        int answered = 0, correct = 0, xp = 0, crystals = 0, sessions = 0, active = 0;
+        for (ActivityStore.Day day : days) {
+            answered += day.answered; correct += day.correct; xp += day.xp;
+            crystals += day.crystals; sessions += day.sessions;
+            if (day.active()) active++;
+        }
+        String message = getString(R.string.activity_month_summary,
+                active, answered, correct, xp, crystals, sessions);
+        new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.activity_month))
+                .setMessage(message)
+                .setPositiveButton(getString(R.string.got_it), null)
+                .show();
     }
 
     private View menuButton(String heading, String caption, Runnable action) {
@@ -391,6 +455,7 @@ public class MainActivity extends Activity {
         boolean correct = q.isCorrect(chosen);
         boolean reinforcement = reinforcementQuestionIds.remove(q.id);
         ProgressStore.SkillState beforeState = progress.state(q.primaryKnowledgeId());
+        int xpBefore = progress.xp();
         progress.record(q, correct);
         ProgressStore.SkillState afterState = progress.state(q.primaryKnowledgeId());
         boolean becameConfident = beforeState != ProgressStore.SkillState.CONFIDENT
@@ -422,6 +487,8 @@ public class MainActivity extends Activity {
                 sessionAnswered,
                 q.id
         );
+        activity.recordAnswer(correct, progress.xp() - xpBefore, crystalGain,
+                progress.combo(), QuestionBank.currentPack().id);
 
         int[] stats = sessionStats.computeIfAbsent(q.skill, k -> new int[]{0, 0});
         stats[0]++;
@@ -568,6 +635,7 @@ public class MainActivity extends Activity {
 
     private void showSessionResult() {
         audio.stop();
+        activity.recordSessionCompleted();
         LinearLayout root = column();
         root.setPadding(dp(20), dp(28), dp(20), dp(30));
 
@@ -740,6 +808,7 @@ public class MainActivity extends Activity {
 
     private void enableDictionaryLinks(TextView view, String source) {
         if (source == null || source.isEmpty()) return;
+        if (!"english".equals(QuestionBank.currentPack().subject)) return;
 
         SpannableString span = new SpannableString(source);
         Matcher matcher = Pattern.compile("[A-Za-z][A-Za-z'’-]*").matcher(source);
@@ -1196,6 +1265,13 @@ public class MainActivity extends Activity {
         targetDateButton.setOnClickListener(v -> showTargetDatePicker());
         root.addView(targetDateButton, matchWrap());
 
+        TextView packTitle = text(getString(R.string.content_pack_section), 13, MUTED, Typeface.BOLD);
+        packTitle.setPadding(dp(12), dp(22), dp(12), dp(6));
+        root.addView(packTitle, matchWrap());
+        Button packButton = secondaryButton(QuestionBank.currentPack().title(Locale.getDefault()));
+        packButton.setOnClickListener(v -> showPackPicker());
+        root.addView(packButton, matchWrap());
+
         TextView updatesTitle = text(getString(R.string.updates_section), 13, MUTED, Typeface.BOLD);
         updatesTitle.setPadding(dp(12), dp(22), dp(12), dp(6));
         root.addView(updatesTitle, matchWrap());
@@ -1220,6 +1296,31 @@ public class MainActivity extends Activity {
         });
 
         setScrollable(root);
+    }
+
+    private void showPackPicker() {
+        List<ContentPack> packs = QuestionBank.availablePacks();
+        String[] labels = new String[packs.size()];
+        int selected = 0;
+        for (int i = 0; i < packs.size(); i++) {
+            labels[i] = packs.get(i).title(Locale.getDefault()) + " · "
+                    + packs.get(i).subtitle(Locale.getDefault());
+            if (packs.get(i).id.equals(QuestionBank.currentPack().id)) selected = i;
+        }
+        final int checked = selected;
+        new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.content_pack_section))
+                .setSingleChoiceItems(labels, checked, (dialog, which) -> {
+                    if (which != checked) {
+                        QuestionBank.selectPack(this, packs.get(which).id);
+                        progress = new ProgressStore(this);
+                        trainingTarget = new TrainingTargetStore(this, QuestionBank.currentPack());
+                    }
+                    dialog.dismiss();
+                    showHome();
+                })
+                .setNegativeButton(getString(R.string.dictionary_close), null)
+                .show();
     }
 
     private void highlightEvidence(TextView view, String source, String evidence) {

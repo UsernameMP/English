@@ -50,7 +50,7 @@
           "grade_min": {"type": "integer", "minimum": 1},
           "grade_max": {"type": "integer", "minimum": 1},
           "interaction": {"enum": ["single_choice", "multi_choice", "true_false", "matching", "sequence", "numeric", "free_response"]},
-          "mode": {"enum": ["grammar", "reading", "listening", "story"]},
+          "mode": {"enum": ["practice", "grammar", "reading", "listening", "story"]},
           "skills": {"type": "array", "minItems": 1, "items": {"type": "string"}},
           "tags": {"type": "array", "items": {"type": "string"}},
           "knowledge": {

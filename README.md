@@ -2,6 +2,17 @@
 
 Offline Android trainer for fast preparation for the school stage of the English Olympiad (Tatarstan, 5–6 grades).
 
+## v0.6.4
+
+- the runtime now loads an entitlement-filtered multi-pack catalog and persists pack selection;
+- an original Informatics olympiad pilot proves the renderer and Knowledge Unit model outside English;
+- the adaptive planner now uses Knowledge Atlas prerequisites, not only direct mastery and recent errors;
+- Home shows a short prerequisite-first focus plan;
+- a neutral offline activity calendar stores daily answers, accuracy, XP, crystals, combo and completed sessions without streak punishment;
+- every enabled content pack must pass a machine-checked distribution-rights manifest;
+- a provider-neutral product catalog separates Google Play / App Store / RU-CIS / promo scopes from entitlement decisions and learning code;
+- versionName 0.6.4 / versionCode 11; the package ID, pilot signing chain and direct APK channel remain unchanged.
+
 ## v0.6.3
 
 - XP, crystals and game-session rights are now three separate persistent resources;

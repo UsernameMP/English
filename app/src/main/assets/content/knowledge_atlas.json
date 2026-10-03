@@ -66,6 +66,11 @@
       "from": "ENG.LISTENING.COMPREHENSION",
       "type": "uses",
       "to": "ENG.VOCAB.PERSONAL"
+    },
+    {
+      "from": "CS.ALGORITHMS.COMPLEXITY.INTRO",
+      "type": "requires",
+      "to": "CS.ALGORITHMS.TRACING"
     }
   ]
 }

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "providers": ["pilot", "google_play", "app_store", "ru_cis", "promo"],
+  "products": [
+    {
+      "id": "pilot.all.current",
+      "provider": "pilot",
+      "billing_type": "grant",
+      "checkout_enabled": false,
+      "scope": {
+        "pack_ids": [
+          "english.vsosh.5-6.ru.2026",
+          "informatics.olympiad.5-7.global.2026"
+        ]
+      }
+    },
+    {
+      "id": "international.subject.english.monthly",
+      "provider": "google_play",
+      "billing_type": "subscription",
+      "checkout_enabled": false,
+      "scope": {
+        "subject": "english",
+        "grade_min": 5,
+        "grade_max": 6,
+        "pack_ids": []
+      }
+    },
+    {
+      "id": "ru_cis.informatics.season",
+      "provider": "ru_cis",
+      "billing_type": "subscription",
+      "checkout_enabled": false,
+      "scope": {
+        "subject": "informatics",
+        "grade_min": 5,
+        "grade_max": 7,
+        "pack_ids": []
+      }
+    }
+  ]
+}
