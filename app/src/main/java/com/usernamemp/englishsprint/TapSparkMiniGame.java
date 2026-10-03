@@ -60,7 +60,7 @@ public final class TapSparkMiniGame implements MiniGame {
         tap.setTextColor(Color.WHITE);
         tap.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         tap.setMinHeight(dp(activity, 180));
-        tap.setBackground(Shapes.round(Color.rgb(47, 82, 235), dp(activity, 34), 0, Color.TRANSPARENT));
+        tap.setBackground(round(Color.rgb(47, 82, 235), dp(activity, 34), 0, Color.TRANSPARENT));
         root.addView(tap, new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, dp(activity, 190)));
 
@@ -94,7 +94,7 @@ public final class TapSparkMiniGame implements MiniGame {
             continueButton.setTextSize(18);
             continueButton.setTextColor(Color.WHITE);
             continueButton.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
-            continueButton.setBackground(Shapes.round(Color.rgb(47, 82, 235), dp(activity, 14), 0, Color.TRANSPARENT));
+            continueButton.setBackground(round(Color.rgb(47, 82, 235), dp(activity, 14), 0, Color.TRANSPARENT));
             continueButton.setMinHeight(dp(activity, 58));
             continueButton.setOnClickListener(v -> onFinished.run());
 
@@ -131,6 +131,14 @@ public final class TapSparkMiniGame implements MiniGame {
 
         activity.setContentView(root);
         timer[0].start();
+    }
+
+    private static android.graphics.drawable.GradientDrawable round(int fill, int radius, int strokeWidth, int stroke) {
+        android.graphics.drawable.GradientDrawable g = new android.graphics.drawable.GradientDrawable();
+        g.setColor(fill);
+        g.setCornerRadius(radius);
+        if (strokeWidth > 0) g.setStroke(strokeWidth, stroke);
+        return g;
     }
 
     private static TextView label(Activity activity, String value, float sp, int color, int style) {
