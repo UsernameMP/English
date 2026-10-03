@@ -40,7 +40,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .cache/piper
-          key: piper-en-us-lessac-medium-v1
+          key: piper-en-us-lessac-ryan-medium-v2
 
       - name: Generate offline neural listening WAVs
         run: bash scripts/generate_audio.sh

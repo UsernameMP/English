@@ -8216,7 +8216,9 @@
         "text": null,
         "audio": "audio/listen_01.wav",
         "image": null,
-        "script": "Don't forget your sports clothes tomorrow. We have P.E. before lunch, and your trainers are already in your locker."
+        "script": "Don't forget your sports clothes tomorrow. We have P.E. before lunch, and your trainers are already in your locker.",
+        "voice": "lessac",
+        "pace": "slow"
       },
       "prompt": "What should the boy bring tomorrow?",
       "options": [
@@ -8282,7 +8284,18 @@
         "text": null,
         "audio": "audio/listen_02.wav",
         "image": null,
-        "script": "The film starts at four fifteen. Let's meet outside the cinema at a quarter to four, so we have enough time."
+        "script": "The film starts at four fifteen. Let's meet outside the cinema at a quarter to four, so we have enough time.",
+        "pace": "normal",
+        "segments": [
+          {
+            "voice": "lessac",
+            "text": "The film starts at four fifteen."
+          },
+          {
+            "voice": "ryan",
+            "text": "Let's meet outside the cinema at a quarter to four, so we have enough time."
+          }
+        ]
       },
       "prompt": "What time will they meet?",
       "options": [
@@ -8348,7 +8361,18 @@
         "text": null,
         "audio": "audio/listen_03.wav",
         "image": null,
-        "script": "I thought my notebook was in my school bag, but Dad found it on the kitchen table next to my water bottle."
+        "script": "I thought my notebook was in my school bag. Dad found it on the kitchen table next to my water bottle.",
+        "pace": "normal",
+        "segments": [
+          {
+            "voice": "lessac",
+            "text": "I thought my notebook was in my school bag."
+          },
+          {
+            "voice": "ryan",
+            "text": "Dad found it on the kitchen table next to my water bottle."
+          }
+        ]
       },
       "prompt": "Where is the girl's notebook?",
       "options": [
@@ -8414,7 +8438,9 @@
         "text": null,
         "audio": "audio/listen_04.wav",
         "image": null,
-        "script": "Sorry I'm late. The bus came on time, but I got off at the wrong stop and had to walk back."
+        "script": "Sorry I'm late. The bus came on time, but I got off at the wrong stop and had to walk back.",
+        "voice": "ryan",
+        "pace": "slow"
       },
       "prompt": "Why is Sam late?",
       "options": [
@@ -8480,7 +8506,9 @@
         "text": null,
         "audio": "audio/listen_05.wav",
         "image": null,
-        "script": "I wanted to try swimming, but the class was full. Tennis was too late in the evening, so I joined the art club."
+        "script": "I wanted to try swimming, but the class was full. Tennis was too late in the evening, so I joined the art club.",
+        "voice": "lessac",
+        "pace": "normal"
       },
       "prompt": "Which activity did Emma choose?",
       "options": [
@@ -8546,7 +8574,9 @@
         "text": null,
         "audio": "audio/listen_06.wav",
         "image": null,
-        "script": "It will be sunny in the morning. Clouds will arrive around lunchtime, and by three o'clock we expect rain."
+        "script": "It will be sunny in the morning. Clouds will arrive around lunchtime, and by three o'clock we expect rain.",
+        "voice": "ryan",
+        "pace": "normal"
       },
       "prompt": "What will the weather be like in the afternoon?",
       "options": [
@@ -8612,7 +8642,18 @@
         "text": null,
         "audio": "audio/listen_07.wav",
         "image": null,
-        "script": "We went to the market for strawberries, but they were sold out. We bought apples instead and made a pie."
+        "script": "We went to the market for strawberries, but they were sold out. We bought apples instead and made a pie.",
+        "pace": "slow",
+        "segments": [
+          {
+            "voice": "ryan",
+            "text": "We went to the market for strawberries, but they were sold out."
+          },
+          {
+            "voice": "lessac",
+            "text": "We bought apples instead and made a pie."
+          }
+        ]
       },
       "prompt": "What did the family buy?",
       "options": [
@@ -8678,7 +8719,9 @@
         "text": null,
         "audio": "audio/listen_08.wav",
         "image": null,
-        "script": "Put the green picture in the kitchen. The red one is for my bedroom, and the blue one will look best in the living room."
+        "script": "Put the green picture in the kitchen. The red one is for my bedroom, and the blue one will look best in the living room.",
+        "voice": "ryan",
+        "pace": "normal"
       },
       "prompt": "Which room needs the blue picture?",
       "options": [
@@ -8744,7 +8787,9 @@
         "text": null,
         "audio": "audio/listen_09.wav",
         "image": null,
-        "script": "For tomorrow, read pages twenty to twenty-four. Do not write the answers yet; we will discuss the questions in class."
+        "script": "For tomorrow, read pages twenty to twenty-four. Do not write the answers yet; we will discuss the questions in class.",
+        "voice": "lessac",
+        "pace": "normal"
       },
       "prompt": "What is the homework?",
       "options": [
@@ -8810,7 +8855,18 @@
         "text": null,
         "audio": "audio/listen_10.wav",
         "image": null,
-        "script": "We usually drive to Grandma's house, but the car is at the garage. This time we're taking the train."
+        "script": "We usually drive to Grandma's house. But the car is at the garage. This time we're taking the train.",
+        "pace": "slow",
+        "segments": [
+          {
+            "voice": "ryan",
+            "text": "We usually drive to Grandma's house."
+          },
+          {
+            "voice": "lessac",
+            "text": "But the car is at the garage. This time we're taking the train."
+          }
+        ]
       },
       "prompt": "How will they travel?",
       "options": [
@@ -8876,7 +8932,9 @@
         "text": null,
         "audio": "audio/listen_11.wav",
         "image": null,
-        "script": "I don't want pizza today. The soup looks nice, but I'll have the chicken sandwich because I'm really hungry."
+        "script": "I don't want pizza today. The soup looks nice, but I'll have the chicken sandwich because I'm really hungry.",
+        "voice": "lessac",
+        "pace": "normal"
       },
       "prompt": "What does Lucy want for lunch?",
       "options": [
@@ -8942,7 +9000,18 @@
         "text": null,
         "audio": "audio/listen_12.wav",
         "image": null,
-        "script": "The science test was planned for Tuesday, but the teacher moved it to Thursday because we need one more lesson to revise."
+        "script": "The science test was planned for Tuesday. But the teacher moved it to Thursday because we need one more lesson to revise.",
+        "pace": "normal",
+        "segments": [
+          {
+            "voice": "lessac",
+            "text": "The science test was planned for Tuesday."
+          },
+          {
+            "voice": "ryan",
+            "text": "But the teacher moved it to Thursday because we need one more lesson to revise."
+          }
+        ]
       },
       "prompt": "When is the science test?",
       "options": [

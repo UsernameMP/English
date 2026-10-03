@@ -77,3 +77,8 @@ Use:
 python3 scripts/validate_content.py
 python3 scripts/content_report.py
 ```
+
+
+## Listening audio
+
+Shipping Listening items are generated offline in CI with Piper neural voices and packaged as WAV assets. The current English pack uses two voices (`lessac` and `ryan`), supports per-item pace metadata, and can define multi-speaker `segments` that are concatenated into a single offline asset. CI verifies that dialogue segments reconstruct the canonical script and use at least two voices.
