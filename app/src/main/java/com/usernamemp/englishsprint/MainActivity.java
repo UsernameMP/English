@@ -27,7 +27,9 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
@@ -55,6 +57,11 @@ public class MainActivity extends Activity {
     private int sessionCorrect = 0;
     private String sessionTitle = "";
     private final Map<String, int[]> sessionStats = new HashMap<>();
+    private final Set<String> reinforcementKnowledge = new HashSet<>();
+    private final Set<String> reinforcementQuestionIds = new HashSet<>();
+    private final Random sessionRandom = new Random();
+    private int sessionBestBefore = 0;
+    private boolean newRecordCelebrated = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -213,6 +220,10 @@ public class MainActivity extends Activity {
         questionIndex = 0;
         sessionCorrect = 0;
         sessionStats.clear();
+        reinforcementKnowledge.clear();
+        reinforcementQuestionIds.clear();
+        sessionBestBefore = progress.bestCombo();
+        newRecordCelebrated = false;
         showQuestion();
     }
 
@@ -319,9 +330,22 @@ public class MainActivity extends Activity {
     private void handleAnswer(LinearLayout root, Question q, int chosen,
                               List<Button> buttons, TextView contextView) {
         boolean correct = q.isCorrect(chosen);
+        boolean reinforcement = reinforcementQuestionIds.remove(q.id);
         progress.record(q, correct);
+
+        boolean reinforcementScheduled = !correct && scheduleReinforcement(q);
         RewardFx.Reaction reaction = rewards.reaction(correct, progress.combo());
-        rewards.play(reaction, correct, progress.combo());
+
+        boolean newRecord = correct
+                && !newRecordCelebrated
+                && progress.combo() >= 3
+                && progress.combo() > sessionBestBefore;
+        if (newRecord) {
+            newRecordCelebrated = true;
+            rewards.playNewRecord(progress.combo());
+        } else {
+            rewards.play(reaction, correct, progress.combo());
+        }
         if (correct) sessionCorrect++;
 
         int[] stats = sessionStats.computeIfAbsent(q.skill, k -> new int[]{0, 0});
@@ -357,6 +381,18 @@ public class MainActivity extends Activity {
         TextView reactionLine = text(reaction.subline, 14, INK, Typeface.NORMAL);
         reactionLine.setPadding(0, dp(5), 0, 0);
         feedback.addView(reactionLine);
+
+        if (reinforcementScheduled) {
+            TextView repair = text(getString(R.string.reinforcement_scheduled), 14, PRIMARY, Typeface.BOLD);
+            repair.setPadding(0, dp(8), 0, 0);
+            feedback.addView(repair);
+        }
+
+        if (reinforcement && correct) {
+            TextView reinforced = text(getString(R.string.reinforced), 15, GOOD, Typeface.BOLD);
+            reinforced.setPadding(0, dp(8), 0, 0);
+            feedback.addView(reinforced);
+        }
 
         if (!correct) {
             String quote = rewards.quoteForMistake();
@@ -404,6 +440,34 @@ public class MainActivity extends Activity {
                 ((ScrollView) parent).smoothScrollTo(0, root.getBottom());
             }
         });
+    }
+
+    private boolean scheduleReinforcement(Question wrong) {
+        String knowledgeId = wrong.primaryKnowledgeId();
+        if (knowledgeId == null || knowledgeId.isEmpty() || reinforcementKnowledge.contains(knowledgeId)) {
+            return false;
+        }
+
+        int target = questionIndex + 3 + sessionRandom.nextInt(3);
+        if (target >= session.size()) return false;
+
+        Set<String> usedIds = new HashSet<>();
+        for (Question q : session) usedIds.add(q.id);
+
+        List<Question> candidates = new ArrayList<>();
+        for (Question q : QuestionBank.all()) {
+            if (q.id.equals(wrong.id)) continue;
+            if (usedIds.contains(q.id)) continue;
+            if (knowledgeId.equals(q.primaryKnowledgeId())) candidates.add(q);
+        }
+        if (candidates.isEmpty()) return false;
+
+        Collections.shuffle(candidates, sessionRandom);
+        Question repair = candidates.get(0);
+        session.set(target, repair);
+        reinforcementKnowledge.add(knowledgeId);
+        reinforcementQuestionIds.add(repair.id);
+        return true;
     }
 
     private void showSessionResult() {
@@ -697,6 +761,36 @@ public class MainActivity extends Activity {
                 getSharedPreferences("english_sprint_settings", MODE_PRIVATE)
                         .edit().putBoolean("sound", isChecked).apply());
         root.addView(sound, matchWrap());
+
+        TextView volumeLabel = text(getString(R.string.effects_volume_fmt, rewards.volume()),
+                16, INK, Typeface.BOLD);
+        volumeLabel.setPadding(dp(12), dp(14), dp(12), dp(4));
+        root.addView(volumeLabel, matchWrap());
+
+        android.widget.SeekBar volume = new android.widget.SeekBar(this);
+        volume.setMax(100);
+        volume.setProgress(rewards.volume());
+        volume.setPadding(dp(12), dp(2), dp(12), dp(8));
+        volume.setOnSeekBarChangeListener(new android.widget.SeekBar.OnSeekBarChangeListener() {
+            @Override public void onProgressChanged(android.widget.SeekBar seekBar, int value, boolean fromUser) {
+                volumeLabel.setText(getString(R.string.effects_volume_fmt, value));
+                if (fromUser) rewards.setVolume(value);
+            }
+            @Override public void onStartTrackingTouch(android.widget.SeekBar seekBar) {}
+            @Override public void onStopTrackingTouch(android.widget.SeekBar seekBar) {}
+        });
+        root.addView(volume, matchWrap());
+
+        android.widget.Switch quotes = new android.widget.Switch(this);
+        quotes.setText(getString(R.string.quotes_setting));
+        quotes.setTextSize(17);
+        quotes.setChecked(getSharedPreferences("english_sprint_settings", MODE_PRIVATE)
+                .getBoolean("quotes", true));
+        quotes.setPadding(dp(12), dp(12), dp(12), dp(12));
+        quotes.setOnCheckedChangeListener((buttonView, isChecked) ->
+                getSharedPreferences("english_sprint_settings", MODE_PRIVATE)
+                        .edit().putBoolean("quotes", isChecked).apply());
+        root.addView(quotes, matchWrap());
 
         android.widget.Switch haptic = new android.widget.Switch(this);
         haptic.setText(getString(R.string.haptics));
