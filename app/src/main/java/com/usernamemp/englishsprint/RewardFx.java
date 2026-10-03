@@ -58,11 +58,11 @@ public final class RewardFx {
 
     public Reaction reaction(boolean correct, int combo) {
         if (correct) {
-            if (combo >= 15) return new Reaction("★", "НЕУДЕРЖИМЫЙ", "Серия ×" + combo + ". Это уже режим чемпиона.", true);
+            if (combo >= 15) return new Reaction("🏆", "НЕУДЕРЖИМЫЙ", "Серия ×" + combo + ". Это уже режим чемпиона.", true);
             if (combo >= 10) return new Reaction("⚡", "ЛЕГЕНДА", "10 правильных подряд. Серия ×" + combo, true);
-            if (combo >= 8) return new Reaction("✦", "МАШИНА", "Ни одной ошибки. Серия ×" + combo, true);
-            if (combo >= 5) return new Reaction("▲", "ПЯТЬ ПОДРЯД", "Серия ×" + combo + ". Темп держится.", true);
-            if (combo == 3) return new Reaction("✓", "РАЗОГРЕВ", "Три правильных подряд.", true);
+            if (combo >= 8) return new Reaction("🔥", "МАШИНА", "Ни одной ошибки. Серия ×" + combo, true);
+            if (combo >= 5) return new Reaction("🥊", "ПЯТЬ ПОДРЯД", "Серия ×" + combo + ". Темп держится.", true);
+            if (combo == 3) return new Reaction("👍", "РАЗОГРЕВ", "Три правильных подряд.", true);
             if (combo == 2) return new Reaction("+", "ЕСТЬ СЕРИЯ", "×2", false);
             return new Reaction("+", "ТОЧНО", "+XP", false);
         }
@@ -83,15 +83,11 @@ public final class RewardFx {
         return "“" + q[0] + "”\n" + q[1];
     }
 
-    public void play(boolean correct, int combo) {
-        if (correct) {
-            if (combo == 3 || combo == 5 || combo == 8 || combo == 10 || combo == 15) {
-                majorBurst(reaction(true, combo));
-            } else {
-                smallPulse(reaction(true, combo));
-            }
+    public void play(Reaction reaction, boolean correct, int combo) {
+        if (correct && (combo == 3 || combo == 5 || combo == 8 || combo == 10 || combo == 15)) {
+            majorBurst(reaction);
         } else {
-            smallPulse(reaction(false, 0));
+            smallPulse(reaction);
         }
     }
 
