@@ -41,6 +41,8 @@ if not isinstance(questions, list) or not questions:
     fail("questions must be a non-empty array")
 
 seen = set()
+seen_prompts = {}
+seen_listening_scripts = {}
 supported = {"single_choice"}
 modes = {"grammar", "reading", "listening", "story"}
 skills = set()
@@ -83,6 +85,12 @@ for i, q in enumerate(questions):
     prompt = q.get("prompt")
     if not isinstance(prompt, str) or not prompt.strip():
         fail(f"{qid}: prompt is empty")
+    normalized_prompt = " ".join(prompt.lower().split())
+    knowledge_key = tuple(ref.get("id") for ref in q.get("knowledge", []))
+    duplicate_key = (normalized_prompt, knowledge_key)
+    if duplicate_key in seen_prompts:
+        fail(f"{qid}: duplicate prompt for same knowledge as {seen_prompts[duplicate_key]}")
+    seen_prompts[duplicate_key] = qid
 
     options = q.get("options")
     if not isinstance(options, list) or len(options) < 2:
@@ -112,8 +120,13 @@ for i, q in enumerate(questions):
             fail(f"{qid}: feedback.{field} is required")
 
     review = q.get("review") or {}
-    if review.get("status") != "verified":
-        fail(f"{qid}: only verified questions may ship")
+    if review.get("status") != "published":
+        fail(f"{qid}: only published questions may ship")
+
+    if q.get("subject") != pack.get("subject"):
+        fail(f"{qid}: subject {q.get('subject')!r} does not match pack subject {pack.get('subject')!r}")
+    if q.get("grade_min", 0) < pack.get("grade_min", 0) or q.get("grade_max", 999) > pack.get("grade_max", 999):
+        fail(f"{qid}: grade range falls outside pack range")
 
     stimulus = q.get("stimulus") or {}
     if q.get("mode") == "reading":
@@ -129,6 +142,10 @@ for i, q in enumerate(questions):
             fail(f"{qid}: listening requires stimulus.audio")
         if not stimulus.get("script"):
             fail(f"{qid}: listening requires stimulus.script")
+        normalized_script = " ".join(stimulus["script"].lower().split())
+        if normalized_script in seen_listening_scripts:
+            fail(f"{qid}: duplicate listening script also used by {seen_listening_scripts[normalized_script]}")
+        seen_listening_scripts[normalized_script] = qid
 
 with DICTIONARY.open(encoding="utf-8") as f:
     dictionary = json.load(f)
