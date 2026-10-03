@@ -2,21 +2,20 @@ package com.usernamemp.englishsprint;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.pm.PackageInstaller;
-import android.app.PendingIntent;
 import android.app.ProgressDialog;
-import android.content.Context;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Environment;
 import android.provider.Settings;
 import android.widget.Toast;
 
-import org.json.JSONArray;
+import androidx.core.content.FileProvider;
+
 import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
@@ -56,11 +55,15 @@ public final class UpdateManager {
 
     private static final String UPDATE_MANIFEST =
             "https://raw.githubusercontent.com/UsernameMP/English/apk-dist/latest.json";
+    private static final String PREFS = "english_sprint_updater";
+    private static final String KEY_PENDING_APK = "pending_verified_apk";
 
     private final Activity activity;
+    private final SharedPreferences prefs;
 
     public UpdateManager(Activity activity) {
         this.activity = activity;
+        this.prefs = activity.getSharedPreferences(PREFS, Activity.MODE_PRIVATE);
     }
 
     public void check(Callback callback) {
@@ -103,7 +106,9 @@ public final class UpdateManager {
                 UpdateInfo finalInfo = info;
                 activity.runOnUiThread(() -> callback.onResult(finalInfo, null));
             } catch (Exception e) {
-                String message = e.getMessage() == null ? e.getClass().getSimpleName() : e.getMessage();
+                String message = e.getMessage() == null
+                        ? e.getClass().getSimpleName()
+                        : e.getMessage();
                 activity.runOnUiThread(() -> callback.onResult(null, message));
             } finally {
                 if (connection != null) connection.disconnect();
@@ -126,8 +131,10 @@ public final class UpdateManager {
             }
 
             new AlertDialog.Builder(activity)
-                    .setTitle(activity.getString(R.string.update_available, info.version, info.sizeLabel()))
-                    .setMessage(activity.getString(R.string.update_version_fmt, BuildConfig.VERSION_NAME))
+                    .setTitle(activity.getString(
+                            R.string.update_available, info.version, info.sizeLabel()))
+                    .setMessage(activity.getString(
+                            R.string.update_version_fmt, BuildConfig.VERSION_NAME))
                     .setPositiveButton(activity.getString(R.string.update_download),
                             (d, which) -> downloadAndInstall(info))
                     .setNegativeButton(activity.getString(R.string.dictionary_close), null)
@@ -147,9 +154,10 @@ public final class UpdateManager {
         new Thread(() -> {
             HttpURLConnection connection = null;
             try {
-                File dir = activity.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS);
-                if (dir == null) dir = activity.getCacheDir();
-                if (!dir.exists()) dir.mkdirs();
+                File dir = new File(activity.getCacheDir(), "updates");
+                if (!dir.exists() && !dir.mkdirs()) {
+                    throw new IllegalStateException("Cannot create update cache");
+                }
                 File apk = new File(dir, "english-sprint-update.apk");
 
                 connection = (HttpURLConnection) new URL(info.downloadUrl).openConnection();
@@ -158,7 +166,9 @@ public final class UpdateManager {
                 connection.setInstanceFollowRedirects(true);
                 connection.setRequestProperty("User-Agent", "English-Sprint-Pilot-Updater");
                 int code = connection.getResponseCode();
-                if (code < 200 || code >= 300) throw new IllegalStateException("Download HTTP " + code);
+                if (code < 200 || code >= 300) {
+                    throw new IllegalStateException("Download HTTP " + code);
+                }
                 long total = connection.getContentLengthLong();
 
                 try (InputStream in = new BufferedInputStream(connection.getInputStream());
@@ -190,9 +200,10 @@ public final class UpdateManager {
                     return;
                 }
 
+                prefs.edit().putString(KEY_PENDING_APK, apk.getAbsolutePath()).apply();
                 activity.runOnUiThread(() -> {
                     progress.dismiss();
-                    installApk(apk);
+                    installVerifiedApk(apk);
                 });
             } catch (Exception e) {
                 activity.runOnUiThread(() -> {
@@ -205,6 +216,24 @@ public final class UpdateManager {
         }, "update-download").start();
     }
 
+    public void tryInstallPendingUpdate() {
+        String path = prefs.getString(KEY_PENDING_APK, "");
+        if (path.isEmpty()) return;
+
+        File apk = new File(path);
+        if (!apk.isFile() || !verifyDownloadedApk(apk)) {
+            clearPending();
+            return;
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
+                && !activity.getPackageManager().canRequestPackageInstalls()) {
+            return;
+        }
+
+        installVerifiedApk(apk);
+    }
+
     private boolean verifyDownloadedApk(File apk) {
         try {
             PackageManager pm = activity.getPackageManager();
@@ -214,7 +243,7 @@ public final class UpdateManager {
 
             PackageInfo archive = pm.getPackageArchiveInfo(apk.getAbsolutePath(), flags);
             PackageInfo current = pm.getPackageInfo(activity.getPackageName(), flags);
-            if (archive == null || archive.applicationInfo == null) return false;
+            if (archive == null) return false;
             if (!activity.getPackageName().equals(archive.packageName)) return false;
             if (versionCode(archive) <= versionCode(current)) return false;
 
@@ -226,45 +255,47 @@ public final class UpdateManager {
         }
     }
 
-    private void installApk(File apk) {
+    private void installVerifiedApk(File apk) {
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
                     && !activity.getPackageManager().canRequestPackageInstalls()) {
+                prefs.edit().putString(KEY_PENDING_APK, apk.getAbsolutePath()).apply();
                 Intent settings = new Intent(
                         Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,
                         Uri.parse("package:" + activity.getPackageName()));
                 activity.startActivity(settings);
-                Toast.makeText(activity, R.string.update_enable_installs, Toast.LENGTH_LONG).show();
+                Toast.makeText(
+                        activity,
+                        R.string.update_enable_installs,
+                        Toast.LENGTH_LONG
+                ).show();
                 return;
             }
 
-            PackageInstaller installer = activity.getPackageManager().getPackageInstaller();
-            PackageInstaller.SessionParams params =
-                    new PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL);
-            params.setAppPackageName(activity.getPackageName());
-            int sessionId = installer.createSession(params);
+            Uri uri = FileProvider.getUriForFile(
+                    activity,
+                    activity.getPackageName() + ".fileprovider",
+                    apk
+            );
 
-            try (PackageInstaller.Session session = installer.openSession(sessionId);
-                 InputStream in = new BufferedInputStream(new java.io.FileInputStream(apk));
-                 OutputStream out = session.openWrite("base.apk", 0, apk.length())) {
-                byte[] buffer = new byte[64 * 1024];
-                int read;
-                while ((read = in.read(buffer)) != -1) out.write(buffer, 0, read);
-                session.fsync(out);
+            Intent install = new Intent(Intent.ACTION_VIEW);
+            install.setDataAndType(uri, "application/vnd.android.package-archive");
+            install.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            install.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-                Intent callback = new Intent(activity, UpdateInstallReceiver.class)
-                        .setAction("com.usernamemp.englishsprint.UPDATE_INSTALL");
-                int pendingFlags = PendingIntent.FLAG_UPDATE_CURRENT;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                    pendingFlags |= PendingIntent.FLAG_MUTABLE;
-                }
-                PendingIntent pendingIntent =
-                        PendingIntent.getBroadcast(activity, sessionId, callback, pendingFlags);
-                session.commit(pendingIntent.getIntentSender());
-            }
+            clearPending();
+            activity.startActivity(install);
+        } catch (ActivityNotFoundException e) {
+            prefs.edit().putString(KEY_PENDING_APK, apk.getAbsolutePath()).apply();
+            message(activity.getString(R.string.update_installer_missing));
         } catch (Exception e) {
+            prefs.edit().putString(KEY_PENDING_APK, apk.getAbsolutePath()).apply();
             message(activity.getString(R.string.update_failed));
         }
+    }
+
+    private void clearPending() {
+        prefs.edit().remove(KEY_PENDING_APK).apply();
     }
 
     private static long versionCode(PackageInfo info) {

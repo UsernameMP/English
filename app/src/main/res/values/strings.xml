@@ -123,11 +123,12 @@
     <string name="update_download">Download &amp; install</string>
     <string name="update_downloading">Downloading update…</string>
     <string name="update_bad_apk">Downloaded APK failed package/signature/version verification.</string>
-    <string name="update_enable_installs">Allow English Sprint to install updates, then tap update again.</string>
     <string name="update_failed">Update check/download failed. Try again.</string>
     <string name="update_version_fmt">Installed: %1$s</string>
     <string name="update_button_available">⬇ %1$s</string>
     <string name="dictionary_loading">Looking up “%1$s”…</string>
     <string name="dictionary_unavailable">Definition unavailable offline. You can try again when Internet is available.</string>
     <string name="updates_section">UPDATES</string>
+    <string name="update_enable_installs">Allow English Sprint to install apps. When you return, the verified update installer will open automatically.</string>
+    <string name="update_installer_missing">Android package installer could not be opened on this device.</string>
 </resources>
