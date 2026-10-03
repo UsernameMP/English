@@ -54,8 +54,8 @@ public final class UpdateManager {
         void onResult(UpdateInfo info, String error);
     }
 
-    private static final String RELEASE_API =
-            "https://api.github.com/repos/UsernameMP/English/releases/latest";
+    private static final String UPDATE_MANIFEST =
+            "https://raw.githubusercontent.com/UsernameMP/English/apk-dist/latest.json";
 
     private final Activity activity;
 
@@ -67,10 +67,10 @@ public final class UpdateManager {
         new Thread(() -> {
             HttpURLConnection connection = null;
             try {
-                connection = (HttpURLConnection) new URL(RELEASE_API).openConnection();
+                connection = (HttpURLConnection) new URL(UPDATE_MANIFEST).openConnection();
                 connection.setConnectTimeout(8000);
                 connection.setReadTimeout(8000);
-                connection.setRequestProperty("Accept", "application/vnd.github+json");
+                connection.setRequestProperty("Accept", "application/json");
                 connection.setRequestProperty("User-Agent", "English-Sprint-Pilot-Updater");
                 int code = connection.getResponseCode();
                 if (code != 200) throw new IllegalStateException("GitHub HTTP " + code);
@@ -81,25 +81,23 @@ public final class UpdateManager {
                 }
 
                 JSONObject root = new JSONObject(json);
-                String tag = root.optString("tag_name", "");
-                String version = normalizeTag(tag);
-                JSONArray assets = root.optJSONArray("assets");
-                String url = "";
-                long size = 0;
-                if (assets != null) {
-                    for (int i = 0; i < assets.length(); i++) {
-                        JSONObject asset = assets.getJSONObject(i);
-                        String name = asset.optString("name", "");
-                        if (name.endsWith(".apk")) {
-                            url = asset.optString("browser_download_url", "");
-                            size = asset.optLong("size", 0);
-                            break;
-                        }
-                    }
+                String version = root.optString("versionName", "");
+                long remoteCode = root.optLong("versionCode", 0);
+                String url = root.optString("apkUrl", "");
+                long size = root.optLong("sizeBytes", 0);
+
+                long currentCode;
+                try {
+                    PackageInfo self = activity.getPackageManager()
+                            .getPackageInfo(activity.getPackageName(), 0);
+                    currentCode = versionCode(self);
+                } catch (Exception e) {
+                    currentCode = 0;
                 }
 
                 UpdateInfo info = null;
-                if (!url.isEmpty() && compareVersions(version, BuildConfig.VERSION_NAME) > 0) {
+                if (!url.isEmpty() && remoteCode > currentCode
+                        && compareVersions(version, BuildConfig.VERSION_NAME) >= 0) {
                     info = new UpdateInfo(version, url, size);
                 }
                 UpdateInfo finalInfo = info;
@@ -299,13 +297,6 @@ public final class UpdateManager {
         StringBuilder out = new StringBuilder();
         for (byte b : bytes) out.append(String.format(Locale.US, "%02x", b & 0xff));
         return out.toString();
-    }
-
-    private static String normalizeTag(String tag) {
-        String value = tag == null ? "" : tag.trim();
-        value = value.replaceFirst("^pilot-v", "");
-        value = value.replaceFirst("^v", "");
-        return value;
     }
 
     private static int compareVersions(String a, String b) {
