@@ -1,0 +1,6 @@
+{
+  "schema_version": "1.0",
+  "questions_per_credit": 10,
+  "max_balance": 5,
+  "game_session_cost": 1
+}
