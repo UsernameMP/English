@@ -63,11 +63,13 @@ public final class TrainingTargetStore {
     }
 
     public String summary() {
+        boolean ru = "ru".equals(Locale.getDefault().getLanguage());
+        String gradeLabel = ru ? grade() + " класс" : "Grade " + grade();
         if (MODE_GENERAL.equals(mode())) {
-            return subject() + " · Grade " + grade();
+            return subject() + " · " + gradeLabel;
         }
         String base = competition().isEmpty() ? subject() : competition();
-        return base + " · Grade " + grade() + (region().isEmpty() ? "" : " · " + region());
+        return base + " · " + gradeLabel + (region().isEmpty() ? "" : " · " + region());
     }
 
     private void initializeDefaults(Context context, ContentPack pack) {
