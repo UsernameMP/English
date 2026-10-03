@@ -63,3 +63,17 @@ The runtime selects the device/app locale, then falls back to English, Russian, 
 English packs may ship an offline learner dictionary in `assets/content/dictionary_en.json`. Known words become tappable in task text. A learner can save a word locally; saved words are then eligible for vocabulary questions mixed into adaptive quick sessions.
 
 Dictionary entries support forms/inflections, phonetics, localized translations/definitions and an example sentence. The dictionary is validated in CI together with the question bank.
+
+
+## Publishing workflow
+
+Content moves through `draft → review → verified → published`. Only `published` questions may be packaged into a release build.
+
+CI rejects duplicate IDs, duplicate prompts for the same knowledge unit, invalid answer references, missing explanations, broken Reading evidence spans, duplicate Listening scripts, pack/grade mismatches, unknown Knowledge Unit IDs and malformed dictionary entries.
+
+Use:
+
+```bash
+python3 scripts/validate_content.py
+python3 scripts/content_report.py
+```
