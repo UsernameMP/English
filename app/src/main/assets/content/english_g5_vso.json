@@ -1,0 +1,7521 @@
+{
+  "schema_version": "1.0",
+  "bank_id": "english-vsosh-5-6-ru-rt",
+  "title": "English Sprint · VSOSh 5–6",
+  "locale": "en-RU",
+  "content_version": "0.3.0",
+  "questions": [
+    {
+      "id": "be_001",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "be"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "I ___ ten years old.",
+      "options": [
+        {
+          "id": "a",
+          "text": "am"
+        },
+        {
+          "id": "b",
+          "text": "is"
+        },
+        {
+          "id": "c",
+          "text": "are"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Выбери форму to be по подлежащему.",
+        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
+        "rule": "to be согласуется с подлежащим."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "be_002",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "be"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "My sister ___ at school.",
+      "options": [
+        {
+          "id": "a",
+          "text": "am"
+        },
+        {
+          "id": "b",
+          "text": "is"
+        },
+        {
+          "id": "c",
+          "text": "are"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Выбери форму to be по подлежащему.",
+        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
+        "rule": "to be согласуется с подлежащим."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "be_003",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "be"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "We ___ ready.",
+      "options": [
+        {
+          "id": "a",
+          "text": "am"
+        },
+        {
+          "id": "b",
+          "text": "is"
+        },
+        {
+          "id": "c",
+          "text": "are"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Выбери форму to be по подлежащему.",
+        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
+        "rule": "to be согласуется с подлежащим."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "be_004",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "be"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "The dogs ___ hungry.",
+      "options": [
+        {
+          "id": "a",
+          "text": "am"
+        },
+        {
+          "id": "b",
+          "text": "is"
+        },
+        {
+          "id": "c",
+          "text": "are"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Выбери форму to be по подлежащему.",
+        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
+        "rule": "to be согласуется с подлежащим."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "be_005",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "be"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "It ___ cold today.",
+      "options": [
+        {
+          "id": "a",
+          "text": "am"
+        },
+        {
+          "id": "b",
+          "text": "is"
+        },
+        {
+          "id": "c",
+          "text": "are"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Выбери форму to be по подлежащему.",
+        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
+        "rule": "to be согласуется с подлежащим."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "be_006",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "be"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "You ___ my best friend.",
+      "options": [
+        {
+          "id": "a",
+          "text": "am"
+        },
+        {
+          "id": "b",
+          "text": "is"
+        },
+        {
+          "id": "c",
+          "text": "are"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Выбери форму to be по подлежащему.",
+        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
+        "rule": "to be согласуется с подлежащим."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "be_007",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "be"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Yesterday I ___ tired.",
+      "options": [
+        {
+          "id": "a",
+          "text": "was"
+        },
+        {
+          "id": "b",
+          "text": "were"
+        },
+        {
+          "id": "c",
+          "text": "am"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Выбери форму to be по подлежащему.",
+        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
+        "rule": "to be согласуется с подлежащим."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "be_008",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "be"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "They ___ at the cinema last night.",
+      "options": [
+        {
+          "id": "a",
+          "text": "was"
+        },
+        {
+          "id": "b",
+          "text": "were"
+        },
+        {
+          "id": "c",
+          "text": "are"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Выбери форму to be по подлежащему.",
+        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
+        "rule": "to be согласуется с подлежащим."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "be_009",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "be"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "The weather ___ sunny on Sunday.",
+      "options": [
+        {
+          "id": "a",
+          "text": "was"
+        },
+        {
+          "id": "b",
+          "text": "were"
+        },
+        {
+          "id": "c",
+          "text": "is"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Выбери форму to be по подлежащему.",
+        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
+        "rule": "to be согласуется с подлежащим."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "be_010",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "be"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "We ___ late for school.",
+      "options": [
+        {
+          "id": "a",
+          "text": "was"
+        },
+        {
+          "id": "b",
+          "text": "were"
+        },
+        {
+          "id": "c",
+          "text": "are"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Выбери форму to be по подлежащему.",
+        "full": "I → am; he/she/it → is; you/we/they → are. В прошлом: I/he/she/it → was; you/we/they → were.",
+        "rule": "to be согласуется с подлежащим."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "have_has_011",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "have_has"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "I ___ a blue backpack.",
+      "options": [
+        {
+          "id": "a",
+          "text": "have"
+        },
+        {
+          "id": "b",
+          "text": "has"
+        },
+        {
+          "id": "c",
+          "text": "am"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Смотри на подлежащее.",
+        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
+        "rule": "he/she/it → has; остальные → have."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "have_has_012",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "have_has"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "She ___ two brothers.",
+      "options": [
+        {
+          "id": "a",
+          "text": "have"
+        },
+        {
+          "id": "b",
+          "text": "has"
+        },
+        {
+          "id": "c",
+          "text": "is"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Смотри на подлежащее.",
+        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
+        "rule": "he/she/it → has; остальные → have."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "have_has_013",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "have_has"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "My dog ___ long ears.",
+      "options": [
+        {
+          "id": "a",
+          "text": "have"
+        },
+        {
+          "id": "b",
+          "text": "has"
+        },
+        {
+          "id": "c",
+          "text": "is"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Смотри на подлежащее.",
+        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
+        "rule": "he/she/it → has; остальные → have."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "have_has_014",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "have_has"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "We ___ English on Monday.",
+      "options": [
+        {
+          "id": "a",
+          "text": "have"
+        },
+        {
+          "id": "b",
+          "text": "has"
+        },
+        {
+          "id": "c",
+          "text": "are"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Смотри на подлежащее.",
+        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
+        "rule": "he/she/it → has; остальные → have."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "have_has_015",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "have_has"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Peter and Ann ___ a new teacher.",
+      "options": [
+        {
+          "id": "a",
+          "text": "have"
+        },
+        {
+          "id": "b",
+          "text": "has"
+        },
+        {
+          "id": "c",
+          "text": "are"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Смотри на подлежащее.",
+        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
+        "rule": "he/she/it → has; остальные → have."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "have_has_016",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "have_has"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "The house ___ three windows.",
+      "options": [
+        {
+          "id": "a",
+          "text": "have"
+        },
+        {
+          "id": "b",
+          "text": "has"
+        },
+        {
+          "id": "c",
+          "text": "is"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Смотри на подлежащее.",
+        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
+        "rule": "he/she/it → has; остальные → have."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "have_has_017",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "have_has"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "You ___ a good idea.",
+      "options": [
+        {
+          "id": "a",
+          "text": "have"
+        },
+        {
+          "id": "b",
+          "text": "has"
+        },
+        {
+          "id": "c",
+          "text": "are"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Смотри на подлежащее.",
+        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
+        "rule": "he/she/it → has; остальные → have."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "have_has_018",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "have_has"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "His friend ___ a bicycle.",
+      "options": [
+        {
+          "id": "a",
+          "text": "have"
+        },
+        {
+          "id": "b",
+          "text": "has"
+        },
+        {
+          "id": "c",
+          "text": "is"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Смотри на подлежащее.",
+        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
+        "rule": "he/she/it → has; остальные → have."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "have_has_019",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "have_has"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "These books ___ colourful pictures.",
+      "options": [
+        {
+          "id": "a",
+          "text": "have"
+        },
+        {
+          "id": "b",
+          "text": "has"
+        },
+        {
+          "id": "c",
+          "text": "are"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Смотри на подлежащее.",
+        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
+        "rule": "he/she/it → has; остальные → have."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "have_has_020",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "have_has"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "My mum ___ a meeting today.",
+      "options": [
+        {
+          "id": "a",
+          "text": "have"
+        },
+        {
+          "id": "b",
+          "text": "has"
+        },
+        {
+          "id": "c",
+          "text": "is"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Смотри на подлежащее.",
+        "full": "I/you/we/they используют have. He/she/it и одно лицо или предмет в единственном числе используют has.",
+        "rule": "he/she/it → has; остальные → have."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "do_does_021",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "do_does"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "___ you like chess?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Do"
+        },
+        {
+          "id": "b",
+          "text": "Does"
+        },
+        {
+          "id": "c",
+          "text": "Are"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
+        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
+        "rule": "do: I/you/we/they; does: he/she/it."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "do_does_022",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "do_does"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "___ Kate play tennis?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Do"
+        },
+        {
+          "id": "b",
+          "text": "Does"
+        },
+        {
+          "id": "c",
+          "text": "Is"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
+        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
+        "rule": "do: I/you/we/they; does: he/she/it."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "do_does_023",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "do_does"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "___ they live near school?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Do"
+        },
+        {
+          "id": "b",
+          "text": "Does"
+        },
+        {
+          "id": "c",
+          "text": "Are"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
+        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
+        "rule": "do: I/you/we/they; does: he/she/it."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "do_does_024",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "do_does"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "___ your brother read comics?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Do"
+        },
+        {
+          "id": "b",
+          "text": "Does"
+        },
+        {
+          "id": "c",
+          "text": "Is"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
+        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
+        "rule": "do: I/you/we/they; does: he/she/it."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "do_does_025",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "do_does"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "I ___ not watch TV in the morning.",
+      "options": [
+        {
+          "id": "a",
+          "text": "do"
+        },
+        {
+          "id": "b",
+          "text": "does"
+        },
+        {
+          "id": "c",
+          "text": "am"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
+        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
+        "rule": "do: I/you/we/they; does: he/she/it."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "do_does_026",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "do_does"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "He ___ not eat meat.",
+      "options": [
+        {
+          "id": "a",
+          "text": "do"
+        },
+        {
+          "id": "b",
+          "text": "does"
+        },
+        {
+          "id": "c",
+          "text": "is"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
+        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
+        "rule": "do: I/you/we/they; does: he/she/it."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "do_does_027",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "do_does"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "What ___ she do after school?",
+      "options": [
+        {
+          "id": "a",
+          "text": "do"
+        },
+        {
+          "id": "b",
+          "text": "does"
+        },
+        {
+          "id": "c",
+          "text": "is"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
+        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
+        "rule": "do: I/you/we/they; does: he/she/it."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "do_does_028",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "do_does"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Where ___ your friends meet?",
+      "options": [
+        {
+          "id": "a",
+          "text": "do"
+        },
+        {
+          "id": "b",
+          "text": "does"
+        },
+        {
+          "id": "c",
+          "text": "are"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "В вопросе Present Simple нужен вспомогательный глагол.",
+        "full": "Do используется с I/you/we/they. Does — с he/she/it. После does основной глагол остаётся без -s.",
+        "rule": "do: I/you/we/they; does: he/she/it."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "articles_029",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "articles"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "I can see ___ cat in the garden.",
+      "options": [
+        {
+          "id": "a",
+          "text": "a"
+        },
+        {
+          "id": "b",
+          "text": "an"
+        },
+        {
+          "id": "c",
+          "text": "the"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Смотри на звук и на то, конкретный ли предмет.",
+        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
+        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "articles_030",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "articles"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "She has ___ orange umbrella.",
+      "options": [
+        {
+          "id": "a",
+          "text": "a"
+        },
+        {
+          "id": "b",
+          "text": "an"
+        },
+        {
+          "id": "c",
+          "text": "the"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Смотри на звук и на то, конкретный ли предмет.",
+        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
+        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "articles_031",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "articles"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Close ___ door, please.",
+      "options": [
+        {
+          "id": "a",
+          "text": "a"
+        },
+        {
+          "id": "b",
+          "text": "an"
+        },
+        {
+          "id": "c",
+          "text": "the"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Смотри на звук и на то, конкретный ли предмет.",
+        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
+        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "articles_032",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "articles"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "My dad is ___ engineer.",
+      "options": [
+        {
+          "id": "a",
+          "text": "a"
+        },
+        {
+          "id": "b",
+          "text": "an"
+        },
+        {
+          "id": "c",
+          "text": "the"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Смотри на звук и на то, конкретный ли предмет.",
+        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
+        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "articles_033",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "articles"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "We saw ___ moon last night.",
+      "options": [
+        {
+          "id": "a",
+          "text": "a"
+        },
+        {
+          "id": "b",
+          "text": "an"
+        },
+        {
+          "id": "c",
+          "text": "the"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Смотри на звук и на то, конкретный ли предмет.",
+        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
+        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "articles_034",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "articles"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "He wants ___ new computer.",
+      "options": [
+        {
+          "id": "a",
+          "text": "a"
+        },
+        {
+          "id": "b",
+          "text": "an"
+        },
+        {
+          "id": "c",
+          "text": "the"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Смотри на звук и на то, конкретный ли предмет.",
+        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
+        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "articles_035",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "articles"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "There is ___ apple on the table.",
+      "options": [
+        {
+          "id": "a",
+          "text": "a"
+        },
+        {
+          "id": "b",
+          "text": "an"
+        },
+        {
+          "id": "c",
+          "text": "the"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Смотри на звук и на то, конкретный ли предмет.",
+        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
+        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "articles_036",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "articles"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "___ sun is very bright today.",
+      "options": [
+        {
+          "id": "a",
+          "text": "A"
+        },
+        {
+          "id": "b",
+          "text": "An"
+        },
+        {
+          "id": "c",
+          "text": "The"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Смотри на звук и на то, конкретный ли предмет.",
+        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
+        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "articles_037",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "articles"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "I need ___ hour to finish this.",
+      "options": [
+        {
+          "id": "a",
+          "text": "a"
+        },
+        {
+          "id": "b",
+          "text": "an"
+        },
+        {
+          "id": "c",
+          "text": "the"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Смотри на звук и на то, конкретный ли предмет.",
+        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
+        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "articles_038",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "articles"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "She is reading ___ book I gave her.",
+      "options": [
+        {
+          "id": "a",
+          "text": "a"
+        },
+        {
+          "id": "b",
+          "text": "an"
+        },
+        {
+          "id": "c",
+          "text": "the"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Смотри на звук и на то, конкретный ли предмет.",
+        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
+        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "articles_039",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "articles"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "He bought ___ sandwich for lunch.",
+      "options": [
+        {
+          "id": "a",
+          "text": "a"
+        },
+        {
+          "id": "b",
+          "text": "an"
+        },
+        {
+          "id": "c",
+          "text": "the"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Смотри на звук и на то, конкретный ли предмет.",
+        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
+        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "articles_040",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "articles"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "This is ___ easiest task.",
+      "options": [
+        {
+          "id": "a",
+          "text": "a"
+        },
+        {
+          "id": "b",
+          "text": "an"
+        },
+        {
+          "id": "c",
+          "text": "the"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Смотри на звук и на то, конкретный ли предмет.",
+        "full": "a ставится перед согласным звуком, an — перед гласным звуком. the — когда предмет конкретный, уже известный или уникальный.",
+        "rule": "a + consonant sound; an + vowel sound; the + specific/unique."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "pronouns_041",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "pronouns"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Anna is my friend. I see ___ every day.",
+      "options": [
+        {
+          "id": "a",
+          "text": "she"
+        },
+        {
+          "id": "b",
+          "text": "her"
+        },
+        {
+          "id": "c",
+          "text": "hers"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Нужна правильная форма местоимения.",
+        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
+        "rule": "Форма местоимения зависит от роли в предложении."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "pronouns_042",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "pronouns"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "This is Tom. ___ bike is red.",
+      "options": [
+        {
+          "id": "a",
+          "text": "He"
+        },
+        {
+          "id": "b",
+          "text": "Him"
+        },
+        {
+          "id": "c",
+          "text": "His"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Нужна правильная форма местоимения.",
+        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
+        "rule": "Форма местоимения зависит от роли в предложении."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "pronouns_043",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "pronouns"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "My parents are at home. ___ are cooking dinner.",
+      "options": [
+        {
+          "id": "a",
+          "text": "They"
+        },
+        {
+          "id": "b",
+          "text": "Them"
+        },
+        {
+          "id": "c",
+          "text": "Their"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Нужна правильная форма местоимения.",
+        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
+        "rule": "Форма местоимения зависит от роли в предложении."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "pronouns_044",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "pronouns"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "We have a dog. ___ name is Lucky.",
+      "options": [
+        {
+          "id": "a",
+          "text": "It"
+        },
+        {
+          "id": "b",
+          "text": "Its"
+        },
+        {
+          "id": "c",
+          "text": "It's"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Нужна правильная форма местоимения.",
+        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
+        "rule": "Форма местоимения зависит от роли в предложении."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "pronouns_045",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "pronouns"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Can you help ___?",
+      "options": [
+        {
+          "id": "a",
+          "text": "I"
+        },
+        {
+          "id": "b",
+          "text": "me"
+        },
+        {
+          "id": "c",
+          "text": "my"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Нужна правильная форма местоимения.",
+        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
+        "rule": "Форма местоимения зависит от роли в предложении."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "pronouns_046",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "pronouns"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "These pencils belong to Kate and me. They are ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "our"
+        },
+        {
+          "id": "b",
+          "text": "us"
+        },
+        {
+          "id": "c",
+          "text": "ours"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Нужна правильная форма местоимения.",
+        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
+        "rule": "Форма местоимения зависит от роли в предложении."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "pronouns_047",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "pronouns"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Jack called Anna and ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "I"
+        },
+        {
+          "id": "b",
+          "text": "me"
+        },
+        {
+          "id": "c",
+          "text": "my"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Нужна правильная форма местоимения.",
+        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
+        "rule": "Форма местоимения зависит от роли в предложении."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "pronouns_048",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "pronouns"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "This is not my coat. ___ is blue.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Mine"
+        },
+        {
+          "id": "b",
+          "text": "My"
+        },
+        {
+          "id": "c",
+          "text": "Me"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Нужна правильная форма местоимения.",
+        "full": "После глагола обычно object form: me/him/her/us/them. Перед существительным — my/his/her/our/their. Самостоятельно: mine/his/hers/ours/theirs.",
+        "rule": "Форма местоимения зависит от роли в предложении."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_simple_049",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "My brother ___ football every Saturday.",
+      "options": [
+        {
+          "id": "a",
+          "text": "play"
+        },
+        {
+          "id": "b",
+          "text": "plays"
+        },
+        {
+          "id": "c",
+          "text": "is playing"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Это привычка или факт.",
+        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
+        "rule": "habit/fact → Present Simple."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_simple_050",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "I usually ___ breakfast at seven.",
+      "options": [
+        {
+          "id": "a",
+          "text": "have"
+        },
+        {
+          "id": "b",
+          "text": "has"
+        },
+        {
+          "id": "c",
+          "text": "am having"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Это привычка или факт.",
+        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
+        "rule": "habit/fact → Present Simple."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_simple_051",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Cats ___ milk.",
+      "options": [
+        {
+          "id": "a",
+          "text": "likes"
+        },
+        {
+          "id": "b",
+          "text": "like"
+        },
+        {
+          "id": "c",
+          "text": "are liking"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Это привычка или факт.",
+        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
+        "rule": "habit/fact → Present Simple."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_simple_052",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "She ___ to school by bus.",
+      "options": [
+        {
+          "id": "a",
+          "text": "go"
+        },
+        {
+          "id": "b",
+          "text": "goes"
+        },
+        {
+          "id": "c",
+          "text": "is going"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Это привычка или факт.",
+        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
+        "rule": "habit/fact → Present Simple."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_simple_053",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "We ___ English twice a week.",
+      "options": [
+        {
+          "id": "a",
+          "text": "study"
+        },
+        {
+          "id": "b",
+          "text": "studies"
+        },
+        {
+          "id": "c",
+          "text": "are studying"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Это привычка или факт.",
+        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
+        "rule": "habit/fact → Present Simple."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_simple_054",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "The shop ___ at nine.",
+      "options": [
+        {
+          "id": "a",
+          "text": "open"
+        },
+        {
+          "id": "b",
+          "text": "opens"
+        },
+        {
+          "id": "c",
+          "text": "is opening"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Это привычка или факт.",
+        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
+        "rule": "habit/fact → Present Simple."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_simple_055",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Dad always ___ coffee in the morning.",
+      "options": [
+        {
+          "id": "a",
+          "text": "drink"
+        },
+        {
+          "id": "b",
+          "text": "drinks"
+        },
+        {
+          "id": "c",
+          "text": "is drinking"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Это привычка или факт.",
+        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
+        "rule": "habit/fact → Present Simple."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_simple_056",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "They often ___ in the park.",
+      "options": [
+        {
+          "id": "a",
+          "text": "walk"
+        },
+        {
+          "id": "b",
+          "text": "walks"
+        },
+        {
+          "id": "c",
+          "text": "are walking"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Это привычка или факт.",
+        "full": "Present Simple описывает регулярные действия и факты. С he/she/it к глаголу обычно добавляется -s/-es.",
+        "rule": "habit/fact → Present Simple."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_continuous_057",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_continuous"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Look! The baby ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "sleeps"
+        },
+        {
+          "id": "b",
+          "text": "is sleeping"
+        },
+        {
+          "id": "c",
+          "text": "sleep"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие происходит прямо сейчас.",
+        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
+        "rule": "now → am/is/are + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_continuous_058",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_continuous"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "We ___ dinner right now.",
+      "options": [
+        {
+          "id": "a",
+          "text": "have"
+        },
+        {
+          "id": "b",
+          "text": "are having"
+        },
+        {
+          "id": "c",
+          "text": "has"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие происходит прямо сейчас.",
+        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
+        "rule": "now → am/is/are + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_continuous_059",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_continuous"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Listen! Someone ___ the piano.",
+      "options": [
+        {
+          "id": "a",
+          "text": "plays"
+        },
+        {
+          "id": "b",
+          "text": "is playing"
+        },
+        {
+          "id": "c",
+          "text": "play"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие происходит прямо сейчас.",
+        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
+        "rule": "now → am/is/are + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_continuous_060",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_continuous"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "I ___ my homework at the moment.",
+      "options": [
+        {
+          "id": "a",
+          "text": "do"
+        },
+        {
+          "id": "b",
+          "text": "am doing"
+        },
+        {
+          "id": "c",
+          "text": "does"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие происходит прямо сейчас.",
+        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
+        "rule": "now → am/is/are + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_continuous_061",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_continuous"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "The children ___ outside now.",
+      "options": [
+        {
+          "id": "a",
+          "text": "run"
+        },
+        {
+          "id": "b",
+          "text": "are running"
+        },
+        {
+          "id": "c",
+          "text": "runs"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие происходит прямо сейчас.",
+        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
+        "rule": "now → am/is/are + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_continuous_062",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_continuous"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Why ___ you laughing?",
+      "options": [
+        {
+          "id": "a",
+          "text": "do"
+        },
+        {
+          "id": "b",
+          "text": "are"
+        },
+        {
+          "id": "c",
+          "text": "is"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие происходит прямо сейчас.",
+        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
+        "rule": "now → am/is/are + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_continuous_063",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_continuous"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Mum ___ on the phone now.",
+      "options": [
+        {
+          "id": "a",
+          "text": "talks"
+        },
+        {
+          "id": "b",
+          "text": "is talking"
+        },
+        {
+          "id": "c",
+          "text": "talk"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие происходит прямо сейчас.",
+        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
+        "rule": "now → am/is/are + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "present_continuous_064",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "present_continuous"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "They ___ for the bus at the moment.",
+      "options": [
+        {
+          "id": "a",
+          "text": "wait"
+        },
+        {
+          "id": "b",
+          "text": "are waiting"
+        },
+        {
+          "id": "c",
+          "text": "waits"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие происходит прямо сейчас.",
+        "full": "Present Continuous строится как am/is/are + verb-ing. Маркеры: now, right now, at the moment, Look!, Listen!",
+        "rule": "now → am/is/are + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_simple_065",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Yesterday we ___ to the zoo.",
+      "options": [
+        {
+          "id": "a",
+          "text": "go"
+        },
+        {
+          "id": "b",
+          "text": "went"
+        },
+        {
+          "id": "c",
+          "text": "gone"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие уже закончилось.",
+        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
+        "rule": "finished past action → V2 / -ed."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_simple_066",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "She ___ a funny story last night.",
+      "options": [
+        {
+          "id": "a",
+          "text": "tells"
+        },
+        {
+          "id": "b",
+          "text": "told"
+        },
+        {
+          "id": "c",
+          "text": "tell"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие уже закончилось.",
+        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
+        "rule": "finished past action → V2 / -ed."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_simple_067",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "I ___ my keys this morning.",
+      "options": [
+        {
+          "id": "a",
+          "text": "lose"
+        },
+        {
+          "id": "b",
+          "text": "lost"
+        },
+        {
+          "id": "c",
+          "text": "losed"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие уже закончилось.",
+        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
+        "rule": "finished past action → V2 / -ed."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_simple_068",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "They ___ a film on Friday.",
+      "options": [
+        {
+          "id": "a",
+          "text": "watch"
+        },
+        {
+          "id": "b",
+          "text": "watched"
+        },
+        {
+          "id": "c",
+          "text": "watching"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие уже закончилось.",
+        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
+        "rule": "finished past action → V2 / -ed."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_simple_069",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Tom ___ breakfast at eight.",
+      "options": [
+        {
+          "id": "a",
+          "text": "eat"
+        },
+        {
+          "id": "b",
+          "text": "ate"
+        },
+        {
+          "id": "c",
+          "text": "eaten"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие уже закончилось.",
+        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
+        "rule": "finished past action → V2 / -ed."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_simple_070",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "My friend ___ me after school.",
+      "options": [
+        {
+          "id": "a",
+          "text": "called"
+        },
+        {
+          "id": "b",
+          "text": "calls"
+        },
+        {
+          "id": "c",
+          "text": "calling"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Действие уже закончилось.",
+        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
+        "rule": "finished past action → V2 / -ed."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_simple_071",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "We ___ a snowman yesterday.",
+      "options": [
+        {
+          "id": "a",
+          "text": "make"
+        },
+        {
+          "id": "b",
+          "text": "made"
+        },
+        {
+          "id": "c",
+          "text": "maked"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие уже закончилось.",
+        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
+        "rule": "finished past action → V2 / -ed."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_simple_072",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "The lesson ___ at ten.",
+      "options": [
+        {
+          "id": "a",
+          "text": "start"
+        },
+        {
+          "id": "b",
+          "text": "started"
+        },
+        {
+          "id": "c",
+          "text": "starts"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие уже закончилось.",
+        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
+        "rule": "finished past action → V2 / -ed."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_simple_073",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "He ___ a letter last week.",
+      "options": [
+        {
+          "id": "a",
+          "text": "wrote"
+        },
+        {
+          "id": "b",
+          "text": "write"
+        },
+        {
+          "id": "c",
+          "text": "written"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Действие уже закончилось.",
+        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
+        "rule": "finished past action → V2 / -ed."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_simple_074",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_simple"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "I ___ the answer immediately.",
+      "options": [
+        {
+          "id": "a",
+          "text": "knew"
+        },
+        {
+          "id": "b",
+          "text": "know"
+        },
+        {
+          "id": "c",
+          "text": "known"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Действие уже закончилось.",
+        "full": "Past Simple используется для завершённого действия в прошлом. У неправильных глаголов нужно знать вторую форму: go→went, eat→ate, make→made.",
+        "rule": "finished past action → V2 / -ed."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_continuous_075",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_continuous"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "At 7 p.m. I ___ my homework.",
+      "options": [
+        {
+          "id": "a",
+          "text": "did"
+        },
+        {
+          "id": "b",
+          "text": "was doing"
+        },
+        {
+          "id": "c",
+          "text": "am doing"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие шло в определённый момент прошлого.",
+        "full": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple.",
+        "rule": "was/were + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_continuous_076",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_continuous"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "They ___ football when it started to rain.",
+      "options": [
+        {
+          "id": "a",
+          "text": "played"
+        },
+        {
+          "id": "b",
+          "text": "were playing"
+        },
+        {
+          "id": "c",
+          "text": "play"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие шло в определённый момент прошлого.",
+        "full": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple.",
+        "rule": "was/were + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_continuous_077",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_continuous"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Mum ___ dinner while I was reading.",
+      "options": [
+        {
+          "id": "a",
+          "text": "cooked"
+        },
+        {
+          "id": "b",
+          "text": "was cooking"
+        },
+        {
+          "id": "c",
+          "text": "cooks"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие шло в определённый момент прошлого.",
+        "full": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple.",
+        "rule": "was/were + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_continuous_078",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_continuous"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "We ___ home when we saw the accident.",
+      "options": [
+        {
+          "id": "a",
+          "text": "were walking"
+        },
+        {
+          "id": "b",
+          "text": "walked"
+        },
+        {
+          "id": "c",
+          "text": "are walking"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Действие шло в определённый момент прошлого.",
+        "full": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple.",
+        "rule": "was/were + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_continuous_079",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_continuous"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "What ___ you doing at six?",
+      "options": [
+        {
+          "id": "a",
+          "text": "was"
+        },
+        {
+          "id": "b",
+          "text": "were"
+        },
+        {
+          "id": "c",
+          "text": "did"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Действие шло в определённый момент прошлого.",
+        "full": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple.",
+        "rule": "was/were + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "past_continuous_080",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "past_continuous"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "The dog ___ while the baby was sleeping.",
+      "options": [
+        {
+          "id": "a",
+          "text": "was barking"
+        },
+        {
+          "id": "b",
+          "text": "barked"
+        },
+        {
+          "id": "c",
+          "text": "is barking"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Действие шло в определённый момент прошлого.",
+        "full": "Past Continuous = was/were + V-ing. Часто это фон для более короткого события в Past Simple.",
+        "rule": "was/were + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "prepositions_081",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "prepositions"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "The lesson starts ___ 9 o'clock.",
+      "options": [
+        {
+          "id": "a",
+          "text": "in"
+        },
+        {
+          "id": "b",
+          "text": "on"
+        },
+        {
+          "id": "c",
+          "text": "at"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Запоминай сочетание целиком.",
+        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
+        "rule": "Учить предлог вместе с фразой."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "prepositions_082",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "prepositions"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "My birthday is ___ May.",
+      "options": [
+        {
+          "id": "a",
+          "text": "in"
+        },
+        {
+          "id": "b",
+          "text": "on"
+        },
+        {
+          "id": "c",
+          "text": "at"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Запоминай сочетание целиком.",
+        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
+        "rule": "Учить предлог вместе с фразой."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "prepositions_083",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "prepositions"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "We have PE ___ Monday.",
+      "options": [
+        {
+          "id": "a",
+          "text": "in"
+        },
+        {
+          "id": "b",
+          "text": "on"
+        },
+        {
+          "id": "c",
+          "text": "at"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Запоминай сочетание целиком.",
+        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
+        "rule": "Учить предлог вместе с фразой."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "prepositions_084",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "prepositions"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "The cat is ___ the table.",
+      "options": [
+        {
+          "id": "a",
+          "text": "under"
+        },
+        {
+          "id": "b",
+          "text": "between"
+        },
+        {
+          "id": "c",
+          "text": "through"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Запоминай сочетание целиком.",
+        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
+        "rule": "Учить предлог вместе с фразой."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "prepositions_085",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "prepositions"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "She walked ___ school with her friend.",
+      "options": [
+        {
+          "id": "a",
+          "text": "to"
+        },
+        {
+          "id": "b",
+          "text": "at"
+        },
+        {
+          "id": "c",
+          "text": "on"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Запоминай сочетание целиком.",
+        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
+        "rule": "Учить предлог вместе с фразой."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "prepositions_086",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "prepositions"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "We came home ___ the film.",
+      "options": [
+        {
+          "id": "a",
+          "text": "after"
+        },
+        {
+          "id": "b",
+          "text": "during"
+        },
+        {
+          "id": "c",
+          "text": "until"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Запоминай сочетание целиком.",
+        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
+        "rule": "Учить предлог вместе с фразой."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "prepositions_087",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "prepositions"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Wash your hands ___ dinner.",
+      "options": [
+        {
+          "id": "a",
+          "text": "before"
+        },
+        {
+          "id": "b",
+          "text": "from"
+        },
+        {
+          "id": "c",
+          "text": "between"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Запоминай сочетание целиком.",
+        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
+        "rule": "Учить предлог вместе с фразой."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "prepositions_088",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "prepositions"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "The park is ___ the bank and the school.",
+      "options": [
+        {
+          "id": "a",
+          "text": "between"
+        },
+        {
+          "id": "b",
+          "text": "under"
+        },
+        {
+          "id": "c",
+          "text": "at"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Запоминай сочетание целиком.",
+        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
+        "rule": "Учить предлог вместе с фразой."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "prepositions_089",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "prepositions"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "He travelled ___ train.",
+      "options": [
+        {
+          "id": "a",
+          "text": "by"
+        },
+        {
+          "id": "b",
+          "text": "on"
+        },
+        {
+          "id": "c",
+          "text": "with"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Запоминай сочетание целиком.",
+        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
+        "rule": "Учить предлог вместе с фразой."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "prepositions_090",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "prepositions"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "I got a message ___ my teacher.",
+      "options": [
+        {
+          "id": "a",
+          "text": "from"
+        },
+        {
+          "id": "b",
+          "text": "to"
+        },
+        {
+          "id": "c",
+          "text": "at"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Запоминай сочетание целиком.",
+        "full": "Время: at 9, on Monday, in May. Направление: to school. Транспорт: by train. Такие сочетания лучше учить как готовые блоки.",
+        "rule": "Учить предлог вместе с фразой."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "comparison_091",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "comparison"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "A train is usually ___ than a bus.",
+      "options": [
+        {
+          "id": "a",
+          "text": "fast"
+        },
+        {
+          "id": "b",
+          "text": "faster"
+        },
+        {
+          "id": "c",
+          "text": "fastest"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
+        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
+        "rule": "than → comparative; the → superlative."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "comparison_092",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "comparison"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "This is the ___ book in the series.",
+      "options": [
+        {
+          "id": "a",
+          "text": "funny"
+        },
+        {
+          "id": "b",
+          "text": "funnier"
+        },
+        {
+          "id": "c",
+          "text": "funniest"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
+        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
+        "rule": "than → comparative; the → superlative."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "comparison_093",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "comparison"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "My bag is ___ than yours.",
+      "options": [
+        {
+          "id": "a",
+          "text": "heavy"
+        },
+        {
+          "id": "b",
+          "text": "heavier"
+        },
+        {
+          "id": "c",
+          "text": "heaviest"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
+        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
+        "rule": "than → comparative; the → superlative."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "comparison_094",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "comparison"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Today is ___ than yesterday.",
+      "options": [
+        {
+          "id": "a",
+          "text": "good"
+        },
+        {
+          "id": "b",
+          "text": "better"
+        },
+        {
+          "id": "c",
+          "text": "best"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
+        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
+        "rule": "than → comparative; the → superlative."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "comparison_095",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "comparison"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "This task is not as ___ as the last one.",
+      "options": [
+        {
+          "id": "a",
+          "text": "difficult"
+        },
+        {
+          "id": "b",
+          "text": "more difficult"
+        },
+        {
+          "id": "c",
+          "text": "most difficult"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
+        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
+        "rule": "than → comparative; the → superlative."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "comparison_096",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "comparison"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Who is the ___ runner in your class?",
+      "options": [
+        {
+          "id": "a",
+          "text": "fast"
+        },
+        {
+          "id": "b",
+          "text": "faster"
+        },
+        {
+          "id": "c",
+          "text": "fastest"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
+        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
+        "rule": "than → comparative; the → superlative."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "comparison_097",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "comparison"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "My room is ___ than my brother's.",
+      "options": [
+        {
+          "id": "a",
+          "text": "small"
+        },
+        {
+          "id": "b",
+          "text": "smaller"
+        },
+        {
+          "id": "c",
+          "text": "smallest"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
+        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
+        "rule": "than → comparative; the → superlative."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "comparison_098",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "comparison"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "This was the ___ day of our trip.",
+      "options": [
+        {
+          "id": "a",
+          "text": "bad"
+        },
+        {
+          "id": "b",
+          "text": "worse"
+        },
+        {
+          "id": "c",
+          "text": "worst"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Сравниваем два объекта или выбираем самый сильный признак.",
+        "full": "Comparative обычно идёт с than: faster than. Superlative — с the: the fastest. Исключение: good→better→best.",
+        "rule": "than → comparative; the → superlative."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "some_any_099",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "some_any"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "There are ___ apples in the bag.",
+      "options": [
+        {
+          "id": "a",
+          "text": "some"
+        },
+        {
+          "id": "b",
+          "text": "any"
+        },
+        {
+          "id": "c",
+          "text": "much"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Определи тип предложения и существительного.",
+        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
+        "rule": "some/any; many=countable, much=uncountable."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "some_any_100",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "some_any"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Have you got ___ brothers?",
+      "options": [
+        {
+          "id": "a",
+          "text": "some"
+        },
+        {
+          "id": "b",
+          "text": "any"
+        },
+        {
+          "id": "c",
+          "text": "much"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Определи тип предложения и существительного.",
+        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
+        "rule": "some/any; many=countable, much=uncountable."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "some_any_101",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "some_any"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "We don't have ___ milk.",
+      "options": [
+        {
+          "id": "a",
+          "text": "some"
+        },
+        {
+          "id": "b",
+          "text": "any"
+        },
+        {
+          "id": "c",
+          "text": "many"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Определи тип предложения и существительного.",
+        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
+        "rule": "some/any; many=countable, much=uncountable."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "some_any_102",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "some_any"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "How ___ books did you buy?",
+      "options": [
+        {
+          "id": "a",
+          "text": "much"
+        },
+        {
+          "id": "b",
+          "text": "many"
+        },
+        {
+          "id": "c",
+          "text": "any"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Определи тип предложения и существительного.",
+        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
+        "rule": "some/any; many=countable, much=uncountable."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "some_any_103",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "some_any"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "How ___ water do you drink?",
+      "options": [
+        {
+          "id": "a",
+          "text": "much"
+        },
+        {
+          "id": "b",
+          "text": "many"
+        },
+        {
+          "id": "c",
+          "text": "some"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Определи тип предложения и существительного.",
+        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
+        "rule": "some/any; many=countable, much=uncountable."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "some_any_104",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "some_any"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Can I have ___ juice, please?",
+      "options": [
+        {
+          "id": "a",
+          "text": "some"
+        },
+        {
+          "id": "b",
+          "text": "any"
+        },
+        {
+          "id": "c",
+          "text": "many"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Определи тип предложения и существительного.",
+        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
+        "rule": "some/any; many=countable, much=uncountable."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "some_any_105",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "some_any"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "There isn't ___ bread left.",
+      "options": [
+        {
+          "id": "a",
+          "text": "some"
+        },
+        {
+          "id": "b",
+          "text": "any"
+        },
+        {
+          "id": "c",
+          "text": "many"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Определи тип предложения и существительного.",
+        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
+        "rule": "some/any; many=countable, much=uncountable."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "some_any_106",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "some_any"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "We need ___ chairs for the guests.",
+      "options": [
+        {
+          "id": "a",
+          "text": "some"
+        },
+        {
+          "id": "b",
+          "text": "much"
+        },
+        {
+          "id": "c",
+          "text": "any"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Определи тип предложения и существительного.",
+        "full": "some чаще в утверждениях и предложениях; any — в вопросах и отрицаниях. many — с исчисляемыми, much — с неисчисляемыми.",
+        "rule": "some/any; many=countable, much=uncountable."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "olympiad_1",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "olympiad_grammar"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "I have lived here ___ three years.",
+      "options": [
+        {
+          "id": "a",
+          "text": "since"
+        },
+        {
+          "id": "b",
+          "text": "for"
+        },
+        {
+          "id": "c",
+          "text": "from"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "for + период времени",
+        "full": "For отвечает на вопрос «как долго»: for three years. Since указывает точку начала: since 2023.",
+        "rule": "for + duration; since + starting point."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "olympiad_2",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "olympiad_grammar"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "She has known him ___ 2022.",
+      "options": [
+        {
+          "id": "a",
+          "text": "since"
+        },
+        {
+          "id": "b",
+          "text": "for"
+        },
+        {
+          "id": "c",
+          "text": "during"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "2022 — точка начала.",
+        "full": "Since используется с точкой начала действия: since 2022.",
+        "rule": "since + starting point."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "olympiad_3",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "olympiad_grammar"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "We ___ to play outside every evening when we were younger.",
+      "options": [
+        {
+          "id": "a",
+          "text": "use"
+        },
+        {
+          "id": "b",
+          "text": "used"
+        },
+        {
+          "id": "c",
+          "text": "were used"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Нужна конструкция used to.",
+        "full": "Used to + verb описывает привычку или состояние в прошлом, которого сейчас уже нет.",
+        "rule": "used to + V."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "olympiad_4",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "olympiad_grammar"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "If it rains, we ___ at home.",
+      "options": [
+        {
+          "id": "a",
+          "text": "stayed"
+        },
+        {
+          "id": "b",
+          "text": "stay"
+        },
+        {
+          "id": "c",
+          "text": "will stay"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Это First Conditional.",
+        "full": "В реальном условии о будущем: If + Present Simple, затем will + verb.",
+        "rule": "If + Present Simple → will + V."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "olympiad_5",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "olympiad_grammar"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Before ___ to bed, I brush my teeth.",
+      "options": [
+        {
+          "id": "a",
+          "text": "going"
+        },
+        {
+          "id": "b",
+          "text": "go"
+        },
+        {
+          "id": "c",
+          "text": "to go"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "После before здесь нужна форма -ing.",
+        "full": "После предлога before естественно использовать герундий: before going to bed.",
+        "rule": "before/after + V-ing."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "olympiad_6",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "olympiad_grammar"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "I went to the kitchen ___ get some water.",
+      "options": [
+        {
+          "id": "a",
+          "text": "for"
+        },
+        {
+          "id": "b",
+          "text": "by"
+        },
+        {
+          "id": "c",
+          "text": "to"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Это цель действия.",
+        "full": "To + infinitive выражает цель: went to the kitchen to get water.",
+        "rule": "to + V = purpose."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "olympiad_7",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "olympiad_grammar"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "He has never ___ this film.",
+      "options": [
+        {
+          "id": "a",
+          "text": "saw"
+        },
+        {
+          "id": "b",
+          "text": "seen"
+        },
+        {
+          "id": "c",
+          "text": "see"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "После has нужна третья форма.",
+        "full": "Present Perfect = have/has + V3. See → saw → seen.",
+        "rule": "have/has + V3."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "olympiad_8",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "grammar",
+      "skills": [
+        "olympiad_grammar"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "This puzzle is ___ than the first one.",
+      "options": [
+        {
+          "id": "a",
+          "text": "more difficult"
+        },
+        {
+          "id": "b",
+          "text": "most difficult"
+        },
+        {
+          "id": "c",
+          "text": "difficult"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Есть than — нужен comparative.",
+        "full": "Для длинных прилагательных comparative строится через more: more difficult than.",
+        "rule": "more + adjective + than."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "reading_1",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "Mia wanted a quiet place to read after school. The library was crowded, so she walked to the small park behind the museum. She sat on a bench under a large tree and finished two chapters before dinner.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Why did Mia go to the park?",
+      "options": [
+        {
+          "id": "a",
+          "text": "She wanted to meet a friend."
+        },
+        {
+          "id": "b",
+          "text": "The library was too crowded."
+        },
+        {
+          "id": "c",
+          "text": "The museum was closed."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Найди фразу-доказательство в тексте.",
+        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
+        "rule": "Ищи смысл, а не одинаковые слова."
+      },
+      "evidence": "The library was crowded, so she walked to the small park behind the museum.",
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "reading_2",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "Mia wanted a quiet place to read after school. The library was crowded, so she walked to the small park behind the museum. She sat on a bench under a large tree and finished two chapters before dinner.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Where did Mia sit?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Inside the museum."
+        },
+        {
+          "id": "b",
+          "text": "On the grass."
+        },
+        {
+          "id": "c",
+          "text": "On a bench under a tree."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Найди фразу-доказательство в тексте.",
+        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
+        "rule": "Ищи смысл, а не одинаковые слова."
+      },
+      "evidence": "She sat on a bench under a large tree.",
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "reading_3",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "Leo's class planned a picnic for Saturday. On Friday evening the weather forecast changed and heavy rain was expected. Their teacher moved the picnic to Sunday. Sunday morning was cool but dry, and everyone brought warm jackets.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Why was the picnic moved?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Because of the weather forecast."
+        },
+        {
+          "id": "b",
+          "text": "Because the teacher was ill."
+        },
+        {
+          "id": "c",
+          "text": "Because nobody had food."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Найди фразу-доказательство в тексте.",
+        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
+        "rule": "Ищи смысл, а не одинаковые слова."
+      },
+      "evidence": "heavy rain was expected",
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "reading_4",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "Leo's class planned a picnic for Saturday. On Friday evening the weather forecast changed and heavy rain was expected. Their teacher moved the picnic to Sunday. Sunday morning was cool but dry, and everyone brought warm jackets.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which statement is TRUE?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It rained all Sunday."
+        },
+        {
+          "id": "b",
+          "text": "The class went on Sunday."
+        },
+        {
+          "id": "c",
+          "text": "They did not take jackets."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Найди фразу-доказательство в тексте.",
+        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
+        "rule": "Ищи смысл, а не одинаковые слова."
+      },
+      "evidence": "Sunday morning was cool but dry",
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "reading_5",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "Nora found a small wallet near the sports centre. There was no money inside, but there was a student card with a name on it. Nora gave the wallet to the receptionist. Twenty minutes later a worried boy came back looking for it.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "How could they identify the owner?",
+      "options": [
+        {
+          "id": "a",
+          "text": "There was a phone number."
+        },
+        {
+          "id": "b",
+          "text": "There was money inside."
+        },
+        {
+          "id": "c",
+          "text": "There was a student card."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Найди фразу-доказательство в тексте.",
+        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
+        "rule": "Ищи смысл, а не одинаковые слова."
+      },
+      "evidence": "there was a student card with a name on it",
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "reading_6",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "Nora found a small wallet near the sports centre. There was no money inside, but there was a student card with a name on it. Nora gave the wallet to the receptionist. Twenty minutes later a worried boy came back looking for it.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "What did Nora do with the wallet?",
+      "options": [
+        {
+          "id": "a",
+          "text": "She gave it to the receptionist."
+        },
+        {
+          "id": "b",
+          "text": "She took it home."
+        },
+        {
+          "id": "c",
+          "text": "She left it outside."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Найди фразу-доказательство в тексте.",
+        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
+        "rule": "Ищи смысл, а не одинаковые слова."
+      },
+      "evidence": "Nora gave the wallet to the receptionist.",
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "reading_7",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "Ben loves science but does not enjoy scary films. He wants to watch something funny with his younger sister. The film should be shorter than two hours and suitable for children.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which film description fits Ben best?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A 150-minute horror film about a laboratory."
+        },
+        {
+          "id": "b",
+          "text": "A 95-minute family comedy about young inventors."
+        },
+        {
+          "id": "c",
+          "text": "A two-hour documentary with no story."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Найди фразу-доказательство в тексте.",
+        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
+        "rule": "Ищи смысл, а не одинаковые слова."
+      },
+      "evidence": "funny with his younger sister. The film should be shorter than two hours and suitable for children.",
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "reading_8",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "Ben loves science but does not enjoy scary films. He wants to watch something funny with his younger sister. The film should be shorter than two hours and suitable for children.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which detail is NOT a requirement?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Suitable for children."
+        },
+        {
+          "id": "b",
+          "text": "Shorter than two hours."
+        },
+        {
+          "id": "c",
+          "text": "It must be animated."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Найди фразу-доказательство в тексте.",
+        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
+        "rule": "Ищи смысл, а не одинаковые слова."
+      },
+      "evidence": "The film should be shorter than two hours and suitable for children.",
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "reading_9",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "The school chess club meets every Wednesday at four. New players may come even if they do not know all the rules. This week the meeting will start thirty minutes later because the hall is being used for a concert rehearsal.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "What time will the chess club start this week?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3:30"
+        },
+        {
+          "id": "b",
+          "text": "4:00"
+        },
+        {
+          "id": "c",
+          "text": "4:30"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Найди фразу-доказательство в тексте.",
+        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
+        "rule": "Ищи смысл, а не одинаковые слова."
+      },
+      "evidence": "This week the meeting will start thirty minutes later",
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "reading_10",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "The school chess club meets every Wednesday at four. New players may come even if they do not know all the rules. This week the meeting will start thirty minutes later because the hall is being used for a concert rehearsal.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Who may join the club?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Beginners too."
+        },
+        {
+          "id": "b",
+          "text": "Only tournament winners."
+        },
+        {
+          "id": "c",
+          "text": "Only students who know every rule."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Найди фразу-доказательство в тексте.",
+        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
+        "rule": "Ищи смысл, а не одинаковые слова."
+      },
+      "evidence": "New players may come even if they do not know all the rules.",
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "reading_11",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "A fox saw a crow sitting in a tree with a piece of cheese. The fox wanted the cheese, so he praised the crow's beautiful voice and asked her to sing. The crow opened her beak, the cheese fell, and the fox caught it.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Why did the fox praise the crow?",
+      "options": [
+        {
+          "id": "a",
+          "text": "He wanted the cheese."
+        },
+        {
+          "id": "b",
+          "text": "He liked music."
+        },
+        {
+          "id": "c",
+          "text": "He wanted to help her."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Найди фразу-доказательство в тексте.",
+        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
+        "rule": "Ищи смысл, а не одинаковые слова."
+      },
+      "evidence": "The fox wanted the cheese, so he praised the crow's beautiful voice",
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "reading_12",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "A fox saw a crow sitting in a tree with a piece of cheese. The fox wanted the cheese, so he praised the crow's beautiful voice and asked her to sing. The crow opened her beak, the cheese fell, and the fox caught it.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "What happened when the crow sang?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The fox climbed the tree."
+        },
+        {
+          "id": "b",
+          "text": "The cheese fell down."
+        },
+        {
+          "id": "c",
+          "text": "The crow flew away."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Найди фразу-доказательство в тексте.",
+        "full": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе.",
+        "rule": "Ищи смысл, а не одинаковые слова."
+      },
+      "evidence": "The crow opened her beak, the cheese fell",
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "listening_01",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_01.wav",
+        "image": null,
+        "script": "Don't forget your sports clothes tomorrow. We have P.E. before lunch, and your trainers are already in your locker."
+      },
+      "prompt": "What should the boy bring tomorrow?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sports clothes"
+        },
+        {
+          "id": "b",
+          "text": "A lunch box"
+        },
+        {
+          "id": "c",
+          "text": "New trainers"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Слушай ключевую деталь, а не каждое слово.",
+        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
+        "rule": "Слушай изменение решения и ключевую деталь."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "listening_02",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_02.wav",
+        "image": null,
+        "script": "The film starts at four fifteen. Let's meet outside the cinema at a quarter to four, so we have enough time."
+      },
+      "prompt": "What time will they meet?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3:30"
+        },
+        {
+          "id": "b",
+          "text": "3:45"
+        },
+        {
+          "id": "c",
+          "text": "4:15"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Слушай ключевую деталь, а не каждое слово.",
+        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
+        "rule": "Слушай изменение решения и ключевую деталь."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "listening_03",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_03.wav",
+        "image": null,
+        "script": "I thought my notebook was in my school bag, but Dad found it on the kitchen table next to my water bottle."
+      },
+      "prompt": "Where is the girl's notebook?",
+      "options": [
+        {
+          "id": "a",
+          "text": "In her school bag"
+        },
+        {
+          "id": "b",
+          "text": "In her bedroom"
+        },
+        {
+          "id": "c",
+          "text": "On the kitchen table"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Слушай ключевую деталь, а не каждое слово.",
+        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
+        "rule": "Слушай изменение решения и ключевую деталь."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "listening_04",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_04.wav",
+        "image": null,
+        "script": "Sorry I'm late. The bus came on time, but I got off at the wrong stop and had to walk back."
+      },
+      "prompt": "Why is Sam late?",
+      "options": [
+        {
+          "id": "a",
+          "text": "He got off at the wrong stop."
+        },
+        {
+          "id": "b",
+          "text": "The bus was late."
+        },
+        {
+          "id": "c",
+          "text": "He overslept."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Слушай ключевую деталь, а не каждое слово.",
+        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
+        "rule": "Слушай изменение решения и ключевую деталь."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "listening_05",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_05.wav",
+        "image": null,
+        "script": "I wanted to try swimming, but the class was full. Tennis was too late in the evening, so I joined the art club."
+      },
+      "prompt": "Which activity did Emma choose?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Swimming"
+        },
+        {
+          "id": "b",
+          "text": "Tennis"
+        },
+        {
+          "id": "c",
+          "text": "Art"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Слушай ключевую деталь, а не каждое слово.",
+        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
+        "rule": "Слушай изменение решения и ключевую деталь."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "listening_06",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_06.wav",
+        "image": null,
+        "script": "It will be sunny in the morning. Clouds will arrive around lunchtime, and by three o'clock we expect rain."
+      },
+      "prompt": "What will the weather be like in the afternoon?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sunny"
+        },
+        {
+          "id": "b",
+          "text": "Rainy"
+        },
+        {
+          "id": "c",
+          "text": "Snowy"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Слушай ключевую деталь, а не каждое слово.",
+        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
+        "rule": "Слушай изменение решения и ключевую деталь."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "listening_07",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_07.wav",
+        "image": null,
+        "script": "We went to the market for strawberries, but they were sold out. We bought apples instead and made a pie."
+      },
+      "prompt": "What did the family buy?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A strawberry pie"
+        },
+        {
+          "id": "b",
+          "text": "Strawberries"
+        },
+        {
+          "id": "c",
+          "text": "Apples"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Слушай ключевую деталь, а не каждое слово.",
+        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
+        "rule": "Слушай изменение решения и ключевую деталь."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "listening_08",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_08.wav",
+        "image": null,
+        "script": "Put the green picture in the kitchen. The red one is for my bedroom, and the blue one will look best in the living room."
+      },
+      "prompt": "Which room needs the blue picture?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Kitchen"
+        },
+        {
+          "id": "b",
+          "text": "Living room"
+        },
+        {
+          "id": "c",
+          "text": "Bedroom"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Слушай ключевую деталь, а не каждое слово.",
+        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
+        "rule": "Слушай изменение решения и ключевую деталь."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "listening_09",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_09.wav",
+        "image": null,
+        "script": "For tomorrow, read pages twenty to twenty-four. Do not write the answers yet; we will discuss the questions in class."
+      },
+      "prompt": "What is the homework?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Read pages 20–24"
+        },
+        {
+          "id": "b",
+          "text": "Write all the answers"
+        },
+        {
+          "id": "c",
+          "text": "Learn a poem"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Слушай ключевую деталь, а не каждое слово.",
+        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
+        "rule": "Слушай изменение решения и ключевую деталь."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "listening_10",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_10.wav",
+        "image": null,
+        "script": "We usually drive to Grandma's house, but the car is at the garage. This time we're taking the train."
+      },
+      "prompt": "How will they travel?",
+      "options": [
+        {
+          "id": "a",
+          "text": "By car"
+        },
+        {
+          "id": "b",
+          "text": "By train"
+        },
+        {
+          "id": "c",
+          "text": "By bus"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Слушай ключевую деталь, а не каждое слово.",
+        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
+        "rule": "Слушай изменение решения и ключевую деталь."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "listening_11",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_11.wav",
+        "image": null,
+        "script": "I don't want pizza today. The soup looks nice, but I'll have the chicken sandwich because I'm really hungry."
+      },
+      "prompt": "What does Lucy want for lunch?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pizza"
+        },
+        {
+          "id": "b",
+          "text": "Soup"
+        },
+        {
+          "id": "c",
+          "text": "A chicken sandwich"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Слушай ключевую деталь, а не каждое слово.",
+        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
+        "rule": "Слушай изменение решения и ключевую деталь."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "listening_12",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_12.wav",
+        "image": null,
+        "script": "The science test was planned for Tuesday, but the teacher moved it to Thursday because we need one more lesson to revise."
+      },
+      "prompt": "When is the science test?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tuesday"
+        },
+        {
+          "id": "b",
+          "text": "Wednesday"
+        },
+        {
+          "id": "c",
+          "text": "Thursday"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Слушай ключевую деталь, а не каждое слово.",
+        "full": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его.",
+        "rule": "Слушай изменение решения и ключевую деталь."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "story_01",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "I woke up. It was snowing.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the best link between the two ideas.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Because I woke up, it was snowing."
+        },
+        {
+          "id": "b",
+          "text": "When I woke up, it was snowing."
+        },
+        {
+          "id": "c",
+          "text": "But I woke up, it was snowing."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "When естественно связывает момент и событие.",
+        "full": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого.",
+        "rule": "when + event."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "story_02",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "I was walking to school when I heard a strange noise behind me.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the best next sentence.",
+      "options": [
+        {
+          "id": "a",
+          "text": "School is a place where children learn."
+        },
+        {
+          "id": "b",
+          "text": "I usually walk to school every day."
+        },
+        {
+          "id": "c",
+          "text": "I turned around and saw a small dog under a car."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Продолжение должно двигать историю.",
+        "full": "Третья фраза продолжает событие и отвечает на возникшее напряжение: что было за спиной?",
+        "rule": "Следующее предложение развивает событие."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "story_03",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "I wanted to go outside, ___ it was raining heavily.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which connector fits best?",
+      "options": [
+        {
+          "id": "a",
+          "text": "but"
+        },
+        {
+          "id": "b",
+          "text": "because"
+        },
+        {
+          "id": "c",
+          "text": "so"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Здесь нужен контраст.",
+        "full": "Хотел выйти, но шёл сильный дождь: but противопоставляет две идеи.",
+        "rule": "but = contrast."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "story_04",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "Suddenly, the lights went out.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which sentence keeps the story in the past?",
+      "options": [
+        {
+          "id": "a",
+          "text": "I look for my torch."
+        },
+        {
+          "id": "b",
+          "text": "I looked for my torch."
+        },
+        {
+          "id": "c",
+          "text": "I am looking for my torch."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Рассказ уже идёт в прошлом.",
+        "full": "Went out задаёт Past Simple, поэтому естественное продолжение — looked.",
+        "rule": "Story tense must stay consistent."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "story_05",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "We finally found the lost puppy and took it back to its owner.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the clearest ending.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Dogs can run very quickly."
+        },
+        {
+          "id": "b",
+          "text": "The weather was cold."
+        },
+        {
+          "id": "c",
+          "text": "The owner thanked us, and we went home feeling happy."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Финал должен закрыть главный конфликт.",
+        "full": "История была о потерянном щенке. Хороший финал показывает, что проблема решена.",
+        "rule": "Ending closes the main problem."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "story_06",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": null,
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which sentence best uses 'while'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "While I was running to school, I saw a wallet."
+        },
+        {
+          "id": "b",
+          "text": "While I ran yesterday, every Monday."
+        },
+        {
+          "id": "c",
+          "text": "While I will run, I saw a wallet."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "While хорошо вводит длительный фон.",
+        "full": "While + Past Continuous задаёт действие в процессе, на фоне которого произошло короткое событие.",
+        "rule": "while + Past Continuous."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "story_07",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "___, we packed our bags. Then we called a taxi.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the best order marker.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Finally"
+        },
+        {
+          "id": "b",
+          "text": "First"
+        },
+        {
+          "id": "c",
+          "text": "Because"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Начало последовательности — First.",
+        "full": "First начинает цепочку действий; then продолжает её.",
+        "rule": "First → Then → Finally."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "story_08",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "I decided to stay inside because ___",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which continuation explains the reason?",
+      "options": [
+        {
+          "id": "a",
+          "text": "the storm was getting stronger."
+        },
+        {
+          "id": "b",
+          "text": "I opened the door."
+        },
+        {
+          "id": "c",
+          "text": "finally."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "После because нужна причина.",
+        "full": "The storm was getting stronger объясняет решение остаться внутри.",
+        "rule": "because + reason."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "story_09",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "The dog was small. The dog was wet. The dog looked frightened.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which sentence avoids repetition?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The dog was small, and the dog was wet, and the dog looked frightened."
+        },
+        {
+          "id": "b",
+          "text": "Dog small. Dog wet. Dog frightened."
+        },
+        {
+          "id": "c",
+          "text": "The dog was small and wet, and it looked frightened."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": "Местоимение убирает повтор.",
+        "full": "После первого упоминания dog можно использовать it и объединить признаки.",
+        "rule": "Use pronouns to avoid repetition."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "story_10",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "You need to include the idea: dangerous.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the strongest story sentence.",
+      "options": [
+        {
+          "id": "a",
+          "text": "It was dangerous."
+        },
+        {
+          "id": "b",
+          "text": "The road was icy, so crossing it alone was dangerous."
+        },
+        {
+          "id": "c",
+          "text": "Dangerous is an adjective."
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": "Покажи опасность через ситуацию.",
+        "full": "Вторая фраза не просто называет dangerous, а объясняет, почему ситуация опасна.",
+        "rule": "Show meaning through context."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "story_11",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "I heard a crash in the kitchen and ran downstairs.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the best continuation.",
+      "options": [
+        {
+          "id": "a",
+          "text": "A glass had fallen from the table, but nobody was hurt."
+        },
+        {
+          "id": "b",
+          "text": "Kitchens often have tables."
+        },
+        {
+          "id": "c",
+          "text": "I like breakfast."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Продолжение отвечает на событие.",
+        "full": "После crash читатель ожидает объяснение, что произошло.",
+        "rule": "Continue the causal chain."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    },
+    {
+      "id": "story_12",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 6,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": false
+      },
+      "stimulus": {
+        "text": "We were tired, but we had found the missing key. ___, we could finally go home.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the best ending connector.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Finally"
+        },
+        {
+          "id": "b",
+          "text": "Because"
+        },
+        {
+          "id": "c",
+          "text": "While"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": "Это завершение истории.",
+        "full": "Finally показывает последнюю стадию последовательности событий.",
+        "rule": "Finally = final step."
+      },
+      "evidence": null,
+      "review": {
+        "status": "verified"
+      }
+    }
+  ]
+}
