@@ -148,4 +148,6 @@
     <string name="activity_month_summary">Active days: %1$d\nQuestions: %2$d\nCorrect: %3$d\nXP earned: %4$d\nCrystals earned: %5$d\nSessions completed: %6$d</string>
     <string name="next_focus">NEXT FOCUS · prerequisites first</string>
     <string name="content_pack_section">CONTENT PACK</string>
+    <string name="numeric_answer_hint">Enter a number</string>
+    <string name="submit_answer">Check answer</string>
 </resources>

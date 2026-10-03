@@ -23,6 +23,17 @@
       "season": "2026-2027",
       "license_id": "project.original.v1",
       "enabled": true
+    },
+    {
+      "id": "english.olympiad.6-7.global.2026",
+      "asset": "content/english_g6_7_bridge.json",
+      "subject": "english",
+      "grade_min": 6,
+      "grade_max": 7,
+      "competition": "Olympiad bridge",
+      "season": "2026-2027",
+      "license_id": "project.original.v1",
+      "enabled": true
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 The application runtime is subject-independent. Training material lives in a canonical JSON bank.
 
-Current bank: `app/src/main/assets/content/english_g5_vso.json`.
+Shipping packs are listed in `app/src/main/assets/content/catalog.json`.
 
 Core fields:
 - `subject`, `grade_min`, `grade_max`
@@ -10,12 +10,12 @@ Core fields:
 - `mode`: subject-neutral `practice`, or specialized grammar / reading / listening / story
 - `skills[]`: adaptive-learning tags
 - `stimulus.text/audio/image`
-- `prompt`, `options[]`, `answer[]`
+- `prompt`, `answer[]`; `options[]` only for choice interactions
 - `feedback.short/full/rule`
 - `evidence`: exact text span used for reading highlighting
 - `review.status`
 
-The Android renderer currently ships `single_choice`. The schema reserves future interactions so physics, mathematics and other olympiad subjects can share the same engine.
+The Android renderer ships reusable `single_choice` and `numeric` interactions. Numeric answers normalize decimal comma/dot and do not expose answer choices.
 
 Run before committing content:
 
@@ -32,7 +32,7 @@ The catalog is entitlement-filtered at runtime. Selection is persistent, while X
 
 `commerce/products.json` describes provider-neutral saleable scopes for pilot, Google Play, App Store, RU/CIS and promo adapters. Checkout remains disabled until a provider-specific legal, receipt-verification and store implementation exists.
 
-Every shipping question also references one or more stable `knowledge_units`:
+Every shipping question references one or more stable units from the global `knowledge_units.json` registry:
 
 ```json
 "knowledge": [
@@ -41,6 +41,8 @@ Every shipping question also references one or more stable `knowledge_units`:
 ```
 
 Legacy skill strings remain as tags for compatibility only. Learner mastery is migrated to knowledge-unit IDs so future packs can reuse the same knowledge node across grades and, later, across subjects.
+
+`competition_blueprints.json` maps each pack to a normalized target distribution over global Knowledge Units. Blueprints affect scheduling, while prerequisites in `knowledge_atlas.json` still determine readiness.
 
 
 ## Localization

@@ -18,12 +18,14 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.Space;
 import android.widget.TextView;
+import android.text.InputType;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -169,14 +171,18 @@ public class MainActivity extends Activity {
         root.addView(space(8));
 
         if ("english".equals(pack.subject)) {
-            root.addView(menuButton(getString(R.string.grammar_mode), getString(R.string.grammar_caption), () ->
-                    startSession(getString(R.string.grammar_title), shuffled(QuestionBank.byType(Question.Type.GRAMMAR), 20))));
-            root.addView(menuButton(getString(R.string.reading_mode), getString(R.string.reading_caption), () ->
-                    startSession(getString(R.string.reading_title), shuffled(QuestionBank.byType(Question.Type.READING), 10))));
-            root.addView(menuButton(getString(R.string.listening_mode), getString(R.string.listening_caption), () ->
-                    startSession(getString(R.string.listening_title), shuffled(QuestionBank.byType(Question.Type.LISTENING), 10))));
-            root.addView(menuButton(getString(R.string.story_mode), getString(R.string.story_caption), () ->
-                    startSession(getString(R.string.story_title), shuffled(QuestionBank.byType(Question.Type.STORY), 10))));
+            if (!QuestionBank.byType(Question.Type.GRAMMAR).isEmpty())
+                root.addView(menuButton(getString(R.string.grammar_mode), getString(R.string.grammar_caption), () ->
+                        startSession(getString(R.string.grammar_title), shuffled(QuestionBank.byType(Question.Type.GRAMMAR), 20))));
+            if (!QuestionBank.byType(Question.Type.READING).isEmpty())
+                root.addView(menuButton(getString(R.string.reading_mode), getString(R.string.reading_caption), () ->
+                        startSession(getString(R.string.reading_title), shuffled(QuestionBank.byType(Question.Type.READING), 10))));
+            if (!QuestionBank.byType(Question.Type.LISTENING).isEmpty())
+                root.addView(menuButton(getString(R.string.listening_mode), getString(R.string.listening_caption), () ->
+                        startSession(getString(R.string.listening_title), shuffled(QuestionBank.byType(Question.Type.LISTENING), 10))));
+            if (!QuestionBank.byType(Question.Type.STORY).isEmpty())
+                root.addView(menuButton(getString(R.string.story_mode), getString(R.string.story_caption), () ->
+                        startSession(getString(R.string.story_title), shuffled(QuestionBank.byType(Question.Type.STORY), 10))));
         } else {
             root.addView(menuButton(getString(R.string.olympiad_practice),
                     getString(R.string.olympiad_practice_caption), () ->
@@ -424,15 +430,40 @@ public class MainActivity extends Activity {
         root.addView(space(18));
 
         List<Button> answerButtons = new ArrayList<>();
-        for (int i = 0; i < q.options.size(); i++) {
-            final int answerIndex = i;
-            Button b = answerButton(q.options.get(i));
-            LinearLayout.LayoutParams blp = matchWrap();
-            blp.bottomMargin = dp(10);
-            root.addView(b, blp);
-            answerButtons.add(b);
-            b.setOnClickListener(v -> handleAnswer(
-                    root, q, answerIndex, answerButtons, contextForAnswer));
+        if ("numeric".equals(q.interaction)) {
+            EditText input = new EditText(this);
+            input.setHint(getString(R.string.numeric_answer_hint));
+            input.setTextSize(22);
+            input.setSingleLine(true);
+            input.setInputType(InputType.TYPE_CLASS_NUMBER
+                    | InputType.TYPE_NUMBER_FLAG_DECIMAL
+                    | InputType.TYPE_NUMBER_FLAG_SIGNED);
+            input.setPadding(dp(16), dp(12), dp(16), dp(12));
+            input.setBackground(roundRect(CARD, 14, 1, SOFT));
+            root.addView(input, matchWrap());
+
+            Button submit = primaryButton(getString(R.string.submit_answer));
+            LinearLayout.LayoutParams submitLp = matchWrap();
+            submitLp.topMargin = dp(10);
+            root.addView(submit, submitLp);
+            submit.setOnClickListener(v -> {
+                boolean correct = q.acceptsText(input.getText().toString());
+                input.setEnabled(false);
+                submit.setEnabled(false);
+                handleAnswerResult(root, q, correct, -1,
+                        Collections.emptyList(), contextForAnswer);
+            });
+        } else {
+            for (int i = 0; i < q.options.size(); i++) {
+                final int answerIndex = i;
+                Button b = answerButton(q.options.get(i));
+                LinearLayout.LayoutParams blp = matchWrap();
+                blp.bottomMargin = dp(10);
+                root.addView(b, blp);
+                answerButtons.add(b);
+                b.setOnClickListener(v -> handleAnswer(
+                        root, q, answerIndex, answerButtons, contextForAnswer));
+            }
         }
 
         TextView footer = text("XP " + progress.xp() + "   ·   " + getString(R.string.crystals_fmt, economy.balance())
@@ -452,7 +483,11 @@ public class MainActivity extends Activity {
 
     private void handleAnswer(LinearLayout root, Question q, int chosen,
                               List<Button> buttons, TextView contextView) {
-        boolean correct = q.isCorrect(chosen);
+        handleAnswerResult(root, q, q.isCorrect(chosen), chosen, buttons, contextView);
+    }
+
+    private void handleAnswerResult(LinearLayout root, Question q, boolean correct, int chosen,
+                                    List<Button> buttons, TextView contextView) {
         boolean reinforcement = reinforcementQuestionIds.remove(q.id);
         ProgressStore.SkillState beforeState = progress.state(q.primaryKnowledgeId());
         int xpBefore = progress.xp();

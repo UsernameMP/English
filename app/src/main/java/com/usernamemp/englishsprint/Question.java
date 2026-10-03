@@ -22,6 +22,7 @@ public final class Question {
     public final String context;
     public final List<String> options;
     public final int correctIndex;
+    public final List<String> acceptedAnswers;
     public final String explanation;
     public final String explanationFull;
     public final String rule;
@@ -73,6 +74,7 @@ public final class Question {
         this.context = context == null ? "" : context;
         this.options = Collections.unmodifiableList(new ArrayList<>(options));
         this.correctIndex = correctIndex;
+        this.acceptedAnswers = Collections.emptyList();
         this.explanation = explanation == null ? "" : explanation;
         this.explanationFull = explanationFull == null ? "" : explanationFull;
         this.rule = rule == null ? "" : rule;
@@ -100,6 +102,7 @@ public final class Question {
             String context,
             List<String> options,
             int correctIndex,
+            List<String> acceptedAnswers,
             String explanation,
             String explanationFull,
             String rule,
@@ -126,6 +129,7 @@ public final class Question {
         this.context = context == null ? "" : context;
         this.options = Collections.unmodifiableList(new ArrayList<>(options));
         this.correctIndex = correctIndex;
+        this.acceptedAnswers = Collections.unmodifiableList(new ArrayList<>(acceptedAnswers));
         this.explanation = explanation == null ? "" : explanation;
         this.explanationFull = explanationFull == null ? "" : explanationFull;
         this.rule = rule == null ? "" : rule;
@@ -144,5 +148,26 @@ public final class Question {
 
     public boolean isCorrect(int index) {
         return index == correctIndex;
+    }
+
+    public boolean acceptsText(String raw) {
+        if (raw == null) return false;
+        String normalized = normalizeAnswer(raw);
+        if (normalized.isEmpty()) return false;
+        for (String accepted : acceptedAnswers) {
+            if (normalized.equals(normalizeAnswer(accepted))) return true;
+        }
+        return false;
+    }
+
+    private static String normalizeAnswer(String value) {
+        String normalized = value.trim().replace(',', '.').replaceAll("\\s+", "");
+        if (normalized.matches("[-+]?\\d+(\\.\\d+)?")) {
+            try {
+                return new java.math.BigDecimal(normalized).stripTrailingZeros().toPlainString();
+            } catch (NumberFormatException ignored) {
+            }
+        }
+        return normalized.toLowerCase(java.util.Locale.ROOT);
     }
 }

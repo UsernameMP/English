@@ -21,13 +21,17 @@ import java.util.Set;
 
 public final class QuestionBank {
     private static final String CATALOG_ASSET = "content/catalog.json";
+    private static final String KNOWLEDGE_ASSET = "content/knowledge_units.json";
+    private static final String BLUEPRINT_ASSET = "content/competition_blueprints.json";
 
     private static List<Question> cache = Collections.emptyList();
     private static List<String> skills = Collections.emptyList();
     private static Map<String, KnowledgeUnit> knowledgeUnits = Collections.emptyMap();
+    private static List<String> currentKnowledgeIds = Collections.emptyList();
     private static KnowledgeAtlas knowledgeAtlas;
     private static ContentPack currentPack;
     private static List<ContentPack> availablePacks = Collections.emptyList();
+    private static Map<String, Double> blueprintWeights = Collections.emptyMap();
 
     private QuestionBank() {}
 
@@ -40,18 +44,13 @@ public final class QuestionBank {
 
             EntitlementStore entitlements = new EntitlementStore(context);
             List<ContentPack> accessible = new ArrayList<>();
-            Set<String> globalUnitIds = new HashSet<>();
-            Map<String, JSONObject> catalogEntries = new LinkedHashMap<>();
+            LinkedHashMap<String, KnowledgeUnit> globalUnits = loadKnowledgeRegistry(context);
+            Set<String> globalUnitIds = globalUnits.keySet();
             for (int i = 0; i < packs.length(); i++) {
                 JSONObject candidate = packs.getJSONObject(i);
                 if (!candidate.optBoolean("enabled", true)) continue;
                 String candidateId = candidate.getString("id");
-                catalogEntries.put(candidateId, candidate);
                 JSONObject candidateBank = new JSONObject(readAsset(context, candidate.getString("asset")));
-                JSONArray candidateUnits = candidateBank.getJSONArray("knowledge_units");
-                for (int j = 0; j < candidateUnits.length(); j++) {
-                    globalUnitIds.add(candidateUnits.getJSONObject(j).getString("id"));
-                }
                 if (entitlements.accessDecision(
                         candidateId,
                         candidate.optString("subject", ""),
@@ -98,28 +97,16 @@ public final class QuestionBank {
             JSONObject packJson = bank.getJSONObject("pack");
             currentPack = parsePack(packJson, asset);
 
-            LinkedHashMap<String, KnowledgeUnit> units = new LinkedHashMap<>();
-            JSONArray unitArray = bank.getJSONArray("knowledge_units");
+            LinkedHashMap<String, KnowledgeUnit> units = globalUnits;
             List<String> legacySkills = new ArrayList<>();
-            for (int i = 0; i < unitArray.length(); i++) {
-                JSONObject u = unitArray.getJSONObject(i);
-                Map<String, String> labels = parseStringMap(u.optJSONObject("labels"));
-                KnowledgeUnit unit = new KnowledgeUnit(
-                        u.getString("id"),
-                        u.optString("kind", "concept"),
-                        u.optString("legacy_skill", ""),
-                        labels
-                );
-                if (units.containsKey(unit.id)) {
-                    throw new IllegalStateException("Duplicate knowledge unit: " + unit.id);
-                }
-                units.put(unit.id, unit);
+            for (KnowledgeUnit unit : units.values()) {
                 if (!unit.legacySkill.isEmpty() && !legacySkills.contains(unit.legacySkill)) {
                     legacySkills.add(unit.legacySkill);
                 }
             }
 
             knowledgeAtlas = new KnowledgeAtlas(context, globalUnitIds);
+            blueprintWeights = loadBlueprint(context, selectedPackId, globalUnitIds);
 
             JSONArray array = bank.getJSONArray("questions");
             List<Question> loaded = new ArrayList<>();
@@ -168,19 +155,24 @@ public final class QuestionBank {
                 String audio = stimulus == null || stimulus.isNull("audio") ? "" : stimulus.optString("audio", "");
                 String script = stimulus == null || stimulus.isNull("script") ? "" : stimulus.optString("script", "");
 
-                JSONArray optionArray = o.getJSONArray("options");
+                JSONArray optionArray = o.optJSONArray("options");
                 List<String> options = new ArrayList<>();
                 List<String> optionIds = new ArrayList<>();
-                for (int j = 0; j < optionArray.length(); j++) {
-                    JSONObject option = optionArray.getJSONObject(j);
-                    optionIds.add(option.getString("id"));
-                    options.add(option.getString("text"));
+                if (optionArray != null) {
+                    for (int j = 0; j < optionArray.length(); j++) {
+                        JSONObject option = optionArray.getJSONObject(j);
+                        optionIds.add(option.getString("id"));
+                        options.add(option.getString("text"));
+                    }
                 }
 
                 JSONArray answers = o.getJSONArray("answer");
-                String answerId = answers.getString(0);
-                int correctIndex = optionIds.indexOf(answerId);
-                if (correctIndex < 0) {
+                List<String> acceptedAnswers = new ArrayList<>();
+                for (int j = 0; j < answers.length(); j++) acceptedAnswers.add(answers.getString(j));
+                String interaction = o.optString("interaction", "single_choice");
+                int correctIndex = "single_choice".equals(interaction)
+                        ? optionIds.indexOf(answers.getString(0)) : -1;
+                if ("single_choice".equals(interaction) && correctIndex < 0) {
                     throw new IllegalStateException("Unknown answer id in " + o.getString("id"));
                 }
 
@@ -193,7 +185,7 @@ public final class QuestionBank {
                         o.optString("subject", currentPack.subject),
                         o.optInt("grade_min", currentPack.gradeMin),
                         o.optInt("grade_max", currentPack.gradeMax),
-                        o.optString("interaction", "single_choice"),
+                        interaction,
                         questionSkills,
                         knowledge,
                         prerequisites,
@@ -203,6 +195,7 @@ public final class QuestionBank {
                         text,
                         options,
                         correctIndex,
+                        acceptedAnswers,
                         localizedField(feedback, "short", Locale.getDefault()),
                         localizedField(feedback, "full", Locale.getDefault()),
                         localizedField(feedback, "rule", Locale.getDefault()),
@@ -219,6 +212,11 @@ public final class QuestionBank {
             cache = Collections.unmodifiableList(loaded);
             skills = Collections.unmodifiableList(legacySkills);
             knowledgeUnits = Collections.unmodifiableMap(units);
+            LinkedHashMap<String, Boolean> assessed = new LinkedHashMap<>();
+            for (Question question : loaded) {
+                for (KnowledgeRef ref : question.knowledge) assessed.put(ref.id, true);
+            }
+            currentKnowledgeIds = Collections.unmodifiableList(new ArrayList<>(assessed.keySet()));
         } catch (Exception e) {
             throw new IllegalStateException("Content pack failed to load", e);
         }
@@ -243,7 +241,9 @@ public final class QuestionBank {
         cache = Collections.emptyList();
         skills = Collections.emptyList();
         knowledgeUnits = Collections.emptyMap();
+        currentKnowledgeIds = Collections.emptyList();
         knowledgeAtlas = null;
+        blueprintWeights = Collections.emptyMap();
         currentPack = null;
         init(context);
     }
@@ -260,7 +260,7 @@ public final class QuestionBank {
 
     public static List<String> knowledgeIds() {
         ensureInit();
-        return new ArrayList<>(knowledgeUnits.keySet());
+        return new ArrayList<>(currentKnowledgeIds);
     }
 
     public static KnowledgeUnit knowledgeUnit(String id) {
@@ -351,7 +351,14 @@ public final class QuestionBank {
             blocked += Math.max(0.0, 0.65 - progress.masteryKnowledge(prerequisite));
         }
         if (!q.prerequisites.isEmpty()) blocked /= q.prerequisites.size();
-        return direct + blocked * 1.5;
+        double dueBoost = progress.isDue(q.primaryKnowledgeId()) ? 0.22 : 0.0;
+        double targetWeight = blueprintWeights.getOrDefault(q.primaryKnowledgeId(), 0.0);
+        return direct + blocked * 1.5 - dueBoost - targetWeight * 0.25;
+    }
+
+    public static double blueprintWeight(String knowledgeId) {
+        ensureInit();
+        return blueprintWeights.getOrDefault(knowledgeId, 0.0);
     }
 
     public static List<Question> sprint(int count, long seed) {
@@ -413,6 +420,43 @@ public final class QuestionBank {
             result.put(key, object.optString(key, ""));
         }
         return result;
+    }
+
+    private static LinkedHashMap<String, KnowledgeUnit> loadKnowledgeRegistry(Context context) throws Exception {
+        JSONObject root = new JSONObject(readAsset(context, KNOWLEDGE_ASSET));
+        JSONArray array = root.getJSONArray("knowledge_units");
+        LinkedHashMap<String, KnowledgeUnit> units = new LinkedHashMap<>();
+        for (int i = 0; i < array.length(); i++) {
+            JSONObject u = array.getJSONObject(i);
+            KnowledgeUnit unit = new KnowledgeUnit(
+                    u.getString("id"), u.optString("kind", "concept"),
+                    u.optString("legacy_skill", ""), parseStringMap(u.optJSONObject("labels")));
+            if (units.put(unit.id, unit) != null) {
+                throw new IllegalStateException("Duplicate global knowledge unit: " + unit.id);
+            }
+        }
+        return units;
+    }
+
+    private static Map<String, Double> loadBlueprint(Context context, String packId,
+                                                      Set<String> knownIds) throws Exception {
+        JSONObject root = new JSONObject(readAsset(context, BLUEPRINT_ASSET));
+        JSONArray blueprints = root.getJSONArray("blueprints");
+        LinkedHashMap<String, Double> weights = new LinkedHashMap<>();
+        for (int i = 0; i < blueprints.length(); i++) {
+            JSONObject blueprint = blueprints.getJSONObject(i);
+            if (!packId.equals(blueprint.getString("pack_id"))) continue;
+            JSONArray coverage = blueprint.getJSONArray("coverage");
+            for (int j = 0; j < coverage.length(); j++) {
+                JSONObject row = coverage.getJSONObject(j);
+                String id = row.getString("knowledge_id");
+                if (!knownIds.contains(id)) throw new IllegalStateException("Unknown blueprint unit: " + id);
+                weights.put(id, row.getDouble("weight"));
+            }
+            break;
+        }
+        if (weights.isEmpty()) throw new IllegalStateException("No competition blueprint for " + packId);
+        return Collections.unmodifiableMap(weights);
     }
 
     private static Question.Type mapType(String mode) {

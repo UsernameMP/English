@@ -15,6 +15,7 @@ def main():
     p.add_argument("--competition", default="")
     p.add_argument("--season", default="")
     p.add_argument("--knowledge", required=True, help="Primary assessed Knowledge Unit id")
+    p.add_argument("--interaction", choices=["single_choice", "numeric"], default="single_choice")
     p.add_argument("--prerequisite", action="append", default=[])
     p.add_argument("--seed", default="0")
     p.add_argument("--output", required=True)
@@ -28,19 +29,14 @@ def main():
         "grade_max": args.grade,
         "competition": args.competition,
         "season": args.season,
-        "interaction": "single_choice",
+        "interaction": args.interaction,
         "mode": "problem",
         "difficulty": 1,
         "prompt": "TODO: write problem statement",
         "stimulus": {},
         "knowledge": [{"id": args.knowledge, "weight": 1.0}],
         "prerequisites": list(dict.fromkeys(args.prerequisite)),
-        "options": [
-            {"id": "a", "text": "TODO option A"},
-            {"id": "b", "text": "TODO option B"},
-            {"id": "c", "text": "TODO option C"}
-        ],
-        "answer": ["a"],
+        "answer": ["a"] if args.interaction == "single_choice" else ["0"],
         "feedback": {
             "short": {"en": "TODO", "ru": "TODO"},
             "full": {"en": "TODO", "ru": "TODO"},
@@ -57,6 +53,12 @@ def main():
             "seed": str(args.seed)
         }
     }
+    if args.interaction == "single_choice":
+        question["options"] = [
+            {"id": "a", "text": "TODO option A"},
+            {"id": "b", "text": "TODO option B"},
+            {"id": "c", "text": "TODO option C"}
+        ]
 
     out = Path(args.output)
     out.parent.mkdir(parents=True, exist_ok=True)

@@ -148,4 +148,6 @@
     <string name="activity_month_summary">Активных дней: %1$d\nВопросов: %2$d\nПравильных: %3$d\nПолучено XP: %4$d\nПолучено кристаллов: %5$d\nЗавершено сессий: %6$d</string>
     <string name="next_focus">СЛЕДУЮЩИЙ ФОКУС · сначала предпосылки</string>
     <string name="content_pack_section">КОНТЕНТ-ПАК</string>
+    <string name="numeric_answer_hint">Введи число</string>
+    <string name="submit_answer">Проверить ответ</string>
 </resources>

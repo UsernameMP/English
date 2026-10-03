@@ -20,6 +20,16 @@
       "season": "2026-2027",
       "target_date": "2027-03-01",
       "mode": "general"
+    },
+    {
+      "pack_id": "english.olympiad.6-7.global.2026",
+      "subject": "english",
+      "grade": 6,
+      "competition": "Olympiad bridge",
+      "region": "Global",
+      "season": "2026-2027",
+      "target_date": "2027-03-01",
+      "mode": "competition"
     }
   ]
 }
