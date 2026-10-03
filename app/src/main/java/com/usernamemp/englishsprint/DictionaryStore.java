@@ -25,6 +25,7 @@ public final class DictionaryStore {
     private static final String ASSET = "content/dictionary_en.json";
     private static final String PREFS = "english_sprint_dictionary";
     private static final String SAVED = "saved_lemmas";
+    private static final String CACHED = "cached_remote_entries";
 
     private final Context context;
     private final SharedPreferences prefs;
@@ -35,11 +36,34 @@ public final class DictionaryStore {
         this.context = context.getApplicationContext();
         this.prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
         load();
+        loadCached();
     }
 
     public DictionaryEntry lookup(String token) {
         if (token == null) return null;
         return byForm.get(normalize(token));
+    }
+
+    public synchronized void cache(DictionaryEntry entry) {
+        if (entry == null || entry.lemma == null || entry.lemma.isEmpty()) return;
+        putEntry(entry);
+
+        try {
+            JSONObject root = new JSONObject(prefs.getString(CACHED, "{}"));
+            JSONObject o = new JSONObject();
+            o.put("lemma", entry.lemma);
+            JSONArray forms = new JSONArray();
+            for (String form : entry.forms) forms.put(form);
+            o.put("forms", forms);
+            o.put("phonetic", entry.phonetic);
+            o.put("example", entry.example);
+            o.put("definition_en", entry.definition(Locale.ENGLISH));
+            o.put("translation_en", entry.translation(Locale.ENGLISH));
+            o.put("fetched_at", System.currentTimeMillis());
+            root.put(normalize(entry.lemma), o);
+            prefs.edit().putString(CACHED, root.toString()).apply();
+        } catch (Exception ignored) {
+        }
     }
 
     public boolean isSaved(DictionaryEntry entry) {
@@ -166,12 +190,53 @@ public final class DictionaryStore {
                         stringMap(o.optJSONObject("translation")),
                         stringMap(o.optJSONObject("definition"))
                 );
-                byLemma.put(entry.lemma, entry);
-                byForm.put(normalize(entry.lemma), entry);
-                for (String form : forms) byForm.put(normalize(form), entry);
+                putEntry(entry);
             }
         } catch (Exception e) {
             throw new IllegalStateException("Dictionary asset failed to load", e);
+        }
+    }
+
+    private void loadCached() {
+        try {
+            JSONObject root = new JSONObject(prefs.getString(CACHED, "{}"));
+            java.util.Iterator<String> keys = root.keys();
+            while (keys.hasNext()) {
+                String key = keys.next();
+                JSONObject o = root.optJSONObject(key);
+                if (o == null) continue;
+
+                List<String> forms = new ArrayList<>();
+                JSONArray formArray = o.optJSONArray("forms");
+                if (formArray != null) {
+                    for (int i = 0; i < formArray.length(); i++) forms.add(formArray.optString(i, ""));
+                }
+
+                Map<String, String> translations = new LinkedHashMap<>();
+                translations.put("en", o.optString("translation_en", o.optString("lemma", key)));
+                Map<String, String> definitions = new LinkedHashMap<>();
+                definitions.put("en", o.optString("definition_en", ""));
+
+                DictionaryEntry entry = new DictionaryEntry(
+                        o.optString("lemma", key),
+                        forms,
+                        o.optString("phonetic", ""),
+                        o.optString("example", ""),
+                        translations,
+                        definitions
+                );
+                putEntry(entry);
+            }
+        } catch (Exception ignored) {
+        }
+    }
+
+    private void putEntry(DictionaryEntry entry) {
+        byLemma.put(entry.lemma, entry);
+        byForm.put(normalize(entry.lemma), entry);
+        for (String form : entry.forms) {
+            String normalized = normalize(form);
+            if (!normalized.isEmpty()) byForm.put(normalized, entry);
         }
     }
 
