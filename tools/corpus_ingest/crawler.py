@@ -266,6 +266,17 @@ class DropboxClient:
             "Content-Type": "application/json",
         }
 
+    @staticmethod
+    def _raise_dropbox_error(response: requests.Response, operation: str) -> None:
+        if response.ok:
+            return
+        body = response.text[:1200]
+        request_id = response.headers.get("x-dropbox-request-id", "")
+        raise RuntimeError(
+            f"Dropbox API {operation} failed: HTTP {response.status_code}; "
+            f"request_id={request_id or 'n/a'}; body={body}"
+        )
+
     def ensure_folder(self, path: str) -> None:
         current = ""
         for part in [p for p in path.split("/") if p]:
@@ -316,7 +327,7 @@ class DropboxClient:
         )
         if r.status_code == 409:
             return None
-        r.raise_for_status()
+        self._raise_dropbox_error(r, "files/download")
         return r.content
 
     def exists(self, path: str) -> bool:
@@ -328,7 +339,7 @@ class DropboxClient:
         )
         if r.status_code == 409:
             return False
-        r.raise_for_status()
+        self._raise_dropbox_error(r, "files/get_metadata")
         return True
 
     def checkpoint_path(self) -> str:
