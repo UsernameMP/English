@@ -3,6 +3,11 @@ package com.usernamemp.englishsprint;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.LinkedHashSet;
+import java.util.Locale;
+import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public final class Question {
     public enum Type { PRACTICE, GRAMMAR, READING, LISTENING, STORY }
@@ -22,7 +27,12 @@ public final class Question {
     public final String context;
     public final List<String> options;
     public final int correctIndex;
+    public final List<Integer> correctIndices;
     public final List<String> acceptedAnswers;
+    public final double numericTolerance;
+    public final Double numericMin;
+    public final Double numericMax;
+    public final String numericUnit;
     public final String explanation;
     public final String explanationFull;
     public final String rule;
@@ -74,7 +84,13 @@ public final class Question {
         this.context = context == null ? "" : context;
         this.options = Collections.unmodifiableList(new ArrayList<>(options));
         this.correctIndex = correctIndex;
+        this.correctIndices = correctIndex < 0
+                ? Collections.emptyList() : Collections.singletonList(correctIndex);
         this.acceptedAnswers = Collections.emptyList();
+        this.numericTolerance = 0.0;
+        this.numericMin = null;
+        this.numericMax = null;
+        this.numericUnit = "";
         this.explanation = explanation == null ? "" : explanation;
         this.explanationFull = explanationFull == null ? "" : explanationFull;
         this.rule = rule == null ? "" : rule;
@@ -102,7 +118,12 @@ public final class Question {
             String context,
             List<String> options,
             int correctIndex,
+            List<Integer> correctIndices,
             List<String> acceptedAnswers,
+            double numericTolerance,
+            Double numericMin,
+            Double numericMax,
+            String numericUnit,
             String explanation,
             String explanationFull,
             String rule,
@@ -129,7 +150,12 @@ public final class Question {
         this.context = context == null ? "" : context;
         this.options = Collections.unmodifiableList(new ArrayList<>(options));
         this.correctIndex = correctIndex;
+        this.correctIndices = Collections.unmodifiableList(new ArrayList<>(correctIndices));
         this.acceptedAnswers = Collections.unmodifiableList(new ArrayList<>(acceptedAnswers));
+        this.numericTolerance = Math.max(0.0, numericTolerance);
+        this.numericMin = numericMin;
+        this.numericMax = numericMax;
+        this.numericUnit = numericUnit == null ? "" : numericUnit.trim();
         this.explanation = explanation == null ? "" : explanation;
         this.explanationFull = explanationFull == null ? "" : explanationFull;
         this.rule = rule == null ? "" : rule;
@@ -150,14 +176,47 @@ public final class Question {
         return index == correctIndex;
     }
 
+    public boolean acceptsIndices(Set<Integer> indices) {
+        return new LinkedHashSet<>(correctIndices).equals(new LinkedHashSet<>(indices));
+    }
+
     public boolean acceptsText(String raw) {
         if (raw == null) return false;
+        if ("numeric".equals(interaction)) {
+            Double value = parseNumeric(raw);
+            if (value == null) return false;
+            if (numericMin != null && value < numericMin) return false;
+            if (numericMax != null && value > numericMax) return false;
+            if (numericMin != null || numericMax != null) return true;
+            for (String accepted : acceptedAnswers) {
+                Double expected = parseNumeric(accepted);
+                if (expected != null && Math.abs(value - expected) <= numericTolerance + 1e-9) return true;
+            }
+            return false;
+        }
         String normalized = normalizeAnswer(raw);
         if (normalized.isEmpty()) return false;
         for (String accepted : acceptedAnswers) {
             if (normalized.equals(normalizeAnswer(accepted))) return true;
         }
         return false;
+    }
+
+    private Double parseNumeric(String raw) {
+        String value = raw.trim().replace(',', '.');
+        if (!numericUnit.isEmpty()) {
+            String suffix = numericUnit.toLowerCase(Locale.ROOT).replaceAll("\\s+", "");
+            String compact = value.toLowerCase(Locale.ROOT).replaceAll("\\s+", "");
+            if (!compact.endsWith(suffix)) return null;
+            value = compact.substring(0, compact.length() - suffix.length());
+        }
+        Matcher matcher = Pattern.compile("^[-+]?(?:\\d+(?:\\.\\d+)?|\\.\\d+)$").matcher(value.trim());
+        if (!matcher.matches()) return null;
+        try {
+            return Double.parseDouble(value.trim());
+        } catch (NumberFormatException ignored) {
+            return null;
+        }
     }
 
     private static String normalizeAnswer(String value) {

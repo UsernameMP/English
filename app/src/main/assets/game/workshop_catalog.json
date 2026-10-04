@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "structures": [
+    {"id":"study_lamp","icon":"✦","price_crystals":25,"required_level":1,"name":{"en":"Signal Lamp","ru":"Сигнальная лампа"},"description":{"en":"The first light in your learning outpost.","ru":"Первый свет в твоей учебной базе."}},
+    {"id":"map_table","icon":"⌘","price_crystals":60,"required_level":2,"name":{"en":"Atlas Table","ru":"Стол Атласа"},"description":{"en":"A place to plan the next expedition.","ru":"Место для планирования новой экспедиции."}},
+    {"id":"workshop","icon":"⚙","price_crystals":110,"required_level":3,"name":{"en":"Maker Workshop","ru":"Мастерская"},"description":{"en":"A creative corner for future inventions.","ru":"Творческий уголок для будущих изобретений."}},
+    {"id":"observatory","icon":"◉","price_crystals":180,"required_level":5,"name":{"en":"Observatory","ru":"Обсерватория"},"description":{"en":"A long-term landmark earned through learning.","ru":"Долгосрочная цель, заработанная обучением."}},
+    {"id":"knowledge_tree","icon":"♧","price_crystals":280,"required_level":8,"name":{"en":"Knowledge Tree","ru":"Дерево знаний"},"description":{"en":"The centerpiece of a growing base.","ru":"Центр постепенно растущей базы."}}
+  ]
+}

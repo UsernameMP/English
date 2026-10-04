@@ -3,7 +3,7 @@
   "bank_id": "informatics-olympiad-5-7-pilot",
   "title": "Informatics Olympiad Pilot",
   "locale": "en",
-  "content_version": "0.1.0",
+  "content_version": "0.2.0",
   "pack": {
     "id": "informatics.olympiad.5-7.global.2026",
     "subject": "informatics",
@@ -553,6 +553,7 @@
       "stimulus": {"text":"Binary number: 1111₂"},
       "prompt": "Enter its decimal value.",
       "answer": ["15", "15.0"],
+      "answer_policy": {"tolerance": 0},
       "feedback": {
         "short": {"en":"Add the active place values.","ru":"Сложи активные разряды."},
         "full": {"en":"8 + 4 + 2 + 1 = 15.","ru":"8 + 4 + 2 + 1 = 15."},
@@ -561,6 +562,57 @@
       "review": {"status":"published"},
       "knowledge": [{"id":"CS.DATA.BINARY","weight":1}],
       "prerequisites": []
+    },
+    {
+      "id": "cs_multi_001",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": ["boolean"],
+      "difficulty": 2,
+      "source": {"competition":"Olympiad pilot","region":"Global","year":"training","original":true},
+      "stimulus": {},
+      "prompt": "Select every expression that is true.",
+      "options": [
+        {"id":"a","text":"true AND true"},
+        {"id":"b","text":"false OR false"},
+        {"id":"c","text":"NOT false"},
+        {"id":"d","text":"true AND false"}
+      ],
+      "answer": ["a", "c"],
+      "feedback": {
+        "short": {"en":"Two expressions evaluate to true.","ru":"Два выражения дают true."},
+        "full": {"en":"true AND true and NOT false are true; the other two are false.","ru":"true AND true и NOT false истинны; остальные два выражения ложны."},
+        "rule": {"en":"A multi-select answer is correct only when the complete set is selected.","ru":"Ответ с несколькими вариантами верен только при выборе полного множества."}
+      },
+      "review": {"status":"published"},
+      "knowledge": [{"id":"CS.LOGIC.BOOLEAN","weight":1}],
+      "prerequisites": []
+    },
+    {
+      "id": "cs_numeric_003",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": ["complexity"],
+      "difficulty": 2,
+      "source": {"competition":"Olympiad pilot","region":"Global","year":"training","original":true},
+      "stimulus": {"text":"A 10 MB file is transferred in 4 seconds at a constant rate."},
+      "prompt": "Enter the transfer rate, including the unit MB/s.",
+      "answer": ["2.5 MB/s"],
+      "answer_policy": {"tolerance":0.01,"unit":"MB/s"},
+      "feedback": {
+        "short": {"en":"Divide data size by time.","ru":"Раздели объём данных на время."},
+        "full": {"en":"10 ÷ 4 = 2.5 MB/s.","ru":"10 ÷ 4 = 2,5 МБ/с."},
+        "rule": {"en":"Rate equals amount divided by elapsed time.","ru":"Скорость равна объёму, делённому на время."}
+      },
+      "review": {"status":"published"},
+      "knowledge": [{"id":"CS.ALGORITHMS.COMPLEXITY.INTRO","weight":1}],
+      "prerequisites": ["CS.ALGORITHMS.TRACING"]
     }
   ]
 }

@@ -11,6 +11,8 @@
       "competition": "VSOSh",
       "season": "2026-2027",
       "license_id": "project.original.v1",
+      "content_version": "0.3.0",
+      "sha256": "bffd25445b343843a6baa3a09a41282db87ed1c9464f1182788d6b89f6bb2e5d",
       "enabled": true
     },
     {
@@ -22,6 +24,8 @@
       "competition": "Olympiad pilot",
       "season": "2026-2027",
       "license_id": "project.original.v1",
+      "content_version": "0.2.0",
+      "sha256": "731607cad0d8a3121e43475020bd1a36c85e13d05e2197511405187f038497c8",
       "enabled": true
     },
     {
@@ -33,6 +37,8 @@
       "competition": "Olympiad bridge",
       "season": "2026-2027",
       "license_id": "project.original.v1",
+      "content_version": "0.1.0",
+      "sha256": "64ee36852419750acb62cbadd950f424e8825f1d7590665483ac5c05bfff84ed",
       "enabled": true
     }
   ]

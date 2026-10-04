@@ -15,7 +15,7 @@ Core fields:
 - `evidence`: exact text span used for reading highlighting
 - `review.status`
 
-The Android renderer ships reusable `single_choice` and `numeric` interactions. Numeric answers normalize decimal comma/dot and do not expose answer choices.
+The Android renderer ships reusable `single_choice`, `multi_choice` and `numeric` interactions. Multi-select grading compares the exact set of stable option IDs. Numeric answers support decimal comma/dot plus an optional `answer_policy` with non-negative `tolerance`, inclusive `min`/`max`, and a required `unit`.
 
 Run before committing content:
 
@@ -28,7 +28,7 @@ python3 scripts/validate_content.py
 
 The app loads a pack through `assets/content/catalog.json`. A pack owns product metadata (subject, grade range, competition, season) and can be swapped without changing the question renderer.
 
-The catalog is entitlement-filtered at runtime. Selection is persistent, while XP and Knowledge Unit evidence remain global. `licenses.json` is a release gate: every enabled pack must reference active, distributable rights. Content provenance is separate from both task JSON and commerce state.
+The catalog is entitlement-filtered at runtime. Selection is persistent, while XP and Knowledge Unit evidence remain global. `licenses.json` is a release gate: every enabled pack must reference active, distributable rights. Content provenance is separate from both task JSON and commerce state. Every catalog row also pins the bank's `content_version` and SHA-256 over the exact UTF-8 asset bytes; update both values whenever publishing a changed pack. CI and the runtime reject mismatches.
 
 `commerce/products.json` describes provider-neutral saleable scopes for pilot, Google Play, App Store, RU/CIS and promo adapters. Checkout remains disabled until a provider-specific legal, receipt-verification and store implementation exists.
 
