@@ -7,6 +7,7 @@ import json
 import mimetypes
 import os
 import re
+import time
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from html.parser import HTMLParser
@@ -381,17 +382,34 @@ class DropboxClient:
         return True
 
     def get_space_usage(self) -> dict[str, int]:
-        r = self.http.post(
-            "https://api.dropboxapi.com/2/users/get_space_usage",
-            headers=self.api_headers(),
-            data="null",
-            timeout=30,
+        last_error: Exception | None = None
+        for attempt in range(4):
+            try:
+                r = self.http.post(
+                    "https://api.dropboxapi.com/2/users/get_space_usage",
+                    headers=self.api_headers(),
+                    data="null",
+                    timeout=30,
+                )
+                if r.status_code in {429, 500, 502, 503, 504} and attempt < 3:
+                    time.sleep(2 ** attempt)
+                    continue
+                self._raise_dropbox_error(r, "users/get_space_usage")
+                payload = r.json()
+                allocation = payload.get("allocation") or {}
+                allocated = int(allocation.get("allocated") or 0)
+                return {"used": int(payload.get("used") or 0), "allocated": allocated}
+            except requests.RequestException as exc:
+                last_error = exc
+                if attempt >= 3:
+                    break
+                # Drop a potentially stale keep-alive connection before retrying.
+                self.http.close()
+                self.http = requests.Session()
+                time.sleep(2 ** attempt)
+        raise RuntimeError(
+            f"Dropbox space-usage request failed after 4 attempts: {last_error}"
         )
-        self._raise_dropbox_error(r, "users/get_space_usage")
-        payload = r.json()
-        allocation = payload.get("allocation") or {}
-        allocated = int(allocation.get("allocated") or 0)
-        return {"used": int(payload.get("used") or 0), "allocated": allocated}
 
     def checkpoint_path(self) -> str:
         return f"{self.root}/state/checkpoint.jsonl"
