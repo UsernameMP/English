@@ -2,6 +2,7 @@ from crawler import (
     allowed_by_patterns,
     guess_extension,
     merge_states,
+    normalize_refresh_token,
     parse_links,
     raw_dropbox_path,
     stable_document_id,
@@ -39,3 +40,9 @@ def test_merge_prefers_newer_record():
     a = {"1": {"document_id": "1", "updated_at": "2026-01-01T00:00:00+00:00", "status": "PENDING"}}
     b = {"1": {"document_id": "1", "updated_at": "2026-01-02T00:00:00+00:00", "status": "DOWNLOADED"}}
     assert merge_states(a, b)["1"]["status"] == "DOWNLOADED"
+
+
+def test_normalize_refresh_token_accepts_common_copy_formats():
+    assert normalize_refresh_token('  "abc123"  ') == "abc123"
+    assert normalize_refresh_token("refresh_token=abc123") == "abc123"
+    assert normalize_refresh_token('{"access_token":"short","refresh_token":"abc123"}') == "abc123"
