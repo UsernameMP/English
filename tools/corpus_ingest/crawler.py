@@ -704,9 +704,17 @@ def main() -> None:
         quota_bytes=args.quota_bytes,
         quota_stop_ratio=args.quota_stop_ratio,
     )
-    discovery = crawler.discover_all()
-    dbx.upload_checkpoint(state)
-    processed = crawler.process_batch(max(0, args.max_documents))
+    try:
+        crawler.enforce_quota(0)
+    except (QuotaLimitReached, QuotaCheckUnavailable) as exc:
+        crawler.quota_warning = str(exc)
+        print(f"::warning::{crawler.quota_warning}")
+        discovery = []
+        processed = 0
+    else:
+        discovery = crawler.discover_all()
+        dbx.upload_checkpoint(state)
+        processed = crawler.process_batch(max(0, args.max_documents))
     save_state(args.state, state)
 
     print(json.dumps(
