@@ -190,10 +190,28 @@ public class MainActivity extends Activity {
         root.addView(text(getString(R.string.shop_balance_fmt,economy.balance()),18,PRIMARY,Typeface.BOLD));
         root.addView(space(14));
         String mode=metaGame.preferredMode();
-        if(MetaGameStore.DEFENSE.equals(mode)) addWorldItems(root,mode,new String[]{"barrier","sensor","defense_module"},new int[]{25,60,140});
-        else if(MetaGameStore.HERO.equals(mode)) addWorldItems(root,mode,new String[]{"outfit","gear","ability"},new int[]{20,55,130});
+        if(MetaGameStore.DEFENSE.equals(mode)) {
+            addWorldItems(root,mode,new String[]{"barrier","sensor","defense_module"},new int[]{25,60,140});
+            Button defend=primaryButton(getString(R.string.defense_play));
+            defend.setOnClickListener(v->playDefenseSimulation());
+            root.addView(defend,matchWrap());
+        } else if(MetaGameStore.HERO.equals(mode)) addWorldItems(root,mode,new String[]{"outfit","gear","ability"},new int[]{20,55,130});
         else addWorldItems(root,mode,new String[]{"collar","toy","room"},new int[]{20,45,120});
         setScrollable(root);
+    }
+
+    private void playDefenseSimulation() {
+        DefenseEngine engine=new DefenseEngine();
+        int barrier=metaGame.level(MetaGameStore.DEFENSE,"barrier");
+        int sensor=metaGame.level(MetaGameStore.DEFENSE,"sensor");
+        int module=metaGame.level(MetaGameStore.DEFENSE,"defense_module");
+        if(barrier>0) engine.add(new DefenseEngine.Defense("barrier",2+barrier,3));
+        if(sensor>0) engine.add(new DefenseEngine.Defense("sensor",1+sensor,2));
+        if(module>0) engine.add(new DefenseEngine.Defense("module",4+module*2,1));
+        DefenseEngine.Result result=engine.simulate(3,4,8);
+        new AlertDialog.Builder(this).setTitle(getString(R.string.defense_result))
+                .setMessage(getString(result.survived?R.string.defense_survived:R.string.defense_failed,result.defeated,result.remainingBase))
+                .setPositiveButton(getString(R.string.got_it),null).show();
     }
 
     private void addWorldItems(LinearLayout root,String mode,String[] ids,int[] prices) {
