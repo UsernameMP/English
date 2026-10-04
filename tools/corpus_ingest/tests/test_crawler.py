@@ -1,5 +1,6 @@
 from crawler import (
     DropboxClient,
+    build_quota_report,
     allowed_by_patterns,
     guess_extension,
     merge_states,
@@ -59,3 +60,21 @@ def test_missing_dropbox_checkpoint_is_valid_first_run():
 
     dbx.download_bytes = should_not_download
     assert dbx.load_checkpoint() == {}
+
+
+def test_quota_guard_stops_at_95_percent_and_before_crossing():
+    quota = 2 * 1024 * 1024 * 1024
+    below = build_quota_report(int(quota * 0.90), quota, quota, 0.95, 0)
+    assert below["stop"] is False
+
+    exact = build_quota_report(int(quota * 0.95), quota, quota, 0.95, 0)
+    assert exact["stop"] is True
+
+    crossing = build_quota_report(int(quota * 0.94), quota, quota, 0.95, int(quota * 0.02))
+    assert crossing["stop"] is True
+
+
+def test_configured_two_gib_limit_wins_over_larger_account_allocation():
+    two_gib = 2 * 1024 * 1024 * 1024
+    report = build_quota_report(0, 10 * two_gib, two_gib, 0.95, 0)
+    assert report["effective_quota"] == two_gib
