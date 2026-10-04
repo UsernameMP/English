@@ -38,6 +38,8 @@ jobs:
       DROPBOX_ROOT: /OlympiadCorpus
       MAX_DOCUMENTS: ${{ github.event.inputs.max_documents || '50' }}
       MAX_FILE_BYTES: "104857600"
+      DROPBOX_QUOTA_BYTES: "2147483648"
+      DROPBOX_STOP_AT_RATIO: "0.95"
 
     steps:
       - uses: actions/checkout@v6
