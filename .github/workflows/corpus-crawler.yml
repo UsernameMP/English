@@ -8,7 +8,7 @@ on:
         required: false
         default: "50"
   schedule:
-    - cron: "17 * * * *"
+    - cron: "17,47 * * * *"
   push:
     paths:
       - ".github/workflows/corpus-crawler.yml"
@@ -19,6 +19,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: olympiad-crawler
@@ -77,3 +78,32 @@ jobs:
           git add tools/corpus_ingest/state/crawl_state.jsonl
           git commit -m "crawler: update corpus state [skip ci]"
           git push
+
+      - name: Continue next batch
+        if: env.DROPBOX_APP_KEY != '' && env.DROPBOX_APP_SECRET != '' && env.DROPBOX_REFRESH_TOKEN != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("run_summary.json")
+          if not p.exists():
+              print("No run summary; not chaining")
+              raise SystemExit(0)
+          s = json.loads(p.read_text(encoding="utf-8"))
+          print(json.dumps({
+              "processed": s.get("processed"),
+              "remaining": s.get("remaining"),
+              "warning": s.get("warning"),
+              "should_continue": s.get("should_continue"),
+          }, ensure_ascii=False))
+          if s.get("should_continue"):
+              Path("/tmp/continue_crawler").write_text("1")
+          PY
+          if [ -f /tmp/continue_crawler ]; then
+            gh workflow run corpus-crawler.yml --ref main -f max_documents=50
+            echo "Queued next crawler batch"
+          else
+            echo "Crawler chain stopped cleanly"
+          fi
