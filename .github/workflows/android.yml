@@ -36,6 +36,11 @@ jobs:
       - name: Validate content bank
         run: python3 scripts/validate_content.py
 
+      - name: Enforce Atlas and interaction coverage
+        run: |
+          python3 -m unittest discover -s tools/corpus_ingest/tests -p 'test_coverage.py'
+          python3 tools/corpus_ingest/coverage.py --min-runnable 0.95 --output build/reports/content-coverage.json
+
       - name: Verify reproducible pack manifests
         run: python3 scripts/publish_content_pack.py
 

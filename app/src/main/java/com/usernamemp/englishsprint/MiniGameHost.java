@@ -32,9 +32,6 @@ public final class MiniGameHost {
         this.context = context.getApplicationContext();
         this.economy = economy;
         this.prefs = this.context.getSharedPreferences("english_sprint_minigames", Context.MODE_PRIVATE);
-        register(new Match3MiniGame());
-        register(new MemoryMiniGame());
-        register(new TapSparkMiniGame());
         loadConfig();
     }
 
@@ -51,7 +48,7 @@ public final class MiniGameHost {
         String selected = selectNextGameId();
         MiniGame game = games.get(selected);
         MiniGameConfig config = configs.get(selected);
-        if (game == null || config == null || !config.enabled) {
+        if (!compatible(game, config)) {
             onFinished.run();
             return;
         }
@@ -72,7 +69,8 @@ public final class MiniGameHost {
     private List<String> enabledGameIds() {
         List<String> ids = new ArrayList<>();
         for (Map.Entry<String, MiniGameConfig> entry : configs.entrySet()) {
-            if (entry.getValue().enabled && games.containsKey(entry.getKey())) ids.add(entry.getKey());
+            MiniGame game = games.get(entry.getKey());
+            if (compatible(game, entry.getValue())) ids.add(entry.getKey());
         }
         return ids;
     }
@@ -95,6 +93,23 @@ public final class MiniGameHost {
 
     private void register(MiniGame game) {
         games.put(game.id(), game);
+    }
+
+    private void registerConfigured(String className) {
+        if (className == null || !className.startsWith("com.usernamemp.englishsprint.")) return;
+        try {
+            Object candidate = Class.forName(className).getDeclaredConstructor().newInstance();
+            if (candidate instanceof MiniGame) register((MiniGame) candidate);
+        } catch (ReflectiveOperationException ignored) {
+            // Catalog mistakes and removed modules fail closed; CI validates bundled entries.
+        }
+    }
+
+    private boolean compatible(MiniGame game, MiniGameConfig config) {
+        if (game == null || config == null || !config.isProduction()) return false;
+        GameModuleDescriptor descriptor = game.descriptor();
+        return descriptor != null && descriptor.id.equals(config.id)
+                && descriptor.apiVersion == config.moduleApiVersion && descriptor.isCompatible();
     }
 
     private void loadConfig() {
@@ -121,6 +136,8 @@ public final class MiniGameHost {
                 MiniGameConfig config = new MiniGameConfig(
                         o.optString("id", ""),
                         o.optBoolean("enabled", false),
+                        o.optString("status", "prototype"),
+                        o.optInt("module_api_version", 0),
                         Math.max(5, Math.min(60, o.optInt("duration_seconds", 45))),
                         Math.max(0, o.optInt("completion_reward", 0)),
                         Math.max(1, o.optInt("score_bonus_every", 10)),
@@ -128,6 +145,7 @@ public final class MiniGameHost {
                         titles
                 );
                 configs.put(config.id, config);
+                registerConfigured(o.optString("engine_class", ""));
             }
         } catch (Exception e) {
             throw new IllegalStateException("Mini-game config failed to load", e);

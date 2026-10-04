@@ -80,6 +80,14 @@
     },
     {
       "from":"MATH.COMBINATORICS.COUNTING","type":"uses","to":"MATH.LOGIC.INVARIANTS"
-    }
+    },
+    {"from":"GEO.MAP.LOCATION","type":"requires","to":"GEO.MAP.SCALES"},
+    {"from":"GEO.DATA.ESTIMATION","type":"requires","to":"GEO.DATA.SCALES"},
+    {"from":"GEO.POLITICAL.CAPITALS","type":"uses","to":"GEO.MAP.LOCATION"},
+    {"from":"GEO.PHYSICAL.REGIONS","type":"uses","to":"GEO.MAP.LOCATION"},
+    {"from":"GEO.CLIMATE.INTERPRETATION","type":"requires","to":"GEO.DATA.SCALES"},
+    {"from":"GEO.HUMAN.DEMOGRAPHY","type":"requires","to":"GEO.DATA.SCALES"},
+    {"from":"GEO.ECONOMIC.RESOURCES","type":"uses","to":"GEO.MAP.LOCATION"},
+    {"from":"GEO.SYSTEMS.CAUSALITY","type":"uses","to":"GEO.PHYSICAL.REGIONS"}
   ]
 }

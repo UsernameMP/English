@@ -185,10 +185,12 @@
 
     <string name="dashboard_caption">Your learning dashboard</string>
     <string name="choose_subject">Choose a subject</string><string name="choose_subject_caption">Your subscriptions unlock subjects. Choose what you want to prepare for.</string>
-    <string name="subject_english">English</string><string name="subject_math">Mathematics</string><string name="subject_informatics">Informatics</string>
+    <string name="subject_english">English</string><string name="subject_math">Mathematics</string><string name="subject_informatics">Informatics</string><string name="subject_geography">Geography</string>
     <string name="choose_grade">Choose grade</string><string name="grade_fmt">Grade %1$d</string>
     <string name="choose_goal">Choose preparation goal</string><string name="all_olympiads">All applicable olympiads</string>
     <string name="vsosh">All-Russian School Olympiad</string><string name="olympiad_pilot">Olympiad preparation</string><string name="olympiad_bridge">Olympiad bridge</string>
     <string name="subscription_required_body">%1$s is a separate subject subscription. Checkout will be enabled when the production billing provider is connected.</string>
     <string name="subscription_coming">This subject subscription is not available for checkout in the pilot yet.</string><string name="subscription_action">Subscription</string>
+    <string name="change_course">Change learning context</string>
+    <string name="game_prototype_notice">Defense gameplay is in development. Upgrades are kept, but the non-interactive simulation is no longer presented as a game.</string>
 </resources>

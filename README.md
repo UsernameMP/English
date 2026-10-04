@@ -2,6 +2,14 @@
 
 Offline Android trainer for fast preparation for the school stage of the English Olympiad (Tatarstan, 5–6 grades).
 
+## v0.6.13
+
+- Learn returns to the last valid subject · grade · olympiad context in one tap; changing course is explicit;
+- subject-neutral interaction taxonomy and a global Geography olympiad profile extend the Atlas without copying third-party content;
+- corpus coverage tooling measures structured, Atlas-mapped, interaction-covered and runnable tasks, with a 95% CI gate (bundled packs: 182/182 runnable);
+- mini-games load through a versioned declarative module contract; prototype Match-3, Tap Spark and simulated defense are removed from production rotation;
+- versionName 0.6.13 / versionCode 20; application ID, signing chain and updater contract are unchanged.
+
 ## v0.6.7
 
 - an original 12-task Mathematics Grades 5–7 pack adds five global MATH Knowledge Units;
@@ -42,6 +50,8 @@ Offline Android trainer for fast preparation for the school stage of the English
 `commerce/entitlements.json` describes what content is accessible; future Google Play / App Store / RU-CIS payment adapters will only produce entitlements and will not be embedded into the learning engine.  
 `generator/` creates draft question JSON and can later be driven by human editors, imports or LLM pipelines. It never publishes directly.  
 Game engines consume game-session rights and do not own educational content.
+`interaction_taxonomy.json` defines reusable task renderers; subject profiles map olympiad archetypes to those renderers and global Knowledge Units.
+`tools/corpus_ingest/coverage.py` provides a deterministic coverage report and clusters tasks that cannot yet run.
 
 ## v0.6.2
 

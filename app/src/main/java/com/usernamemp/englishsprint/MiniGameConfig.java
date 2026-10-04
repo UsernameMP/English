@@ -8,6 +8,8 @@ import java.util.Map;
 public final class MiniGameConfig {
     public final String id;
     public final boolean enabled;
+    public final String status;
+    public final int moduleApiVersion;
     public final int durationSeconds;
     public final int completionReward;
     public final int scoreBonusEvery;
@@ -17,6 +19,8 @@ public final class MiniGameConfig {
     public MiniGameConfig(
             String id,
             boolean enabled,
+            String status,
+            int moduleApiVersion,
             int durationSeconds,
             int completionReward,
             int scoreBonusEvery,
@@ -25,12 +29,16 @@ public final class MiniGameConfig {
     ) {
         this.id = id;
         this.enabled = enabled;
+        this.status = status;
+        this.moduleApiVersion = moduleApiVersion;
         this.durationSeconds = durationSeconds;
         this.completionReward = completionReward;
         this.scoreBonusEvery = scoreBonusEvery;
         this.scoreBonusCap = scoreBonusCap;
         this.titles = Collections.unmodifiableMap(new LinkedHashMap<>(titles));
     }
+
+    public boolean isProduction() { return enabled && "production".equals(status); }
 
     public String title(Locale locale) {
         String lang = locale == null ? "en" : locale.getLanguage();
