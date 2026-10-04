@@ -23,7 +23,7 @@ public final class MetaGameStore {
     }
     public int level(String mode, String item) { return prefs.getInt("level."+mode+"."+item, 0); }
     public boolean buyLevel(String mode, String item, int price) {
-        if (!modes().contains(mode) || price < 0 || !economy.spend(price, "meta:"+mode+":"+item)) return false;
+        if (!modes().contains(mode) || price < 0 || !economy.spend(price, "meta_purchase", mode+":"+item)) return false;
         String key="level."+mode+"."+item;
         prefs.edit().putInt(key, prefs.getInt(key,0)+1).apply();
         return true;
