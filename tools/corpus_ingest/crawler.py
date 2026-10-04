@@ -342,7 +342,12 @@ class DropboxClient:
         self.upload_bytes(self.checkpoint_path(), payload, overwrite=True)
 
     def load_checkpoint(self) -> dict[str, dict]:
-        data = self.download_bytes(self.checkpoint_path())
+        path = self.checkpoint_path()
+        # First run is expected to have no Dropbox checkpoint yet.
+        # Check metadata first instead of calling /files/download on a missing path.
+        if not self.exists(path):
+            return {}
+        data = self.download_bytes(path)
         if not data:
             return {}
         out = {}
