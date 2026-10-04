@@ -176,4 +176,10 @@
     <string name="meta_barrier">Protective barrier</string><string name="meta_sensor">Detection sensor</string><string name="meta_defense_module">Defense module</string>
     <string name="meta_outfit">Hero outfit</string><string name="meta_gear">Hero gear</string><string name="meta_ability">Hero ability</string>
     <string name="defense_play">Start defense test</string><string name="defense_result">Defense result</string><string name="defense_survived">Base held. Threats stopped: %1$d · integrity: %2$d%%</string><string name="defense_failed">Base breached. Threats stopped: %1$d · integrity: %2$d%%</string>
+
+    <string name="learn_title">Learn</string><string name="learn_caption">Choose automatic training or one topic.</string>
+    <string name="current_pack">CURRENT COURSE</string><string name="auto_training">✨ Automatic training</string>
+    <string name="auto_training_caption">The app builds a mixed session from your current course and progress.</string>
+    <string name="choose_topic">Choose a topic</string><string name="choose_topic_caption">Four quick choices now; the grid can expand to eight as the course grows.</string>
+    <string name="topic_empty">There are no tasks for this topic in the selected course yet.</string>
 </resources>
