@@ -176,4 +176,10 @@
     <string name="meta_barrier">Защитный барьер</string><string name="meta_sensor">Датчик обнаружения</string><string name="meta_defense_module">Защитный модуль</string>
     <string name="meta_outfit">Одежда героя</string><string name="meta_gear">Снаряжение героя</string><string name="meta_ability">Способность героя</string>
     <string name="defense_play">Запустить защиту</string><string name="defense_result">Результат защиты</string><string name="defense_survived">База устояла. Остановлено угроз: %1$d · целостность: %2$d%%</string><string name="defense_failed">База прорвана. Остановлено угроз: %1$d · целостность: %2$d%%</string>
+
+    <string name="learn_title">Учиться</string><string name="learn_caption">Выбери автоматическую тренировку или одну тему.</string>
+    <string name="current_pack">ТЕКУЩИЙ КУРС</string><string name="auto_training">✨ Сформировать автоматически</string>
+    <string name="auto_training_caption">Приложение само соберёт смешанную тренировку по текущему курсу и прогрессу.</string>
+    <string name="choose_topic">Выбрать тему</string><string name="choose_topic_caption">Сейчас четыре быстрых варианта; сетка расширяется до восьми по мере роста курса.</string>
+    <string name="topic_empty">В выбранном курсе пока нет заданий по этой теме.</string>
 </resources>
