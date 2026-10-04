@@ -1,4 +1,5 @@
 from crawler import (
+    DropboxClient,
     allowed_by_patterns,
     guess_extension,
     merge_states,
@@ -46,3 +47,15 @@ def test_normalize_refresh_token_accepts_common_copy_formats():
     assert normalize_refresh_token('  "abc123"  ') == "abc123"
     assert normalize_refresh_token("refresh_token=abc123") == "abc123"
     assert normalize_refresh_token('{"access_token":"short","refresh_token":"abc123"}') == "abc123"
+
+
+def test_missing_dropbox_checkpoint_is_valid_first_run():
+    dbx = object.__new__(DropboxClient)
+    dbx.root = "/OlympiadCorpus"
+    dbx.exists = lambda path: False
+
+    def should_not_download(_path):
+        raise AssertionError("download must not be called when checkpoint does not exist")
+
+    dbx.download_bytes = should_not_download
+    assert dbx.load_checkpoint() == {}
