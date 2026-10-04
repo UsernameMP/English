@@ -69,15 +69,40 @@ jobs:
         if: env.DROPBOX_APP_KEY != '' && env.DROPBOX_APP_SECRET != '' && env.DROPBOX_REFRESH_TOKEN != ''
         working-directory: ${{ github.workspace }}
         run: |
-          if git diff --quiet -- tools/corpus_ingest/state/crawl_state.jsonl; then
-            echo "No state changes"
-            exit 0
-          fi
+          STATE_FILE="tools/corpus_ingest/state/crawl_state.jsonl"
+          cp "$STATE_FILE" /tmp/crawl_state.jsonl
+
           git config user.name "olympiad-crawler[bot]"
           git config user.email "olympiad-crawler[bot]@users.noreply.github.com"
-          git add tools/corpus_ingest/state/crawl_state.jsonl
-          git commit -m "crawler: update corpus state [skip ci]"
-          git push
+
+          for attempt in 1 2 3 4; do
+            echo "Publishing crawler state, attempt $attempt/4"
+
+            # Start from the newest main so code/docs/parser changes made during
+            # a long crawl never cause a non-fast-forward state push.
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/crawl_state.jsonl "$STATE_FILE"
+
+            if git diff --quiet -- "$STATE_FILE"; then
+              echo "Remote main already has this crawler state"
+              exit 0
+            fi
+
+            git add "$STATE_FILE"
+            git commit -m "crawler: update corpus state [skip ci]"
+
+            if git push origin HEAD:main; then
+              echo "Crawler state published successfully"
+              exit 0
+            fi
+
+            echo "main changed again while publishing state; retrying"
+            sleep $((attempt * 2))
+          done
+
+          echo "::error::Could not publish crawler state after 4 attempts"
+          exit 1
 
       - name: Continue next batch
         if: env.DROPBOX_APP_KEY != '' && env.DROPBOX_APP_SECRET != '' && env.DROPBOX_REFRESH_TOKEN != ''
