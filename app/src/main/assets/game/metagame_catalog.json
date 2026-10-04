@@ -1,0 +1,9 @@
+{
+  "schema_version":"1.0",
+  "default_mode":"pet",
+  "modes":[
+    {"id":"pet","items":[{"id":"collar","price_crystals":20},{"id":"toy","price_crystals":45},{"id":"room","price_crystals":120}]},
+    {"id":"defense","items":[{"id":"barrier","price_crystals":25},{"id":"sensor","price_crystals":60},{"id":"defense_module","price_crystals":140}]},
+    {"id":"hero","items":[{"id":"outfit","price_crystals":20},{"id":"gear","price_crystals":55},{"id":"ability","price_crystals":130}]}
+  ]
+}
