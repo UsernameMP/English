@@ -195,11 +195,36 @@ def merge_states(a: dict[str, dict], b: dict[str, dict]) -> dict[str, dict]:
     return merged
 
 
+def normalize_refresh_token(value: str) -> str:
+    """Accept the raw refresh token plus common copy/paste wrappers."""
+    raw = value.strip()
+    if not raw:
+        return raw
+
+    if raw.startswith("{") and raw.endswith("}"):
+        try:
+            payload = json.loads(raw)
+            token = payload.get("refresh_token")
+            if isinstance(token, str) and token.strip():
+                raw = token.strip()
+        except json.JSONDecodeError:
+            pass
+
+    match = re.match(r"(?is)^refresh_token\s*[:=]\s*(.+)$", raw)
+    if match:
+        raw = match.group(1).strip()
+
+    if len(raw) >= 2 and raw[0] == raw[-1] and raw[0] in {"'", '"'}:
+        raw = raw[1:-1].strip()
+
+    return raw
+
+
 class DropboxClient:
     def __init__(self, app_key: str, app_secret: str, refresh_token: str, root: str) -> None:
         self.app_key = app_key
         self.app_secret = app_secret
-        self.refresh_token = refresh_token
+        self.refresh_token = normalize_refresh_token(refresh_token)
         self.root = root.rstrip("/") or DEFAULT_DROPBOX_ROOT
         self.http = requests.Session()
         self.access_token: str | None = None
@@ -222,6 +247,12 @@ class DropboxClient:
                 k: v for k, v in detail.items()
                 if k not in {"access_token", "refresh_token", "token", "client_secret"}
             }
+            if detail.get("error") == "invalid_grant" and "refresh token is malformed" in str(detail.get("error_description", "")).lower():
+                raise RuntimeError(
+                    "Dropbox rejected DROPBOX_REFRESH_TOKEN as malformed. "
+                    "The GitHub secret must contain the refresh_token value returned by the OAuth token exchange, "
+                    "not the authorization code, access_token, app secret, or curl command."
+                )
             raise RuntimeError(
                 f"Dropbox OAuth token exchange failed: HTTP {r.status_code}: "
                 f"{json.dumps(safe_detail, ensure_ascii=False)}"
