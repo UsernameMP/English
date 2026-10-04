@@ -101,6 +101,8 @@ jobs:
 
       - name: Publish public pilot content channel
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 scripts/publish_github_content.py
           rm -rf "$RUNNER_TEMP/content-pilot-repo"
@@ -110,7 +112,7 @@ jobs:
           git init
           git config user.name "English Sprint CI"
           git config user.email "actions@users.noreply.github.com"
-          git remote add origin "https://github.com/$GITHUB_REPOSITORY"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git checkout --orphan content-pilot-publish
           git add .
           git commit -m "Publish pilot content"
