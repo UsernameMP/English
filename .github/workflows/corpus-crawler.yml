@@ -44,10 +44,19 @@ jobs:
       - name: Install crawler dependencies
         run: pip install -r crawler_requirements.txt
 
+      - name: Test crawler
+        run: PYTHONPATH=. pytest -q tests/test_crawler.py
+
+      - name: Dropbox setup status
+        if: env.DROPBOX_APP_KEY == '' || env.DROPBOX_APP_SECRET == '' || env.DROPBOX_REFRESH_TOKEN == ''
+        run: echo "Dropbox secrets are not configured; crawler download step is skipped."
+
       - name: Crawl and upload RAW
+        if: env.DROPBOX_APP_KEY != '' && env.DROPBOX_APP_SECRET != '' && env.DROPBOX_REFRESH_TOKEN != ''
         run: python crawler.py --sources registry/sources.csv --state state/crawl_state.jsonl
 
       - name: Commit crawler state
+        if: env.DROPBOX_APP_KEY != '' && env.DROPBOX_APP_SECRET != '' && env.DROPBOX_REFRESH_TOKEN != ''
         working-directory: ${{ github.workspace }}
         run: |
           if git diff --quiet -- tools/corpus_ingest/state/crawl_state.jsonl; then
