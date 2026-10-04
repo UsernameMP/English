@@ -103,13 +103,15 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           python3 scripts/publish_github_content.py
-          cp -R build/content-pilot /tmp/content-pilot
+          rm -rf "$RUNNER_TEMP/content-pilot-repo"
+          mkdir -p "$RUNNER_TEMP/content-pilot-repo"
+          cp -R build/content-pilot/. "$RUNNER_TEMP/content-pilot-repo/"
+          cd "$RUNNER_TEMP/content-pilot-repo"
+          git init
           git config user.name "English Sprint CI"
           git config user.email "actions@users.noreply.github.com"
+          git remote add origin "https://github.com/$GITHUB_REPOSITORY"
           git checkout --orphan content-pilot-publish
-          git rm -rf . || true
-          git clean -fdx
-          cp -R /tmp/content-pilot/. .
           git add .
           git commit -m "Publish pilot content"
           git push origin HEAD:content-pilot --force
