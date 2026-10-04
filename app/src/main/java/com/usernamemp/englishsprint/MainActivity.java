@@ -1588,7 +1588,9 @@ public class MainActivity extends Activity {
         setScrollable(root);
     }
 
-    private void showPackPicker() { showPackPicker(false); }\n\n    private void showPackPicker(boolean returnToLearn) {
+    private void showPackPicker() { showPackPicker(false); }
+
+    private void showPackPicker(boolean returnToLearn) {
         List<ContentPack> packs = QuestionBank.availablePacks();
         String[] labels = new String[packs.size()];
         int selected = 0;
