@@ -99,32 +99,45 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
-      - name: Publish direct APK update channel
+      - name: Publish GitHub Release APK
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="v${VERSION_NAME}"
+          RELEASE_APK="english-sprint-v${VERSION_NAME}-pilot.apk"
+          git tag -f "$TAG" "$GITHUB_SHA"
+          git push origin "refs/tags/$TAG" --force
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$APK_NAME#$RELEASE_APK" --clobber
+          else
+            gh release create "$TAG" "$APK_NAME#$RELEASE_APK" \
+              --title "English Sprint ${VERSION_NAME}" \
+              --notes "Pilot Android build ${VERSION_NAME}. Download the APK asset below."
+          fi
+
+      - name: Publish updater manifest
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           APK="$APK_NAME"
           SIZE="$(stat -c%s "$APK")"
-
+          RELEASE_APK="english-sprint-v${VERSION_NAME}-pilot.apk"
           mkdir -p /tmp/english-sprint-dist
-          cp "$APK" /tmp/english-sprint-dist/english-sprint-latest.apk
-          cp "$APK" "/tmp/english-sprint-dist/english-sprint-v${VERSION_NAME}-pilot.apk"
-
           cat > /tmp/english-sprint-dist/latest.json <<EOF
           {
             "versionName": "${VERSION_NAME}",
             "versionCode": ${VERSION_CODE},
-            "apkUrl": "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/apk-dist/english-sprint-latest.apk",
+            "apkUrl": "https://github.com/${GITHUB_REPOSITORY}/releases/download/v${VERSION_NAME}/${RELEASE_APK}",
             "sizeBytes": ${SIZE},
             "commit": "${GITHUB_SHA}"
           }
           EOF
-
           git config user.name "English Sprint CI"
           git config user.email "actions@users.noreply.github.com"
           git checkout --orphan apk-dist-publish
           git rm -rf . || true
           git clean -fdx
-          cp /tmp/english-sprint-dist/* .
-          git add english-sprint-latest.apk "english-sprint-v${VERSION_NAME}-pilot.apk" latest.json
-          git commit -m "Publish English Sprint v${VERSION_NAME} pilot"
+          cp /tmp/english-sprint-dist/latest.json .
+          git add latest.json
+          git commit -m "Publish English Sprint v${VERSION_NAME} updater manifest"
           git push origin HEAD:apk-dist --force
