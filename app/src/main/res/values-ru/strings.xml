@@ -164,4 +164,15 @@
     <string name="sequence_hint">Нажми на все пункты в правильном порядке</string>
     <string name="sequence_reset">Сбросить порядок</string>
     <string name="readiness_summary">Готовность %1$d%% · уверенность данных %2$d%%</string>
+
+    <string name="learn_now">▶  УЧИТЬСЯ</string>
+    <string name="focus_compact">Следующий фокус: %1$s</string>
+    <string name="my_world">Мой мир</string>
+    <string name="my_world_caption">Трать кристаллы на тот тип прогресса, который тебе нравится. Мир можно менять без потери прогресса.</string>
+    <string name="mode_pet">Питомец и дом</string><string name="mode_defense">Защитная база</string><string name="mode_hero">Герой и приключения</string>
+    <string name="preferred_world">ПРЕДПОЧИТАЕМЫЙ МИР</string><string name="language_setting">ЯЗЫК ИНТЕРФЕЙСА</string><string name="language_current">Сейчас: %1$s</string>
+    <string name="meta_level">Уровень %1$d</string><string name="meta_upgrade">Улучшить · 💎 %1$d</string>
+    <string name="meta_collar">Аксессуар питомца</string><string name="meta_toy">Игрушка питомца</string><string name="meta_room">Комната дома</string>
+    <string name="meta_barrier">Защитный барьер</string><string name="meta_sensor">Датчик обнаружения</string><string name="meta_defense_module">Защитный модуль</string>
+    <string name="meta_outfit">Одежда героя</string><string name="meta_gear">Снаряжение героя</string><string name="meta_ability">Способность героя</string>
 </resources>
