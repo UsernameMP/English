@@ -64,6 +64,7 @@ public class MainActivity extends Activity {
     private ShopStore shop;
     private DigitalRewardStore digitalRewards;
     private WorkshopStore workshop;
+    private MetaGameStore metaGame;
     private LearningEventStore learningEvents;
     private MiniGameHost miniGames;
     private UpdateManager updater;
@@ -84,6 +85,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        LocaleStore.apply(this);
         QuestionBank.init(this);
         progress = new ProgressStore(this);
         dictionary = new DictionaryStore(this);
@@ -95,6 +97,7 @@ public class MainActivity extends Activity {
         shop = new ShopStore(this, economy);
         digitalRewards = new DigitalRewardStore(this, economy);
         workshop = new WorkshopStore(this, economy);
+        metaGame = new MetaGameStore(this, economy);
         learningEvents = new LearningEventStore(this);
         miniGames = new MiniGameHost(this, economy);
         audio = new AudioEngine(this);
@@ -130,112 +133,78 @@ public class MainActivity extends Activity {
 
         LinearLayout header = row();
         LinearLayout titles = column();
-        ContentPack pack = QuestionBank.currentPack();
-        titles.addView(text(pack.title(Locale.getDefault()), 29, INK, Typeface.BOLD));
-        titles.addView(text(pack.subtitle(Locale.getDefault()), 14, MUTED, Typeface.NORMAL));
+        titles.addView(text(getString(R.string.app_name), 29, INK, Typeface.BOLD));
+        titles.addView(text(trainingTarget.summary(), 14, MUTED, Typeface.NORMAL));
         header.addView(titles, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
-
         Button settings = compactButton("⚙");
         settings.setOnClickListener(v -> showSettings());
         header.addView(settings, new LinearLayout.LayoutParams(dp(52), dp(44)));
         root.addView(header);
 
-        int days = trainingTarget.daysRemaining();
-        TextView targetSummary = text(trainingTarget.summary(), 13, MUTED, Typeface.BOLD);
-        targetSummary.setPadding(0, dp(8), 0, 0);
-        root.addView(targetSummary);
-
-        TextView deadline = text(days >= 0
-                ? getString(R.string.deadline_remaining, days)
-                : getString(R.string.training_mode), 14, PRIMARY, Typeface.BOLD);
-        deadline.setPadding(0, dp(5), 0, 0);
-        root.addView(deadline);
-
         root.addView(space(16));
         root.addView(progressCard());
-        root.addView(space(10));
-        root.addView(activityCard());
-        root.addView(space(10));
-        root.addView(nextFocusCard());
-        root.addView(space(10));
-        root.addView(dailyPlanCard());
         root.addView(space(16));
 
-        Button play = primaryButton(getString(R.string.play));
-        play.setTextSize(22);
-        play.setMinHeight(dp(72));
-        play.setOnClickListener(v -> startSession(getString(R.string.quick_training), quickSession()));
-        root.addView(play, matchWrap());
+        Button learn = primaryButton(getString(R.string.learn_now));
+        learn.setTextSize(22);
+        learn.setMinHeight(dp(72));
+        learn.setOnClickListener(v -> startSession(getString(R.string.quick_training), quickSession()));
+        root.addView(learn, matchWrap());
 
-        TextView playHint = text(getString(R.string.play_hint),
+        TextView focus = text(getString(R.string.focus_compact,
+                QuestionBank.knowledgeLabel(QuestionBank.recommendedKnowledge(progress, 1).get(0), Locale.getDefault())),
                 13, MUTED, Typeface.NORMAL);
-        playHint.setGravity(Gravity.CENTER);
-        playHint.setPadding(0, dp(7), 0, dp(16));
-        root.addView(playHint);
+        focus.setGravity(Gravity.CENTER);
+        focus.setPadding(0, dp(8), 0, dp(14));
+        root.addView(focus);
 
-        TextView modes = text(getString(R.string.modes), 13, MUTED, Typeface.BOLD);
-        root.addView(modes);
-        root.addView(space(8));
+        Button world = secondaryButton(getString(R.string.my_world) + " · " + modeName(metaGame.preferredMode()));
+        world.setMinHeight(dp(58));
+        world.setOnClickListener(v -> showMyWorld());
+        root.addView(world, matchWrap());
 
-        if ("english".equals(pack.subject)) {
-            if (!QuestionBank.byType(Question.Type.GRAMMAR).isEmpty())
-                root.addView(menuButton(getString(R.string.grammar_mode), getString(R.string.grammar_caption), () ->
-                        startSession(getString(R.string.grammar_title), shuffled(QuestionBank.byType(Question.Type.GRAMMAR), 20))));
-            if (!QuestionBank.byType(Question.Type.READING).isEmpty())
-                root.addView(menuButton(getString(R.string.reading_mode), getString(R.string.reading_caption), () ->
-                        startSession(getString(R.string.reading_title), shuffled(QuestionBank.byType(Question.Type.READING), 10))));
-            if (!QuestionBank.byType(Question.Type.LISTENING).isEmpty())
-                root.addView(menuButton(getString(R.string.listening_mode), getString(R.string.listening_caption), () ->
-                        startSession(getString(R.string.listening_title), shuffled(QuestionBank.byType(Question.Type.LISTENING), 10))));
-            if (!QuestionBank.byType(Question.Type.STORY).isEmpty())
-                root.addView(menuButton(getString(R.string.story_mode), getString(R.string.story_caption), () ->
-                        startSession(getString(R.string.story_title), shuffled(QuestionBank.byType(Question.Type.STORY), 10))));
-        } else {
-            root.addView(menuButton(getString(R.string.olympiad_practice),
-                    getString(R.string.olympiad_practice_caption), () ->
-                            startSession(getString(R.string.olympiad_practice),
-                                    shuffled(QuestionBank.all(), 15))));
+        Button atlas = secondaryButton(getString(R.string.skill_map));
+        atlas.setOnClickListener(v -> showProgress());
+        LinearLayout.LayoutParams alp = matchWrap(); alp.topMargin=dp(8); root.addView(atlas,alp);
+
+        if ("english".equals(QuestionBank.currentPack().subject)) {
+            Button dict = secondaryButton(getString(R.string.dictionary_fmt, dictionary.savedCount()));
+            dict.setOnClickListener(v -> showDictionary());
+            LinearLayout.LayoutParams dlp=matchWrap(); dlp.topMargin=dp(8); root.addView(dict,dlp);
         }
-
-        Button progressButton = secondaryButton(getString(R.string.skill_map));
-        progressButton.setOnClickListener(v -> showProgress());
-        LinearLayout.LayoutParams plp = matchWrap();
-        plp.topMargin = dp(4);
-        root.addView(progressButton, plp);
-
-        Button shopButton = secondaryButton(getString(R.string.shop) + "   ·   " + getString(R.string.crystals_fmt, economy.balance()));
-        shopButton.setOnClickListener(v -> showShop());
-        LinearLayout.LayoutParams slp = matchWrap();
-        slp.topMargin = dp(8);
-        root.addView(shopButton, slp);
-
-        Button workshopButton = secondaryButton(getString(R.string.workshop_home,
-                workshop.builtCount(), workshop.items().size()));
-        workshopButton.setOnClickListener(v -> showWorkshop());
-        LinearLayout.LayoutParams wlp = matchWrap();
-        wlp.topMargin = dp(8);
-        root.addView(workshopButton, wlp);
-
-        Button gameBreak = secondaryButton(getString(R.string.play_break, playCredits.balance()));
-        gameBreak.setEnabled(playCredits.canStartGame());
-        gameBreak.setOnClickListener(v -> {
-            if (playCredits.consumeGameSession()) {
-                miniGames.startBreak(this, this::showHome);
-            }
-        });
-        LinearLayout.LayoutParams glp = matchWrap();
-        glp.topMargin = dp(8);
-        root.addView(gameBreak, glp);
-
-        if ("english".equals(pack.subject)) {
-            Button dictionaryButton = secondaryButton(getString(R.string.dictionary_fmt, dictionary.savedCount()));
-            dictionaryButton.setOnClickListener(v -> showDictionary());
-            LinearLayout.LayoutParams dlp = matchWrap();
-            dlp.topMargin = dp(8);
-            root.addView(dictionaryButton, dlp);
-        }
-
         setScrollable(root);
+    }
+
+    private String modeName(String mode) {
+        if (MetaGameStore.DEFENSE.equals(mode)) return getString(R.string.mode_defense);
+        if (MetaGameStore.HERO.equals(mode)) return getString(R.string.mode_hero);
+        return getString(R.string.mode_pet);
+    }
+
+    private void showMyWorld() {
+        LinearLayout root=column(); root.setPadding(dp(20),dp(20),dp(20),dp(30));
+        Button back=compactButton("←"); back.setOnClickListener(v->showHome()); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
+        root.addView(space(12)); root.addView(text(getString(R.string.my_world),28,INK,Typeface.BOLD));
+        root.addView(text(getString(R.string.my_world_caption),14,MUTED,Typeface.NORMAL));
+        root.addView(text(getString(R.string.shop_balance_fmt,economy.balance()),18,PRIMARY,Typeface.BOLD));
+        root.addView(space(14));
+        String mode=metaGame.preferredMode();
+        if(MetaGameStore.DEFENSE.equals(mode)) addWorldItems(root,mode,new String[]{"barrier","sensor","defense_module"},new int[]{25,60,140});
+        else if(MetaGameStore.HERO.equals(mode)) addWorldItems(root,mode,new String[]{"outfit","gear","ability"},new int[]{20,55,130});
+        else addWorldItems(root,mode,new String[]{"collar","toy","room"},new int[]{20,45,120});
+        setScrollable(root);
+    }
+
+    private void addWorldItems(LinearLayout root,String mode,String[] ids,int[] prices) {
+        for(int i=0;i<ids.length;i++){
+            final String id=ids[i]; final int price=prices[i];
+            LinearLayout card=column(); card.setPadding(dp(16),dp(14),dp(16),dp(14)); card.setBackground(roundRect(CARD,14,1,SOFT));
+            card.addView(text(getString(getResources().getIdentifier("meta_"+id,"string",getPackageName())),18,INK,Typeface.BOLD));
+            card.addView(text(getString(R.string.meta_level,metaGame.level(mode,id)),13,MUTED,Typeface.NORMAL));
+            Button buy=secondaryButton(getString(R.string.meta_upgrade,price));
+            buy.setOnClickListener(v->{ if(metaGame.buyLevel(mode,id,price)) showMyWorld(); else new AlertDialog.Builder(this).setMessage(getString(R.string.shop_not_enough)).setPositiveButton(getString(R.string.got_it),null).show();});
+            card.addView(buy,matchWrap()); LinearLayout.LayoutParams lp=matchWrap(); lp.bottomMargin=dp(9); root.addView(card,lp);
+        }
     }
 
     private View progressCard() {
@@ -1424,6 +1393,20 @@ public class MainActivity extends Activity {
                         .edit().putBoolean("haptic", isChecked).apply());
         root.addView(haptic, matchWrap());
 
+        TextView languageTitle=text(getString(R.string.language_setting),13,MUTED,Typeface.BOLD);
+        languageTitle.setPadding(dp(12),dp(22),dp(12),dp(6)); root.addView(languageTitle,matchWrap());
+        Button language=secondaryButton(getString(R.string.language_current, LocaleStore.current(this)));
+        language.setOnClickListener(v->new AlertDialog.Builder(this).setTitle(getString(R.string.language_setting))
+                .setItems(new String[]{"Русский","English","System"},(d,w)-> LocaleStore.set(this,w==0?"ru":w==1?"en":"system")).show());
+        root.addView(language,matchWrap());
+
+        TextView worldTitle=text(getString(R.string.preferred_world),13,MUTED,Typeface.BOLD);
+        worldTitle.setPadding(dp(12),dp(22),dp(12),dp(6)); root.addView(worldTitle,matchWrap());
+        Button worldChoice=secondaryButton(modeName(metaGame.preferredMode()));
+        worldChoice.setOnClickListener(v->new AlertDialog.Builder(this).setTitle(getString(R.string.preferred_world))
+                .setItems(new String[]{getString(R.string.mode_pet),getString(R.string.mode_defense),getString(R.string.mode_hero)},(d,w)->{metaGame.setPreferredMode(w==1?MetaGameStore.DEFENSE:w==2?MetaGameStore.HERO:MetaGameStore.PET); showSettings();}).show());
+        root.addView(worldChoice,matchWrap());
+
         TextView targetTitle = text(getString(R.string.target_section), 13, MUTED, Typeface.BOLD);
         targetTitle.setPadding(dp(12), dp(22), dp(12), dp(6));
         root.addView(targetTitle, matchWrap());
@@ -1451,13 +1434,6 @@ public class MainActivity extends Activity {
         Button targetDateButton = secondaryButton(getString(R.string.target_set_date));
         targetDateButton.setOnClickListener(v -> showTargetDatePicker());
         root.addView(targetDateButton, matchWrap());
-
-        TextView packTitle = text(getString(R.string.content_pack_section), 13, MUTED, Typeface.BOLD);
-        packTitle.setPadding(dp(12), dp(22), dp(12), dp(6));
-        root.addView(packTitle, matchWrap());
-        Button packButton = secondaryButton(QuestionBank.currentPack().title(Locale.getDefault()));
-        packButton.setOnClickListener(v -> showPackPicker());
-        root.addView(packButton, matchWrap());
 
         TextView updatesTitle = text(getString(R.string.updates_section), 13, MUTED, Typeface.BOLD);
         updatesTitle.setPadding(dp(12), dp(22), dp(12), dp(6));
