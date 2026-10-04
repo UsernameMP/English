@@ -148,7 +148,7 @@ public class MainActivity extends Activity {
         Button learn = primaryButton(getString(R.string.learn_now));
         learn.setTextSize(22);
         learn.setMinHeight(dp(72));
-        learn.setOnClickListener(v -> startSession(getString(R.string.quick_training), quickSession()));
+        learn.setOnClickListener(v -> showLearnHub());
         root.addView(learn, matchWrap());
 
         List<String> homeFocus = QuestionBank.recommendedKnowledge(progress, 1);
@@ -164,6 +164,10 @@ public class MainActivity extends Activity {
         world.setOnClickListener(v -> showMyWorld());
         root.addView(world, matchWrap());
 
+        Button shopButton = secondaryButton(getString(R.string.shop));
+        shopButton.setOnClickListener(v -> showShop());
+        LinearLayout.LayoutParams shopLp=matchWrap(); shopLp.topMargin=dp(8); root.addView(shopButton,shopLp);
+
         Button atlas = secondaryButton(getString(R.string.skill_map));
         atlas.setOnClickListener(v -> showProgress());
         LinearLayout.LayoutParams alp = matchWrap(); alp.topMargin=dp(8); root.addView(atlas,alp);
@@ -174,6 +178,109 @@ public class MainActivity extends Activity {
             LinearLayout.LayoutParams dlp=matchWrap(); dlp.topMargin=dp(8); root.addView(dict,dlp);
         }
         setScrollable(root);
+    }
+
+    private void showLearnHub() {
+        audio.stop();
+        LinearLayout root=column(); root.setPadding(dp(20),dp(18),dp(20),dp(30));
+        Button back=compactButton("←"); back.setOnClickListener(v->showHome());
+        root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
+        root.addView(space(12));
+        root.addView(text(getString(R.string.learn_title),28,INK,Typeface.BOLD));
+        root.addView(text(getString(R.string.learn_caption),14,MUTED,Typeface.NORMAL));
+        root.addView(space(14));
+
+        TextView packLabel=text(getString(R.string.current_pack),13,MUTED,Typeface.BOLD);
+        root.addView(packLabel);
+        Button pack=secondaryButton(humanPackLabel(QuestionBank.currentPack()));
+        pack.setOnClickListener(v->showPackPicker(true));
+        LinearLayout.LayoutParams plp=matchWrap(); plp.topMargin=dp(6); root.addView(pack,plp);
+
+        root.addView(space(16));
+        Button auto=primaryButton(getString(R.string.auto_training));
+        auto.setOnClickListener(v->startSession(getString(R.string.quick_training),quickSession()));
+        root.addView(auto,matchWrap());
+        TextView autoHint=text(getString(R.string.auto_training_caption),13,MUTED,Typeface.NORMAL);
+        autoHint.setPadding(0,dp(5),0,dp(14)); root.addView(autoHint);
+
+        root.addView(text(getString(R.string.choose_topic),18,INK,Typeface.BOLD));
+        root.addView(text(getString(R.string.choose_topic_caption),13,MUTED,Typeface.NORMAL));
+        root.addView(space(10));
+        if("english".equals(QuestionBank.currentPack().subject)) {
+            addTopicGrid(root,
+                    new String[]{"A+","⌕","▶","✦"},
+                    new int[]{R.string.grammar_title,R.string.reading_title,R.string.listening_title,R.string.story_title},
+                    new Question.Type[]{Question.Type.GRAMMAR,Question.Type.READING,Question.Type.LISTENING,Question.Type.STORY});
+        } else {
+            addKnowledgeTopicGrid(root);
+        }
+        setScrollable(root);
+    }
+
+    private void addTopicGrid(LinearLayout root,String[] icons,int[] labels,Question.Type[] types) {
+        for(int row=0;row<2;row++) {
+            LinearLayout line=row();
+            for(int col=0;col<2;col++) {
+                int n=row*2+col;
+                Button tile=secondaryButton(icons[n]+"\n"+getString(labels[n]));
+                tile.setTextSize(17); tile.setMinHeight(dp(86));
+                final Question.Type type=types[n];
+                tile.setOnClickListener(v->startTopic(type,getString(labels[n])));
+                LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(92),1f);
+                if(col==1) lp.leftMargin=dp(8);
+                line.addView(tile,lp);
+            }
+            LinearLayout.LayoutParams rlp=matchWrap(); rlp.bottomMargin=dp(8); root.addView(line,rlp);
+        }
+    }
+
+    private void addKnowledgeTopicGrid(LinearLayout root) {
+        List<String> ids=QuestionBank.knowledgeIds();
+        int count=Math.min(8,ids.size());
+        for(int start=0;start<count;start+=2) {
+            LinearLayout line=row();
+            for(int n=start;n<Math.min(start+2,count);n++) {
+                final String id=ids.get(n);
+                Button tile=secondaryButton("◆\n"+QuestionBank.knowledgeLabel(id,Locale.getDefault()));
+                tile.setTextSize(15); tile.setMinHeight(dp(86));
+                tile.setOnClickListener(v->startKnowledgeTopic(id));
+                LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(92),1f);
+                if(n%2==1) lp.leftMargin=dp(8);
+                line.addView(tile,lp);
+            }
+            if(line.getChildCount()==1) line.addView(space(1),new LinearLayout.LayoutParams(0,dp(92),1f));
+            LinearLayout.LayoutParams rlp=matchWrap(); rlp.bottomMargin=dp(8); root.addView(line,rlp);
+        }
+    }
+
+    private void startTopic(Question.Type type,String title) {
+        List<Question> questions=QuestionBank.byType(type);
+        if(questions.isEmpty()) {
+            new AlertDialog.Builder(this).setMessage(getString(R.string.topic_empty)).setPositiveButton(getString(R.string.got_it),null).show();
+            return;
+        }
+        startSession(title,shuffled(questions,15));
+    }
+
+    private void startKnowledgeTopic(String knowledgeId) {
+        List<Question> questions=new ArrayList<>();
+        for(Question q:QuestionBank.all()) for(KnowledgeRef ref:q.knowledge) if(ref.id.equals(knowledgeId)){questions.add(q);break;}
+        if(questions.isEmpty()) return;
+        startSession(QuestionBank.knowledgeLabel(knowledgeId,Locale.getDefault()),shuffled(questions,15));
+    }
+
+    private String humanPackLabel(ContentPack pack) {
+        boolean ru="ru".equals(Locale.getDefault().getLanguage());
+        String subject;
+        if("english".equals(pack.subject)) subject=ru?"Английский язык":"English";
+        else if("informatics".equals(pack.subject)) subject=ru?"Информатика":"Informatics";
+        else if("mathematics".equals(pack.subject)) subject=ru?"Математика":"Mathematics";
+        else subject=pack.subject;
+        String grades=pack.gradeMin==pack.gradeMax?String.valueOf(pack.gradeMin):(pack.gradeMin+"–"+pack.gradeMax);
+        String region=pack.region;
+        if(ru && "Tatarstan".equalsIgnoreCase(region)) region="Татарстан";
+        if(ru && "Global".equalsIgnoreCase(region)) region="международный";
+        return subject+" · "+grades+(ru?" класс":" grade")+(region.isEmpty()?"":" · "+region);
     }
 
     private String modeName(String mode) {
@@ -1480,13 +1587,12 @@ public class MainActivity extends Activity {
         setScrollable(root);
     }
 
-    private void showPackPicker() {
+    private void showPackPicker() { showPackPicker(false); }\n\n    private void showPackPicker(boolean returnToLearn) {
         List<ContentPack> packs = QuestionBank.availablePacks();
         String[] labels = new String[packs.size()];
         int selected = 0;
         for (int i = 0; i < packs.size(); i++) {
-            labels[i] = packs.get(i).title(Locale.getDefault()) + " · "
-                    + packs.get(i).subtitle(Locale.getDefault());
+            labels[i] = humanPackLabel(packs.get(i));
             if (packs.get(i).id.equals(QuestionBank.currentPack().id)) selected = i;
         }
         final int checked = selected;
@@ -1499,7 +1605,7 @@ public class MainActivity extends Activity {
                         trainingTarget = new TrainingTargetStore(this, QuestionBank.currentPack());
                     }
                     dialog.dismiss();
-                    showHome();
+                    if (returnToLearn) showLearnHub(); else showHome();
                 })
                 .setNegativeButton(getString(R.string.dictionary_close), null)
                 .show();
