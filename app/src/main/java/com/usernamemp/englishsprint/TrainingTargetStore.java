@@ -19,9 +19,11 @@ public final class TrainingTargetStore {
 
     private static final String PREFS = "english_sprint_training_target";
     private final SharedPreferences prefs;
+    private final Context context;
 
     public TrainingTargetStore(Context context, ContentPack pack) {
         Context app = context.getApplicationContext();
+        this.context = app;
         prefs = app.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
         if (!prefs.getBoolean("initialized", false)) initializeDefaults(app, pack);
     }
@@ -36,6 +38,26 @@ public final class TrainingTargetStore {
 
     public void setMode(String value) {
         prefs.edit().putString("mode", MODE_GENERAL.equals(value) ? MODE_GENERAL : MODE_COMPETITION).apply();
+    }
+
+    /** Keeps calendar/adaptive planning aligned with the explicit learning context. */
+    public void selectContext(ContentPack pack, int selectedGrade, String target) {
+        int grade = Math.max(pack.gradeMin, Math.min(pack.gradeMax, selectedGrade));
+        boolean all = LearningContextStore.ALL_OLYMPIADS.equals(target);
+        String previousPack = prefs.getString("pack_id", "");
+        String date = prefs.getString("target_date", "");
+        if (!pack.id.equals(previousPack)) date = defaultDate(context, pack.id);
+        prefs.edit()
+                .putBoolean("initialized", true)
+                .putString("pack_id", pack.id)
+                .putString("subject", pack.subject)
+                .putInt("grade", grade)
+                .putString("competition", all ? "" : pack.competition)
+                .putString("region", pack.region)
+                .putString("season", pack.season)
+                .putString("target_date", date)
+                .putString("mode", all ? MODE_GENERAL : MODE_COMPETITION)
+                .apply();
     }
 
     public void setTargetDate(int year, int monthZeroBased, int day) {
@@ -92,6 +114,7 @@ public final class TrainingTargetStore {
 
         prefs.edit()
                 .putBoolean("initialized", true)
+                .putString("pack_id", pack.id)
                 .putString("subject", pack.subject)
                 .putInt("grade", grade)
                 .putString("competition", pack.competition)
@@ -100,6 +123,19 @@ public final class TrainingTargetStore {
                 .putString("target_date", date)
                 .putString("mode", mode)
                 .apply();
+    }
+
+    private static String defaultDate(Context context, String packId) {
+        try {
+            JSONObject root = new JSONObject(readAsset(context, "content/training_targets.json"));
+            JSONArray targets = root.getJSONArray("targets");
+            for (int i = 0; i < targets.length(); i++) {
+                JSONObject target = targets.getJSONObject(i);
+                if (packId.equals(target.optString("pack_id"))) return target.optString("target_date", "");
+            }
+        } catch (Exception ignored) {
+        }
+        return "";
     }
 
     private static void zeroTime(Calendar c) {

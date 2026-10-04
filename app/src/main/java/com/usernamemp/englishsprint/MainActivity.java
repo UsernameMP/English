@@ -100,6 +100,9 @@ public class MainActivity extends Activity {
             ContentPack selected = QuestionBank.currentPack();
             learningContext.remember(selected.id, selected.gradeMin, selected.competition);
         }
+        if (learningContext.isValidFor(QuestionBank.currentPack())) {
+            trainingTarget.selectContext(QuestionBank.currentPack(), learningContext.grade(), learningContext.target());
+        }
         activity = new ActivityStore(this);
         shop = new ShopStore(this, economy);
         digitalRewards = new DigitalRewardStore(this, economy);
@@ -194,6 +197,7 @@ public class MainActivity extends Activity {
             QuestionBank.selectPack(this, remembered.id);
             trainingTarget = new TrainingTargetStore(this, QuestionBank.currentPack());
         }
+        trainingTarget.selectContext(remembered, learningContext.grade(), learningContext.target());
         return true;
     }
 
@@ -295,6 +299,7 @@ public class MainActivity extends Activity {
         QuestionBank.selectPack(this,packId);
         learningContext.remember(packId,grade,target);
         trainingTarget=new TrainingTargetStore(this,QuestionBank.currentPack());
+        trainingTarget.selectContext(QuestionBank.currentPack(),grade,target);
         showTrainingHub();
     }
 
@@ -1688,6 +1693,7 @@ public class MainActivity extends Activity {
                         progress = new ProgressStore(this);
                         learningContext.remember(packs.get(which).id,packs.get(which).gradeMin,packs.get(which).competition);
                         trainingTarget = new TrainingTargetStore(this, QuestionBank.currentPack());
+                        trainingTarget.selectContext(QuestionBank.currentPack(),packs.get(which).gradeMin,packs.get(which).competition);
                     }
                     dialog.dismiss();
                     if (returnToLearn) showLearnHub(); else showHome();
