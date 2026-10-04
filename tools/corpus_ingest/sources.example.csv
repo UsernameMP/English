@@ -1,0 +1,3 @@
+source_id,name,url,subject,source_type,adapter,year_from,year_to,grades,geography,olympiad,stage,enabled,priority,max_depth,crawl_regex,include_regex,exclude_regex,rights_note
+sample_archive,Example archive,https://example.org/archive,mathematics,archive,html_links,2020,2026,5-11,Russia,Example olympiad,all,true,100,2,^https://example\.org/archive,\.(pdf|docx?|zip)(\?|$),,public source; verify redistribution rights
+sample_document,Example direct PDF,https://example.org/tasks.pdf,mathematics,document,direct,2026,2026,7,Russia,Example olympiad,school,true,120,0,,,,public source; verify redistribution rights

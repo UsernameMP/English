@@ -1,0 +1,5 @@
+.corpus/
+.venv/
+__pycache__/
+.pytest_cache/
+sources.csv
