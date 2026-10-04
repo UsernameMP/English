@@ -213,7 +213,19 @@ class DropboxClient:
             auth=(self.app_key, self.app_secret),
             timeout=30,
         )
-        r.raise_for_status()
+        if not r.ok:
+            try:
+                detail = r.json()
+            except Exception:
+                detail = {"body": r.text[:500]}
+            safe_detail = {
+                k: v for k, v in detail.items()
+                if k not in {"access_token", "refresh_token", "token", "client_secret"}
+            }
+            raise RuntimeError(
+                f"Dropbox OAuth token exchange failed: HTTP {r.status_code}: "
+                f"{json.dumps(safe_detail, ensure_ascii=False)}"
+            )
         self.access_token = r.json()["access_token"]
         return self.access_token
 
