@@ -15,6 +15,16 @@ Control plane:
 - `crawler.py` — stateful downloader.
 - `.github/workflows/corpus-crawler.yml` — hourly + manual GitHub Actions runner.
 
+## Atlas and runtime coverage
+
+Measure bundled published packs:
+
+```bash
+python coverage.py --min-runnable 0.95 --output ../../build/reports/content-coverage.json
+```
+
+For a normalized JSON, JSON array or JSONL corpus, add `--input PATH`. The report separates basic structure, Atlas mapping (assessed knowledge plus an explicit prerequisites list), interaction support and fully runnable coverage. Unsupported items are grouped by gap so generator and renderer work can be prioritized from evidence.
+
 Data plane in Dropbox:
 
 ```text

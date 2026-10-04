@@ -21,6 +21,8 @@ PRODUCTS = ROOT / "app/src/main/assets/commerce/products.json"
 KNOWLEDGE = ROOT / "app/src/main/assets/content/knowledge_units.json"
 BLUEPRINTS = ROOT / "app/src/main/assets/content/competition_blueprints.json"
 WORKSHOP = ROOT / "app/src/main/assets/game/workshop_catalog.json"
+INTERACTIONS = ROOT / "app/src/main/assets/content/interaction_taxonomy.json"
+SUBJECT_PROFILES = ROOT / "app/src/main/assets/content/subject_profiles"
 
 def fail(msg):
     print(f"CONTENT ERROR: {msg}", file=sys.stderr)
@@ -53,6 +55,46 @@ for unit in units:
     if not isinstance(unit.get("labels"), dict) or not unit["labels"]:
         fail(f"{uid}: labels are required")
 
+with INTERACTIONS.open(encoding="utf-8") as f:
+    interaction_taxonomy = json.load(f)
+primitive_rows = interaction_taxonomy.get("primitives")
+if not isinstance(primitive_rows, list) or not primitive_rows:
+    fail("interaction taxonomy needs primitives")
+primitive_status = {}
+for primitive in primitive_rows:
+    pid = primitive.get("id")
+    status = primitive.get("runtime_status")
+    if not isinstance(pid, str) or not pid or pid in primitive_status:
+        fail(f"invalid or duplicate interaction primitive: {pid!r}")
+    if status not in {"supported", "planned"}:
+        fail(f"{pid}: invalid runtime_status")
+    primitive_status[pid] = status
+supported = {pid for pid, status in primitive_status.items() if status == "supported"}
+
+for profile_path in sorted(SUBJECT_PROFILES.glob("*.json")):
+    profile = json.loads(profile_path.read_text(encoding="utf-8"))
+    if profile.get("grade_binding") is not None or profile.get("competition_binding") is not None:
+        fail(f"{profile_path.name}: subject profiles must stay grade/competition agnostic")
+    for archetype in profile.get("archetypes", []):
+        aid = archetype.get("id")
+        primitives = archetype.get("primitives")
+        prerequisites = archetype.get("prerequisites")
+        assessed = archetype.get("assessed_knowledge")
+        if not aid or not isinstance(primitives, list) or not primitives:
+            fail(f"{profile_path.name}: archetype id and primitives are required")
+        for primitive in primitives:
+            if primitive not in primitive_status:
+                fail(f"{aid}: unknown interaction primitive {primitive}")
+        if not isinstance(prerequisites, list) or not prerequisites:
+            fail(f"{aid}: prerequisites are required")
+        if not isinstance(assessed, list) or not assessed:
+            fail(f"{aid}: assessed knowledge is required")
+        for kid in prerequisites + assessed:
+            if kid not in unit_ids:
+                fail(f"{aid}: unknown global knowledge unit {kid}")
+        if any(key in archetype for key in ("asset", "source_asset", "copied_content")):
+            fail(f"{aid}: subject profiles cannot depend on proprietary assets/content")
+
 questions = bank.get("questions")
 if not isinstance(questions, list) or not questions:
     fail("questions must be a non-empty array")
@@ -62,7 +104,6 @@ seen_prompts = {}
 seen_listening_scripts = {}
 seen_audio_paths = {}
 dialogues = 0
-supported = {"single_choice", "multi_choice", "sequence", "numeric"}
 modes = {"grammar", "reading", "listening", "story"}
 skills = set()
 listening = 0
@@ -349,11 +390,28 @@ for game in games:
 if minigames.get("default_game") not in game_ids:
     fail("default mini-game must exist in games")
 enabled_games = {g.get("id") for g in games if g.get("enabled")}
-if len(enabled_games) < 3:
-    fail("v0.6 requires at least three enabled break games")
-for required_game in {"match3", "memory", "tap_spark"}:
-    if required_game not in enabled_games:
-        fail(f"required v0.6 mini-game is disabled/missing: {required_game}")
+production_games = set()
+for game in games:
+    gid = game.get("id")
+    status = game.get("status")
+    if status not in {"production", "prototype"}:
+        fail(f"{gid}: status must be production or prototype")
+    if game.get("module_api_version") != 1:
+        fail(f"{gid}: unsupported module_api_version")
+    engine_class = game.get("engine_class")
+    if not isinstance(engine_class, str) or not engine_class.startswith("com.usernamemp.englishsprint."):
+        fail(f"{gid}: engine_class must name a bundled game module")
+    engine_source = ROOT / "app/src/main/java/com/usernamemp/englishsprint" / (engine_class.rsplit(".", 1)[-1] + ".java")
+    if not engine_source.exists():
+        fail(f"{gid}: engine class source is missing")
+    if status == "prototype" and game.get("enabled"):
+        fail(f"{gid}: prototype modules must fail closed")
+    if status == "production" and game.get("enabled"):
+        production_games.add(gid)
+if not production_games:
+    fail("at least one production game module must be enabled")
+if minigames.get("default_game") not in production_games:
+    fail("default mini-game must be enabled and production-ready")
 
 with CATALOG.open(encoding="utf-8") as f:
     catalog = json.load(f)

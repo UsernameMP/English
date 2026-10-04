@@ -1,13 +1,16 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "2.0",
   "enabled": true,
   "break_interval_questions": 10,
   "selection_strategy": "round_robin",
-  "default_game": "match3",
+  "default_game": "memory",
   "games": [
     {
       "id": "match3",
-      "enabled": true,
+      "enabled": false,
+      "status": "prototype",
+      "module_api_version": 1,
+      "engine_class": "com.usernamemp.englishsprint.Match3MiniGame",
       "title": {
         "en": "Gem Match",
         "ru": "Три в ряд"
@@ -20,6 +23,9 @@
     {
       "id": "memory",
       "enabled": true,
+      "status": "production",
+      "module_api_version": 1,
+      "engine_class": "com.usernamemp.englishsprint.MemoryMiniGame",
       "title": {
         "en": "Memory Pairs",
         "ru": "Пары"
@@ -31,7 +37,10 @@
     },
     {
       "id": "tap_spark",
-      "enabled": true,
+      "enabled": false,
+      "status": "prototype",
+      "module_api_version": 1,
+      "engine_class": "com.usernamemp.englishsprint.TapSparkMiniGame",
       "title": {
         "en": "Spark Break",
         "ru": "Искры"

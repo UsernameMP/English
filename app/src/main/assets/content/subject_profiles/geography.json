@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "subject": "geography",
+  "scope": "global_olympiad",
+  "grade_binding": null,
+  "competition_binding": null,
+  "method_reference": "Atom Games geography products are referenced only for interaction diversity; no proprietary content, assets, layouts or wording are included.",
+  "archetypes": [
+    {"id": "capital_selection", "primitives": ["single_choice"], "prerequisites": ["GEO.MAP.LOCATION"], "assessed_knowledge": ["GEO.POLITICAL.CAPITALS"]},
+    {"id": "value_range", "primitives": ["range", "numeric"], "prerequisites": ["GEO.DATA.SCALES"], "assessed_knowledge": ["GEO.DATA.ESTIMATION"]},
+    {"id": "map_click", "primitives": ["map_point", "map_region"], "prerequisites": ["GEO.MAP.SCALES"], "assessed_knowledge": ["GEO.MAP.LOCATION"]},
+    {"id": "feature_matching", "primitives": ["matching"], "prerequisites": ["GEO.MAP.LOCATION"], "assessed_knowledge": ["GEO.PHYSICAL.REGIONS"]},
+    {"id": "climatogram", "primitives": ["data_interpretation", "single_choice"], "prerequisites": ["GEO.DATA.SCALES"], "assessed_knowledge": ["GEO.CLIMATE.INTERPRETATION"]},
+    {"id": "demography", "primitives": ["data_interpretation", "numeric"], "prerequisites": ["GEO.DATA.SCALES"], "assessed_knowledge": ["GEO.HUMAN.DEMOGRAPHY"]},
+    {"id": "resources", "primitives": ["map_region", "matching"], "prerequisites": ["GEO.MAP.LOCATION"], "assessed_knowledge": ["GEO.ECONOMIC.RESOURCES"]},
+    {"id": "causal_reasoning", "primitives": ["sequence", "multi_choice"], "prerequisites": ["GEO.PHYSICAL.REGIONS"], "assessed_knowledge": ["GEO.SYSTEMS.CAUSALITY"]}
+  ]
+}

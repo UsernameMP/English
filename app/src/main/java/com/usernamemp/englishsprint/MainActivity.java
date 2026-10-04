@@ -60,6 +60,7 @@ public class MainActivity extends Activity {
     private EconomyStore economy;
     private PlayCreditStore playCredits;
     private TrainingTargetStore trainingTarget;
+    private LearningContextStore learningContext;
     private ActivityStore activity;
     private ShopStore shop;
     private DigitalRewardStore digitalRewards;
@@ -93,6 +94,15 @@ public class MainActivity extends Activity {
         economy = new EconomyStore(this);
         playCredits = new PlayCreditStore(this);
         trainingTarget = new TrainingTargetStore(this, QuestionBank.currentPack());
+        learningContext = new LearningContextStore(this);
+        if (!learningContext.hasSelection()
+                && getSharedPreferences("english_sprint_settings", MODE_PRIVATE).contains("selected_pack")) {
+            ContentPack selected = QuestionBank.currentPack();
+            learningContext.remember(selected.id, selected.gradeMin, selected.competition);
+        }
+        if (learningContext.isValidFor(QuestionBank.currentPack())) {
+            trainingTarget.selectContext(QuestionBank.currentPack(), learningContext.grade(), learningContext.target());
+        }
         activity = new ActivityStore(this);
         shop = new ShopStore(this, economy);
         digitalRewards = new DigitalRewardStore(this, economy);
@@ -172,7 +182,23 @@ public class MainActivity extends Activity {
     }
 
     private void showLearnHub() {
-        showCourseStorefront();
+        if (restoreLearningContext()) showTrainingHub();
+        else showCourseStorefront();
+    }
+
+    private boolean restoreLearningContext() {
+        if (!learningContext.hasSelection()) return false;
+        ContentPack remembered = null;
+        for (ContentPack pack : QuestionBank.availablePacks()) {
+            if (pack.id.equals(learningContext.packId())) remembered = pack;
+        }
+        if (remembered == null || !learningContext.isValidFor(remembered)) return false;
+        if (!QuestionBank.currentPack().id.equals(remembered.id)) {
+            QuestionBank.selectPack(this, remembered.id);
+            trainingTarget = new TrainingTargetStore(this, QuestionBank.currentPack());
+        }
+        trainingTarget.selectContext(remembered, learningContext.grade(), learningContext.target());
+        return true;
     }
 
     private void showCourseStorefront() {
@@ -212,6 +238,7 @@ public class MainActivity extends Activity {
         if("english".equals(subject)) return getString(R.string.subject_english);
         if("mathematics".equals(subject)) return getString(R.string.subject_math);
         if("informatics".equals(subject)) return getString(R.string.subject_informatics);
+        if("geography".equals(subject)) return getString(R.string.subject_geography);
         return subject;
     }
 
@@ -247,11 +274,11 @@ public class MainActivity extends Activity {
         Button back=compactButton("←"); back.setOnClickListener(v->showGradePicker(subject)); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
         root.addView(space(12)); root.addView(text(getString(R.string.choose_goal),28,INK,Typeface.BOLD));
         root.addView(text(subjectLabel(subject)+" · "+getString(R.string.grade_fmt,grade),14,MUTED,Typeface.NORMAL)); root.addView(space(14));
-        Button all=primaryButton(getString(R.string.all_olympiads)); all.setOnClickListener(v->selectFirstApplicable(courses)); root.addView(all,matchWrap());
+        Button all=primaryButton(getString(R.string.all_olympiads)); all.setOnClickListener(v->selectFirstApplicable(courses,grade)); root.addView(all,matchWrap());
         root.addView(space(10));
         for(ContentCatalog.Course c:courses){
             Button b=secondaryButton(competitionLabel(c.competition));
-            b.setOnClickListener(v->selectCourse(c.packId));
+            b.setOnClickListener(v->selectCourse(c.packId,grade,c.competition));
             LinearLayout.LayoutParams lp=matchWrap(); lp.bottomMargin=dp(8); root.addView(b,lp);
         }
         setScrollable(root);
@@ -264,19 +291,27 @@ public class MainActivity extends Activity {
         return raw;
     }
 
-    private void selectFirstApplicable(List<ContentCatalog.Course> courses){ if(!courses.isEmpty()) selectCourse(courses.get(0).packId); }
+    private void selectFirstApplicable(List<ContentCatalog.Course> courses,int grade){
+        if(!courses.isEmpty()) selectCourse(courses.get(0).packId,grade,LearningContextStore.ALL_OLYMPIADS);
+    }
 
-    private void selectCourse(String packId){
+    private void selectCourse(String packId,int grade,String target){
         QuestionBank.selectPack(this,packId);
+        learningContext.remember(packId,grade,target);
         trainingTarget=new TrainingTargetStore(this,QuestionBank.currentPack());
+        trainingTarget.selectContext(QuestionBank.currentPack(),grade,target);
         showTrainingHub();
     }
 
     private void showTrainingHub(){
         LinearLayout root=column(); root.setPadding(dp(20),dp(18),dp(20),dp(30));
-        Button back=compactButton("←"); back.setOnClickListener(v->showCourseStorefront()); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
-        root.addView(space(12)); root.addView(text(subjectLabel(QuestionBank.currentPack().subject),28,INK,Typeface.BOLD));
-        root.addView(text(humanPackLabel(QuestionBank.currentPack()),14,MUTED,Typeface.NORMAL)); root.addView(space(14));
+        Button back=compactButton("←"); back.setOnClickListener(v->showHome()); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
+        root.addView(space(12)); root.addView(text(getString(R.string.learn_title),28,INK,Typeface.BOLD));
+        String target=learningContext.target();
+        String targetLabel=LearningContextStore.ALL_OLYMPIADS.equals(target)?getString(R.string.all_olympiads):competitionLabel(target);
+        Button context=secondaryButton(subjectLabel(QuestionBank.currentPack().subject)+" · "+getString(R.string.grade_fmt,learningContext.grade())+" · "+targetLabel+" ▾");
+        context.setContentDescription(getString(R.string.change_course));
+        context.setOnClickListener(v->showCourseStorefront()); root.addView(context,matchWrap()); root.addView(space(14));
         Button auto=primaryButton(getString(R.string.auto_training)); auto.setOnClickListener(v->startSession(getString(R.string.quick_training),quickSession())); root.addView(auto,matchWrap());
         root.addView(space(14)); root.addView(text(getString(R.string.choose_topic),18,INK,Typeface.BOLD)); root.addView(space(10));
         if("english".equals(QuestionBank.currentPack().subject)) addTopicGrid(root,new String[]{"A+","⌕","▶","✦"},new int[]{R.string.grammar_title,R.string.reading_title,R.string.listening_title,R.string.story_title},new Question.Type[]{Question.Type.GRAMMAR,Question.Type.READING,Question.Type.LISTENING,Question.Type.STORY});
@@ -367,26 +402,10 @@ public class MainActivity extends Activity {
         String mode=metaGame.preferredMode();
         if(MetaGameStore.DEFENSE.equals(mode)) {
             addWorldItems(root,mode,new String[]{"barrier","sensor","defense_module"},new int[]{25,60,140});
-            Button defend=primaryButton(getString(R.string.defense_play));
-            defend.setOnClickListener(v->playDefenseSimulation());
-            root.addView(defend,matchWrap());
+            root.addView(text(getString(R.string.game_prototype_notice),13,MUTED,Typeface.NORMAL));
         } else if(MetaGameStore.HERO.equals(mode)) addWorldItems(root,mode,new String[]{"outfit","gear","ability"},new int[]{20,55,130});
         else addWorldItems(root,mode,new String[]{"collar","toy","room"},new int[]{20,45,120});
         setScrollable(root);
-    }
-
-    private void playDefenseSimulation() {
-        DefenseEngine engine=new DefenseEngine();
-        int barrier=metaGame.level(MetaGameStore.DEFENSE,"barrier");
-        int sensor=metaGame.level(MetaGameStore.DEFENSE,"sensor");
-        int module=metaGame.level(MetaGameStore.DEFENSE,"defense_module");
-        if(barrier>0) engine.add(new DefenseEngine.Defense("barrier",2+barrier,3));
-        if(sensor>0) engine.add(new DefenseEngine.Defense("sensor",1+sensor,2));
-        if(module>0) engine.add(new DefenseEngine.Defense("module",4+module*2,1));
-        DefenseEngine.Result result=engine.simulate(3,4,8);
-        new AlertDialog.Builder(this).setTitle(getString(R.string.defense_result))
-                .setMessage(getString(result.survived?R.string.defense_survived:R.string.defense_failed,result.defeated,result.remainingBase))
-                .setPositiveButton(getString(R.string.got_it),null).show();
     }
 
     private void addWorldItems(LinearLayout root,String mode,String[] ids,int[] prices) {
@@ -1672,7 +1691,9 @@ public class MainActivity extends Activity {
                     if (which != checked) {
                         QuestionBank.selectPack(this, packs.get(which).id);
                         progress = new ProgressStore(this);
+                        learningContext.remember(packs.get(which).id,packs.get(which).gradeMin,packs.get(which).competition);
                         trainingTarget = new TrainingTargetStore(this, QuestionBank.currentPack());
+                        trainingTarget.selectContext(QuestionBank.currentPack(),packs.get(which).gradeMin,packs.get(which).competition);
                     }
                     dialog.dismiss();
                     if (returnToLearn) showLearnHub(); else showHome();

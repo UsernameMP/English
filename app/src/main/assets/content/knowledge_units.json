@@ -226,6 +226,16 @@
     {
       "id":"MATH.LOGIC.INVARIANTS","kind":"strategy","legacy_skill":"invariants",
       "labels":{"en":"Invariants and parity","ru":"Инварианты и чётность"}
-    }
+    },
+    {"id":"GEO.MAP.SCALES","kind":"concept","labels":{"en":"Map scales","ru":"Масштабы карт"}},
+    {"id":"GEO.MAP.LOCATION","kind":"method","labels":{"en":"Spatial location","ru":"Пространственная локализация"}},
+    {"id":"GEO.DATA.SCALES","kind":"representation","labels":{"en":"Geographic data scales","ru":"Шкалы географических данных"}},
+    {"id":"GEO.DATA.ESTIMATION","kind":"method","labels":{"en":"Geographic estimation","ru":"Географическая оценка"}},
+    {"id":"GEO.POLITICAL.CAPITALS","kind":"concept","labels":{"en":"Countries and capitals","ru":"Страны и столицы"}},
+    {"id":"GEO.PHYSICAL.REGIONS","kind":"concept","labels":{"en":"Physical regions","ru":"Физико-географические регионы"}},
+    {"id":"GEO.CLIMATE.INTERPRETATION","kind":"method","labels":{"en":"Climate data interpretation","ru":"Интерпретация климатических данных"}},
+    {"id":"GEO.HUMAN.DEMOGRAPHY","kind":"concept","labels":{"en":"Population and demography","ru":"Население и демография"}},
+    {"id":"GEO.ECONOMIC.RESOURCES","kind":"concept","labels":{"en":"Resources and economic geography","ru":"Ресурсы и экономическая география"}},
+    {"id":"GEO.SYSTEMS.CAUSALITY","kind":"strategy","labels":{"en":"Geographic causal reasoning","ru":"Причинно-следственные связи в географии"}}
   ]
 }
