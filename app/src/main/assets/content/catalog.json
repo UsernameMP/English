@@ -40,6 +40,19 @@
       "content_version": "0.1.0",
       "sha256": "64ee36852419750acb62cbadd950f424e8825f1d7590665483ac5c05bfff84ed",
       "enabled": true
+    },
+    {
+      "id": "mathematics.olympiad.5-7.global.2026",
+      "asset": "content/math_g5_7_pilot.json",
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "competition": "Olympiad pilot",
+      "season": "2026-2027",
+      "license_id": "project.original.v1",
+      "content_version": "0.1.0",
+      "sha256": "78cb4ee5b1aecd32bf21a2e7c1d3ce6ae2f057148e50f3ed748bc98e7041511c",
+      "enabled": true
     }
   ]
 }

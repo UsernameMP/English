@@ -15,12 +15,19 @@ Core fields:
 - `evidence`: exact text span used for reading highlighting
 - `review.status`
 
-The Android renderer ships reusable `single_choice`, `multi_choice` and `numeric` interactions. Multi-select grading compares the exact set of stable option IDs. Numeric answers support decimal comma/dot plus an optional `answer_policy` with non-negative `tolerance`, inclusive `min`/`max`, and a required `unit`.
+The Android renderer ships reusable `single_choice`, `multi_choice`, `sequence` and `numeric` interactions. Multi-select grading compares the exact set of stable option IDs; sequence grading compares their exact order. Numeric answers support decimal comma/dot plus an optional `answer_policy` with non-negative `tolerance`, inclusive `min`/`max`, and a required `unit`.
 
 Run before committing content:
 
 ```bash
 python3 scripts/validate_content.py
+```
+
+After changing a reviewed bank, increment its `content_version` and refresh only its catalog row:
+
+```bash
+python3 scripts/publish_content_pack.py --pack PACK_ID --write
+python3 scripts/publish_content_pack.py
 ```
 
 

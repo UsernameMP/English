@@ -90,4 +90,15 @@ with tempfile.TemporaryDirectory() as tmp:
     if any(answer not in option_ids for answer in multi["answer"]):
         fail("multi_choice answers must reference option IDs")
 
+    sequence_out = pathlib.Path(tmp) / "generated_sequence.json"
+    subprocess.run([
+        sys.executable, str(GENERATOR), "--subject", "informatics", "--grade", "6",
+        "--knowledge", "CS.ALGORITHMS.TRACING", "--interaction", "sequence",
+        "--seed", "ci-sequence", "--output", str(sequence_out),
+    ], check=True)
+    sequence = json.loads(sequence_out.read_text(encoding="utf-8"))
+    option_ids = [option.get("id") for option in sequence.get("options", [])]
+    if sequence.get("interaction") != "sequence" or set(sequence.get("answer", [])) != set(option_ids):
+        fail("sequence output must order every option ID exactly once")
+
 print("OK: generator schema/example/CLI")

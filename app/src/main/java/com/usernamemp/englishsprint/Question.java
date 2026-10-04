@@ -180,6 +180,10 @@ public final class Question {
         return new LinkedHashSet<>(correctIndices).equals(new LinkedHashSet<>(indices));
     }
 
+    public boolean acceptsSequence(List<Integer> indices) {
+        return correctIndices.equals(indices);
+    }
+
     public boolean acceptsText(String raw) {
         if (raw == null) return false;
         if ("numeric".equals(interaction)) {

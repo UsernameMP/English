@@ -64,6 +64,7 @@ public class MainActivity extends Activity {
     private ShopStore shop;
     private DigitalRewardStore digitalRewards;
     private WorkshopStore workshop;
+    private LearningEventStore learningEvents;
     private MiniGameHost miniGames;
     private UpdateManager updater;
 
@@ -78,6 +79,7 @@ public class MainActivity extends Activity {
     private int sessionBestBefore = 0;
     private boolean newRecordCelebrated = false;
     private int sessionAnswered = 0;
+    private long questionShownAtMs = 0L;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +95,7 @@ public class MainActivity extends Activity {
         shop = new ShopStore(this, economy);
         digitalRewards = new DigitalRewardStore(this, economy);
         workshop = new WorkshopStore(this, economy);
+        learningEvents = new LearningEventStore(this);
         miniGames = new MiniGameHost(this, economy);
         audio = new AudioEngine(this);
         rewards = new RewardFx(this);
@@ -363,6 +366,7 @@ public class MainActivity extends Activity {
     }
 
     private void showQuestion() {
+        questionShownAtMs = System.currentTimeMillis();
         audio.stop();
         if (questionIndex >= session.size()) {
             showSessionResult();
@@ -492,6 +496,42 @@ public class MainActivity extends Activity {
                 handleAnswerResult(root, q, q.acceptsIndices(selected), -1,
                         answerButtons, contextForAnswer);
             });
+        } else if ("sequence".equals(q.interaction)) {
+            root.addView(text(getString(R.string.sequence_hint), 13, MUTED, Typeface.BOLD));
+            List<Integer> ordered = new ArrayList<>();
+            for (int i = 0; i < q.options.size(); i++) {
+                final int answerIndex = i;
+                Button button = answerButton(q.options.get(i));
+                LinearLayout.LayoutParams blp = matchWrap();
+                blp.bottomMargin = dp(10);
+                root.addView(button, blp);
+                answerButtons.add(button);
+                button.setOnClickListener(v -> {
+                    if (ordered.contains(answerIndex)) return;
+                    ordered.add(answerIndex);
+                    button.setText(ordered.size() + ".  " + q.options.get(answerIndex));
+                    button.setBackground(roundRect(Color.rgb(225, 232, 255), 14, 2, PRIMARY));
+                });
+            }
+            Button reset = secondaryButton(getString(R.string.sequence_reset));
+            root.addView(reset, matchWrap());
+            reset.setOnClickListener(v -> {
+                ordered.clear();
+                for (int i = 0; i < answerButtons.size(); i++) {
+                    answerButtons.get(i).setText(q.options.get(i));
+                    answerButtons.get(i).setBackground(roundRect(CARD, 14, 1, SOFT));
+                }
+            });
+            Button submit = primaryButton(getString(R.string.submit_answer));
+            LinearLayout.LayoutParams submitLp = matchWrap();
+            submitLp.topMargin = dp(8);
+            root.addView(submit, submitLp);
+            submit.setOnClickListener(v -> {
+                reset.setEnabled(false);
+                submit.setEnabled(false);
+                handleAnswerResult(root, q, q.acceptsSequence(ordered), -1,
+                        answerButtons, contextForAnswer);
+            });
         } else {
             for (int i = 0; i < q.options.size(); i++) {
                 final int answerIndex = i;
@@ -531,6 +571,8 @@ public class MainActivity extends Activity {
         ProgressStore.SkillState beforeState = progress.state(q.primaryKnowledgeId());
         int xpBefore = progress.xp();
         progress.record(q, correct);
+        learningEvents.record(q, correct, Math.max(0L, System.currentTimeMillis() - questionShownAtMs),
+                QuestionBank.currentPack().id);
         ProgressStore.SkillState afterState = progress.state(q.primaryKnowledgeId());
         boolean becameConfident = beforeState != ProgressStore.SkillState.CONFIDENT
                 && afterState == ProgressStore.SkillState.CONFIDENT;
@@ -571,7 +613,8 @@ public class MainActivity extends Activity {
         for (int i = 0; i < buttons.size(); i++) {
             Button b = buttons.get(i);
             b.setEnabled(false);
-            if (i == q.correctIndex || ("multi_choice".equals(q.interaction) && q.correctIndices.contains(i))) {
+            if (i == q.correctIndex || (("multi_choice".equals(q.interaction) || "sequence".equals(q.interaction))
+                    && q.correctIndices.contains(i))) {
                 b.setBackground(roundRect(Color.rgb(221, 245, 234), 14, 2, GOOD));
                 b.setTextColor(Color.rgb(15, 105, 67));
             } else if (i == chosen) {
@@ -1091,14 +1134,18 @@ public class MainActivity extends Activity {
 
     private View dailyPlanCard() {
         PreparationPlan plan = PreparationPlan.create(progress, trainingTarget);
+        ReadinessForecast readiness = ReadinessForecast.create(progress);
         LinearLayout card = column();
         card.setPadding(dp(18), dp(15), dp(18), dp(15));
         card.setBackground(roundRect(CARD, 18, 1, SOFT));
         card.addView(text(getString(R.string.daily_plan), 17, INK, Typeface.BOLD));
         card.addView(text(getString(R.string.daily_plan_summary, plan.questionsToday, plan.dueReviews),
                 14, MUTED, Typeface.NORMAL));
+        card.addView(text(getString(R.string.readiness_summary,
+                        readiness.readinessPercent, readiness.confidencePercent),
+                15, GOOD, Typeface.BOLD));
         List<String> labels = new ArrayList<>();
-        for (String id : plan.focusKnowledge) labels.add(QuestionBank.knowledgeLabel(id, Locale.getDefault()));
+        for (String id : readiness.weakestKnowledge) labels.add(QuestionBank.knowledgeLabel(id, Locale.getDefault()));
         card.addView(text(getString(R.string.daily_plan_focus, android.text.TextUtils.join(" · ", labels)),
                 13, PRIMARY, Typeface.BOLD));
         Button start = primaryButton(getString(R.string.daily_plan_start));

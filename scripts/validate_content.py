@@ -62,7 +62,7 @@ seen_prompts = {}
 seen_listening_scripts = {}
 seen_audio_paths = {}
 dialogues = 0
-supported = {"single_choice", "multi_choice", "numeric"}
+supported = {"single_choice", "multi_choice", "sequence", "numeric"}
 modes = {"grammar", "reading", "listening", "story"}
 skills = set()
 listening = 0
@@ -123,7 +123,7 @@ for i, q in enumerate(questions):
     answers = q.get("answer")
     if not isinstance(answers, list) or not answers:
         fail(f"{qid}: at least one answer is required")
-    if q.get("interaction") in {"single_choice", "multi_choice"}:
+    if q.get("interaction") in {"single_choice", "multi_choice", "sequence"}:
         options = q.get("options")
         if not isinstance(options, list) or len(options) < 2:
             fail(f"{qid}: single_choice needs at least two options")
@@ -138,6 +138,8 @@ for i, q in enumerate(questions):
             fail(f"{qid}: single_choice must reference exactly one option")
         if q.get("interaction") == "multi_choice" and len(answers) < 2:
             fail(f"{qid}: multi_choice must reference at least two options")
+        if q.get("interaction") == "sequence" and len(answers) != len(options):
+            fail(f"{qid}: sequence answer must order every option")
     elif q.get("interaction") == "numeric":
         if any(not isinstance(answer, str) or not answer.strip() for answer in answers):
             fail(f"{qid}: numeric accepted answers must be non-empty strings")
@@ -401,7 +403,7 @@ for catalog_pack in catalog_pack_list:
         answers = question.get("answer")
         if not isinstance(answers, list) or not answers:
             fail(f"{qid}: answer list is required")
-        if interaction in {"single_choice", "multi_choice"}:
+        if interaction in {"single_choice", "multi_choice", "sequence"}:
             options = question.get("options")
             if not isinstance(options, list) or len(options) < 2:
                 fail(f"{qid}: choice task needs at least two options")
@@ -412,6 +414,8 @@ for catalog_pack in catalog_pack_list:
                 fail(f"{qid}: single_choice needs one answer")
             if interaction == "multi_choice" and len(answers) < 2:
                 fail(f"{qid}: multi_choice needs at least two answers")
+            if interaction == "sequence" and len(answers) != len(options):
+                fail(f"{qid}: sequence must order every option")
         if interaction == "numeric":
             if any(not str(answer).strip() for answer in answers):
                 fail(f"{qid}: empty numeric answer")

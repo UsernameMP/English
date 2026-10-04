@@ -176,7 +176,8 @@ public final class QuestionBank {
                 for (int j = 0; j < answers.length(); j++) acceptedAnswers.add(answers.getString(j));
                 String interaction = o.optString("interaction", "single_choice");
                 List<Integer> correctIndices = new ArrayList<>();
-                if ("single_choice".equals(interaction) || "multi_choice".equals(interaction)) {
+                if ("single_choice".equals(interaction) || "multi_choice".equals(interaction)
+                        || "sequence".equals(interaction)) {
                     for (String answer : acceptedAnswers) {
                         int index = optionIds.indexOf(answer);
                         if (index < 0) throw new IllegalStateException("Unknown answer id in " + o.getString("id"));

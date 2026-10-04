@@ -2,14 +2,14 @@
 
 Offline Android trainer for fast preparation for the school stage of the English Olympiad (Tatarstan, 5–6 grades).
 
-## v0.6.6
+## v0.6.7
 
-- multi-select and policy-driven numeric answers work across the generator, validator and Android runtime;
-- a target-date daily plan balances blueprint gaps with due Knowledge Unit reviews;
-- every pack is pinned by content version and SHA-256 in CI and at runtime;
-- the subject-neutral Workshop turns earned crystals into persistent, deterministic base structures;
-- the Learn → Earn → Play → Build loop keeps XP, crystals and game-session rights separate;
-- versionName 0.6.6 / versionCode 13; package ID, pilot signing chain and updater channel are unchanged.
+- an original 12-task Mathematics Grades 5–7 pack adds five global MATH Knowledge Units;
+- reusable sequence-order tasks work across the generator, validator and Android runtime;
+- Home shows blueprint-weighted readiness separately from evidence confidence;
+- a deterministic publisher CLI refreshes and checks pack versions and SHA-256 manifests;
+- a bounded privacy-safe event ledger prepares adaptive calibration and future opt-in sync;
+- versionName 0.6.7 / versionCode 14; package ID, pilot signing chain and updater channel are unchanged.
 
 ## v0.6.4
 
