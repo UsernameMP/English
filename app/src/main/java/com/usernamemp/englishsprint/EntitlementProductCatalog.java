@@ -23,6 +23,9 @@ public final class EntitlementProductCatalog {
         public final String billingType;
         public final boolean checkoutEnabled;
         public final List<String> packIds;
+        public final String subject;
+        public final int gradeMin;
+        public final int gradeMax;
 
         Product(JSONObject json) {
             id = json.optString("id", "");
@@ -30,8 +33,11 @@ public final class EntitlementProductCatalog {
             billingType = json.optString("billing_type", "");
             checkoutEnabled = json.optBoolean("checkout_enabled", false);
             List<String> ids = new ArrayList<>();
-            JSONArray array = json.optJSONObject("scope") == null
-                    ? null : json.optJSONObject("scope").optJSONArray("pack_ids");
+            JSONObject scope = json.optJSONObject("scope");
+            subject = scope == null ? "" : scope.optString("subject", "");
+            gradeMin = scope == null ? 1 : scope.optInt("grade_min", 1);
+            gradeMax = scope == null ? 12 : scope.optInt("grade_max", 12);
+            JSONArray array = scope == null ? null : scope.optJSONArray("pack_ids");
             if (array != null) for (int i = 0; i < array.length(); i++) ids.add(array.optString(i));
             packIds = Collections.unmodifiableList(ids);
         }
@@ -51,6 +57,13 @@ public final class EntitlementProductCatalog {
 
     public List<Product> products() {
         return Collections.unmodifiableList(products);
+    }
+
+    public Product subscriptionForSubject(String subject) {
+        for (Product product : products) {
+            if ("subscription".equals(product.billingType) && subject.equals(product.subject)) return product;
+        }
+        return null;
     }
 
     private static String readAsset(Context context, String path) throws Exception {

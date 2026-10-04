@@ -134,7 +134,7 @@ public class MainActivity extends Activity {
         LinearLayout header = row();
         LinearLayout titles = column();
         titles.addView(text(getString(R.string.app_name), 29, INK, Typeface.BOLD));
-        titles.addView(text(trainingTarget.summary(), 14, MUTED, Typeface.NORMAL));
+        titles.addView(text(getString(R.string.dashboard_caption), 14, MUTED, Typeface.NORMAL));
         header.addView(titles, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
         Button settings = compactButton("⚙");
         settings.setOnClickListener(v -> showSettings());
@@ -172,49 +172,116 @@ public class MainActivity extends Activity {
     }
 
     private void showLearnHub() {
+        showCourseStorefront();
+    }
+
+    private void showCourseStorefront() {
         audio.stop();
         LinearLayout root=column(); root.setPadding(dp(20),dp(18),dp(20),dp(30));
-        Button back=compactButton("←"); back.setOnClickListener(v->showHome());
-        root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
-        root.addView(space(12));
-        root.addView(text(getString(R.string.learn_title),28,INK,Typeface.BOLD));
-        root.addView(text(getString(R.string.learn_caption),14,MUTED,Typeface.NORMAL));
-        root.addView(space(14));
+        Button back=compactButton("←"); back.setOnClickListener(v->showHome()); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
+        root.addView(space(12)); root.addView(text(getString(R.string.choose_subject),28,INK,Typeface.BOLD));
+        root.addView(text(getString(R.string.choose_subject_caption),14,MUTED,Typeface.NORMAL)); root.addView(space(14));
 
-        TextView packLabel=text(getString(R.string.current_pack),13,MUTED,Typeface.BOLD);
-        root.addView(packLabel);
-        Button pack=secondaryButton(humanPackLabel(QuestionBank.currentPack()));
-        pack.setOnClickListener(v->showPackPicker(true));
-        LinearLayout.LayoutParams plp=matchWrap(); plp.topMargin=dp(6); root.addView(pack,plp);
-
-        root.addView(space(16));
-        Button auto=primaryButton(getString(R.string.auto_training));
-        auto.setOnClickListener(v->startSession(getString(R.string.quick_training),quickSession()));
-        root.addView(auto,matchWrap());
-        TextView autoHint=text(getString(R.string.auto_training_caption),13,MUTED,Typeface.NORMAL);
-        autoHint.setPadding(0,dp(5),0,dp(14)); root.addView(autoHint);
-
-        root.addView(text(getString(R.string.choose_topic),18,INK,Typeface.BOLD));
-        root.addView(text(getString(R.string.choose_topic_caption),13,MUTED,Typeface.NORMAL));
-        root.addView(space(10));
-        if("english".equals(QuestionBank.currentPack().subject)) {
-            addTopicGrid(root,
-                    new String[]{"A+","⌕","▶","✦"},
-                    new int[]{R.string.grammar_title,R.string.reading_title,R.string.listening_title,R.string.story_title},
-                    new Question.Type[]{Question.Type.GRAMMAR,Question.Type.READING,Question.Type.LISTENING,Question.Type.STORY});
-        } else {
-            addKnowledgeTopicGrid(root);
+        ContentCatalog catalog=new ContentCatalog(this);
+        EntitlementStore entitlements=new EntitlementStore(this);
+        EntitlementProductCatalog products=new EntitlementProductCatalog(this);
+        List<String> subjects=catalog.subjects();
+        for(int i=0;i<subjects.size();i+=2){
+            LinearLayout line=row();
+            for(int j=i;j<Math.min(i+2,subjects.size());j++){
+                final String subject=subjects.get(j);
+                boolean unlocked=subjectUnlocked(subject,catalog,entitlements);
+                String icon="english".equals(subject)?"Aa":("mathematics".equals(subject)?"∑":"</>");
+                Button tile=secondaryButton(icon+"\n"+subjectLabel(subject)+(unlocked?"":"\n🔒"));
+                tile.setTextSize(17); tile.setMinHeight(dp(100));
+                tile.setOnClickListener(v->{ if(unlocked) showGradePicker(subject); else showSubscriptionOffer(subject,products); });
+                LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(108),1f); if(j%2==1) lp.leftMargin=dp(8); line.addView(tile,lp);
+            }
+            if(line.getChildCount()==1) line.addView(space(1),new LinearLayout.LayoutParams(0,dp(108),1f));
+            LinearLayout.LayoutParams rlp=matchWrap(); rlp.bottomMargin=dp(8); root.addView(line,rlp);
         }
+        setScrollable(root);
+    }
 
-        root.addView(space(10));
-        Button atlas=secondaryButton(getString(R.string.skill_map));
-        atlas.setOnClickListener(v->showProgress());
-        root.addView(atlas,matchWrap());
-        if("english".equals(QuestionBank.currentPack().subject)) {
-            Button dict=secondaryButton(getString(R.string.dictionary_fmt,dictionary.savedCount()));
-            dict.setOnClickListener(v->showDictionary());
-            LinearLayout.LayoutParams dlp=matchWrap(); dlp.topMargin=dp(8); root.addView(dict,dlp);
+    private boolean subjectUnlocked(String subject,ContentCatalog catalog,EntitlementStore entitlements){
+        for(ContentCatalog.Course c:catalog.courses()) if(c.subject.equals(subject)&&entitlements.canAccessPack(c.packId)) return true;
+        return false;
+    }
+
+    private String subjectLabel(String subject){
+        if("english".equals(subject)) return getString(R.string.subject_english);
+        if("mathematics".equals(subject)) return getString(R.string.subject_math);
+        if("informatics".equals(subject)) return getString(R.string.subject_informatics);
+        return subject;
+    }
+
+    private void showSubscriptionOffer(String subject,EntitlementProductCatalog products){
+        EntitlementProductCatalog.Product product=products.subscriptionForSubject(subject);
+        String detail=product==null?getString(R.string.subscription_coming):getString(R.string.subscription_required_body,subjectLabel(subject));
+        new AlertDialog.Builder(this).setTitle("🔒 "+subjectLabel(subject)).setMessage(detail)
+                .setPositiveButton(getString(R.string.subscription_action),(d,w)->{})
+                .setNegativeButton(getString(R.string.dictionary_close),null).show();
+    }
+
+    private void showGradePicker(String subject){
+        ContentCatalog catalog=new ContentCatalog(this);
+        List<Integer> grades=catalog.grades(subject);
+        LinearLayout root=column(); root.setPadding(dp(20),dp(18),dp(20),dp(30));
+        Button back=compactButton("←"); back.setOnClickListener(v->showCourseStorefront()); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
+        root.addView(space(12)); root.addView(text(getString(R.string.choose_grade),28,INK,Typeface.BOLD));
+        root.addView(text(subjectLabel(subject),14,MUTED,Typeface.NORMAL)); root.addView(space(14));
+        LinearLayout line=null;
+        for(int i=0;i<grades.size();i++){
+            if(i%3==0){line=row(); root.addView(line,matchWrap());}
+            final int grade=grades.get(i);
+            Button b=secondaryButton(String.valueOf(grade)); b.setTextSize(20); b.setOnClickListener(v->showCompetitionPicker(subject,grade));
+            LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(66),1f); if(i%3>0)lp.leftMargin=dp(8); line.addView(b,lp);
         }
+        setScrollable(root);
+    }
+
+    private void showCompetitionPicker(String subject,int grade){
+        ContentCatalog catalog=new ContentCatalog(this);
+        List<ContentCatalog.Course> courses=catalog.applicable(subject,grade);
+        LinearLayout root=column(); root.setPadding(dp(20),dp(18),dp(20),dp(30));
+        Button back=compactButton("←"); back.setOnClickListener(v->showGradePicker(subject)); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
+        root.addView(space(12)); root.addView(text(getString(R.string.choose_goal),28,INK,Typeface.BOLD));
+        root.addView(text(subjectLabel(subject)+" · "+getString(R.string.grade_fmt,grade),14,MUTED,Typeface.NORMAL)); root.addView(space(14));
+        Button all=primaryButton(getString(R.string.all_olympiads)); all.setOnClickListener(v->selectFirstApplicable(courses)); root.addView(all,matchWrap());
+        root.addView(space(10));
+        for(ContentCatalog.Course c:courses){
+            Button b=secondaryButton(competitionLabel(c.competition));
+            b.setOnClickListener(v->selectCourse(c.packId));
+            LinearLayout.LayoutParams lp=matchWrap(); lp.bottomMargin=dp(8); root.addView(b,lp);
+        }
+        setScrollable(root);
+    }
+
+    private String competitionLabel(String raw){
+        if("VSOSh".equalsIgnoreCase(raw)) return getString(R.string.vsosh);
+        if("Olympiad pilot".equalsIgnoreCase(raw)) return getString(R.string.olympiad_pilot);
+        if("Olympiad bridge".equalsIgnoreCase(raw)) return getString(R.string.olympiad_bridge);
+        return raw;
+    }
+
+    private void selectFirstApplicable(List<ContentCatalog.Course> courses){ if(!courses.isEmpty()) selectCourse(courses.get(0).packId); }
+
+    private void selectCourse(String packId){
+        QuestionBank.selectPack(this,packId);
+        trainingTarget=new TrainingTargetStore(this,QuestionBank.currentPack());
+        showTrainingHub();
+    }
+
+    private void showTrainingHub(){
+        LinearLayout root=column(); root.setPadding(dp(20),dp(18),dp(20),dp(30));
+        Button back=compactButton("←"); back.setOnClickListener(v->showCourseStorefront()); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
+        root.addView(space(12)); root.addView(text(subjectLabel(QuestionBank.currentPack().subject),28,INK,Typeface.BOLD));
+        root.addView(text(humanPackLabel(QuestionBank.currentPack()),14,MUTED,Typeface.NORMAL)); root.addView(space(14));
+        Button auto=primaryButton(getString(R.string.auto_training)); auto.setOnClickListener(v->startSession(getString(R.string.quick_training),quickSession())); root.addView(auto,matchWrap());
+        root.addView(space(14)); root.addView(text(getString(R.string.choose_topic),18,INK,Typeface.BOLD)); root.addView(space(10));
+        if("english".equals(QuestionBank.currentPack().subject)) addTopicGrid(root,new String[]{"A+","⌕","▶","✦"},new int[]{R.string.grammar_title,R.string.reading_title,R.string.listening_title,R.string.story_title},new Question.Type[]{Question.Type.GRAMMAR,Question.Type.READING,Question.Type.LISTENING,Question.Type.STORY});
+        else addKnowledgeTopicGrid(root);
+        root.addView(space(10)); Button atlas=secondaryButton(getString(R.string.skill_map)); atlas.setOnClickListener(v->showProgress()); root.addView(atlas,matchWrap());
         setScrollable(root);
     }
 

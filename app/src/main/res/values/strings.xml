@@ -182,4 +182,13 @@
     <string name="auto_training_caption">The app builds a mixed session from your current course and progress.</string>
     <string name="choose_topic">Choose a topic</string><string name="choose_topic_caption">Four quick choices now; the grid can expand to eight as the course grows.</string>
     <string name="topic_empty">There are no tasks for this topic in the selected course yet.</string>
+
+    <string name="dashboard_caption">Your learning dashboard</string>
+    <string name="choose_subject">Choose a subject</string><string name="choose_subject_caption">Your subscriptions unlock subjects. Choose what you want to prepare for.</string>
+    <string name="subject_english">English</string><string name="subject_math">Mathematics</string><string name="subject_informatics">Informatics</string>
+    <string name="choose_grade">Choose grade</string><string name="grade_fmt">Grade %1$d</string>
+    <string name="choose_goal">Choose preparation goal</string><string name="all_olympiads">All applicable olympiads</string>
+    <string name="vsosh">All-Russian School Olympiad</string><string name="olympiad_pilot">Olympiad preparation</string><string name="olympiad_bridge">Olympiad bridge</string>
+    <string name="subscription_required_body">%1$s is a separate subject subscription. Checkout will be enabled when the production billing provider is connected.</string>
+    <string name="subscription_coming">This subject subscription is not available for checkout in the pilot yet.</string><string name="subscription_action">Subscription</string>
 </resources>
