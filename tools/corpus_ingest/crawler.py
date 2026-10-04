@@ -717,16 +717,26 @@ def main() -> None:
         processed = crawler.process_batch(max(0, args.max_documents))
     save_state(args.state, state)
 
-    print(json.dumps(
-        {
-            "discovery": discovery,
-            "processed": processed,
-            "status": status_summary(state),
-            "quota": crawler.last_quota,
-            "warning": crawler.quota_warning or None,
-        },
-        ensure_ascii=False,
-    ))
+    summary = {
+        "discovery": discovery,
+        "processed": processed,
+        "status": status_summary(state),
+        "quota": crawler.last_quota,
+        "warning": crawler.quota_warning or None,
+    }
+    remaining = sum(
+        count for status, count in summary["status"].items()
+        if status in {"PENDING", "FAILED_RETRYABLE", "CLAIMED", "DOWNLOADING"}
+    )
+    summary["remaining"] = remaining
+    summary["should_continue"] = bool(
+        remaining > 0 and processed > 0 and not crawler.quota_warning
+    )
+    Path("run_summary.json").write_text(
+        json.dumps(summary, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    print(json.dumps(summary, ensure_ascii=False))
 
 
 if __name__ == "__main__":
