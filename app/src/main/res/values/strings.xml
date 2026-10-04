@@ -175,4 +175,5 @@
     <string name="meta_collar">Companion accessory</string><string name="meta_toy">Companion toy</string><string name="meta_room">Home room</string>
     <string name="meta_barrier">Protective barrier</string><string name="meta_sensor">Detection sensor</string><string name="meta_defense_module">Defense module</string>
     <string name="meta_outfit">Hero outfit</string><string name="meta_gear">Hero gear</string><string name="meta_ability">Hero ability</string>
+    <string name="defense_play">Start defense test</string><string name="defense_result">Defense result</string><string name="defense_survived">Base held. Threats stopped: %1$d · integrity: %2$d%%</string><string name="defense_failed">Base breached. Threats stopped: %1$d · integrity: %2$d%%</string>
 </resources>
