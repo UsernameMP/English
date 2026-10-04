@@ -99,6 +99,21 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
+      - name: Publish public pilot content channel
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          python3 scripts/publish_github_content.py
+          cp -R build/content-pilot /tmp/content-pilot
+          git config user.name "English Sprint CI"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout --orphan content-pilot-publish
+          git rm -rf . || true
+          git clean -fdx
+          cp -R /tmp/content-pilot/. .
+          git add .
+          git commit -m "Publish pilot content"
+          git push origin HEAD:content-pilot --force
+
       - name: Publish GitHub Release APK
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:
