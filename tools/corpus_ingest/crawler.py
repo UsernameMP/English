@@ -22,6 +22,16 @@ SUPPORTED_EXTENSIONS = {
     ".jpg", ".jpeg", ".png",
 }
 DEFAULT_DROPBOX_ROOT = "/OlympiadCorpus"
+DEFAULT_DROPBOX_QUOTA_BYTES = 2 * 1024 * 1024 * 1024
+DEFAULT_QUOTA_STOP_RATIO = 0.95
+
+
+class QuotaLimitReached(RuntimeError):
+    pass
+
+
+class QuotaCheckUnavailable(RuntimeError):
+    pass
 
 
 def utc_now() -> str:
@@ -63,6 +73,34 @@ def raw_dropbox_path(root: str, digest: str, ext: str) -> str:
 
 def metadata_dropbox_path(root: str, digest: str) -> str:
     return f"{root.rstrip('/')}/metadata/{digest[:2]}/{digest}.json"
+
+
+def build_quota_report(
+    used: int,
+    api_allocated: int,
+    configured_limit: int,
+    stop_ratio: float,
+    incoming_bytes: int = 0,
+) -> dict:
+    limits = [x for x in (api_allocated, configured_limit) if x > 0]
+    if not limits:
+        raise ValueError("Dropbox quota is unknown")
+    effective_quota = min(limits)
+    threshold = int(effective_quota * stop_ratio)
+    projected = used + max(0, incoming_bytes)
+    return {
+        "used": used,
+        "api_allocated": api_allocated,
+        "configured_limit": configured_limit,
+        "effective_quota": effective_quota,
+        "stop_ratio": stop_ratio,
+        "threshold": threshold,
+        "incoming_bytes": max(0, incoming_bytes),
+        "projected_used": projected,
+        "used_percent": round((used / effective_quota) * 100, 3),
+        "projected_percent": round((projected / effective_quota) * 100, 3),
+        "stop": projected >= threshold,
+    }
 
 
 @dataclass
@@ -342,6 +380,19 @@ class DropboxClient:
         self._raise_dropbox_error(r, "files/get_metadata")
         return True
 
+    def get_space_usage(self) -> dict[str, int]:
+        r = self.http.post(
+            "https://api.dropboxapi.com/2/users/get_space_usage",
+            headers=self.api_headers(),
+            data="null",
+            timeout=30,
+        )
+        self._raise_dropbox_error(r, "users/get_space_usage")
+        payload = r.json()
+        allocation = payload.get("allocation") or {}
+        allocated = int(allocation.get("allocated") or 0)
+        return {"used": int(payload.get("used") or 0), "allocated": allocated}
+
     def checkpoint_path(self) -> str:
         return f"{self.root}/state/checkpoint.jsonl"
 
@@ -370,14 +421,50 @@ class DropboxClient:
 
 
 class Crawler:
-    def __init__(self, sources: list[Source], state: dict[str, dict], dbx: DropboxClient, max_bytes: int) -> None:
+    def __init__(
+        self,
+        sources: list[Source],
+        state: dict[str, dict],
+        dbx: DropboxClient,
+        max_bytes: int,
+        quota_bytes: int = DEFAULT_DROPBOX_QUOTA_BYTES,
+        quota_stop_ratio: float = DEFAULT_QUOTA_STOP_RATIO,
+    ) -> None:
         self.sources = [s for s in sources if s.is_enabled]
         self.source_by_id = {s.source_id: s for s in self.sources}
         self.state = state
         self.dbx = dbx
         self.max_bytes = max_bytes
+        self.quota_bytes = quota_bytes
+        self.quota_stop_ratio = quota_stop_ratio
+        self.last_quota: dict | None = None
+        self.quota_warning = ""
         self.http = requests.Session()
         self.http.headers.update({"User-Agent": USER_AGENT})
+
+    def enforce_quota(self, incoming_bytes: int = 0) -> dict:
+        try:
+            usage = self.dbx.get_space_usage()
+        except Exception as exc:
+            raise QuotaCheckUnavailable(
+                "Dropbox quota check failed; downloads stopped fail-safe: " + str(exc)
+            ) from exc
+        report = build_quota_report(
+            usage["used"],
+            usage.get("allocated", 0),
+            self.quota_bytes,
+            self.quota_stop_ratio,
+            incoming_bytes,
+        )
+        self.last_quota = report
+        if report["stop"]:
+            raise QuotaLimitReached(
+                "Dropbox quota guard: stopping before 95% limit "
+                f"(used={report['used']} bytes, incoming={report['incoming_bytes']} bytes, "
+                f"projected={report['projected_percent']}%, threshold={self.quota_stop_ratio * 100:.1f}%, "
+                f"effective_quota={report['effective_quota']} bytes)."
+            )
+        return report
 
     def record_discovery(self, source: Source, url: str, discovered_from: str) -> None:
         doc_id = stable_document_id(url)
@@ -500,6 +587,7 @@ class Crawler:
                 })
                 return
 
+            self.enforce_quota(len(r.content))
             raw_path = raw_dropbox_path(self.dbx.root, digest, ext)
             self.dbx.upload_bytes(raw_path, r.content, overwrite=False)
             metadata = self.make_metadata(rec, digest, ext, raw_path, r)
@@ -520,6 +608,13 @@ class Crawler:
                 "updated_at": utc_now(),
                 "last_error": "",
             })
+        except (QuotaLimitReached, QuotaCheckUnavailable) as exc:
+            rec["status"] = "PENDING"
+            rec["attempts"] = max(0, int(rec.get("attempts", 1)) - 1)
+            rec["last_error"] = str(exc)[:800]
+            rec["updated_at"] = utc_now()
+            self.quota_warning = str(exc)
+            raise
         except requests.HTTPError as exc:
             code = getattr(exc.response, "status_code", 0) or 0
             rec["status"] = "FAILED_TERMINAL" if code in {401, 403, 404, 410} else "FAILED_RETRYABLE"
@@ -535,6 +630,13 @@ class Crawler:
             self.dbx.upload_checkpoint(self.state)
 
     def process_batch(self, limit: int) -> int:
+        try:
+            self.enforce_quota(0)
+        except (QuotaLimitReached, QuotaCheckUnavailable) as exc:
+            self.quota_warning = str(exc)
+            print(f"::warning::{self.quota_warning}")
+            return 0
+
         eligible = [
             r for r in self.state.values()
             if r.get("status") in {"PENDING", "FAILED_RETRYABLE", "CLAIMED", "DOWNLOADING"}
@@ -545,9 +647,16 @@ class Crawler:
             int(r.get("attempts", 0)),
             r.get("first_seen", ""),
         ))
+        processed = 0
         for rec in eligible[:limit]:
-            self.process_one(rec)
-        return min(limit, len(eligible))
+            try:
+                self.process_one(rec)
+                processed += 1
+            except (QuotaLimitReached, QuotaCheckUnavailable) as exc:
+                self.quota_warning = str(exc)
+                print(f"::warning::{self.quota_warning}")
+                break
+        return processed
 
 
 def require_env(name: str) -> str:
@@ -571,7 +680,11 @@ def main() -> None:
     p.add_argument("--state", type=Path, default=Path("state/crawl_state.jsonl"))
     p.add_argument("--max-documents", type=int, default=int(os.getenv("MAX_DOCUMENTS", "50")))
     p.add_argument("--max-bytes", type=int, default=int(os.getenv("MAX_FILE_BYTES", str(100 * 1024 * 1024))))
+    p.add_argument("--quota-bytes", type=int, default=int(os.getenv("DROPBOX_QUOTA_BYTES", str(DEFAULT_DROPBOX_QUOTA_BYTES))))
+    p.add_argument("--quota-stop-ratio", type=float, default=float(os.getenv("DROPBOX_STOP_AT_RATIO", str(DEFAULT_QUOTA_STOP_RATIO))))
     args = p.parse_args()
+    if not 0 < args.quota_stop_ratio < 1:
+        raise SystemExit("--quota-stop-ratio must be between 0 and 1")
 
     dbx = DropboxClient(
         require_env("DROPBOX_APP_KEY"),
@@ -583,14 +696,27 @@ def main() -> None:
     dropbox_state = dbx.load_checkpoint()
     state = merge_states(github_state, dropbox_state)
 
-    crawler = Crawler(read_sources(args.sources), state, dbx, args.max_bytes)
+    crawler = Crawler(
+        read_sources(args.sources),
+        state,
+        dbx,
+        args.max_bytes,
+        quota_bytes=args.quota_bytes,
+        quota_stop_ratio=args.quota_stop_ratio,
+    )
     discovery = crawler.discover_all()
     dbx.upload_checkpoint(state)
     processed = crawler.process_batch(max(0, args.max_documents))
     save_state(args.state, state)
 
     print(json.dumps(
-        {"discovery": discovery, "processed": processed, "status": status_summary(state)},
+        {
+            "discovery": discovery,
+            "processed": processed,
+            "status": status_summary(state),
+            "quota": crawler.last_quota,
+            "warning": crawler.quota_warning or None,
+        },
         ensure_ascii=False,
     ))
 
