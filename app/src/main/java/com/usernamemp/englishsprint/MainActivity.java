@@ -151,8 +151,9 @@ public class MainActivity extends Activity {
         learn.setOnClickListener(v -> startSession(getString(R.string.quick_training), quickSession()));
         root.addView(learn, matchWrap());
 
-        TextView focus = text(getString(R.string.focus_compact,
-                QuestionBank.knowledgeLabel(QuestionBank.recommendedKnowledge(progress, 1).get(0), Locale.getDefault())),
+        List<String> homeFocus = QuestionBank.recommendedKnowledge(progress, 1);
+        TextView focus = text(homeFocus.isEmpty() ? getString(R.string.training_mode) : getString(R.string.focus_compact,
+                QuestionBank.knowledgeLabel(homeFocus.get(0), Locale.getDefault())),
                 13, MUTED, Typeface.NORMAL);
         focus.setGravity(Gravity.CENTER);
         focus.setPadding(0, dp(8), 0, dp(14));
