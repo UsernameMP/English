@@ -9,6 +9,13 @@ on:
         default: "50"
   schedule:
     - cron: "17 * * * *"
+  push:
+    paths:
+      - ".github/workflows/corpus-crawler.yml"
+      - "tools/corpus_ingest/crawler.py"
+      - "tools/corpus_ingest/crawler_requirements.txt"
+      - "tools/corpus_ingest/registry/**"
+      - "tools/corpus_ingest/tests/test_crawler.py"
 
 permissions:
   contents: write
