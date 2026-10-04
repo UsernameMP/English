@@ -1,18 +1,25 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "currency": "crystal",
   "rewards": {
-    "correct_answer": 2,
-    "completed_10_questions": 15,
-    "combo_3": 3,
-    "combo_5": 6,
-    "combo_8": 10,
-    "combo_10": 15,
-    "combo_15": 25,
-    "new_record": 10,
-    "knowledge_confident": 30,
-    "reinforced": 8,
-    "minigame_complete": 5,
-    "minigame_score_bonus_cap": 5
+    "correct_answer": 1,
+    "completed_10_questions": 2,
+    "combo_3": 0,
+    "combo_5": 1,
+    "combo_8": 1,
+    "combo_10": 2,
+    "combo_15": 3,
+    "new_record": 1,
+    "knowledge_confident": 3,
+    "reinforced": 1,
+    "minigame_complete": 0,
+    "minigame_score_bonus_cap": 0
+  },
+  "economy_guardrails": {
+    "ordinary_task_target": 1,
+    "hard_task_target_max": 3,
+    "first_meaningful_purchase_min": 15,
+    "normal_upgrade_min": 40,
+    "major_upgrade_min": 100
   }
 }

@@ -164,4 +164,16 @@
     <string name="sequence_hint">Tap every item in the correct order</string>
     <string name="sequence_reset">Reset order</string>
     <string name="readiness_summary">Readiness %1$d%% · evidence confidence %2$d%%</string>
+
+    <string name="learn_now">▶  LEARN</string>
+    <string name="focus_compact">Next focus: %1$s</string>
+    <string name="my_world">My World</string>
+    <string name="my_world_caption">Spend crystals on the kind of progression you enjoy. You can switch worlds without losing progress.</string>
+    <string name="mode_pet">Pet &amp; Home</string><string name="mode_defense">Defense Base</string><string name="mode_hero">Hero Adventure</string>
+    <string name="preferred_world">PREFERRED WORLD</string><string name="language_setting">INTERFACE LANGUAGE</string><string name="language_current">Current: %1$s</string>
+    <string name="meta_level">Level %1$d</string><string name="meta_upgrade">Upgrade · 💎 %1$d</string>
+    <string name="meta_collar">Companion accessory</string><string name="meta_toy">Companion toy</string><string name="meta_room">Home room</string>
+    <string name="meta_barrier">Protective barrier</string><string name="meta_sensor">Detection sensor</string><string name="meta_defense_module">Defense module</string>
+    <string name="meta_outfit">Hero outfit</string><string name="meta_gear">Hero gear</string><string name="meta_ability">Hero ability</string>
+    <string name="defense_play">Start defense test</string><string name="defense_result">Defense result</string><string name="defense_survived">Base held. Threats stopped: %1$d · integrity: %2$d%%</string><string name="defense_failed">Base breached. Threats stopped: %1$d · integrity: %2$d%%</string>
 </resources>
