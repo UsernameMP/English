@@ -1,0 +1,61 @@
+name: Olympiad corpus crawler
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_documents:
+        description: Maximum documents to download in this run
+        required: false
+        default: "50"
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: olympiad-crawler
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    defaults:
+      run:
+        working-directory: tools/corpus_ingest
+    env:
+      DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+      DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
+      DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+      DROPBOX_ROOT: /OlympiadCorpus
+      MAX_DOCUMENTS: ${{ github.event.inputs.max_documents || '50' }}
+      MAX_FILE_BYTES: "104857600"
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install crawler dependencies
+        run: pip install -r crawler_requirements.txt
+
+      - name: Crawl and upload RAW
+        run: python crawler.py --sources registry/sources.csv --state state/crawl_state.jsonl
+
+      - name: Commit crawler state
+        working-directory: ${{ github.workspace }}
+        run: |
+          if git diff --quiet -- tools/corpus_ingest/state/crawl_state.jsonl; then
+            echo "No state changes"
+            exit 0
+          fi
+          git config user.name "olympiad-crawler[bot]"
+          git config user.email "olympiad-crawler[bot]@users.noreply.github.com"
+          git add tools/corpus_ingest/state/crawl_state.jsonl
+          git commit -m "crawler: update corpus state [skip ci]"
+          git push
