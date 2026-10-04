@@ -1,0 +1,77 @@
+name: Olympiad corpus parser
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_documents:
+        description: Maximum RAW documents to parse in this run
+        required: false
+        default: "20"
+  schedule:
+    - cron: "7,37 * * * *"
+  push:
+    paths:
+      - ".github/workflows/corpus-parser.yml"
+      - "tools/corpus_ingest/parser.py"
+      - "tools/corpus_ingest/parser_requirements.txt"
+      - "tools/corpus_ingest/tests/test_parser.py"
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: olympiad-parser
+  cancel-in-progress: false
+
+jobs:
+  parse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    defaults:
+      run:
+        working-directory: tools/corpus_ingest
+    env:
+      DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+      DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
+      DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+      DROPBOX_ROOT: /OlympiadCorpus
+      PARSER_MAX_DOCUMENTS: ${{ github.event.inputs.max_documents || '20' }}
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install parser dependencies
+        run: pip install -r parser_requirements.txt
+
+      - name: Test parser
+        run: PYTHONPATH=. pytest -q tests/test_parser.py tests/test_crawler.py
+
+      - name: Parse Dropbox RAW into candidates
+        run: python parser.py --max-documents "$PARSER_MAX_DOCUMENTS"
+
+      - name: Continue next parser batch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("parser_run_summary.json")
+          if not p.exists():
+              raise SystemExit(0)
+          s = json.loads(p.read_text(encoding="utf-8"))
+          print(json.dumps(s, ensure_ascii=False))
+          if s.get("should_continue"):
+              Path("/tmp/continue_parser").write_text("1")
+          PY
+          if [ -f /tmp/continue_parser ]; then
+            gh workflow run corpus-parser.yml --ref main -f max_documents=20
+            echo "Queued next parser batch"
+          else
+            echo "Parser chain stopped cleanly"
+          fi
