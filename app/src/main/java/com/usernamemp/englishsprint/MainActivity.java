@@ -168,15 +168,6 @@ public class MainActivity extends Activity {
         shopButton.setOnClickListener(v -> showShop());
         LinearLayout.LayoutParams shopLp=matchWrap(); shopLp.topMargin=dp(8); root.addView(shopButton,shopLp);
 
-        Button atlas = secondaryButton(getString(R.string.skill_map));
-        atlas.setOnClickListener(v -> showProgress());
-        LinearLayout.LayoutParams alp = matchWrap(); alp.topMargin=dp(8); root.addView(atlas,alp);
-
-        if ("english".equals(QuestionBank.currentPack().subject)) {
-            Button dict = secondaryButton(getString(R.string.dictionary_fmt, dictionary.savedCount()));
-            dict.setOnClickListener(v -> showDictionary());
-            LinearLayout.LayoutParams dlp=matchWrap(); dlp.topMargin=dp(8); root.addView(dict,dlp);
-        }
         setScrollable(root);
     }
 
@@ -213,6 +204,16 @@ public class MainActivity extends Activity {
                     new Question.Type[]{Question.Type.GRAMMAR,Question.Type.READING,Question.Type.LISTENING,Question.Type.STORY});
         } else {
             addKnowledgeTopicGrid(root);
+        }
+
+        root.addView(space(10));
+        Button atlas=secondaryButton(getString(R.string.skill_map));
+        atlas.setOnClickListener(v->showProgress());
+        root.addView(atlas,matchWrap());
+        if("english".equals(QuestionBank.currentPack().subject)) {
+            Button dict=secondaryButton(getString(R.string.dictionary_fmt,dictionary.savedCount()));
+            dict.setOnClickListener(v->showDictionary());
+            LinearLayout.LayoutParams dlp=matchWrap(); dlp.topMargin=dp(8); root.addView(dict,dlp);
         }
         setScrollable(root);
     }
