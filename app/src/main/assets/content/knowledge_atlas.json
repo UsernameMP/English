@@ -71,6 +71,15 @@
       "from": "CS.ALGORITHMS.COMPLEXITY.INTRO",
       "type": "requires",
       "to": "CS.ALGORITHMS.TRACING"
+    },
+    {
+      "from":"MATH.ARITHMETIC.RATIOS","type":"uses","to":"MATH.NUMBER.DIVISIBILITY"
+    },
+    {
+      "from":"MATH.LOGIC.INVARIANTS","type":"uses","to":"MATH.NUMBER.DIVISIBILITY"
+    },
+    {
+      "from":"MATH.COMBINATORICS.COUNTING","type":"uses","to":"MATH.LOGIC.INVARIANTS"
     }
   ]
 }

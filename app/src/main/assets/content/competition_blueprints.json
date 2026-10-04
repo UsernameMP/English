@@ -27,6 +27,16 @@
         {"knowledge_id":"ENG.GRAMMAR.QUANTIFIERS","weight":0.20},
         {"knowledge_id":"ENG.READING.COMPREHENSION","weight":0.40}
       ]
+    },
+    {
+      "pack_id":"mathematics.olympiad.5-7.global.2026",
+      "coverage":[
+        {"knowledge_id":"MATH.NUMBER.DIVISIBILITY","weight":0.25},
+        {"knowledge_id":"MATH.ARITHMETIC.RATIOS","weight":0.15},
+        {"knowledge_id":"MATH.COMBINATORICS.COUNTING","weight":0.20},
+        {"knowledge_id":"MATH.GEOMETRY.AREA","weight":0.20},
+        {"knowledge_id":"MATH.LOGIC.INVARIANTS","weight":0.20}
+      ]
     }
   ]
 }

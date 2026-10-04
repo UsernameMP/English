@@ -40,6 +40,12 @@
       "season": "2026-2027",
       "pack_ids": ["english.olympiad.6-7.global.2026"],
       "device_policy": "local_pilot"
+    },
+    {
+      "id":"pilot.mathematics.g5g7","source":"pilot","active":true,
+      "subject":"mathematics","grade_min":5,"grade_max":7,
+      "competition":"Olympiad pilot","season":"2026-2027",
+      "pack_ids":["mathematics.olympiad.5-7.global.2026"],"device_policy":"local_pilot"
     }
   ]
 }

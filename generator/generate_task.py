@@ -15,7 +15,7 @@ def main():
     p.add_argument("--competition", default="")
     p.add_argument("--season", default="")
     p.add_argument("--knowledge", required=True, help="Primary assessed Knowledge Unit id")
-    p.add_argument("--interaction", choices=["single_choice", "multi_choice", "numeric"], default="single_choice")
+    p.add_argument("--interaction", choices=["single_choice", "multi_choice", "sequence", "numeric"], default="single_choice")
     p.add_argument("--prerequisite", action="append", default=[])
     p.add_argument("--seed", default="0")
     p.add_argument("--output", required=True)
@@ -36,7 +36,8 @@ def main():
         "stimulus": {},
         "knowledge": [{"id": args.knowledge, "weight": 1.0}],
         "prerequisites": list(dict.fromkeys(args.prerequisite)),
-        "answer": (["a", "c"] if args.interaction == "multi_choice"
+        "answer": (["b", "a", "c"] if args.interaction == "sequence"
+                   else ["a", "c"] if args.interaction == "multi_choice"
                    else ["a"] if args.interaction == "single_choice" else ["0"]),
         "feedback": {
             "short": {"en": "TODO", "ru": "TODO"},
@@ -54,7 +55,7 @@ def main():
             "seed": str(args.seed)
         }
     }
-    if args.interaction in {"single_choice", "multi_choice"}:
+    if args.interaction in {"single_choice", "multi_choice", "sequence"}:
         question["options"] = [
             {"id": "a", "text": "TODO option A"},
             {"id": "b", "text": "TODO option B"},

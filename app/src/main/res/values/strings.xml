@@ -161,4 +161,7 @@
     <string name="workshop_built">Built</string>
     <string name="workshop_build">Build · 💎 %1$d · level %2$d</string>
     <string name="workshop_level_needed">Reach level %1$d to build this structure.</string>
+    <string name="sequence_hint">Tap every item in the correct order</string>
+    <string name="sequence_reset">Reset order</string>
+    <string name="readiness_summary">Readiness %1$d%% · evidence confidence %2$d%%</string>
 </resources>

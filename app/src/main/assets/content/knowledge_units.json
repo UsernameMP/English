@@ -206,6 +206,26 @@
         "en": "Counting operations",
         "ru": "Подсчёт операций"
       }
+    },
+    {
+      "id":"MATH.NUMBER.DIVISIBILITY","kind":"concept","legacy_skill":"divisibility",
+      "labels":{"en":"Divisibility and remainders","ru":"Делимость и остатки"}
+    },
+    {
+      "id":"MATH.ARITHMETIC.RATIOS","kind":"method","legacy_skill":"ratios",
+      "labels":{"en":"Ratios and proportional reasoning","ru":"Отношения и пропорции"}
+    },
+    {
+      "id":"MATH.COMBINATORICS.COUNTING","kind":"method","legacy_skill":"counting",
+      "labels":{"en":"Systematic counting","ru":"Систематический подсчёт"}
+    },
+    {
+      "id":"MATH.GEOMETRY.AREA","kind":"concept","legacy_skill":"area",
+      "labels":{"en":"Area decomposition","ru":"Разбиение площади"}
+    },
+    {
+      "id":"MATH.LOGIC.INVARIANTS","kind":"strategy","legacy_skill":"invariants",
+      "labels":{"en":"Invariants and parity","ru":"Инварианты и чётность"}
     }
   ]
 }

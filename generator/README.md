@@ -21,4 +21,4 @@ python3 generator/generate_task.py \
   --output /tmp/task.json
 ```
 
-Use `--interaction multi_choice` for exact-set answers or `--interaction numeric` for numeric STEM drafts. Numeric drafts include an exact tolerance policy that reviewers may extend with a range or required unit.
+Use `--interaction multi_choice` for exact-set answers, `--interaction sequence` for ordered steps, or `--interaction numeric` for numeric STEM drafts. Numeric drafts include an exact tolerance policy that reviewers may extend with a range or required unit.
