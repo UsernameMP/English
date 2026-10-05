@@ -1,0 +1,40 @@
+name: Document Triage Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/document_triage/**"
+      - ".github/workflows/document-triage-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: document-triage-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Document Triage
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: tools/document_triage
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
