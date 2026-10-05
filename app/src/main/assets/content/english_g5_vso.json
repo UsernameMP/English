@@ -12578,7 +12578,7 @@
         "text": null,
         "audio": "audio/listen_14.wav",
         "image": null,
-        "script": "The swimming lesson was planned for Tuesday, but the pool is closed then. It will be Thursday at half past five.",
+        "script": "The swimming lesson was planned for Tuesday, but the pool is closed then. It will be Thursday at half past five. Please remember that detail.",
         "voice": "ryan",
         "pace": "normal"
       },
@@ -12649,7 +12649,7 @@
         "text": null,
         "audio": "audio/listen_15.wav",
         "image": null,
-        "script": "The swimming lesson was planned for Tuesday, but the pool is closed then. It will be Thursday at half past five.",
+        "script": "The swimming lesson was planned for Tuesday, but the pool is closed then. It will be Thursday at half past five. I wrote the final information in my notebook.",
         "voice": "lessac",
         "pace": "slow"
       },
@@ -12791,7 +12791,7 @@
         "text": null,
         "audio": "audio/listen_17.wav",
         "image": null,
-        "script": "I thought my blue umbrella was by the door, but Maya found it under my desk.",
+        "script": "I thought my blue umbrella was by the door, but Maya found it under my desk. Please remember that detail.",
         "voice": "lessac",
         "pace": "normal"
       },
@@ -12862,7 +12862,7 @@
         "text": null,
         "audio": "audio/listen_18.wav",
         "image": null,
-        "script": "I thought my blue umbrella was by the door, but Maya found it under my desk.",
+        "script": "I thought my blue umbrella was by the door, but Maya found it under my desk. I wrote the final information in my notebook.",
         "voice": "ryan",
         "pace": "slow"
       },
@@ -13004,7 +13004,7 @@
         "text": null,
         "audio": "audio/listen_20.wav",
         "image": null,
-        "script": "Bus twelve stops everywhere. Let's take eighteen; it reaches the museum ten minutes earlier.",
+        "script": "Bus twelve stops everywhere. Let's take eighteen; it reaches the museum ten minutes earlier. Please remember that detail.",
         "voice": "ryan",
         "pace": "normal"
       },
@@ -13075,7 +13075,7 @@
         "text": null,
         "audio": "audio/listen_21.wav",
         "image": null,
-        "script": "Bus twelve stops everywhere. Let's take eighteen; it reaches the museum ten minutes earlier.",
+        "script": "Bus twelve stops everywhere. Let's take eighteen; it reaches the museum ten minutes earlier. I wrote the final information in my notebook.",
         "voice": "lessac",
         "pace": "slow"
       },
@@ -13217,7 +13217,7 @@
         "text": null,
         "audio": "audio/listen_23.wav",
         "image": null,
-        "script": "The café opens at eight, but breakfast starts at half past eight. Let's meet at eight thirty.",
+        "script": "The café opens at eight, but breakfast starts at half past eight. Let's meet at eight thirty. Please remember that detail.",
         "voice": "lessac",
         "pace": "normal"
       },
@@ -13288,7 +13288,7 @@
         "text": null,
         "audio": "audio/listen_24.wav",
         "image": null,
-        "script": "The café opens at eight, but breakfast starts at half past eight. Let's meet at eight thirty.",
+        "script": "The café opens at eight, but breakfast starts at half past eight. Let's meet at eight thirty. I wrote the final information in my notebook.",
         "voice": "ryan",
         "pace": "slow"
       },
@@ -13430,7 +13430,7 @@
         "text": null,
         "audio": "audio/listen_26.wav",
         "image": null,
-        "script": "There was no milk, so I bought yoghurt instead, but I did get all six apples.",
+        "script": "There was no milk, so I bought yoghurt instead, but I did get all six apples. Please remember that detail.",
         "voice": "ryan",
         "pace": "normal"
       },
@@ -13501,7 +13501,7 @@
         "text": null,
         "audio": "audio/listen_27.wav",
         "image": null,
-        "script": "There was no milk, so I bought yoghurt instead, but I did get all six apples.",
+        "script": "There was no milk, so I bought yoghurt instead, but I did get all six apples. I wrote the final information in my notebook.",
         "voice": "lessac",
         "pace": "slow"
       },
@@ -13643,7 +13643,7 @@
         "text": null,
         "audio": "audio/listen_29.wav",
         "image": null,
-        "script": "Strong wind moved the three o'clock match from outside to the sports hall. The time is unchanged.",
+        "script": "Strong wind moved the three o'clock match from outside to the sports hall. The time is unchanged. Please remember that detail.",
         "voice": "lessac",
         "pace": "normal"
       },
@@ -13714,7 +13714,7 @@
         "text": null,
         "audio": "audio/listen_30.wav",
         "image": null,
-        "script": "Strong wind moved the three o'clock match from outside to the sports hall. The time is unchanged.",
+        "script": "Strong wind moved the three o'clock match from outside to the sports hall. The time is unchanged. I wrote the final information in my notebook.",
         "voice": "ryan",
         "pace": "slow"
       },
@@ -13856,7 +13856,7 @@
         "text": null,
         "audio": "audio/listen_32.wav",
         "image": null,
-        "script": "I have a dentist appointment after school. I'll meet you at the library tomorrow morning instead.",
+        "script": "I have a dentist appointment after school. I'll meet you at the library tomorrow morning instead. Please remember that detail.",
         "voice": "ryan",
         "pace": "normal"
       },
@@ -13927,7 +13927,7 @@
         "text": null,
         "audio": "audio/listen_33.wav",
         "image": null,
-        "script": "I have a dentist appointment after school. I'll meet you at the library tomorrow morning instead.",
+        "script": "I have a dentist appointment after school. I'll meet you at the library tomorrow morning instead. I wrote the final information in my notebook.",
         "voice": "lessac",
         "pace": "slow"
       },
@@ -14069,7 +14069,7 @@
         "text": null,
         "audio": "audio/listen_35.wav",
         "image": null,
-        "script": "Our train leaves platform four, not fourteen. The screen was difficult to read, so we checked the announcement.",
+        "script": "Our train leaves platform four, not fourteen. The screen was difficult to read, so we checked the announcement. Please remember that detail.",
         "voice": "lessac",
         "pace": "normal"
       },
@@ -14140,7 +14140,7 @@
         "text": null,
         "audio": "audio/listen_36.wav",
         "image": null,
-        "script": "Our train leaves platform four, not fourteen. The screen was difficult to read, so we checked the announcement.",
+        "script": "Our train leaves platform four, not fourteen. The screen was difficult to read, so we checked the announcement. I wrote the final information in my notebook.",
         "voice": "ryan",
         "pace": "slow"
       },
@@ -14282,7 +14282,7 @@
         "text": null,
         "audio": "audio/listen_38.wav",
         "image": null,
-        "script": "The red backpack was too small and the black one too expensive, so we chose the green one.",
+        "script": "The red backpack was too small and the black one too expensive, so we chose the green one. Please remember that detail.",
         "voice": "ryan",
         "pace": "normal"
       },
@@ -14353,7 +14353,7 @@
         "text": null,
         "audio": "audio/listen_39.wav",
         "image": null,
-        "script": "The red backpack was too small and the black one too expensive, so we chose the green one.",
+        "script": "The red backpack was too small and the black one too expensive, so we chose the green one. I wrote the final information in my notebook.",
         "voice": "lessac",
         "pace": "slow"
       },
@@ -14495,7 +14495,7 @@
         "text": null,
         "audio": "audio/listen_41.wav",
         "image": null,
-        "script": "The concert begins at seven. Performers arrive forty-five minutes earlier, at a quarter past six.",
+        "script": "The concert begins at seven. Performers arrive forty-five minutes earlier, at a quarter past six. Please remember that detail.",
         "voice": "lessac",
         "pace": "normal"
       },
@@ -14566,7 +14566,7 @@
         "text": null,
         "audio": "audio/listen_42.wav",
         "image": null,
-        "script": "The concert begins at seven. Performers arrive forty-five minutes earlier, at a quarter past six.",
+        "script": "The concert begins at seven. Performers arrive forty-five minutes earlier, at a quarter past six. I wrote the final information in my notebook.",
         "voice": "ryan",
         "pace": "slow"
       },
@@ -14708,7 +14708,7 @@
         "text": null,
         "audio": "audio/listen_44.wav",
         "image": null,
-        "script": "Tomato soup had finished, so I chose vegetable soup and kept the cheese sandwich.",
+        "script": "Tomato soup had finished, so I chose vegetable soup and kept the cheese sandwich. Please remember that detail.",
         "voice": "ryan",
         "pace": "normal"
       },
@@ -14779,7 +14779,7 @@
         "text": null,
         "audio": "audio/listen_45.wav",
         "image": null,
-        "script": "Tomato soup had finished, so I chose vegetable soup and kept the cheese sandwich.",
+        "script": "Tomato soup had finished, so I chose vegetable soup and kept the cheese sandwich. I wrote the final information in my notebook.",
         "voice": "lessac",
         "pace": "slow"
       },
@@ -14921,7 +14921,7 @@
         "text": null,
         "audio": "audio/listen_47.wav",
         "image": null,
-        "script": "The art club usually meets in room nine. Today another class has it, so we're in room eleven.",
+        "script": "The art club usually meets in room nine. Today another class has it, so we're in room eleven. Please remember that detail.",
         "voice": "lessac",
         "pace": "normal"
       },
@@ -14992,7 +14992,7 @@
         "text": null,
         "audio": "audio/listen_48.wav",
         "image": null,
-        "script": "The art club usually meets in room nine. Today another class has it, so we're in room eleven.",
+        "script": "The art club usually meets in room nine. Today another class has it, so we're in room eleven. I wrote the final information in my notebook.",
         "voice": "ryan",
         "pace": "slow"
       },
