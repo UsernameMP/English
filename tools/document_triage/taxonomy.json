@@ -1,0 +1,241 @@
+{
+  "schema_version": "0.2",
+  "subjects": [
+    {
+      "id": "english",
+      "ru": "Английский язык",
+      "en": "English"
+    },
+    {
+      "id": "russian",
+      "ru": "Русский язык",
+      "en": "Russian"
+    },
+    {
+      "id": "mathematics",
+      "ru": "Математика",
+      "en": "Mathematics"
+    },
+    {
+      "id": "informatics",
+      "ru": "Информатика",
+      "en": "Informatics / Computer Science"
+    },
+    {
+      "id": "physics",
+      "ru": "Физика",
+      "en": "Physics"
+    },
+    {
+      "id": "chemistry",
+      "ru": "Химия",
+      "en": "Chemistry"
+    },
+    {
+      "id": "biology",
+      "ru": "Биология",
+      "en": "Biology"
+    },
+    {
+      "id": "ecology",
+      "ru": "Экология",
+      "en": "Ecology"
+    },
+    {
+      "id": "geography",
+      "ru": "География",
+      "en": "Geography"
+    },
+    {
+      "id": "astronomy",
+      "ru": "Астрономия",
+      "en": "Astronomy"
+    },
+    {
+      "id": "economics",
+      "ru": "Экономика",
+      "en": "Economics"
+    },
+    {
+      "id": "finance",
+      "ru": "Финансы",
+      "en": "Finance"
+    },
+    {
+      "id": "law",
+      "ru": "Право",
+      "en": "Law"
+    },
+    {
+      "id": "social_studies",
+      "ru": "Обществознание",
+      "en": "Social Studies"
+    },
+    {
+      "id": "history",
+      "ru": "История",
+      "en": "History"
+    },
+    {
+      "id": "literature",
+      "ru": "Литература",
+      "en": "Literature"
+    },
+    {
+      "id": "art_mhk",
+      "ru": "Искусство (МХК)",
+      "en": "Art / World Art Culture"
+    },
+    {
+      "id": "technology",
+      "ru": "Труд (технология)",
+      "en": "Technology"
+    },
+    {
+      "id": "physical_education",
+      "ru": "Физическая культура",
+      "en": "Physical Education"
+    },
+    {
+      "id": "life_safety",
+      "ru": "ОБЗР / ОБЖ",
+      "en": "Life Safety"
+    },
+    {
+      "id": "german",
+      "ru": "Немецкий язык",
+      "en": "German"
+    },
+    {
+      "id": "french",
+      "ru": "Французский язык",
+      "en": "French"
+    },
+    {
+      "id": "spanish",
+      "ru": "Испанский язык",
+      "en": "Spanish"
+    },
+    {
+      "id": "italian",
+      "ru": "Итальянский язык",
+      "en": "Italian"
+    },
+    {
+      "id": "chinese",
+      "ru": "Китайский язык",
+      "en": "Chinese"
+    },
+    {
+      "id": "linguistics",
+      "ru": "Лингвистика",
+      "en": "Linguistics"
+    },
+    {
+      "id": "robotics",
+      "ru": "Робототехника",
+      "en": "Robotics"
+    },
+    {
+      "id": "other",
+      "ru": "Другое",
+      "en": "Other"
+    },
+    {
+      "id": "unknown",
+      "ru": "Не определено",
+      "en": "Unknown"
+    }
+  ],
+  "competitions": [
+    {
+      "id": "vsosh",
+      "ru": "Всероссийская олимпиада школьников (ВсОШ)",
+      "en": "All-Russian School Olympiad (VSOSh)"
+    },
+    {
+      "id": "other",
+      "ru": "Другая олимпиада",
+      "en": "Other competition"
+    },
+    {
+      "id": "unknown",
+      "ru": "Не определено",
+      "en": "Unknown"
+    }
+  ],
+  "stages": [
+    {
+      "id": "school",
+      "ru": "Школьный этап",
+      "en": "School stage"
+    },
+    {
+      "id": "municipal",
+      "ru": "Муниципальный этап",
+      "en": "Municipal stage"
+    },
+    {
+      "id": "regional",
+      "ru": "Региональный этап",
+      "en": "Regional stage"
+    },
+    {
+      "id": "final",
+      "ru": "Заключительный этап",
+      "en": "Final stage"
+    },
+    {
+      "id": "district",
+      "ru": "Районный этап",
+      "en": "District stage"
+    },
+    {
+      "id": "city",
+      "ru": "Городской этап",
+      "en": "City stage"
+    },
+    {
+      "id": "qualifying",
+      "ru": "Отборочный этап",
+      "en": "Qualifying stage"
+    },
+    {
+      "id": "other",
+      "ru": "Другой этап",
+      "en": "Other stage"
+    },
+    {
+      "id": "unknown",
+      "ru": "Не определено",
+      "en": "Unknown"
+    }
+  ],
+  "tours": [
+    {
+      "id": "written",
+      "ru": "Письменный тур",
+      "en": "Written round"
+    },
+    {
+      "id": "oral",
+      "ru": "Устный тур",
+      "en": "Oral round"
+    },
+    {
+      "id": "mixed",
+      "ru": "Смешанный / несколько туров",
+      "en": "Mixed / multiple rounds"
+    },
+    {
+      "id": "other",
+      "ru": "Другой",
+      "en": "Other"
+    },
+    {
+      "id": "unknown",
+      "ru": "Не определено",
+      "en": "Unknown"
+    }
+  ]
+}
