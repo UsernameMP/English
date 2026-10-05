@@ -79,7 +79,7 @@ const DOCS=[
 
 const ROLE_OPTIONS=["TASK_SET","ANSWER_KEY","CRITERIA","LISTENING_SCRIPT","AUDIO_REFERENCE","METHODOLOGY","ANSWER_SHEET","OTHER"];
 const SIGNAL_OPTIONS=["EMBEDDED_ANSWERS","HAS_RATIONALE_OR_EXPLANATIONS","VISUAL_ANSWER_MARKING","HAS_TABLES","HAS_IMAGES_OR_DIAGRAMS","HAS_CROSSWORD","HAS_MULTIPLE_SECTIONS","HAS_DISTRACTOR_OPTIONS","MIXED_DOCUMENT","UNCLEAR_OR_AMBIGUOUS"];
-const STORAGE_KEY="document-triage-workbench-v1";
+const STORAGE_KEY="document-triage-workbench-v1";\nlet SOURCE_URLS={};
 let current=0,annotations=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");
 const el=id=>document.getElementById(id);
 
@@ -92,7 +92,7 @@ const bytes=n=>n<1024?n+" B":n<1048576?(n/1024).toFixed(1)+" KB":(n/1048576).toF
 const checked=name=>[...document.querySelectorAll('input[name="'+name+'"]:checked')].map(x=>x.value);
 function setChecked(name,vals){const s=new Set(vals||[]);document.querySelectorAll('input[name="'+name+'"]').forEach(x=>x.checked=s.has(x.value))}
 function blank(d){return{schema_version:"0.1",document_sha256:d.id,roles:[],metadata:{subject:"",olympiad:"",academic_year:"",stage:"",grades:"",region:"",tour:"",duration_min:null,max_score:null},signals:[],notes:"",review_status:"IN_PROGRESS",reviewed_at:null}}
-function assetUrl(d){return "assets/"+d.id+".pdf"}
+function assetUrl(d){return SOURCE_URLS[d.id]||d.open}
 function load(i){
   current=Math.max(0,Math.min(DOCS.length-1,i)); const d=DOCS[current],a=annotations[d.id]||blank(d),pdf=assetUrl(d);
   el("shaLabel").textContent=d.id;el("indexPill").textContent=(current+1)+" / "+DOCS.length;el("sizePill").textContent=bytes(d.size);
@@ -109,7 +109,7 @@ function readForm(){
     subject:el("subject").value.trim(),olympiad:el("olympiad").value.trim(),academic_year:el("year").value.trim(),stage:el("stage").value.trim(),
     grades:el("grades").value.trim(),region:el("region").value.trim(),tour:el("tour").value.trim(),
     duration_min:el("duration").value===""?null:Number(el("duration").value),max_score:el("maxScore").value===""?null:Number(el("maxScore").value)
-  },signals:checked("signals"),notes:el("notes").value.trim(),review_status:el("reviewStatus").value,reviewed_at:new Date().toISOString(),source:{dropbox_open_url:d.open}};
+  },signals:checked("signals"),notes:el("notes").value.trim(),review_status:el("reviewStatus").value,reviewed_at:new Date().toISOString(),source:{original_url:assetUrl(d),dropbox_open_url:d.open}};
 }
 function save(stay){const d=DOCS[current];annotations[d.id]=readForm();localStorage.setItem(STORAGE_KEY,JSON.stringify(annotations));el("savedState").textContent="saved";el("savedState").className="done";progress();if(!stay&&current<DOCS.length-1)load(current+1)}
 function progress(){const done=DOCS.filter(d=>annotations[d.id]?.review_status==="DONE").length,touched=DOCS.filter(d=>annotations[d.id]).length;el("progress").textContent="Touched "+touched+"/"+DOCS.length+" · Done "+done+"/"+DOCS.length}
