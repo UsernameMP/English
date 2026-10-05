@@ -2,15 +2,24 @@
 
 A human-first browser workbench for OlympiadCorpus document ground truth.
 
-## Open in browser
+## Browser launch
 
-Use the browser-hosted preview:
+The intended permanent URL is:
 
-https://htmlpreview.github.io/?https://github.com/UsernameMP/English/blob/main/tools/document_triage/index.html
+https://usernamemp.github.io/English/
 
-No git clone, no local server, and no Windows launcher are required.
+GitHub Pages must be enabled once for this repository:
 
-The left side embeds the original Dropbox PDF. If Dropbox blocks embedding, use **Open in Dropbox**.
+1. Open repository **Settings**.
+2. Open **Pages**.
+3. Under **Build and deployment → Source**, choose **GitHub Actions**.
+4. The committed workflow `.github/workflows/document-triage-pages.yml` deploys `tools/document_triage/` as the site root.
+
+After that, opening the Pages URL launches the workbench directly in a browser. No git clone or local launcher is required.
+
+Temporary direct static preview (if needed before Pages is enabled):
+
+https://raw.githack.com/UsernameMP/English/main/tools/document_triage/index.html
 
 ## Why
 
