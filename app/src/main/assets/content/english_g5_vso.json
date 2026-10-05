@@ -3,7 +3,7 @@
   "bank_id": "english-vsosh-5-6-ru-rt",
   "title": "English Sprint · VSOSh 5–6",
   "locale": "en-RU",
-  "content_version": "0.3.0",
+  "content_version": "0.4.0",
   "questions": [
     {
       "id": "be_001",
@@ -10033,6 +10033,7530 @@
       ],
       "tags": [
         "story"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "reading_13",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Ava joined the gardening club. She wanted strawberries, but the sunny beds were taken. She planted beans. By June they were taller than she was, and the club used them at the summer fair.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Why did Ava plant beans?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The strawberry beds were occupied."
+        },
+        {
+          "id": "b",
+          "text": "She disliked strawberries."
+        },
+        {
+          "id": "c",
+          "text": "Beans only grow in April."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Ava joined the gardening club. She wanted strawberries, but the sunny beds were taken. She planted beans. By June they were taller than she was, and the club used them at the summer fair.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_14",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Ava joined the gardening club. She wanted strawberries, but the sunny beds were taken. She planted beans. By June they were taller than she was, and the club used them at the summer fair.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Read/listen carefully. Why did Ava plant beans?",
+      "options": [
+        {
+          "id": "a",
+          "text": "She disliked strawberries."
+        },
+        {
+          "id": "b",
+          "text": "Beans only grow in April."
+        },
+        {
+          "id": "c",
+          "text": "The strawberry beds were occupied."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Ava joined the gardening club. She wanted strawberries, but the sunny beds were taken. She planted beans. By June they were taller than she was, and the club used them at the summer fair.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_15",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Ava joined the gardening club. She wanted strawberries, but the sunny beds were taken. She planted beans. By June they were taller than she was, and the club used them at the summer fair.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the answer supported by the information. Why did Ava plant beans?",
+      "options": [
+        {
+          "id": "a",
+          "text": "She disliked strawberries."
+        },
+        {
+          "id": "b",
+          "text": "Beans only grow in April."
+        },
+        {
+          "id": "c",
+          "text": "The strawberry beds were occupied."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Ava joined the gardening club. She wanted strawberries, but the sunny beds were taken. She planted beans. By June they were taller than she was, and the club used them at the summer fair.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_16",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Ben planned to return a library book Tuesday. On Monday he saw the library would close Tuesday for repairs, so he returned it early.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Why return it Monday?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The library would be closed Tuesday."
+        },
+        {
+          "id": "b",
+          "text": "He lost his ticket."
+        },
+        {
+          "id": "c",
+          "text": "He wanted another book."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Ben planned to return a library book Tuesday. On Monday he saw the library would close Tuesday for repairs, so he returned it early.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_17",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Ben planned to return a library book Tuesday. On Monday he saw the library would close Tuesday for repairs, so he returned it early.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Read/listen carefully. Why return it Monday?",
+      "options": [
+        {
+          "id": "a",
+          "text": "He lost his ticket."
+        },
+        {
+          "id": "b",
+          "text": "He wanted another book."
+        },
+        {
+          "id": "c",
+          "text": "The library would be closed Tuesday."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Ben planned to return a library book Tuesday. On Monday he saw the library would close Tuesday for repairs, so he returned it early.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_18",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Ben planned to return a library book Tuesday. On Monday he saw the library would close Tuesday for repairs, so he returned it early.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the answer supported by the information. Why return it Monday?",
+      "options": [
+        {
+          "id": "a",
+          "text": "He lost his ticket."
+        },
+        {
+          "id": "b",
+          "text": "He wanted another book."
+        },
+        {
+          "id": "c",
+          "text": "The library would be closed Tuesday."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Ben planned to return a library book Tuesday. On Monday he saw the library would close Tuesday for repairs, so he returned it early.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_19",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Nora's family planned to cycle around the lake. Her brother had a flat tyre, then Nora discovered part of the path was closed. They chose a forest route.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Why change route?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Part of the path was closed."
+        },
+        {
+          "id": "b",
+          "text": "They wanted a longer ride."
+        },
+        {
+          "id": "c",
+          "text": "They lost the map."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Nora's family planned to cycle around the lake. Her brother had a flat tyre, then Nora discovered part of the path was closed. They chose a forest route.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_20",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Nora's family planned to cycle around the lake. Her brother had a flat tyre, then Nora discovered part of the path was closed. They chose a forest route.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Read/listen carefully. Why change route?",
+      "options": [
+        {
+          "id": "a",
+          "text": "They wanted a longer ride."
+        },
+        {
+          "id": "b",
+          "text": "They lost the map."
+        },
+        {
+          "id": "c",
+          "text": "Part of the path was closed."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Nora's family planned to cycle around the lake. Her brother had a flat tyre, then Nora discovered part of the path was closed. They chose a forest route.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_21",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Nora's family planned to cycle around the lake. Her brother had a flat tyre, then Nora discovered part of the path was closed. They chose a forest route.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the answer supported by the information. Why change route?",
+      "options": [
+        {
+          "id": "a",
+          "text": "They wanted a longer ride."
+        },
+        {
+          "id": "b",
+          "text": "They lost the map."
+        },
+        {
+          "id": "c",
+          "text": "Part of the path was closed."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Nora's family planned to cycle around the lake. Her brother had a flat tyre, then Nora discovered part of the path was closed. They chose a forest route.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_22",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Omar wanted the noon robot show, but the hall was full. He got a two o'clock ticket, visited the space gallery, and returned ten minutes early.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "When did he return?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1:50"
+        },
+        {
+          "id": "b",
+          "text": "2:00"
+        },
+        {
+          "id": "c",
+          "text": "2:10"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Omar wanted the noon robot show, but the hall was full. He got a two o'clock ticket, visited the space gallery, and returned ten minutes early.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_23",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Omar wanted the noon robot show, but the hall was full. He got a two o'clock ticket, visited the space gallery, and returned ten minutes early.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Read/listen carefully. When did he return?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2:00"
+        },
+        {
+          "id": "b",
+          "text": "2:10"
+        },
+        {
+          "id": "c",
+          "text": "1:50"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Omar wanted the noon robot show, but the hall was full. He got a two o'clock ticket, visited the space gallery, and returned ten minutes early.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_24",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Omar wanted the noon robot show, but the hall was full. He got a two o'clock ticket, visited the space gallery, and returned ten minutes early.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the answer supported by the information. When did he return?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2:00"
+        },
+        {
+          "id": "b",
+          "text": "2:10"
+        },
+        {
+          "id": "c",
+          "text": "1:50"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Omar wanted the noon robot show, but the hall was full. He got a two o'clock ticket, visited the space gallery, and returned ten minutes early.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_25",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Lena's teacher required one book source for her bird poster. A neighbour lent her a field guide with two facts missing from the websites.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Why was the guide useful?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It added two facts."
+        },
+        {
+          "id": "b",
+          "text": "It had no pictures."
+        },
+        {
+          "id": "c",
+          "text": "It was shorter."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Lena's teacher required one book source for her bird poster. A neighbour lent her a field guide with two facts missing from the websites.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_26",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Lena's teacher required one book source for her bird poster. A neighbour lent her a field guide with two facts missing from the websites.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Read/listen carefully. Why was the guide useful?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It had no pictures."
+        },
+        {
+          "id": "b",
+          "text": "It was shorter."
+        },
+        {
+          "id": "c",
+          "text": "It added two facts."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Lena's teacher required one book source for her bird poster. A neighbour lent her a field guide with two facts missing from the websites.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_27",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Lena's teacher required one book source for her bird poster. A neighbour lent her a field guide with two facts missing from the websites.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the answer supported by the information. Why was the guide useful?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It had no pictures."
+        },
+        {
+          "id": "b",
+          "text": "It was shorter."
+        },
+        {
+          "id": "c",
+          "text": "It added two facts."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Lena's teacher required one book source for her bird poster. A neighbour lent her a field guide with two facts missing from the websites.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_28",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Max normally practised piano after dinner. His cousin was sleeping nearby, so on Thursday Max practised before dinner.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Why change the time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "His cousin needed quiet."
+        },
+        {
+          "id": "b",
+          "text": "The piano broke."
+        },
+        {
+          "id": "c",
+          "text": "He had a lesson."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Max normally practised piano after dinner. His cousin was sleeping nearby, so on Thursday Max practised before dinner.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_29",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Max normally practised piano after dinner. His cousin was sleeping nearby, so on Thursday Max practised before dinner.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Read/listen carefully. Why change the time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The piano broke."
+        },
+        {
+          "id": "b",
+          "text": "He had a lesson."
+        },
+        {
+          "id": "c",
+          "text": "His cousin needed quiet."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Max normally practised piano after dinner. His cousin was sleeping nearby, so on Thursday Max practised before dinner.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_30",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Max normally practised piano after dinner. His cousin was sleeping nearby, so on Thursday Max practised before dinner.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the answer supported by the information. Why change the time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The piano broke."
+        },
+        {
+          "id": "b",
+          "text": "He had a lesson."
+        },
+        {
+          "id": "c",
+          "text": "His cousin needed quiet."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Max normally practised piano after dinner. His cousin was sleeping nearby, so on Thursday Max practised before dinner.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_31",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "The class had three recycling boxes by Wednesday. Their goal was five. Families helped on Friday and the final count was six.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Final result versus goal?",
+      "options": [
+        {
+          "id": "a",
+          "text": "One below"
+        },
+        {
+          "id": "b",
+          "text": "Exactly equal"
+        },
+        {
+          "id": "c",
+          "text": "One above"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "The class had three recycling boxes by Wednesday. Their goal was five. Families helped on Friday and the final count was six.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_32",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "The class had three recycling boxes by Wednesday. Their goal was five. Families helped on Friday and the final count was six.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Read/listen carefully. Final result versus goal?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Exactly equal"
+        },
+        {
+          "id": "b",
+          "text": "One above"
+        },
+        {
+          "id": "c",
+          "text": "One below"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "The class had three recycling boxes by Wednesday. Their goal was five. Families helped on Friday and the final count was six.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_33",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "The class had three recycling boxes by Wednesday. Their goal was five. Families helped on Friday and the final count was six.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the answer supported by the information. Final result versus goal?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Exactly equal"
+        },
+        {
+          "id": "b",
+          "text": "One above"
+        },
+        {
+          "id": "c",
+          "text": "One below"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "The class had three recycling boxes by Wednesday. Their goal was five. Families helped on Friday and the final count was six.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_34",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Ella's train was due at 9:20. A fifteen-minute delay was announced. At 9:30 it still had not arrived.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "New expected time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "9:20"
+        },
+        {
+          "id": "b",
+          "text": "9:30"
+        },
+        {
+          "id": "c",
+          "text": "9:35"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Ella's train was due at 9:20. A fifteen-minute delay was announced. At 9:30 it still had not arrived.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_35",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Ella's train was due at 9:20. A fifteen-minute delay was announced. At 9:30 it still had not arrived.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Read/listen carefully. New expected time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "9:30"
+        },
+        {
+          "id": "b",
+          "text": "9:35"
+        },
+        {
+          "id": "c",
+          "text": "9:20"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Ella's train was due at 9:20. A fifteen-minute delay was announced. At 9:30 it still had not arrived.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_36",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Ella's train was due at 9:20. A fifteen-minute delay was announced. At 9:30 it still had not arrived.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the answer supported by the information. New expected time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "9:30"
+        },
+        {
+          "id": "b",
+          "text": "9:35"
+        },
+        {
+          "id": "c",
+          "text": "9:20"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Ella's train was due at 9:20. A fifteen-minute delay was announced. At 9:30 it still had not arrived.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_37",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Ravi noticed his quiz team had a different final answer. He explained his reasoning; they checked the textbook, changed it, and won by one point.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "How did they check?",
+      "options": [
+        {
+          "id": "a",
+          "text": "With the textbook."
+        },
+        {
+          "id": "b",
+          "text": "By guessing."
+        },
+        {
+          "id": "c",
+          "text": "With another team."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Ravi noticed his quiz team had a different final answer. He explained his reasoning; they checked the textbook, changed it, and won by one point.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_38",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Ravi noticed his quiz team had a different final answer. He explained his reasoning; they checked the textbook, changed it, and won by one point.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Read/listen carefully. How did they check?",
+      "options": [
+        {
+          "id": "a",
+          "text": "By guessing."
+        },
+        {
+          "id": "b",
+          "text": "With another team."
+        },
+        {
+          "id": "c",
+          "text": "With the textbook."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Ravi noticed his quiz team had a different final answer. He explained his reasoning; they checked the textbook, changed it, and won by one point.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_39",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Ravi noticed his quiz team had a different final answer. He explained his reasoning; they checked the textbook, changed it, and won by one point.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the answer supported by the information. How did they check?",
+      "options": [
+        {
+          "id": "a",
+          "text": "By guessing."
+        },
+        {
+          "id": "b",
+          "text": "With another team."
+        },
+        {
+          "id": "c",
+          "text": "With the textbook."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Ravi noticed his quiz team had a different final answer. He explained his reasoning; they checked the textbook, changed it, and won by one point.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_40",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Sofia baked twelve muffins. Two broke and stayed home. She sold eight at school and gave the remaining two to helpers.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "How many went to school?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Eight"
+        },
+        {
+          "id": "b",
+          "text": "Ten"
+        },
+        {
+          "id": "c",
+          "text": "Twelve"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Sofia baked twelve muffins. Two broke and stayed home. She sold eight at school and gave the remaining two to helpers.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_41",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Sofia baked twelve muffins. Two broke and stayed home. She sold eight at school and gave the remaining two to helpers.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Read/listen carefully. How many went to school?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ten"
+        },
+        {
+          "id": "b",
+          "text": "Twelve"
+        },
+        {
+          "id": "c",
+          "text": "Eight"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Sofia baked twelve muffins. Two broke and stayed home. She sold eight at school and gave the remaining two to helpers.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_42",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Sofia baked twelve muffins. Two broke and stayed home. She sold eight at school and gave the remaining two to helpers.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the answer supported by the information. How many went to school?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ten"
+        },
+        {
+          "id": "b",
+          "text": "Twelve"
+        },
+        {
+          "id": "c",
+          "text": "Eight"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Sofia baked twelve muffins. Two broke and stayed home. She sold eight at school and gave the remaining two to helpers.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_43",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Practice normally ends at five. The coach stopped twenty minutes early because of lightning.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "When did practice end?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4:20"
+        },
+        {
+          "id": "b",
+          "text": "4:40"
+        },
+        {
+          "id": "c",
+          "text": "5:20"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Practice normally ends at five. The coach stopped twenty minutes early because of lightning.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_44",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Practice normally ends at five. The coach stopped twenty minutes early because of lightning.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Read/listen carefully. When did practice end?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4:40"
+        },
+        {
+          "id": "b",
+          "text": "5:20"
+        },
+        {
+          "id": "c",
+          "text": "4:20"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Practice normally ends at five. The coach stopped twenty minutes early because of lightning.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_45",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Practice normally ends at five. The coach stopped twenty minutes early because of lightning.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the answer supported by the information. When did practice end?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4:40"
+        },
+        {
+          "id": "b",
+          "text": "5:20"
+        },
+        {
+          "id": "c",
+          "text": "4:20"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Practice normally ends at five. The coach stopped twenty minutes early because of lightning.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_46",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Sunrise was at 6:12. Kai needed thirty minutes to walk to the hill and left at 5:30.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "How long did he wait before sunrise?",
+      "options": [
+        {
+          "id": "a",
+          "text": "12 minutes"
+        },
+        {
+          "id": "b",
+          "text": "30 minutes"
+        },
+        {
+          "id": "c",
+          "text": "42 minutes"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Sunrise was at 6:12. Kai needed thirty minutes to walk to the hill and left at 5:30.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_47",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Sunrise was at 6:12. Kai needed thirty minutes to walk to the hill and left at 5:30.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Read/listen carefully. How long did he wait before sunrise?",
+      "options": [
+        {
+          "id": "a",
+          "text": "30 minutes"
+        },
+        {
+          "id": "b",
+          "text": "42 minutes"
+        },
+        {
+          "id": "c",
+          "text": "12 minutes"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Sunrise was at 6:12. Kai needed thirty minutes to walk to the hill and left at 5:30.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "reading_48",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "reading",
+      "skills": [
+        "reading"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Sunrise was at 6:12. Kai needed thirty minutes to walk to the hill and left at 5:30.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Choose the answer supported by the information. How long did he wait before sunrise?",
+      "options": [
+        {
+          "id": "a",
+          "text": "30 minutes"
+        },
+        {
+          "id": "b",
+          "text": "42 minutes"
+        },
+        {
+          "id": "c",
+          "text": "12 minutes"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Найди фразу-доказательство в тексте."
+        },
+        "full": {
+          "ru": "Правильный вариант должен совпадать со смыслом текста, даже если слова сформулированы иначе."
+        },
+        "rule": {
+          "ru": "Ищи смысл, а не одинаковые слова."
+        }
+      },
+      "evidence": "Sunrise was at 6:12. Kai needed thirty minutes to walk to the hill and left at 5:30.",
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.READING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "reading",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_13",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_13.wav",
+        "image": null,
+        "script": "The swimming lesson was planned for Tuesday, but the pool is closed then. It will be Thursday at half past five.",
+        "voice": "lessac",
+        "pace": "normal"
+      },
+      "prompt": "Which day now?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tuesday"
+        },
+        {
+          "id": "b",
+          "text": "Wednesday"
+        },
+        {
+          "id": "c",
+          "text": "Thursday"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_14",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_14.wav",
+        "image": null,
+        "script": "The swimming lesson was planned for Tuesday, but the pool is closed then. It will be Thursday at half past five. Please remember that detail.",
+        "voice": "ryan",
+        "pace": "normal"
+      },
+      "prompt": "Read/listen carefully. Which day now?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Wednesday"
+        },
+        {
+          "id": "b",
+          "text": "Thursday"
+        },
+        {
+          "id": "c",
+          "text": "Tuesday"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_15",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_15.wav",
+        "image": null,
+        "script": "The swimming lesson was planned for Tuesday, but the pool is closed then. It will be Thursday at half past five. I wrote the final information in my notebook.",
+        "voice": "lessac",
+        "pace": "slow"
+      },
+      "prompt": "Choose the answer supported by the information. Which day now?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Wednesday"
+        },
+        {
+          "id": "b",
+          "text": "Thursday"
+        },
+        {
+          "id": "c",
+          "text": "Tuesday"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_16",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_16.wav",
+        "image": null,
+        "script": "I thought my blue umbrella was by the door, but Maya found it under my desk.",
+        "voice": "ryan",
+        "pace": "normal"
+      },
+      "prompt": "Where was it found?",
+      "options": [
+        {
+          "id": "a",
+          "text": "By the door"
+        },
+        {
+          "id": "b",
+          "text": "Under the desk"
+        },
+        {
+          "id": "c",
+          "text": "In the hall"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_17",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_17.wav",
+        "image": null,
+        "script": "I thought my blue umbrella was by the door, but Maya found it under my desk. Please remember that detail.",
+        "voice": "lessac",
+        "pace": "normal"
+      },
+      "prompt": "Read/listen carefully. Where was it found?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Under the desk"
+        },
+        {
+          "id": "b",
+          "text": "In the hall"
+        },
+        {
+          "id": "c",
+          "text": "By the door"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_18",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_18.wav",
+        "image": null,
+        "script": "I thought my blue umbrella was by the door, but Maya found it under my desk. I wrote the final information in my notebook.",
+        "voice": "ryan",
+        "pace": "slow"
+      },
+      "prompt": "Choose the answer supported by the information. Where was it found?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Under the desk"
+        },
+        {
+          "id": "b",
+          "text": "In the hall"
+        },
+        {
+          "id": "c",
+          "text": "By the door"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_19",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_19.wav",
+        "image": null,
+        "script": "Bus twelve stops everywhere. Let's take eighteen; it reaches the museum ten minutes earlier.",
+        "voice": "lessac",
+        "pace": "normal"
+      },
+      "prompt": "Which bus?",
+      "options": [
+        {
+          "id": "a",
+          "text": "12"
+        },
+        {
+          "id": "b",
+          "text": "18"
+        },
+        {
+          "id": "c",
+          "text": "10"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_20",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_20.wav",
+        "image": null,
+        "script": "Bus twelve stops everywhere. Let's take eighteen; it reaches the museum ten minutes earlier. Please remember that detail.",
+        "voice": "ryan",
+        "pace": "normal"
+      },
+      "prompt": "Read/listen carefully. Which bus?",
+      "options": [
+        {
+          "id": "a",
+          "text": "18"
+        },
+        {
+          "id": "b",
+          "text": "10"
+        },
+        {
+          "id": "c",
+          "text": "12"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_21",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_21.wav",
+        "image": null,
+        "script": "Bus twelve stops everywhere. Let's take eighteen; it reaches the museum ten minutes earlier. I wrote the final information in my notebook.",
+        "voice": "lessac",
+        "pace": "slow"
+      },
+      "prompt": "Choose the answer supported by the information. Which bus?",
+      "options": [
+        {
+          "id": "a",
+          "text": "18"
+        },
+        {
+          "id": "b",
+          "text": "10"
+        },
+        {
+          "id": "c",
+          "text": "12"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_22",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_22.wav",
+        "image": null,
+        "script": "The café opens at eight, but breakfast starts at half past eight. Let's meet at eight thirty.",
+        "voice": "ryan",
+        "pace": "normal"
+      },
+      "prompt": "Meeting time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "8:00"
+        },
+        {
+          "id": "b",
+          "text": "8:30"
+        },
+        {
+          "id": "c",
+          "text": "9:00"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_23",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_23.wav",
+        "image": null,
+        "script": "The café opens at eight, but breakfast starts at half past eight. Let's meet at eight thirty. Please remember that detail.",
+        "voice": "lessac",
+        "pace": "normal"
+      },
+      "prompt": "Read/listen carefully. Meeting time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "8:30"
+        },
+        {
+          "id": "b",
+          "text": "9:00"
+        },
+        {
+          "id": "c",
+          "text": "8:00"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_24",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_24.wav",
+        "image": null,
+        "script": "The café opens at eight, but breakfast starts at half past eight. Let's meet at eight thirty. I wrote the final information in my notebook.",
+        "voice": "ryan",
+        "pace": "slow"
+      },
+      "prompt": "Choose the answer supported by the information. Meeting time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "8:30"
+        },
+        {
+          "id": "b",
+          "text": "9:00"
+        },
+        {
+          "id": "c",
+          "text": "8:00"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_25",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_25.wav",
+        "image": null,
+        "script": "There was no milk, so I bought yoghurt instead, but I did get all six apples.",
+        "voice": "lessac",
+        "pace": "normal"
+      },
+      "prompt": "What replaced milk?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Juice"
+        },
+        {
+          "id": "b",
+          "text": "Yoghurt"
+        },
+        {
+          "id": "c",
+          "text": "Cheese"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_26",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_26.wav",
+        "image": null,
+        "script": "There was no milk, so I bought yoghurt instead, but I did get all six apples. Please remember that detail.",
+        "voice": "ryan",
+        "pace": "normal"
+      },
+      "prompt": "Read/listen carefully. What replaced milk?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Yoghurt"
+        },
+        {
+          "id": "b",
+          "text": "Cheese"
+        },
+        {
+          "id": "c",
+          "text": "Juice"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_27",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_27.wav",
+        "image": null,
+        "script": "There was no milk, so I bought yoghurt instead, but I did get all six apples. I wrote the final information in my notebook.",
+        "voice": "lessac",
+        "pace": "slow"
+      },
+      "prompt": "Choose the answer supported by the information. What replaced milk?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Yoghurt"
+        },
+        {
+          "id": "b",
+          "text": "Cheese"
+        },
+        {
+          "id": "c",
+          "text": "Juice"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_28",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_28.wav",
+        "image": null,
+        "script": "Strong wind moved the three o'clock match from outside to the sports hall. The time is unchanged.",
+        "voice": "ryan",
+        "pace": "normal"
+      },
+      "prompt": "Where now?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Outside"
+        },
+        {
+          "id": "b",
+          "text": "Sports hall"
+        },
+        {
+          "id": "c",
+          "text": "School yard"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_29",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_29.wav",
+        "image": null,
+        "script": "Strong wind moved the three o'clock match from outside to the sports hall. The time is unchanged. Please remember that detail.",
+        "voice": "lessac",
+        "pace": "normal"
+      },
+      "prompt": "Read/listen carefully. Where now?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sports hall"
+        },
+        {
+          "id": "b",
+          "text": "School yard"
+        },
+        {
+          "id": "c",
+          "text": "Outside"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_30",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_30.wav",
+        "image": null,
+        "script": "Strong wind moved the three o'clock match from outside to the sports hall. The time is unchanged. I wrote the final information in my notebook.",
+        "voice": "ryan",
+        "pace": "slow"
+      },
+      "prompt": "Choose the answer supported by the information. Where now?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sports hall"
+        },
+        {
+          "id": "b",
+          "text": "School yard"
+        },
+        {
+          "id": "c",
+          "text": "Outside"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_31",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_31.wav",
+        "image": null,
+        "script": "I have a dentist appointment after school. I'll meet you at the library tomorrow morning instead.",
+        "voice": "lessac",
+        "pace": "normal"
+      },
+      "prompt": "When instead?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tonight"
+        },
+        {
+          "id": "b",
+          "text": "Tomorrow morning"
+        },
+        {
+          "id": "c",
+          "text": "Tomorrow evening"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_32",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_32.wav",
+        "image": null,
+        "script": "I have a dentist appointment after school. I'll meet you at the library tomorrow morning instead. Please remember that detail.",
+        "voice": "ryan",
+        "pace": "normal"
+      },
+      "prompt": "Read/listen carefully. When instead?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tomorrow morning"
+        },
+        {
+          "id": "b",
+          "text": "Tomorrow evening"
+        },
+        {
+          "id": "c",
+          "text": "Tonight"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_33",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_33.wav",
+        "image": null,
+        "script": "I have a dentist appointment after school. I'll meet you at the library tomorrow morning instead. I wrote the final information in my notebook.",
+        "voice": "lessac",
+        "pace": "slow"
+      },
+      "prompt": "Choose the answer supported by the information. When instead?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tomorrow morning"
+        },
+        {
+          "id": "b",
+          "text": "Tomorrow evening"
+        },
+        {
+          "id": "c",
+          "text": "Tonight"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_34",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_34.wav",
+        "image": null,
+        "script": "Our train leaves platform four, not fourteen. The screen was difficult to read, so we checked the announcement.",
+        "voice": "ryan",
+        "pace": "normal"
+      },
+      "prompt": "Which platform?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4"
+        },
+        {
+          "id": "b",
+          "text": "14"
+        },
+        {
+          "id": "c",
+          "text": "40"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_35",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_35.wav",
+        "image": null,
+        "script": "Our train leaves platform four, not fourteen. The screen was difficult to read, so we checked the announcement. Please remember that detail.",
+        "voice": "lessac",
+        "pace": "normal"
+      },
+      "prompt": "Read/listen carefully. Which platform?",
+      "options": [
+        {
+          "id": "a",
+          "text": "14"
+        },
+        {
+          "id": "b",
+          "text": "40"
+        },
+        {
+          "id": "c",
+          "text": "4"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_36",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_36.wav",
+        "image": null,
+        "script": "Our train leaves platform four, not fourteen. The screen was difficult to read, so we checked the announcement. I wrote the final information in my notebook.",
+        "voice": "ryan",
+        "pace": "slow"
+      },
+      "prompt": "Choose the answer supported by the information. Which platform?",
+      "options": [
+        {
+          "id": "a",
+          "text": "14"
+        },
+        {
+          "id": "b",
+          "text": "40"
+        },
+        {
+          "id": "c",
+          "text": "4"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_37",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_37.wav",
+        "image": null,
+        "script": "The red backpack was too small and the black one too expensive, so we chose the green one.",
+        "voice": "lessac",
+        "pace": "normal"
+      },
+      "prompt": "Which one?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Red"
+        },
+        {
+          "id": "b",
+          "text": "Black"
+        },
+        {
+          "id": "c",
+          "text": "Green"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_38",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_38.wav",
+        "image": null,
+        "script": "The red backpack was too small and the black one too expensive, so we chose the green one. Please remember that detail.",
+        "voice": "ryan",
+        "pace": "normal"
+      },
+      "prompt": "Read/listen carefully. Which one?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Black"
+        },
+        {
+          "id": "b",
+          "text": "Green"
+        },
+        {
+          "id": "c",
+          "text": "Red"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_39",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_39.wav",
+        "image": null,
+        "script": "The red backpack was too small and the black one too expensive, so we chose the green one. I wrote the final information in my notebook.",
+        "voice": "lessac",
+        "pace": "slow"
+      },
+      "prompt": "Choose the answer supported by the information. Which one?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Black"
+        },
+        {
+          "id": "b",
+          "text": "Green"
+        },
+        {
+          "id": "c",
+          "text": "Red"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_40",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_40.wav",
+        "image": null,
+        "script": "The concert begins at seven. Performers arrive forty-five minutes earlier, at a quarter past six.",
+        "voice": "ryan",
+        "pace": "normal"
+      },
+      "prompt": "Arrival time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "6:15"
+        },
+        {
+          "id": "b",
+          "text": "6:30"
+        },
+        {
+          "id": "c",
+          "text": "6:45"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_41",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_41.wav",
+        "image": null,
+        "script": "The concert begins at seven. Performers arrive forty-five minutes earlier, at a quarter past six. Please remember that detail.",
+        "voice": "lessac",
+        "pace": "normal"
+      },
+      "prompt": "Read/listen carefully. Arrival time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "6:30"
+        },
+        {
+          "id": "b",
+          "text": "6:45"
+        },
+        {
+          "id": "c",
+          "text": "6:15"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_42",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_42.wav",
+        "image": null,
+        "script": "The concert begins at seven. Performers arrive forty-five minutes earlier, at a quarter past six. I wrote the final information in my notebook.",
+        "voice": "ryan",
+        "pace": "slow"
+      },
+      "prompt": "Choose the answer supported by the information. Arrival time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "6:30"
+        },
+        {
+          "id": "b",
+          "text": "6:45"
+        },
+        {
+          "id": "c",
+          "text": "6:15"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_43",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_43.wav",
+        "image": null,
+        "script": "Tomato soup had finished, so I chose vegetable soup and kept the cheese sandwich.",
+        "voice": "lessac",
+        "pace": "normal"
+      },
+      "prompt": "Unavailable item?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tomato soup"
+        },
+        {
+          "id": "b",
+          "text": "Vegetable soup"
+        },
+        {
+          "id": "c",
+          "text": "Cheese sandwich"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_44",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_44.wav",
+        "image": null,
+        "script": "Tomato soup had finished, so I chose vegetable soup and kept the cheese sandwich. Please remember that detail.",
+        "voice": "ryan",
+        "pace": "normal"
+      },
+      "prompt": "Read/listen carefully. Unavailable item?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Vegetable soup"
+        },
+        {
+          "id": "b",
+          "text": "Cheese sandwich"
+        },
+        {
+          "id": "c",
+          "text": "Tomato soup"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_45",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_45.wav",
+        "image": null,
+        "script": "Tomato soup had finished, so I chose vegetable soup and kept the cheese sandwich. I wrote the final information in my notebook.",
+        "voice": "lessac",
+        "pace": "slow"
+      },
+      "prompt": "Choose the answer supported by the information. Unavailable item?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Vegetable soup"
+        },
+        {
+          "id": "b",
+          "text": "Cheese sandwich"
+        },
+        {
+          "id": "c",
+          "text": "Tomato soup"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_46",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_46.wav",
+        "image": null,
+        "script": "The art club usually meets in room nine. Today another class has it, so we're in room eleven.",
+        "voice": "ryan",
+        "pace": "normal"
+      },
+      "prompt": "Which room today?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2"
+        },
+        {
+          "id": "b",
+          "text": "9"
+        },
+        {
+          "id": "c",
+          "text": "11"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_47",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_47.wav",
+        "image": null,
+        "script": "The art club usually meets in room nine. Today another class has it, so we're in room eleven. Please remember that detail.",
+        "voice": "lessac",
+        "pace": "normal"
+      },
+      "prompt": "Read/listen carefully. Which room today?",
+      "options": [
+        {
+          "id": "a",
+          "text": "9"
+        },
+        {
+          "id": "b",
+          "text": "11"
+        },
+        {
+          "id": "c",
+          "text": "2"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "listening_48",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "listening",
+      "skills": [
+        "listening"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": null,
+        "audio": "audio/listen_48.wav",
+        "image": null,
+        "script": "The art club usually meets in room nine. Today another class has it, so we're in room eleven. I wrote the final information in my notebook.",
+        "voice": "ryan",
+        "pace": "slow"
+      },
+      "prompt": "Choose the answer supported by the information. Which room today?",
+      "options": [
+        {
+          "id": "a",
+          "text": "9"
+        },
+        {
+          "id": "b",
+          "text": "11"
+        },
+        {
+          "id": "c",
+          "text": "2"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Слушай ключевую деталь, а не каждое слово."
+        },
+        "full": {
+          "ru": "В аудировании часто специально звучит один неверный вариант, а затем говорящий исправляет или уточняет его."
+        },
+        "rule": {
+          "ru": "Слушай изменение решения и ключевую деталь."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "listening",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "story_13",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Tom heard a knock at the window and saw a wet bird on the sill.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "After \"Tom heard a knock at the window and saw a wet bird on the sill\", what is the most coherent continuation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "He carefully opened the window to help it."
+        },
+        {
+          "id": "b",
+          "text": "Birds have feathers."
+        },
+        {
+          "id": "c",
+          "text": "He does homework every day."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_14",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Tom heard a knock at the window and saw a wet bird on the sill.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which option best continues the scene beginning \"Tom heard a knock at the window and saw a wet bird on the sill\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Birds have feathers."
+        },
+        {
+          "id": "b",
+          "text": "He does homework every day."
+        },
+        {
+          "id": "c",
+          "text": "He carefully opened the window to help it."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_15",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Tom heard a knock at the window and saw a wet bird on the sill.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Keep the story logical: what should follow \"Tom heard a knock at the window and saw a wet bird on the sill\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Birds have feathers."
+        },
+        {
+          "id": "b",
+          "text": "He does homework every day."
+        },
+        {
+          "id": "c",
+          "text": "He carefully opened the window to help it."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_16",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Dad stopped the car because a warning light appeared on the dashboard.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "After \"Dad stopped the car because a warning light appeared on the dashboard\", what is the most coherent continuation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "He checked the car safely."
+        },
+        {
+          "id": "b",
+          "text": "Stations sell tickets."
+        },
+        {
+          "id": "c",
+          "text": "Yesterday is Monday."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_17",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Dad stopped the car because a warning light appeared on the dashboard.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which option best continues the scene beginning \"Dad stopped the car because a warning light appeared on the dashboard\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Stations sell tickets."
+        },
+        {
+          "id": "b",
+          "text": "Yesterday is Monday."
+        },
+        {
+          "id": "c",
+          "text": "He checked the car safely."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_18",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Dad stopped the car because a warning light appeared on the dashboard.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Keep the story logical: what should follow \"Dad stopped the car because a warning light appeared on the dashboard\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Stations sell tickets."
+        },
+        {
+          "id": "b",
+          "text": "Yesterday is Monday."
+        },
+        {
+          "id": "c",
+          "text": "He checked the car safely."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_19",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Mila had practised her speech all week. Her name was called; she felt nervous but walked onto the stage.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "After \"Mila had practised her speech all week\", what is the most coherent continuation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "She took a breath and began."
+        },
+        {
+          "id": "b",
+          "text": "Stages are wooden."
+        },
+        {
+          "id": "c",
+          "text": "She will practise yesterday."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_20",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Mila had practised her speech all week. Her name was called; she felt nervous but walked onto the stage.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which option best continues the scene beginning \"Mila had practised her speech all week\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Stages are wooden."
+        },
+        {
+          "id": "b",
+          "text": "She will practise yesterday."
+        },
+        {
+          "id": "c",
+          "text": "She took a breath and began."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_21",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Mila had practised her speech all week. Her name was called; she felt nervous but walked onto the stage.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Keep the story logical: what should follow \"Mila had practised her speech all week\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Stages are wooden."
+        },
+        {
+          "id": "b",
+          "text": "She will practise yesterday."
+        },
+        {
+          "id": "c",
+          "text": "She took a breath and began."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_22",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "The path looked dry near the house. Ten minutes later, we reached a muddy field.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "After \"The path looked dry near the house\", what is the most coherent continuation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "However, the ground soon changed."
+        },
+        {
+          "id": "b",
+          "text": "Because dry means water."
+        },
+        {
+          "id": "c",
+          "text": "Firstly tomorrow."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_23",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "The path looked dry near the house. Ten minutes later, we reached a muddy field.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which option best continues the scene beginning \"The path looked dry near the house\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Because dry means water."
+        },
+        {
+          "id": "b",
+          "text": "Firstly tomorrow."
+        },
+        {
+          "id": "c",
+          "text": "However, the ground soon changed."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_24",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "The path looked dry near the house. Ten minutes later, we reached a muddy field.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Keep the story logical: what should follow \"The path looked dry near the house\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Because dry means water."
+        },
+        {
+          "id": "b",
+          "text": "Firstly tomorrow."
+        },
+        {
+          "id": "c",
+          "text": "However, the ground soon changed."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_25",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Sam put the cake in the oven and set a timer. Then the doorbell rang.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "After \"Sam put the cake in the oven and set a timer\", what is the most coherent continuation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "He went to answer the door."
+        },
+        {
+          "id": "b",
+          "text": "Ovens are hot."
+        },
+        {
+          "id": "c",
+          "text": "Tomorrow he baked yesterday."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_26",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Sam put the cake in the oven and set a timer. Then the doorbell rang.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which option best continues the scene beginning \"Sam put the cake in the oven and set a timer\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ovens are hot."
+        },
+        {
+          "id": "b",
+          "text": "Tomorrow he baked yesterday."
+        },
+        {
+          "id": "c",
+          "text": "He went to answer the door."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_27",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Sam put the cake in the oven and set a timer. Then the doorbell rang.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Keep the story logical: what should follow \"Sam put the cake in the oven and set a timer\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ovens are hot."
+        },
+        {
+          "id": "b",
+          "text": "Tomorrow he baked yesterday."
+        },
+        {
+          "id": "c",
+          "text": "He went to answer the door."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_28",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "I couldn't find my key. At last I felt something small in my inside pocket.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "After \"I couldn't find my key\", what is the most coherent continuation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "I laughed and unlocked the door."
+        },
+        {
+          "id": "b",
+          "text": "I unlock yesterday."
+        },
+        {
+          "id": "c",
+          "text": "Keys can be metal."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_29",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "I couldn't find my key. At last I felt something small in my inside pocket.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which option best continues the scene beginning \"I couldn't find my key\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "I unlock yesterday."
+        },
+        {
+          "id": "b",
+          "text": "Keys can be metal."
+        },
+        {
+          "id": "c",
+          "text": "I laughed and unlocked the door."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_30",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "I couldn't find my key. At last I felt something small in my inside pocket.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Keep the story logical: what should follow \"I couldn't find my key\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "I unlock yesterday."
+        },
+        {
+          "id": "b",
+          "text": "Keys can be metal."
+        },
+        {
+          "id": "c",
+          "text": "I laughed and unlocked the door."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_31",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "The sky was clear when we left camp. By lunchtime, dark clouds covered the mountains.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "After \"The sky was clear when we left camp\", what is the most coherent continuation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "We prepared for rain."
+        },
+        {
+          "id": "b",
+          "text": "We planted flowers."
+        },
+        {
+          "id": "c",
+          "text": "Mountains eat clouds."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_32",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "The sky was clear when we left camp. By lunchtime, dark clouds covered the mountains.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which option best continues the scene beginning \"The sky was clear when we left camp\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "We planted flowers."
+        },
+        {
+          "id": "b",
+          "text": "Mountains eat clouds."
+        },
+        {
+          "id": "c",
+          "text": "We prepared for rain."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_33",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "The sky was clear when we left camp. By lunchtime, dark clouds covered the mountains.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Keep the story logical: what should follow \"The sky was clear when we left camp\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "We planted flowers."
+        },
+        {
+          "id": "b",
+          "text": "Mountains eat clouds."
+        },
+        {
+          "id": "c",
+          "text": "We prepared for rain."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_34",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Nina found a wallet beside the playground with a student's school card inside.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "After \"Nina found a wallet beside the playground with a student's school card inside\", what is the most coherent continuation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "She took it to the school office."
+        },
+        {
+          "id": "b",
+          "text": "She hid it forever."
+        },
+        {
+          "id": "c",
+          "text": "She bought a playground."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_35",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Nina found a wallet beside the playground with a student's school card inside.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which option best continues the scene beginning \"Nina found a wallet beside the playground with a student's school card inside\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "She hid it forever."
+        },
+        {
+          "id": "b",
+          "text": "She bought a playground."
+        },
+        {
+          "id": "c",
+          "text": "She took it to the school office."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_36",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Nina found a wallet beside the playground with a student's school card inside.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Keep the story logical: what should follow \"Nina found a wallet beside the playground with a student's school card inside\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "She hid it forever."
+        },
+        {
+          "id": "b",
+          "text": "She bought a playground."
+        },
+        {
+          "id": "c",
+          "text": "She took it to the school office."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_37",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Our team was losing by one point with a minute left. Leo won the ball near the goal.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "After \"Our team was losing by one point with a minute left\", what is the most coherent continuation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "He passed to Ana, who scored."
+        },
+        {
+          "id": "b",
+          "text": "The match began tomorrow."
+        },
+        {
+          "id": "c",
+          "text": "Goals are rectangular."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_38",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Our team was losing by one point with a minute left. Leo won the ball near the goal.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which option best continues the scene beginning \"Our team was losing by one point with a minute left\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The match began tomorrow."
+        },
+        {
+          "id": "b",
+          "text": "Goals are rectangular."
+        },
+        {
+          "id": "c",
+          "text": "He passed to Ana, who scored."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_39",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Our team was losing by one point with a minute left. Leo won the ball near the goal.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Keep the story logical: what should follow \"Our team was losing by one point with a minute left\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The match began tomorrow."
+        },
+        {
+          "id": "b",
+          "text": "Goals are rectangular."
+        },
+        {
+          "id": "c",
+          "text": "He passed to Ana, who scored."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_40",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "I had never cooked soup before, but Grandma gave me her simple recipe.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "After \"I had never cooked soup before, but Grandma gave me her simple recipe\", what is the most coherent continuation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "First, I chopped the vegetables."
+        },
+        {
+          "id": "b",
+          "text": "Soup is a liquid."
+        },
+        {
+          "id": "c",
+          "text": "Tomorrow I chopped yesterday."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_41",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "I had never cooked soup before, but Grandma gave me her simple recipe.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which option best continues the scene beginning \"I had never cooked soup before, but Grandma gave me her simple recipe\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Soup is a liquid."
+        },
+        {
+          "id": "b",
+          "text": "Tomorrow I chopped yesterday."
+        },
+        {
+          "id": "c",
+          "text": "First, I chopped the vegetables."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_42",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "I had never cooked soup before, but Grandma gave me her simple recipe.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Keep the story logical: what should follow \"I had never cooked soup before, but Grandma gave me her simple recipe\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Soup is a liquid."
+        },
+        {
+          "id": "b",
+          "text": "Tomorrow I chopped yesterday."
+        },
+        {
+          "id": "c",
+          "text": "First, I chopped the vegetables."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_43",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "The lights went out while we were doing a puzzle. For a moment nobody moved.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "After \"The lights went out while we were doing a puzzle\", what is the most coherent continuation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Dad found a torch."
+        },
+        {
+          "id": "b",
+          "text": "Puzzles have pieces."
+        },
+        {
+          "id": "c",
+          "text": "We are moved yesterday."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_44",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "The lights went out while we were doing a puzzle. For a moment nobody moved.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which option best continues the scene beginning \"The lights went out while we were doing a puzzle\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Puzzles have pieces."
+        },
+        {
+          "id": "b",
+          "text": "We are moved yesterday."
+        },
+        {
+          "id": "c",
+          "text": "Dad found a torch."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_45",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "The lights went out while we were doing a puzzle. For a moment nobody moved.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Keep the story logical: what should follow \"The lights went out while we were doing a puzzle\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Puzzles have pieces."
+        },
+        {
+          "id": "b",
+          "text": "We are moved yesterday."
+        },
+        {
+          "id": "c",
+          "text": "Dad found a torch."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_46",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Lucy trained every Saturday. On race day heavy rain made the track slippery.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "After \"Lucy trained every Saturday\", what is the most coherent continuation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "She slowed at corners but kept running."
+        },
+        {
+          "id": "b",
+          "text": "She trained next yesterday."
+        },
+        {
+          "id": "c",
+          "text": "Rain is water."
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_47",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Lucy trained every Saturday. On race day heavy rain made the track slippery.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Which option best continues the scene beginning \"Lucy trained every Saturday\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "She trained next yesterday."
+        },
+        {
+          "id": "b",
+          "text": "Rain is water."
+        },
+        {
+          "id": "c",
+          "text": "She slowed at corners but kept running."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
+      ],
+      "prerequisites": [
+        "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
+      ]
+    },
+    {
+      "id": "story_48",
+      "subject": "english",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "story",
+      "skills": [
+        "story"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "VSOSh",
+        "region": "Tatarstan",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Lucy trained every Saturday. On race day heavy rain made the track slippery.",
+        "audio": null,
+        "image": null
+      },
+      "prompt": "Keep the story logical: what should follow \"Lucy trained every Saturday\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "She trained next yesterday."
+        },
+        {
+          "id": "b",
+          "text": "Rain is water."
+        },
+        {
+          "id": "c",
+          "text": "She slowed at corners but kept running."
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "When естественно связывает момент и событие."
+        },
+        "full": {
+          "ru": "When I woke up, it was snowing — нормальное начало рассказа: одно событие задаёт момент другого."
+        },
+        "rule": {
+          "ru": "when + event."
+        }
+      },
+      "evidence": null,
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ENG.WRITING.STORY_STRUCTURE",
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "story",
+        "school-stage",
+        "original"
       ],
       "prerequisites": [
         "ENG.GRAMMAR.TENSE.PAST_SIMPLE"
