@@ -79,7 +79,8 @@ const DOCS=[
 
 const ROLE_OPTIONS=["TASK_SET","ANSWER_KEY","CRITERIA","LISTENING_SCRIPT","AUDIO_REFERENCE","METHODOLOGY","ANSWER_SHEET","OTHER"];
 const SIGNAL_OPTIONS=["EMBEDDED_ANSWERS","HAS_RATIONALE_OR_EXPLANATIONS","VISUAL_ANSWER_MARKING","HAS_TABLES","HAS_IMAGES_OR_DIAGRAMS","HAS_CROSSWORD","HAS_MULTIPLE_SECTIONS","HAS_DISTRACTOR_OPTIONS","MIXED_DOCUMENT","UNCLEAR_OR_AMBIGUOUS"];
-const STORAGE_KEY="document-triage-workbench-v1";\nlet SOURCE_URLS={};
+const STORAGE_KEY="document-triage-workbench-v1";
+let SOURCE_URLS={};
 let current=0,annotations=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");
 const el=id=>document.getElementById(id);
 
@@ -121,7 +122,17 @@ function importAnnotations(file){const r=new FileReader();r.onload=()=>{const t=
 el("prevBtn").onclick=()=>{save(true);load(current-1)};el("nextBtn").onclick=()=>{save(true);load(current+1)};el("saveBtn").onclick=()=>save(false);el("saveStayBtn").onclick=()=>save(true);
 el("exportJsonl").onclick=exportJsonl;el("exportCsv").onclick=exportCsv;el("importBtn").onclick=()=>el("importFile").click();el("importFile").onchange=e=>e.target.files[0]&&importAnnotations(e.target.files[0]);
 document.addEventListener("keydown",e=>{if(e.altKey&&e.key==="ArrowRight"){e.preventDefault();save(true);load(current+1)}if(e.altKey&&e.key==="ArrowLeft"){e.preventDefault();save(true);load(current-1)}if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="s"){e.preventDefault();save(true)}});
-load(0);
+async function init(){
+  try {
+    const r = await fetch("source_urls.json", {cache:"no-store"});
+    if (!r.ok) throw new Error("source_urls.json HTTP " + r.status);
+    SOURCE_URLS = await r.json();
+  } catch (e) {
+    console.error("Could not load source_urls.json", e);
+  }
+  load(0);
+}
+init();
 </script>
 </body>
 </html>
