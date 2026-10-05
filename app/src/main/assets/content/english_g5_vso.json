@@ -15064,7 +15064,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Best next event?",
+      "prompt": "After \"Tom heard a knock at the window and saw a wet bird on the sill\", what is the most coherent continuation?",
       "options": [
         {
           "id": "a",
@@ -15134,7 +15134,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Read/listen carefully. Best next event?",
+      "prompt": "Which option best continues the scene beginning \"Tom heard a knock at the window and saw a wet bird on the sill\"?",
       "options": [
         {
           "id": "a",
@@ -15204,7 +15204,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Choose the answer supported by the information. Best next event?",
+      "prompt": "Keep the story logical: what should follow \"Tom heard a knock at the window and saw a wet bird on the sill\"?",
       "options": [
         {
           "id": "a",
@@ -15274,7 +15274,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Best next event?",
+      "prompt": "After \"Dad stopped the car because a warning light appeared on the dashboard\", what is the most coherent continuation?",
       "options": [
         {
           "id": "a",
@@ -15344,7 +15344,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Read/listen carefully. Best next event?",
+      "prompt": "Which option best continues the scene beginning \"Dad stopped the car because a warning light appeared on the dashboard\"?",
       "options": [
         {
           "id": "a",
@@ -15414,7 +15414,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Choose the answer supported by the information. Best next event?",
+      "prompt": "Keep the story logical: what should follow \"Dad stopped the car because a warning light appeared on the dashboard\"?",
       "options": [
         {
           "id": "a",
@@ -15484,7 +15484,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Best continuation?",
+      "prompt": "After \"Mila had practised her speech all week\", what is the most coherent continuation?",
       "options": [
         {
           "id": "a",
@@ -15554,7 +15554,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Read/listen carefully. Best continuation?",
+      "prompt": "Which option best continues the scene beginning \"Mila had practised her speech all week\"?",
       "options": [
         {
           "id": "a",
@@ -15624,7 +15624,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Choose the answer supported by the information. Best continuation?",
+      "prompt": "Keep the story logical: what should follow \"Mila had practised her speech all week\"?",
       "options": [
         {
           "id": "a",
@@ -15694,7 +15694,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Best link?",
+      "prompt": "After \"The path looked dry near the house\", what is the most coherent continuation?",
       "options": [
         {
           "id": "a",
@@ -15764,7 +15764,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Read/listen carefully. Best link?",
+      "prompt": "Which option best continues the scene beginning \"The path looked dry near the house\"?",
       "options": [
         {
           "id": "a",
@@ -15834,7 +15834,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Choose the answer supported by the information. Best link?",
+      "prompt": "Keep the story logical: what should follow \"The path looked dry near the house\"?",
       "options": [
         {
           "id": "a",
@@ -15904,7 +15904,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Best next event?",
+      "prompt": "After \"Sam put the cake in the oven and set a timer\", what is the most coherent continuation?",
       "options": [
         {
           "id": "a",
@@ -15974,7 +15974,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Read/listen carefully. Best next event?",
+      "prompt": "Which option best continues the scene beginning \"Sam put the cake in the oven and set a timer\"?",
       "options": [
         {
           "id": "a",
@@ -16044,7 +16044,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Choose the answer supported by the information. Best next event?",
+      "prompt": "Keep the story logical: what should follow \"Sam put the cake in the oven and set a timer\"?",
       "options": [
         {
           "id": "a",
@@ -16114,7 +16114,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Best ending?",
+      "prompt": "After \"I couldn't find my key\", what is the most coherent continuation?",
       "options": [
         {
           "id": "a",
@@ -16184,7 +16184,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Read/listen carefully. Best ending?",
+      "prompt": "Which option best continues the scene beginning \"I couldn't find my key\"?",
       "options": [
         {
           "id": "a",
@@ -16254,7 +16254,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Choose the answer supported by the information. Best ending?",
+      "prompt": "Keep the story logical: what should follow \"I couldn't find my key\"?",
       "options": [
         {
           "id": "a",
@@ -16324,7 +16324,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Best continuation?",
+      "prompt": "After \"The sky was clear when we left camp\", what is the most coherent continuation?",
       "options": [
         {
           "id": "a",
@@ -16394,7 +16394,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Read/listen carefully. Best continuation?",
+      "prompt": "Which option best continues the scene beginning \"The sky was clear when we left camp\"?",
       "options": [
         {
           "id": "a",
@@ -16464,7 +16464,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Choose the answer supported by the information. Best continuation?",
+      "prompt": "Keep the story logical: what should follow \"The sky was clear when we left camp\"?",
       "options": [
         {
           "id": "a",
@@ -16534,7 +16534,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Best next action?",
+      "prompt": "After \"Nina found a wallet beside the playground with a student's school card inside\", what is the most coherent continuation?",
       "options": [
         {
           "id": "a",
@@ -16604,7 +16604,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Read/listen carefully. Best next action?",
+      "prompt": "Which option best continues the scene beginning \"Nina found a wallet beside the playground with a student's school card inside\"?",
       "options": [
         {
           "id": "a",
@@ -16674,7 +16674,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Choose the answer supported by the information. Best next action?",
+      "prompt": "Keep the story logical: what should follow \"Nina found a wallet beside the playground with a student's school card inside\"?",
       "options": [
         {
           "id": "a",
@@ -16744,7 +16744,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Best continuation?",
+      "prompt": "After \"Our team was losing by one point with a minute left\", what is the most coherent continuation?",
       "options": [
         {
           "id": "a",
@@ -16814,7 +16814,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Read/listen carefully. Best continuation?",
+      "prompt": "Which option best continues the scene beginning \"Our team was losing by one point with a minute left\"?",
       "options": [
         {
           "id": "a",
@@ -16884,7 +16884,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Choose the answer supported by the information. Best continuation?",
+      "prompt": "Keep the story logical: what should follow \"Our team was losing by one point with a minute left\"?",
       "options": [
         {
           "id": "a",
@@ -16954,7 +16954,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Best next step?",
+      "prompt": "After \"I had never cooked soup before, but Grandma gave me her simple recipe\", what is the most coherent continuation?",
       "options": [
         {
           "id": "a",
@@ -17024,7 +17024,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Read/listen carefully. Best next step?",
+      "prompt": "Which option best continues the scene beginning \"I had never cooked soup before, but Grandma gave me her simple recipe\"?",
       "options": [
         {
           "id": "a",
@@ -17094,7 +17094,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Choose the answer supported by the information. Best next step?",
+      "prompt": "Keep the story logical: what should follow \"I had never cooked soup before, but Grandma gave me her simple recipe\"?",
       "options": [
         {
           "id": "a",
@@ -17164,7 +17164,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Best next event?",
+      "prompt": "After \"The lights went out while we were doing a puzzle\", what is the most coherent continuation?",
       "options": [
         {
           "id": "a",
@@ -17234,7 +17234,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Read/listen carefully. Best next event?",
+      "prompt": "Which option best continues the scene beginning \"The lights went out while we were doing a puzzle\"?",
       "options": [
         {
           "id": "a",
@@ -17304,7 +17304,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Choose the answer supported by the information. Best next event?",
+      "prompt": "Keep the story logical: what should follow \"The lights went out while we were doing a puzzle\"?",
       "options": [
         {
           "id": "a",
@@ -17374,7 +17374,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Best continuation?",
+      "prompt": "After \"Lucy trained every Saturday\", what is the most coherent continuation?",
       "options": [
         {
           "id": "a",
@@ -17444,7 +17444,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Read/listen carefully. Best continuation?",
+      "prompt": "Which option best continues the scene beginning \"Lucy trained every Saturday\"?",
       "options": [
         {
           "id": "a",
@@ -17514,7 +17514,7 @@
         "audio": null,
         "image": null
       },
-      "prompt": "Choose the answer supported by the information. Best continuation?",
+      "prompt": "Keep the story logical: what should follow \"Lucy trained every Saturday\"?",
       "options": [
         {
           "id": "a",
