@@ -429,7 +429,7 @@ for catalog_pack in catalog_pack_list:
     raw_pack = path.read_bytes()
     digest = hashlib.sha256(raw_pack).hexdigest()
     if catalog_pack.get("sha256") != digest:
-        fail(f"{catalog_pack.get('id')}: catalog SHA-256 mismatch: actual={digest}")
+        fail(f"{catalog_pack.get('id')}: catalog SHA-256 mismatch")
     with path.open(encoding="utf-8") as f:
         candidate_bank = json.load(f)
     if catalog_pack.get("content_version") != candidate_bank.get("content_version"):
