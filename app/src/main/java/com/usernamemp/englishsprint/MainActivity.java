@@ -1099,9 +1099,33 @@ public class MainActivity extends Activity {
 
     private List<Question> quickSession() {
         long seed = System.nanoTime();
-        List<Question> base = QuestionBank.adaptiveSession(progress, 15, seed);
-        List<Question> mixed = dictionary.mixVocabulary(base, 2, seed + 17);
-        if (mixed.size() > 15) return new ArrayList<>(mixed.subList(0, 15));
+        android.content.SharedPreferences prefs = getSharedPreferences("english_sprint_session_history", MODE_PRIVATE);
+        java.util.Set<String> recent = new java.util.HashSet<>(prefs.getStringSet("recent_question_ids", java.util.Collections.emptySet()));
+
+        List<Question> candidates = QuestionBank.adaptiveSession(progress, 75, seed);
+        List<Question> fresh = new ArrayList<>();
+        for (Question q : candidates) {
+            if (!recent.contains(q.id)) fresh.add(q);
+            if (fresh.size() >= 15) break;
+        }
+        if (fresh.size() < 15) {
+            recent.clear();
+            fresh.clear();
+            for (Question q : candidates) {
+                fresh.add(q);
+                if (fresh.size() >= 15) break;
+            }
+        }
+
+        List<Question> mixed = dictionary.mixVocabulary(fresh, 2, seed + 17);
+        if (mixed.size() > 15) mixed = new ArrayList<>(mixed.subList(0, 15));
+
+        for (Question q : mixed) recent.add(q.id);
+        if (recent.size() > 90) {
+            recent.clear();
+            for (Question q : mixed) recent.add(q.id);
+        }
+        prefs.edit().putStringSet("recent_question_ids", recent).apply();
         return mixed;
     }
 
