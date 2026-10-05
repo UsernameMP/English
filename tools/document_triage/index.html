@@ -55,10 +55,10 @@
         <button id="nextBtn" title="Alt+Right">Next →</button>
       </div>
       <div class="sha" id="shaLabel"></div>
-      <a class="buttonlink" id="openDropbox" target="_blank" rel="noopener">Open in Dropbox</a>
+      <a class="buttonlink" id="openPdf" target="_blank" rel="noopener">Open PDF</a>\n      <a class="buttonlink" id="openDropbox" target="_blank" rel="noopener">Dropbox</a>
     </div>
     <iframe id="docFrame" title="Raw source document"></iframe>
-    <div class="fallback" id="fallback">Embedded preview is blocked. Use “Open in Dropbox”.</div>
+    <div class="fallback" id="fallback">Embedded PDF preview is unavailable. Use “Open PDF” or “Dropbox”.</div>
   </section>
 
   <aside class="panel">
@@ -235,7 +235,11 @@ function bytes(n){
   return (n/1024/1024).toFixed(2)+" MB";
 }
 function rawUrl(share){
-  return share.replace("&dl=0","&raw=1").replace("?dl=0","?raw=1");
+  const u = new URL(share);
+  u.hostname = "dl.dropboxusercontent.com";
+  u.searchParams.delete("dl");
+  u.searchParams.delete("raw");
+  return u.toString();
 }
 function getChecked(name){
   return Array.from(document.querySelectorAll('input[name="'+name+'"]:checked')).map(function(x){return x.value;});
@@ -264,7 +268,9 @@ function load(i){
   el("indexPill").textContent=(current+1)+" / "+DOCS.length;
   el("sizePill").textContent=bytes(doc.size);
   el("openDropbox").href=doc.open;
-  el("docFrame").src=rawUrl(doc.share);
+  const pdfUrl=rawUrl(doc.share);
+  el("openPdf").href=pdfUrl;
+  el("docFrame").src=pdfUrl;
   setChecked("roles",a.roles);
   setChecked("signals",a.signals);
   el("subject").value=a.metadata.subject||"";
