@@ -5,383 +5,122 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Document Triage Workbench</title>
 <style>
-  :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: #f4f6f8; color: #17212b; }
-  header { height: 58px; display:flex; align-items:center; justify-content:space-between; padding:0 18px; border-bottom:1px solid #d9e0e7; background:#fff; position:sticky; top:0; z-index:5; }
-  header h1 { font-size:16px; margin:0; }
-  .progress { font-size:13px; color:#506070; }
-  main { display:grid; grid-template-columns:minmax(520px, 1.45fr) minmax(390px, .95fr); height:calc(100vh - 58px); }
-  .viewer { background:#2f343b; border-right:1px solid #d9e0e7; display:flex; flex-direction:column; min-width:0; }
-  .viewerbar { height:46px; display:flex; align-items:center; gap:8px; padding:7px 10px; background:#fff; border-bottom:1px solid #d9e0e7; }
-  .sha { font:12px ui-monospace, SFMono-Regular, Menlo, monospace; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1; }
-  iframe { border:0; width:100%; flex:1; background:#fff; }
-  .fallback { display:none; padding:24px; color:#fff; }
-  .panel { overflow:auto; padding:18px; background:#fff; }
-  .card { border:1px solid #dce3ea; border-radius:10px; padding:14px; margin-bottom:14px; }
-  .card h2 { font-size:13px; margin:0 0 10px; text-transform:uppercase; letter-spacing:.04em; color:#51606f; }
-  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-  label { display:block; font-size:12px; color:#4f5e6d; margin-bottom:4px; }
-  input[type=text], input[type=number], select, textarea {
-    width:100%; border:1px solid #cfd8e1; border-radius:7px; padding:9px 10px; font:inherit; font-size:14px; background:#fff;
-  }
-  textarea { min-height:88px; resize:vertical; }
-  .checks { display:grid; grid-template-columns:1fr 1fr; gap:7px 10px; }
-  .checks label { display:flex; align-items:center; gap:7px; margin:0; color:#25313c; font-size:13px; }
-  .actions { display:flex; gap:8px; flex-wrap:wrap; position:sticky; bottom:0; background:#fff; padding-top:10px; border-top:1px solid #e2e7ec; }
-  button, .buttonlink {
-    border:1px solid #bcc8d3; background:#fff; color:#17212b; border-radius:7px; padding:9px 12px; font-weight:600; cursor:pointer; text-decoration:none; font-size:13px;
-  }
-  button.primary { background:#17212b; color:#fff; border-color:#17212b; }
-  button.good { background:#eaf7ee; border-color:#a9d9b7; }
-  .nav { display:flex; gap:6px; }
-  .pill { display:inline-block; padding:3px 7px; border-radius:999px; background:#eef2f5; font-size:11px; color:#52616f; }
-  .statusline { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:12px; }
-  .done { color:#14733a; font-weight:700; }
-  .muted { color:#6c7985; font-size:12px; }
-  @media (max-width: 1000px) { main { grid-template-columns:1fr; height:auto; } .viewer { height:60vh; border-right:0; border-bottom:1px solid #d9e0e7; } }
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#17212b;background:#f4f6f8}
+*{box-sizing:border-box}body{margin:0}header{height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:#fff;border-bottom:1px solid #d9e0e7}
+h1{font-size:16px;margin:0}.progress{font-size:13px;color:#506070}
+main{display:grid;grid-template-columns:minmax(520px,1.45fr) minmax(390px,.95fr);height:calc(100vh - 58px)}
+.viewer{background:#2f343b;border-right:1px solid #d9e0e7;display:flex;flex-direction:column;min-width:0}
+.viewerbar{height:46px;display:flex;align-items:center;gap:8px;padding:7px 10px;background:#fff;border-bottom:1px solid #d9e0e7}
+.sha{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}
+iframe{border:0;width:100%;flex:1;background:#fff}.panel{overflow:auto;padding:18px;background:#fff}
+.card{border:1px solid #dce3ea;border-radius:10px;padding:14px;margin-bottom:14px}.card h2{font-size:13px;margin:0 0 10px;text-transform:uppercase;letter-spacing:.04em;color:#51606f}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}label{display:block;font-size:12px;color:#4f5e6d;margin-bottom:4px}
+input[type=text],input[type=number],select,textarea{width:100%;border:1px solid #cfd8e1;border-radius:7px;padding:9px 10px;font:inherit;font-size:14px;background:#fff}
+textarea{min-height:88px;resize:vertical}.checks{display:grid;grid-template-columns:1fr 1fr;gap:7px 10px}.checks label{display:flex;align-items:center;gap:7px;margin:0;color:#25313c;font-size:13px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;position:sticky;bottom:0;background:#fff;padding-top:10px;border-top:1px solid #e2e7ec}
+button,.buttonlink{border:1px solid #bcc8d3;background:#fff;color:#17212b;border-radius:7px;padding:9px 12px;font-weight:600;cursor:pointer;text-decoration:none;font-size:13px}
+button.primary{background:#17212b;color:#fff;border-color:#17212b}.nav{display:flex;gap:6px}.pill{display:inline-block;padding:3px 7px;border-radius:999px;background:#eef2f5;font-size:11px;color:#52616f}
+.statusline{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.done{color:#14733a;font-weight:700}.muted{color:#6c7985;font-size:12px}
+@media(max-width:1000px){main{grid-template-columns:1fr;height:auto}.viewer{height:60vh;border-right:0;border-bottom:1px solid #d9e0e7}}
 </style>
 </head>
 <body>
-<header>
-  <h1>Document Triage Workbench</h1>
-  <div class="progress" id="progress"></div>
-</header>
+<header><h1>Document Triage Workbench</h1><div class="progress" id="progress"></div></header>
 <main>
-  <section class="viewer">
-    <div class="viewerbar">
-      <div class="nav">
-        <button id="prevBtn" title="Alt+Left">← Prev</button>
-        <button id="nextBtn" title="Alt+Right">Next →</button>
-      </div>
-      <div class="sha" id="shaLabel"></div>
-      <a class="buttonlink" id="openPdf" target="_blank" rel="noopener">Open PDF</a>\n      <a class="buttonlink" id="openDropbox" target="_blank" rel="noopener">Dropbox</a>
-    </div>
-    <iframe id="docFrame" title="Raw source document"></iframe>
-    <div class="fallback" id="fallback">Embedded PDF preview is unavailable. Use “Open PDF” or “Dropbox”.</div>
-  </section>
-
-  <aside class="panel">
-    <div class="statusline">
-      <div>
-        <span class="pill" id="indexPill"></span>
-        <span class="pill" id="sizePill"></span>
-      </div>
-      <span id="savedState" class="muted">not saved</span>
-    </div>
-
-    <div class="card">
-      <h2>Document roles</h2>
-      <div class="checks" id="roles"></div>
-    </div>
-
-    <div class="card">
-      <h2>Core metadata</h2>
-      <div class="grid2">
-        <div><label>Subject</label><input id="subject" type="text" placeholder="English"></div>
-        <div><label>Olympiad / competition</label><input id="olympiad" type="text" placeholder="VSOSh"></div>
-        <div><label>Academic year</label><input id="year" type="text" placeholder="2025/26"></div>
-        <div><label>Stage</label><input id="stage" type="text" placeholder="municipal"></div>
-        <div><label>Grades</label><input id="grades" type="text" placeholder="9-11"></div>
-        <div><label>Region</label><input id="region" type="text" placeholder="Saint Petersburg"></div>
-        <div><label>Tour / section</label><input id="tour" type="text" placeholder="written / oral"></div>
-        <div><label>Duration, min</label><input id="duration" type="number" min="0" step="1"></div>
-        <div><label>Max score</label><input id="maxScore" type="number" min="0" step="0.5"></div>
-        <div>
-          <label>Review status</label>
-          <select id="reviewStatus">
-            <option value="IN_PROGRESS">IN_PROGRESS</option>
-            <option value="DONE">DONE</option>
-            <option value="NEEDS_SECOND_REVIEW">NEEDS_SECOND_REVIEW</option>
-            <option value="BROKEN_OR_UNREADABLE">BROKEN_OR_UNREADABLE</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>Signals & content</h2>
-      <div class="checks" id="signals"></div>
-    </div>
-
-    <div class="card">
-      <h2>Notes</h2>
-      <label>What is important about this document?</label>
-      <textarea id="notes" placeholder="Example: answers are underlined; contains rationale for NOT GIVEN; crossword is an image; rubric starts on page 4..."></textarea>
-    </div>
-
-    <div class="actions">
-      <button class="primary" id="saveBtn">Save & Next</button>
-      <button id="saveStayBtn">Save</button>
-      <button id="exportJsonl">Export JSONL</button>
-      <button id="exportCsv">Export CSV</button>
-      <button id="importBtn">Import annotations</button>
-      <input id="importFile" type="file" accept=".json,.jsonl" hidden>
-    </div>
-  </aside>
+<section class="viewer">
+  <div class="viewerbar">
+    <div class="nav"><button id="prevBtn">← Prev</button><button id="nextBtn">Next →</button></div>
+    <div class="sha" id="shaLabel"></div>
+    <a class="buttonlink" id="openPdf" target="_blank" rel="noopener">Open PDF</a>
+    <a class="buttonlink" id="openDropbox" target="_blank" rel="noopener">Dropbox</a>
+  </div>
+  <iframe id="docFrame" title="Raw source document"></iframe>
+</section>
+<aside class="panel">
+  <div class="statusline"><div><span class="pill" id="indexPill"></span> <span class="pill" id="sizePill"></span></div><span id="savedState" class="muted">not saved</span></div>
+  <div class="card"><h2>Document roles</h2><div class="checks" id="roles"></div></div>
+  <div class="card"><h2>Core metadata</h2><div class="grid2">
+    <div><label>Subject</label><input id="subject" type="text" placeholder="English"></div>
+    <div><label>Olympiad / competition</label><input id="olympiad" type="text" placeholder="VSOSh"></div>
+    <div><label>Academic year</label><input id="year" type="text" placeholder="2025/26"></div>
+    <div><label>Stage</label><input id="stage" type="text" placeholder="municipal"></div>
+    <div><label>Grades</label><input id="grades" type="text" placeholder="9-11"></div>
+    <div><label>Region</label><input id="region" type="text"></div>
+    <div><label>Tour / section</label><input id="tour" type="text" placeholder="written / oral"></div>
+    <div><label>Duration, min</label><input id="duration" type="number" min="0"></div>
+    <div><label>Max score</label><input id="maxScore" type="number" min="0" step="0.5"></div>
+    <div><label>Review status</label><select id="reviewStatus">
+      <option value="IN_PROGRESS">IN_PROGRESS</option><option value="DONE">DONE</option>
+      <option value="NEEDS_SECOND_REVIEW">NEEDS_SECOND_REVIEW</option><option value="BROKEN_OR_UNREADABLE">BROKEN_OR_UNREADABLE</option>
+    </select></div>
+  </div></div>
+  <div class="card"><h2>Signals & content</h2><div class="checks" id="signals"></div></div>
+  <div class="card"><h2>Notes</h2><textarea id="notes" placeholder="Important details, visual conventions, mixed sections, rationale, etc."></textarea></div>
+  <div class="actions">
+    <button class="primary" id="saveBtn">Save & Next</button><button id="saveStayBtn">Save</button>
+    <button id="exportJsonl">Export JSONL</button><button id="exportCsv">Export CSV</button>
+    <button id="importBtn">Import annotations</button><input id="importFile" type="file" accept=".json,.jsonl" hidden>
+  </div>
+</aside>
 </main>
-
 <script>
-const DOCS = [
-  {
-    id:"6c7bf55e9532cd1b6960821ac4c91fa8ebc1a48cc5aafa5405ec73b7966aa932",
-    size:1391160,
-    share:"https://www.dropbox.com/scl/fi/hoxpnw7bcgwlpt1qgqd9i/6c7bf55e9532cd1b6960821ac4c91fa8ebc1a48cc5aafa5405ec73b7966aa932.pdf?rlkey=dc9n7l6phjjlnrtu6ce58q5jt&dl=0",
-    open:"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/6c/6c7bf55e9532cd1b6960821ac4c91fa8ebc1a48cc5aafa5405ec73b7966aa932.pdf"
-  },
-  {
-    id:"b8d9062cbbfea994df41cf051a0a798c5c6631fc68a9f3154720a4b9f6268e5e",
-    size:453058,
-    share:"https://www.dropbox.com/scl/fi/tg472pl8twczot91pajmr/b8d9062cbbfea994df41cf051a0a798c5c6631fc68a9f3154720a4b9f6268e5e.pdf?rlkey=ei4iyiem1rrp5urdxiclfd33l&dl=0",
-    open:"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/b8/b8d9062cbbfea994df41cf051a0a798c5c6631fc68a9f3154720a4b9f6268e5e.pdf"
-  },
-  {
-    id:"c9d5de97bec7b5369833c294ffc618b0a7e468d45e7ca9a01612d37fde703c37",
-    size:179605,
-    share:"https://www.dropbox.com/scl/fi/1za8424304yl83q0lvhdv/c9d5de97bec7b5369833c294ffc618b0a7e468d45e7ca9a01612d37fde703c37.pdf?rlkey=rmzliajgs0l6nnuxd2thmufhh&dl=0",
-    open:"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/c9/c9d5de97bec7b5369833c294ffc618b0a7e468d45e7ca9a01612d37fde703c37.pdf"
-  },
-  {
-    id:"2c231744ff1afe723d521677aa850b1399dfed6168fc9eaefd20c33ec43adfc4",
-    size:76974,
-    share:"https://www.dropbox.com/scl/fi/0ibok9htctq5eg90h5x9o/2c231744ff1afe723d521677aa850b1399dfed6168fc9eaefd20c33ec43adfc4.pdf?rlkey=zob73dkjvtypf3r1tigaq4fx5&dl=0",
-    open:"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/2c/2c231744ff1afe723d521677aa850b1399dfed6168fc9eaefd20c33ec43adfc4.pdf"
-  },
-  {
-    id:"2ee2da5e302cf220a7943f79e52e77543aba22a553ffeaf6a83720c1667dd17d",
-    size:276307,
-    share:"https://www.dropbox.com/scl/fi/500n0uqkia3j3btsflfwv/2ee2da5e302cf220a7943f79e52e77543aba22a553ffeaf6a83720c1667dd17d.pdf?rlkey=gtv2lepmoerurv5fa3dn5vr76&dl=0",
-    open:"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/2e/2ee2da5e302cf220a7943f79e52e77543aba22a553ffeaf6a83720c1667dd17d.pdf"
-  },
-  {
-    id:"a87698f974d473374e813213d55640270e4ba23b73ea90c0d5a3fd0ba730c89b",
-    size:577291,
-    share:"https://www.dropbox.com/scl/fi/b3b46sgasr2aeqebfyszh/a87698f974d473374e813213d55640270e4ba23b73ea90c0d5a3fd0ba730c89b.pdf?rlkey=f5r4w9cnn01es8bw4skfsd2wo&dl=0",
-    open:"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/a8/a87698f974d473374e813213d55640270e4ba23b73ea90c0d5a3fd0ba730c89b.pdf"
-  },
-  {
-    id:"162e7a729c48807356677eea16760270461812d82e9ad53670cd7fe004c6d01a",
-    size:515504,
-    share:"https://www.dropbox.com/scl/fi/oboevojai6xon3krfrbgp/162e7a729c48807356677eea16760270461812d82e9ad53670cd7fe004c6d01a.pdf?rlkey=p2va696dg9w3h2alh5rruhf98&dl=0",
-    open:"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/16/162e7a729c48807356677eea16760270461812d82e9ad53670cd7fe004c6d01a.pdf"
-  },
-  {
-    id:"3c6ff626f77d1682c55e2135f8577c1492a541e04497ec7af053d88499a75f85",
-    size:541549,
-    share:"https://www.dropbox.com/scl/fi/6iin4s55uds6incicyu05/3c6ff626f77d1682c55e2135f8577c1492a541e04497ec7af053d88499a75f85.pdf?rlkey=6j0tp4t968n8zx42bfie8tygb&dl=0",
-    open:"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/3c/3c6ff626f77d1682c55e2135f8577c1492a541e04497ec7af053d88499a75f85.pdf"
-  },
-  {
-    id:"86382eaa9112533f4ccf0cfc3ab5479ae7d986fcaed997088ade34f58bbf1554",
-    size:764540,
-    share:"https://www.dropbox.com/scl/fi/wzh6nubki77rmp3gvolkt/86382eaa9112533f4ccf0cfc3ab5479ae7d986fcaed997088ade34f58bbf1554.pdf?rlkey=1fhjt72gwmhy9xjkh4wko4ztn&dl=0",
-    open:"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/86/86382eaa9112533f4ccf0cfc3ab5479ae7d986fcaed997088ade34f58bbf1554.pdf"
-  },
-  {
-    id:"109e982aaebafc5e39707507335523b658d493d6bbd25599fe5b45481ee82a27",
-    size:265726,
-    share:"https://www.dropbox.com/scl/fi/rntpuzpsi96hpxksbx79h/109e982aaebafc5e39707507335523b658d493d6bbd25599fe5b45481ee82a27.pdf?rlkey=o76va33590235wx00yznsulnj&dl=0",
-    open:"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/10/109e982aaebafc5e39707507335523b658d493d6bbd25599fe5b45481ee82a27.pdf"
-  }
-];
+const DOCS=[
+["6c7bf55e9532cd1b6960821ac4c91fa8ebc1a48cc5aafa5405ec73b7966aa932",1391160,"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/6c/6c7bf55e9532cd1b6960821ac4c91fa8ebc1a48cc5aafa5405ec73b7966aa932.pdf"],
+["b8d9062cbbfea994df41cf051a0a798c5c6631fc68a9f3154720a4b9f6268e5e",453058,"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/b8/b8d9062cbbfea994df41cf051a0a798c5c6631fc68a9f3154720a4b9f6268e5e.pdf"],
+["c9d5de97bec7b5369833c294ffc618b0a7e468d45e7ca9a01612d37fde703c37",179605,"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/c9/c9d5de97bec7b5369833c294ffc618b0a7e468d45e7ca9a01612d37fde703c37.pdf"],
+["2c231744ff1afe723d521677aa850b1399dfed6168fc9eaefd20c33ec43adfc4",76974,"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/2c/2c231744ff1afe723d521677aa850b1399dfed6168fc9eaefd20c33ec43adfc4.pdf"],
+["2ee2da5e302cf220a7943f79e52e77543aba22a553ffeaf6a83720c1667dd17d",276307,"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/2e/2ee2da5e302cf220a7943f79e52e77543aba22a553ffeaf6a83720c1667dd17d.pdf"],
+["a87698f974d473374e813213d55640270e4ba23b73ea90c0d5a3fd0ba730c89b",577291,"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/a8/a87698f974d473374e813213d55640270e4ba23b73ea90c0d5a3fd0ba730c89b.pdf"],
+["162e7a729c48807356677eea16760270461812d82e9ad53670cd7fe004c6d01a",515504,"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/16/162e7a729c48807356677eea16760270461812d82e9ad53670cd7fe004c6d01a.pdf"],
+["3c6ff626f77d1682c55e2135f8577c1492a541e04497ec7af053d88499a75f85",541549,"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/3c/3c6ff626f77d1682c55e2135f8577c1492a541e04497ec7af053d88499a75f85.pdf"],
+["86382eaa9112533f4ccf0cfc3ab5479ae7d986fcaed997088ade34f58bbf1554",764540,"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/86/86382eaa9112533f4ccf0cfc3ab5479ae7d986fcaed997088ade34f58bbf1554.pdf"],
+["109e982aaebafc5e39707507335523b658d493d6bbd25599fe5b45481ee82a27",265726,"https://www.dropbox.com/preview/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/Olympiad/OlympiadCorpus/raw/10/109e982aaebafc5e39707507335523b658d493d6bbd25599fe5b45481ee82a27.pdf"]
+].map(x=>({id:x[0],size:x[1],open:x[2]}));
 
-const ROLE_OPTIONS = [
-  "TASK_SET",
-  "ANSWER_KEY",
-  "CRITERIA",
-  "LISTENING_SCRIPT",
-  "AUDIO_REFERENCE",
-  "METHODOLOGY",
-  "ANSWER_SHEET",
-  "OTHER"
-];
+const ROLE_OPTIONS=["TASK_SET","ANSWER_KEY","CRITERIA","LISTENING_SCRIPT","AUDIO_REFERENCE","METHODOLOGY","ANSWER_SHEET","OTHER"];
+const SIGNAL_OPTIONS=["EMBEDDED_ANSWERS","HAS_RATIONALE_OR_EXPLANATIONS","VISUAL_ANSWER_MARKING","HAS_TABLES","HAS_IMAGES_OR_DIAGRAMS","HAS_CROSSWORD","HAS_MULTIPLE_SECTIONS","HAS_DISTRACTOR_OPTIONS","MIXED_DOCUMENT","UNCLEAR_OR_AMBIGUOUS"];
+const STORAGE_KEY="document-triage-workbench-v1";
+let current=0,annotations=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");
+const el=id=>document.getElementById(id);
 
-const SIGNAL_OPTIONS = [
-  "EMBEDDED_ANSWERS",
-  "HAS_RATIONALE_OR_EXPLANATIONS",
-  "VISUAL_ANSWER_MARKING",
-  "HAS_TABLES",
-  "HAS_IMAGES_OR_DIAGRAMS",
-  "HAS_CROSSWORD",
-  "HAS_MULTIPLE_SECTIONS",
-  "HAS_DISTRACTOR_OPTIONS",
-  "MIXED_DOCUMENT",
-  "UNCLEAR_OR_AMBIGUOUS"
-];
-
-const STORAGE_KEY = "document-triage-workbench-v1";
-let current = 0;
-let annotations = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-
-function el(id){ return document.getElementById(id); }
-function checkboxGroup(containerId, options, name){
-  const c=el(containerId);
-  c.innerHTML="";
-  options.forEach(function(opt){
-    const lab=document.createElement("label");
-    const cb=document.createElement("input");
-    cb.type="checkbox"; cb.value=opt; cb.name=name;
-    lab.appendChild(cb);
-    lab.appendChild(document.createTextNode(opt));
-    c.appendChild(lab);
-  });
+function checkboxGroup(id,opts,name){
+  const c=el(id); c.innerHTML="";
+  opts.forEach(opt=>{const l=document.createElement("label"),b=document.createElement("input");b.type="checkbox";b.name=name;b.value=opt;l.append(b,document.createTextNode(opt));c.appendChild(l)});
 }
-checkboxGroup("roles", ROLE_OPTIONS, "roles");
-checkboxGroup("signals", SIGNAL_OPTIONS, "signals");
-
-function bytes(n){
-  if(n<1024) return n+" B";
-  if(n<1024*1024) return (n/1024).toFixed(1)+" KB";
-  return (n/1024/1024).toFixed(2)+" MB";
-}
-function rawUrl(share){
-  const u = new URL(share);
-  u.hostname = "dl.dropboxusercontent.com";
-  u.searchParams.delete("dl");
-  u.searchParams.delete("raw");
-  return u.toString();
-}
-function getChecked(name){
-  return Array.from(document.querySelectorAll('input[name="'+name+'"]:checked')).map(function(x){return x.value;});
-}
-function setChecked(name, values){
-  const set=new Set(values||[]);
-  document.querySelectorAll('input[name="'+name+'"]').forEach(function(x){x.checked=set.has(x.value);});
-}
-function blankRecord(doc){
-  return {
-    schema_version:"0.1",
-    document_sha256:doc.id,
-    roles:[],
-    metadata:{subject:"",olympiad:"",academic_year:"",stage:"",grades:"",region:"",tour:"",duration_min:null,max_score:null},
-    signals:[],
-    notes:"",
-    review_status:"IN_PROGRESS",
-    reviewed_at:null
-  };
-}
+checkboxGroup("roles",ROLE_OPTIONS,"roles");checkboxGroup("signals",SIGNAL_OPTIONS,"signals");
+const bytes=n=>n<1024?n+" B":n<1048576?(n/1024).toFixed(1)+" KB":(n/1048576).toFixed(2)+" MB";
+const checked=name=>[...document.querySelectorAll('input[name="'+name+'"]:checked')].map(x=>x.value);
+function setChecked(name,vals){const s=new Set(vals||[]);document.querySelectorAll('input[name="'+name+'"]').forEach(x=>x.checked=s.has(x.value))}
+function blank(d){return{schema_version:"0.1",document_sha256:d.id,roles:[],metadata:{subject:"",olympiad:"",academic_year:"",stage:"",grades:"",region:"",tour:"",duration_min:null,max_score:null},signals:[],notes:"",review_status:"IN_PROGRESS",reviewed_at:null}}
+function assetUrl(d){return "assets/"+d.id+".pdf"}
 function load(i){
-  current=Math.max(0,Math.min(DOCS.length-1,i));
-  const doc=DOCS[current];
-  const a=annotations[doc.id] || blankRecord(doc);
-  el("shaLabel").textContent=doc.id;
-  el("indexPill").textContent=(current+1)+" / "+DOCS.length;
-  el("sizePill").textContent=bytes(doc.size);
-  el("openDropbox").href=doc.open;
-  const pdfUrl=rawUrl(doc.share);
-  el("openPdf").href=pdfUrl;
-  el("docFrame").src=pdfUrl;
-  setChecked("roles",a.roles);
-  setChecked("signals",a.signals);
-  el("subject").value=a.metadata.subject||"";
-  el("olympiad").value=a.metadata.olympiad||"";
-  el("year").value=a.metadata.academic_year||"";
-  el("stage").value=a.metadata.stage||"";
-  el("grades").value=a.metadata.grades||"";
-  el("region").value=a.metadata.region||"";
-  el("tour").value=a.metadata.tour||"";
-  el("duration").value=a.metadata.duration_min==null?"":a.metadata.duration_min;
-  el("maxScore").value=a.metadata.max_score==null?"":a.metadata.max_score;
-  el("reviewStatus").value=a.review_status||"IN_PROGRESS";
-  el("notes").value=a.notes||"";
-  el("savedState").textContent=annotations[doc.id] ? "saved" : "not saved";
-  el("savedState").className=annotations[doc.id] ? "done" : "muted";
-  updateProgress();
+  current=Math.max(0,Math.min(DOCS.length-1,i)); const d=DOCS[current],a=annotations[d.id]||blank(d),pdf=assetUrl(d);
+  el("shaLabel").textContent=d.id;el("indexPill").textContent=(current+1)+" / "+DOCS.length;el("sizePill").textContent=bytes(d.size);
+  el("openPdf").href=pdf;el("openDropbox").href=d.open;el("docFrame").src=pdf;
+  setChecked("roles",a.roles);setChecked("signals",a.signals);
+  el("subject").value=a.metadata.subject||"";el("olympiad").value=a.metadata.olympiad||"";el("year").value=a.metadata.academic_year||"";el("stage").value=a.metadata.stage||"";
+  el("grades").value=a.metadata.grades||"";el("region").value=a.metadata.region||"";el("tour").value=a.metadata.tour||"";
+  el("duration").value=a.metadata.duration_min==null?"":a.metadata.duration_min;el("maxScore").value=a.metadata.max_score==null?"":a.metadata.max_score;
+  el("reviewStatus").value=a.review_status||"IN_PROGRESS";el("notes").value=a.notes||"";
+  el("savedState").textContent=annotations[d.id]?"saved":"not saved";el("savedState").className=annotations[d.id]?"done":"muted";progress();
 }
 function readForm(){
-  const doc=DOCS[current];
-  return {
-    schema_version:"0.1",
-    document_sha256:doc.id,
-    roles:getChecked("roles"),
-    metadata:{
-      subject:el("subject").value.trim(),
-      olympiad:el("olympiad").value.trim(),
-      academic_year:el("year").value.trim(),
-      stage:el("stage").value.trim(),
-      grades:el("grades").value.trim(),
-      region:el("region").value.trim(),
-      tour:el("tour").value.trim(),
-      duration_min:el("duration").value===""?null:Number(el("duration").value),
-      max_score:el("maxScore").value===""?null:Number(el("maxScore").value)
-    },
-    signals:getChecked("signals"),
-    notes:el("notes").value.trim(),
-    review_status:el("reviewStatus").value,
-    reviewed_at:new Date().toISOString(),
-    source:{dropbox_open_url:doc.open}
-  };
+  const d=DOCS[current];return{schema_version:"0.1",document_sha256:d.id,roles:checked("roles"),metadata:{
+    subject:el("subject").value.trim(),olympiad:el("olympiad").value.trim(),academic_year:el("year").value.trim(),stage:el("stage").value.trim(),
+    grades:el("grades").value.trim(),region:el("region").value.trim(),tour:el("tour").value.trim(),
+    duration_min:el("duration").value===""?null:Number(el("duration").value),max_score:el("maxScore").value===""?null:Number(el("maxScore").value)
+  },signals:checked("signals"),notes:el("notes").value.trim(),review_status:el("reviewStatus").value,reviewed_at:new Date().toISOString(),source:{dropbox_open_url:d.open}};
 }
-function save(stay){
-  const doc=DOCS[current];
-  annotations[doc.id]=readForm();
-  localStorage.setItem(STORAGE_KEY,JSON.stringify(annotations));
-  el("savedState").textContent="saved";
-  el("savedState").className="done";
-  updateProgress();
-  if(!stay && current<DOCS.length-1) load(current+1);
-}
-function updateProgress(){
-  const done=DOCS.filter(function(d){return annotations[d.id] && annotations[d.id].review_status==="DONE";}).length;
-  const touched=DOCS.filter(function(d){return !!annotations[d.id];}).length;
-  el("progress").textContent="Touched "+touched+"/"+DOCS.length+" · Done "+done+"/"+DOCS.length;
-}
-function download(name, text, type){
-  const blob=new Blob([text],{type:type||"text/plain"});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement("a");
-  a.href=url; a.download=name; document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(function(){URL.revokeObjectURL(url);},500);
-}
-function exportJsonl(){
-  const rows=DOCS.filter(function(d){return annotations[d.id];}).map(function(d){return JSON.stringify(annotations[d.id]);});
-  download("document_triage_annotations.jsonl",rows.join("\n")+"\n","application/x-ndjson");
-}
-function csvEscape(v){
-  if(v==null) return "";
-  const s=Array.isArray(v)?v.join("|"):String(v);
-  return /[",\n]/.test(s) ? '"'+s.replace(/"/g,'""')+'"' : s;
-}
-function exportCsv(){
-  const header=["document_sha256","roles","subject","olympiad","academic_year","stage","grades","region","tour","duration_min","max_score","signals","review_status","notes","reviewed_at"];
-  const rows=[header.join(",")];
-  DOCS.forEach(function(d){
-    const a=annotations[d.id]; if(!a) return;
-    rows.push([
-      a.document_sha256,a.roles,a.metadata.subject,a.metadata.olympiad,a.metadata.academic_year,a.metadata.stage,a.metadata.grades,a.metadata.region,a.metadata.tour,
-      a.metadata.duration_min,a.metadata.max_score,a.signals,a.review_status,a.notes,a.reviewed_at
-    ].map(csvEscape).join(","));
-  });
-  download("document_triage_annotations.csv",rows.join("\n")+"\n","text/csv");
-}
-function importAnnotations(file){
-  const r=new FileReader();
-  r.onload=function(){
-    const txt=String(r.result||"").trim();
-    if(!txt) return;
-    let records=[];
-    if(txt[0]==="[") records=JSON.parse(txt);
-    else records=txt.split(/\r?\n/).filter(Boolean).map(function(line){return JSON.parse(line);});
-    records.forEach(function(a){ if(a && a.document_sha256) annotations[a.document_sha256]=a; });
-    localStorage.setItem(STORAGE_KEY,JSON.stringify(annotations));
-    load(current);
-  };
-  r.readAsText(file);
-}
-
-el("prevBtn").onclick=function(){ save(true); load(current-1); };
-el("nextBtn").onclick=function(){ save(true); load(current+1); };
-el("saveBtn").onclick=function(){ save(false); };
-el("saveStayBtn").onclick=function(){ save(true); };
-el("exportJsonl").onclick=exportJsonl;
-el("exportCsv").onclick=exportCsv;
-el("importBtn").onclick=function(){el("importFile").click();};
-el("importFile").onchange=function(e){ if(e.target.files[0]) importAnnotations(e.target.files[0]); };
-document.addEventListener("keydown",function(e){
-  if(e.altKey && e.key==="ArrowRight"){ e.preventDefault(); save(true); load(current+1); }
-  if(e.altKey && e.key==="ArrowLeft"){ e.preventDefault(); save(true); load(current-1); }
-  if((e.ctrlKey||e.metaKey) && e.key.toLowerCase()==="s"){ e.preventDefault(); save(true); }
-});
+function save(stay){const d=DOCS[current];annotations[d.id]=readForm();localStorage.setItem(STORAGE_KEY,JSON.stringify(annotations));el("savedState").textContent="saved";el("savedState").className="done";progress();if(!stay&&current<DOCS.length-1)load(current+1)}
+function progress(){const done=DOCS.filter(d=>annotations[d.id]?.review_status==="DONE").length,touched=DOCS.filter(d=>annotations[d.id]).length;el("progress").textContent="Touched "+touched+"/"+DOCS.length+" · Done "+done+"/"+DOCS.length}
+function download(name,text,type){const b=new Blob([text],{type:type||"text/plain"}),u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),500)}
+function exportJsonl(){download("document_triage_annotations.jsonl",DOCS.filter(d=>annotations[d.id]).map(d=>JSON.stringify(annotations[d.id])).join("\n")+"\n","application/x-ndjson")}
+function csvEscape(v){if(v==null)return"";const s=Array.isArray(v)?v.join("|"):String(v);return/[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s}
+function exportCsv(){const h=["document_sha256","roles","subject","olympiad","academic_year","stage","grades","region","tour","duration_min","max_score","signals","review_status","notes","reviewed_at"],rows=[h.join(",")];DOCS.forEach(d=>{const a=annotations[d.id];if(!a)return;rows.push([a.document_sha256,a.roles,a.metadata.subject,a.metadata.olympiad,a.metadata.academic_year,a.metadata.stage,a.metadata.grades,a.metadata.region,a.metadata.tour,a.metadata.duration_min,a.metadata.max_score,a.signals,a.review_status,a.notes,a.reviewed_at].map(csvEscape).join(","))});download("document_triage_annotations.csv",rows.join("\n")+"\n","text/csv")}
+function importAnnotations(file){const r=new FileReader();r.onload=()=>{const t=String(r.result||"").trim();if(!t)return;const rs=t[0]==="["?JSON.parse(t):t.split(/\r?\n/).filter(Boolean).map(JSON.parse);rs.forEach(a=>{if(a?.document_sha256)annotations[a.document_sha256]=a});localStorage.setItem(STORAGE_KEY,JSON.stringify(annotations));load(current)};r.readAsText(file)}
+el("prevBtn").onclick=()=>{save(true);load(current-1)};el("nextBtn").onclick=()=>{save(true);load(current+1)};el("saveBtn").onclick=()=>save(false);el("saveStayBtn").onclick=()=>save(true);
+el("exportJsonl").onclick=exportJsonl;el("exportCsv").onclick=exportCsv;el("importBtn").onclick=()=>el("importFile").click();el("importFile").onchange=e=>e.target.files[0]&&importAnnotations(e.target.files[0]);
+document.addEventListener("keydown",e=>{if(e.altKey&&e.key==="ArrowRight"){e.preventDefault();save(true);load(current+1)}if(e.altKey&&e.key==="ArrowLeft"){e.preventDefault();save(true);load(current-1)}if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="s"){e.preventDefault();save(true)}});
 load(0);
 </script>
 </body>
