@@ -18,7 +18,12 @@ function renderPass1(doc){
   renderBundle(doc);renderPass1Audit(doc);
 }
 function renderBundle(doc){
-  const members=bundleMembers(doc),ds=docState(doc),box=$("bundleCard"),assets=members.map(d=>'<div class="asset"><div class="asset-main"><div class="filename">'+d.filename+'</div><div class="muted">'+inferDocument(d).values.role+' - '+stable("asset",d.id)+'</div></div><span class="confidence">'+(members.length>1?"96":"78")+'%</span></div>').join("");
+  const members=bundleMembers(doc),ds=docState(doc),box=$("bundleCard");
+  let assets=members.map(d=>'<div class="asset"><div class="asset-main"><div class="filename">'+d.filename+'</div><div class="muted">'+inferDocument(d).values.role+' - '+stable("asset",d.id)+'</div></div><span class="confidence">'+(members.length>1?"96":"78")+'%</span></div>').join("");
+  const audioDoc=members.find(d=>d.audioUrl)|| (doc.audioUrl?doc:null);
+  if(audioDoc){
+    assets+='<div class="asset"><div class="asset-main"><div class="filename">Listening audio</div><div class="muted">AUDIO - '+stable("media",audioDoc.audioSha||audioDoc.audioUrl)+'</div></div><span class="confidence">99%</span></div>';
+  }
   box.innerHTML='<div class="muted">ProblemSet ID: <span class="mono">'+stable("problemset",bundleKey(doc))+'</span></div><div class="asset-list">'+assets+'</div><div class="muted" style="margin-top:8px">Decision: <b>'+ds.pass1.bundleDecision+'</b></div>';
 }
 function renderPass1Audit(doc){
