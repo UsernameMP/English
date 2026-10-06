@@ -1,68 +1,107 @@
-# Document Triage Workbench
+# Corpus Assessor Workbench
 
-Browser-only human labeling tool for OlympiadCorpus document ground truth.
+Browser-first assessor UI for OlympiadCorpus.
 
 ## Launch
 
-Open:
-
+Current manual triage:
 https://usernamemp.github.io/English/
 
-No git clone, batch file, or local server is required.
+New multi-pass assessor prototype:
+https://usernamemp.github.io/English/arm.html
 
-## Current architecture
+No git clone or local server is required.
+
+## Architecture
 
 RAW remains immutable in Dropbox.
 
-For browser review, the workbench loads the original public PDF URL recorded in RAW metadata:
+Production ingest now follows:
 
-RAW PDF in Dropbox
-→ metadata/<sha>.json
-→ original_url
-→ PDF viewer on the left
-→ human labels on the right
+RAW
+→ canonical layout JSON
+→ machine document profile
+→ ProblemSet bundle proposal
+→ Pass 1 human review
+→ machine Section / Task proposal
+→ Pass 2 boundary review
+→ Answer / Criterion / Media linker
+→ exception review
+→ canonical corpus graph
 
-Dropbox preview is not embedded in the workbench because Dropbox blocks iframe embedding.
+The canonical layout implementation is in:
+- `tools/corpus_ingest/layout.py`
+- `tools/corpus_ingest/layout_pipeline.py`
 
-The current batch is mapped in:
+The stable graph implementation is in:
+- `tools/corpus_ingest/corpus_graph.py`
 
-- tools/document_triage/source_urls.json
+The parser entrypoint is routed through the layout-first pipeline; the old RAW→candidate path is no longer the production path.
 
-The UI is:
+## Assessor prototype
 
-- tools/document_triage/index.html
+`arm.html` has three modes.
 
-GitHub Pages deployment is:
+### Pass 1 — Document + ProblemSet
 
-- .github/workflows/document-triage-pages.yml
+Machine proposes:
+- document type;
+- subject;
+- language;
+- academic year;
+- grades;
+- competition;
+- stage;
+- tour;
+- region;
+- ProblemSet.
 
-## Human-first rule
+Every reviewed field stores:
+- machine value;
+- human value;
+- confidence;
+- evidence;
+- human decision.
 
-The first pass is deliberately manual:
+The reviewer can confirm a whole document, correct one field, mark Needs review, and confirm the proposed ProblemSet bundle.
 
-RAW document → human document triage → ground-truth document record → later machine classifier / section parser.
+### Pass 2 — Sections + Tasks
 
-No LLM suggestions are shown in this version.
+Machine proposes a `Section → Task → Subtask` tree.
 
-## Labels
+The reviewer can:
+- confirm the structure;
+- show only low-confidence boundaries;
+- move a boundary;
+- split a section;
+- merge with the next section;
+- accept an individual node.
 
-The right panel records:
+Boundary edits recalculate child task spans.
 
-- one or more document roles;
-- subject / olympiad / year / stage / grades / region / tour;
-- duration and maximum score;
-- structural signals;
-- notes;
-- review status.
+### Links — Answers / Criteria / Media
 
-Labels are stored in browser localStorage and can be exported as JSONL or CSV.
+The prototype shows:
+- ProblemSet coverage;
+- suggested graph edges;
+- confirm/reject actions;
+- unresolved-only queue;
+- structural exceptions.
 
-## Next stage
+Current exceptions include:
+- task without answer;
+- answer without task;
+- media without task;
+- incomplete bundle;
+- ambiguous/duplicate task numbering;
+- one criterion target reused by multiple tasks.
 
-After enough manual ground truth exists:
+## Important prototype limitation
 
-1. machine proposes document roles and metadata;
-2. human accepts or edits;
-3. machine proposes section boundaries and section types;
-4. human compares against the original document;
-5. type-specific extractors create Task / Answer / Criteria / Script objects.
+The review contracts and audit structure are production-shaped, but the machine proposals visible in `arm.html` are currently heuristic proposals derived from source filenames and the current ten-document calibration batch.
+
+They are intentionally replaceable by the future classifier/sectioner without changing the assessor UI or stored human-decision schema.
+
+## Ground truth
+
+Reviewer decisions are stored locally in the browser and can be exported as audit JSON. The next production step is server-side persistence of these decisions and direct loading of evidence from canonical `layout.json`.
