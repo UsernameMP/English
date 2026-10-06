@@ -1,5 +1,73 @@
-const ARM_STORE="corpus-assessor-arm-v3";
+const ARM_STORE="corpus-assessor-arm-v4";
+const LOCALE_STORE="corpus-assessor-locale";
+let uiLocale=localStorage.getItem(LOCALE_STORE)||"ru";
 let sourceUrls={},deployedAssets={},docs=[],current=0,armState=JSON.parse(localStorage.getItem(ARM_STORE)||"{}"),selectedNode=null,selectedTask=null,conflictsOnly=false,unresolvedOnly=false;
+
+const I18N={
+  ru:{
+    interface:"Интерфейс",exportAudit:"Экспорт audit JSON",
+    pass1Tab:"Pass 1 · Документ + ProblemSet",pass2Tab:"Pass 2 · Секции + задания",linksTab:"Связи · Ответы / критерии / медиа",
+    machineProfile:"Профиль документа",machineProfileHint:"Подтверди корректный профиль целиком или исправь только ошибки.",
+    needsReview:"Нужна проверка",clearNeedsReview:"Снять флаг",confirmDocument:"Подтвердить документ",undoConfirm:"Отменить подтверждение",
+    problemsetProposal:"Предлагаемый ProblemSet",problemsetHint:"Предлагаемый комплект связанных файлов.",confirmBundle:"Подтвердить комплект",undoBundle:"Отменить комплект",
+    audit:"Аудит",evidence:"Evidence",decision:"Решение",
+    pass2Title:"Проверка границ секций и заданий",pass2Hint:"Машина предлагает структуру. Ассессор подтверждает, исправляет или создаёт пропущенные объекты.",
+    addSection:"+ Секция",addTask:"+ Задание",conflictsOnly:"Только конфликты",showAll:"Показать всё",confirmStructure:"Подтвердить структуру",
+    structureTree:"Структура",contextInspector:"Контекст и правки",
+    linksTitle:"Проверка связей",linksHint:"Подтверди, что предложенные файлы и сущности действительно относятся друг к другу.",
+    unresolvedOnly:"Только нерешённые",confirmSuggested:"Подтвердить предложенные",proposedLinks:"Предлагаемые связи",exceptionQueue:"Исключения",
+    answers:"Ответы",criteria:"Критерии",audioMedia:"Аудио / медиа",coverage:"покрытие",
+    confirmed:"Подтверждено",rejected:"Отклонено",needsReviewStatus:"Нужна проверка",unreviewed:"Не проверено",inReview:"В работе",
+    proposalSource:"Источник предложения",calibrationPreset:"Калибровочный preset",filenameHeuristic:"Эвристика по имени файла",documentEvidence:"Текст документа",human:"Создано человеком",
+    linkedAudio:"Связанное аудио",listeningAudio:"Аудио Listening",openAudio:"Открыть аудио",
+    field_role:"Тип документа",field_subject:"Предмет",field_language:"Язык документа",field_academic_year:"Учебный год",field_grades:"Классы",
+    field_competition:"Олимпиада",field_stage:"Этап",field_tour:"Тур",field_region:"Регион",field_problemset:"ProblemSet",
+    value_TASK_SET:"Задания",value_ANSWER_KEY:"Ответы",value_CRITERIA:"Критерии",value_LISTENING_SCRIPT:"Скрипт аудирования",value_OTHER:"Другое",
+    value_ENGLISH:"Английский язык",value_RUSSIAN:"Русский язык",value_UNKNOWN:"Не определено",
+    value_RU:"Русский",value_EN:"Английский",value_RU_EN:"Русский + английский",
+    value_VSOSh:"Всероссийская олимпиада школьников",
+    value_MUNICIPAL:"Муниципальный этап",value_REGIONAL:"Региональный этап",
+    value_WRITTEN:"Письменный тур",value_ORAL:"Устный тур",
+    progress:"подтверждено"
+  },
+  en:{
+    interface:"Interface",exportAudit:"Export audit JSON",
+    pass1Tab:"Pass 1 · Document + ProblemSet",pass2Tab:"Pass 2 · Sections + Tasks",linksTab:"Links · Answers / Criteria / Media",
+    machineProfile:"Document profile",machineProfileHint:"Confirm the whole correct profile or change only the wrong fields.",
+    needsReview:"Needs review",clearNeedsReview:"Clear flag",confirmDocument:"Confirm document",undoConfirm:"Undo confirmation",
+    problemsetProposal:"ProblemSet proposal",problemsetHint:"Proposed bundle of related files.",confirmBundle:"Confirm bundle",undoBundle:"Undo bundle",
+    audit:"Audit",evidence:"Evidence",decision:"Decision",
+    pass2Title:"Section / Task boundary review",pass2Hint:"The machine proposes structure. The reviewer confirms, corrects, or creates missing objects.",
+    addSection:"+ Section",addTask:"+ Task",conflictsOnly:"Conflicts only",showAll:"Show all",confirmStructure:"Confirm structure",
+    structureTree:"Structure tree",contextInspector:"Context inspector",
+    linksTitle:"Link verification",linksHint:"Confirm that the proposed files and entities really belong together.",
+    unresolvedOnly:"Unresolved only",confirmSuggested:"Confirm suggested",proposedLinks:"Proposed links",exceptionQueue:"Exception queue",
+    answers:"Answers",criteria:"Criteria",audioMedia:"Audio / Media",coverage:"coverage",
+    confirmed:"Confirmed",rejected:"Rejected",needsReviewStatus:"Needs review",unreviewed:"Unreviewed",inReview:"In review",
+    proposalSource:"Proposal source",calibrationPreset:"Calibration preset",filenameHeuristic:"Filename heuristic",documentEvidence:"Document text",human:"Human-created",
+    linkedAudio:"Linked audio",listeningAudio:"Listening audio",openAudio:"Open audio",
+    field_role:"Document type",field_subject:"Subject",field_language:"Document language",field_academic_year:"Academic year",field_grades:"Grades",
+    field_competition:"Competition",field_stage:"Stage",field_tour:"Tour",field_region:"Region",field_problemset:"ProblemSet",
+    value_TASK_SET:"Task set",value_ANSWER_KEY:"Answer key",value_CRITERIA:"Criteria",value_LISTENING_SCRIPT:"Listening script",value_OTHER:"Other",
+    value_ENGLISH:"English",value_RUSSIAN:"Russian",value_UNKNOWN:"Unknown",
+    value_RU:"Russian",value_EN:"English",value_RU_EN:"Russian + English",
+    value_VSOSh:"All-Russian School Olympiad",
+    value_MUNICIPAL:"Municipal stage",value_REGIONAL:"Regional stage",
+    value_WRITTEN:"Written round",value_ORAL:"Oral round",
+    progress:"confirmed"
+  }
+};
+
+function t(key){return (I18N[uiLocale]&&I18N[uiLocale][key])||I18N.en[key]||key}
+function valueLabel(field,value){
+  const normalized=String(value==null?"":value);
+  const key="value_"+normalized.replace("+","_");
+  return (I18N[uiLocale]&&I18N[uiLocale][key])||normalized.replaceAll("_"," ");
+}
+function proposalSourceLabel(source){
+  const map={CALIBRATION_PRESET:"calibrationPreset",FILENAME_HEURISTIC:"filenameHeuristic",DOCUMENT_EVIDENCE:"documentEvidence",HUMAN:"human"};
+  return t(map[source]||"filenameHeuristic");
+}
 
 const REGION_CODES={
   lenobl:"Ленинградская область",
@@ -44,8 +112,16 @@ function inferDocument(doc){
   const stage=name.includes("-mun-")?"MUNICIPAL":name.includes("-reg-")?"REGIONAL":"UNKNOWN";
   const tour=name.includes("-pism-")?"WRITTEN":name.includes("-ustn-")?"ORAL":"UNKNOWN";
   const rm=name.match(/-(?:mun|reg)-([a-z0-9]+)-\d{2}-\d{2}\.pdf$/); const rawRegion=rm?rm[1].toLowerCase():""; const region=rawRegion?(REGION_CODES[rawRegion]||rawRegion.toUpperCase()):"UNKNOWN";
-  const values={role,subject:"ENGLISH",language:"EN",academic_year,grades,competition:"VSOSh",stage,tour,region,problemset:canonicalStem(doc.filename)};
-  const confidence={role:.99,subject:.99,language:.99,academic_year:academic_year==="UNKNOWN"?.45:.98,grades:grades==="UNKNOWN"?.45:.98,competition:.96,stage:stage==="UNKNOWN"?.55:.97,tour:tour==="UNKNOWN"?.55:.97,region:region==="UNKNOWN"?.52:.88,problemset:.91};
+  const values={role,subject:"ENGLISH",language:"UNKNOWN",academic_year,grades,competition:"VSOSh",stage,tour,region,problemset:canonicalStem(doc.filename)};
+  if(doc.id==="6c7bf55e9532cd1b6960821ac4c91fa8ebc1a48cc5aafa5405ec73b7966aa932")values.language="RU+EN";
+  const confidence={role:.99,subject:.99,language:values.language==="UNKNOWN"?.35:.98,academic_year:academic_year==="UNKNOWN"?.45:.98,grades:grades==="UNKNOWN"?.45:.98,competition:.96,stage:stage==="UNKNOWN"?.55:.97,tour:tour==="UNKNOWN"?.55:.97,region:region==="UNKNOWN"?.52:.88,problemset:.91};
+  const proposal_source={
+    role:"FILENAME_HEURISTIC",subject:"FILENAME_HEURISTIC",language:"FILENAME_HEURISTIC",academic_year:"FILENAME_HEURISTIC",
+    grades:"FILENAME_HEURISTIC",competition:"FILENAME_HEURISTIC",stage:"FILENAME_HEURISTIC",tour:"FILENAME_HEURISTIC",region:"FILENAME_HEURISTIC",problemset:"FILENAME_HEURISTIC"
+  };
+  if(PASS1_EVIDENCE_OVERRIDES[doc.id]){
+    ["subject","language","academic_year","grades","competition","stage","tour","region"].forEach(k=>proposal_source[k]="DOCUMENT_EVIDENCE");
+  }
   const evidence={};
   Object.keys(values).forEach(k=>evidence[k]={
     page:1,
@@ -55,7 +131,7 @@ function inferDocument(doc){
     label:k==="role"?"source filename":"source metadata / filename"
   });
   Object.assign(evidence,PASS1_EVIDENCE_OVERRIDES[doc.id]||{});
-  return {values,confidence,evidence};
+  return {values,confidence,evidence,proposal_source};
 }
 function focusEvidence(ev){
   return armViewer.focusEvidence(ev);
@@ -104,16 +180,43 @@ function renderAudioDock(doc){
     return;
   }
   dock.classList.remove("hidden");
-  $("audioLabel").textContent="Listening audio";
+  $("audioLabel").textContent=t("listeningAudio");
   $("audioProvenance").textContent=doc.audioSha?("sha256 "+doc.audioSha.slice(0,12)+"…"):"linked media";
   $("openAudio").href=doc.audioSource||doc.audioUrl;
+  $("openAudio").textContent=t("openAudio");
   if(player.getAttribute("src")!==doc.audioUrl){
     player.src=doc.audioUrl;
     player.load();
   }
   updateContextAudioTime();
 }
-function renderProgress(){const n=docs.filter(d=>armState[d.id]&&armState[d.id].pass1&&armState[d.id].pass1.status==="CONFIRMED").length;$("globalProgress").textContent=n+"/"+docs.length+" confirmed"}
+function renderProgress(){const n=docs.filter(d=>armState[d.id]&&armState[d.id].pass1&&armState[d.id].pass1.status==="CONFIRMED").length;$("globalProgress").textContent=n+"/"+docs.length+" "+t("progress")}
+function renderLocale(){
+  $("localeLabel").textContent=t("interface");
+  $("exportState").textContent=t("exportAudit");
+  document.querySelector('[data-pass="pass1"]').textContent=t("pass1Tab");
+  document.querySelector('[data-pass="pass2"]').textContent=t("pass2Tab");
+  document.querySelector('[data-pass="links"]').textContent=t("linksTab");
+  document.querySelector("#pass1 h2").textContent=t("machineProfile");
+  document.querySelector("#pass1 .section-head p").textContent=t("machineProfileHint");
+  document.querySelector("#pass1 .card h3").textContent=t("problemsetProposal");
+  document.querySelector("#pass1 .card .section-head p").textContent=t("problemsetHint");
+  document.querySelector("#pass1 .card:last-child h3").textContent=t("audit");
+  document.querySelector("#pass2 h2").textContent=t("pass2Title");
+  document.querySelector("#pass2 .section-head p").textContent=t("pass2Hint");
+  $("addSection").textContent=t("addSection");
+  $("addTask").textContent=t("addTask");
+  $("conflictsOnly").textContent=conflictsOnly?t("showAll"):t("conflictsOnly");
+  $("confirmStructure").textContent=t("confirmStructure");
+  document.querySelector(".pass2-tree-pane .sticky-subhead").textContent=t("structureTree");
+  document.querySelector(".pass2-inspector-pane .sticky-subhead").textContent=t("contextInspector");
+  document.querySelector("#links h2").textContent=t("linksTitle");
+  document.querySelector("#links .section-head p").textContent=t("linksHint");
+  $("unresolvedOnly").textContent=unresolvedOnly?t("showAll"):t("unresolvedOnly");
+  $("confirmLinks").textContent=t("confirmSuggested");
+  document.querySelectorAll("#links .card h3")[0].textContent=t("proposedLinks");
+  document.querySelectorAll("#links .card h3")[1].textContent=t("exceptionQueue");
+}
 function switchPass(pass){
   document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.pass===pass));
   document.querySelectorAll(".pass-view").forEach(v=>v.classList.toggle("active",v.id===pass));
@@ -140,6 +243,7 @@ function renderDoc(){
 }
 function downloadAudit(){const blob=new Blob([JSON.stringify({schema_version:"assessor-audit.v1",exported_at:new Date().toISOString(),state:armState},null,2)],{type:"application/json"}),u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="corpus_assessor_audit.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),500)}
 async function initArm(){
+  $("uiLocale").value=uiLocale;
   sourceUrls=await fetch("source_urls.json",{cache:"no-store"}).then(r=>r.json());
   try{
     const r=await fetch("deployed_assets.json",{cache:"no-store"});
@@ -168,8 +272,18 @@ async function initArm(){
   $("zoomIn").onclick=()=>armViewer.zoomIn();
   $("fitWidth").onclick=()=>armViewer.fitWidth();
   $("exportState").onclick=downloadAudit;
+  $("uiLocale").onchange=e=>{
+    uiLocale=e.target.value==="en"?"en":"ru";
+    localStorage.setItem(LOCALE_STORE,uiLocale);
+    renderLocale();
+    renderPass1(docs[current]);
+    renderPass2(docs[current]);
+    renderLinks(docs[current]);
+    renderAudioDock(docs[current]);
+    renderProgress();
+  };
   const player=$("audioPlayer");
   ["timeupdate","loadedmetadata","durationchange","play","pause"].forEach(evt=>player.addEventListener(evt,updateContextAudioTime));
-  bindPass1();bindPass2();bindLinks();renderDoc();
+  renderLocale();bindPass1();bindPass2();bindLinks();renderDoc();
 }
 window.addEventListener("DOMContentLoaded",()=>initArm().catch(e=>{$("viewerHint").textContent="Initialization failed: "+e.message;console.error(e)}));
