@@ -59,39 +59,208 @@ function ensureStructure(doc){
   ds.pass2.nodes.forEach(recalcChildren);
   return ds.pass2.nodes
 }
+function isListeningSection(node){
+  return /listening/i.test(String(node&&node.label||""));
+}
+function reviewSequence(doc){
+  const items=[];
+  ensureStructure(doc).forEach(node=>{
+    items.push({kind:"section",node,task:null,id:node.id});
+    (node.tasks||[]).forEach(task=>items.push({kind:"task",node,task,id:task.id}));
+  });
+  return items;
+}
+function selectReviewItem(doc,node,task=null,options={}){
+  selectedNode=node.id;
+  selectedTask=task?task.id:null;
+  const evidence=(task&&task.evidence)||node.evidence||{page:node.start,search:(task&&task.label)||node.label,snippet:(task&&task.label)||node.label};
+  focusEvidence(evidence);
+  renderPass2(doc);
+  if(options.playAudio&&isListeningSection(node)&&doc.audioUrl){
+    const startSec=task&&task.audio_start_sec!=null?task.audio_start_sec:0;
+    audioPlayFrom(startSec);
+  }
+}
+function navigateReview(doc,delta){
+  const items=reviewSequence(doc);
+  const currentId=selectedTask||selectedNode;
+  let i=items.findIndex(item=>item.id===currentId);
+  if(i<0)i=0;
+  i=Math.max(0,Math.min(items.length-1,i+delta));
+  const item=items[i];
+  if(item)selectReviewItem(doc,item.node,item.task,{playAudio:false});
+}
 function renderPass2(doc){
-  const nodes=ensureStructure(doc),tree=$("structureTree");tree.innerHTML="";
+  const nodes=ensureStructure(doc),tree=$("structureTree");
+  const treePane=tree.closest(".pass2-tree-pane");
+  const priorScroll=treePane?treePane.scrollTop:0;
+  tree.innerHTML="";
   const shown=conflictsOnly?nodes.filter(n=>n.confidence<.8):nodes;
+
+  if(!selectedNode&&nodes[0]){
+    selectedNode=nodes[0].id;
+    selectedTask=null;
+  }
+
   shown.forEach(n=>{
-    const el=document.createElement("div");el.className="tree-node "+(selectedNode===n.id?"selected ":"")+(n.confidence<.8?"conflict":"");
-    const children=n.tasks.map(t=>'<div class="task-child">-> '+t.label+(t.subtasks.length?" - "+t.subtasks.join(", "):"")+'</div>').join("");
-    el.innerHTML='<div class="tree-title"><span>'+n.label+'</span><span>p.'+n.start+'-'+n.end+' - '+Math.round(n.confidence*100)+'%</span></div>'+children;
-    el.onclick=()=>{selectedNode=n.id;focusEvidence(n.evidence||{page:n.start,search:n.label,snippet:n.label});renderPass2(doc);renderBoundaryEditor(doc,n)};
+    const el=document.createElement("div");
+    el.className="tree-node "+(selectedNode===n.id?"selected ":"")+(n.confidence<.8?"conflict":"");
+    const children=(n.tasks||[]).map(t=>{
+      const cls="task-child "+(selectedTask===t.id?"selected-task":"");
+      return '<div class="'+cls+'" data-task-id="'+t.id+'">→ '+t.label+(t.subtasks&&t.subtasks.length?" · "+t.subtasks.join(", "):"")+'</div>';
+    }).join("");
+    el.innerHTML='<div class="tree-title"><span>'+n.label+'</span><span>p.'+n.start+'-'+n.end+' · '+Math.round(n.confidence*100)+'%</span></div>'+children;
+    el.onclick=()=>{
+      selectedTask=null;
+      selectReviewItem(doc,n,null,{playAudio:isListeningSection(n)});
+    };
     tree.appendChild(el);
+
     el.querySelectorAll(".task-child").forEach((child,idx)=>{
       const task=n.tasks[idx];
-      child.style.cursor="pointer";
-      child.onclick=(event)=>{event.stopPropagation();focusEvidence(task.evidence||n.evidence||{page:n.start,search:task.label,snippet:task.label})};
+      child.onclick=event=>{
+        event.stopPropagation();
+        selectReviewItem(doc,n,task,{playAudio:isListeningSection(n)});
+      };
     });
   });
-  if(!selectedNode&&nodes[0]){selectedNode=nodes[0].id;renderBoundaryEditor(doc,nodes[0])}
+
+  if(treePane)treePane.scrollTop=priorScroll;
+
+  let node=nodes.find(n=>n.id===selectedNode)||nodes[0]||null;
+  if(node&&selectedNode!==node.id){
+    selectedNode=node.id;
+    selectedTask=null;
+  }
+  let task=node&&selectedTask?(node.tasks||[]).find(t=>t.id===selectedTask)||null:null;
+  if(selectedTask&&!task)selectedTask=null;
+  renderBoundaryEditor(doc,node,task);
 }
-function renderBoundaryEditor(doc,node){
-  const box=$("boundaryEditor");if(!node){box.innerHTML="<span class='muted'>Select a node</span>";return}
-  box.innerHTML='<h3>'+node.label+'</h3><div class="muted mono">'+node.id+'</div><p>Pages <b>'+node.start+'-'+node.end+'</b> - confidence '+Math.round(node.confidence*100)+'%</p><label class="muted">Label</label><input id="nodeLabel" class="human-input" value="'+node.label.replaceAll('"','&quot;')+'"><div class="boundary-actions"><button data-op="left">boundary -</button><button data-op="right">boundary +</button><button data-op="split">Split</button><button data-op="merge">Merge next</button><button data-op="accept">Accept node</button></div>';
-  $("nodeLabel").onchange=e=>{node.label=e.target.value.trim()||node.label;node.corrected=true;armSave();renderPass2(doc)};
+function renderListeningTransport(doc,node,task){
+  if(!isListeningSection(node)||!doc.audioUrl)return "";
+  const segmentStart=task&&task.audio_start_sec!=null?task.audio_start_sec:null;
+  const segmentEnd=task&&task.audio_end_sec!=null?task.audio_end_sec:null;
+  const segment=segmentStart!=null||segmentEnd!=null
+    ?("Segment: "+(segmentStart!=null?formatAudioTime(segmentStart):"…")+" – "+(segmentEnd!=null?formatAudioTime(segmentEnd):"…"))
+    :"Audio segment not timed yet";
+  return '<div class="listening-transport">'+
+    '<div class="context-kind">Listening verification</div>'+
+    '<div class="muted" style="margin:3px 0 8px">'+segment+'</div>'+
+    '<div class="transport-row">'+
+      '<button data-audio="toggle">Play / Pause</button>'+
+      '<button data-audio="restart">Restart</button>'+
+      '<button data-audio="back">−5s</button>'+
+      '<button data-audio="forward">+5s</button>'+
+      '<span id="contextAudioTime" class="transport-time">0:00 / --:--</span>'+
+    '</div>'+
+  '</div>';
+}
+function renderBoundaryEditor(doc,node,task=null){
+  const box=$("boundaryEditor");
+  if(!node){box.innerHTML="<span class='muted'>Select a node</span>";return}
+
+  const selected=task||node;
+  const kind=task?"Task":"Section";
+  const subtasks=task&&task.subtasks&&task.subtasks.length
+    ?'<div class="context-subtasks">'+task.subtasks.map(s=>'<div class="context-chip">'+s+'</div>').join("")+'</div>'
+    :"";
+  const taskEditor=task
+    ?'<label class="muted">Task label</label><input id="taskLabel" class="human-input" value="'+String(task.label||"").replaceAll('"','&quot;')+'"><div class="boundary-actions"><button data-task-op="accept">Accept task</button></div>'
+    :"";
+  const sectionEditor=!task
+    ?'<label class="muted">Section label</label><input id="nodeLabel" class="human-input" value="'+String(node.label||"").replaceAll('"','&quot;')+'">'
+    :'<div class="muted">Parent section: <b>'+node.label+'</b> · pages '+node.start+'-'+node.end+'</div>';
+
+  box.innerHTML=
+    '<div class="context-title"><div><div class="context-kind">'+kind+'</div><h3>'+selected.label+'</h3></div><span class="confidence '+confClass(selected.confidence==null?node.confidence:selected.confidence)+'">'+Math.round((selected.confidence==null?node.confidence:selected.confidence)*100)+'%</span></div>'+
+    '<div class="muted mono">'+selected.id+'</div>'+
+    '<div class="context-nav"><button data-nav="prev">← Previous</button><button data-nav="next">Next →</button></div>'+
+    subtasks+
+    renderListeningTransport(doc,node,task)+
+    taskEditor+
+    sectionEditor+
+    '<div class="subhead" style="margin-top:14px">Parent section boundary</div>'+
+    '<div class="boundary-actions"><button data-op="left">boundary −</button><button data-op="right">boundary +</button><button data-op="split">Split</button><button data-op="merge">Merge next</button><button data-op="accept">Accept section</button></div>';
+
+  const nodeLabel=$("nodeLabel");
+  if(nodeLabel)nodeLabel.onchange=e=>{
+    node.label=e.target.value.trim()||node.label;
+    node.corrected=true;
+    armSave();
+    renderPass2(doc);
+  };
+  const taskLabel=$("taskLabel");
+  if(taskLabel)taskLabel.onchange=e=>{
+    task.label=e.target.value.trim()||task.label;
+    task.corrected=true;
+    armSave();
+    renderPass2(doc);
+  };
+
   box.querySelectorAll("[data-op]").forEach(b=>b.onclick=()=>boundaryOp(doc,node,b.dataset.op));
+  box.querySelectorAll("[data-task-op]").forEach(b=>b.onclick=()=>{
+    if(b.dataset.taskOp==="accept"&&task){
+      task.confirmed=true;
+      armSave();
+      renderPass2(doc);
+    }
+  });
+  box.querySelectorAll("[data-nav]").forEach(b=>b.onclick=()=>navigateReview(doc,b.dataset.nav==="prev"?-1:1));
+  box.querySelectorAll("[data-audio]").forEach(b=>b.onclick=()=>{
+    const op=b.dataset.audio;
+    if(op==="toggle")audioToggle();
+    if(op==="restart")audioRestart();
+    if(op==="back")audioSeek(-5);
+    if(op==="forward")audioSeek(5);
+  });
+  updateContextAudioTime();
 }
 function boundaryOp(doc,node,op){
   const nodes=ensureStructure(doc),i=nodes.findIndex(n=>n.id===node.id);
   if(op==="accept"){node.confirmed=true;node.confidence=1}
   if(op==="left"&&i>0&&node.start>1){node.start--;nodes[i-1].end=Math.max(nodes[i-1].start,node.start-1);node.corrected=true}
   if(op==="right"&&i<nodes.length-1){node.end++;nodes[i+1].start=Math.max(node.end+1,nodes[i+1].start);node.corrected=true}
-  if(op==="split"&&node.end>node.start){const mid=Math.floor((node.start+node.end)/2),copy=structuredClone(node),cut=Math.ceil((node.tasks||[]).length/2);node.end=mid;copy.start=mid+1;copy.id=stable("section",doc.id+copy.label+copy.start+copy.end+Date.now());copy.label=node.label+" B";node.label=node.label+" A";copy.confidence=Math.min(copy.confidence,.72);copy.tasks=(node.tasks||[]).slice(cut);node.tasks=(node.tasks||[]).slice(0,cut);recalcChildren(node);recalcChildren(copy);nodes.splice(i+1,0,copy)}
-  if(op==="merge"&&i<nodes.length-1){const next=nodes[i+1];node.end=Math.max(node.end,next.end);node.tasks=[...(node.tasks||[]),...(next.tasks||[])];node.label=node.label+" + "+next.label;node.corrected=true;recalcChildren(node);nodes.splice(i+1,1)}
-  nodes.forEach(recalcChildren);armSave();selectedNode=node.id;renderPass2(doc);renderBoundaryEditor(doc,node);
+  if(op==="split"&&node.end>node.start){
+    const mid=Math.floor((node.start+node.end)/2),copy=structuredClone(node),cut=Math.ceil((node.tasks||[]).length/2);
+    node.end=mid;
+    copy.start=mid+1;
+    copy.id=stable("section",doc.id+copy.label+copy.start+copy.end+Date.now());
+    copy.label=node.label+" B";
+    node.label=node.label+" A";
+    copy.confidence=Math.min(copy.confidence,.72);
+    copy.tasks=(node.tasks||[]).slice(cut);
+    node.tasks=(node.tasks||[]).slice(0,cut);
+    recalcChildren(node);recalcChildren(copy);nodes.splice(i+1,0,copy)
+  }
+  if(op==="merge"&&i<nodes.length-1){
+    const next=nodes[i+1];
+    node.end=Math.max(node.end,next.end);
+    node.tasks=[...(node.tasks||[]),...(next.tasks||[])];
+    node.label=node.label+" + "+next.label;
+    node.corrected=true;
+    recalcChildren(node);
+    nodes.splice(i+1,1)
+  }
+  nodes.forEach(recalcChildren);
+  armSave();
+  selectedNode=node.id;
+  if(selectedTask&&!(node.tasks||[]).some(t=>t.id===selectedTask))selectedTask=null;
+  renderPass2(doc);
 }
 function bindPass2(){
-  $("conflictsOnly").onclick=()=>{conflictsOnly=!conflictsOnly;$("conflictsOnly").textContent=conflictsOnly?"Show all":"Conflicts only";renderPass2(docs[current])};
-  $("confirmStructure").onclick=()=>{const ds=docState(docs[current]);ensureStructure(docs[current]).forEach(n=>n.confirmed=true);ds.pass2.confirmed=true;armSave();renderPass2(docs[current])};
+  $("conflictsOnly").onclick=()=>{
+    conflictsOnly=!conflictsOnly;
+    $("conflictsOnly").textContent=conflictsOnly?"Show all":"Conflicts only";
+    renderPass2(docs[current])
+  };
+  $("confirmStructure").onclick=()=>{
+    const ds=docState(docs[current]);
+    ensureStructure(docs[current]).forEach(n=>{
+      n.confirmed=true;
+      (n.tasks||[]).forEach(t=>t.confirmed=true);
+    });
+    ds.pass2.confirmed=true;
+    armSave();
+    renderPass2(docs[current])
+  };
 }
