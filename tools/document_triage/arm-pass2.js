@@ -9,6 +9,7 @@ function initialStructure(doc){
     confidence:conf,
     confirmed:false,
     human_created:false,
+    proposal_source:doc.id==="6c7bf55e9532cd1b6960821ac4c91fa8ebc1a48cc5aafa5405ec73b7966aa932"?"CALIBRATION_PRESET":"FILENAME_HEURISTIC",
     tasks:tasks||[],
     evidence:evidence||{page:s,search:label,snippet:label}
   });
@@ -69,7 +70,13 @@ function recalcChildren(node){
 function ensureStructure(doc){
   const ds=docState(doc);
   if(!ds.pass2.nodes)ds.pass2.nodes=initialStructure(doc);
-  ds.pass2.nodes.forEach(recalcChildren);
+  ds.pass2.nodes.forEach(node=>{
+    if(!node.proposal_source)node.proposal_source=node.human_created?"HUMAN":(doc.id==="6c7bf55e9532cd1b6960821ac4c91fa8ebc1a48cc5aafa5405ec73b7966aa932"?"CALIBRATION_PRESET":"FILENAME_HEURISTIC");
+    (node.tasks||[]).forEach(task=>{
+      if(!task.proposal_source)task.proposal_source=task.human_created?"HUMAN":node.proposal_source;
+    });
+    recalcChildren(node);
+  });
   return ds.pass2.nodes;
 }
 
@@ -124,12 +131,13 @@ function createSection(doc){
   const node={
     id,
     type:"SECTION",
-    label:"New section",
+    label:uiLocale==="ru"?"Новая секция":"New section",
     start:page,
     end:page,
     confidence:1,
     confirmed:false,
     human_created:true,
+    proposal_source:"HUMAN",
     corrected:true,
     tasks:[],
     evidence:{page,search:"",snippet:"Human-created section",source:"human"}
@@ -149,11 +157,12 @@ function createTask(doc){
   const page=currentPdfPage();
   const task={
     id:stable("task",doc.id+"manual-"+Date.now()+"-"+page),
-    label:"New task",
+    label:uiLocale==="ru"?"Новое задание":"New task",
     subtasks:[],
     confidence:1,
     confirmed:false,
     human_created:true,
+    proposal_source:"HUMAN",
     corrected:true,
     evidence:{page,search:"",snippet:"Human-created task",source:"human"}
   };
@@ -162,6 +171,32 @@ function createTask(doc){
   recalcChildren(node);
   selectedNode=node.id;
   selectedTask=task.id;
+  armSave();
+  renderPass2(doc);
+}
+
+function deleteSelectedTask(doc,node,task){
+  if(!task)return;
+  const message=uiLocale==="ru"?"Удалить это задание из разметки?":"Delete this task from the annotation?";
+  if(!window.confirm(message))return;
+  node.tasks=(node.tasks||[]).filter(t=>t.id!==task.id);
+  recalcChildren(node);
+  selectedTask=null;
+  selectedNode=node.id;
+  armSave();
+  renderPass2(doc);
+}
+
+function deleteSelectedSection(doc,node){
+  if(!node)return;
+  const message=uiLocale==="ru"?"Удалить секцию и все её задания?":"Delete this section and all of its tasks?";
+  if(!window.confirm(message))return;
+  const nodes=ensureStructure(doc);
+  const i=nodes.findIndex(n=>n.id===node.id);
+  nodes.splice(i,1);
+  const next=nodes[Math.min(i,nodes.length-1)]||nodes[0]||null;
+  selectedNode=next?next.id:null;
+  selectedTask=null;
   armSave();
   renderPass2(doc);
 }
@@ -245,36 +280,38 @@ function renderBoundaryEditor(doc,node,task=null){
   }
 
   const selected=task||node;
-  const kind=task?"Task":"Section";
+  const kind=task?(uiLocale==="ru"?"Задание":"Task"):(uiLocale==="ru"?"Секция":"Section");
+  const source=selected.proposal_source||node.proposal_source||(selected.human_created?"HUMAN":"FILENAME_HEURISTIC");
   const selectedConfidence=selected.confidence==null?node.confidence:selected.confidence;
   const subtasks=task&&task.subtasks&&task.subtasks.length
     ?'<div class="context-subtasks">'+task.subtasks.map(s=>'<div class="context-chip">'+s+'</div>').join("")+'</div>'
     :"";
 
   const taskEditor=task
-    ?'<label class="muted">Task label</label><input id="taskLabel" class="human-input" value="'+String(task.label||"").replaceAll('"','&quot;')+'">'+
-      '<div class="boundary-source-actions"><button data-task-op="anchor-current">Anchor task to current PDF page</button><button data-task-op="accept">Accept task</button></div>'
+    ?'<label class="muted">'+(uiLocale==="ru"?"Название задания":"Task label")+'</label><input id="taskLabel" class="human-input" value="'+String(task.label||"").replaceAll('"','&quot;')+'">'+
+      '<div class="boundary-source-actions"><button data-task-op="anchor-current">'+(uiLocale==="ru"?"Привязать к текущей странице PDF":"Anchor task to current PDF page")+'</button><button data-task-op="accept">'+(uiLocale==="ru"?"Подтвердить задание":"Accept task")+'</button><button data-task-op="delete">'+(uiLocale==="ru"?"Удалить задание":"Delete task")+'</button></div>'
     :"";
 
   const sectionEditor=!task
-    ?'<label class="muted">Section label</label><input id="nodeLabel" class="human-input" value="'+String(node.label||"").replaceAll('"','&quot;')+'">'
-    :'<div class="muted">Parent section: <b>'+node.label+'</b></div>';
+    ?'<label class="muted">'+(uiLocale==="ru"?"Название секции":"Section label")+'</label><input id="nodeLabel" class="human-input" value="'+String(node.label||"").replaceAll('"','&quot;')+'">'
+    :'<div class="muted">'+(uiLocale==="ru"?"Родительская секция":"Parent section")+': <b>'+node.label+'</b></div>';
 
   box.innerHTML=
     '<div class="context-title"><div><div class="context-kind">'+kind+'</div><h3>'+selected.label+'</h3></div><span class="confidence '+confClass(selectedConfidence)+'">'+Math.round(selectedConfidence*100)+'%</span></div>'+
     '<div class="muted mono">'+selected.id+'</div>'+
-    '<div class="context-nav"><button data-nav="prev">← Previous</button><button data-nav="next">Next →</button></div>'+
+    '<div class="muted" style="margin-top:4px">'+t("proposalSource")+': <b>'+proposalSourceLabel(source)+'</b></div>'+
+    '<div class="context-nav"><button data-nav="prev">← '+(uiLocale==="ru"?"Предыдущее":"Previous")+'</button><button data-nav="next">'+(uiLocale==="ru"?"Следующее":"Next")+' →</button></div>'+
     subtasks+
     renderListeningTransport(doc,node,task)+
     taskEditor+
     sectionEditor+
-    '<div class="subhead" style="margin-top:14px">Parent section boundary</div>'+
+    '<div class="subhead" style="margin-top:14px">'+(uiLocale==="ru"?"Границы родительской секции":"Parent section boundary")+'</div>'+
     '<div class="boundary-range">'+
-      '<label>Start page<input id="sectionStart" class="human-input" type="number" min="1" value="'+node.start+'"></label>'+
-      '<label>End page<input id="sectionEnd" class="human-input" type="number" min="1" value="'+node.end+'"></label>'+
+      '<label>'+(uiLocale==="ru"?"Начальная страница":"Start page")+'<input id="sectionStart" class="human-input" type="number" min="1" value="'+node.start+'"></label>'+
+      '<label>'+(uiLocale==="ru"?"Конечная страница":"End page")+'<input id="sectionEnd" class="human-input" type="number" min="1" value="'+node.end+'"></label>'+
     '</div>'+
-    '<div class="boundary-source-actions"><button data-boundary-current="start">Start = current PDF page</button><button data-boundary-current="end">End = current PDF page</button></div>'+
-    '<div class="boundary-actions"><button data-op="left">boundary −</button><button data-op="right">boundary +</button><button data-op="split">Split</button><button data-op="merge">Merge next</button><button data-op="accept">Accept section</button></div>';
+    '<div class="boundary-source-actions"><button data-boundary-current="start">'+(uiLocale==="ru"?"Начало = текущая страница":"Start = current PDF page")+'</button><button data-boundary-current="end">'+(uiLocale==="ru"?"Конец = текущая страница":"End = current PDF page")+'</button></div>'+
+    '<div class="boundary-actions"><button data-op="left">'+(uiLocale==="ru"?"Начало −1":"Start −1")+'</button><button data-op="right">'+(uiLocale==="ru"?"Конец +1":"End +1")+'</button><button data-op="split">'+(uiLocale==="ru"?"Разделить":"Split")+'</button><button data-op="merge">'+(uiLocale==="ru"?"Объединить со следующей":"Merge next")+'</button><button data-op="accept">'+(uiLocale==="ru"?"Подтвердить секцию":"Accept section")+'</button><button data-op="delete">'+(uiLocale==="ru"?"Удалить секцию":"Delete section")+'</button></div>';
 
   const nodeLabel=$("nodeLabel");
   if(nodeLabel)nodeLabel.onchange=e=>{
@@ -330,6 +367,10 @@ function renderBoundaryEditor(doc,node,task=null){
     if(b.dataset.taskOp==="accept"){
       task.confirmed=true;
     }
+    if(b.dataset.taskOp==="delete"){
+      deleteSelectedTask(doc,node,task);
+      return;
+    }
     if(b.dataset.taskOp==="anchor-current"){
       task.evidence={...(task.evidence||{}),page:currentPdfPage(),search:"",snippet:task.label,source:"human"};
       task.corrected=true;
@@ -351,6 +392,7 @@ function renderBoundaryEditor(doc,node,task=null){
 
 function boundaryOp(doc,node,op){
   const nodes=ensureStructure(doc),i=nodes.findIndex(n=>n.id===node.id);
+  if(op==="delete"){deleteSelectedSection(doc,node);return}
   if(op==="accept"){node.confirmed=true;node.confidence=1}
   if(op==="left"&&node.start>1){
     node.start--;
@@ -399,7 +441,7 @@ function bindPass2(){
 
   $("conflictsOnly").onclick=()=>{
     conflictsOnly=!conflictsOnly;
-    $("conflictsOnly").textContent=conflictsOnly?"Show all":"Conflicts only";
+    $("conflictsOnly").textContent=conflictsOnly?t("showAll"):t("conflictsOnly");
     renderPass2(docs[current]);
   };
 
