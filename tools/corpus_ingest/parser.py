@@ -13,8 +13,10 @@ from pathlib import Path
 import fitz
 
 from crawler import DropboxClient, require_env, sha256_bytes, utc_now
+from layout_pipeline import manifest_path as parsed_manifest_path
+from layout_pipeline import parse_pdf_bytes as parse_pdf_bytes_layout
 
-PARSER_VERSION = "0.3"
+PARSER_VERSION = "0.4"
 KEYWORD_TASK_RE = re.compile(
     r"^\s*(?:(?:task|problem|question|задача|задание|вопрос)\s*)"
     r"(?:№\s*)?(\d{1,3})\s*(?:[.)\]:—-]\s*)?$",
@@ -273,7 +275,8 @@ def parser_state_path(root: str) -> str:
 
 
 def candidate_manifest_path(root: str, digest: str) -> str:
-    return f"{root.rstrip('/')}/candidate/{digest[:2]}/{digest}/manifest.json"
+    # Compatibility name: v0.4 stores the canonical parsed-document manifest.
+    return parsed_manifest_path(root, digest)
 
 
 def candidate_asset_path(root: str, digest: str, candidate_id: str, page: int) -> str:
@@ -407,7 +410,11 @@ def main() -> None:
     eligible = []
     for digest, occurrences in grouped.items():
         prior = parse_state.get(digest)
-        if prior and prior.get("status") in {"PARSED", "NEEDS_OCR", "UNSUPPORTED", "FAILED_TERMINAL"}:
+        if (
+            prior
+            and prior.get("status") in {"PARSED", "NEEDS_OCR", "UNSUPPORTED", "FAILED_TERMINAL"}
+            and prior.get("parser_version") == PARSER_VERSION
+        ):
             continue
         eligible.append((digest, occurrences))
     eligible.sort(key=lambda item: min(x.get("first_seen", "") for x in item[1]))
@@ -439,7 +446,7 @@ def main() -> None:
             data = dbx.download_bytes(raw_path)
             if not data:
                 raise RuntimeError("raw_missing_in_dropbox")
-            manifest, count = parse_pdf_bytes(data, digest, occurrences, dbx)
+            manifest, count = parse_pdf_bytes_layout(data, digest, occurrences, dbx)
             manifest_path = candidate_manifest_path(dbx.root, digest)
             dbx.upload_bytes(
                 manifest_path,
