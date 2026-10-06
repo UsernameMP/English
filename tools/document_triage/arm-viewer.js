@@ -162,7 +162,24 @@ const armViewer=(()=>{
       const hint=document.getElementById("viewerHint");
       if(hint)hint.textContent="Evidence · page "+pageNo+" · bbox unavailable";
     }
-    shell.scrollIntoView({behavior:"smooth",block:"center"});
+    const host=viewer();
+    const targetTop=Math.max(0,shell.offsetTop-(host.clientHeight-shell.clientHeight)/2);
+    host.scrollTo({top:targetTop,behavior:"smooth"});
+  }
+
+  function getCurrentPage(){
+    const host=viewer();
+    const center=host.scrollTop+host.clientHeight/2;
+    let bestPage=1,bestDistance=Infinity;
+    host.querySelectorAll(".pdf-page").forEach(shell=>{
+      const pageCenter=shell.offsetTop+shell.offsetHeight/2;
+      const distance=Math.abs(pageCenter-center);
+      if(distance<bestDistance){
+        bestDistance=distance;
+        bestPage=Number(shell.dataset.page||1);
+      }
+    });
+    return bestPage;
   }
 
   return {
@@ -171,6 +188,7 @@ const armViewer=(()=>{
     fitWidth:()=>fitWidth(true),
     zoomIn:()=>setScale(scale*1.15),
     zoomOut:()=>setScale(scale/1.15),
-    getScale:()=>scale
+    getScale:()=>scale,
+    getCurrentPage
   };
 })();
