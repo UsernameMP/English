@@ -6,20 +6,20 @@ let sourceUrls={},deployedAssets={},docs=[],current=0,armState=JSON.parse(localS
 const I18N={
   ru:{
     interface:"Интерфейс",exportAudit:"Экспорт audit JSON",
-    pass1Tab:"Pass 1 · Документ + ProblemSet",pass2Tab:"Pass 2 · Секции + задания",linksTab:"Связи · Ответы / критерии / медиа",
+    pass1Tab:"Pass 1 · Документ + ProblemSet",pass2Tab:"Pass 2 · Секции + задания",linksTab:"Pass 3 · Связи",
     machineProfile:"Профиль документа",machineProfileHint:"Подтверди корректный профиль целиком или исправь только ошибки.",
     needsReview:"Нужна проверка",clearNeedsReview:"Снять флаг",confirmDocument:"Подтвердить документ",undoConfirm:"Отменить подтверждение",
     problemsetProposal:"Предлагаемый ProblemSet",problemsetHint:"Предлагаемый комплект связанных файлов.",confirmBundle:"Подтвердить комплект",undoBundle:"Отменить комплект",
     audit:"Аудит",evidence:"Evidence",decision:"Решение",
     pass2Title:"Проверка границ секций и заданий",pass2Hint:"Машина предлагает структуру. Ассессор подтверждает, исправляет или создаёт пропущенные объекты.",
-    addSection:"+ Секция",addTask:"+ Задание",conflictsOnly:"Только конфликты",showAll:"Показать всё",confirmStructure:"Подтвердить структуру",
+    addSection:"+ Секция",addTask:"+ Задание",conflictsOnly:"Только конфликты",showAll:"Показать всё",confirmStructure:"Подтвердить структуру",undoStructure:"Отменить подтверждение структуры",
     structureTree:"Структура",contextInspector:"Контекст и правки",
     linksTitle:"Проверка связей",linksHint:"Подтверди, что предложенные файлы и сущности действительно относятся друг к другу.",
-    unresolvedOnly:"Только нерешённые",confirmSuggested:"Подтвердить предложенные",proposedLinks:"Предлагаемые связи",exceptionQueue:"Исключения",
-    answers:"Ответы",criteria:"Критерии",audioMedia:"Аудио / медиа",coverage:"покрытие",
+    unresolvedOnly:"Только нерешённые",confirmSuggested:"Подтвердить предложенные",undoSuggested:"Отменить массовое подтверждение",proposedLinks:"Предлагаемые связи",exceptionQueue:"Исключения",
+    answers:"Ответы",criteria:"Критерии",scriptTranscript:"Скрипт / транскрипт",audioMedia:"Аудио / медиа",coverage:"покрытие",
     confirmed:"Подтверждено",rejected:"Отклонено",needsReviewStatus:"Нужна проверка",unreviewed:"Не проверено",inReview:"В работе",
     proposalSource:"Источник предложения",calibrationPreset:"Калибровочный preset",filenameHeuristic:"Эвристика по имени файла",documentEvidence:"Текст документа",human:"Создано человеком",
-    linkedAudio:"Связанное аудио",listeningAudio:"Аудио Listening",openAudio:"Открыть аудио",
+    linkedAudio:"Связанное аудио",listeningAudio:"Аудио Listening",openAudio:"Открыть аудио",documentComplete:"Документ завершён",documentInReview:"Документ в работе",nextDocument:"Следующий документ →",
     field_role:"Тип документа",field_subject:"Предмет",field_language:"Язык документа",field_academic_year:"Учебный год",field_grades:"Классы",
     field_competition:"Олимпиада",field_stage:"Этап",field_tour:"Тур",field_region:"Регион",field_problemset:"ProblemSet",
     value_TASK_SET:"Задания",value_ANSWER_KEY:"Ответы",value_CRITERIA:"Критерии",value_LISTENING_SCRIPT:"Скрипт аудирования",value_OTHER:"Другое",
@@ -28,24 +28,24 @@ const I18N={
     value_VSOSh:"Всероссийская олимпиада школьников",
     value_MUNICIPAL:"Муниципальный этап",value_REGIONAL:"Региональный этап",
     value_WRITTEN:"Письменный тур",value_ORAL:"Устный тур",
-    progress:"подтверждено"
+    progress:"завершено"
   },
   en:{
     interface:"Interface",exportAudit:"Export audit JSON",
-    pass1Tab:"Pass 1 · Document + ProblemSet",pass2Tab:"Pass 2 · Sections + Tasks",linksTab:"Links · Answers / Criteria / Media",
+    pass1Tab:"Pass 1 · Document + ProblemSet",pass2Tab:"Pass 2 · Sections + Tasks",linksTab:"Pass 3 · Links",
     machineProfile:"Document profile",machineProfileHint:"Confirm the whole correct profile or change only the wrong fields.",
     needsReview:"Needs review",clearNeedsReview:"Clear flag",confirmDocument:"Confirm document",undoConfirm:"Undo confirmation",
     problemsetProposal:"ProblemSet proposal",problemsetHint:"Proposed bundle of related files.",confirmBundle:"Confirm bundle",undoBundle:"Undo bundle",
     audit:"Audit",evidence:"Evidence",decision:"Decision",
     pass2Title:"Section / Task boundary review",pass2Hint:"The machine proposes structure. The reviewer confirms, corrects, or creates missing objects.",
-    addSection:"+ Section",addTask:"+ Task",conflictsOnly:"Conflicts only",showAll:"Show all",confirmStructure:"Confirm structure",
+    addSection:"+ Section",addTask:"+ Task",conflictsOnly:"Conflicts only",showAll:"Show all",confirmStructure:"Confirm structure",undoStructure:"Undo structure confirmation",
     structureTree:"Structure tree",contextInspector:"Context inspector",
     linksTitle:"Link verification",linksHint:"Confirm that the proposed files and entities really belong together.",
-    unresolvedOnly:"Unresolved only",confirmSuggested:"Confirm suggested",proposedLinks:"Proposed links",exceptionQueue:"Exception queue",
-    answers:"Answers",criteria:"Criteria",audioMedia:"Audio / Media",coverage:"coverage",
+    unresolvedOnly:"Unresolved only",confirmSuggested:"Confirm suggested",undoSuggested:"Undo bulk confirmation",proposedLinks:"Proposed links",exceptionQueue:"Exception queue",
+    answers:"Answers",criteria:"Criteria",scriptTranscript:"Script / Transcript",audioMedia:"Audio / Media",coverage:"coverage",
     confirmed:"Confirmed",rejected:"Rejected",needsReviewStatus:"Needs review",unreviewed:"Unreviewed",inReview:"In review",
     proposalSource:"Proposal source",calibrationPreset:"Calibration preset",filenameHeuristic:"Filename heuristic",documentEvidence:"Document text",human:"Human-created",
-    linkedAudio:"Linked audio",listeningAudio:"Listening audio",openAudio:"Open audio",
+    linkedAudio:"Linked audio",listeningAudio:"Listening audio",openAudio:"Open audio",documentComplete:"Document complete",documentInReview:"Document in review",nextDocument:"Next document →",
     field_role:"Document type",field_subject:"Subject",field_language:"Document language",field_academic_year:"Academic year",field_grades:"Grades",
     field_competition:"Competition",field_stage:"Stage",field_tour:"Tour",field_region:"Region",field_problemset:"ProblemSet",
     value_TASK_SET:"Task set",value_ANSWER_KEY:"Answer key",value_CRITERIA:"Criteria",value_LISTENING_SCRIPT:"Listening script",value_OTHER:"Other",
@@ -54,7 +54,7 @@ const I18N={
     value_VSOSh:"All-Russian School Olympiad",
     value_MUNICIPAL:"Municipal stage",value_REGIONAL:"Regional stage",
     value_WRITTEN:"Written round",value_ORAL:"Oral round",
-    progress:"confirmed"
+    progress:"complete"
   }
 };
 
@@ -97,11 +97,28 @@ const PASS1_EVIDENCE_OVERRIDES={
 };
 const $=id=>document.getElementById(id);
 
-function armSave(){localStorage.setItem(ARM_STORE,JSON.stringify(armState));renderProgress()}
+function armSave(){
+  localStorage.setItem(ARM_STORE,JSON.stringify(armState));
+  renderProgress();
+  if(docs[current])renderReviewStatus(docs[current]);
+}
 function armFilename(url){return decodeURIComponent(new URL(url).pathname.split("/").pop()||"")}
 function canonicalStem(name){return name.replace(/\.[^.]+$/,"").replace(/^(tasks?|ans(?:wers?)?|script|criteria|solutions?|audio)-/i,"").toLowerCase()}
 function stable(prefix,s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return prefix+"_"+(h>>>0).toString(16).padStart(8,"0")}
-function docState(doc){if(!armState[doc.id])armState[doc.id]={pass1:{status:"UNREVIEWED",fields:{},bundleDecision:"UNREVIEWED"},pass2:{confirmed:false,nodes:null},links:{decisions:{}}};return armState[doc.id]}
+function docState(doc){
+  if(!armState[doc.id])armState[doc.id]={};
+  const ds=armState[doc.id];
+  ds.pass1=ds.pass1||{};
+  ds.pass1.status=ds.pass1.status||"UNREVIEWED";
+  ds.pass1.fields=ds.pass1.fields||{};
+  ds.pass1.bundleDecision=ds.pass1.bundleDecision||"UNREVIEWED";
+  ds.pass2=ds.pass2||{};
+  if(typeof ds.pass2.confirmed!=="boolean")ds.pass2.confirmed=false;
+  if(!Object.prototype.hasOwnProperty.call(ds.pass2,"nodes"))ds.pass2.nodes=null;
+  ds.links=ds.links||{};
+  ds.links.decisions=ds.links.decisions||{};
+  return ds;
+}
 function bundleKey(doc){return canonicalStem(doc.filename)}
 function bundleMembers(doc){const key=bundleKey(doc);return docs.filter(d=>bundleKey(d)===key)}
 function inferDocument(doc){
@@ -190,7 +207,65 @@ function renderAudioDock(doc){
   }
   updateContextAudioTime();
 }
-function renderProgress(){const n=docs.filter(d=>armState[d.id]&&armState[d.id].pass1&&armState[d.id].pass1.status==="CONFIRMED").length;$("globalProgress").textContent=n+"/"+docs.length+" "+t("progress")}
+function linkReviewState(doc){
+  const ds=docState(doc);
+  const edges=typeof makeLinks==="function"?(makeLinks(doc).edges||[]):[];
+  if(!edges.length)return "NA";
+  const decisions=edges.map(e=>ds.links.decisions[e.id]||"UNREVIEWED");
+  if(decisions.some(v=>v==="NEEDS_REVIEW"))return "NEEDS_REVIEW";
+  if(decisions.every(v=>v==="CONFIRMED"||v==="REJECTED"))return "COMPLETE";
+  if(decisions.some(v=>v!=="UNREVIEWED"))return "IN_REVIEW";
+  return "UNREVIEWED";
+}
+function reviewState(doc,pass){
+  const ds=docState(doc);
+  if(pass==="pass1"){
+    if(ds.pass1.status==="NEEDS_REVIEW")return "NEEDS_REVIEW";
+    if(ds.pass1.status==="CONFIRMED"&&ds.pass1.bundleDecision==="CONFIRMED")return "COMPLETE";
+    if(ds.pass1.status!=="UNREVIEWED"||ds.pass1.bundleDecision!=="UNREVIEWED"||Object.keys(ds.pass1.fields).length)return "IN_REVIEW";
+    return "UNREVIEWED";
+  }
+  if(pass==="pass2"){
+    if(ds.pass2.confirmed)return "COMPLETE";
+    return ds.pass2.nodes?"IN_REVIEW":"UNREVIEWED";
+  }
+  return linkReviewState(doc);
+}
+function isDocumentComplete(doc){
+  const p1=reviewState(doc,"pass1"),p2=reviewState(doc,"pass2"),p3=reviewState(doc,"links");
+  return p1==="COMPLETE"&&p2==="COMPLETE"&&(p3==="COMPLETE"||p3==="NA");
+}
+function reviewStatusLabel(state){
+  if(state==="COMPLETE")return t("confirmed");
+  if(state==="NEEDS_REVIEW")return t("needsReviewStatus");
+  if(state==="IN_REVIEW")return t("inReview");
+  if(state==="NA")return "N/A";
+  return t("unreviewed");
+}
+function renderReviewStatus(doc){
+  const labels={pass1:t("pass1Tab"),pass2:t("pass2Tab"),links:t("linksTab")};
+  Object.keys(labels).forEach(pass=>{
+    const tab=document.querySelector('[data-pass="'+pass+'"]');
+    if(!tab)return;
+    const state=reviewState(doc,pass);
+    tab.classList.remove("review-complete","review-needs-review","review-in-review","review-unreviewed","review-na");
+    tab.classList.add("review-"+state.toLowerCase().replaceAll("_","-"));
+    tab.textContent=labels[pass]+" · "+reviewStatusLabel(state);
+  });
+  const complete=isDocumentComplete(doc),status=$("documentStatus"),next=$("nextIncompleteDoc");
+  if(status){
+    status.textContent=complete?t("documentComplete"):t("documentInReview");
+    status.classList.toggle("complete",complete);
+  }
+  if(next){
+    next.textContent=t("nextDocument");
+    next.classList.toggle("hidden",!complete);
+  }
+}
+function renderProgress(){
+  const n=docs.filter(d=>isDocumentComplete(d)).length;
+  $("globalProgress").textContent=n+"/"+docs.length+" "+t("progress");
+}
 function renderLocale(){
   $("localeLabel").textContent=t("interface");
   $("exportState").textContent=t("exportAudit");
@@ -216,6 +291,7 @@ function renderLocale(){
   $("confirmLinks").textContent=t("confirmSuggested");
   document.querySelectorAll("#links .card h3")[0].textContent=t("proposedLinks");
   document.querySelectorAll("#links .card h3")[1].textContent=t("exceptionQueue");
+  if(docs[current])renderReviewStatus(docs[current]);
 }
 function switchPass(pass){
   document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.pass===pass));
@@ -230,16 +306,26 @@ function renderDoc(){
   $("openSource").href=doc.url;
   $("viewerHint").textContent="";
   renderAudioDock(doc);
-  armViewer.load(doc).catch(e=>{
-    console.error(e);
-    $("viewerHint").textContent="PDF viewer failed: "+e.message;
-  });
   renderPass1(doc);
   selectedNode=null;
   selectedTask=null;
-  renderPass2(doc);
-  renderLinks(doc);
+  $("structureTree").innerHTML="<div class='muted'>Loading document structure…</div>";
+  $("boundaryEditor").innerHTML="";
+  $("coverageCards").innerHTML="";
+  $("linkTable").innerHTML="<div class='muted'>Loading document…</div>";
+  $("exceptions").innerHTML="";
   renderProgress();
+  renderReviewStatus(doc);
+  armViewer.load(doc).then(meta=>{
+    if(docs[current]!==doc)return;
+    doc.pageCount=Math.max(1,Number(meta&&meta.pageCount)||Number(armViewer.getPageCount())||1);
+    renderPass2(doc);
+    renderLinks(doc);
+    renderReviewStatus(doc);
+  }).catch(e=>{
+    console.error(e);
+    $("viewerHint").textContent="PDF viewer failed: "+e.message;
+  });
 }
 function downloadAudit(){const blob=new Blob([JSON.stringify({schema_version:"assessor-audit.v1",exported_at:new Date().toISOString(),state:armState},null,2)],{type:"application/json"}),u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="corpus_assessor_audit.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),500)}
 async function initArm(){
@@ -268,6 +354,7 @@ async function initArm(){
   document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>switchPass(t.dataset.pass));
   $("prevDoc").onclick=()=>{current=(current-1+docs.length)%docs.length;renderDoc()};
   $("nextDoc").onclick=()=>{current=(current+1)%docs.length;renderDoc()};
+  $("nextIncompleteDoc").onclick=()=>{current=(current+1)%docs.length;renderDoc()};
   $("zoomOut").onclick=()=>armViewer.zoomOut();
   $("zoomIn").onclick=()=>armViewer.zoomIn();
   $("fitWidth").onclick=()=>armViewer.fitWidth();

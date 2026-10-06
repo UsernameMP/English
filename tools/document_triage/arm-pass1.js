@@ -101,7 +101,7 @@ function renderPass1(doc){
 
   const confirm=$("confirmDocument"),needs=$("needsReview");
   confirm.textContent=ds.pass1.status==="CONFIRMED"?t("undoConfirm"):t("confirmDocument");
-  confirm.classList.toggle("primary",ds.pass1.status!=="CONFIRMED");
+  confirm.classList.toggle("primary",ds.pass1.status==="CONFIRMED");
   needs.textContent=ds.pass1.status==="NEEDS_REVIEW"?t("clearNeedsReview"):t("needsReview");
   needs.classList.toggle("primary",ds.pass1.status==="NEEDS_REVIEW");
 
@@ -127,6 +127,7 @@ function renderBundle(doc){
     '<div class="muted" style="margin-top:8px">'+t("decision")+': <b>'+decision+'</b></div>';
 
   $("confirmBundle").textContent=ds.pass1.bundleDecision==="CONFIRMED"?t("undoBundle"):t("confirmBundle");
+  $("confirmBundle").classList.toggle("primary",ds.pass1.bundleDecision==="CONFIRMED");
 }
 
 function renderPass1Audit(doc){

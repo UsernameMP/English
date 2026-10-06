@@ -44,6 +44,7 @@ const armViewer=(()=>{
     pdf=await task.promise;
     if(token!==loadToken)return;
     await fitWidth(false);
+    return {pageCount:pdf.numPages};
   }
 
   async function fitWidth(reapply=true){
@@ -175,6 +176,10 @@ const armViewer=(()=>{
     host.scrollTo({top:targetTop,behavior:"smooth"});
   }
 
+  function getPageCount(){
+    return pdf?pdf.numPages:0;
+  }
+
   function getCurrentPage(){
     const host=viewer();
     const center=host.scrollTop+host.clientHeight/2;
@@ -197,6 +202,7 @@ const armViewer=(()=>{
     zoomIn:()=>setScale(scale*1.15),
     zoomOut:()=>setScale(scale/1.15),
     getScale:()=>scale,
+    getPageCount,
     getCurrentPage
   };
 })();

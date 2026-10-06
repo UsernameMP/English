@@ -132,8 +132,13 @@ function renderLinks(doc){
   const ds=docState(doc),pack=makeLinks(doc),edges=pack.edges,flags=pack.flags,dec=ds.links.decisions||{};
   const answerCov=flags.hasTask?(flags.hasAns?100:0):(flags.hasAns?0:null);
   const criteriaCov=flags.hasTask?(flags.hasCrit?100:0):null;
-  const mediaCov=flags.hasTask?(flags.hasAudio?100:(flags.hasScript?50:0)):null;
-  const cards=[[t("answers"),answerCov],[t("criteria"),criteriaCov],[t("audioMedia"),mediaCov]];
+  const scriptCov=flags.hasScript?100:(flags.hasTask?0:null);
+  const mediaCov=flags.hasAudio?100:(flags.hasTask?0:null);
+  const cards=[[t("answers"),answerCov],[t("criteria"),criteriaCov],[t("scriptTranscript"),scriptCov],[t("audioMedia"),mediaCov]];
+  const allConfirmed=edges.length>0&&edges.every(e=>dec[e.id]==="CONFIRMED");
+  $("confirmLinks").textContent=allConfirmed?t("undoSuggested"):t("confirmSuggested");
+  $("confirmLinks").classList.toggle("primary",allConfirmed);
+  $("confirmLinks").disabled=edges.length===0;
 
   $("coverageCards").innerHTML=cards.map(x=>
     '<div class="coverage"><strong>'+(x[1]==null?"-":x[1]+"%")+'</strong><span>'+x[0]+' · '+t("coverage")+'</span></div>'
@@ -155,9 +160,9 @@ function renderLinks(doc){
         '<details class="technical-details"><summary>'+(uiLocale==="ru"?"Технические детали":"Technical details")+'</summary><div class="mono">'+e.type+' · '+e.id+'</div><pre>'+JSON.stringify(e.provenance||{},null,2)+'</pre></details>'+
       '</div>'+
       '<div class="edge-actions">'+
-        '<button data-edge="'+e.id+'" data-d="CONFIRMED">'+(uiLocale==="ru"?"Подтвердить":"Confirm")+'</button>'+
-        '<button data-edge="'+e.id+'" data-d="REJECTED">'+(uiLocale==="ru"?"Отклонить":"Reject")+'</button>'+
-        '<button data-edge="'+e.id+'" data-d="NEEDS_REVIEW">'+t("needsReview")+'</button>'+
+        '<button class="'+(decision==="CONFIRMED"?"decision-active":"")+'" data-edge="'+e.id+'" data-d="CONFIRMED">'+(uiLocale==="ru"?"Подтвердить":"Confirm")+'</button>'+
+        '<button class="'+(decision==="REJECTED"?"decision-active":"")+'" data-edge="'+e.id+'" data-d="REJECTED">'+(uiLocale==="ru"?"Отклонить":"Reject")+'</button>'+
+        '<button class="'+(decision==="NEEDS_REVIEW"?"decision-active":"")+'" data-edge="'+e.id+'" data-d="NEEDS_REVIEW">'+t("needsReview")+'</button>'+
       '</div>'+
     '</div>';
   }).join("");
@@ -186,9 +191,10 @@ function bindLinks(){
   };
 
   $("confirmLinks").onclick=()=>{
-    const ds=docState(docs[current]),pack=makeLinks(docs[current]);
-    pack.edges.forEach(e=>ds.links.decisions[e.id]="CONFIRMED");
+    const doc=docs[current],ds=docState(doc),pack=makeLinks(doc);
+    const allConfirmed=pack.edges.length>0&&pack.edges.every(e=>ds.links.decisions[e.id]==="CONFIRMED");
+    pack.edges.forEach(e=>ds.links.decisions[e.id]=allConfirmed?"UNREVIEWED":"CONFIRMED");
     armSave();
-    renderLinks(docs[current]);
+    renderLinks(doc);
   };
 }

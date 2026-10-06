@@ -1,5 +1,6 @@
 function initialStructure(doc){
   const role=inferDocument(doc).values.role,base=stable("asset",doc.id);
+  const pageCount=Math.max(1,Number(doc.pageCount)||Number(armViewer.getPageCount&&armViewer.getPageCount())||1);
   const mk=(label,s,e,conf,tasks,evidence)=>({
     id:stable("section",base+label+s+e),
     type:"SECTION",
@@ -47,9 +48,9 @@ function initialStructure(doc){
     mk("Criteria / rationale",4,5,.64,[{id:stable("criterion",base+"c1"),label:"Rubric / rationale",subtasks:[],evidence:{page:4,search:"criteria",snippet:"Criteria / rationale"},confirmed:false,human_created:false}])
   ];
   if(role==="LISTENING_SCRIPT")return[
-    mk("Part 1",1,1,.80,[{id:stable("media",base+"m1"),label:"Transcript Part 1",subtasks:[],evidence:{page:1,search:"Part 1",snippet:"Transcript Part 1"},confirmed:false,human_created:false}]),
-    mk("Part 2",2,2,.76,[{id:stable("media",base+"m2"),label:"Transcript Part 2",subtasks:[],evidence:{page:2,search:"Part 2",snippet:"Transcript Part 2"},confirmed:false,human_created:false}]),
-    mk("Part 3",3,3,.72,[{id:stable("media",base+"m3"),label:"Transcript Part 3",subtasks:[],evidence:{page:3,search:"Part 3",snippet:"Transcript Part 3"},confirmed:false,human_created:false}])
+    mk("Transcription",1,pageCount,.84,[
+      {id:stable("transcript",base+"part1"),label:"Part 1",subtasks:[],evidence:{page:1,search:"Part 1",snippet:"Transcription Part 1"},confirmed:false,human_created:false,proposal_source:"FILENAME_HEURISTIC"}
+    ],{page:1,search:"",snippet:"Listening transcription"})
   ];
   return[mk("Document",1,1,.55,[],{page:1,search:"",snippet:"Document"})];
 }
@@ -68,7 +69,11 @@ function recalcChildren(node){
 }
 
 function ensureStructure(doc){
-  const ds=docState(doc);
+  const ds=docState(doc),role=inferDocument(doc).values.role;
+  const legacyScriptDefault=role==="LISTENING_SCRIPT"&&Array.isArray(ds.pass2.nodes)&&ds.pass2.nodes.length===3&&
+    ds.pass2.nodes.map(n=>String(n.label||"")).join("|")==="Part 1|Part 2|Part 3"&&
+    ds.pass2.nodes.every(n=>!n.human_created&&!n.corrected&&!n.confirmed);
+  if(legacyScriptDefault)ds.pass2.nodes=null;
   if(!ds.pass2.nodes)ds.pass2.nodes=initialStructure(doc);
   ds.pass2.nodes.forEach(node=>{
     if(!node.proposal_source)node.proposal_source=node.human_created?"HUMAN":(doc.id==="6c7bf55e9532cd1b6960821ac4c91fa8ebc1a48cc5aafa5405ec73b7966aa932"?"CALIBRATION_PRESET":"FILENAME_HEURISTIC");
@@ -78,6 +83,10 @@ function ensureStructure(doc){
     recalcChildren(node);
   });
   return ds.pass2.nodes;
+}
+
+function invalidateStructure(doc){
+  docState(doc).pass2.confirmed=false;
 }
 
 function isListeningSection(node){
@@ -147,6 +156,7 @@ function createSection(doc){
   recalcChildren(node);
   selectedNode=node.id;
   selectedTask=null;
+  invalidateStructure(doc);
   armSave();
   renderPass2(doc);
 }
@@ -171,6 +181,7 @@ function createTask(doc){
   recalcChildren(node);
   selectedNode=node.id;
   selectedTask=task.id;
+  invalidateStructure(doc);
   armSave();
   renderPass2(doc);
 }
@@ -183,6 +194,7 @@ function deleteSelectedTask(doc,node,task){
   recalcChildren(node);
   selectedTask=null;
   selectedNode=node.id;
+  invalidateStructure(doc);
   armSave();
   renderPass2(doc);
 }
@@ -197,12 +209,16 @@ function deleteSelectedSection(doc,node){
   const next=nodes[Math.min(i,nodes.length-1)]||nodes[0]||null;
   selectedNode=next?next.id:null;
   selectedTask=null;
+  invalidateStructure(doc);
   armSave();
   renderPass2(doc);
 }
 
 function renderPass2(doc){
-  const nodes=ensureStructure(doc),tree=$("structureTree");
+  const ds=docState(doc),nodes=ensureStructure(doc),tree=$("structureTree");
+  const confirm=$("confirmStructure");
+  confirm.textContent=ds.pass2.confirmed?t("undoStructure"):t("confirmStructure");
+  confirm.classList.toggle("primary",ds.pass2.confirmed);
   const treePane=tree.closest(".pass2-tree-pane");
   const priorScroll=treePane?treePane.scrollTop:0;
   tree.innerHTML="";
@@ -317,6 +333,7 @@ function renderBoundaryEditor(doc,node,task=null){
   if(nodeLabel)nodeLabel.onchange=e=>{
     node.label=e.target.value.trim()||node.label;
     node.corrected=true;
+    invalidateStructure(doc);
     armSave();
     renderPass2(doc);
   };
@@ -325,6 +342,7 @@ function renderBoundaryEditor(doc,node,task=null){
   if(taskLabel)taskLabel.onchange=e=>{
     task.label=e.target.value.trim()||task.label;
     task.corrected=true;
+    invalidateStructure(doc);
     armSave();
     renderPass2(doc);
   };
@@ -339,6 +357,7 @@ function renderBoundaryEditor(doc,node,task=null){
     node.corrected=true;
     node.evidence={...(node.evidence||{}),page:start,source:"human-boundary"};
     recalcChildren(node);
+    invalidateStructure(doc);
     armSave();
     renderPass2(doc);
   };
@@ -356,6 +375,7 @@ function renderBoundaryEditor(doc,node,task=null){
     node.corrected=true;
     node.evidence={...(node.evidence||{}),page:node.start,source:"human-boundary"};
     recalcChildren(node);
+    invalidateStructure(doc);
     armSave();
     renderPass2(doc);
   });
@@ -374,6 +394,7 @@ function renderBoundaryEditor(doc,node,task=null){
     if(b.dataset.taskOp==="anchor-current"){
       task.evidence={...(task.evidence||{}),page:currentPdfPage(),search:"",snippet:task.label,source:"human"};
       task.corrected=true;
+      invalidateStructure(doc);
     }
     armSave();
     renderPass2(doc);
@@ -393,6 +414,7 @@ function renderBoundaryEditor(doc,node,task=null){
 function boundaryOp(doc,node,op){
   const nodes=ensureStructure(doc),i=nodes.findIndex(n=>n.id===node.id);
   if(op==="delete"){deleteSelectedSection(doc,node);return}
+  if(["left","right","split","merge"].includes(op))invalidateStructure(doc);
   if(op==="accept"){node.confirmed=true;node.confidence=1}
   if(op==="left"&&node.start>1){
     node.start--;
@@ -446,13 +468,13 @@ function bindPass2(){
   };
 
   $("confirmStructure").onclick=()=>{
-    const ds=docState(docs[current]);
-    ensureStructure(docs[current]).forEach(n=>{
-      n.confirmed=true;
-      (n.tasks||[]).forEach(t=>t.confirmed=true);
+    const doc=docs[current],ds=docState(doc),next=!ds.pass2.confirmed;
+    ensureStructure(doc).forEach(n=>{
+      n.confirmed=next;
+      (n.tasks||[]).forEach(t=>t.confirmed=next);
     });
-    ds.pass2.confirmed=true;
+    ds.pass2.confirmed=next;
     armSave();
-    renderPass2(docs[current]);
+    renderPass2(doc);
   };
 }
