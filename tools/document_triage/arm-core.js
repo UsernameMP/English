@@ -1,5 +1,32 @@
 const ARM_STORE="corpus-assessor-arm-v1";
 let sourceUrls={},docs=[],current=0,armState=JSON.parse(localStorage.getItem(ARM_STORE)||"{}"),selectedNode=null,conflictsOnly=false,unresolvedOnly=false;
+
+const REGION_CODES={
+  lenobl:"Ленинградская область",
+  kaluga:"Калужская область",
+  omsk:"Омская область",
+  novgorod:"Новгородская область",
+  kamchat:"Камчатский край",
+  kamchatka:"Камчатский край",
+  chel:"Челябинская область",
+  bash:"Республика Башкортостан",
+  irk:"Иркутская область"
+};
+
+const PASS1_EVIDENCE_OVERRIDES={
+  "6c7bf55e9532cd1b6960821ac4c91fa8ebc1a48cc5aafa5405ec73b7966aa932":{
+    role:{page:1,search:"Вам предстоит выполнить задания письменного тура",snippet:"Вам предстоит выполнить задания письменного тура",source:"document"},
+    subject:{page:1,search:"Английский язык",snippet:"Английский язык",source:"document"},
+    language:{page:1,search:"Английский язык",snippet:"Английский язык",source:"document"},
+    academic_year:{page:1,search:"2024 – 2025 учебный год",snippet:"2024 – 2025 учебный год",source:"document"},
+    grades:{page:1,search:"9 – 11 класс",snippet:"9 – 11 класс",source:"document"},
+    competition:{page:1,search:"Всероссийская олимпиада школьников",snippet:"Всероссийская олимпиада школьников",source:"document"},
+    stage:{page:1,search:"Муниципальный этап",snippet:"Муниципальный этап",source:"document"},
+    tour:{page:1,search:"письменного тура",snippet:"задания письменного тура",source:"document"},
+    region:{page:1,search:"Ленинградская область",snippet:"Ленинградская область",source:"document"},
+    problemset:{page:1,search:"Ленинградская область",snippet:"Ленинградская область · 2024-2025 · муниципальный этап · 9-11 класс",source:"derived"}
+  }
+};
 const $=id=>document.getElementById(id);
 
 function armSave(){localStorage.setItem(ARM_STORE,JSON.stringify(armState));renderProgress()}
@@ -16,17 +43,29 @@ function inferDocument(doc){
   const gr=name.match(/engl-(\d+)-(\d+)/); const grades=gr?(gr[1]+"-"+gr[2]):"UNKNOWN";
   const stage=name.includes("-mun-")?"MUNICIPAL":name.includes("-reg-")?"REGIONAL":"UNKNOWN";
   const tour=name.includes("-pism-")?"WRITTEN":name.includes("-ustn-")?"ORAL":"UNKNOWN";
-  const rm=name.match(/-(?:mun|reg)-([a-z0-9]+)-\d{2}-\d{2}\.pdf$/); const region=rm?rm[1].toUpperCase():"UNKNOWN";
+  const rm=name.match(/-(?:mun|reg)-([a-z0-9]+)-\d{2}-\d{2}\.pdf$/); const rawRegion=rm?rm[1].toLowerCase():""; const region=rawRegion?(REGION_CODES[rawRegion]||rawRegion.toUpperCase()):"UNKNOWN";
   const values={role,subject:"ENGLISH",language:"EN",academic_year,grades,competition:"VSOSh",stage,tour,region,problemset:canonicalStem(doc.filename)};
   const confidence={role:.99,subject:.99,language:.99,academic_year:academic_year==="UNKNOWN"?.45:.98,grades:grades==="UNKNOWN"?.45:.98,competition:.96,stage:stage==="UNKNOWN"?.55:.97,tour:tour==="UNKNOWN"?.55:.97,region:region==="UNKNOWN"?.52:.88,problemset:.91};
-  const evidence={};Object.keys(values).forEach((k,i)=>evidence[k]={page:1,bbox:[.05,.04+i*.006,.9,.085+i*.006],label:k==="role"?"filename + page header":"page 1 header / source metadata"});
+  const evidence={};
+  Object.keys(values).forEach(k=>evidence[k]={
+    page:1,
+    search:"",
+    snippet:"",
+    source:"filename",
+    label:k==="role"?"source filename":"source metadata / filename"
+  });
+  Object.assign(evidence,PASS1_EVIDENCE_OVERRIDES[doc.id]||{});
   return {values,confidence,evidence};
 }
 function focusEvidence(ev){
-  const doc=docs[current];$("pdfFrame").src=doc.url+"#page="+ev.page+"&zoom=page-width";
-  const h=$("evidenceHighlight");h.classList.remove("hidden");
-  h.style.left=(ev.bbox[0]*100)+"%";h.style.top=(ev.bbox[1]*100)+"%";h.style.width=((ev.bbox[2]-ev.bbox[0])*100)+"%";h.style.height=((ev.bbox[3]-ev.bbox[1])*100)+"%";
-  $("viewerHint").textContent="Evidence: "+ev.label;clearTimeout(window.__ev);window.__ev=setTimeout(()=>h.classList.add("hidden"),2500);
+  const doc=docs[current];
+  const page=Math.max(1,Number(ev&&ev.page||1));
+  let hash="#page="+page+"&zoom=page-width";
+  if(ev&&ev.search)hash+="&search="+encodeURIComponent(ev.search);
+  $("pdfFrame").src=doc.url+hash;
+  $("evidenceHighlight").classList.add("hidden");
+  const detail=(ev&&ev.snippet)?(' · "'+ev.snippet+'"'):"";
+  $("viewerHint").textContent="Evidence · page "+page+detail;
 }
 function renderProgress(){const n=docs.filter(d=>armState[d.id]&&armState[d.id].pass1&&armState[d.id].pass1.status==="CONFIRMED").length;$("globalProgress").textContent=n+"/"+docs.length+" confirmed"}
 function switchPass(pass){document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.pass===pass));document.querySelectorAll(".pass-view").forEach(v=>v.classList.toggle("active",v.id===pass))}
