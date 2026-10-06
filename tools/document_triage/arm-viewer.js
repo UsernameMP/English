@@ -163,7 +163,15 @@ const armViewer=(()=>{
       if(hint)hint.textContent="Evidence · page "+pageNo+" · bbox unavailable";
     }
     const host=viewer();
-    const targetTop=Math.max(0,shell.offsetTop-(host.clientHeight-shell.clientHeight)/2);
+    let focusY=shell.offsetTop+shell.clientHeight/2;
+    if(p&&boxes.length){
+      const sy=shell.clientHeight/Number(p.height||shell.clientHeight);
+      const minY=Math.min(...boxes.map(b=>Number(b[1])));
+      const maxY=Math.max(...boxes.map(b=>Number(b[3])));
+      focusY=shell.offsetTop+((minY+maxY)/2)*sy;
+    }
+    const maxScroll=Math.max(0,host.scrollHeight-host.clientHeight);
+    const targetTop=Math.max(0,Math.min(maxScroll,focusY-host.clientHeight/2));
     host.scrollTo({top:targetTop,behavior:"smooth"});
   }
 
