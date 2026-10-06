@@ -7,12 +7,58 @@ from typing import Any, Iterable
 
 GRAPH_SCHEMA_VERSION = "corpus-graph.v1"
 
+ENTITY_KINDS = {
+    "problemset",
+    "asset",
+    "section",
+    "task",
+    "subtask",
+    "answer",
+    "criterion",
+    "media",
+}
+
+
 ROLE_PREFIX_RE = re.compile(r"^(tasks?|ans(?:wers?)?|criteria|script|solutions?|audio)[-_]", re.I)
 
 
 def stable_id(kind: str, *parts: str) -> str:
     material = "|".join(str(p).strip().lower() for p in parts)
     return f"{kind}_{hashlib.sha1(material.encode('utf-8')).hexdigest()[:20]}"
+
+
+def entity_id(kind: str, parent_id: str, source_anchor: str, semantic_key: str = "") -> str:
+    """Stable ID for canonical corpus entities, independent from parser version."""
+    if kind not in ENTITY_KINDS:
+        raise ValueError(f"unsupported_entity_kind:{kind}")
+    return stable_id(kind, parent_id, source_anchor, semantic_key)
+
+
+@dataclass(frozen=True)
+class GraphNode:
+    kind: str
+    parent_id: str
+    source_anchor: str
+    semantic_key: str = ""
+    provenance: dict[str, Any] | None = None
+
+    @property
+    def id(self) -> str:
+        return entity_id(self.kind, self.parent_id, self.source_anchor, self.semantic_key)
+
+
+@dataclass
+class GraphEdge:
+    source_id: str
+    target_id: str
+    edge_type: str
+    confidence: float
+    provenance: dict[str, Any]
+    human_decision: str = "UNREVIEWED"
+
+    @property
+    def id(self) -> str:
+        return stable_id("edge", self.source_id, self.target_id, self.edge_type)
 
 
 def canonical_bundle_key(filename: str) -> str:
