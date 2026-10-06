@@ -71,7 +71,7 @@ def extract_pdf_layout(pdf_bytes: bytes, document_sha256: str) -> dict[str, Any]
                             "size": _r(raw_span.get("size", 0)),
                             "flags": int(raw_span.get("flags", 0)),
                             "color": int(raw_span.get("color", 0)),
-                            "origin": [*_bbox((*raw_span.get("origin", (0, 0)), *raw_span.get("origin", (0, 0))))[:2]],
+                            "origin": [_r((raw_span.get("origin") or (0, 0))[0]), _r((raw_span.get("origin") or (0, 0))[1])],
                             "source": {"page": page_number, "block": len(blocks), "line": line_index, "span": span_index},
                         }
                     )
