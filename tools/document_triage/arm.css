@@ -37,3 +37,16 @@ button:hover,.buttonlike:hover{background:#f4f7f9}button.primary{background:#182
 .boundary-range input{margin-top:4px}
 .boundary-source-actions{display:flex;gap:6px;flex-wrap:wrap;margin:7px 0 11px}
 .missing-audio{border:1px solid #e3b5b5;background:#fff6f6;color:#8a3434;border-radius:9px;padding:10px;margin:10px 0;font-size:12px}
+
+.locale-switch{display:flex;align-items:center;gap:7px;font-size:12px;color:#667684}
+.locale-switch select{border:1px solid #ccd6df;border-radius:7px;padding:6px 8px;background:#fff}
+.field-control{display:grid;gap:5px;min-width:0}
+.field-control .human-input{min-width:0}
+.link-review{align-items:flex-start}
+.link-main{min-width:0;flex:1}
+.link-question{font-weight:750;font-size:13px;margin-bottom:4px}
+.link-target{font-size:12px;margin-bottom:4px;word-break:break-word}
+.technical-details{margin-top:7px;font-size:11px;color:#60707d}
+.technical-details summary{cursor:pointer}
+.technical-details pre{white-space:pre-wrap;word-break:break-word;background:#f6f8fa;padding:7px;border-radius:6px;max-width:100%}
+.edge-actions{flex-wrap:wrap;justify-content:flex-end;max-width:170px}
