@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Corpus Assessor Workbench</title>
+<link rel="stylesheet" href="arm.css">
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <div class="eyebrow">OlympiadCorpus</div>
+    <h1>Corpus Assessor Workbench</h1>
+  </div>
+  <div class="top-actions">
+    <span id="globalProgress" class="muted"></span>
+    <button id="exportState">Export audit JSON</button>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" data-pass="pass1">Pass 1 · Document + ProblemSet</button>
+  <button class="tab" data-pass="pass2">Pass 2 · Sections + Tasks</button>
+  <button class="tab" data-pass="links">Links · Answers / Criteria / Media</button>
+</nav>
+
+<main class="workspace">
+  <section class="viewer-pane">
+    <div class="viewer-toolbar">
+      <button id="prevDoc">←</button>
+      <button id="nextDoc">→</button>
+      <span id="docIndex" class="pill"></span>
+      <span id="docSha" class="mono grow"></span>
+      <span id="viewerHint" class="muted"></span>
+      <a id="openSource" class="buttonlike" target="_blank" rel="noopener">Open source</a>
+    </div>
+    <div class="viewer-wrap">
+      <iframe id="pdfFrame" title="Source document"></iframe>
+      <div id="evidenceHighlight" class="evidence-highlight hidden"></div>
+    </div>
+  </section>
+
+  <aside class="review-pane">
+    <section id="pass1" class="pass-view active">
+      <div class="section-head">
+        <div>
+          <h2>Machine profile</h2>
+          <p>Подтверди весь профиль одним действием или исправь только ошибки.</p>
+        </div>
+        <div class="button-row">
+          <button id="needsReview">Needs review</button>
+          <button id="confirmDocument" class="primary">Confirm document</button>
+        </div>
+      </div>
+      <div id="profileRows" class="profile-grid"></div>
+
+      <div class="card">
+        <div class="section-head compact">
+          <div>
+            <h3>ProblemSet proposal</h3>
+            <p>Предлагаемый комплект связанных assets.</p>
+          </div>
+          <button id="confirmBundle">Confirm bundle</button>
+        </div>
+        <div id="bundleCard"></div>
+      </div>
+
+      <div class="card">
+        <h3>Audit</h3>
+        <div id="pass1Audit" class="audit-box"></div>
+      </div>
+    </section>
+
+    <section id="pass2" class="pass-view">
+      <div class="section-head">
+        <div>
+          <h2>Section / Task boundary review</h2>
+          <p>Машина предлагает дерево. Человек подтверждает или правит границы.</p>
+        </div>
+        <div class="button-row">
+          <button id="conflictsOnly">Conflicts only</button>
+          <button id="confirmStructure" class="primary">Confirm structure</button>
+        </div>
+      </div>
+      <div class="split-grid">
+        <div>
+          <div class="subhead">Structure tree</div>
+          <div id="structureTree" class="tree"></div>
+        </div>
+        <div>
+          <div class="subhead">Boundary actions</div>
+          <div id="boundaryEditor" class="card sticky-card"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="links" class="pass-view">
+      <div class="section-head">
+        <div>
+          <h2>Answer / Criteria / Media links</h2>
+          <p>В первую очередь — unresolved и ambiguous связи.</p>
+        </div>
+        <div class="button-row">
+          <button id="unresolvedOnly">Unresolved only</button>
+          <button id="confirmLinks" class="primary">Confirm suggested links</button>
+        </div>
+      </div>
+      <div id="coverageCards" class="coverage-grid"></div>
+      <div class="card">
+        <h3>Proposed links</h3>
+        <div id="linkTable"></div>
+      </div>
+      <div class="card">
+        <h3>Exception queue</h3>
+        <div id="exceptions"></div>
+      </div>
+    </section>
+  </aside>
+</main>
+
+<script src="arm.js"></script>
+</body>
+</html>
