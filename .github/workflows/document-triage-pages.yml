@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "tools/document_triage/**"
+      - "tools/corpus_ingest/layout.py"
       - ".github/workflows/document-triage-pages.yml"
   workflow_dispatch:
 
@@ -26,6 +27,84 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install layout dependency
+        run: pip install "PyMuPDF>=1.24,<2"
+
+      - name: Build review assets
+        run: |
+          python - <<'PY'
+          import hashlib
+          import importlib.util
+          import json
+          import urllib.error
+          import urllib.request
+          from pathlib import Path
+
+          root = Path("tools/document_triage")
+          assets = root / "assets"
+          assets.mkdir(parents=True, exist_ok=True)
+          sources = json.loads((root / "source_urls.json").read_text(encoding="utf-8"))
+
+          spec = importlib.util.spec_from_file_location("layout", "tools/corpus_ingest/layout.py")
+          layout_mod = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(layout_mod)
+
+          manifest = {}
+
+          def download(url: str, target: Path) -> bool:
+              req = urllib.request.Request(url, headers={"User-Agent": "OlympiadCorpus-Review/1.0"})
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as response:
+                      target.write_bytes(response.read())
+                  return True
+              except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as exc:
+                  print(f"skip {url}: {exc}")
+                  return False
+
+          for sha, source_url in sources.items():
+              pdf_path = assets / f"{sha}.pdf"
+              if not download(source_url, pdf_path):
+                  continue
+
+              data = pdf_path.read_bytes()
+              actual = hashlib.sha256(data).hexdigest()
+              if actual != sha:
+                  raise RuntimeError(f"sha mismatch for {sha}: {actual}")
+
+              layout = layout_mod.extract_pdf_layout(data, sha)
+              layout_path = assets / f"{sha}.layout.json"
+              layout_path.write_bytes(layout_mod.dumps_layout(layout))
+
+              item = {
+                  "pdf": f"assets/{sha}.pdf",
+                  "layout": f"assets/{sha}.layout.json",
+                  "source_pdf": source_url,
+              }
+
+              name = source_url.rsplit("/", 1)[-1]
+              if name.startswith("tasks-") and name.endswith(".pdf"):
+                  audio_name = "audio-" + name[len("tasks-"):-4] + ".mp3"
+                  audio_source = source_url.rsplit("/", 1)[0] + "/" + audio_name
+                  audio_path = assets / f"{sha}.mp3"
+                  if download(audio_source, audio_path):
+                      item["audio"] = f"assets/{sha}.mp3"
+                      item["source_audio"] = audio_source
+                      item["audio_sha256"] = hashlib.sha256(audio_path.read_bytes()).hexdigest()
+
+              manifest[sha] = item
+
+          (root / "deployed_assets.json").write_text(
+              json.dumps(manifest, ensure_ascii=False, indent=2),
+              encoding="utf-8",
+          )
+          print(json.dumps({k: list(v) for k, v in manifest.items()}, ensure_ascii=False, indent=2))
+          PY
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
