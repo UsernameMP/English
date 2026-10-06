@@ -1,4 +1,4 @@
-const ARM_STORE="corpus-assessor-arm-v1";
+const ARM_STORE="corpus-assessor-arm-v2";
 let sourceUrls={},docs=[],current=0,armState=JSON.parse(localStorage.getItem(ARM_STORE)||"{}"),selectedNode=null,conflictsOnly=false,unresolvedOnly=false;
 
 const REGION_CODES={
