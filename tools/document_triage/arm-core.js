@@ -1,5 +1,5 @@
-const ARM_STORE="corpus-assessor-arm-v2";
-let sourceUrls={},docs=[],current=0,armState=JSON.parse(localStorage.getItem(ARM_STORE)||"{}"),selectedNode=null,conflictsOnly=false,unresolvedOnly=false;
+const ARM_STORE="corpus-assessor-arm-v3";
+let sourceUrls={},deployedAssets={},docs=[],current=0,armState=JSON.parse(localStorage.getItem(ARM_STORE)||"{}"),selectedNode=null,conflictsOnly=false,unresolvedOnly=false;
 
 const REGION_CODES={
   lenobl:"Ленинградская область",
@@ -58,25 +58,75 @@ function inferDocument(doc){
   return {values,confidence,evidence};
 }
 function focusEvidence(ev){
-  const doc=docs[current];
-  const page=Math.max(1,Number(ev&&ev.page||1));
-  let hash="#page="+page+"&zoom=page-width";
-  if(ev&&ev.search)hash+="&search="+encodeURIComponent(ev.search);
-  $("pdfFrame").src=doc.url+hash;
-  $("evidenceHighlight").classList.add("hidden");
-  const detail=(ev&&ev.snippet)?(' · "'+ev.snippet+'"'):"";
-  $("viewerHint").textContent="Evidence · page "+page+detail;
+  return armViewer.focusEvidence(ev);
+}
+function renderAudioDock(doc){
+  const dock=$("audioDock"),player=$("audioPlayer");
+  if(!doc.audioUrl){
+    dock.classList.add("hidden");
+    player.pause();
+    player.removeAttribute("src");
+    player.load();
+    return;
+  }
+  dock.classList.remove("hidden");
+  $("audioLabel").textContent="Listening audio";
+  $("audioProvenance").textContent=doc.audioSha?("sha256 "+doc.audioSha.slice(0,12)+"…"):"linked media";
+  $("openAudio").href=doc.audioSource||doc.audioUrl;
+  if(player.getAttribute("src")!==doc.audioUrl){
+    player.src=doc.audioUrl;
+    player.load();
+  }
 }
 function renderProgress(){const n=docs.filter(d=>armState[d.id]&&armState[d.id].pass1&&armState[d.id].pass1.status==="CONFIRMED").length;$("globalProgress").textContent=n+"/"+docs.length+" confirmed"}
 function switchPass(pass){document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.pass===pass));document.querySelectorAll(".pass-view").forEach(v=>v.classList.toggle("active",v.id===pass))}
 function renderDoc(){
-  const doc=docs[current];if(!doc)return;$("docIndex").textContent=(current+1)+" / "+docs.length;$("docSha").textContent=doc.id;$("openSource").href=doc.url;$("pdfFrame").src=doc.url+"#page=1&zoom=page-width";$("viewerHint").textContent="";
-  renderPass1(doc);selectedNode=null;renderPass2(doc);renderLinks(doc);renderProgress();
+  const doc=docs[current];if(!doc)return;
+  $("docIndex").textContent=(current+1)+" / "+docs.length;
+  $("docSha").textContent=doc.id;
+  $("openSource").href=doc.url;
+  $("viewerHint").textContent="";
+  renderAudioDock(doc);
+  armViewer.load(doc).catch(e=>{
+    console.error(e);
+    $("viewerHint").textContent="PDF viewer failed: "+e.message;
+  });
+  renderPass1(doc);
+  selectedNode=null;
+  renderPass2(doc);
+  renderLinks(doc);
+  renderProgress();
 }
 function downloadAudit(){const blob=new Blob([JSON.stringify({schema_version:"assessor-audit.v1",exported_at:new Date().toISOString(),state:armState},null,2)],{type:"application/json"}),u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="corpus_assessor_audit.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),500)}
 async function initArm(){
-  sourceUrls=await fetch("source_urls.json",{cache:"no-store"}).then(r=>r.json());docs=Object.entries(sourceUrls).map(x=>({id:x[0],url:x[1],filename:armFilename(x[1])}));
-  document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>switchPass(t.dataset.pass));$("prevDoc").onclick=()=>{current=(current-1+docs.length)%docs.length;renderDoc()};$("nextDoc").onclick=()=>{current=(current+1)%docs.length;renderDoc()};$("exportState").onclick=downloadAudit;
+  sourceUrls=await fetch("source_urls.json",{cache:"no-store"}).then(r=>r.json());
+  try{
+    const r=await fetch("deployed_assets.json",{cache:"no-store"});
+    deployedAssets=r.ok?await r.json():{};
+  }catch(e){
+    console.warn("deployed_assets unavailable",e);
+    deployedAssets={};
+  }
+  docs=Object.entries(sourceUrls).map(([id,url])=>{
+    const asset=deployedAssets[id]||{};
+    return {
+      id,
+      url,
+      filename:armFilename(url),
+      viewerUrl:asset.pdf||url,
+      layoutUrl:asset.layout||null,
+      audioUrl:asset.audio||null,
+      audioSource:asset.source_audio||null,
+      audioSha:asset.audio_sha256||null
+    };
+  });
+  document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>switchPass(t.dataset.pass));
+  $("prevDoc").onclick=()=>{current=(current-1+docs.length)%docs.length;renderDoc()};
+  $("nextDoc").onclick=()=>{current=(current+1)%docs.length;renderDoc()};
+  $("zoomOut").onclick=()=>armViewer.zoomOut();
+  $("zoomIn").onclick=()=>armViewer.zoomIn();
+  $("fitWidth").onclick=()=>armViewer.fitWidth();
+  $("exportState").onclick=downloadAudit;
   bindPass1();bindPass2();bindLinks();renderDoc();
 }
 window.addEventListener("DOMContentLoaded",()=>initArm().catch(e=>{$("viewerHint").textContent="Initialization failed: "+e.message;console.error(e)}));
