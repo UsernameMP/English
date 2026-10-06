@@ -20,7 +20,24 @@ function initialStructure(doc){
   ];
   return[mk("Document",1,1,.55,[])];
 }
-function ensureStructure(doc){const ds=docState(doc);if(!ds.pass2.nodes)ds.pass2.nodes=initialStructure(doc);return ds.pass2.nodes}
+function recalcChildren(node){
+  const span={page_start:node.start,page_end:node.end};
+  (node.tasks||[]).forEach((task,index)=>{
+    task.span={...span};
+    (task.subtasks||[]).forEach((subtask,subIndex)=>{
+      if(typeof subtask==="string")return;
+      subtask.span={...span};
+      subtask.order=subIndex;
+    });
+    task.order=index;
+  });
+}
+function ensureStructure(doc){
+  const ds=docState(doc);
+  if(!ds.pass2.nodes)ds.pass2.nodes=initialStructure(doc);
+  ds.pass2.nodes.forEach(recalcChildren);
+  return ds.pass2.nodes
+}
 function renderPass2(doc){
   const nodes=ensureStructure(doc),tree=$("structureTree");tree.innerHTML="";
   const shown=conflictsOnly?nodes.filter(n=>n.confidence<.8):nodes;
@@ -43,9 +60,9 @@ function boundaryOp(doc,node,op){
   if(op==="accept"){node.confirmed=true;node.confidence=1}
   if(op==="left"&&i>0&&node.start>1){node.start--;nodes[i-1].end=Math.max(nodes[i-1].start,node.start-1);node.corrected=true}
   if(op==="right"&&i<nodes.length-1){node.end++;nodes[i+1].start=Math.max(node.end+1,nodes[i+1].start);node.corrected=true}
-  if(op==="split"&&node.end>node.start){const mid=Math.floor((node.start+node.end)/2),copy=structuredClone(node);node.end=mid;copy.start=mid+1;copy.id=stable("section",doc.id+copy.label+copy.start+copy.end+Date.now());copy.label=node.label+" B";node.label=node.label+" A";copy.confidence=Math.min(copy.confidence,.72);nodes.splice(i+1,0,copy)}
-  if(op==="merge"&&i<nodes.length-1){const next=nodes[i+1];node.end=Math.max(node.end,next.end);node.tasks=[...node.tasks,...next.tasks];node.label=node.label+" + "+next.label;node.corrected=true;nodes.splice(i+1,1)}
-  armSave();selectedNode=node.id;renderPass2(doc);renderBoundaryEditor(doc,node);
+  if(op==="split"&&node.end>node.start){const mid=Math.floor((node.start+node.end)/2),copy=structuredClone(node),cut=Math.ceil((node.tasks||[]).length/2);node.end=mid;copy.start=mid+1;copy.id=stable("section",doc.id+copy.label+copy.start+copy.end+Date.now());copy.label=node.label+" B";node.label=node.label+" A";copy.confidence=Math.min(copy.confidence,.72);copy.tasks=(node.tasks||[]).slice(cut);node.tasks=(node.tasks||[]).slice(0,cut);recalcChildren(node);recalcChildren(copy);nodes.splice(i+1,0,copy)}
+  if(op==="merge"&&i<nodes.length-1){const next=nodes[i+1];node.end=Math.max(node.end,next.end);node.tasks=[...(node.tasks||[]),...(next.tasks||[])];node.label=node.label+" + "+next.label;node.corrected=true;recalcChildren(node);nodes.splice(i+1,1)}
+  nodes.forEach(recalcChildren);armSave();selectedNode=node.id;renderPass2(doc);renderBoundaryEditor(doc,node);
 }
 function bindPass2(){
   $("conflictsOnly").onclick=()=>{conflictsOnly=!conflictsOnly;$("conflictsOnly").textContent=conflictsOnly?"Show all":"Conflicts only";renderPass2(docs[current])};
