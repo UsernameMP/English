@@ -1,5 +1,5 @@
 const ARM_STORE="corpus-assessor-arm-v3";
-let sourceUrls={},deployedAssets={},docs=[],current=0,armState=JSON.parse(localStorage.getItem(ARM_STORE)||"{}"),selectedNode=null,conflictsOnly=false,unresolvedOnly=false;
+let sourceUrls={},deployedAssets={},docs=[],current=0,armState=JSON.parse(localStorage.getItem(ARM_STORE)||"{}"),selectedNode=null,selectedTask=null,conflictsOnly=false,unresolvedOnly=false;
 
 const REGION_CODES={
   lenobl:"Ленинградская область",
@@ -60,6 +60,40 @@ function inferDocument(doc){
 function focusEvidence(ev){
   return armViewer.focusEvidence(ev);
 }
+function formatAudioTime(sec){
+  sec=Math.max(0,Number(sec)||0);
+  const m=Math.floor(sec/60),s=Math.floor(sec%60);
+  return m+":"+String(s).padStart(2,"0");
+}
+function updateContextAudioTime(){
+  const el=document.getElementById("contextAudioTime"),player=document.getElementById("audioPlayer");
+  if(!el||!player)return;
+  const dur=Number.isFinite(player.duration)?formatAudioTime(player.duration):"--:--";
+  el.textContent=formatAudioTime(player.currentTime)+" / "+dur;
+}
+function audioPlayFrom(sec=null){
+  const player=$("audioPlayer");
+  if(!player||!player.src)return;
+  if(sec!=null&&Number.isFinite(Number(sec)))player.currentTime=Math.max(0,Number(sec));
+  const p=player.play();
+  if(p&&typeof p.catch==="function")p.catch(()=>{});
+  updateContextAudioTime();
+}
+function audioToggle(){
+  const player=$("audioPlayer");
+  if(!player||!player.src)return;
+  if(player.paused)audioPlayFrom();
+  else player.pause();
+}
+function audioSeek(delta){
+  const player=$("audioPlayer");
+  if(!player||!player.src)return;
+  player.currentTime=Math.max(0,Math.min(Number.isFinite(player.duration)?player.duration:Infinity,player.currentTime+delta));
+  updateContextAudioTime();
+}
+function audioRestart(){
+  audioPlayFrom(0);
+}
 function renderAudioDock(doc){
   const dock=$("audioDock"),player=$("audioPlayer");
   if(!doc.audioUrl){
@@ -77,9 +111,15 @@ function renderAudioDock(doc){
     player.src=doc.audioUrl;
     player.load();
   }
+  updateContextAudioTime();
 }
 function renderProgress(){const n=docs.filter(d=>armState[d.id]&&armState[d.id].pass1&&armState[d.id].pass1.status==="CONFIRMED").length;$("globalProgress").textContent=n+"/"+docs.length+" confirmed"}
-function switchPass(pass){document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.pass===pass));document.querySelectorAll(".pass-view").forEach(v=>v.classList.toggle("active",v.id===pass))}
+function switchPass(pass){
+  document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.pass===pass));
+  document.querySelectorAll(".pass-view").forEach(v=>v.classList.toggle("active",v.id===pass));
+  const review=document.querySelector(".review-pane");
+  if(review)review.classList.toggle("pass2-mode",pass==="pass2");
+}
 function renderDoc(){
   const doc=docs[current];if(!doc)return;
   $("docIndex").textContent=(current+1)+" / "+docs.length;
@@ -93,6 +133,7 @@ function renderDoc(){
   });
   renderPass1(doc);
   selectedNode=null;
+  selectedTask=null;
   renderPass2(doc);
   renderLinks(doc);
   renderProgress();
@@ -127,6 +168,8 @@ async function initArm(){
   $("zoomIn").onclick=()=>armViewer.zoomIn();
   $("fitWidth").onclick=()=>armViewer.fitWidth();
   $("exportState").onclick=downloadAudit;
+  const player=$("audioPlayer");
+  ["timeupdate","loadedmetadata","durationchange","play","pause"].forEach(evt=>player.addEventListener(evt,updateContextAudioTime));
   bindPass1();bindPass2();bindLinks();renderDoc();
 }
 window.addEventListener("DOMContentLoaded",()=>initArm().catch(e=>{$("viewerHint").textContent="Initialization failed: "+e.message;console.error(e)}));
