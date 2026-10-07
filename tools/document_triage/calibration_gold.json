@@ -5,7 +5,7 @@
     "exported_at": "2026-10-07T15:13:03.597Z",
     "document_count": 10,
     "policy": "Human-confirmed audit is calibration evidence, not blindly trusted ground truth. Any anchor outside its parent span is flagged NEEDS_BOUNDARY_RECHECK.",
-    "normalization_revision": "2026-10-07.layout-verified-r2",
+    "normalization_revision": "2026-10-07.layout-verified-r3",
     "notes": [
       "10-document human audit was cross-checked against canonical layout JSON.",
       "Known stale UI anchors were corrected instead of being promoted to ground truth.",
@@ -752,7 +752,7 @@
           "page_end": 6,
           "tasks": [
             {
-              "label": "Writing task",
+              "label": "Essay",
               "anchor_page": 6,
               "kind": "EXTENDED_RESPONSE",
               "parts": [],
