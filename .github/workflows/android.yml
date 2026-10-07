@@ -49,6 +49,9 @@ jobs:
           test -f app/src/main/assets/games/bubble/bubble-shooter.html
           test -f app/src/main/assets/games/cozy/LICENSE
           test -f app/src/main/assets/games/cozy/index.html
+          test -f app/src/main/assets/game_custom/match3/index.html
+          test -f app/src/main/assets/game_custom/match3/game.js
+          node --check app/src/main/assets/game_custom/match3/game.js
 
       - name: Validate content bank
         run: python3 scripts/validate_content.py
