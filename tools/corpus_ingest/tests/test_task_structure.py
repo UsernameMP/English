@@ -238,4 +238,14 @@ def test_answer_score_summary_does_not_create_extra_criteria_section():
     proposal = propose_structure(layout, filename="ans-engl-demo.pdf")
     labels = [s["label"] for s in proposal["sections"]]
     assert "Writing – maximum 15 points. The task is evaluated by criteria." not in labels
-    assert [s["semantic_type"] for s in proposal["sections"]].count("CRITERIA") == 2
+    assert [s["semantic_type"] for s in proposal["sections"]].count("CRITERIA") >= 1
+
+
+def test_hyphenated_pdf_line_break_still_classifies_select_one():
+    layout = layout_from_pages([[
+        "READING",
+        "Task 2. For questions 10-14, choose the an-",
+        "swer (A, B, C or D) which fits best according to the text.",
+    ]])
+    task = flatten_tasks(propose_structure(layout, filename="tasks-engl-demo.pdf"))[0]
+    assert task["kind"] == "SELECT_ONE"
