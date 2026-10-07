@@ -8,28 +8,38 @@ from typing import Any
 SCHEMA_VERSION = "structure-proposal.v2"
 
 TASK_RE = re.compile(
-    r"^\s*(?:task|problem|question|exercise|задача|задание|вопрос)\s*"
+    r"^\s*(?:task|problem|question|exercise|задача|задание|вопрос)\b\s*"
     r"(?:№\s*)?([0-9]{1,3}|[A-ZА-Я])\b[\s.):-]*(.*)$",
     re.I,
 )
-PART_RE = re.compile(
-    r"^\s*(?:part|часть)\s*(?:№\s*)?([0-9]{1,3}|[A-ZА-Я])\b[\s.):-]*(.*)$",
+TASK_OCCURRENCE_RE = re.compile(
+    r"(?:^|\s)(?:task|problem|question|exercise|задача|задание|вопрос)\b\s*"
+    r"(?:№\s*)?([0-9]{1,3}|[A-ZА-Я])\b",
     re.I,
 )
-ITEM_RE = re.compile(r"^\s*([0-9]{1,3})[.)]\s+\S")
+PART_RE = re.compile(
+    r"^\s*(?:part|часть)\b\s*(?:№\s*)?([0-9]{1,3}|[A-ZА-Я])\b[\s.):-]*(.*)$",
+    re.I,
+)
+ITEM_RE = re.compile(r"^\s*([0-9]{1,3})(?:[.)])?\s+\S")
+RANGE_RE = re.compile(
+    r"\b(?:questions?|items?|gaps?|sentences?)\s*(?:№\s*)?"
+    r"([0-9]{1,3})\s*[-–—]\s*([0-9]{1,3})\b",
+    re.I,
+)
 SET_RE = re.compile(r"^\s*(?:speaking\s+)?set\s*([0-9]{1,3}|[A-Z])\b", re.I)
 
 SECTION_PATTERNS = [
     ("LISTENING", re.compile(r"^\s*listening\b", re.I)),
     ("READING", re.compile(r"^\s*reading\b", re.I)),
     ("USE_OF_ENGLISH", re.compile(r"^\s*use\s+of\s+english\b", re.I)),
-    ("WRITING", re.compile(r"^\s*writing\b", re.I)),
     ("SPEAKING_SET", re.compile(r"^\s*(?:speaking\s+)?set\s*[0-9A-Z]+\b", re.I)),
     ("SPEAKING", re.compile(r"^\s*speaking\b", re.I)),
-    ("TRANSCRIPTION", re.compile(r"^\s*(?:transcription|transcript)\b", re.I)),
-    ("ANSWERS", re.compile(r"^\s*(?:listening|reading|use\s+of\s+english)?\s*answers?\b", re.I)),
-    ("CRITERIA", re.compile(r"^\s*(?:criteria|критерии\b|критерии\s+оценивания)", re.I)),
+    ("TRANSCRIPTION", re.compile(r"^\s*(?:transcription|transcript|tapescript)\b", re.I)),
+    ("CRITERIA", re.compile(r"^\s*(?:criteria\b|критерии\b)", re.I)),
     ("METHODOLOGY", re.compile(r"^\s*методическ(?:ие|ая)\s+(?:рекомендации|рекомендация)\b", re.I)),
+    ("WRITING", re.compile(r"^\s*writing\b", re.I)),
+    ("ANSWERS", re.compile(r"^\s*(?:(?:listening|reading|use\s+of\s+english)\s+)?answers?\s*$", re.I)),
 ]
 
 KIND_RULES = [
@@ -37,18 +47,42 @@ KIND_RULES = [
     ("TRUE_FALSE", re.compile(r"\btrue\b.*\bfalse\b", re.I | re.S)),
     ("FORM_FILL", re.compile(r"complete\s+the\s+form|fill\s+in\s+the\s+form", re.I)),
     ("TABLE_GAP_FILL", re.compile(r"complete\s+the\s+table|fill\s+in\s+the\s+table", re.I)),
-    ("KEY_WORD_TRANSFORMATION", re.compile(r"key\s+word|complete.*second\s+sentence.*meaning", re.I | re.S)),
-    ("WORD_FORMATION", re.compile(r"word\s+formation|form\s+(?:a|the)\s+word|use\s+the\s+word\s+given", re.I)),
-    ("MATCHING", re.compile(r"match\b|choose\s+the\s+correct\s+paragraph|which\s+paragraph", re.I)),
+    ("KEY_WORD_TRANSFORMATION", re.compile(r"key\s+word|complete.*second\s+sentence.*meaning|second\s+sentence.*similar\s+meaning", re.I | re.S)),
+    ("WORD_FORMATION", re.compile(r"word\s+formation|form\s+(?:a|the)\s+word|use\s+the\s+word\s+given|word\s+given\s+in\s+capitals", re.I)),
+    ("IDIOM", re.compile(r"\bidioms?\b", re.I)),
+    ("MATCHING", re.compile(r"\bmatch\b|choose\s+the\s+correct\s+paragraph|which\s+paragraph|choose\s+from\s+the\s+paragraphs", re.I)),
     ("ORDERING", re.compile(r"put.*(?:correct|right)\s+order|arrange.*order", re.I | re.S)),
-    ("MULTIPLE_CHOICE_CLOZE", re.compile(r"which\s+answer\s*\(a,?\s*b,?\s*c(?:\s+or\s+d)?\).*fits?\s+each\s+gap", re.I | re.S)),
-    ("OPEN_CLOZE", re.compile(r"(?:one|two)\s+word(?:s)?\s+for\s+each\s+(?:answer|gap)|one\s+word\s+per\s+gap", re.I)),
-    ("SELECT_ONE", re.compile(r"choose\s+the\s+correct\s+answer|choose\s+(?:a|one)\s+(?:correct\s+)?(?:option|answer)|\bA,?\s*B,?\s*C(?:\s*or\s*D)?\b", re.I)),
-    ("GAP_FILL", re.compile(r"complete\s+(?:the\s+)?(?:sentences?|text)|fill\s+(?:in\s+)?(?:the\s+)?gaps?", re.I)),
-    ("EXTENDED_RESPONSE", re.compile(r"write\s+(?:your\s+)?(?:essay|article|letter|report|story)|write\s+[0-9]+\s*[-–]\s*[0-9]+\s+words", re.I)),
-    ("PROOF", re.compile(r"\bprove\b|\bdokazh|докаж", re.I)),
-    ("PROGRAMMING", re.compile(r"write\s+(?:a\s+)?program|algorithm|программ|алгоритм", re.I)),
-    ("ORAL_RESPONSE", re.compile(r"monologue|dialogue|speak\b|talk\s+about|устн|монолог|диалог", re.I)),
+    ("MULTIPLE_CHOICE_CLOZE", re.compile(
+        r"(?:which|decide\s+which)\s+answer.*(?:fits?|best\s+fits?)\s+each\s+gap|"
+        r"decide\s+which\s+answer.*best\s+fits.*gap",
+        re.I | re.S,
+    )),
+    ("OPEN_CLOZE", re.compile(
+        r"think\s+of\s+the\s+word\s+which\s+best\s+fits\s+each\s+gap|"
+        r"(?:one|two)\s+word(?:s)?\s+for\s+each\s+(?:answer|gap)|one\s+word\s+per\s+gap",
+        re.I,
+    )),
+    ("SELECT_ONE", re.compile(
+        r"choose\s+the\s+correct\s+answer|choose\s+(?:a|one)\s+(?:correct\s+)?(?:option|answer)|"
+        r"choose\s+[A-DА-Д](?:\s*,\s*[A-DА-Д]){1,3}.*(?:answer|question)|"
+        r"choose\s+the\s+answer\s*\([A-DА-Д]",
+        re.I | re.S,
+    )),
+    ("OPEN_SHORT", re.compile(r"answer\s+the\s+following\s+questions|give\s+(?:a\s+)?short\s+answer", re.I)),
+    ("GAP_FILL", re.compile(
+        r"complete\s+(?:the\s+)?(?:sentences?|text)|fill\s+(?:in\s+)?(?:the\s+)?gaps?|"
+        r"missing\s+information",
+        re.I,
+    )),
+    ("EXTENDED_RESPONSE", re.compile(
+        r"write\s+(?:your\s+)?(?:essay|article|letter|report|story|review)|"
+        r"write\s+[0-9]+\s*[-–]\s*[0-9]+\s+words|"
+        r"\([0-9]+\s*[-–]\s*[0-9]+\s+words\)",
+        re.I,
+    )),
+    ("PROOF", re.compile(r"\bprove\b|докаж", re.I)),
+    ("PROGRAMMING", re.compile(r"write\s+(?:a\s+)?program|\balgorithm\b|программ|алгоритм", re.I)),
+    ("ORAL_RESPONSE", re.compile(r"\bmonologue\b|\bdialogue\b|\bspeak\b|talk\s+about|устн|монолог|диалог", re.I)),
     ("NUMERIC_RESPONSE", re.compile(r"\bcalculate\b|\bcompute\b|\bfind\s+(?:the\s+)?(?:value|number)|вычисл|найдите\s+(?:значение|число)", re.I)),
 ]
 
@@ -62,6 +96,31 @@ def _bbox_area(box: list[float] | tuple[float, ...] | None) -> float:
     if not box or len(box) != 4:
         return 0.0
     return max(0.0, float(box[2]) - float(box[0])) * max(0.0, float(box[3]) - float(box[1]))
+
+
+def _bbox_iou(a: list[float] | None, b: list[float] | None) -> float:
+    if not a or not b or len(a) != 4 or len(b) != 4:
+        return 0.0
+    x0, y0 = max(float(a[0]), float(b[0])), max(float(a[1]), float(b[1]))
+    x1, y1 = min(float(a[2]), float(b[2])), min(float(a[3]), float(b[3]))
+    inter = max(0.0, x1 - x0) * max(0.0, y1 - y0)
+    union = _bbox_area(a) + _bbox_area(b) - inter
+    return inter / union if union else 0.0
+
+
+def infer_document_role(filename: str, explicit: str = "") -> str:
+    if explicit:
+        return explicit
+    name = (filename or "").rsplit("/", 1)[-1].lower()
+    if name.startswith(("script-", "transcript-", "tapescript-")):
+        return "LISTENING_SCRIPT"
+    if name.startswith(("ans-", "answer-", "answers-", "solutions-")):
+        return "ANSWER_KEY"
+    if name.startswith("criteria-"):
+        return "CRITERIA"
+    if name.startswith(("tasks-", "task-")):
+        return "TASK_SET"
+    return ""
 
 
 def flatten_lines(layout: dict[str, Any]) -> list[dict[str, Any]]:
@@ -100,8 +159,11 @@ def infer_task_kind(text: str, *, has_parts: bool = False) -> str:
 
 
 def _explicit_section_type(text: str) -> str | None:
+    stripped = text.strip()
+    if re.match(r"^writing\b", stripped, re.I) and re.search(r"критери|criteria|rubric", stripped, re.I):
+        return "CRITERIA"
     for kind, pattern in SECTION_PATTERNS:
-        if pattern.search(text):
+        if pattern.search(stripped):
             return kind
     return None
 
@@ -126,14 +188,58 @@ def _heading_score(line: dict[str, Any], median_size: float) -> float:
     return score
 
 
-def detect_section_starts(lines: list[dict[str, Any]]) -> list[int]:
+def detect_section_starts(lines: list[dict[str, Any]], document_role: str = "") -> list[int]:
     if not lines:
         return []
+    if document_role == "LISTENING_SCRIPT":
+        return [0]
+
+    explicit = [(i, _explicit_section_type(line["text"])) for i, line in enumerate(lines)]
+    explicit = [(i, kind) for i, kind in explicit if kind]
+
+    if document_role == "TASK_SET":
+        set_starts = [i for i, kind in explicit if kind == "SPEAKING_SET"]
+        if set_starts:
+            # In oral booklets "SPEAKING" is only a repeated page header; Set N is the real unit.
+            return set_starts
+
+    if document_role in {"ANSWER_KEY", "CRITERIA"}:
+        out: list[int] = []
+        locked_tail = False
+        first_skill = next((i for i, kind in explicit if kind in {"LISTENING", "READING", "USE_OF_ENGLISH", "WRITING"}), None)
+        for i, kind in explicit:
+            text = lines[i]["text"].strip()
+            if kind == "ANSWERS" and len(text) > 45:
+                continue
+            # A document-level title such as "КРИТЕРИИ И МЕТОДИКА ОЦЕНИВАНИЯ" before
+            # the first skill block is metadata, not the first scoring section.
+            if kind == "CRITERIA" and first_skill is not None and i < first_skill and i < 12:
+                continue
+            if kind == "METHODOLOGY":
+                locked_tail = True
+                out.append(i)
+                continue
+            if kind == "CRITERIA" and re.search(r"схем[аы]\s+подсчет|scheme|rubric", text, re.I):
+                locked_tail = True
+                out.append(i)
+                continue
+            if locked_tail and kind in {"LISTENING", "READING", "USE_OF_ENGLISH", "WRITING"}:
+                continue
+            # Long rubric prose beginning "Listening – максимальное..." is not a new section.
+            if kind in {"LISTENING", "READING", "USE_OF_ENGLISH", "WRITING"} and len(text) > 70:
+                continue
+            out.append(i)
+        if out:
+            return sorted(dict.fromkeys(out))
+
+    if explicit:
+        # Reject sentence-like accidental headings.
+        filtered = [i for i, kind in explicit if len(lines[i]["text"].strip()) <= 100]
+        if filtered:
+            return sorted(dict.fromkeys(filtered))
+
     sizes = sorted(x["font_size"] for x in lines if x["font_size"] > 0)
     median = sizes[len(sizes) // 2] if sizes else 0.0
-    explicit = [i for i, line in enumerate(lines) if _explicit_section_type(line["text"])]
-    if explicit:
-        return explicit
     return [i for i, line in enumerate(lines) if _heading_score(line, median) >= 0.65]
 
 
@@ -173,6 +279,13 @@ def _part_nodes(lines: list[dict[str, Any]], start: int, end: int, task_id: str)
 
 
 def _item_range(lines: list[dict[str, Any]], start: int, end: int) -> dict[str, int] | None:
+    text = "\n".join(line["text"] for line in lines[start:end])
+    explicit = RANGE_RE.search(text)
+    if explicit:
+        a, b = int(explicit.group(1)), int(explicit.group(2))
+        if 0 <= a <= b <= 300:
+            return {"start": a, "end": b, "count_observed": b - a + 1, "source": "instruction"}
+
     nums: list[int] = []
     for line in lines[start + 1:end]:
         m = ITEM_RE.match(line["text"])
@@ -180,22 +293,14 @@ def _item_range(lines: list[dict[str, Any]], start: int, end: int) -> dict[str, 
             nums.append(int(m.group(1)))
     if not nums:
         return None
-    # Keep the observed bounds but avoid treating obvious page numbers / years as items.
     counts = Counter(nums)
     usable = [n for n in nums if 0 <= n <= 300 and counts[n] <= 3]
     if not usable:
         return None
-    return {"start": min(usable), "end": max(usable), "count_observed": len(set(usable))}
+    return {"start": min(usable), "end": max(usable), "count_observed": len(set(usable)), "source": "items"}
 
 
 def _task_region(lines: list[dict[str, Any]], start: int, end: int) -> dict[int, tuple[float, float]]:
-    """Return the visual band owned by a task, including non-text space.
-
-    A task heading may be followed by a table/grid/image with no intervening text.
-    Using only the union of text bboxes would therefore drop exactly the artifacts
-    we need for crosswords, forms, diagrams and maths figures.  The band extends
-    from the task start to the next task/section boundary (or page bottom).
-    """
     first = lines[start]
     last = lines[end - 1]
     pages = range(first["page"], last["page"] + 1)
@@ -265,7 +370,10 @@ def _artifact_nodes(layout: dict[str, Any], lines: list[dict[str, Any]], start: 
                 max(float(d["bbox"][2]) for d in drawings),
                 max(float(d["bbox"][3]) for d in drawings),
             ]
-            if _bbox_area(box) > 100:
+            if _bbox_area(box) > 100 and not any(
+                a["page"] == page_no and a["kind"] in {"TABLE", "GRID"} and _bbox_iou(a.get("bbox"), box) >= 0.70
+                for a in artifacts
+            ):
                 artifacts.append({
                     "id": _stable("artifact", task_id, page_no, "drawings", len(drawings)),
                     "kind": "DIAGRAM",
@@ -286,19 +394,131 @@ def _section_label(line: dict[str, Any], semantic_type: str | None) -> str:
     return text[:100]
 
 
+def _semantic_task(
+    layout: dict[str, Any],
+    lines: list[dict[str, Any]],
+    start: int,
+    end: int,
+    sid: str,
+    label: str,
+    kind: str,
+    confidence: float = 0.72,
+) -> dict[str, Any]:
+    line = lines[start]
+    text = "\n".join(x["text"] for x in lines[start:end])
+    resolved_kind = kind if kind != "INFER" else infer_task_kind(text)
+    return {
+        "id": _stable("task", sid, label),
+        "label": label,
+        "number": "",
+        "kind": resolved_kind,
+        "page_start": line["page"],
+        "page_end": lines[end - 1]["page"],
+        "anchor": {"page": line["page"], "line_id": line["id"], "text": line["text"]},
+        "parts": [],
+        "artifacts": _artifact_nodes(layout, lines, start, end, sid),
+        "confidence": confidence,
+        "proposal_source": "LAYOUT_RULES",
+    }
+
+
+def _answer_tasks(
+    layout: dict[str, Any],
+    lines: list[dict[str, Any]],
+    start: int,
+    end: int,
+    sid: str,
+) -> list[dict[str, Any]]:
+    seen: set[str] = set()
+    tasks: list[dict[str, Any]] = []
+    for i in range(start, end):
+        for m in TASK_OCCURRENCE_RE.finditer(lines[i]["text"]):
+            number = m.group(1)
+            if number in seen:
+                continue
+            seen.add(number)
+            tasks.append({
+                "id": _stable("task", sid, lines[i]["id"], number),
+                "label": f"Task {number}",
+                "number": number,
+                "kind": "ANSWER_GROUP",
+                "page_start": lines[i]["page"],
+                "page_end": lines[end - 1]["page"],
+                "anchor": {"page": lines[i]["page"], "line_id": lines[i]["id"], "text": lines[i]["text"]},
+                "parts": [],
+                "artifacts": [],
+                "confidence": 0.91,
+                "proposal_source": "LAYOUT_RULES",
+            })
+    if tasks:
+        return tasks
+    return [_semantic_task(layout, lines, start, end, sid, "Answers", "ANSWER_GROUP", 0.76)]
+
+
+def _script_structure(layout: dict[str, Any], lines: list[dict[str, Any]], digest: str, filename: str) -> dict[str, Any]:
+    sid = _stable("section", digest, "transcription")
+    task_starts = [i for i, line in enumerate(lines) if TASK_RE.match(line["text"])]
+    tasks: list[dict[str, Any]] = []
+    if task_starts:
+        for pos, start in enumerate(task_starts):
+            end = task_starts[pos + 1] if pos + 1 < len(task_starts) else len(lines)
+            heading = lines[start]
+            number = _task_number(heading["text"])
+            tasks.append({
+                "id": _stable("task", sid, heading["id"], number),
+                "label": f"Task {number}",
+                "number": number,
+                "kind": "TRANSCRIPT_SEGMENT",
+                "page_start": heading["page"],
+                "page_end": lines[end - 1]["page"],
+                "anchor": {"page": heading["page"], "line_id": heading["id"], "text": heading["text"]},
+                "parts": [],
+                "artifacts": _artifact_nodes(layout, lines, start, end, sid),
+                "confidence": 0.96,
+                "proposal_source": "LAYOUT_RULES",
+            })
+    else:
+        tasks.append(_semantic_task(layout, lines, 0, len(lines), sid, "Transcript segment", "TRANSCRIPT_SEGMENT", 0.82))
+    section = {
+        "id": sid,
+        "label": "Transcription",
+        "semantic_type": "TRANSCRIPTION",
+        "content_role": "SCRIPT",
+        "page_start": lines[0]["page"],
+        "page_end": lines[-1]["page"],
+        "anchor": {"page": lines[0]["page"], "line_id": lines[0]["id"], "text": lines[0]["text"]},
+        "tasks": tasks,
+        "confidence": 0.96,
+        "proposal_source": "LAYOUT_RULES",
+    }
+    return {
+        "schema_version": SCHEMA_VERSION,
+        "document_sha256": digest,
+        "filename": filename,
+        "document_role": "LISTENING_SCRIPT",
+        "sections": [section],
+        "warnings": [],
+    }
+
+
 def propose_structure(layout: dict[str, Any], *, filename: str = "", document_role: str = "") -> dict[str, Any]:
     lines = flatten_lines(layout)
     digest = str(layout.get("document_sha256") or "")
+    role = infer_document_role(filename, document_role)
     if not lines:
         return {
             "schema_version": SCHEMA_VERSION,
             "document_sha256": digest,
             "filename": filename,
+            "document_role": role,
             "sections": [],
             "warnings": ["no_text_lines"],
         }
 
-    starts = detect_section_starts(lines)
+    if role == "LISTENING_SCRIPT":
+        return _script_structure(layout, lines, digest, filename)
+
+    starts = detect_section_starts(lines, role)
     if not starts:
         starts = [0]
 
@@ -308,68 +528,72 @@ def propose_structure(layout: dict[str, Any], *, filename: str = "", document_ro
         line = lines[start]
         semantic_type = _explicit_section_type(line["text"]) or "UNKNOWN"
         sid = _stable("section", digest, line["id"], semantic_type)
-        task_starts = detect_task_starts(lines, start, end)
         tasks: list[dict[str, Any]] = []
 
-        for tpos, tstart in enumerate(task_starts):
-            tend = task_starts[tpos + 1] if tpos + 1 < len(task_starts) else end
-            heading = lines[tstart]
-            tid = _stable("task", sid, heading["id"], _task_number(heading["text"]))
-            parts = _part_nodes(lines, tstart, tend, tid)
-            text = "\n".join(x["text"] for x in lines[tstart:tend])
-            artifacts = _artifact_nodes(layout, lines, tstart, tend, tid)
-            kind = infer_task_kind(text, has_parts=bool(parts))
-            item_range = _item_range(lines, tstart, tend)
-            task = {
-                "id": tid,
-                "label": _task_label(heading["text"]),
-                "number": _task_number(heading["text"]),
-                "kind": kind,
-                "page_start": heading["page"],
-                "page_end": lines[tend - 1]["page"],
-                "anchor": {"page": heading["page"], "line_id": heading["id"], "text": heading["text"]},
-                "parts": parts,
-                "artifacts": artifacts,
-                "confidence": 0.97,
-                "proposal_source": "LAYOUT_RULES",
-            }
-            if item_range:
-                task["item_range"] = item_range
-            tasks.append(task)
+        if role in {"ANSWER_KEY", "CRITERIA"}:
+            if semantic_type in {"LISTENING", "READING", "USE_OF_ENGLISH"}:
+                tasks = _answer_tasks(layout, lines, start, end, sid)
+            elif semantic_type == "CRITERIA":
+                tasks = [_semantic_task(layout, lines, start, end, sid, "Rubric / rationale", "CRITERION_GROUP", 0.84)]
+            elif semantic_type == "METHODOLOGY":
+                tasks = [_semantic_task(layout, lines, start, end, sid, "Methodology block", "OTHER", 0.82)]
+            elif semantic_type == "WRITING":
+                tasks = [_semantic_task(layout, lines, start, end, sid, "Writing criteria", "CRITERION_GROUP", 0.82)]
+        else:
+            task_starts = detect_task_starts(lines, start, end)
+            for tpos, tstart in enumerate(task_starts):
+                tend = task_starts[tpos + 1] if tpos + 1 < len(task_starts) else end
+                heading = lines[tstart]
+                tid = _stable("task", sid, heading["id"], _task_number(heading["text"]))
+                parts = _part_nodes(lines, tstart, tend, tid)
+                text = "\n".join(x["text"] for x in lines[tstart:tend])
+                artifacts = _artifact_nodes(layout, lines, tstart, tend, tid)
+                kind = infer_task_kind(text, has_parts=bool(parts))
+                item_range = _item_range(lines, tstart, tend)
+                task = {
+                    "id": tid,
+                    "label": _task_label(heading["text"]),
+                    "number": _task_number(heading["text"]),
+                    "kind": kind,
+                    "page_start": heading["page"],
+                    "page_end": lines[tend - 1]["page"],
+                    "anchor": {"page": heading["page"], "line_id": heading["id"], "text": heading["text"]},
+                    "parts": parts,
+                    "artifacts": artifacts,
+                    "confidence": 0.97,
+                    "proposal_source": "LAYOUT_RULES",
+                }
+                if item_range:
+                    task["item_range"] = item_range
+                tasks.append(task)
 
-        # Listening scripts and answer/criteria assets often contain no explicit "Task N" headings.
-        # Preserve a low-confidence semantic node rather than fabricating numbered tasks.
-        if not tasks and semantic_type in {"TRANSCRIPTION", "ANSWERS", "CRITERIA", "METHODOLOGY"}:
-            label = {
-                "TRANSCRIPTION": "Transcript segment",
-                "ANSWERS": "Answer group",
-                "CRITERIA": "Criterion group",
-                "METHODOLOGY": "Methodology block",
-            }[semantic_type]
-            kind = {
-                "TRANSCRIPTION": "TRANSCRIPT_SEGMENT",
-                "ANSWERS": "ANSWER_GROUP",
-                "CRITERIA": "CRITERION_GROUP",
-                "METHODOLOGY": "OTHER",
-            }[semantic_type]
-            tasks.append({
-                "id": _stable("task", sid, label),
-                "label": label,
-                "number": "",
-                "kind": kind,
-                "page_start": line["page"],
-                "page_end": lines[end - 1]["page"],
-                "anchor": {"page": line["page"], "line_id": line["id"], "text": line["text"]},
-                "parts": [],
-                "artifacts": _artifact_nodes(layout, lines, start, end, sid),
-                "confidence": 0.68,
-                "proposal_source": "LAYOUT_RULES",
-            })
+            if not tasks and semantic_type == "WRITING" and role == "TASK_SET":
+                tasks = [_semantic_task(layout, lines, start, end, sid, "Writing task", "INFER", 0.88)]
+            elif not tasks and semantic_type in {"TRANSCRIPTION", "ANSWERS", "CRITERIA", "METHODOLOGY"}:
+                label = {
+                    "TRANSCRIPTION": "Transcript segment",
+                    "ANSWERS": "Answer group",
+                    "CRITERIA": "Criterion group",
+                    "METHODOLOGY": "Methodology block",
+                }[semantic_type]
+                kind = {
+                    "TRANSCRIPTION": "TRANSCRIPT_SEGMENT",
+                    "ANSWERS": "ANSWER_GROUP",
+                    "CRITERIA": "CRITERION_GROUP",
+                    "METHODOLOGY": "OTHER",
+                }[semantic_type]
+                tasks = [_semantic_task(layout, lines, start, end, sid, label, kind, 0.68)]
+
+        label = _section_label(line, semantic_type)
+        content_role = ""
+        if role in {"ANSWER_KEY", "CRITERIA"}:
+            content_role = "CRITERIA" if semantic_type in {"CRITERIA", "WRITING", "METHODOLOGY"} else "ANSWERS"
 
         sections.append({
             "id": sid,
-            "label": _section_label(line, semantic_type),
+            "label": label,
             "semantic_type": semantic_type,
+            "content_role": content_role or None,
             "page_start": line["page"],
             "page_end": lines[end - 1]["page"],
             "anchor": {"page": line["page"], "line_id": line["id"], "text": line["text"]},
@@ -385,7 +609,7 @@ def propose_structure(layout: dict[str, Any], *, filename: str = "", document_ro
         "schema_version": SCHEMA_VERSION,
         "document_sha256": digest,
         "filename": filename,
-        "document_role": document_role,
+        "document_role": role,
         "sections": sections,
         "warnings": warnings,
     }
