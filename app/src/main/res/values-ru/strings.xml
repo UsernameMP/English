@@ -84,6 +84,7 @@
     <string name="crystals_fmt">💎 %1$d</string>
     <string name="crystals_gain_fmt">+%1$d 💎</string>
     <string name="shop">Лавка</string>
+    <string name="random_game_preview">🎮 Случайная игра</string>
     <string name="shop_title">Лавка наград</string>
     <string name="shop_balance_fmt">Баланс: 💎 %1$d</string>
     <string name="shop_owned">Куплено</string>

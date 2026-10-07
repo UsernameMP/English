@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Random;
 import android.content.SharedPreferences;
 
 public final class MiniGameHost {
@@ -27,6 +28,7 @@ public final class MiniGameHost {
     private String defaultGame = "";
     private String selectionStrategy = "round_robin";
     private final SharedPreferences prefs;
+    private final Random random = new Random();
 
     public MiniGameHost(Context context, EconomyStore economy) {
         this.context = context.getApplicationContext();
@@ -54,6 +56,32 @@ public final class MiniGameHost {
         }
         prefs.edit().putString("last_game_id", selected).apply();
         game.start(activity, config, economy, onFinished);
+    }
+
+    public void startRandomPreview(Activity activity, Runnable onFinished) {
+        List<String> ids = enabledGameIds();
+        String selected = selectRandomGameId(
+                ids,
+                prefs.getString("last_preview_game_id", ""),
+                random
+        );
+        MiniGame game = games.get(selected);
+        MiniGameConfig config = configs.get(selected);
+        if (!compatible(game, config)) {
+            onFinished.run();
+            return;
+        }
+        prefs.edit().putString("last_preview_game_id", selected).apply();
+        game.start(activity, config, economy, onFinished);
+    }
+
+    static String selectRandomGameId(List<String> ids, String last, Random random) {
+        if (ids == null || ids.isEmpty()) return "";
+        if (ids.size() == 1) return ids.get(0);
+        List<String> candidates = new ArrayList<>(ids);
+        candidates.remove(last);
+        if (candidates.isEmpty()) candidates.addAll(ids);
+        return candidates.get(random.nextInt(candidates.size()));
     }
 
     public int breakIntervalQuestions() {
