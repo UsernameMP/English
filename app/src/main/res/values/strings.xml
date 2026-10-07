@@ -83,7 +83,7 @@
     <string name="new_record_sub">Best streak is now ×%1$d</string>
     <string name="crystals_fmt">💎 %1$d</string>
     <string name="crystals_gain_fmt">+%1$d 💎</string>
-    <string name="shop">Shop</string>
+    <string name="shop">Shop</string>\n    <string name="random_game_preview">🎮 Random game</string>
     <string name="shop_title">Reward Shop</string>
     <string name="shop_balance_fmt">Balance: 💎 %1$d</string>
     <string name="shop_owned">Owned</string>
