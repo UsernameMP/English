@@ -1,0 +1,796 @@
+{
+  "schema_version": "task-calibration.v2",
+  "generated_from": {
+    "schema": "assessor-audit.v1",
+    "exported_at": "2026-10-07T15:13:03.597Z",
+    "document_count": 10,
+    "policy": "Human-confirmed audit is calibration evidence, not blindly trusted ground truth. Any anchor outside its parent span is flagged NEEDS_BOUNDARY_RECHECK."
+  },
+  "hierarchy": [
+    "SECTION",
+    "TASK",
+    "PART",
+    "ARTIFACT"
+  ],
+  "documents": {
+    "6c7bf55e9532cd1b6960821ac4c91fa8ebc1a48cc5aafa5405ec73b7966aa932": {
+      "filename": "tasks-engl-9-11-pism-mun-lenobl-24-25.pdf",
+      "roles": [
+        "TASK_SET"
+      ],
+      "language": "RU+EN",
+      "annotation_status": "HUMAN_REVIEWED",
+      "sections": [
+        {
+          "label": "Listening",
+          "page_start": 2,
+          "page_end": 2,
+          "tasks": [
+            {
+              "label": "Task 1",
+              "anchor_page": 2,
+              "kind": "COMPOSITE",
+              "parts": [
+                {
+                  "label": "Part 1",
+                  "item_range": "1-5",
+                  "kind": "GAP_FILL"
+                },
+                {
+                  "label": "Part 2",
+                  "item_range": "6-10",
+                  "kind": "OPEN_SHORT"
+                },
+                {
+                  "label": "Part 3",
+                  "item_range": "11-13",
+                  "kind": "SELECT_ONE"
+                }
+              ],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ]
+        },
+        {
+          "label": "Reading",
+          "page_start": 3,
+          "page_end": 6,
+          "tasks": [
+            {
+              "label": "Task 1",
+              "anchor_page": 3,
+              "kind": "OPEN_SHORT",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED",
+              "item_range": "1-9",
+              "semantic_hint": "open / vocabulary"
+            },
+            {
+              "label": "Task 2",
+              "anchor_page": 4,
+              "kind": "SELECT_ONE",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED",
+              "item_range": "10-14"
+            }
+          ]
+        },
+        {
+          "label": "Use of English",
+          "page_start": 6,
+          "page_end": 8,
+          "tasks": [
+            {
+              "label": "Task 1",
+              "anchor_page": 6,
+              "kind": "OPEN_CLOZE",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED",
+              "item_range": "1-8"
+            },
+            {
+              "label": "Task 2",
+              "anchor_page": 6,
+              "kind": "KEY_WORD_TRANSFORMATION",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED",
+              "item_range": "9-14"
+            },
+            {
+              "label": "Task 3",
+              "anchor_page": 7,
+              "kind": "IDIOM",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED",
+              "item_range": "15-19"
+            },
+            {
+              "label": "Task 4",
+              "anchor_page": 7,
+              "kind": "WORD_FORMATION",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED",
+              "item_range": "20-28"
+            },
+            {
+              "label": "Task 5",
+              "anchor_page": 7,
+              "kind": "SELECT_ONE",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED",
+              "item_range": "29-34"
+            }
+          ]
+        },
+        {
+          "label": "Writing",
+          "page_start": 9,
+          "page_end": 9,
+          "tasks": [
+            {
+              "label": "Article",
+              "anchor_page": 9,
+              "kind": "EXTENDED_RESPONSE",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED",
+              "response_constraints": {
+                "word_range": [
+                  180,
+                  200
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "b8d9062cbbfea994df41cf051a0a798c5c6631fc68a9f3154720a4b9f6268e5e": {
+      "filename": "script-engl-9-11-pism-mun-kaluga-24-25.pdf",
+      "roles": [
+        "LISTENING_SCRIPT"
+      ],
+      "language": "EN",
+      "annotation_status": "HUMAN_REVIEWED",
+      "sections": [
+        {
+          "label": "Part 1",
+          "page_start": 1,
+          "page_end": 2,
+          "tasks": [
+            {
+              "label": "Transcript Part 1",
+              "anchor_page": 1,
+              "kind": "TRANSCRIPT_SEGMENT",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ],
+          "quality": "HUMAN_CORRECTED"
+        }
+      ]
+    },
+    "c9d5de97bec7b5369833c294ffc618b0a7e468d45e7ca9a01612d37fde703c37": {
+      "filename": "script-engl-9-11-pism-mun-omsk-24-25.pdf",
+      "roles": [
+        "LISTENING_SCRIPT"
+      ],
+      "language": "RU+EN",
+      "annotation_status": "HUMAN_REVIEWED",
+      "sections": [
+        {
+          "label": "Transcription",
+          "page_start": 1,
+          "page_end": 4,
+          "tasks": [
+            {
+              "label": "Part 1",
+              "anchor_page": 1,
+              "kind": "TRANSCRIPT_SEGMENT",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ]
+        }
+      ]
+    },
+    "2c231744ff1afe723d521677aa850b1399dfed6168fc9eaefd20c33ec43adfc4": {
+      "filename": "script-engl-9-11-pism-mun-novgorod-24-25.pdf",
+      "roles": [
+        "LISTENING_SCRIPT"
+      ],
+      "language": "UNKNOWN",
+      "annotation_status": "HUMAN_REVIEWED",
+      "sections": [
+        {
+          "label": "Transcription",
+          "page_start": 1,
+          "page_end": 2,
+          "tasks": [
+            {
+              "label": "Part 1",
+              "anchor_page": 1,
+              "kind": "TRANSCRIPT_SEGMENT",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ]
+        }
+      ]
+    },
+    "2ee2da5e302cf220a7943f79e52e77543aba22a553ffeaf6a83720c1667dd17d": {
+      "filename": "ans-engl-9-11-pism-mun-kamchat-22-23.pdf",
+      "roles": [
+        "ANSWER_KEY",
+        "CRITERIA"
+      ],
+      "language": "RU+EN",
+      "annotation_status": "HUMAN_REVIEWED",
+      "sections": [
+        {
+          "label": "Listening answers",
+          "page_start": 1,
+          "page_end": 1,
+          "tasks": [
+            {
+              "label": "Answers",
+              "anchor_page": 1,
+              "kind": "ANSWER_GROUP",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ]
+        },
+        {
+          "label": "Reading answers",
+          "page_start": 1,
+          "page_end": 1,
+          "tasks": [
+            {
+              "label": "Answers",
+              "anchor_page": 2,
+              "kind": "ANSWER_GROUP",
+              "parts": [],
+              "artifacts": [],
+              "quality": "NEEDS_BOUNDARY_RECHECK",
+              "quality_reason": "task evidence page 2 lies outside parent section p1-1"
+            }
+          ],
+          "quality": "NEEDS_BOUNDARY_RECHECK"
+        },
+        {
+          "label": "Use of English answers",
+          "page_start": 1,
+          "page_end": 1,
+          "tasks": [
+            {
+              "label": "Answers",
+              "anchor_page": 3,
+              "kind": "ANSWER_GROUP",
+              "parts": [],
+              "artifacts": [],
+              "quality": "NEEDS_BOUNDARY_RECHECK",
+              "quality_reason": "task evidence page 3 lies outside parent section p1-1"
+            }
+          ],
+          "quality": "NEEDS_BOUNDARY_RECHECK"
+        },
+        {
+          "label": "Criteria",
+          "page_start": 1,
+          "page_end": 2,
+          "tasks": [
+            {
+              "label": "Rubric / rationale",
+              "anchor_page": 4,
+              "kind": "CRITERION_GROUP",
+              "parts": [],
+              "artifacts": [],
+              "quality": "NEEDS_BOUNDARY_RECHECK",
+              "quality_reason": "task evidence page 4 lies outside parent section p1-2"
+            }
+          ],
+          "quality": "NEEDS_BOUNDARY_RECHECK"
+        },
+        {
+          "label": "Методические рекомендации",
+          "page_start": 3,
+          "page_end": 3,
+          "tasks": [],
+          "semantic_type": "METHODOLOGY",
+          "quality": "HUMAN_CREATED"
+        },
+        {
+          "label": "Критерии оценивания и схема подсчета баллов",
+          "page_start": 3,
+          "page_end": 3,
+          "tasks": [],
+          "semantic_type": "CRITERIA",
+          "quality": "HUMAN_CREATED"
+        }
+      ]
+    },
+    "a87698f974d473374e813213d55640270e4ba23b73ea90c0d5a3fd0ba730c89b": {
+      "filename": "tasks-engl-9-11-pism-mun-chel-25-26.pdf",
+      "roles": [
+        "TASK_SET"
+      ],
+      "language": "RU+EN",
+      "annotation_status": "HUMAN_REVIEWED",
+      "sections": [
+        {
+          "label": "Listening",
+          "page_start": 2,
+          "page_end": 2,
+          "tasks": [
+            {
+              "label": "Task 1",
+              "anchor_page": 2,
+              "kind": "UNKNOWN",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            },
+            {
+              "label": "Task 2",
+              "anchor_page": 2,
+              "kind": "UNKNOWN",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            },
+            {
+              "label": "Task 3",
+              "anchor_page": 2,
+              "kind": "UNKNOWN",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ]
+        },
+        {
+          "label": "Reading",
+          "page_start": 3,
+          "page_end": 5,
+          "tasks": [
+            {
+              "label": "Task 4",
+              "anchor_page": 3,
+              "kind": "UNKNOWN",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            },
+            {
+              "label": "Task 5",
+              "anchor_page": 3,
+              "kind": "UNKNOWN",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ]
+        },
+        {
+          "label": "Use of English",
+          "page_start": 6,
+          "page_end": 8,
+          "tasks": [
+            {
+              "label": "Task 6",
+              "anchor_page": 6,
+              "kind": "UNKNOWN",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            },
+            {
+              "label": "Task 7",
+              "anchor_page": 6,
+              "kind": "UNKNOWN",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            },
+            {
+              "label": "Task 8",
+              "anchor_page": 6,
+              "kind": "UNKNOWN",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ]
+        },
+        {
+          "label": "Writing",
+          "page_start": 8,
+          "page_end": 8,
+          "tasks": [
+            {
+              "label": "Task 9",
+              "anchor_page": 9,
+              "kind": "EXTENDED_RESPONSE",
+              "parts": [],
+              "artifacts": [],
+              "quality": "NEEDS_BOUNDARY_RECHECK",
+              "quality_reason": "task evidence page 9 lies outside parent section p8-8"
+            }
+          ],
+          "quality": "NEEDS_BOUNDARY_RECHECK"
+        }
+      ]
+    },
+    "162e7a729c48807356677eea16760270461812d82e9ad53670cd7fe004c6d01a": {
+      "filename": "script-engl-9-11-pism-mun-bash-25-26.pdf",
+      "roles": [
+        "LISTENING_SCRIPT"
+      ],
+      "language": "RU+EN",
+      "annotation_status": "HUMAN_REVIEWED",
+      "sections": [
+        {
+          "label": "Transcription",
+          "page_start": 1,
+          "page_end": 1,
+          "tasks": [
+            {
+              "label": "Part 1",
+              "anchor_page": 1,
+              "kind": "TRANSCRIPT_SEGMENT",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ]
+        }
+      ]
+    },
+    "3c6ff626f77d1682c55e2135f8577c1492a541e04497ec7af053d88499a75f85": {
+      "filename": "tasks-engl-9-11-pism-mun-kamchat-22-23.pdf",
+      "roles": [
+        "TASK_SET"
+      ],
+      "language": "RU+EN",
+      "annotation_status": "HUMAN_REVIEWED",
+      "sections": [
+        {
+          "label": "Listening",
+          "page_start": 2,
+          "page_end": 2,
+          "tasks": [
+            {
+              "label": "Task 1",
+              "anchor_page": 2,
+              "kind": "FORM_FILL",
+              "parts": [],
+              "artifacts": [
+                {
+                  "kind": "FORM",
+                  "page": 2
+                }
+              ],
+              "quality": "HUMAN_REVIEWED",
+              "item_range": "1-6"
+            },
+            {
+              "label": "Task 2",
+              "anchor_page": 2,
+              "kind": "TABLE_GAP_FILL",
+              "parts": [],
+              "artifacts": [
+                {
+                  "kind": "TABLE",
+                  "page": 2
+                }
+              ],
+              "quality": "HUMAN_REVIEWED",
+              "item_range": "7-10"
+            }
+          ]
+        },
+        {
+          "label": "Reading",
+          "page_start": 3,
+          "page_end": 4,
+          "tasks": [
+            {
+              "label": "Task 1",
+              "anchor_page": 3,
+              "kind": "TRUE_FALSE_NOT_STATED",
+              "parts": [],
+              "artifacts": [
+                {
+                  "kind": "RESPONSE_TABLE",
+                  "page": 4
+                }
+              ],
+              "quality": "HUMAN_REVIEWED",
+              "item_range": "1-10"
+            },
+            {
+              "label": "Task 2",
+              "anchor_page": 4,
+              "kind": "MATCHING",
+              "parts": [],
+              "artifacts": [
+                {
+                  "kind": "TABLE",
+                  "page": 4
+                }
+              ],
+              "quality": "HUMAN_REVIEWED",
+              "item_range": "11-15"
+            }
+          ],
+          "quality": "SOURCE_PDF_VERIFIED"
+        },
+        {
+          "label": "Use of English",
+          "page_start": 5,
+          "page_end": 6,
+          "tasks": [
+            {
+              "label": "Task 1",
+              "anchor_page": 5,
+              "kind": "MULTIPLE_CHOICE_CLOZE",
+              "parts": [],
+              "artifacts": [
+                {
+                  "kind": "OPTIONS_TABLE",
+                  "page": 5
+                }
+              ],
+              "quality": "HUMAN_REVIEWED",
+              "item_range": "1-8"
+            },
+            {
+              "label": "Task 2",
+              "anchor_page": 5,
+              "kind": "GAP_FILL",
+              "parts": [],
+              "artifacts": [
+                {
+                  "kind": "WORD_BANK",
+                  "page": 5
+                }
+              ],
+              "quality": "HUMAN_REVIEWED",
+              "item_range": "9-16"
+            }
+          ],
+          "quality": "SOURCE_PDF_VERIFIED"
+        },
+        {
+          "label": "Writing",
+          "page_start": 6,
+          "page_end": 6,
+          "tasks": [
+            {
+              "label": "Writing task",
+              "anchor_page": 6,
+              "kind": "EXTENDED_RESPONSE",
+              "parts": [],
+              "artifacts": [],
+              "quality": "SOURCE_PDF_VERIFIED",
+              "response_constraints": {
+                "word_range": [
+                  200,
+                  250
+                ]
+              },
+              "quality_reason": "audit carried stale page-9 evidence; source PDF places Writing on page 6"
+            }
+          ],
+          "quality": "SOURCE_PDF_VERIFIED"
+        }
+      ]
+    },
+    "86382eaa9112533f4ccf0cfc3ab5479ae7d986fcaed997088ade34f58bbf1554": {
+      "filename": "tasks-engl-9-11-ustn-mun-kamchatka-25-26.pdf",
+      "roles": [
+        "TASK_SET"
+      ],
+      "language": "RU+EN",
+      "annotation_status": "HUMAN_REVIEWED",
+      "sections": [
+        {
+          "label": "Speaking Set 1",
+          "page_start": 1,
+          "page_end": 3,
+          "tasks": [
+            {
+              "label": "Task 1",
+              "anchor_page": 1,
+              "kind": "ORAL_RESPONSE",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            },
+            {
+              "label": "Task 2",
+              "anchor_page": 1,
+              "kind": "ORAL_RESPONSE",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ],
+          "semantic_type": "SPEAKING_SET",
+          "quality": "HUMAN_CREATED"
+        },
+        {
+          "label": "Speaking Set 2",
+          "page_start": 4,
+          "page_end": 4,
+          "tasks": [
+            {
+              "label": "Task 1",
+              "anchor_page": 4,
+              "kind": "ORAL_RESPONSE",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            },
+            {
+              "label": "Task 2",
+              "anchor_page": 4,
+              "kind": "ORAL_RESPONSE",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ],
+          "semantic_type": "SPEAKING_SET",
+          "quality": "HUMAN_CORRECTED"
+        },
+        {
+          "label": "Speaking Set 1",
+          "page_start": 7,
+          "page_end": 7,
+          "tasks": [
+            {
+              "label": "Task 1",
+              "anchor_page": 7,
+              "kind": "ORAL_RESPONSE",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            },
+            {
+              "label": "Task 2",
+              "anchor_page": 7,
+              "kind": "ORAL_RESPONSE",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ],
+          "semantic_type": "SPEAKING_SET",
+          "quality": "HUMAN_CORRECTED"
+        },
+        {
+          "label": "Speaking Set 2",
+          "page_start": 10,
+          "page_end": 10,
+          "tasks": [
+            {
+              "label": "Task 1",
+              "anchor_page": 10,
+              "kind": "ORAL_RESPONSE",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            },
+            {
+              "label": "Task 2",
+              "anchor_page": 10,
+              "kind": "ORAL_RESPONSE",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ],
+          "semantic_type": "SPEAKING_SET",
+          "quality": "HUMAN_CORRECTED"
+        }
+      ]
+    },
+    "109e982aaebafc5e39707507335523b658d493d6bbd25599fe5b45481ee82a27": {
+      "filename": "ans-engl-9-11-pism-mun-irk-23-24.pdf",
+      "roles": [
+        "ANSWER_KEY",
+        "CRITERIA"
+      ],
+      "language": "RU+EN",
+      "annotation_status": "HUMAN_REVIEWED",
+      "sections": [
+        {
+          "label": "Listening answers",
+          "page_start": 1,
+          "page_end": 1,
+          "tasks": [
+            {
+              "label": "Task 1",
+              "anchor_page": 1,
+              "kind": "ANSWER_GROUP",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            },
+            {
+              "label": "Task 2",
+              "anchor_page": 1,
+              "kind": "ANSWER_GROUP",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ]
+        },
+        {
+          "label": "Reading answers",
+          "page_start": 1,
+          "page_end": 2,
+          "tasks": [
+            {
+              "label": "Answers",
+              "anchor_page": 2,
+              "kind": "ANSWER_GROUP",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ],
+          "quality": "HUMAN_CORRECTED"
+        },
+        {
+          "label": "Use of English answers",
+          "page_start": 2,
+          "page_end": 2,
+          "tasks": [
+            {
+              "label": "Answers",
+              "anchor_page": 2,
+              "kind": "ANSWER_GROUP",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ],
+          "quality": "HUMAN_CORRECTED"
+        },
+        {
+          "label": "Criteria / rationale",
+          "page_start": 2,
+          "page_end": 4,
+          "tasks": [
+            {
+              "label": "Rubric / rationale",
+              "anchor_page": 2,
+              "kind": "CRITERION_GROUP",
+              "parts": [],
+              "artifacts": [],
+              "quality": "HUMAN_REVIEWED"
+            }
+          ],
+          "semantic_type": "CRITERIA",
+          "quality": "HUMAN_CORRECTED"
+        }
+      ]
+    }
+  }
+}
