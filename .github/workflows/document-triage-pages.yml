@@ -7,6 +7,7 @@ on:
       - "tools/document_triage/**"
       - "tools/corpus_ingest/layout.py"
       - "tools/corpus_ingest/task_structure.py"
+      - "tools/corpus_ingest/calibration_eval.py"
       - ".github/workflows/document-triage-pages.yml"
   workflow_dispatch:
 
@@ -121,6 +122,13 @@ jobs:
           )
           print(json.dumps({k: list(v) for k, v in manifest.items()}, ensure_ascii=False, indent=2))
           PY
+
+      - name: Evaluate task structure against reviewed calibration
+        run: |
+          PYTHONPATH=tools/corpus_ingest python tools/corpus_ingest/calibration_eval.py \
+            --gold tools/document_triage/calibration_gold.json \
+            --structures tools/document_triage/assets \
+            --output tools/document_triage/calibration_report.json
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
