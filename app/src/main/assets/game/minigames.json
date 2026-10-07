@@ -5,11 +5,11 @@
   "selection_strategy": "round_robin",
   "default_game": "game_2048",
   "games": [
-    {"id":"game_2048","enabled":true,"status":"production","module_api_version":1,"engine_class":"com.usernamemp.englishsprint.Game2048WebMiniGame","title":{"en":"2048","ru":"2048"},"duration_seconds":90,"completion_reward":4,"score_bonus_every":1,"score_bonus_cap":0},
-    {"id":"tower_game","enabled":true,"status":"production","module_api_version":1,"engine_class":"com.usernamemp.englishsprint.TowerWebMiniGame","title":{"en":"Tower Game","ru":"Башня"},"duration_seconds":90,"completion_reward":4,"score_bonus_every":1,"score_bonus_cap":0},
-    {"id":"suika","enabled":true,"status":"production","module_api_version":1,"engine_class":"com.usernamemp.englishsprint.SuikaWebMiniGame","title":{"en":"Suika Fruit Game","ru":"Suika · Фрукты"},"duration_seconds":90,"completion_reward":4,"score_bonus_every":1,"score_bonus_cap":0},
-    {"id":"match3","enabled":true,"status":"production","module_api_version":1,"engine_class":"com.usernamemp.englishsprint.Match3WebMiniGame","title":{"en":"Match 3","ru":"Три в ряд"},"duration_seconds":90,"completion_reward":4,"score_bonus_every":1,"score_bonus_cap":0},
-    {"id":"bubble_shooter","enabled":true,"status":"production","module_api_version":1,"engine_class":"com.usernamemp.englishsprint.BubbleShooterWebMiniGame","title":{"en":"Bubble Shooter","ru":"Шарики"},"duration_seconds":90,"completion_reward":4,"score_bonus_every":1,"score_bonus_cap":0},
-    {"id":"cozy_cafe","enabled":true,"status":"production","module_api_version":1,"engine_class":"com.usernamemp.englishsprint.CozyCafeWebMiniGame","title":{"en":"Cozy Café · Memories 2010","ru":"Уютное кафе · Memories 2010"},"duration_seconds":90,"completion_reward":4,"score_bonus_every":1,"score_bonus_cap":0}
+    {"id":"game_2048","enabled":true,"status":"production","module_api_version":1,"engine_class":"com.usernamemp.englishsprint.Game2048WebMiniGame","title":{"en":"2048","ru":"2048"},"duration_seconds":60,"completion_reward":4,"score_bonus_every":1,"score_bonus_cap":0},
+    {"id":"tower_game","enabled":true,"status":"production","module_api_version":1,"engine_class":"com.usernamemp.englishsprint.TowerWebMiniGame","title":{"en":"Tower Game","ru":"Башня"},"duration_seconds":60,"completion_reward":4,"score_bonus_every":1,"score_bonus_cap":0},
+    {"id":"suika","enabled":true,"status":"production","module_api_version":1,"engine_class":"com.usernamemp.englishsprint.SuikaWebMiniGame","title":{"en":"Suika Fruit Game","ru":"Suika · Фрукты"},"duration_seconds":60,"completion_reward":4,"score_bonus_every":1,"score_bonus_cap":0},
+    {"id":"match3","enabled":true,"status":"production","module_api_version":1,"engine_class":"com.usernamemp.englishsprint.Match3WebMiniGame","title":{"en":"Match 3","ru":"Три в ряд"},"duration_seconds":60,"completion_reward":4,"score_bonus_every":1,"score_bonus_cap":0},
+    {"id":"bubble_shooter","enabled":true,"status":"production","module_api_version":1,"engine_class":"com.usernamemp.englishsprint.BubbleShooterWebMiniGame","title":{"en":"Bubble Shooter","ru":"Шарики"},"duration_seconds":60,"completion_reward":4,"score_bonus_every":1,"score_bonus_cap":0},
+    {"id":"cozy_cafe","enabled":true,"status":"production","module_api_version":1,"engine_class":"com.usernamemp.englishsprint.CozyCafeWebMiniGame","title":{"en":"Cozy Café · Memories 2010","ru":"Уютное кафе · Memories 2010"},"duration_seconds":60,"completion_reward":4,"score_bonus_every":1,"score_bonus_cap":0}
   ]
 }

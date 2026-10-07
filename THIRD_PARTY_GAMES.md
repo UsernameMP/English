@@ -9,4 +9,4 @@ The Android pilot bundles the following upstream projects as pinned git submodul
 - Bubble Shooter HTML5 — rembound/Bubble-Shooter-HTML5 — commit 2e62806ef5d7471f77566bc1cf6f2ac17a584c4d
 - Cozy Café · Memories 2010 — nisanurtezcan/cozyCafeGame — commit 24d7f7be4913fe6a532bb13655e05430f86e4767
 
-The host application adds only an Android WebView container, lifecycle handling, touch compatibility for legacy canvas input, and the learning-session integration.
+The host application keeps the upstream repositories pinned and unmodified. A local Android adaptation layer adds a secure appassets origin, mobile viewport/layout patches, touch semantics, the 60-second session lifecycle, and learning-session integration. Upstream license files remain packaged with each game.

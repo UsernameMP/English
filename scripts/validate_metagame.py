@@ -11,4 +11,9 @@ prices=[i["price_crystals"] for m in meta["modes"] for i in m["items"]]
 assert min(prices) >= g["first_meaningful_purchase_min"], "first purchase too cheap"
 assert len({m["id"] for m in meta["modes"]}) >= 3
 assert {"pet","defense","hero"} <= {m["id"] for m in meta["modes"]}
-print("OK: crystal economy and 3-mode metagame guardrails")
+mini=json.loads((root/"app/src/main/assets/game/minigames.json").read_text())
+production=[g for g in mini["games"] if g.get("enabled") and g.get("status")=="production"]
+expected={"game_2048","tower_game","suika","match3","bubble_shooter","cozy_cafe"}
+assert {g["id"] for g in production} == expected, "production mini-game registry drift"
+assert all(g["duration_seconds"] == 60 for g in production), "production mini-games must use 60s sessions"
+print("OK: crystal economy, 3-mode metagame, and 60s six-game production contract")
