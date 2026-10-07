@@ -165,6 +165,11 @@ def infer_task_kind(text: str, *, has_parts: bool = False) -> str:
 def _explicit_section_type(text: str) -> str | None:
     stripped = text.strip()
     if re.match(r"^writing\b", stripped, re.I) and re.search(r"критери|criteria|rubric", stripped, re.I):
+        # "WRITING – Критерии оценивания" is a real rubric heading.
+        # "Writing – максимальное количество баллов ... оценивается по критериям"
+        # is explanatory prose inside an existing rubric and must not split a section.
+        if re.search(r"максимальн|maximum|оценива|evaluat|\bбалл|\bpoints?\b", stripped, re.I):
+            return "WRITING"
         return "CRITERIA"
     for kind, pattern in SECTION_PATTERNS:
         if pattern.search(stripped):
@@ -229,6 +234,10 @@ def detect_section_starts(lines: list[dict[str, Any]], document_role: str = "") 
                 continue
             if locked_tail and kind in {"LISTENING", "READING", "USE_OF_ENGLISH", "WRITING"}:
                 continue
+            if locked_tail and kind == "CRITERIA" and re.search(
+                r"максимальн|maximum|оценива|evaluat|\bбалл|\bpoints?\b", text, re.I
+            ):
+                continue
             # Long rubric prose beginning "Listening – максимальное..." is not a new section.
             if kind in {"LISTENING", "READING", "USE_OF_ENGLISH", "WRITING"} and len(text) > 70:
                 continue
@@ -245,6 +254,88 @@ def detect_section_starts(lines: list[dict[str, Any]], document_role: str = "") 
     sizes = sorted(x["font_size"] for x in lines if x["font_size"] > 0)
     median = sizes[len(sizes) // 2] if sizes else 0.0
     return [i for i, line in enumerate(lines) if _heading_score(line, median) >= 0.65]
+
+
+def _norm_header(text: str) -> str:
+    return re.sub(r"\s+", " ", str(text or "").strip().lower())
+
+
+def _repeated_page_headers(lines: list[dict[str, Any]]) -> set[str]:
+    pages_by_text: dict[str, set[int]] = {}
+    for line in lines:
+        height = float(line.get("page_height") or 0)
+        y0 = float((line.get("bbox") or [0, 0, 0, 0])[1])
+        # Repeated top-of-page strings are boilerplate, not content owned by the
+        # preceding section. This is language/subject agnostic.
+        if height and y0 > height * 0.18:
+            continue
+        key = _norm_header(line.get("text") or "")
+        if len(key) < 4:
+            continue
+        pages_by_text.setdefault(key, set()).add(int(line["page"]))
+    return {text for text, pages in pages_by_text.items() if len(pages) >= 2}
+
+
+def _has_substantive_prefix_on_boundary_page(
+    lines: list[dict[str, Any]],
+    start: int,
+    boundary: int,
+    repeated_headers: set[str],
+) -> bool:
+    boundary_page = int(lines[boundary]["page"])
+    for line in lines[start:boundary]:
+        if int(line["page"]) != boundary_page:
+            continue
+        text = str(line.get("text") or "").strip()
+        if not text:
+            continue
+        norm = _norm_header(text)
+        if norm in repeated_headers:
+            continue
+        # Generic repeated oral-booklet header before "Set N".
+        if re.fullmatch(r"speaking", text, re.I):
+            continue
+        return True
+    return False
+
+
+def _span_end_page(
+    lines: list[dict[str, Any]],
+    start: int,
+    end: int,
+    boundary: int | None,
+    repeated_headers: set[str],
+) -> int:
+    if boundary is not None and boundary < len(lines):
+        start_page = int(lines[start]["page"])
+        boundary_page = int(lines[boundary]["page"])
+        if boundary_page > start_page and not _has_substantive_prefix_on_boundary_page(
+            lines, start, boundary, repeated_headers
+        ):
+            return boundary_page - 1
+    return int(lines[end - 1]["page"])
+
+
+def _writing_task_label(text: str) -> str:
+    direct = re.search(
+        r"write\s+(?:your\s+|an?\s+|the\s+)?(article|essay|letter|report|review|story)\b",
+        text,
+        re.I,
+    )
+    if direct:
+        return direct.group(1).capitalize()
+    for word, label in [
+        ("articles", "Article"),
+        ("article", "Article"),
+        ("essay", "Essay"),
+        ("letter", "Letter"),
+        ("report", "Report"),
+        ("review", "Review"),
+        ("story", "Story"),
+    ]:
+        if re.search(r"\b" + word + r"\b", text, re.I):
+            return label
+    return "Writing task"
 
 
 def detect_task_starts(lines: list[dict[str, Any]], start: int, end: int) -> list[int]:
@@ -577,11 +668,14 @@ def propose_structure(layout: dict[str, Any], *, filename: str = "", document_ro
     starts = detect_section_starts(lines, role)
     if not starts:
         starts = [0]
+    repeated_headers = _repeated_page_headers(lines)
 
     sections: list[dict[str, Any]] = []
     for pos, start in enumerate(starts):
-        end = starts[pos + 1] if pos + 1 < len(starts) else len(lines)
+        boundary = starts[pos + 1] if pos + 1 < len(starts) else None
+        end = boundary if boundary is not None else len(lines)
         line = lines[start]
+        section_end_page = _span_end_page(lines, start, end, boundary, repeated_headers)
         semantic_type = _explicit_section_type(line["text"]) or "UNKNOWN"
         # In answer-key documents the Writing block is normally the scoring rubric,
         # not a new learner task. Treat it as criteria even when PDF font encoding
@@ -603,6 +697,7 @@ def propose_structure(layout: dict[str, Any], *, filename: str = "", document_ro
         else:
             task_starts = detect_task_starts(lines, start, end)
             for tpos, tstart in enumerate(task_starts):
+                task_boundary = task_starts[tpos + 1] if tpos + 1 < len(task_starts) else boundary
                 tend = task_starts[tpos + 1] if tpos + 1 < len(task_starts) else end
                 heading = lines[tstart]
                 tid = _stable("task", sid, heading["id"], _task_number(heading["text"]))
@@ -613,7 +708,11 @@ def propose_structure(layout: dict[str, Any], *, filename: str = "", document_ro
                     parts = _subpart_nodes(lines, tstart, tend, tid, base_kind)
                 artifacts = _artifact_nodes(layout, lines, tstart, tend, tid)
                 kind = "COMPOSITE" if parts else base_kind
-                item_range = _item_range(lines, tstart, tend)
+                if semantic_type in {"SPEAKING_SET", "SPEAKING"}:
+                    kind = "ORAL_RESPONSE"
+                    parts = []
+                item_range = None if kind == "ORAL_RESPONSE" else _item_range(lines, tstart, tend)
+                task_end_page = _span_end_page(lines, tstart, tend, task_boundary, repeated_headers)
                 task = {
                     "id": tid,
                     "label": _task_label(heading["text"]),
@@ -621,7 +720,7 @@ def propose_structure(layout: dict[str, Any], *, filename: str = "", document_ro
                     "kind": kind,
                     "response_mode": response_mode_for_kind(kind),
                     "page_start": heading["page"],
-                    "page_end": lines[tend - 1]["page"],
+                    "page_end": task_end_page,
                     "anchor": {"page": heading["page"], "line_id": heading["id"], "text": heading["text"]},
                     "parts": parts,
                     "artifacts": artifacts,
@@ -633,7 +732,10 @@ def propose_structure(layout: dict[str, Any], *, filename: str = "", document_ro
                 tasks.append(task)
 
             if not tasks and semantic_type == "WRITING" and role == "TASK_SET":
-                tasks = [_semantic_task(layout, lines, start, end, sid, "Writing task", "INFER", 0.88)]
+                writing_text = "\n".join(x["text"] for x in lines[start:end])
+                writing_label = _writing_task_label(writing_text)
+                tasks = [_semantic_task(layout, lines, start, end, sid, writing_label, "INFER", 0.92)]
+                tasks[0]["page_end"] = section_end_page
             elif not tasks and semantic_type in {"TRANSCRIPTION", "ANSWERS", "CRITERIA", "METHODOLOGY"}:
                 label = {
                     "TRANSCRIPTION": "Transcript segment",
@@ -660,7 +762,7 @@ def propose_structure(layout: dict[str, Any], *, filename: str = "", document_ro
             "semantic_type": semantic_type,
             "content_role": content_role or None,
             "page_start": line["page"],
-            "page_end": lines[end - 1]["page"],
+            "page_end": section_end_page,
             "anchor": {"page": line["page"], "line_id": line["id"], "text": line["text"]},
             "tasks": tasks,
             "confidence": 0.98 if semantic_type != "UNKNOWN" else 0.58,
