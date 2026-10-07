@@ -527,6 +527,11 @@ def propose_structure(layout: dict[str, Any], *, filename: str = "", document_ro
         end = starts[pos + 1] if pos + 1 < len(starts) else len(lines)
         line = lines[start]
         semantic_type = _explicit_section_type(line["text"]) or "UNKNOWN"
+        # In answer-key documents the Writing block is normally the scoring rubric,
+        # not a new learner task. Treat it as criteria even when PDF font encoding
+        # makes the Cyrillic/English "criteria" suffix unreadable.
+        if role in {"ANSWER_KEY", "CRITERIA"} and semantic_type == "WRITING":
+            semantic_type = "CRITERIA"
         sid = _stable("section", digest, line["id"], semantic_type)
         tasks: list[dict[str, Any]] = []
 
