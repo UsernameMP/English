@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.os.Build;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.Html;
@@ -15,6 +16,8 @@ import android.text.style.ClickableSpan;
 import android.text.method.LinkMovementMethod;
 import android.text.TextPaint;
 import android.view.Gravity;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -69,6 +72,7 @@ public class MainActivity extends Activity {
     private LearningEventStore learningEvents;
     private MiniGameHost miniGames;
     private UpdateManager updater;
+    private boolean homeVisible = false;
 
     private List<Question> session = new ArrayList<>();
     private int questionIndex = 0;
@@ -115,6 +119,7 @@ public class MainActivity extends Activity {
         updater = new UpdateManager(this);
         getWindow().setStatusBarColor(BG);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        hideSystemNavigation();
         showHome();
     }
 
@@ -133,11 +138,43 @@ public class MainActivity extends Activity {
 
     @Override
     public void onBackPressed() {
-        if (miniGames != null && miniGames.abortActive()) return;
+        if (miniGames != null && miniGames.abortActive()) {
+            hideSystemNavigation();
+            return;
+        }
+        if (homeVisible) {
+            finish();
+            return;
+        }
         showHome();
     }
 
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) hideSystemNavigation();
+    }
+
+    private void hideSystemNavigation() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            WindowInsetsController controller = getWindow().getInsetsController();
+            if (controller != null) {
+                controller.hide(WindowInsets.Type.navigationBars());
+                controller.setSystemBarsBehavior(
+                        WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+            }
+        } else {
+            getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        }
+    }
+
     private void showHome() {
+        homeVisible = true;
+        hideSystemNavigation();
         audio.stop();
         LinearLayout root = column();
         root.setPadding(dp(20), dp(18), dp(20), dp(30));
@@ -187,6 +224,7 @@ public class MainActivity extends Activity {
     }
 
     private void showLearnHub() {
+        homeVisible = false;
         if (restoreLearningContext()) showTrainingHub();
         else showCourseStorefront();
     }
@@ -398,6 +436,7 @@ public class MainActivity extends Activity {
     }
 
     private void showMyWorld() {
+        homeVisible = false;
         LinearLayout root=column(); root.setPadding(dp(20),dp(20),dp(20),dp(30));
         Button back=compactButton("←"); back.setOnClickListener(v->showHome()); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
         root.addView(space(12)); root.addView(text(getString(R.string.my_world),28,INK,Typeface.BOLD));
@@ -1314,6 +1353,7 @@ public class MainActivity extends Activity {
     }
 
     private void showShop() {
+        homeVisible = false;
         LinearLayout root = column();
         root.setPadding(dp(20), dp(20), dp(20), dp(30));
 
@@ -1560,6 +1600,7 @@ public class MainActivity extends Activity {
     }
 
     private void showSettings() {
+        homeVisible = false;
         LinearLayout root = column();
         root.setPadding(dp(20), dp(20), dp(20), dp(28));
 
@@ -1821,6 +1862,7 @@ public class MainActivity extends Activity {
         scroll.addView(content, new ScrollView.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         setContentView(scroll);
+        hideSystemNavigation();
     }
 
     private TextView text(String value, float sp, int color, int style) {
