@@ -260,7 +260,13 @@ public class MainActivity extends Activity {
             for(int j=i;j<Math.min(i+2,subjects.size());j++){
                 final String subject=subjects.get(j);
                 boolean unlocked=subjectUnlocked(subject,catalog,entitlements);
-                String icon="english".equals(subject)?"Aa":("mathematics".equals(subject)?"∑":"</>");
+                String icon="english".equals(subject)?"Aa":
+                        ("mathematics".equals(subject)?"∑":
+                        ("biology".equals(subject)?"🧬":
+                        ("geography".equals(subject)?"◎":
+                        ("history".equals(subject)?"⌛":
+                        ("social_science".equals(subject)?"§":
+                        ("ecology".equals(subject)?"♻":"</>"))))));
                 Button tile=secondaryButton(icon+"\n"+subjectLabel(subject)+(unlocked?"":"\n🔒"));
                 tile.setTextSize(17); tile.setMinHeight(dp(100));
                 tile.setOnClickListener(v->{ if(unlocked) showGradePicker(subject); else showSubscriptionOffer(subject,products); });
@@ -282,6 +288,10 @@ public class MainActivity extends Activity {
         if("mathematics".equals(subject)) return getString(R.string.subject_math);
         if("informatics".equals(subject)) return getString(R.string.subject_informatics);
         if("geography".equals(subject)) return getString(R.string.subject_geography);
+        if("biology".equals(subject)) return getString(R.string.subject_biology);
+        if("history".equals(subject)) return getString(R.string.subject_history);
+        if("social_science".equals(subject)) return getString(R.string.subject_social_science);
+        if("ecology".equals(subject)) return getString(R.string.subject_ecology);
         return subject;
     }
 
@@ -421,6 +431,11 @@ public class MainActivity extends Activity {
         if("english".equals(pack.subject)) subject=ru?"Английский язык":"English";
         else if("informatics".equals(pack.subject)) subject=ru?"Информатика":"Informatics";
         else if("mathematics".equals(pack.subject)) subject=ru?"Математика":"Mathematics";
+        else if("geography".equals(pack.subject)) subject=ru?"География":"Geography";
+        else if("biology".equals(pack.subject)) subject=ru?"Биология":"Biology";
+        else if("history".equals(pack.subject)) subject=ru?"История":"History";
+        else if("social_science".equals(pack.subject)) subject=ru?"Обществознание":"Social Studies";
+        else if("ecology".equals(pack.subject)) subject=ru?"Экология":"Ecology";
         else subject=pack.subject;
         String grades=pack.gradeMin==pack.gradeMax?String.valueOf(pack.gradeMin):(pack.gradeMin+"–"+pack.gradeMax);
         String region=pack.region;
@@ -671,9 +686,9 @@ public class MainActivity extends Activity {
         root.addView(space(18));
 
         List<Button> answerButtons = new ArrayList<>();
-        if ("numeric".equals(q.interaction)) {
+        if ("numeric".equals(q.interaction) || "free_response".equals(q.interaction)) {
             EditText input = new EditText(this);
-            input.setHint(getString(R.string.numeric_answer_hint));
+            input.setHint(getString("numeric".equals(q.interaction) ? R.string.numeric_answer_hint : R.string.short_answer_hint));
             input.setTextSize(22);
             input.setSingleLine(true);
             input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
@@ -691,6 +706,81 @@ public class MainActivity extends Activity {
                 submit.setEnabled(false);
                 handleAnswerResult(root, q, correct, -1,
                         Collections.emptyList(), contextForAnswer);
+            });
+        } else if ("matching".equals(q.interaction)) {
+            root.addView(text(getString(R.string.matching_hint), 13, MUTED, Typeface.BOLD));
+            List<Integer> assigned = new ArrayList<>();
+            for (int i = 0; i < q.matchingLeft.size(); i++) assigned.add(-1);
+            List<Button> leftButtons = new ArrayList<>();
+            int[] selectedLeft = {-1};
+
+            for (int i = 0; i < q.matchingLeft.size(); i++) {
+                final int leftIndex = i;
+                Button left = answerButton(q.matchingLeft.get(i));
+                LinearLayout.LayoutParams lp = matchWrap();
+                lp.bottomMargin = dp(7);
+                root.addView(left, lp);
+                leftButtons.add(left);
+                answerButtons.add(left);
+                left.setOnClickListener(v -> {
+                    selectedLeft[0] = leftIndex;
+                    for (int j = 0; j < leftButtons.size(); j++) {
+                        leftButtons.get(j).setBackground(roundRect(
+                                j == leftIndex ? Color.rgb(225, 232, 255) : CARD,
+                                14, j == leftIndex ? 2 : 1, j == leftIndex ? PRIMARY : SOFT));
+                    }
+                });
+            }
+
+            root.addView(space(6));
+            for (int i = 0; i < q.matchingRight.size(); i++) {
+                final int rightIndex = i;
+                Button right = secondaryButton(q.matchingRight.get(i));
+                LinearLayout.LayoutParams lp = matchWrap();
+                lp.bottomMargin = dp(7);
+                root.addView(right, lp);
+                answerButtons.add(right);
+                right.setOnClickListener(v -> {
+                    int leftIndex = selectedLeft[0];
+                    if (leftIndex < 0) return;
+                    for (int j = 0; j < assigned.size(); j++) {
+                        if (j != leftIndex && assigned.get(j) == rightIndex) {
+                            assigned.set(j, -1);
+                            leftButtons.get(j).setText(q.matchingLeft.get(j));
+                        }
+                    }
+                    assigned.set(leftIndex, rightIndex);
+                    leftButtons.get(leftIndex).setText(q.matchingLeft.get(leftIndex) + "\n→ " + q.matchingRight.get(rightIndex));
+                    leftButtons.get(leftIndex).setBackground(roundRect(CARD, 14, 1, SOFT));
+                    selectedLeft[0] = -1;
+                });
+            }
+
+            Button reset = secondaryButton(getString(R.string.matching_reset));
+            root.addView(reset, matchWrap());
+            reset.setOnClickListener(v -> {
+                selectedLeft[0] = -1;
+                for (int i = 0; i < assigned.size(); i++) {
+                    assigned.set(i, -1);
+                    leftButtons.get(i).setText(q.matchingLeft.get(i));
+                    leftButtons.get(i).setBackground(roundRect(CARD, 14, 1, SOFT));
+                }
+            });
+
+            Button submit = primaryButton(getString(R.string.submit_answer));
+            LinearLayout.LayoutParams submitLp = matchWrap();
+            submitLp.topMargin = dp(8);
+            root.addView(submit, submitLp);
+            submit.setOnClickListener(v -> {
+                reset.setEnabled(false);
+                submit.setEnabled(false);
+                for (Button button : answerButtons) button.setEnabled(false);
+                boolean correct = q.acceptsMatching(assigned);
+                for (Button button : leftButtons) {
+                    button.setBackground(roundRect(correct ? Color.rgb(221, 245, 234) : Color.rgb(255, 244, 215),
+                            14, 2, correct ? GOOD : Color.rgb(210, 160, 60)));
+                }
+                handleAnswerResult(root, q, correct, -1, Collections.emptyList(), contextForAnswer);
             });
         } else if ("multi_choice".equals(q.interaction)) {
             TextView hint = text(getString(R.string.multi_choice_hint), 13, MUTED, Typeface.BOLD);

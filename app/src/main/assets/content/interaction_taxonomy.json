@@ -2,14 +2,55 @@
   "schema_version": "1.0",
   "principle": "Interaction primitives are subject-neutral renderers; learning content and Knowledge Units remain data.",
   "primitives": [
-    {"id": "single_choice", "runtime_status": "supported", "response_model": "one_option"},
-    {"id": "multi_choice", "runtime_status": "supported", "response_model": "option_set"},
-    {"id": "sequence", "runtime_status": "supported", "response_model": "ordered_options"},
-    {"id": "numeric", "runtime_status": "supported", "response_model": "number_with_tolerance"},
-    {"id": "matching", "runtime_status": "planned", "response_model": "pair_set"},
-    {"id": "range", "runtime_status": "planned", "response_model": "bounded_interval"},
-    {"id": "map_point", "runtime_status": "planned", "response_model": "geo_coordinate"},
-    {"id": "map_region", "runtime_status": "planned", "response_model": "region_id"},
-    {"id": "data_interpretation", "runtime_status": "planned", "response_model": "structured_observation"}
+    {
+      "id": "single_choice",
+      "runtime_status": "supported",
+      "response_model": "one_option"
+    },
+    {
+      "id": "multi_choice",
+      "runtime_status": "supported",
+      "response_model": "option_set"
+    },
+    {
+      "id": "free_response",
+      "runtime_status": "supported",
+      "response_model": "normalized_short_text"
+    },
+    {
+      "id": "sequence",
+      "runtime_status": "supported",
+      "response_model": "ordered_options"
+    },
+    {
+      "id": "numeric",
+      "runtime_status": "supported",
+      "response_model": "number_with_tolerance"
+    },
+    {
+      "id": "matching",
+      "runtime_status": "supported",
+      "response_model": "pair_set"
+    },
+    {
+      "id": "range",
+      "runtime_status": "planned",
+      "response_model": "bounded_interval"
+    },
+    {
+      "id": "map_point",
+      "runtime_status": "planned",
+      "response_model": "geo_coordinate"
+    },
+    {
+      "id": "map_region",
+      "runtime_status": "planned",
+      "response_model": "region_id"
+    },
+    {
+      "id": "data_interpretation",
+      "runtime_status": "planned",
+      "response_model": "structured_observation"
+    }
   ]
 }

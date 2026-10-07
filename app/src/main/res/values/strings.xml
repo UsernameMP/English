@@ -150,6 +150,9 @@
     <string name="next_focus">NEXT FOCUS · prerequisites first</string>
     <string name="content_pack_section">CONTENT PACK</string>
     <string name="numeric_answer_hint">Enter a number</string>
+    <string name="short_answer_hint">Enter a short answer</string>
+    <string name="matching_hint">Tap an item, then tap its match below</string>
+    <string name="matching_reset">Reset matches</string>
     <string name="submit_answer">Check answer</string>
     <string name="multi_choice_hint">Select every correct option, then check</string>
     <string name="daily_plan">Today’s preparation plan</string>
@@ -186,7 +189,7 @@
 
     <string name="dashboard_caption">Your learning dashboard</string>
     <string name="choose_subject">Choose a subject</string><string name="choose_subject_caption">Your subscriptions unlock subjects. Choose what you want to prepare for.</string>
-    <string name="subject_english">English</string><string name="subject_math">Mathematics</string><string name="subject_informatics">Informatics</string><string name="subject_geography">Geography</string>
+    <string name="subject_english">English</string><string name="subject_math">Mathematics</string><string name="subject_informatics">Informatics</string><string name="subject_geography">Geography</string><string name="subject_biology">Biology</string><string name="subject_history">History</string><string name="subject_social_science">Social Studies</string><string name="subject_ecology">Ecology</string>
     <string name="choose_grade">Choose grade</string><string name="grade_fmt">Grade %1$d</string>
     <string name="choose_goal">Choose preparation goal</string><string name="all_olympiads">All applicable olympiads</string>
     <string name="vsosh">All-Russian School Olympiad</string><string name="olympiad_pilot">Olympiad preparation</string><string name="olympiad_bridge">Olympiad bridge</string>

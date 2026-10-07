@@ -474,6 +474,30 @@ for catalog_pack in catalog_pack_list:
                 fail(f"{qid}: multi_choice needs at least two answers")
             if interaction == "sequence" and len(answers) != len(options):
                 fail(f"{qid}: sequence must order every option")
+        if interaction == "matching":
+            left = question.get("matching_left")
+            right = question.get("matching_right")
+            if not isinstance(left, list) or not isinstance(right, list) or len(left) < 2 or len(right) < 2:
+                fail(f"{qid}: matching needs left/right item arrays")
+            left_ids = [item.get("id") for item in left if isinstance(item, dict)]
+            right_ids = [item.get("id") for item in right if isinstance(item, dict)]
+            if len(left_ids) != len(left) or len(right_ids) != len(right):
+                fail(f"{qid}: malformed matching items")
+            if len(left_ids) != len(set(left_ids)) or len(right_ids) != len(set(right_ids)):
+                fail(f"{qid}: matching ids must be unique")
+            pairs = []
+            for answer in answers:
+                parts = str(answer).split(":", 1)
+                if len(parts) != 2 or parts[0] not in left_ids or parts[1] not in right_ids:
+                    fail(f"{qid}: invalid matching pair {answer!r}")
+                pairs.append((parts[0], parts[1]))
+            if len(pairs) != len(left_ids) or {p[0] for p in pairs} != set(left_ids):
+                fail(f"{qid}: every left matching item needs one answer")
+            if len({p[1] for p in pairs}) != len(pairs):
+                fail(f"{qid}: matching is one-to-one in current renderer")
+        if interaction == "free_response":
+            if any(not str(answer).strip() for answer in answers):
+                fail(f"{qid}: empty free-response answer")
         if interaction == "numeric":
             if any(not str(answer).strip() for answer in answers):
                 fail(f"{qid}: empty numeric answer")
