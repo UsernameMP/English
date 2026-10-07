@@ -340,7 +340,7 @@ class DropboxClient:
                 "mode": "overwrite" if overwrite else "add",
                 "autorename": False,
                 "mute": True,
-                "strict_conflict": True,
+                "strict_conflict": not overwrite,
             }),
         }
         r = self.http.post(
@@ -351,7 +351,21 @@ class DropboxClient:
         )
         if r.status_code == 409 and not overwrite:
             return {"path_display": path, "existing": True}
-        r.raise_for_status()
+        if r.status_code == 409 and overwrite and "too_many_write_operations" in r.text:
+            import time
+            for delay in (1, 2, 4):
+                time.sleep(delay)
+                r = self.http.post(
+                    "https://content.dropboxapi.com/2/files/upload",
+                    headers=headers,
+                    data=data,
+                    timeout=120,
+                )
+                if r.ok:
+                    return r.json()
+                if r.status_code != 409 or "too_many_write_operations" not in r.text:
+                    break
+        self._raise_dropbox_error(r, "files/upload")
         return r.json()
 
     def download_bytes(self, path: str) -> bytes | None:
