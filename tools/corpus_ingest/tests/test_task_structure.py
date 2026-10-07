@@ -99,3 +99,65 @@ def test_no_task_heading_does_not_promote_bare_numbers_to_tasks():
     assert len(proposal["sections"]) == 1
     assert proposal["sections"][0]["tasks"] == []
     assert "no_explicit_tasks" in proposal["warnings"]
+
+
+def test_listening_script_is_one_transcription_container_with_real_tasks():
+    layout = layout_from_pages([
+        ["The Transcript", "Task 1. First script.", "Speaker: hello"],
+        ["Task 2. Second script.", "Speaker: goodbye"],
+    ])
+    proposal = propose_structure(layout, filename="script-engl-demo.pdf")
+    assert proposal["document_role"] == "LISTENING_SCRIPT"
+    assert len(proposal["sections"]) == 1
+    section = proposal["sections"][0]
+    assert section["semantic_type"] == "TRANSCRIPTION"
+    assert [t["label"] for t in section["tasks"]] == ["Task 1", "Task 2"]
+    assert all(t["kind"] == "TRANSCRIPT_SEGMENT" for t in section["tasks"])
+
+
+def test_oral_set_ignores_repeated_speaking_header_and_sentence_ending_answer():
+    layout = layout_from_pages([[
+        "SPEAKING",
+        "Set 1",
+        "Task 1",
+        "1. Monologue. Speak about a writer.",
+        "Ask your partner for an answer.",
+        "Task 2",
+        "Dialogue with the examiner.",
+    ]])
+    proposal = propose_structure(layout, filename="tasks-engl-9-11-ustn-mun-demo-25-26.pdf")
+    assert [x["label"] for x in proposal["sections"]] == ["Speaking Set 1"]
+    assert [x["label"] for x in proposal["sections"][0]["tasks"]] == ["Task 1", "Task 2"]
+
+
+def test_answer_key_keeps_skill_sections_and_creates_answer_groups():
+    layout = layout_from_pages([[
+        "КРИТЕРИИ И МЕТОДИКА ОЦЕНИВАНИЯ",
+        "Listening",
+        "Keys",
+        "Task 1. A B C",
+        "Task 2. D E F",
+        "Reading",
+        "KEYS",
+        "1 A",
+        "2 B",
+        "WRITING – КРИТЕРИИ ОЦЕНИВАНИЯ",
+        "Maximum 10 points",
+    ]])
+    proposal = propose_structure(layout, filename="ans-engl-demo.pdf")
+    assert proposal["document_role"] == "ANSWER_KEY"
+    assert [x["semantic_type"] for x in proposal["sections"]] == ["LISTENING", "READING", "CRITERIA"]
+    assert [t["kind"] for t in proposal["sections"][0]["tasks"]] == ["ANSWER_GROUP", "ANSWER_GROUP"]
+    assert proposal["sections"][1]["tasks"][0]["kind"] == "ANSWER_GROUP"
+    assert proposal["sections"][2]["tasks"][0]["kind"] == "CRITERION_GROUP"
+
+
+def test_writing_without_task_number_is_still_an_assessable_task():
+    layout = layout_from_pages([[
+        "WRITING",
+        "Write your review (150-190 words).",
+    ]])
+    proposal = propose_structure(layout, filename="tasks-engl-demo.pdf")
+    task = proposal["sections"][0]["tasks"][0]
+    assert task["label"] == "Writing task"
+    assert task["kind"] == "EXTENDED_RESPONSE"
