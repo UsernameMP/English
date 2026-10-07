@@ -229,14 +229,13 @@ def test_answer_score_summary_does_not_create_extra_criteria_section():
         "Task 1 A B",
         "READING",
         "1 A",
-        "WRITING – Критерии оценивания",
+        "WRITING – Criteria",
         "Rubric table",
-        "Методические рекомендации",
-        "Критерии оценивания и схема подсчета баллов",
-        "Writing – максимальное количество баллов 15. Задание оценивается по Критериям оценивания.",
-        "Максимальное количество баллов за все конкурсы – 56 баллов.",
+        "Criteria and scoring scheme",
+        "Writing – maximum 15 points. The task is evaluated by criteria.",
+        "Maximum total score is 56 points.",
     ]])
     proposal = propose_structure(layout, filename="ans-engl-demo.pdf")
     labels = [s["label"] for s in proposal["sections"]]
-    assert "Writing – максимальное количество баллов 15. Задание оценивается по Критериям оценивания." not in labels
+    assert "Writing – maximum 15 points. The task is evaluated by criteria." not in labels
     assert [s["semantic_type"] for s in proposal["sections"]].count("CRITERIA") == 2
