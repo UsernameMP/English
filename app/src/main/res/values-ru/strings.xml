@@ -151,7 +151,9 @@
     <string name="content_pack_section">КОНТЕНТ-ПАК</string>
     <string name="numeric_answer_hint">Введи число</string>
     <string name="short_answer_hint">Введи короткий ответ</string>
-    <string name="matching_hint">Нажми на объект, затем на подходящую ему пару ниже</string>
+    <string name="matching_hint">Соотнеси каждый пронумерованный объект с одним вариантом ответа</string>
+    <string name="matching_left_pool">ОБЪЕКТЫ · 1, 2, 3…</string>
+    <string name="matching_right_pool">ВАРИАНТЫ · А, Б, В…</string>
     <string name="matching_reset">Сбросить соответствия</string>
     <string name="submit_answer">Проверить ответ</string>
     <string name="multi_choice_hint">Выбери все верные варианты и проверь</string>

@@ -151,7 +151,9 @@
     <string name="content_pack_section">CONTENT PACK</string>
     <string name="numeric_answer_hint">Enter a number</string>
     <string name="short_answer_hint">Enter a short answer</string>
-    <string name="matching_hint">Tap an item, then tap its match below</string>
+    <string name="matching_hint">Match every numbered item with one lettered answer</string>
+    <string name="matching_left_pool">NUMBERED ITEMS · 1, 2, 3…</string>
+    <string name="matching_right_pool">ANSWER POOL · A, B, C…</string>
     <string name="matching_reset">Reset matches</string>
     <string name="submit_answer">Check answer</string>
     <string name="multi_choice_hint">Select every correct option, then check</string>

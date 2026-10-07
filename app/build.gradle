@@ -2,7 +2,7 @@ plugins { id 'com.android.application' }
 android {
  namespace 'com.usernamemp.englishsprint'
  compileSdk 35
- defaultConfig { applicationId "com.usernamemp.englishsprint"; minSdk 24; targetSdk 35; versionCode 29; versionName "0.6.22" }
+ defaultConfig { applicationId "com.usernamemp.englishsprint"; minSdk 24; targetSdk 35; versionCode 30; versionName "0.6.23" }
  buildFeatures { buildConfig true }
  buildTypes { release { minifyEnabled false } }
  compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
