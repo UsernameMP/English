@@ -1,0 +1,46 @@
+{
+  "schema_version": "review-batch.v1",
+  "batch_id": "cross-subject-2026-10-07",
+  "documents": [
+    {
+      "label": "Mathematics 7 · Tatarstan · 2024/25",
+      "url": "https://tasks.olimpiada.ru/upload/files/tasks/72/2024/tasks-math-7-mun-tat-24-25.pdf"
+    },
+    {
+      "label": "Mathematics 9 · Sverdlovsk · 2024/25",
+      "url": "https://tasks.olimpiada.ru/upload/files/tasks/72/2024/tasks-math-9-mun-sverd-24-25.pdf"
+    },
+    {
+      "label": "Geography 10 · Omsk · 2024/25",
+      "url": "https://tasks.olimpiada.ru/upload/files/tasks/82/2024/tasks-geog-10-mun-omsk-24-25.pdf"
+    },
+    {
+      "label": "Biology 11 · Sverdlovsk · 2024/25",
+      "url": "https://tasks.olimpiada.ru/upload/files/tasks/77/2024/tasks-biol-11-mun-sverd-24-25.pdf"
+    },
+    {
+      "label": "Biology answers/criteria 10 · Saint Petersburg · 2024/25",
+      "url": "https://tasks.olimpiada.ru/upload/files/tasks/77/2024/ans-biol-10-mun-spb-24-25.pdf"
+    },
+    {
+      "label": "Physics 11 · Vladimir · 2024/25",
+      "url": "https://tasks.olimpiada.ru/upload/files/tasks/74/2024/tasks-phys-11-mun-vladimir-24-25.pdf"
+    },
+    {
+      "label": "Russian 10–11 · Kursk · 2024/25",
+      "url": "https://tasks.olimpiada.ru/upload/files/tasks/80/2024/tasks-russ-10-11-mun-kursk-24-25.pdf"
+    },
+    {
+      "label": "Informatics 7–8 · Chukotka · 2024/25",
+      "url": "https://tasks.olimpiada.ru/upload/files/tasks/73/2024/tasks-iikt-7-8-mun-chuk-24-25.pdf"
+    },
+    {
+      "label": "Informatics 9–11 · Kemerovo · 2024/25",
+      "url": "https://tasks.olimpiada.ru/upload/files/tasks/73/2024/tasks-iikt-9-11-mun-kem-24-25.pdf"
+    },
+    {
+      "label": "Chemistry 11 theoretical · Omsk · 2024/25",
+      "url": "https://tasks.olimpiada.ru/upload/files/tasks/76/2024/tasks-chem-11-teor-mun-omsk-24-25.pdf"
+    }
+  ]
+}
