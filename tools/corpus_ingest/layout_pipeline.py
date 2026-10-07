@@ -5,6 +5,7 @@ import json
 from typing import Any
 
 from layout import dumps_layout, extract_pdf_layout
+from task_structure import flatten_tasks, propose_structure
 
 
 PIPELINE_VERSION = "layout-pipeline.v1"
@@ -53,12 +54,27 @@ def parse_pdf_bytes(
     dbx.upload_bytes(lpath, dumps_layout(layout), overwrite=True)
 
     status = "needs_ocr" if stats["needs_ocr"] else "layout_ready"
+    source_filename = ""
+    if occurrences:
+        source_filename = str(
+            occurrences[0].get("dropbox_path")
+            or occurrences[0].get("url")
+            or ""
+        ).rsplit("/", 1)[-1]
+    structure = propose_structure(layout, filename=source_filename) if status == "layout_ready" else {
+        "schema_version": "structure-proposal.v2",
+        "document_sha256": digest,
+        "filename": source_filename,
+        "sections": [],
+        "warnings": ["needs_ocr"],
+    }
     manifest = {
-        "schema_version": "parsed-document.v1",
+        "schema_version": "parsed-document.v2",
         "document_sha256": digest,
         "status": status,
         "pipeline_version": PIPELINE_VERSION,
         "layout_schema_version": layout.get("schema_version"),
+        "structure_schema_version": structure.get("schema_version"),
         "layout_path": lpath,
         "layout_sha256": hashlib.sha256(dumps_layout(layout)).hexdigest(),
         "stats": stats,
@@ -74,8 +90,9 @@ def parse_pdf_bytes(
         "derived": {
             "document_profile": None,
             "problemset_links": [],
-            "sections": [],
-            "tasks": [],
+            "sections": structure.get("sections", []),
+            "tasks": flatten_tasks(structure),
+            "structure_proposal": structure,
         },
         "next_stage": "document_triage" if status == "layout_ready" else "ocr",
     }
