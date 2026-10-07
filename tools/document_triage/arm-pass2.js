@@ -1,4 +1,91 @@
+function calibrationStructure(doc){
+  const gold=calibrationGold&&calibrationGold.documents&&calibrationGold.documents[doc.id];
+  if(!gold||!Array.isArray(gold.sections))return null;
+  const base=stable("asset",doc.id);
+  return gold.sections.map((section,si)=>{
+    const sectionQuality=String(section.quality||"HUMAN_REVIEWED");
+    const node={
+      id:stable("section",base+"gold-"+si+"-"+section.label),
+      type:"SECTION",
+      label:section.label,
+      semantic_type:section.semantic_type||null,
+      start:Number(section.page_start)||1,
+      end:Number(section.page_end)||Number(section.page_start)||1,
+      confidence:sectionQuality==="NEEDS_BOUNDARY_RECHECK"?.55:.995,
+      confirmed:false,
+      human_created:false,
+      proposal_source:"CALIBRATION_GOLD",
+      quality:sectionQuality,
+      tasks:[],
+      evidence:{page:null,search:"",snippet:"Human-reviewed calibration section: "+section.label,source:"calibration"}
+    };
+    node.tasks=(section.tasks||[]).map((task,ti)=>({
+      id:stable("task",node.id+"-"+ti+"-"+task.label),
+      label:task.label,
+      kind:task.kind||"UNKNOWN",
+      subtasks:(task.parts||[]).map(p=>p.label+(p.kind&&p.kind!=="UNKNOWN"?" · "+p.kind:"")),
+      parts:(task.parts||[]).map((p,pi)=>({...p,order:pi})),
+      artifacts:(task.artifacts||[]).map(a=>({...a})),
+      item_range:task.item_range||null,
+      response_constraints:task.response_constraints||null,
+      confidence:String(task.quality||"")==="NEEDS_BOUNDARY_RECHECK"?.55:.995,
+      confirmed:false,
+      human_created:false,
+      proposal_source:"CALIBRATION_GOLD",
+      quality:task.quality||"HUMAN_REVIEWED",
+      evidence:{page:null,search:"",snippet:"Human-reviewed calibration task: "+task.label,source:"calibration"}
+    }));
+    return node;
+  });
+}
+
+function machineStructure(doc){
+  const proposal=doc&&doc.machineStructure;
+  if(!proposal||!Array.isArray(proposal.sections)||!proposal.sections.length)return null;
+  return proposal.sections.map((section,si)=>({
+    id:section.id||stable("section",doc.id+"machine-"+si),
+    type:"SECTION",
+    label:section.label||"Section",
+    semantic_type:section.semantic_type||null,
+    start:Number(section.page_start)||1,
+    end:Number(section.page_end)||Number(section.page_start)||1,
+    confidence:Number(section.confidence)||.58,
+    confirmed:false,
+    human_created:false,
+    proposal_source:"LAYOUT_RULES",
+    tasks:(section.tasks||[]).map((task,ti)=>({
+      id:task.id||stable("task",doc.id+"machine-"+si+"-"+ti),
+      label:task.label||("Task "+(ti+1)),
+      kind:task.kind||"UNKNOWN",
+      subtasks:(task.parts||[]).map(p=>p.label+(p.kind&&p.kind!=="UNKNOWN"?" · "+p.kind:"")),
+      parts:(task.parts||[]).map((p,pi)=>({...p,order:pi})),
+      artifacts:(task.artifacts||[]).map(a=>({...a})),
+      item_range:task.item_range||null,
+      confidence:Number(task.confidence)||.6,
+      confirmed:false,
+      human_created:false,
+      proposal_source:"LAYOUT_RULES",
+      evidence:{
+        page:Number(task.anchor&&task.anchor.page)||Number(task.page_start)||1,
+        search:String(task.anchor&&task.anchor.text||task.label||""),
+        snippet:String(task.anchor&&task.anchor.text||task.label||""),
+        source:"document"
+      }
+    })),
+    evidence:{
+      page:Number(section.anchor&&section.anchor.page)||Number(section.page_start)||1,
+      search:String(section.anchor&&section.anchor.text||section.label||""),
+      snippet:String(section.anchor&&section.anchor.text||section.label||""),
+      source:"document"
+    }
+  }));
+}
+
 function initialStructure(doc){
+  const calibrated=calibrationStructure(doc);
+  if(calibrated)return calibrated;
+  const proposed=machineStructure(doc);
+  if(proposed)return proposed;
   const role=inferDocument(doc).values.role,base=stable("asset",doc.id);
   const pageCount=Math.max(1,Number(doc.pageCount)||Number(armViewer.getPageCount&&armViewer.getPageCount())||1);
   const mk=(label,s,e,conf,tasks,evidence)=>({
@@ -64,6 +151,10 @@ function recalcChildren(node){
       if(typeof subtask==="string")return;
       subtask.span={...span};
       subtask.order=subIndex;
+    });
+    (task.parts||[]).forEach((part,partIndex)=>{
+      part.span=part.span||{...span};
+      part.order=partIndex;
     });
   });
 }
@@ -151,8 +242,9 @@ function createSection(doc){
     tasks:[],
     evidence:{page,search:"",snippet:"Human-created section",source:"human"}
   };
-  nodes.push(node);
-  nodes.sort((a,b)=>Number(a.start||1)-Number(b.start||1));
+  const selectedIndex=nodes.findIndex(n=>n.id===selectedNode);
+  if(selectedIndex>=0)nodes.splice(selectedIndex+1,0,node);
+  else nodes.push(node);
   recalcChildren(node);
   selectedNode=node.id;
   selectedTask=null;
@@ -168,7 +260,10 @@ function createTask(doc){
   const task={
     id:stable("task",doc.id+"manual-"+Date.now()+"-"+page),
     label:uiLocale==="ru"?"Новое задание":"New task",
+    kind:"UNKNOWN",
     subtasks:[],
+    parts:[],
+    artifacts:[],
     confidence:1,
     confirmed:false,
     human_created:true,
@@ -234,7 +329,12 @@ function renderPass2(doc){
     el.className="tree-node "+(selectedNode===n.id?"selected ":"")+(n.confidence<.8?"conflict":"");
     const children=(n.tasks||[]).map(t=>{
       const cls="task-child "+(selectedTask===t.id?"selected-task":"");
-      return '<div class="'+cls+'" data-task-id="'+t.id+'">→ '+t.label+(t.subtasks&&t.subtasks.length?" · "+t.subtasks.join(", "):"")+'</div>';
+      const meta=[];
+      if(t.kind&&t.kind!=="UNKNOWN")meta.push(t.kind);
+      if(t.parts&&t.parts.length)meta.push((uiLocale==="ru"?"частей ":"parts ")+t.parts.length);
+      if(t.artifacts&&t.artifacts.length)meta.push((uiLocale==="ru"?"объектов ":"artifacts ")+t.artifacts.length);
+      if(t.item_range&&t.item_range.start!=null)meta.push(String(t.item_range.start)+"-"+String(t.item_range.end));
+      return '<div class="'+cls+'" data-task-id="'+t.id+'">→ '+t.label+(meta.length?" · "+meta.join(" · "):"")+'</div>';
     }).join("");
 
     el.innerHTML='<div class="tree-title"><span>'+n.label+'</span><span>p.'+n.start+'-'+n.end+' · '+Math.round(n.confidence*100)+'%</span></div>'+children;
@@ -302,9 +402,16 @@ function renderBoundaryEditor(doc,node,task=null){
   const subtasks=task&&task.subtasks&&task.subtasks.length
     ?'<div class="context-subtasks">'+task.subtasks.map(s=>'<div class="context-chip">'+s+'</div>').join("")+'</div>'
     :"";
+  const artifacts=task&&task.artifacts&&task.artifacts.length
+    ?'<div class="context-subtasks">'+task.artifacts.map(a=>'<div class="context-chip">◆ '+(a.kind||"ARTIFACT")+(a.page?" · p."+a.page:"")+'</div>').join("")+'</div>'
+    :"";
 
+  const kinds=(taskTaxonomy&&Array.isArray(taskTaxonomy.task_kinds)&&taskTaxonomy.task_kinds.length?taskTaxonomy.task_kinds:["UNKNOWN","COMPOSITE","SELECT_ONE","MATCHING","GAP_FILL","OPEN_SHORT","EXTENDED_RESPONSE","ORAL_RESPONSE","OTHER"]);
+  const kindOptions=task?kinds.map(k=>'<option value="'+k+'" '+(String(task.kind||"UNKNOWN")===k?"selected":"")+'>'+k+'</option>').join(""):"";
   const taskEditor=task
     ?'<label class="muted">'+(uiLocale==="ru"?"Название задания":"Task label")+'</label><input id="taskLabel" class="human-input" value="'+String(task.label||"").replaceAll('"','&quot;')+'">'+
+      '<label class="muted">'+(uiLocale==="ru"?"Тип задания":"Task kind")+'</label><select id="taskKind" class="human-input">'+kindOptions+'</select>'+
+      subtasks+artifacts+
       '<div class="boundary-source-actions"><button data-task-op="anchor-current">'+(uiLocale==="ru"?"Привязать к текущей странице PDF":"Anchor task to current PDF page")+'</button><button data-task-op="accept">'+(uiLocale==="ru"?"Подтвердить задание":"Accept task")+'</button><button data-task-op="delete">'+(uiLocale==="ru"?"Удалить задание":"Delete task")+'</button></div>'
     :"";
 
@@ -317,7 +424,6 @@ function renderBoundaryEditor(doc,node,task=null){
     '<div class="muted mono">'+selected.id+'</div>'+
     '<div class="muted" style="margin-top:4px">'+t("proposalSource")+': <b>'+proposalSourceLabel(source)+'</b></div>'+
     '<div class="context-nav"><button data-nav="prev">← '+(uiLocale==="ru"?"Предыдущее":"Previous")+'</button><button data-nav="next">'+(uiLocale==="ru"?"Следующее":"Next")+' →</button></div>'+
-    subtasks+
     renderListeningTransport(doc,node,task)+
     taskEditor+
     sectionEditor+
@@ -341,6 +447,15 @@ function renderBoundaryEditor(doc,node,task=null){
   const taskLabel=$("taskLabel");
   if(taskLabel)taskLabel.onchange=e=>{
     task.label=e.target.value.trim()||task.label;
+    task.corrected=true;
+    invalidateStructure(doc);
+    armSave();
+    renderPass2(doc);
+  };
+
+  const taskKind=$("taskKind");
+  if(taskKind)taskKind.onchange=e=>{
+    task.kind=e.target.value||"UNKNOWN";
     task.corrected=true;
     invalidateStructure(doc);
     armSave();
