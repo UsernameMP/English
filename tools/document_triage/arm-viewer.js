@@ -135,6 +135,14 @@ const armViewer=(()=>{
     if(!pdf||!ev)return;
     if(remember)lastEvidence=ev;
     clearHighlights();
+    const source=String(ev.source||"document");
+    const hasPdfTarget=Array.isArray(ev.bbox)||(String(ev.search||"").trim().length>0&&Number(ev.page)>0);
+    if(!hasPdfTarget&&source!=="document"&&source!=="human-boundary"&&source!=="human"){
+      const hint=document.getElementById("viewerHint");
+      const detail=ev.snippet||ev.label||"";
+      if(hint)hint.textContent="Evidence · "+source+(detail?" · "+detail:"");
+      return;
+    }
     const pageNo=Math.max(1,Math.min(pdf.numPages,Number(ev.page||1)));
     const shell=document.querySelector('.pdf-page[data-page="'+pageNo+'"]');
     if(!shell)return;
