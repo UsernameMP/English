@@ -189,16 +189,28 @@ def _item_range(lines: list[dict[str, Any]], start: int, end: int) -> dict[str, 
 
 
 def _task_region(lines: list[dict[str, Any]], start: int, end: int) -> dict[int, tuple[float, float]]:
+    """Return the visual band owned by a task, including non-text space.
+
+    A task heading may be followed by a table/grid/image with no intervening text.
+    Using only the union of text bboxes would therefore drop exactly the artifacts
+    we need for crosswords, forms, diagrams and maths figures.  The band extends
+    from the task start to the next task/section boundary (or page bottom).
+    """
     first = lines[start]
     last = lines[end - 1]
     pages = range(first["page"], last["page"] + 1)
     out: dict[int, tuple[float, float]] = {}
+    next_boundary = lines[end] if end < len(lines) else None
     for page in pages:
         same = [x for x in lines[start:end] if x["page"] == page]
         if not same:
             continue
-        y0 = min(float(x["bbox"][1]) for x in same)
-        y1 = max(float(x["bbox"][3]) for x in same)
+        page_height = max(float(x.get("page_height") or 0) for x in same) or max(float(x["bbox"][3]) for x in same)
+        y0 = float(first["bbox"][1]) if page == first["page"] else 0.0
+        if next_boundary is not None and int(next_boundary["page"]) == page:
+            y1 = max(y0 + 1.0, float(next_boundary["bbox"][1]) - 1.0)
+        else:
+            y1 = page_height
         out[page] = (y0, y1)
     return out
 
