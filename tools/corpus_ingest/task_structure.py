@@ -21,6 +21,10 @@ PART_RE = re.compile(
     r"^\s*(?:part|часть)\b\s*(?:№\s*)?([0-9]{1,3}|[A-ZА-Я])\b[\s.):-]*(.*)$",
     re.I,
 )
+SUBPART_RE = re.compile(
+    r"^\s*(?:\(([a-zа-я])\)|([a-zа-я])[.)]|\((i{1,3}|iv|v|vi{0,3}|ix|x)\))\s+\S",
+    re.I,
+)
 ITEM_RE = re.compile(r"^\s*([0-9]{1,3})(?:[.)])?\s+\S")
 RANGE_RE = re.compile(
     r"\b(?:questions?|items?|gaps?|sentences?)\s*(?:№\s*)?"
@@ -278,6 +282,55 @@ def _part_nodes(lines: list[dict[str, Any]], start: int, end: int, task_id: str)
     return parts
 
 
+def _subpart_nodes(lines: list[dict[str, Any]], start: int, end: int, task_id: str, base_kind: str) -> list[dict[str, Any]]:
+    # Lower-case/roman subparts are common in maths/science. Do not reinterpret
+    # option lists in select/matching tasks as structural parts.
+    if base_kind in {"SELECT_ONE", "SELECT_MULTIPLE", "MULTIPLE_CHOICE_CLOZE", "MATCHING"}:
+        return []
+    candidates: list[tuple[int, str]] = []
+    for i in range(start + 1, end):
+        m = SUBPART_RE.match(lines[i]["text"])
+        if not m:
+            continue
+        marker = next((x for x in m.groups() if x), "")
+        candidates.append((i, marker.lower()))
+    if len(candidates) < 2:
+        return []
+    parts: list[dict[str, Any]] = []
+    for pos, (idx, marker) in enumerate(candidates):
+        stop = candidates[pos + 1][0] if pos + 1 < len(candidates) else end
+        text = "\n".join(x["text"] for x in lines[idx:stop])
+        parts.append({
+            "id": _stable("part", task_id, lines[idx]["id"], marker),
+            "label": f"Part {marker}",
+            "page_start": lines[idx]["page"],
+            "page_end": lines[stop - 1]["page"],
+            "anchor": {"page": lines[idx]["page"], "line_id": lines[idx]["id"], "text": lines[idx]["text"]},
+            "kind": infer_task_kind(text),
+            "confidence": 0.78,
+            "proposal_source": "LAYOUT_RULES",
+        })
+    return parts
+
+
+def response_mode_for_kind(kind: str) -> str:
+    if kind in {"SELECT_ONE", "SELECT_MULTIPLE", "TRUE_FALSE", "TRUE_FALSE_NOT_STATED", "MATCHING", "ORDERING", "MULTIPLE_CHOICE_CLOZE"}:
+        return "SELECT"
+    if kind in {"GAP_FILL", "TABLE_GAP_FILL", "FORM_FILL", "OPEN_CLOZE", "OPEN_SHORT", "KEY_WORD_TRANSFORMATION", "WORD_FORMATION", "IDIOM"}:
+        return "TEXT_SHORT"
+    if kind in {"EXTENDED_RESPONSE", "PROOF", "DERIVATION"}:
+        return "TEXT_LONG"
+    if kind == "NUMERIC_RESPONSE":
+        return "NUMBER"
+    if kind == "PROGRAMMING":
+        return "CODE"
+    if kind == "ORAL_RESPONSE":
+        return "SPEECH"
+    if kind == "COMPOSITE":
+        return "MIXED"
+    return "UNKNOWN"
+
+
 def _item_range(lines: list[dict[str, Any]], start: int, end: int) -> dict[str, int] | None:
     text = "\n".join(line["text"] for line in lines[start:end])
     explicit = RANGE_RE.search(text)
@@ -412,6 +465,7 @@ def _semantic_task(
         "label": label,
         "number": "",
         "kind": resolved_kind,
+        "response_mode": response_mode_for_kind(resolved_kind),
         "page_start": line["page"],
         "page_end": lines[end - 1]["page"],
         "anchor": {"page": line["page"], "line_id": line["id"], "text": line["text"]},
@@ -442,6 +496,7 @@ def _answer_tasks(
                 "label": f"Task {number}",
                 "number": number,
                 "kind": "ANSWER_GROUP",
+                "response_mode": "UNKNOWN",
                 "page_start": lines[i]["page"],
                 "page_end": lines[end - 1]["page"],
                 "anchor": {"page": lines[i]["page"], "line_id": lines[i]["id"], "text": lines[i]["text"]},
@@ -469,6 +524,7 @@ def _script_structure(layout: dict[str, Any], lines: list[dict[str, Any]], diges
                 "label": f"Task {number}",
                 "number": number,
                 "kind": "TRANSCRIPT_SEGMENT",
+                "response_mode": "NONE",
                 "page_start": heading["page"],
                 "page_end": lines[end - 1]["page"],
                 "anchor": {"page": heading["page"], "line_id": heading["id"], "text": heading["text"]},
@@ -550,16 +606,20 @@ def propose_structure(layout: dict[str, Any], *, filename: str = "", document_ro
                 tend = task_starts[tpos + 1] if tpos + 1 < len(task_starts) else end
                 heading = lines[tstart]
                 tid = _stable("task", sid, heading["id"], _task_number(heading["text"]))
-                parts = _part_nodes(lines, tstart, tend, tid)
                 text = "\n".join(x["text"] for x in lines[tstart:tend])
+                base_kind = infer_task_kind(text)
+                parts = _part_nodes(lines, tstart, tend, tid)
+                if not parts:
+                    parts = _subpart_nodes(lines, tstart, tend, tid, base_kind)
                 artifacts = _artifact_nodes(layout, lines, tstart, tend, tid)
-                kind = infer_task_kind(text, has_parts=bool(parts))
+                kind = "COMPOSITE" if parts else base_kind
                 item_range = _item_range(lines, tstart, tend)
                 task = {
                     "id": tid,
                     "label": _task_label(heading["text"]),
                     "number": _task_number(heading["text"]),
                     "kind": kind,
+                    "response_mode": response_mode_for_kind(kind),
                     "page_start": heading["page"],
                     "page_end": lines[tend - 1]["page"],
                     "anchor": {"page": heading["page"], "line_id": heading["id"], "text": heading["text"]},
