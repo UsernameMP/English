@@ -189,3 +189,54 @@ def test_multiple_choice_lowercase_options_are_not_promoted_to_parts():
     task = flatten_tasks(propose_structure(layout, filename="tasks-engl-demo.pdf"))[0]
     assert task["kind"] == "SELECT_ONE"
     assert task["parts"] == []
+
+
+def test_oral_set_spans_stop_before_next_repeated_set_header():
+    layout = layout_from_pages([
+        ["SPEAKING", "Set 1", "Task 1", "1. Monologue. Speak about A.", "Task 2", "1. Listen to your partner.", "2. Ask two questions."],
+        ["Fact file A"],
+        ["Fact file B"],
+        ["SPEAKING", "Set 2", "Task 1", "1. Monologue. Speak about B.", "Task 2", "1. Listen to your partner.", "2. Ask two questions."],
+        ["Fact file C"],
+        ["Fact file D"],
+    ])
+    proposal = propose_structure(layout, filename="tasks-engl-9-11-ustn-mun-demo-25-26.pdf")
+    first = proposal["sections"][0]
+    second = proposal["sections"][1]
+    assert first["page_start"] == 1
+    assert first["page_end"] == 3
+    assert second["page_start"] == 4
+    assert first["tasks"][1]["kind"] == "ORAL_RESPONSE"
+    assert first["tasks"][1]["page_end"] == 3
+    assert first["tasks"][1].get("item_range") is None
+
+
+def test_writing_semantic_task_uses_real_response_label():
+    layout = layout_from_pages([[
+        "WRITING",
+        "ARTICLES WANTED",
+        "Write your article (180-200 words).",
+    ]])
+    proposal = propose_structure(layout, filename="tasks-engl-demo.pdf")
+    task = proposal["sections"][0]["tasks"][0]
+    assert task["label"] == "Article"
+    assert task["kind"] == "EXTENDED_RESPONSE"
+
+
+def test_answer_score_summary_does_not_create_extra_criteria_section():
+    layout = layout_from_pages([[
+        "LISTENING",
+        "Task 1 A B",
+        "READING",
+        "1 A",
+        "WRITING – Критерии оценивания",
+        "Rubric table",
+        "Методические рекомендации",
+        "Критерии оценивания и схема подсчета баллов",
+        "Writing – максимальное количество баллов 15. Задание оценивается по Критериям оценивания.",
+        "Максимальное количество баллов за все конкурсы – 56 баллов.",
+    ]])
+    proposal = propose_structure(layout, filename="ans-engl-demo.pdf")
+    labels = [s["label"] for s in proposal["sections"]]
+    assert "Writing – максимальное количество баллов 15. Задание оценивается по Критериям оценивания." not in labels
+    assert [s["semantic_type"] for s in proposal["sections"]].count("CRITERIA") == 2
