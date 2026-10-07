@@ -25,6 +25,9 @@ SUBPART_RE = re.compile(
     r"^\s*(?:\(([a-zа-я])\)|([a-zа-я])[.)]|\((i{1,3}|iv|v|vi{0,3}|ix|x)\))\s+\S",
     re.I,
 )
+DECIMAL_TASK_RE = re.compile(r"^\s*([0-9]{1,3}\.[0-9]{1,3})\.?(?:\s+|$)")
+GROUP_SECTION_RE = re.compile(r"^\s*(?:часть|раздел|part|section)\s+([0-9IVX]+)\s*[.:]?\s*$", re.I)
+ANSWER_QUESTION_RE = re.compile(r"(?:ответ\s+на\s+вопрос|answer\s+to\s+question)\s*(?:№\s*)?([0-9]{1,3}(?:\.[0-9]{1,3})?)", re.I)
 ITEM_RE = re.compile(r"^\s*([0-9]{1,3})(?:[.)])?\s+\S")
 RANGE_RE = re.compile(
     r"\b(?:questions?|items?|gaps?|sentences?)\s*(?:№\s*)?"
@@ -47,15 +50,16 @@ SECTION_PATTERNS = [
 ]
 
 KIND_RULES = [
+    ("SELECT_MULTIPLE", re.compile(r"выберите\s+(?:все|несколько).*?(?:правильн|верн)|укажите\s+все\s+верн", re.I | re.S)),
     ("TRUE_FALSE_NOT_STATED", re.compile(r"true\s*\([^)]*\).*false\s*\([^)]*\).*not\s+stated|true.*false.*not\s+stated", re.I | re.S)),
     ("TRUE_FALSE", re.compile(r"\btrue\b.*\bfalse\b", re.I | re.S)),
     ("FORM_FILL", re.compile(r"complete\s+the\s+form|fill\s+in\s+the\s+form", re.I)),
-    ("TABLE_GAP_FILL", re.compile(r"complete\s+the\s+table|fill\s+in\s+the\s+table", re.I)),
+    ("TABLE_GAP_FILL", re.compile(r"complete\s+the\s+table|fill\s+in\s+the\s+table|заполните\s+таблиц", re.I)),
     ("KEY_WORD_TRANSFORMATION", re.compile(r"key\s+word|complete.*second\s+sentence.*meaning|second\s+sentence.*similar\s+meaning", re.I | re.S)),
     ("WORD_FORMATION", re.compile(r"word\s+formation|form\s+(?:a|the)\s+word|use\s+the\s+word\s+given|word\s+given\s+in\s+capitals", re.I)),
     ("IDIOM", re.compile(r"\bidioms?\b", re.I)),
-    ("MATCHING", re.compile(r"\bmatch\b|choose\s+the\s+correct\s+paragraph|which\s+paragraph|choose\s+from\s+the\s+paragraphs", re.I)),
-    ("ORDERING", re.compile(r"put.*(?:correct|right)\s+order|arrange.*order", re.I | re.S)),
+    ("MATCHING", re.compile(r"\bmatch\b|choose\s+the\s+correct\s+paragraph|which\s+paragraph|choose\s+from\s+the\s+paragraphs|установите\s+соответств|соотнесите", re.I)),
+    ("ORDERING", re.compile(r"put.*(?:correct|right)\s+order|arrange.*order|расположите.*порядк|установите\s+последовательност", re.I | re.S)),
     ("MULTIPLE_CHOICE_CLOZE", re.compile(
         r"(?:which|decide\s+which)\s+answer.*(?:fits?|best\s+fits?)\s+each\s+gap|"
         r"decide\s+which\s+answer.*best\s+fits.*gap",
@@ -69,10 +73,10 @@ KIND_RULES = [
     ("SELECT_ONE", re.compile(
         r"choose\s+the\s+correct\s+answer|choose\s+(?:a|one)\s+(?:correct\s+)?(?:option|answer)|"
         r"choose\s+[A-DА-Д](?:\s*,\s*[A-DА-Д]){1,3}.*(?:answer|question)|"
-        r"choose\s+the\s+answer\s*\([A-DА-Д]",
+        r"choose\s+the\s+answer\s*\([A-DА-Д]|выберите\s+(?:один\s+)?правильн(?:ый|ого)\s+(?:вариант|ответ)|укажите\s+один\s+верн",
         re.I | re.S,
     )),
-    ("OPEN_SHORT", re.compile(r"answer\s+the\s+following\s+questions|give\s+(?:a\s+)?short\s+answer", re.I)),
+    ("OPEN_SHORT", re.compile(r"answer\s+the\s+following\s+questions|give\s+(?:a\s+)?short\s+answer|ответьте\s+на\s+вопрос|дайте\s+кратк", re.I)),
     ("GAP_FILL", re.compile(
         r"complete\s+(?:the\s+)?(?:sentences?|text)|fill\s+(?:in\s+)?(?:the\s+)?gaps?|"
         r"missing\s+information",
@@ -85,7 +89,7 @@ KIND_RULES = [
         re.I,
     )),
     ("PROOF", re.compile(r"\bprove\b|докаж", re.I)),
-    ("PROGRAMMING", re.compile(r"write\s+(?:a\s+)?program|\balgorithm\b|программ|алгоритм", re.I)),
+    ("PROGRAMMING", re.compile(r"write\s+(?:a\s+)?program|\balgorithm\b|напишите\s+программ|программ|алгоритм", re.I)),
     ("ORAL_RESPONSE", re.compile(r"\bmonologue\b|\bdialogue\b|\bspeak\b|talk\s+about|устн|монолог|диалог", re.I)),
     ("NUMERIC_RESPONSE", re.compile(r"\bcalculate\b|\bcompute\b|\bfind\s+(?:the\s+)?(?:value|number)|вычисл|найдите\s+(?:значение|число)", re.I)),
 ]
@@ -173,6 +177,8 @@ def infer_task_kind(text: str, *, has_parts: bool = False) -> str:
 
 def _explicit_section_type(text: str) -> str | None:
     stripped = text.strip()
+    if GROUP_SECTION_RE.match(stripped):
+        return "PART_GROUP"
     if re.match(r"^writing\b", stripped, re.I) and re.search(r"критери|criteria|rubric", stripped, re.I):
         # "WRITING – Критерии оценивания" is a real rubric heading.
         # "Writing – максимальное количество баллов ... оценивается по критериям"
@@ -259,6 +265,16 @@ def detect_section_starts(lines: list[dict[str, Any]], document_role: str = "") 
         filtered = [i for i, kind in explicit if len(lines[i]["text"].strip()) <= 100]
         if filtered:
             return sorted(dict.fromkeys(filtered))
+
+    explicit_tasks = [
+        i for i, line in enumerate(lines)
+        if TASK_RE.match(line["text"]) or DECIMAL_TASK_RE.match(line["text"])
+    ]
+    if explicit_tasks:
+        # Subject-agnostic olympiad sheets often have no named sections at all.
+        # Treat the task sequence as one review section instead of promoting each
+        # bold title / task heading to an arbitrary section.
+        return [explicit_tasks[0]]
 
     sizes = sorted(x["font_size"] for x in lines if x["font_size"] > 0)
     median = sizes[len(sizes) // 2] if sizes else 0.0
@@ -348,19 +364,28 @@ def _writing_task_label(text: str) -> str:
 
 
 def detect_task_starts(lines: list[dict[str, Any]], start: int, end: int) -> list[int]:
-    return [i for i in range(start, end) if TASK_RE.match(lines[i]["text"])]
+    return [
+        i for i in range(start, end)
+        if TASK_RE.match(lines[i]["text"]) or DECIMAL_TASK_RE.match(lines[i]["text"])
+    ]
 
 
 def _task_number(text: str) -> str:
     m = TASK_RE.match(text)
+    if m:
+        return m.group(1)
+    m = DECIMAL_TASK_RE.match(text)
     return m.group(1) if m else ""
 
 
 def _task_label(text: str) -> str:
     m = TASK_RE.match(text)
-    if not m:
-        return text[:80]
-    return f"Task {m.group(1)}"
+    if m:
+        return f"Task {m.group(1)}"
+    m = DECIMAL_TASK_RE.match(text)
+    if m:
+        return f"Task {m.group(1)}"
+    return text[:80]
 
 
 def _part_nodes(lines: list[dict[str, Any]], start: int, end: int, task_id: str) -> list[dict[str, Any]]:
@@ -540,6 +565,8 @@ def _artifact_nodes(layout: dict[str, Any], lines: list[dict[str, Any]], start: 
 
 def _section_label(line: dict[str, Any], semantic_type: str | None) -> str:
     text = line["text"].strip()
+    if semantic_type == "UNKNOWN" and (TASK_RE.match(text) or DECIMAL_TASK_RE.match(text)):
+        return "Tasks"
     if semantic_type == "SPEAKING_SET":
         m = SET_RE.match(text)
         if m:
@@ -586,7 +613,8 @@ def _answer_tasks(
     seen: set[str] = set()
     tasks: list[dict[str, Any]] = []
     for i in range(start, end):
-        for m in TASK_OCCURRENCE_RE.finditer(lines[i]["text"]):
+        matches = list(TASK_OCCURRENCE_RE.finditer(lines[i]["text"])) + list(ANSWER_QUESTION_RE.finditer(lines[i]["text"]))
+        for m in matches:
             number = m.group(1)
             if number in seen:
                 continue
@@ -695,7 +723,7 @@ def propose_structure(layout: dict[str, Any], *, filename: str = "", document_ro
         tasks: list[dict[str, Any]] = []
 
         if role in {"ANSWER_KEY", "CRITERIA"}:
-            if semantic_type in {"LISTENING", "READING", "USE_OF_ENGLISH"}:
+            if semantic_type in {"LISTENING", "READING", "USE_OF_ENGLISH", "PART_GROUP"}:
                 tasks = _answer_tasks(layout, lines, start, end, sid)
             elif semantic_type == "CRITERIA":
                 tasks = [_semantic_task(layout, lines, start, end, sid, "Rubric / rationale", "CRITERION_GROUP", 0.84)]
