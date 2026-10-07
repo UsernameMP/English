@@ -16,11 +16,13 @@ on:
       - "tools/corpus_ingest/layout.py"
       - "tools/corpus_ingest/layout_pipeline.py"
       - "tools/corpus_ingest/task_structure.py"
+      - "tools/corpus_ingest/calibration_eval.py"
       - "tools/corpus_ingest/corpus_graph.py"
       - "tools/corpus_ingest/parser_requirements.txt"
       - "tools/corpus_ingest/tests/test_parser.py"
       - "tools/corpus_ingest/tests/test_layout.py"
       - "tools/corpus_ingest/tests/test_task_structure.py"
+      - "tools/corpus_ingest/tests/test_calibration_eval.py"
       - "tools/corpus_ingest/tests/test_corpus_graph.py"
 
 permissions:
@@ -56,7 +58,7 @@ jobs:
         run: pip install -r parser_requirements.txt
 
       - name: Test parser
-        run: PYTHONPATH=. pytest -q tests/test_parser.py tests/test_layout.py tests/test_task_structure.py tests/test_corpus_graph.py tests/test_crawler.py
+        run: PYTHONPATH=. pytest -q tests/test_parser.py tests/test_layout.py tests/test_task_structure.py tests/test_calibration_eval.py tests/test_corpus_graph.py tests/test_crawler.py
 
       - name: Parse Dropbox RAW into canonical layout
         run: python parser.py --max-documents "$PARSER_MAX_DOCUMENTS"
