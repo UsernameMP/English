@@ -40,6 +40,13 @@ public final class MiniGameConfig {
 
     public boolean isProduction() { return enabled && "production".equals(status); }
 
+    public MiniGameConfig withoutRewards() {
+        return new MiniGameConfig(
+                id, enabled, status, moduleApiVersion, durationSeconds,
+                0, scoreBonusEvery, 0, titles
+        );
+    }
+
     public String title(Locale locale) {
         String lang = locale == null ? "en" : locale.getLanguage();
         String value = titles.get(lang);

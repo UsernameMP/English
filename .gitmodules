@@ -1,0 +1,18 @@
+[submodule "app/src/main/assets/games/2048"]
+	path = app/src/main/assets/games/2048
+	url = https://github.com/gabrielecirulli/2048.git
+[submodule "app/src/main/assets/games/tower"]
+	path = app/src/main/assets/games/tower
+	url = https://github.com/iamkun/tower_game.git
+[submodule "app/src/main/assets/games/suika"]
+	path = app/src/main/assets/games/suika
+	url = https://github.com/sergiss/suika_game.git
+[submodule "app/src/main/assets/games/match3"]
+	path = app/src/main/assets/games/match3
+	url = https://github.com/rembound/Match-3-Game-HTML5.git
+[submodule "app/src/main/assets/games/bubble"]
+	path = app/src/main/assets/games/bubble
+	url = https://github.com/rembound/Bubble-Shooter-HTML5.git
+[submodule "app/src/main/assets/games/cozy"]
+	path = app/src/main/assets/games/cozy
+	url = https://github.com/nisanurtezcan/cozyCafeGame.git

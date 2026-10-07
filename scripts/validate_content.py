@@ -381,8 +381,8 @@ for game in games:
         fail(f"duplicate mini-game id: {gid}")
     game_ids.add(gid)
     duration = game.get("duration_seconds")
-    if not isinstance(duration, int) or not 5 <= duration <= 60:
-        fail(f"{gid}: duration must be 5..60 seconds")
+    if not isinstance(duration, int) or not 5 <= duration <= 120:
+        fail(f"{gid}: duration must be 5..120 seconds")
     for field in ("completion_reward", "score_bonus_every", "score_bonus_cap"):
         value = game.get(field)
         if not isinstance(value, int) or value < 0:

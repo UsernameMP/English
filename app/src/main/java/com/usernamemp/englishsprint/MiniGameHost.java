@@ -29,6 +29,8 @@ public final class MiniGameHost {
     private String selectionStrategy = "round_robin";
     private final SharedPreferences prefs;
     private final Random random = new Random();
+    private MiniGame activeGame;
+    private Runnable activeFinish;
 
     public MiniGameHost(Context context, EconomyStore economy) {
         this.context = context.getApplicationContext();
@@ -55,7 +57,7 @@ public final class MiniGameHost {
             return;
         }
         prefs.edit().putString("last_game_id", selected).apply();
-        game.start(activity, config, economy, onFinished);
+        launch(activity, game, config, onFinished);
     }
 
     public void startRandomPreview(Activity activity, Runnable onFinished) {
@@ -72,7 +74,32 @@ public final class MiniGameHost {
             return;
         }
         prefs.edit().putString("last_preview_game_id", selected).apply();
-        game.start(activity, config, economy, onFinished);
+        launch(activity, game, config.withoutRewards(), onFinished);
+    }
+
+    public boolean abortActive() {
+        if (activeGame == null) return false;
+        MiniGame game = activeGame;
+        Runnable finish = activeFinish;
+        activeGame = null;
+        activeFinish = null;
+        game.stop();
+        if (finish != null) finish.run();
+        return true;
+    }
+
+    private void launch(Activity activity, MiniGame game, MiniGameConfig config, Runnable onFinished) {
+        if (activeGame != null) abortActive();
+        activeGame = game;
+        Runnable wrapped = () -> {
+            if (activeGame == game) {
+                activeGame = null;
+                activeFinish = null;
+            }
+            onFinished.run();
+        };
+        activeFinish = wrapped;
+        game.start(activity, config, economy, wrapped);
     }
 
     static String selectRandomGameId(List<String> ids, String last, Random random) {
@@ -166,7 +193,7 @@ public final class MiniGameHost {
                         o.optBoolean("enabled", false),
                         o.optString("status", "prototype"),
                         o.optInt("module_api_version", 0),
-                        Math.max(5, Math.min(60, o.optInt("duration_seconds", 45))),
+                        Math.max(5, Math.min(120, o.optInt("duration_seconds", 45))),
                         Math.max(0, o.optInt("completion_reward", 0)),
                         Math.max(1, o.optInt("score_bonus_every", 10)),
                         Math.max(0, o.optInt("score_bonus_cap", 0)),

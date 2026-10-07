@@ -133,6 +133,7 @@ public class MainActivity extends Activity {
 
     @Override
     public void onBackPressed() {
+        if (miniGames != null && miniGames.abortActive()) return;
         showHome();
     }
 
