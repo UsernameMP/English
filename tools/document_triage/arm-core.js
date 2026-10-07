@@ -23,7 +23,7 @@ const I18N={
     field_role:"Тип документа",field_subject:"Предмет",field_language:"Язык документа",field_academic_year:"Учебный год",field_grades:"Классы",
     field_competition:"Олимпиада",field_stage:"Этап",field_tour:"Тур",field_region:"Регион",field_problemset:"ProblemSet",
     value_TASK_SET:"Задания",value_ANSWER_KEY:"Ответы",value_CRITERIA:"Критерии",value_LISTENING_SCRIPT:"Скрипт аудирования",value_OTHER:"Другое",
-    value_ENGLISH:"Английский язык",value_RUSSIAN:"Русский язык",value_UNKNOWN:"Не определено",
+    value_ENGLISH:"Английский язык",value_RUSSIAN:"Русский язык",value_MATHEMATICS:"Математика",value_GEOGRAPHY:"География",value_BIOLOGY:"Биология",value_PHYSICS:"Физика",value_INFORMATICS:"Информатика",value_CHEMISTRY:"Химия",value_HISTORY:"История",value_UNKNOWN:"Не определено",
     value_RU:"Русский",value_EN:"Английский",value_RU_EN:"Русский + английский",
     value_VSOSh:"Всероссийская олимпиада школьников",
     value_MUNICIPAL:"Муниципальный этап",value_REGIONAL:"Региональный этап",
@@ -49,7 +49,7 @@ const I18N={
     field_role:"Document type",field_subject:"Subject",field_language:"Document language",field_academic_year:"Academic year",field_grades:"Grades",
     field_competition:"Competition",field_stage:"Stage",field_tour:"Tour",field_region:"Region",field_problemset:"ProblemSet",
     value_TASK_SET:"Task set",value_ANSWER_KEY:"Answer key",value_CRITERIA:"Criteria",value_LISTENING_SCRIPT:"Listening script",value_OTHER:"Other",
-    value_ENGLISH:"English",value_RUSSIAN:"Russian",value_UNKNOWN:"Unknown",
+    value_ENGLISH:"English",value_RUSSIAN:"Russian",value_MATHEMATICS:"Mathematics",value_GEOGRAPHY:"Geography",value_BIOLOGY:"Biology",value_PHYSICS:"Physics",value_INFORMATICS:"Informatics",value_CHEMISTRY:"Chemistry",value_HISTORY:"History",value_UNKNOWN:"Unknown",
     value_RU:"Russian",value_EN:"English",value_RU_EN:"Russian + English",
     value_VSOSh:"All-Russian School Olympiad",
     value_MUNICIPAL:"Municipal stage",value_REGIONAL:"Regional stage",
@@ -78,7 +78,14 @@ const REGION_CODES={
   kamchatka:"Камчатский край",
   chel:"Челябинская область",
   bash:"Республика Башкортостан",
-  irk:"Иркутская область"
+  irk:"Иркутская область",
+  tat:"Республика Татарстан",
+  sverd:"Свердловская область",
+  spb:"Санкт-Петербург",
+  vladimir:"Владимирская область",
+  kursk:"Курская область",
+  chuk:"Чукотский автономный округ",
+  kem:"Кемеровская область"
 };
 
 const PASS1_EVIDENCE_OVERRIDES={
@@ -127,27 +134,57 @@ function filenameEvidence(doc,label,token=""){
 }
 function inferDocument(doc){
   const name=doc.filename.toLowerCase();
-  const roleToken=name.startsWith("tasks-")?"tasks":name.startsWith("ans-")?"ans":name.startsWith("script-")?"script":name.startsWith("criteria-")?"criteria":"";
-  const role=roleToken==="tasks"?"TASK_SET":roleToken==="ans"?"ANSWER_KEY":roleToken==="script"?"LISTENING_SCRIPT":roleToken==="criteria"?"CRITERIA":"OTHER";
-  const yr=name.match(/-(\d{2})-(\d{2})\.pdf$/); const academic_year=yr?("20"+yr[1]+"/"+yr[2]):"UNKNOWN";
-  const gr=name.match(/engl-(\d+)-(\d+)/); const grades=gr?(gr[1]+"-"+gr[2]):"UNKNOWN";
+  const roleToken=name.startsWith("tasks-")?"tasks":name.startsWith("ans-")?"ans":name.startsWith("script-")?"script":name.startsWith("criteria-")?"criteria":name.startsWith("sol-")?"sol":"";
+  const role=roleToken==="tasks"?"TASK_SET":roleToken==="ans"?"ANSWER_KEY":roleToken==="script"?"LISTENING_SCRIPT":roleToken==="criteria"?"CRITERIA":roleToken==="sol"?"ANSWER_KEY":"OTHER";
+
+  const SUBJECT_CODES={
+    engl:"ENGLISH",russ:"RUSSIAN",math:"MATHEMATICS",geog:"GEOGRAPHY",biol:"BIOLOGY",
+    phys:"PHYSICS",iikt:"INFORMATICS",info:"INFORMATICS",chem:"CHEMISTRY",hist:"HISTORY"
+  };
+  const sm=name.match(/-(engl|russ|math|geog|biol|phys|iikt|info|chem|hist)-/);
+  const subjectToken=sm?sm[1]:"";
+  const subject=SUBJECT_CODES[subjectToken]||"OTHER";
+
+  const yr=name.match(/-(\d{2})-(\d{2})\.pdf$/);
+  const academic_year=yr?("20"+yr[1]+"/"+yr[2]):"UNKNOWN";
+
+  const gr=name.match(/-(?:engl|russ|math|geog|biol|phys|iikt|info|chem|hist)-(\d+)(?:-(\d+))?/);
+  const grades=gr?(gr[2]?(gr[1]+"-"+gr[2]):gr[1]):"UNKNOWN";
+
   const stageToken=name.includes("-mun-")?"mun":name.includes("-reg-")?"reg":"";
   const stage=stageToken==="mun"?"MUNICIPAL":stageToken==="reg"?"REGIONAL":"UNKNOWN";
-  const tourToken=name.includes("-pism-")?"pism":name.includes("-ustn-")?"ustn":"";
-  const tour=tourToken==="pism"?"WRITTEN":tourToken==="ustn"?"ORAL":"UNKNOWN";
-  const rm=name.match(/-(?:mun|reg)-([a-z0-9]+)-\d{2}-\d{2}\.pdf$/); const rawRegion=rm?rm[1].toLowerCase():""; const region=rawRegion?(REGION_CODES[rawRegion]||rawRegion.toUpperCase()):"UNKNOWN";
-  const values={role,subject:"ENGLISH",language:"UNKNOWN",academic_year,grades,competition:"VSOSh",stage,tour,region,problemset:canonicalStem(doc.filename)};
-  const confidence={role:.99,subject:.99,language:.35,academic_year:academic_year==="UNKNOWN"?.45:.98,grades:grades==="UNKNOWN"?.45:.98,competition:.72,stage:stage==="UNKNOWN"?.55:.97,tour:tour==="UNKNOWN"?.55:.97,region:region==="UNKNOWN"?.52:.88,problemset:.91};
+
+  const tourToken=name.includes("-pism-")?"pism":name.includes("-ustn-")?"ustn":name.includes("-teor-")?"teor":"";
+  const tour=tourToken==="ustn"?"ORAL":tourToken==="pism"||tourToken==="teor"?"WRITTEN":"UNKNOWN";
+
+  const rm=name.match(/-(?:mun|reg)-([a-z0-9]+)-\d{2}-\d{2}\.pdf$/);
+  const rawRegion=rm?rm[1].toLowerCase():"";
+  const region=rawRegion?(REGION_CODES[rawRegion]||rawRegion.toUpperCase()):"UNKNOWN";
+
+  const defaultLanguage=subject==="ENGLISH"?"UNKNOWN":"RU";
+  const values={role,subject,language:defaultLanguage,academic_year,grades,competition:"VSOSh",stage,tour,region,problemset:canonicalStem(doc.filename)};
+  const confidence={
+    role:.99,
+    subject:subject==="OTHER"?.45:.99,
+    language:subject==="ENGLISH"?.35:.78,
+    academic_year:academic_year==="UNKNOWN"?.45:.98,
+    grades:grades==="UNKNOWN"?.45:.98,
+    competition:.72,
+    stage:stage==="UNKNOWN"?.55:.97,
+    tour:tour==="UNKNOWN"?.55:.94,
+    region:region==="UNKNOWN"?.52:.88,
+    problemset:.91
+  };
   const proposal_source={
     role:"FILENAME_HEURISTIC",subject:"FILENAME_HEURISTIC",language:"FILENAME_HEURISTIC",academic_year:"FILENAME_HEURISTIC",
     grades:"FILENAME_HEURISTIC",competition:"FILENAME_HEURISTIC",stage:"FILENAME_HEURISTIC",tour:"FILENAME_HEURISTIC",region:"FILENAME_HEURISTIC",problemset:"FILENAME_HEURISTIC"
   };
   const evidence={
     role:filenameEvidence(doc,"filename prefix",roleToken),
-    subject:filenameEvidence(doc,"filename token","engl"),
-    language:{page:null,search:"",snippet:"No direct language evidence in filename",source:"heuristic",label:"language requires document text"},
+    subject:filenameEvidence(doc,"filename subject token",subjectToken),
+    language:{page:null,search:"",snippet:subject==="ENGLISH"?"Language requires document text":"Russian is the default language hypothesis for non-language VSOSh source documents",source:"heuristic",label:"language heuristic"},
     academic_year:filenameEvidence(doc,"filename academic-year token",yr?yr[1]+"-"+yr[2]:""),
-    grades:filenameEvidence(doc,"filename grade token",gr?gr[1]+"-"+gr[2]:""),
+    grades:filenameEvidence(doc,"filename grade token",gr?(gr[2]?(gr[1]+"-"+gr[2]):gr[1]):""),
     competition:{page:null,search:"",snippet:"VSOSh is a corpus-source default, not a PDF-text claim",source:"heuristic",label:"corpus source default"},
     stage:filenameEvidence(doc,"filename stage token",stageToken),
     tour:filenameEvidence(doc,"filename tour token",tourToken),
