@@ -249,3 +249,44 @@ def test_hyphenated_pdf_line_break_still_classifies_select_one():
     ]])
     task = flatten_tasks(propose_structure(layout, filename="tasks-engl-demo.pdf"))[0]
     assert task["kind"] == "SELECT_ONE"
+
+
+def test_subject_agnostic_math_tasks_form_one_section():
+    layout = layout_from_pages([[
+        "МАТЕМАТИКА",
+        "Задача 1. Вычислите значение выражения.",
+        "Задача 2. Докажите утверждение.",
+        "Задача 3. Найдите число.",
+    ]])
+    proposal = propose_structure(layout, filename="tasks-math-9-mun-demo-24-25.pdf")
+    assert len(proposal["sections"]) == 1
+    assert proposal["sections"][0]["label"] == "Tasks"
+    assert [t["label"] for t in proposal["sections"][0]["tasks"]] == ["Task 1", "Task 2", "Task 3"]
+
+
+def test_biology_part_groups_accept_decimal_tasks():
+    layout = layout_from_pages([[
+        "Часть 1.",
+        "1.1. Выберите один правильный ответ.",
+        "1.2. Выберите все верные варианты.",
+        "Часть 2.",
+        "2.1. Установите соответствие.",
+    ]])
+    proposal = propose_structure(layout, filename="tasks-biol-10-mun-demo-24-25.pdf")
+    assert [s["semantic_type"] for s in proposal["sections"]] == ["PART_GROUP", "PART_GROUP"]
+    assert [t["label"] for t in proposal["sections"][0]["tasks"]] == ["Task 1.1", "Task 1.2"]
+    assert proposal["sections"][0]["tasks"][0]["kind"] == "SELECT_ONE"
+    assert proposal["sections"][0]["tasks"][1]["kind"] == "SELECT_MULTIPLE"
+    assert proposal["sections"][1]["tasks"][0]["kind"] == "MATCHING"
+
+
+def test_answer_part_group_detects_answer_to_question_lines():
+    layout = layout_from_pages([[
+        "Раздел 1.",
+        "Ответ на вопрос 1: 2",
+        "Ответ на вопрос 2: 4",
+    ]])
+    proposal = propose_structure(layout, filename="ans-biol-10-mun-demo-24-25.pdf")
+    assert proposal["sections"][0]["semantic_type"] == "PART_GROUP"
+    assert [t["label"] for t in proposal["sections"][0]["tasks"]] == ["Task 1", "Task 2"]
+    assert all(t["kind"] == "ANSWER_GROUP" for t in proposal["sections"][0]["tasks"])
