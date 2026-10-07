@@ -161,3 +161,31 @@ def test_writing_without_task_number_is_still_an_assessable_task():
     task = proposal["sections"][0]["tasks"][0]
     assert task["label"] == "Writing task"
     assert task["kind"] == "EXTENDED_RESPONSE"
+
+
+def test_math_lettered_subparts_become_parts_not_tasks():
+    layout = layout_from_pages([[
+        "MATHEMATICS",
+        "Problem 1. Prove the following statements.",
+        "a) Prove the first identity.",
+        "b) Prove the second identity.",
+    ]])
+    proposal = propose_structure(layout, filename="tasks-math-demo.pdf")
+    tasks = flatten_tasks(proposal)
+    assert len(tasks) == 1
+    assert tasks[0]["kind"] == "COMPOSITE"
+    assert [p["label"] for p in tasks[0]["parts"]] == ["Part a", "Part b"]
+    assert tasks[0]["response_mode"] == "MIXED"
+
+
+def test_multiple_choice_lowercase_options_are_not_promoted_to_parts():
+    layout = layout_from_pages([[
+        "READING",
+        "Task 1. Choose the correct answer.",
+        "a) first",
+        "b) second",
+        "c) third",
+    ]])
+    task = flatten_tasks(propose_structure(layout, filename="tasks-engl-demo.pdf"))[0]
+    assert task["kind"] == "SELECT_ONE"
+    assert task["parts"] == []
