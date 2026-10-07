@@ -1,36 +1,10 @@
-plugins {
-    id 'com.android.application'
-}
-
+plugins { id 'com.android.application' }
 android {
-    namespace 'com.usernamemp.englishsprint'
-    compileSdk 35
-
-    defaultConfig {
-        applicationId "com.usernamemp.englishsprint"
-        minSdk 24
-        targetSdk 35
-        versionCode 21
-        versionName "0.6.14"
-    }
-
-    buildFeatures {
-        buildConfig true
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
+ namespace 'com.usernamemp.englishsprint'
+ compileSdk 35
+ defaultConfig { applicationId "com.usernamemp.englishsprint"; minSdk 24; targetSdk 35; versionCode 22; versionName "0.6.15" }
+ buildFeatures { buildConfig true }
+ buildTypes { release { minifyEnabled false } }
+ compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
 }
-
-
-dependencies {
-    implementation 'androidx.core:core:1.15.0'
-}
+dependencies { implementation 'androidx.core:core:1.15.0' }
