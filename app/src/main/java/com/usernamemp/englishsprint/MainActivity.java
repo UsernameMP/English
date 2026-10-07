@@ -718,6 +718,9 @@ public class MainActivity extends Activity {
             List<Button> rightButtons = new ArrayList<>();
             int[] selectedLeft = {-1};
             Button[] submitRef = {null};
+            final String matchingAlphabet = "ru".equals(Locale.getDefault().getLanguage())
+                    ? "АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЭЮЯ"
+                    : "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
             LinearLayout leftPool = column();
             leftPool.setPadding(dp(10), dp(10), dp(10), dp(6));
