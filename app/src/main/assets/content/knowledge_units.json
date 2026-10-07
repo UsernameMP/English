@@ -208,34 +208,329 @@
       }
     },
     {
-      "id":"MATH.NUMBER.DIVISIBILITY","kind":"concept","legacy_skill":"divisibility",
-      "labels":{"en":"Divisibility and remainders","ru":"Делимость и остатки"}
+      "id": "MATH.NUMBER.DIVISIBILITY",
+      "kind": "concept",
+      "legacy_skill": "divisibility",
+      "labels": {
+        "en": "Divisibility and remainders",
+        "ru": "Делимость и остатки"
+      }
     },
     {
-      "id":"MATH.ARITHMETIC.RATIOS","kind":"method","legacy_skill":"ratios",
-      "labels":{"en":"Ratios and proportional reasoning","ru":"Отношения и пропорции"}
+      "id": "MATH.ARITHMETIC.RATIOS",
+      "kind": "method",
+      "legacy_skill": "ratios",
+      "labels": {
+        "en": "Ratios and proportional reasoning",
+        "ru": "Отношения и пропорции"
+      }
     },
     {
-      "id":"MATH.COMBINATORICS.COUNTING","kind":"method","legacy_skill":"counting",
-      "labels":{"en":"Systematic counting","ru":"Систематический подсчёт"}
+      "id": "MATH.COMBINATORICS.COUNTING",
+      "kind": "method",
+      "legacy_skill": "counting",
+      "labels": {
+        "en": "Systematic counting",
+        "ru": "Систематический подсчёт"
+      }
     },
     {
-      "id":"MATH.GEOMETRY.AREA","kind":"concept","legacy_skill":"area",
-      "labels":{"en":"Area decomposition","ru":"Разбиение площади"}
+      "id": "MATH.GEOMETRY.AREA",
+      "kind": "concept",
+      "legacy_skill": "area",
+      "labels": {
+        "en": "Area decomposition",
+        "ru": "Разбиение площади"
+      }
     },
     {
-      "id":"MATH.LOGIC.INVARIANTS","kind":"strategy","legacy_skill":"invariants",
-      "labels":{"en":"Invariants and parity","ru":"Инварианты и чётность"}
+      "id": "MATH.LOGIC.INVARIANTS",
+      "kind": "strategy",
+      "legacy_skill": "invariants",
+      "labels": {
+        "en": "Invariants and parity",
+        "ru": "Инварианты и чётность"
+      }
     },
-    {"id":"GEO.MAP.SCALES","kind":"concept","labels":{"en":"Map scales","ru":"Масштабы карт"}},
-    {"id":"GEO.MAP.LOCATION","kind":"method","labels":{"en":"Spatial location","ru":"Пространственная локализация"}},
-    {"id":"GEO.DATA.SCALES","kind":"representation","labels":{"en":"Geographic data scales","ru":"Шкалы географических данных"}},
-    {"id":"GEO.DATA.ESTIMATION","kind":"method","labels":{"en":"Geographic estimation","ru":"Географическая оценка"}},
-    {"id":"GEO.POLITICAL.CAPITALS","kind":"concept","labels":{"en":"Countries and capitals","ru":"Страны и столицы"}},
-    {"id":"GEO.PHYSICAL.REGIONS","kind":"concept","labels":{"en":"Physical regions","ru":"Физико-географические регионы"}},
-    {"id":"GEO.CLIMATE.INTERPRETATION","kind":"method","labels":{"en":"Climate data interpretation","ru":"Интерпретация климатических данных"}},
-    {"id":"GEO.HUMAN.DEMOGRAPHY","kind":"concept","labels":{"en":"Population and demography","ru":"Население и демография"}},
-    {"id":"GEO.ECONOMIC.RESOURCES","kind":"concept","labels":{"en":"Resources and economic geography","ru":"Ресурсы и экономическая география"}},
-    {"id":"GEO.SYSTEMS.CAUSALITY","kind":"strategy","labels":{"en":"Geographic causal reasoning","ru":"Причинно-следственные связи в географии"}}
+    {
+      "id": "GEO.MAP.SCALES",
+      "kind": "concept",
+      "labels": {
+        "en": "Map scales",
+        "ru": "Масштабы карт"
+      }
+    },
+    {
+      "id": "GEO.MAP.LOCATION",
+      "kind": "method",
+      "labels": {
+        "en": "Spatial location",
+        "ru": "Пространственная локализация"
+      }
+    },
+    {
+      "id": "GEO.DATA.SCALES",
+      "kind": "representation",
+      "labels": {
+        "en": "Geographic data scales",
+        "ru": "Шкалы географических данных"
+      }
+    },
+    {
+      "id": "GEO.DATA.ESTIMATION",
+      "kind": "method",
+      "labels": {
+        "en": "Geographic estimation",
+        "ru": "Географическая оценка"
+      }
+    },
+    {
+      "id": "GEO.POLITICAL.CAPITALS",
+      "kind": "concept",
+      "labels": {
+        "en": "Countries and capitals",
+        "ru": "Страны и столицы"
+      }
+    },
+    {
+      "id": "GEO.PHYSICAL.REGIONS",
+      "kind": "concept",
+      "labels": {
+        "en": "Physical regions",
+        "ru": "Физико-географические регионы"
+      }
+    },
+    {
+      "id": "GEO.CLIMATE.INTERPRETATION",
+      "kind": "method",
+      "labels": {
+        "en": "Climate data interpretation",
+        "ru": "Интерпретация климатических данных"
+      }
+    },
+    {
+      "id": "GEO.HUMAN.DEMOGRAPHY",
+      "kind": "concept",
+      "labels": {
+        "en": "Population and demography",
+        "ru": "Население и демография"
+      }
+    },
+    {
+      "id": "GEO.ECONOMIC.RESOURCES",
+      "kind": "concept",
+      "labels": {
+        "en": "Resources and economic geography",
+        "ru": "Ресурсы и экономическая география"
+      }
+    },
+    {
+      "id": "GEO.SYSTEMS.CAUSALITY",
+      "kind": "strategy",
+      "labels": {
+        "en": "Geographic causal reasoning",
+        "ru": "Причинно-следственные связи в географии"
+      }
+    },
+    {
+      "id": "BIO.EXPERIMENT.INFERENCE",
+      "kind": "method",
+      "legacy_skill": "experiment_inference",
+      "labels": {
+        "ru": "Эксперимент и вывод",
+        "en": "Experimental inference"
+      },
+      "relations": []
+    },
+    {
+      "id": "BIO.PLANTS.STRUCTURE_FUNCTION",
+      "kind": "concept",
+      "legacy_skill": "plant_structure",
+      "labels": {
+        "ru": "Строение и функции растений",
+        "en": "Plant structure and function"
+      },
+      "relations": []
+    },
+    {
+      "id": "BIO.REPRODUCTION.MODES",
+      "kind": "concept",
+      "legacy_skill": "reproduction",
+      "labels": {
+        "ru": "Способы размножения",
+        "en": "Modes of reproduction"
+      },
+      "relations": []
+    },
+    {
+      "id": "BIO.CLASSIFICATION.FEATURES",
+      "kind": "method",
+      "legacy_skill": "classification",
+      "labels": {
+        "ru": "Классификация по признакам",
+        "en": "Classification by features"
+      },
+      "relations": []
+    },
+    {
+      "id": "BIO.ECOLOGY.FOOD_WEBS",
+      "kind": "concept",
+      "legacy_skill": "food_webs",
+      "labels": {
+        "ru": "Пищевые связи",
+        "en": "Food webs"
+      },
+      "relations": []
+    },
+    {
+      "id": "HIST.CHRONOLOGY",
+      "kind": "representation",
+      "legacy_skill": "chronology",
+      "labels": {
+        "ru": "Хронология",
+        "en": "Chronology"
+      },
+      "relations": []
+    },
+    {
+      "id": "HIST.SOURCE.INTERPRETATION",
+      "kind": "method",
+      "legacy_skill": "source_interpretation",
+      "labels": {
+        "ru": "Анализ исторического источника",
+        "en": "Historical source interpretation"
+      },
+      "relations": []
+    },
+    {
+      "id": "HIST.PEOPLE.EVENTS",
+      "kind": "concept",
+      "legacy_skill": "people_events",
+      "labels": {
+        "ru": "Личности и события",
+        "en": "People and events"
+      },
+      "relations": []
+    },
+    {
+      "id": "HIST.CAUSE.EFFECT",
+      "kind": "strategy",
+      "legacy_skill": "cause_effect",
+      "labels": {
+        "ru": "Причины и последствия",
+        "en": "Cause and effect"
+      },
+      "relations": []
+    },
+    {
+      "id": "HIST.TERMS.INSTITUTIONS",
+      "kind": "concept",
+      "legacy_skill": "historical_terms",
+      "labels": {
+        "ru": "Термины и институты",
+        "en": "Terms and institutions"
+      },
+      "relations": []
+    },
+    {
+      "id": "SOC.LOGIC.INFERENCE",
+      "kind": "strategy",
+      "legacy_skill": "logic_inference",
+      "labels": {
+        "ru": "Логические выводы",
+        "en": "Logical inference"
+      },
+      "relations": []
+    },
+    {
+      "id": "SOC.LAW.RESPONSIBILITY",
+      "kind": "concept",
+      "legacy_skill": "law_responsibility",
+      "labels": {
+        "ru": "Право и ответственность",
+        "en": "Law and responsibility"
+      },
+      "relations": []
+    },
+    {
+      "id": "SOC.ECONOMY.CHOICE",
+      "kind": "concept",
+      "legacy_skill": "economic_choice",
+      "labels": {
+        "ru": "Экономический выбор",
+        "en": "Economic choice"
+      },
+      "relations": []
+    },
+    {
+      "id": "SOC.SOCIETY.INSTITUTIONS",
+      "kind": "concept",
+      "legacy_skill": "social_institutions",
+      "labels": {
+        "ru": "Социальные институты",
+        "en": "Social institutions"
+      },
+      "relations": []
+    },
+    {
+      "id": "SOC.POLITICS.RULES",
+      "kind": "concept",
+      "legacy_skill": "politics_rules",
+      "labels": {
+        "ru": "Политика и процедуры",
+        "en": "Politics and procedures"
+      },
+      "relations": []
+    },
+    {
+      "id": "ECO.POPULATION.RESOURCES",
+      "kind": "concept",
+      "legacy_skill": "population_resources",
+      "labels": {
+        "ru": "Популяции и ресурсы",
+        "en": "Populations and resources"
+      },
+      "relations": []
+    },
+    {
+      "id": "ECO.ENVIRONMENT.CHANGE",
+      "kind": "concept",
+      "legacy_skill": "environment_change",
+      "labels": {
+        "ru": "Изменения среды",
+        "en": "Environmental change"
+      },
+      "relations": []
+    },
+    {
+      "id": "ECO.EVOLUTION.ADAPTATION",
+      "kind": "concept",
+      "legacy_skill": "adaptation",
+      "labels": {
+        "ru": "Адаптация организмов",
+        "en": "Adaptation"
+      },
+      "relations": []
+    },
+    {
+      "id": "ECO.HUMAN.IMPACT",
+      "kind": "concept",
+      "legacy_skill": "human_impact",
+      "labels": {
+        "ru": "Воздействие человека",
+        "en": "Human impact"
+      },
+      "relations": []
+    },
+    {
+      "id": "ECO.SUSTAINABILITY.DECISIONS",
+      "kind": "strategy",
+      "legacy_skill": "sustainability",
+      "labels": {
+        "ru": "Устойчивые решения",
+        "en": "Sustainability decisions"
+      },
+      "relations": []
+    }
   ]
 }

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "subject": "ecology",
+  "scope": "global_olympiad",
+  "grade_binding": null,
+  "competition_binding": null,
+  "archetypes": [
+    {
+      "id": "environment_statement",
+      "primitives": [
+        "single_choice",
+        "multi_choice"
+      ],
+      "prerequisites": [
+        "ECO.ENVIRONMENT.CHANGE"
+      ],
+      "assessed_knowledge": [
+        "ECO.ENVIRONMENT.CHANGE"
+      ]
+    },
+    {
+      "id": "ecological_relations",
+      "primitives": [
+        "matching"
+      ],
+      "prerequisites": [
+        "ECO.POPULATION.RESOURCES"
+      ],
+      "assessed_knowledge": [
+        "ECO.POPULATION.RESOURCES"
+      ]
+    },
+    {
+      "id": "causal_sequence",
+      "primitives": [
+        "sequence"
+      ],
+      "prerequisites": [
+        "ECO.ENVIRONMENT.CHANGE"
+      ],
+      "assessed_knowledge": [
+        "ECO.HUMAN.IMPACT"
+      ]
+    }
+  ]
+}

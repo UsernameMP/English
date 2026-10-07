@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "subject": "biology",
+  "scope": "global_olympiad",
+  "grade_binding": null,
+  "competition_binding": null,
+  "archetypes": [
+    {
+      "id": "experimental_inference",
+      "primitives": [
+        "single_choice",
+        "multi_choice",
+        "free_response"
+      ],
+      "prerequisites": [
+        "BIO.EXPERIMENT.INFERENCE"
+      ],
+      "assessed_knowledge": [
+        "BIO.EXPERIMENT.INFERENCE"
+      ]
+    },
+    {
+      "id": "feature_association",
+      "primitives": [
+        "matching"
+      ],
+      "prerequisites": [
+        "BIO.CLASSIFICATION.FEATURES"
+      ],
+      "assessed_knowledge": [
+        "BIO.CLASSIFICATION.FEATURES"
+      ]
+    },
+    {
+      "id": "process_order",
+      "primitives": [
+        "sequence"
+      ],
+      "prerequisites": [
+        "BIO.PLANTS.STRUCTURE_FUNCTION"
+      ],
+      "assessed_knowledge": [
+        "BIO.PLANTS.STRUCTURE_FUNCTION"
+      ]
+    }
+  ]
+}

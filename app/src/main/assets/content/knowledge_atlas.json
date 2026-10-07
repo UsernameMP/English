@@ -73,21 +73,94 @@
       "to": "CS.ALGORITHMS.TRACING"
     },
     {
-      "from":"MATH.ARITHMETIC.RATIOS","type":"uses","to":"MATH.NUMBER.DIVISIBILITY"
+      "from": "MATH.ARITHMETIC.RATIOS",
+      "type": "uses",
+      "to": "MATH.NUMBER.DIVISIBILITY"
     },
     {
-      "from":"MATH.LOGIC.INVARIANTS","type":"uses","to":"MATH.NUMBER.DIVISIBILITY"
+      "from": "MATH.LOGIC.INVARIANTS",
+      "type": "uses",
+      "to": "MATH.NUMBER.DIVISIBILITY"
     },
     {
-      "from":"MATH.COMBINATORICS.COUNTING","type":"uses","to":"MATH.LOGIC.INVARIANTS"
+      "from": "MATH.COMBINATORICS.COUNTING",
+      "type": "uses",
+      "to": "MATH.LOGIC.INVARIANTS"
     },
-    {"from":"GEO.MAP.LOCATION","type":"requires","to":"GEO.MAP.SCALES"},
-    {"from":"GEO.DATA.ESTIMATION","type":"requires","to":"GEO.DATA.SCALES"},
-    {"from":"GEO.POLITICAL.CAPITALS","type":"uses","to":"GEO.MAP.LOCATION"},
-    {"from":"GEO.PHYSICAL.REGIONS","type":"uses","to":"GEO.MAP.LOCATION"},
-    {"from":"GEO.CLIMATE.INTERPRETATION","type":"requires","to":"GEO.DATA.SCALES"},
-    {"from":"GEO.HUMAN.DEMOGRAPHY","type":"requires","to":"GEO.DATA.SCALES"},
-    {"from":"GEO.ECONOMIC.RESOURCES","type":"uses","to":"GEO.MAP.LOCATION"},
-    {"from":"GEO.SYSTEMS.CAUSALITY","type":"uses","to":"GEO.PHYSICAL.REGIONS"}
+    {
+      "from": "GEO.MAP.LOCATION",
+      "type": "requires",
+      "to": "GEO.MAP.SCALES"
+    },
+    {
+      "from": "GEO.DATA.ESTIMATION",
+      "type": "requires",
+      "to": "GEO.DATA.SCALES"
+    },
+    {
+      "from": "GEO.POLITICAL.CAPITALS",
+      "type": "uses",
+      "to": "GEO.MAP.LOCATION"
+    },
+    {
+      "from": "GEO.PHYSICAL.REGIONS",
+      "type": "uses",
+      "to": "GEO.MAP.LOCATION"
+    },
+    {
+      "from": "GEO.CLIMATE.INTERPRETATION",
+      "type": "requires",
+      "to": "GEO.DATA.SCALES"
+    },
+    {
+      "from": "GEO.HUMAN.DEMOGRAPHY",
+      "type": "requires",
+      "to": "GEO.DATA.SCALES"
+    },
+    {
+      "from": "GEO.ECONOMIC.RESOURCES",
+      "type": "uses",
+      "to": "GEO.MAP.LOCATION"
+    },
+    {
+      "from": "GEO.SYSTEMS.CAUSALITY",
+      "type": "uses",
+      "to": "GEO.PHYSICAL.REGIONS"
+    },
+    {
+      "from": "HIST.SOURCE.INTERPRETATION",
+      "type": "requires",
+      "to": "HIST.CHRONOLOGY"
+    },
+    {
+      "from": "HIST.PEOPLE.EVENTS",
+      "type": "uses",
+      "to": "HIST.CHRONOLOGY"
+    },
+    {
+      "from": "HIST.CAUSE.EFFECT",
+      "type": "requires",
+      "to": "HIST.SOURCE.INTERPRETATION"
+    },
+    {
+      "from": "SOC.POLITICS.RULES",
+      "type": "uses",
+      "to": "SOC.LAW.RESPONSIBILITY"
+    },
+    {
+      "from": "ECO.POPULATION.RESOURCES",
+      "type": "uses",
+      "to": "ECO.ENVIRONMENT.CHANGE"
+    },
+    {
+      "from": "ECO.HUMAN.IMPACT",
+      "type": "requires",
+      "to": "ECO.ENVIRONMENT.CHANGE"
+    },
+    {
+      "from": "ECO.SUSTAINABILITY.DECISIONS",
+      "type": "requires",
+      "to": "ECO.HUMAN.IMPACT"
+    }
   ]
 }

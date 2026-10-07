@@ -1,6 +1,12 @@
 {
   "schema_version": "1.0",
-  "providers": ["pilot", "google_play", "app_store", "ru_cis", "promo"],
+  "providers": [
+    "pilot",
+    "google_play",
+    "app_store",
+    "ru_cis",
+    "promo"
+  ],
   "products": [
     {
       "id": "pilot.all.current",
@@ -12,7 +18,12 @@
           "english.vsosh.5-6.ru.2026",
           "informatics.olympiad.5-7.global.2026",
           "english.olympiad.6-7.global.2026",
-          "mathematics.olympiad.5-7.global.2026"
+          "mathematics.olympiad.5-7.global.2026",
+          "biology.vsosh.7.ru.2026",
+          "history.vsosh.7.ru.2026",
+          "geography.vsosh.7.ru.2026",
+          "social_science.vsosh.7.ru.2026",
+          "ecology.vsosh.7-8.ru.2026"
         ]
       }
     },
@@ -41,9 +52,16 @@
       }
     },
     {
-      "id":"international.subject.mathematics.monthly","provider":"app_store",
-      "billing_type":"subscription","checkout_enabled":false,
-      "scope":{"subject":"mathematics","grade_min":5,"grade_max":7,"pack_ids":[]}
+      "id": "international.subject.mathematics.monthly",
+      "provider": "app_store",
+      "billing_type": "subscription",
+      "checkout_enabled": false,
+      "scope": {
+        "subject": "mathematics",
+        "grade_min": 5,
+        "grade_max": 7,
+        "pack_ids": []
+      }
     }
   ]
 }
