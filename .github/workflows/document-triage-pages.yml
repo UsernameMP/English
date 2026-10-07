@@ -6,6 +6,7 @@ on:
     paths:
       - "tools/document_triage/**"
       - "tools/corpus_ingest/layout.py"
+      - "tools/corpus_ingest/task_structure.py"
       - ".github/workflows/document-triage-pages.yml"
   workflow_dispatch:
 
@@ -55,6 +56,10 @@ jobs:
           layout_mod = importlib.util.module_from_spec(spec)
           spec.loader.exec_module(layout_mod)
 
+          task_spec = importlib.util.spec_from_file_location("task_structure", "tools/corpus_ingest/task_structure.py")
+          task_mod = importlib.util.module_from_spec(task_spec)
+          task_spec.loader.exec_module(task_mod)
+
           manifest = {}
 
           def download(url: str, target: Path) -> bool:
@@ -81,9 +86,20 @@ jobs:
               layout_path = assets / f"{sha}.layout.json"
               layout_path.write_bytes(layout_mod.dumps_layout(layout))
 
+              structure = task_mod.propose_structure(
+                  layout,
+                  filename=source_url.rsplit("/", 1)[-1],
+              )
+              structure_path = assets / f"{sha}.structure.json"
+              structure_path.write_text(
+                  json.dumps(structure, ensure_ascii=False, indent=2),
+                  encoding="utf-8",
+              )
+
               item = {
                   "pdf": f"assets/{sha}.pdf",
                   "layout": f"assets/{sha}.layout.json",
+                  "structure": f"assets/{sha}.structure.json",
                   "source_pdf": source_url,
               }
 
