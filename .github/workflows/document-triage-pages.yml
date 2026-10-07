@@ -51,7 +51,9 @@ jobs:
           root = Path("tools/document_triage")
           assets = root / "assets"
           assets.mkdir(parents=True, exist_ok=True)
-          sources = json.loads((root / "source_urls.json").read_text(encoding="utf-8"))
+          known_sources = json.loads((root / "source_urls.json").read_text(encoding="utf-8"))
+          batch_file = root / "review_batch_urls.json"
+          batch = json.loads(batch_file.read_text(encoding="utf-8")) if batch_file.exists() else {"documents": []}
 
           spec = importlib.util.spec_from_file_location("layout", "tools/corpus_ingest/layout.py")
           layout_mod = importlib.util.module_from_spec(spec)
@@ -62,6 +64,8 @@ jobs:
           task_spec.loader.exec_module(task_mod)
 
           manifest = {}
+          resolved_sources = dict(known_sources)
+          review_batch = []
 
           def download(url: str, target: Path) -> bool:
               req = urllib.request.Request(url, headers={"User-Agent": "OlympiadCorpus-Review/1.0"})
@@ -73,24 +77,29 @@ jobs:
                   print(f"skip {url}: {exc}")
                   return False
 
-          for sha, source_url in sources.items():
-              pdf_path = assets / f"{sha}.pdf"
-              if not download(source_url, pdf_path):
-                  continue
+          def build_one(source_url: str, expected_sha: str | None = None, batch_meta: dict | None = None):
+              name = source_url.rsplit("/", 1)[-1]
+              temp = assets / (f"{expected_sha}.pdf" if expected_sha else "_candidate.pdf")
+              if not download(source_url, temp):
+                  return None
 
-              data = pdf_path.read_bytes()
-              actual = hashlib.sha256(data).hexdigest()
-              if actual != sha:
-                  raise RuntimeError(f"sha mismatch for {sha}: {actual}")
+              data = temp.read_bytes()
+              sha = hashlib.sha256(data).hexdigest()
+              if expected_sha and sha != expected_sha:
+                  raise RuntimeError(f"sha mismatch for {expected_sha}: {sha}")
+
+              pdf_path = assets / f"{sha}.pdf"
+              if temp != pdf_path:
+                  if pdf_path.exists():
+                      temp.unlink()
+                  else:
+                      temp.rename(pdf_path)
 
               layout = layout_mod.extract_pdf_layout(data, sha)
               layout_path = assets / f"{sha}.layout.json"
               layout_path.write_bytes(layout_mod.dumps_layout(layout))
 
-              structure = task_mod.propose_structure(
-                  layout,
-                  filename=source_url.rsplit("/", 1)[-1],
-              )
+              structure = task_mod.propose_structure(layout, filename=name)
               structure_path = assets / f"{sha}.structure.json"
               structure_path.write_text(
                   json.dumps(structure, ensure_ascii=False, indent=2),
@@ -103,9 +112,13 @@ jobs:
                   "structure": f"assets/{sha}.structure.json",
                   "source_pdf": source_url,
               }
+              if batch_meta:
+                  item["review_batch"] = batch.get("batch_id", "")
+                  item["review_label"] = batch_meta.get("label", "")
 
-              name = source_url.rsplit("/", 1)[-1]
-              if name.startswith("tasks-") and name.endswith(".pdf"):
+              # Audio discovery is English-specific. Do not generate 404 requests
+              # for every tasks-* document in the multi-subject validation batch.
+              if "-engl-" in name and name.startswith("tasks-") and name.endswith(".pdf"):
                   audio_name = "audio-" + name[len("tasks-"):-4] + ".mp3"
                   audio_source = source_url.rsplit("/", 1)[0] + "/" + audio_name
                   audio_path = assets / f"{sha}.mp3"
@@ -115,12 +128,42 @@ jobs:
                       item["audio_sha256"] = hashlib.sha256(audio_path.read_bytes()).hexdigest()
 
               manifest[sha] = item
+              resolved_sources[sha] = source_url
+              return sha
+
+          for sha, source_url in known_sources.items():
+              build_one(source_url, expected_sha=sha)
+
+          for index, candidate in enumerate(batch.get("documents", []), start=1):
+              sha = build_one(candidate["url"], batch_meta=candidate)
+              if sha:
+                  review_batch.append({
+                      "order": index,
+                      "sha256": sha,
+                      "label": candidate.get("label", ""),
+                      "url": candidate["url"],
+                  })
 
           (root / "deployed_assets.json").write_text(
               json.dumps(manifest, ensure_ascii=False, indent=2),
               encoding="utf-8",
           )
-          print(json.dumps({k: list(v) for k, v in manifest.items()}, ensure_ascii=False, indent=2))
+          (root / "resolved_sources.json").write_text(
+              json.dumps(resolved_sources, ensure_ascii=False, indent=2),
+              encoding="utf-8",
+          )
+          (root / "review_batch_resolved.json").write_text(
+              json.dumps({
+                  "schema_version": "review-batch-resolved.v1",
+                  "batch_id": batch.get("batch_id", ""),
+                  "documents": review_batch,
+              }, ensure_ascii=False, indent=2),
+              encoding="utf-8",
+          )
+          print(json.dumps({
+              "assets": len(manifest),
+              "review_batch": review_batch,
+          }, ensure_ascii=False, indent=2))
           PY
 
       - name: Evaluate task structure against reviewed calibration
