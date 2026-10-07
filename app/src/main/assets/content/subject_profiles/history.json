@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "subject": "history",
+  "scope": "global_olympiad",
+  "grade_binding": null,
+  "competition_binding": null,
+  "archetypes": [
+    {
+      "id": "source_context",
+      "primitives": [
+        "single_choice",
+        "multi_choice",
+        "free_response"
+      ],
+      "prerequisites": [
+        "HIST.CHRONOLOGY"
+      ],
+      "assessed_knowledge": [
+        "HIST.SOURCE.INTERPRETATION"
+      ]
+    },
+    {
+      "id": "chronology",
+      "primitives": [
+        "sequence"
+      ],
+      "prerequisites": [
+        "HIST.CHRONOLOGY"
+      ],
+      "assessed_knowledge": [
+        "HIST.CHRONOLOGY"
+      ]
+    },
+    {
+      "id": "person_event_matching",
+      "primitives": [
+        "matching"
+      ],
+      "prerequisites": [
+        "HIST.CHRONOLOGY"
+      ],
+      "assessed_knowledge": [
+        "HIST.PEOPLE.EVENTS"
+      ]
+    }
+  ]
+}

@@ -32,9 +32,64 @@
       "mode": "competition"
     },
     {
-      "pack_id":"mathematics.olympiad.5-7.global.2026","subject":"mathematics","grade":5,
-      "competition":"Olympiad pilot","region":"Global","season":"2026-2027",
-      "target_date":"2027-03-01","mode":"competition"
+      "pack_id": "mathematics.olympiad.5-7.global.2026",
+      "subject": "mathematics",
+      "grade": 5,
+      "competition": "Olympiad pilot",
+      "region": "Global",
+      "season": "2026-2027",
+      "target_date": "2027-03-01",
+      "mode": "competition"
+    },
+    {
+      "pack_id": "biology.vsosh.7.ru.2026",
+      "subject": "biology",
+      "grade": 7,
+      "competition": "VSOSh",
+      "region": "RU",
+      "season": "2026-2027",
+      "target_date": "2027-03-01",
+      "mode": "competition"
+    },
+    {
+      "pack_id": "history.vsosh.7.ru.2026",
+      "subject": "history",
+      "grade": 7,
+      "competition": "VSOSh",
+      "region": "RU",
+      "season": "2026-2027",
+      "target_date": "2027-03-01",
+      "mode": "competition"
+    },
+    {
+      "pack_id": "geography.vsosh.7.ru.2026",
+      "subject": "geography",
+      "grade": 7,
+      "competition": "VSOSh",
+      "region": "RU",
+      "season": "2026-2027",
+      "target_date": "2027-03-01",
+      "mode": "competition"
+    },
+    {
+      "pack_id": "social_science.vsosh.7.ru.2026",
+      "subject": "social_science",
+      "grade": 7,
+      "competition": "VSOSh",
+      "region": "RU",
+      "season": "2026-2027",
+      "target_date": "2027-03-01",
+      "mode": "competition"
+    },
+    {
+      "pack_id": "ecology.vsosh.7-8.ru.2026",
+      "subject": "ecology",
+      "grade": 7,
+      "competition": "VSOSh",
+      "region": "RU",
+      "season": "2026-2027",
+      "target_date": "2027-03-01",
+      "mode": "competition"
     }
   ]
 }

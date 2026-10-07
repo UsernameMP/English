@@ -171,6 +171,27 @@ public final class QuestionBank {
                     }
                 }
 
+                List<String> matchingLeft = new ArrayList<>();
+                List<String> matchingRight = new ArrayList<>();
+                List<String> matchingLeftIds = new ArrayList<>();
+                List<String> matchingRightIds = new ArrayList<>();
+                JSONArray matchingLeftJson = o.optJSONArray("matching_left");
+                JSONArray matchingRightJson = o.optJSONArray("matching_right");
+                if (matchingLeftJson != null) {
+                    for (int j = 0; j < matchingLeftJson.length(); j++) {
+                        JSONObject item = matchingLeftJson.getJSONObject(j);
+                        matchingLeftIds.add(item.getString("id"));
+                        matchingLeft.add(item.getString("text"));
+                    }
+                }
+                if (matchingRightJson != null) {
+                    for (int j = 0; j < matchingRightJson.length(); j++) {
+                        JSONObject item = matchingRightJson.getJSONObject(j);
+                        matchingRightIds.add(item.getString("id"));
+                        matchingRight.add(item.getString("text"));
+                    }
+                }
+
                 JSONArray answers = o.getJSONArray("answer");
                 List<String> acceptedAnswers = new ArrayList<>();
                 for (int j = 0; j < answers.length(); j++) acceptedAnswers.add(answers.getString(j));
@@ -183,6 +204,19 @@ public final class QuestionBank {
                         if (index < 0) throw new IllegalStateException("Unknown answer id in " + o.getString("id"));
                         if (!correctIndices.contains(index)) correctIndices.add(index);
                     }
+                }
+                List<Integer> matchingAnswer = new ArrayList<>();
+                if ("matching".equals(interaction)) {
+                    for (String leftId : matchingLeftIds) matchingAnswer.add(-1);
+                    for (String answer : acceptedAnswers) {
+                        String[] pair = answer.split(":", 2);
+                        if (pair.length != 2) throw new IllegalStateException("Invalid matching pair in " + o.getString("id"));
+                        int leftIndex = matchingLeftIds.indexOf(pair[0]);
+                        int rightIndex = matchingRightIds.indexOf(pair[1]);
+                        if (leftIndex < 0 || rightIndex < 0) throw new IllegalStateException("Unknown matching id in " + o.getString("id"));
+                        matchingAnswer.set(leftIndex, rightIndex);
+                    }
+                    if (matchingAnswer.contains(-1)) throw new IllegalStateException("Incomplete matching answer in " + o.getString("id"));
                 }
                 int correctIndex = correctIndices.size() == 1 ? correctIndices.get(0) : -1;
 
@@ -212,6 +246,9 @@ public final class QuestionBank {
                         o.getString("prompt"),
                         text,
                         options,
+                        matchingLeft,
+                        matchingRight,
+                        matchingAnswer,
                         correctIndex,
                         correctIndices,
                         acceptedAnswers,

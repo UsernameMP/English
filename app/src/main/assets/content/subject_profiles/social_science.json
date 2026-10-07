@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "subject": "social_science",
+  "scope": "global_olympiad",
+  "grade_binding": null,
+  "competition_binding": null,
+  "archetypes": [
+    {
+      "id": "formal_inference",
+      "primitives": [
+        "multi_choice",
+        "single_choice"
+      ],
+      "prerequisites": [
+        "SOC.LOGIC.INFERENCE"
+      ],
+      "assessed_knowledge": [
+        "SOC.LOGIC.INFERENCE"
+      ]
+    },
+    {
+      "id": "legal_matching",
+      "primitives": [
+        "matching"
+      ],
+      "prerequisites": [
+        "SOC.LAW.RESPONSIBILITY"
+      ],
+      "assessed_knowledge": [
+        "SOC.LAW.RESPONSIBILITY"
+      ]
+    },
+    {
+      "id": "procedure_order",
+      "primitives": [
+        "sequence"
+      ],
+      "prerequisites": [
+        "SOC.POLITICS.RULES"
+      ],
+      "assessed_knowledge": [
+        "SOC.POLITICS.RULES"
+      ]
+    }
+  ]
+}

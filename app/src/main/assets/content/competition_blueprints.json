@@ -4,38 +4,214 @@
     {
       "pack_id": "english.vsosh.5-6.ru.2026",
       "coverage": [
-        {"knowledge_id":"ENG.GRAMMAR.ARTICLES","weight":0.25},
-        {"knowledge_id":"ENG.GRAMMAR.TENSE.PAST_SIMPLE","weight":0.25},
-        {"knowledge_id":"ENG.READING.COMPREHENSION","weight":0.25},
-        {"knowledge_id":"ENG.LISTENING.COMPREHENSION","weight":0.25}
+        {
+          "knowledge_id": "ENG.GRAMMAR.ARTICLES",
+          "weight": 0.25
+        },
+        {
+          "knowledge_id": "ENG.GRAMMAR.TENSE.PAST_SIMPLE",
+          "weight": 0.25
+        },
+        {
+          "knowledge_id": "ENG.READING.COMPREHENSION",
+          "weight": 0.25
+        },
+        {
+          "knowledge_id": "ENG.LISTENING.COMPREHENSION",
+          "weight": 0.25
+        }
       ]
     },
     {
       "pack_id": "informatics.olympiad.5-7.global.2026",
       "coverage": [
-        {"knowledge_id":"CS.LOGIC.BOOLEAN","weight":0.20},
-        {"knowledge_id":"CS.ALGORITHMS.TRACING","weight":0.30},
-        {"knowledge_id":"CS.DATA.BINARY","weight":0.20},
-        {"knowledge_id":"CS.ALGORITHMS.COMPLEXITY.INTRO","weight":0.30}
+        {
+          "knowledge_id": "CS.LOGIC.BOOLEAN",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "CS.ALGORITHMS.TRACING",
+          "weight": 0.3
+        },
+        {
+          "knowledge_id": "CS.DATA.BINARY",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "CS.ALGORITHMS.COMPLEXITY.INTRO",
+          "weight": 0.3
+        }
       ]
     },
     {
       "pack_id": "english.olympiad.6-7.global.2026",
       "coverage": [
-        {"knowledge_id":"ENG.GRAMMAR.ARTICLES","weight":0.20},
-        {"knowledge_id":"ENG.GRAMMAR.TENSE.PAST_SIMPLE","weight":0.20},
-        {"knowledge_id":"ENG.GRAMMAR.QUANTIFIERS","weight":0.20},
-        {"knowledge_id":"ENG.READING.COMPREHENSION","weight":0.40}
+        {
+          "knowledge_id": "ENG.GRAMMAR.ARTICLES",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "ENG.GRAMMAR.TENSE.PAST_SIMPLE",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "ENG.GRAMMAR.QUANTIFIERS",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "ENG.READING.COMPREHENSION",
+          "weight": 0.4
+        }
       ]
     },
     {
-      "pack_id":"mathematics.olympiad.5-7.global.2026",
-      "coverage":[
-        {"knowledge_id":"MATH.NUMBER.DIVISIBILITY","weight":0.25},
-        {"knowledge_id":"MATH.ARITHMETIC.RATIOS","weight":0.15},
-        {"knowledge_id":"MATH.COMBINATORICS.COUNTING","weight":0.20},
-        {"knowledge_id":"MATH.GEOMETRY.AREA","weight":0.20},
-        {"knowledge_id":"MATH.LOGIC.INVARIANTS","weight":0.20}
+      "pack_id": "mathematics.olympiad.5-7.global.2026",
+      "coverage": [
+        {
+          "knowledge_id": "MATH.NUMBER.DIVISIBILITY",
+          "weight": 0.25
+        },
+        {
+          "knowledge_id": "MATH.ARITHMETIC.RATIOS",
+          "weight": 0.15
+        },
+        {
+          "knowledge_id": "MATH.COMBINATORICS.COUNTING",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "MATH.GEOMETRY.AREA",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "MATH.LOGIC.INVARIANTS",
+          "weight": 0.2
+        }
+      ]
+    },
+    {
+      "pack_id": "biology.vsosh.7.ru.2026",
+      "coverage": [
+        {
+          "knowledge_id": "BIO.EXPERIMENT.INFERENCE",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "BIO.PLANTS.STRUCTURE_FUNCTION",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "BIO.REPRODUCTION.MODES",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "BIO.CLASSIFICATION.FEATURES",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "BIO.ECOLOGY.FOOD_WEBS",
+          "weight": 0.2
+        }
+      ]
+    },
+    {
+      "pack_id": "history.vsosh.7.ru.2026",
+      "coverage": [
+        {
+          "knowledge_id": "HIST.CHRONOLOGY",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "HIST.SOURCE.INTERPRETATION",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "HIST.PEOPLE.EVENTS",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "HIST.CAUSE.EFFECT",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "HIST.TERMS.INSTITUTIONS",
+          "weight": 0.2
+        }
+      ]
+    },
+    {
+      "pack_id": "geography.vsosh.7.ru.2026",
+      "coverage": [
+        {
+          "knowledge_id": "GEO.MAP.SCALES",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "GEO.CLIMATE.INTERPRETATION",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "GEO.PHYSICAL.REGIONS",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "GEO.HUMAN.DEMOGRAPHY",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "GEO.SYSTEMS.CAUSALITY",
+          "weight": 0.2
+        }
+      ]
+    },
+    {
+      "pack_id": "social_science.vsosh.7.ru.2026",
+      "coverage": [
+        {
+          "knowledge_id": "SOC.LOGIC.INFERENCE",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "SOC.LAW.RESPONSIBILITY",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "SOC.ECONOMY.CHOICE",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "SOC.SOCIETY.INSTITUTIONS",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "SOC.POLITICS.RULES",
+          "weight": 0.2
+        }
+      ]
+    },
+    {
+      "pack_id": "ecology.vsosh.7-8.ru.2026",
+      "coverage": [
+        {
+          "knowledge_id": "ECO.POPULATION.RESOURCES",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "ECO.ENVIRONMENT.CHANGE",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "ECO.HUMAN.IMPACT",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "ECO.SUSTAINABILITY.DECISIONS",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "ECO.EVOLUTION.ADAPTATION",
+          "weight": 0.2
+        }
       ]
     }
   ]

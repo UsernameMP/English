@@ -150,6 +150,9 @@
     <string name="next_focus">СЛЕДУЮЩИЙ ФОКУС · сначала предпосылки</string>
     <string name="content_pack_section">КОНТЕНТ-ПАК</string>
     <string name="numeric_answer_hint">Введи число</string>
+    <string name="short_answer_hint">Введи короткий ответ</string>
+    <string name="matching_hint">Нажми на объект, затем на подходящую ему пару ниже</string>
+    <string name="matching_reset">Сбросить соответствия</string>
     <string name="submit_answer">Проверить ответ</string>
     <string name="multi_choice_hint">Выбери все верные варианты и проверь</string>
     <string name="daily_plan">План подготовки на сегодня</string>
@@ -186,7 +189,7 @@
 
     <string name="dashboard_caption">Сводка обучения</string>
     <string name="choose_subject">Выбери предмет</string><string name="choose_subject_caption">Предметы открываются по подписке. Выбери, к чему хочешь готовиться.</string>
-    <string name="subject_english">Английский язык</string><string name="subject_math">Математика</string><string name="subject_informatics">Информатика</string><string name="subject_geography">География</string>
+    <string name="subject_english">Английский язык</string><string name="subject_math">Математика</string><string name="subject_informatics">Информатика</string><string name="subject_geography">География</string><string name="subject_biology">Биология</string><string name="subject_history">История</string><string name="subject_social_science">Обществознание</string><string name="subject_ecology">Экология</string>
     <string name="choose_grade">Выбери класс</string><string name="grade_fmt">%1$d класс</string>
     <string name="choose_goal">Выбери цель подготовки</string><string name="all_olympiads">Все подходящие олимпиады</string>
     <string name="vsosh">Всероссийская олимпиада школьников</string><string name="olympiad_pilot">Олимпиадная подготовка</string><string name="olympiad_bridge">Олимпиадный уровень</string>

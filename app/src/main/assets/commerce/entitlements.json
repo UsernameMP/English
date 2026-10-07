@@ -38,14 +38,94 @@
       "grade_max": 7,
       "competition": "Olympiad bridge",
       "season": "2026-2027",
-      "pack_ids": ["english.olympiad.6-7.global.2026"],
+      "pack_ids": [
+        "english.olympiad.6-7.global.2026"
+      ],
       "device_policy": "local_pilot"
     },
     {
-      "id":"pilot.mathematics.g5g7","source":"pilot","active":true,
-      "subject":"mathematics","grade_min":5,"grade_max":7,
-      "competition":"Olympiad pilot","season":"2026-2027",
-      "pack_ids":["mathematics.olympiad.5-7.global.2026"],"device_policy":"local_pilot"
+      "id": "pilot.mathematics.g5g7",
+      "source": "pilot",
+      "active": true,
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "competition": "Olympiad pilot",
+      "season": "2026-2027",
+      "pack_ids": [
+        "mathematics.olympiad.5-7.global.2026"
+      ],
+      "device_policy": "local_pilot"
+    },
+    {
+      "id": "pilot.biology.vsosh",
+      "source": "pilot",
+      "active": true,
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "competition": "VSOSh",
+      "season": "2026-2027",
+      "pack_ids": [
+        "biology.vsosh.7.ru.2026"
+      ],
+      "device_policy": "local_pilot"
+    },
+    {
+      "id": "pilot.history.vsosh",
+      "source": "pilot",
+      "active": true,
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "competition": "VSOSh",
+      "season": "2026-2027",
+      "pack_ids": [
+        "history.vsosh.7.ru.2026"
+      ],
+      "device_policy": "local_pilot"
+    },
+    {
+      "id": "pilot.geography.vsosh",
+      "source": "pilot",
+      "active": true,
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "competition": "VSOSh",
+      "season": "2026-2027",
+      "pack_ids": [
+        "geography.vsosh.7.ru.2026"
+      ],
+      "device_policy": "local_pilot"
+    },
+    {
+      "id": "pilot.social_science.vsosh",
+      "source": "pilot",
+      "active": true,
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "competition": "VSOSh",
+      "season": "2026-2027",
+      "pack_ids": [
+        "social_science.vsosh.7.ru.2026"
+      ],
+      "device_policy": "local_pilot"
+    },
+    {
+      "id": "pilot.ecology.vsosh",
+      "source": "pilot",
+      "active": true,
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "competition": "VSOSh",
+      "season": "2026-2027",
+      "pack_ids": [
+        "ecology.vsosh.7-8.ru.2026"
+      ],
+      "device_policy": "local_pilot"
     }
   ]
 }

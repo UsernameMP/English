@@ -26,6 +26,9 @@ public final class Question {
     public final String prompt;
     public final String context;
     public final List<String> options;
+    public final List<String> matchingLeft;
+    public final List<String> matchingRight;
+    public final List<Integer> matchingAnswer;
     public final int correctIndex;
     public final List<Integer> correctIndices;
     public final List<String> acceptedAnswers;
@@ -83,6 +86,9 @@ public final class Question {
         this.prompt = prompt;
         this.context = context == null ? "" : context;
         this.options = Collections.unmodifiableList(new ArrayList<>(options));
+        this.matchingLeft = Collections.emptyList();
+        this.matchingRight = Collections.emptyList();
+        this.matchingAnswer = Collections.emptyList();
         this.correctIndex = correctIndex;
         this.correctIndices = correctIndex < 0
                 ? Collections.emptyList() : Collections.singletonList(correctIndex);
@@ -117,6 +123,9 @@ public final class Question {
             String prompt,
             String context,
             List<String> options,
+            List<String> matchingLeft,
+            List<String> matchingRight,
+            List<Integer> matchingAnswer,
             int correctIndex,
             List<Integer> correctIndices,
             List<String> acceptedAnswers,
@@ -149,6 +158,9 @@ public final class Question {
         this.prompt = prompt;
         this.context = context == null ? "" : context;
         this.options = Collections.unmodifiableList(new ArrayList<>(options));
+        this.matchingLeft = Collections.unmodifiableList(new ArrayList<>(matchingLeft));
+        this.matchingRight = Collections.unmodifiableList(new ArrayList<>(matchingRight));
+        this.matchingAnswer = Collections.unmodifiableList(new ArrayList<>(matchingAnswer));
         this.correctIndex = correctIndex;
         this.correctIndices = Collections.unmodifiableList(new ArrayList<>(correctIndices));
         this.acceptedAnswers = Collections.unmodifiableList(new ArrayList<>(acceptedAnswers));
@@ -182,6 +194,10 @@ public final class Question {
 
     public boolean acceptsSequence(List<Integer> indices) {
         return correctIndices.equals(indices);
+    }
+
+    public boolean acceptsMatching(List<Integer> rightIndexByLeft) {
+        return matchingAnswer.equals(rightIndexByLeft);
     }
 
     public boolean acceptsText(String raw) {
