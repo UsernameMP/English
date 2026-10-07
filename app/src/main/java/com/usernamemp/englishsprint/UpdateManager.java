@@ -3,10 +3,12 @@ package com.usernamemp.englishsprint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
+import android.content.pm.PackageInstaller;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.net.Uri;
@@ -21,6 +23,7 @@ import org.json.JSONObject;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -272,6 +275,65 @@ public final class UpdateManager {
                 return;
             }
 
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                installWithPackageInstaller(apk);
+            } else {
+                installWithSystemUi(apk);
+            }
+        } catch (Exception e) {
+            prefs.edit().putString(KEY_PENDING_APK, apk.getAbsolutePath()).apply();
+            message(activity.getString(R.string.update_failed));
+        }
+    }
+
+    private void installWithPackageInstaller(File apk) {
+        prefs.edit().putString(KEY_PENDING_APK, apk.getAbsolutePath()).apply();
+
+        new Thread(() -> {
+            PackageInstaller installer = activity.getPackageManager().getPackageInstaller();
+            int sessionId = -1;
+            try {
+                PackageInstaller.SessionParams params =
+                        new PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL);
+                params.setAppPackageName(activity.getPackageName());
+                params.setSize(apk.length());
+                params.setRequireUserAction(PackageInstaller.SessionParams.USER_ACTION_NOT_REQUIRED);
+
+                sessionId = installer.createSession(params);
+                try (PackageInstaller.Session session = installer.openSession(sessionId);
+                     InputStream in = new BufferedInputStream(new FileInputStream(apk));
+                     OutputStream out = session.openWrite("base.apk", 0, apk.length())) {
+                    byte[] buffer = new byte[64 * 1024];
+                    int read;
+                    while ((read = in.read(buffer)) != -1) {
+                        out.write(buffer, 0, read);
+                    }
+                    session.fsync(out);
+
+                    Intent callback = new Intent(activity, UpdateInstallReceiver.class)
+                            .setAction(UpdateInstallReceiver.ACTION_INSTALL_STATUS);
+                    PendingIntent pending = PendingIntent.getBroadcast(
+                            activity,
+                            sessionId,
+                            callback,
+                            PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE
+                    );
+                    session.commit(pending.getIntentSender());
+                }
+            } catch (Exception e) {
+                if (sessionId >= 0) {
+                    try {
+                        installer.abandonSession(sessionId);
+                    } catch (Exception ignored) {
+                    }
+                }
+                activity.runOnUiThread(() -> installWithSystemUi(apk));
+            }
+        }, "update-package-installer").start();
+    }
+
+    private void installWithSystemUi(File apk) {
+        try {
             Uri uri = FileProvider.getUriForFile(
                     activity,
                     activity.getPackageName() + ".fileprovider",
@@ -283,7 +345,6 @@ public final class UpdateManager {
             install.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             install.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-            clearPending();
             activity.startActivity(install);
         } catch (ActivityNotFoundException e) {
             prefs.edit().putString(KEY_PENDING_APK, apk.getAbsolutePath()).apply();
