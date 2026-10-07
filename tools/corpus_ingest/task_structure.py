@@ -153,11 +153,20 @@ def flatten_lines(layout: dict[str, Any]) -> list[dict[str, Any]]:
     return lines
 
 
+def _normalize_instruction_text(text: str) -> str:
+    value = str(text or "")
+    # PDF extractors commonly keep end-of-line hyphenation: "an-\nswer".
+    # Join only alphabetic fragments, then normalize whitespace.
+    value = re.sub(r"([A-Za-zА-Яа-яЁё])-\s*\n\s*([A-Za-zА-Яа-яЁё])", r"\1\2", value)
+    return re.sub(r"\s+", " ", value).strip()
+
+
 def infer_task_kind(text: str, *, has_parts: bool = False) -> str:
     if has_parts:
         return "COMPOSITE"
+    normalized = _normalize_instruction_text(text)
     for kind, pattern in KIND_RULES:
-        if pattern.search(text or ""):
+        if pattern.search(normalized):
             return kind
     return "UNKNOWN"
 
