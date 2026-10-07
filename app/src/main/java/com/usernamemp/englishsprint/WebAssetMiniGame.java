@@ -29,6 +29,8 @@ public abstract class WebAssetMiniGame implements MiniGame {
 
     protected abstract String assetEntry();
     protected boolean needsTouchMouseBridge() { return false; }
+    protected boolean needsCanvasFit() { return false; }
+    protected boolean needsScaledCanvasTouchBridge() { return false; }
 
     @Override
     public final void start(Activity activity, MiniGameConfig config, EconomyStore economy, Runnable onFinished) {
@@ -90,7 +92,10 @@ public abstract class WebAssetMiniGame implements MiniGame {
 
             @Override
             public void onPageFinished(WebView view, String url) {
-                if (needsTouchMouseBridge()) {
+                if (needsCanvasFit()) view.evaluateJavascript(CANVAS_FIT, null);
+                if (needsScaledCanvasTouchBridge()) {
+                    view.evaluateJavascript(SCALED_CANVAS_TOUCH_BRIDGE, null);
+                } else if (needsTouchMouseBridge()) {
                     view.evaluateJavascript(TOUCH_MOUSE_BRIDGE, null);
                 }
             }
@@ -165,6 +170,25 @@ public abstract class WebAssetMiniGame implements MiniGame {
     private static int dp(Activity activity, int value) {
         return Math.round(value * activity.getResources().getDisplayMetrics().density);
     }
+
+    private static final String CANVAS_FIT =
+            "(function(){var c=document.querySelector('canvas');if(!c)return;" +
+            "document.documentElement.style.margin='0';document.body.style.margin='0';" +
+            "function fit(){var sx=window.innerWidth/c.width,sy=window.innerHeight/c.height;" +
+            "var s=Math.min(sx,sy);c.style.width=(c.width*s)+'px';c.style.height=(c.height*s)+'px';" +
+            "c.style.display='block';c.style.margin='0 auto';}" +
+            "fit();window.addEventListener('resize',fit);})();";
+
+    private static final String SCALED_CANVAS_TOUCH_BRIDGE =
+            "(function(){if(window.__esScaledTouchBridge)return;window.__esScaledTouchBridge=true;" +
+            "var c=document.querySelector('canvas');if(!c)return;" +
+            "function send(type,t){var r=c.getBoundingClientRect();var sx=c.width/r.width,sy=c.height/r.height;" +
+            "var cx=r.left+(t.clientX-r.left)*sx,cy=r.top+(t.clientY-r.top)*sy;" +
+            "c.dispatchEvent(new MouseEvent(type,{bubbles:true,cancelable:true,view:window,clientX:cx,clientY:cy,button:0}));}" +
+            "c.addEventListener('touchstart',function(e){if(e.changedTouches.length){send('mousedown',e.changedTouches[0]);e.preventDefault();}},{passive:false});" +
+            "c.addEventListener('touchmove',function(e){if(e.changedTouches.length){send('mousemove',e.changedTouches[0]);e.preventDefault();}},{passive:false});" +
+            "c.addEventListener('touchend',function(e){if(e.changedTouches.length){var t=e.changedTouches[0];send('mouseup',t);send('click',t);e.preventDefault();}},{passive:false});" +
+            "})();";
 
     private static final String TOUCH_MOUSE_BRIDGE =
             "(function(){if(window.__esTouchBridge)return;window.__esTouchBridge=true;" +
