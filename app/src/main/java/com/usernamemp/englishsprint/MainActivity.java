@@ -743,7 +743,7 @@ public class MainActivity extends Activity {
                         released.setEnabled(true);
                         released.setAlpha(1f);
                         released.setBackground(roundRect(CARD, 14, 1, SOFT));
-                        released.setText(((char) ('A' + previousRight)) + ".  " + q.matchingRight.get(previousRight));
+                        released.setText(String.valueOf(matchingAlphabet.charAt(previousRight % matchingAlphabet.length())) + ".  " + q.matchingRight.get(previousRight));
                         left.setText((leftIndex + 1) + ".  " + q.matchingLeft.get(leftIndex));
                     }
 
@@ -775,7 +775,7 @@ public class MainActivity extends Activity {
 
             for (int i = 0; i < q.matchingRight.size(); i++) {
                 final int rightIndex = i;
-                Button right = secondaryButton(((char) ('A' + rightIndex)) + ".  " + q.matchingRight.get(i));
+                Button right = secondaryButton(String.valueOf(matchingAlphabet.charAt(rightIndex % matchingAlphabet.length())) + ".  " + q.matchingRight.get(i));
                 LinearLayout.LayoutParams lp = matchWrap();
                 lp.topMargin = dp(6);
                 rightPool.addView(right, lp);
@@ -788,11 +788,11 @@ public class MainActivity extends Activity {
                     assigned.set(leftIndex, rightIndex);
                     Button left = leftButtons.get(leftIndex);
                     left.setText((leftIndex + 1) + ".  " + q.matchingLeft.get(leftIndex)
-                            + "\n→ " + ((char) ('A' + rightIndex)));
+                            + "\n→ " + String.valueOf(matchingAlphabet.charAt(rightIndex % matchingAlphabet.length())));
                     left.setAlpha(0.72f);
                     left.setBackground(roundRect(matchedBackground, 14, 1, SOFT));
 
-                    right.setText(((char) ('A' + rightIndex)) + ".  " + q.matchingRight.get(rightIndex)
+                    right.setText(String.valueOf(matchingAlphabet.charAt(rightIndex % matchingAlphabet.length())) + ".  " + q.matchingRight.get(rightIndex)
                             + "   ✓");
                     right.setEnabled(false);
                     right.setAlpha(0.48f);
@@ -819,7 +819,7 @@ public class MainActivity extends Activity {
                 }
                 for (int i = 0; i < rightButtons.size(); i++) {
                     Button right = rightButtons.get(i);
-                    right.setText(((char) ('A' + i)) + ".  " + q.matchingRight.get(i));
+                    right.setText(String.valueOf(matchingAlphabet.charAt(i % matchingAlphabet.length())) + ".  " + q.matchingRight.get(i));
                     right.setEnabled(true);
                     right.setAlpha(1f);
                     right.setBackground(roundRect(CARD, 14, 1, SOFT));
