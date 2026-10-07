@@ -1,7 +1,7 @@
 const ARM_STORE="corpus-assessor-arm-v4";
 const LOCALE_STORE="corpus-assessor-locale";
 let uiLocale=localStorage.getItem(LOCALE_STORE)||"ru";
-let sourceUrls={},deployedAssets={},docs=[],current=0,armState=JSON.parse(localStorage.getItem(ARM_STORE)||"{}"),selectedNode=null,selectedTask=null,conflictsOnly=false,unresolvedOnly=false;
+let sourceUrls={},deployedAssets={},calibrationGold={documents:{}},taskTaxonomy={},docs=[],current=0,armState=JSON.parse(localStorage.getItem(ARM_STORE)||"{}"),selectedNode=null,selectedTask=null,conflictsOnly=false,unresolvedOnly=false;
 
 const I18N={
   ru:{
@@ -18,7 +18,7 @@ const I18N={
     unresolvedOnly:"Только нерешённые",confirmSuggested:"Подтвердить предложенные",undoSuggested:"Отменить массовое подтверждение",proposedLinks:"Предлагаемые связи",exceptionQueue:"Исключения",
     answers:"Ответы",criteria:"Критерии",scriptTranscript:"Скрипт / транскрипт",audioMedia:"Аудио / медиа",coverage:"покрытие",
     confirmed:"Подтверждено",rejected:"Отклонено",needsReviewStatus:"Нужна проверка",unreviewed:"Не проверено",inReview:"В работе",
-    proposalSource:"Источник предложения",calibrationPreset:"Калибровочный preset",filenameHeuristic:"Эвристика по имени файла",documentEvidence:"Текст документа",human:"Создано человеком",
+    proposalSource:"Источник предложения",calibrationPreset:"Калибровочный preset",calibrationGold:"Проверенная калибровка",layoutRules:"Layout parser",filenameHeuristic:"Эвристика по имени файла",documentEvidence:"Текст документа",human:"Создано человеком",
     linkedAudio:"Связанное аудио",listeningAudio:"Аудио Listening",openAudio:"Открыть аудио",documentComplete:"Документ завершён",documentInReview:"Документ в работе",nextDocument:"Следующий документ →",
     field_role:"Тип документа",field_subject:"Предмет",field_language:"Язык документа",field_academic_year:"Учебный год",field_grades:"Классы",
     field_competition:"Олимпиада",field_stage:"Этап",field_tour:"Тур",field_region:"Регион",field_problemset:"ProblemSet",
@@ -44,7 +44,7 @@ const I18N={
     unresolvedOnly:"Unresolved only",confirmSuggested:"Confirm suggested",undoSuggested:"Undo bulk confirmation",proposedLinks:"Proposed links",exceptionQueue:"Exception queue",
     answers:"Answers",criteria:"Criteria",scriptTranscript:"Script / Transcript",audioMedia:"Audio / Media",coverage:"coverage",
     confirmed:"Confirmed",rejected:"Rejected",needsReviewStatus:"Needs review",unreviewed:"Unreviewed",inReview:"In review",
-    proposalSource:"Proposal source",calibrationPreset:"Calibration preset",filenameHeuristic:"Filename heuristic",documentEvidence:"Document text",human:"Human-created",
+    proposalSource:"Proposal source",calibrationPreset:"Calibration preset",calibrationGold:"Reviewed calibration",layoutRules:"Layout parser",filenameHeuristic:"Filename heuristic",documentEvidence:"Document text",human:"Human-created",
     linkedAudio:"Linked audio",listeningAudio:"Listening audio",openAudio:"Open audio",documentComplete:"Document complete",documentInReview:"Document in review",nextDocument:"Next document →",
     field_role:"Document type",field_subject:"Subject",field_language:"Document language",field_academic_year:"Academic year",field_grades:"Grades",
     field_competition:"Competition",field_stage:"Stage",field_tour:"Tour",field_region:"Region",field_problemset:"ProblemSet",
@@ -65,7 +65,7 @@ function valueLabel(field,value){
   return (I18N[uiLocale]&&I18N[uiLocale][key])||normalized.replaceAll("_"," ");
 }
 function proposalSourceLabel(source){
-  const map={CALIBRATION_PRESET:"calibrationPreset",FILENAME_HEURISTIC:"filenameHeuristic",DOCUMENT_EVIDENCE:"documentEvidence",HUMAN:"human"};
+  const map={CALIBRATION_PRESET:"calibrationPreset",CALIBRATION_GOLD:"calibrationGold",LAYOUT_RULES:"layoutRules",FILENAME_HEURISTIC:"filenameHeuristic",DOCUMENT_EVIDENCE:"documentEvidence",HUMAN:"human"};
   return t(map[source]||"filenameHeuristic");
 }
 
@@ -121,33 +121,64 @@ function docState(doc){
 }
 function bundleKey(doc){return canonicalStem(doc.filename)}
 function bundleMembers(doc){const key=bundleKey(doc);return docs.filter(d=>bundleKey(d)===key)}
+function filenameEvidence(doc,label,token=""){
+  const detail=token?doc.filename+' · token "'+token+'"':doc.filename;
+  return {page:null,search:"",snippet:detail,source:"filename",label};
+}
 function inferDocument(doc){
   const name=doc.filename.toLowerCase();
-  const role=name.startsWith("tasks-")?"TASK_SET":name.startsWith("ans-")?"ANSWER_KEY":name.startsWith("script-")?"LISTENING_SCRIPT":name.startsWith("criteria-")?"CRITERIA":"OTHER";
+  const roleToken=name.startsWith("tasks-")?"tasks":name.startsWith("ans-")?"ans":name.startsWith("script-")?"script":name.startsWith("criteria-")?"criteria":"";
+  const role=roleToken==="tasks"?"TASK_SET":roleToken==="ans"?"ANSWER_KEY":roleToken==="script"?"LISTENING_SCRIPT":roleToken==="criteria"?"CRITERIA":"OTHER";
   const yr=name.match(/-(\d{2})-(\d{2})\.pdf$/); const academic_year=yr?("20"+yr[1]+"/"+yr[2]):"UNKNOWN";
   const gr=name.match(/engl-(\d+)-(\d+)/); const grades=gr?(gr[1]+"-"+gr[2]):"UNKNOWN";
-  const stage=name.includes("-mun-")?"MUNICIPAL":name.includes("-reg-")?"REGIONAL":"UNKNOWN";
-  const tour=name.includes("-pism-")?"WRITTEN":name.includes("-ustn-")?"ORAL":"UNKNOWN";
+  const stageToken=name.includes("-mun-")?"mun":name.includes("-reg-")?"reg":"";
+  const stage=stageToken==="mun"?"MUNICIPAL":stageToken==="reg"?"REGIONAL":"UNKNOWN";
+  const tourToken=name.includes("-pism-")?"pism":name.includes("-ustn-")?"ustn":"";
+  const tour=tourToken==="pism"?"WRITTEN":tourToken==="ustn"?"ORAL":"UNKNOWN";
   const rm=name.match(/-(?:mun|reg)-([a-z0-9]+)-\d{2}-\d{2}\.pdf$/); const rawRegion=rm?rm[1].toLowerCase():""; const region=rawRegion?(REGION_CODES[rawRegion]||rawRegion.toUpperCase()):"UNKNOWN";
   const values={role,subject:"ENGLISH",language:"UNKNOWN",academic_year,grades,competition:"VSOSh",stage,tour,region,problemset:canonicalStem(doc.filename)};
-  if(doc.id==="6c7bf55e9532cd1b6960821ac4c91fa8ebc1a48cc5aafa5405ec73b7966aa932")values.language="RU+EN";
-  const confidence={role:.99,subject:.99,language:values.language==="UNKNOWN"?.35:.98,academic_year:academic_year==="UNKNOWN"?.45:.98,grades:grades==="UNKNOWN"?.45:.98,competition:.96,stage:stage==="UNKNOWN"?.55:.97,tour:tour==="UNKNOWN"?.55:.97,region:region==="UNKNOWN"?.52:.88,problemset:.91};
+  const confidence={role:.99,subject:.99,language:.35,academic_year:academic_year==="UNKNOWN"?.45:.98,grades:grades==="UNKNOWN"?.45:.98,competition:.72,stage:stage==="UNKNOWN"?.55:.97,tour:tour==="UNKNOWN"?.55:.97,region:region==="UNKNOWN"?.52:.88,problemset:.91};
   const proposal_source={
     role:"FILENAME_HEURISTIC",subject:"FILENAME_HEURISTIC",language:"FILENAME_HEURISTIC",academic_year:"FILENAME_HEURISTIC",
     grades:"FILENAME_HEURISTIC",competition:"FILENAME_HEURISTIC",stage:"FILENAME_HEURISTIC",tour:"FILENAME_HEURISTIC",region:"FILENAME_HEURISTIC",problemset:"FILENAME_HEURISTIC"
   };
+  const evidence={
+    role:filenameEvidence(doc,"filename prefix",roleToken),
+    subject:filenameEvidence(doc,"filename token","engl"),
+    language:{page:null,search:"",snippet:"No direct language evidence in filename",source:"heuristic",label:"language requires document text"},
+    academic_year:filenameEvidence(doc,"filename academic-year token",yr?yr[1]+"-"+yr[2]:""),
+    grades:filenameEvidence(doc,"filename grade token",gr?gr[1]+"-"+gr[2]:""),
+    competition:{page:null,search:"",snippet:"VSOSh is a corpus-source default, not a PDF-text claim",source:"heuristic",label:"corpus source default"},
+    stage:filenameEvidence(doc,"filename stage token",stageToken),
+    tour:filenameEvidence(doc,"filename tour token",tourToken),
+    region:filenameEvidence(doc,"filename region token",rawRegion),
+    problemset:{page:null,search:"",snippet:canonicalStem(doc.filename),source:"derived",label:"canonical filename stem"}
+  };
+
   if(PASS1_EVIDENCE_OVERRIDES[doc.id]){
+    Object.assign(evidence,PASS1_EVIDENCE_OVERRIDES[doc.id]);
     ["subject","language","academic_year","grades","competition","stage","tour","region"].forEach(k=>proposal_source[k]="DOCUMENT_EVIDENCE");
+    if(evidence.language&&evidence.language.source==="document"){
+      values.language="RU+EN";
+      confidence.language=.98;
+    }
   }
-  const evidence={};
-  Object.keys(values).forEach(k=>evidence[k]={
-    page:1,
-    search:"",
-    snippet:"",
-    source:"filename",
-    label:k==="role"?"source filename":"source metadata / filename"
-  });
-  Object.assign(evidence,PASS1_EVIDENCE_OVERRIDES[doc.id]||{});
+
+  const gold=calibrationGold&&calibrationGold.documents&&calibrationGold.documents[doc.id];
+  if(gold){
+    if(gold.language){
+      values.language=gold.language;
+      confidence.language=.995;
+      proposal_source.language="CALIBRATION_GOLD";
+      evidence.language={page:null,search:"",snippet:"Human-reviewed language: "+gold.language,source:"calibration",label:"10-document calibration"};
+    }
+    if(Array.isArray(gold.roles)&&gold.roles.length){
+      values.role=gold.roles[0];
+      confidence.role=.995;
+      proposal_source.role="CALIBRATION_GOLD";
+      evidence.role={page:null,search:"",snippet:"Human-reviewed roles: "+gold.roles.join(" + "),source:"calibration",label:"10-document calibration"};
+    }
+  }
   return {values,confidence,evidence,proposal_source};
 }
 function focusEvidence(ev){
@@ -301,6 +332,7 @@ function switchPass(pass){
 }
 function renderDoc(){
   const doc=docs[current];if(!doc)return;
+  switchPass("pass1");
   $("docIndex").textContent=(current+1)+" / "+docs.length;
   $("docSha").textContent=doc.id;
   $("openSource").href=doc.url;
@@ -331,6 +363,10 @@ function downloadAudit(){const blob=new Blob([JSON.stringify({schema_version:"as
 async function initArm(){
   $("uiLocale").value=uiLocale;
   sourceUrls=await fetch("source_urls.json",{cache:"no-store"}).then(r=>r.json());
+  try{calibrationGold=await fetch("calibration_gold.json",{cache:"no-store"}).then(r=>r.ok?r.json():({documents:{}}));}
+  catch(e){console.warn("calibration gold unavailable",e);calibrationGold={documents:{}};}
+  try{taskTaxonomy=await fetch("task_taxonomy.json",{cache:"no-store"}).then(r=>r.ok?r.json():({task_kinds:[]}));}
+  catch(e){console.warn("task taxonomy unavailable",e);taskTaxonomy={task_kinds:[]};}
   try{
     const r=await fetch("deployed_assets.json",{cache:"no-store"});
     deployedAssets=r.ok?await r.json():{};
@@ -346,11 +382,20 @@ async function initArm(){
       filename:armFilename(url),
       viewerUrl:asset.pdf||url,
       layoutUrl:asset.layout||null,
+      structureUrl:asset.structure||null,
+      machineStructure:null,
       audioUrl:asset.audio||null,
       audioSource:asset.source_audio||null,
       audioSha:asset.audio_sha256||null
     };
   });
+  await Promise.all(docs.map(async doc=>{
+    if(!doc.structureUrl)return;
+    try{
+      const r=await fetch(doc.structureUrl,{cache:"no-store"});
+      if(r.ok)doc.machineStructure=await r.json();
+    }catch(e){console.warn("machine structure unavailable",doc.filename,e);}
+  }));
   document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>switchPass(t.dataset.pass));
   $("prevDoc").onclick=()=>{current=(current-1+docs.length)%docs.length;renderDoc()};
   $("nextDoc").onclick=()=>{current=(current+1)%docs.length;renderDoc()};
