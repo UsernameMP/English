@@ -709,65 +709,127 @@ public class MainActivity extends Activity {
             });
         } else if ("matching".equals(q.interaction)) {
             root.addView(text(getString(R.string.matching_hint), 13, MUTED, Typeface.BOLD));
+
+            final int matchedBackground = Color.rgb(238, 240, 244);
+            final int poolBackground = Color.rgb(246, 247, 250);
             List<Integer> assigned = new ArrayList<>();
             for (int i = 0; i < q.matchingLeft.size(); i++) assigned.add(-1);
             List<Button> leftButtons = new ArrayList<>();
+            List<Button> rightButtons = new ArrayList<>();
             int[] selectedLeft = {-1};
+            Button[] submitRef = {null};
+            final String matchingAlphabet = "ru".equals(Locale.getDefault().getLanguage())
+                    ? "АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЭЮЯ"
+                    : "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+            LinearLayout leftPool = column();
+            leftPool.setPadding(dp(10), dp(10), dp(10), dp(6));
+            leftPool.setBackground(roundRect(poolBackground, 14, 1, SOFT));
+            leftPool.addView(text(getString(R.string.matching_left_pool), 12, MUTED, Typeface.BOLD));
 
             for (int i = 0; i < q.matchingLeft.size(); i++) {
                 final int leftIndex = i;
-                Button left = answerButton(q.matchingLeft.get(i));
+                Button left = answerButton((leftIndex + 1) + ".  " + q.matchingLeft.get(i));
                 LinearLayout.LayoutParams lp = matchWrap();
-                lp.bottomMargin = dp(7);
-                root.addView(left, lp);
+                lp.topMargin = dp(6);
+                leftPool.addView(left, lp);
                 leftButtons.add(left);
                 answerButtons.add(left);
                 left.setOnClickListener(v -> {
+                    int previousRight = assigned.get(leftIndex);
+                    if (previousRight >= 0) {
+                        assigned.set(leftIndex, -1);
+                        Button released = rightButtons.get(previousRight);
+                        released.setEnabled(true);
+                        released.setAlpha(1f);
+                        released.setBackground(roundRect(CARD, 14, 1, SOFT));
+                        released.setText(String.valueOf(matchingAlphabet.charAt(previousRight % matchingAlphabet.length())) + ".  " + q.matchingRight.get(previousRight));
+                        left.setText((leftIndex + 1) + ".  " + q.matchingLeft.get(leftIndex));
+                    }
+
                     selectedLeft[0] = leftIndex;
                     for (int j = 0; j < leftButtons.size(); j++) {
-                        leftButtons.get(j).setBackground(roundRect(
-                                j == leftIndex ? Color.rgb(225, 232, 255) : CARD,
-                                14, j == leftIndex ? 2 : 1, j == leftIndex ? PRIMARY : SOFT));
+                        Button candidate = leftButtons.get(j);
+                        if (j == leftIndex) {
+                            candidate.setAlpha(1f);
+                            candidate.setBackground(roundRect(Color.rgb(225, 232, 255), 14, 2, PRIMARY));
+                        } else if (assigned.get(j) >= 0) {
+                            candidate.setAlpha(0.72f);
+                            candidate.setBackground(roundRect(matchedBackground, 14, 1, SOFT));
+                        } else {
+                            candidate.setAlpha(1f);
+                            candidate.setBackground(roundRect(CARD, 14, 1, SOFT));
+                        }
                     }
+                    if (submitRef[0] != null) submitRef[0].setEnabled(false);
                 });
             }
+            root.addView(leftPool, matchWrap());
 
-            root.addView(space(6));
+            root.addView(space(10));
+
+            LinearLayout rightPool = column();
+            rightPool.setPadding(dp(10), dp(10), dp(10), dp(6));
+            rightPool.setBackground(roundRect(poolBackground, 14, 1, SOFT));
+            rightPool.addView(text(getString(R.string.matching_right_pool), 12, MUTED, Typeface.BOLD));
+
             for (int i = 0; i < q.matchingRight.size(); i++) {
                 final int rightIndex = i;
-                Button right = secondaryButton(q.matchingRight.get(i));
+                Button right = secondaryButton(String.valueOf(matchingAlphabet.charAt(rightIndex % matchingAlphabet.length())) + ".  " + q.matchingRight.get(i));
                 LinearLayout.LayoutParams lp = matchWrap();
-                lp.bottomMargin = dp(7);
-                root.addView(right, lp);
+                lp.topMargin = dp(6);
+                rightPool.addView(right, lp);
+                rightButtons.add(right);
                 answerButtons.add(right);
                 right.setOnClickListener(v -> {
                     int leftIndex = selectedLeft[0];
-                    if (leftIndex < 0) return;
-                    for (int j = 0; j < assigned.size(); j++) {
-                        if (j != leftIndex && assigned.get(j) == rightIndex) {
-                            assigned.set(j, -1);
-                            leftButtons.get(j).setText(q.matchingLeft.get(j));
-                        }
-                    }
+                    if (leftIndex < 0 || assigned.contains(rightIndex)) return;
+
                     assigned.set(leftIndex, rightIndex);
-                    leftButtons.get(leftIndex).setText(q.matchingLeft.get(leftIndex) + "\n→ " + q.matchingRight.get(rightIndex));
-                    leftButtons.get(leftIndex).setBackground(roundRect(CARD, 14, 1, SOFT));
+                    Button left = leftButtons.get(leftIndex);
+                    left.setText((leftIndex + 1) + ".  " + q.matchingLeft.get(leftIndex)
+                            + "\n→ " + String.valueOf(matchingAlphabet.charAt(rightIndex % matchingAlphabet.length())));
+                    left.setAlpha(0.72f);
+                    left.setBackground(roundRect(matchedBackground, 14, 1, SOFT));
+
+                    right.setText(String.valueOf(matchingAlphabet.charAt(rightIndex % matchingAlphabet.length())) + ".  " + q.matchingRight.get(rightIndex)
+                            + "   ✓");
+                    right.setEnabled(false);
+                    right.setAlpha(0.48f);
+                    right.setBackground(roundRect(matchedBackground, 14, 1, SOFT));
+
                     selectedLeft[0] = -1;
+                    if (submitRef[0] != null) submitRef[0].setEnabled(!assigned.contains(-1));
                 });
             }
+            root.addView(rightPool, matchWrap());
 
+            root.addView(space(8));
             Button reset = secondaryButton(getString(R.string.matching_reset));
             root.addView(reset, matchWrap());
             reset.setOnClickListener(v -> {
                 selectedLeft[0] = -1;
                 for (int i = 0; i < assigned.size(); i++) {
                     assigned.set(i, -1);
-                    leftButtons.get(i).setText(q.matchingLeft.get(i));
-                    leftButtons.get(i).setBackground(roundRect(CARD, 14, 1, SOFT));
+                    Button left = leftButtons.get(i);
+                    left.setText((i + 1) + ".  " + q.matchingLeft.get(i));
+                    left.setEnabled(true);
+                    left.setAlpha(1f);
+                    left.setBackground(roundRect(CARD, 14, 1, SOFT));
                 }
+                for (int i = 0; i < rightButtons.size(); i++) {
+                    Button right = rightButtons.get(i);
+                    right.setText(String.valueOf(matchingAlphabet.charAt(i % matchingAlphabet.length())) + ".  " + q.matchingRight.get(i));
+                    right.setEnabled(true);
+                    right.setAlpha(1f);
+                    right.setBackground(roundRect(CARD, 14, 1, SOFT));
+                }
+                if (submitRef[0] != null) submitRef[0].setEnabled(false);
             });
 
             Button submit = primaryButton(getString(R.string.submit_answer));
+            submitRef[0] = submit;
+            submit.setEnabled(false);
             LinearLayout.LayoutParams submitLp = matchWrap();
             submitLp.topMargin = dp(8);
             root.addView(submit, submitLp);
@@ -777,6 +839,7 @@ public class MainActivity extends Activity {
                 for (Button button : answerButtons) button.setEnabled(false);
                 boolean correct = q.acceptsMatching(assigned);
                 for (Button button : leftButtons) {
+                    button.setAlpha(1f);
                     button.setBackground(roundRect(correct ? Color.rgb(221, 245, 234) : Color.rgb(255, 244, 215),
                             14, 2, correct ? GOOD : Color.rgb(210, 160, 60)));
                 }
