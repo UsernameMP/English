@@ -191,4 +191,4 @@ def extract_pdf_layout(pdf_bytes: bytes, document_sha256: str) -> dict[str, Any]
 
 
 def dumps_layout(layout: dict[str, Any]) -> bytes:
-    return json.dumps(layout, ensure_ascii=False, sort_keys=True, indent=2).encode("utf-8")
+    return json.dumps(layout, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
