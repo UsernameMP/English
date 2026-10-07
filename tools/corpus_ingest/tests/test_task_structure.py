@@ -253,10 +253,10 @@ def test_hyphenated_pdf_line_break_still_classifies_select_one():
 
 def test_subject_agnostic_math_tasks_form_one_section():
     layout = layout_from_pages([[
-        "МАТЕМАТИКА",
-        "Задача 1. Вычислите значение выражения.",
-        "Задача 2. Докажите утверждение.",
-        "Задача 3. Найдите число.",
+        "MATHEMATICS",
+        "Problem 1. Calculate the value.",
+        "Problem 2. Prove the statement.",
+        "Problem 3. Find the number.",
     ]])
     proposal = propose_structure(layout, filename="tasks-math-9-mun-demo-24-25.pdf")
     assert len(proposal["sections"]) == 1
@@ -266,11 +266,11 @@ def test_subject_agnostic_math_tasks_form_one_section():
 
 def test_biology_part_groups_accept_decimal_tasks():
     layout = layout_from_pages([[
-        "Часть 1.",
-        "1.1. Выберите один правильный ответ.",
-        "1.2. Выберите все верные варианты.",
-        "Часть 2.",
-        "2.1. Установите соответствие.",
+        "Part 1.",
+        "1.1. Choose one correct answer.",
+        "1.2. Choose all correct answers.",
+        "Part 2.",
+        "2.1. Match the items.",
     ]])
     proposal = propose_structure(layout, filename="tasks-biol-10-mun-demo-24-25.pdf")
     assert [s["semantic_type"] for s in proposal["sections"]] == ["PART_GROUP", "PART_GROUP"]
@@ -282,9 +282,9 @@ def test_biology_part_groups_accept_decimal_tasks():
 
 def test_answer_part_group_detects_answer_to_question_lines():
     layout = layout_from_pages([[
-        "Раздел 1.",
-        "Ответ на вопрос 1: 2",
-        "Ответ на вопрос 2: 4",
+        "Section 1.",
+        "Answer to question 1: 2",
+        "Answer to question 2: 4",
     ]])
     proposal = propose_structure(layout, filename="ans-biol-10-mun-demo-24-25.pdf")
     assert proposal["sections"][0]["semantic_type"] == "PART_GROUP"
