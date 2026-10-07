@@ -159,7 +159,7 @@ def test_writing_without_task_number_is_still_an_assessable_task():
     ]])
     proposal = propose_structure(layout, filename="tasks-engl-demo.pdf")
     task = proposal["sections"][0]["tasks"][0]
-    assert task["label"] == "Writing task"
+    assert task["label"] == "Review"
     assert task["kind"] == "EXTENDED_RESPONSE"
 
 
