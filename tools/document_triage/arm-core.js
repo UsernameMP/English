@@ -1,7 +1,7 @@
 const ARM_STORE="corpus-assessor-arm-v4";
 const LOCALE_STORE="corpus-assessor-locale";
 let uiLocale=localStorage.getItem(LOCALE_STORE)||"ru";
-let sourceUrls={},deployedAssets={},calibrationGold={documents:{}},taskTaxonomy={},docs=[],current=0,armState=JSON.parse(localStorage.getItem(ARM_STORE)||"{}"),selectedNode=null,selectedTask=null,conflictsOnly=false,unresolvedOnly=false;
+let sourceUrls={},deployedAssets={},reviewBatch={documents:[]},calibrationGold={documents:{}},taskTaxonomy={},docs=[],current=0,armState=JSON.parse(localStorage.getItem(ARM_STORE)||"{}"),selectedNode=null,selectedTask=null,conflictsOnly=false,unresolvedOnly=false;
 
 const I18N={
   ru:{
@@ -399,7 +399,16 @@ function renderDoc(){
 function downloadAudit(){const blob=new Blob([JSON.stringify({schema_version:"assessor-audit.v1",exported_at:new Date().toISOString(),state:armState},null,2)],{type:"application/json"}),u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="corpus_assessor_audit.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),500)}
 async function initArm(){
   $("uiLocale").value=uiLocale;
-  sourceUrls=await fetch("source_urls.json",{cache:"no-store"}).then(r=>r.json());
+  try{
+    const r=await fetch("resolved_sources.json",{cache:"no-store"});
+    sourceUrls=r.ok?await r.json():await fetch("source_urls.json",{cache:"no-store"}).then(x=>x.json());
+  }catch(e){
+    sourceUrls=await fetch("source_urls.json",{cache:"no-store"}).then(r=>r.json());
+  }
+  try{
+    const r=await fetch("review_batch_resolved.json",{cache:"no-store"});
+    reviewBatch=r.ok?await r.json():{documents:[]};
+  }catch(e){reviewBatch={documents:[]};}
   try{calibrationGold=await fetch("calibration_gold.json",{cache:"no-store"}).then(r=>r.ok?r.json():({documents:{}}));}
   catch(e){console.warn("calibration gold unavailable",e);calibrationGold={documents:{}};}
   try{taskTaxonomy=await fetch("task_taxonomy.json",{cache:"no-store"}).then(r=>r.ok?r.json():({task_kinds:[]}));}
@@ -411,8 +420,12 @@ async function initArm(){
     console.warn("deployed_assets unavailable",e);
     deployedAssets={};
   }
+  const batchDocs=Array.isArray(reviewBatch.documents)?reviewBatch.documents:[];
+  const batchRank=new Map(batchDocs.map((x,i)=>[x.sha256,i]));
+  const batchMeta=new Map(batchDocs.map(x=>[x.sha256,x]));
   docs=Object.entries(sourceUrls).map(([id,url])=>{
     const asset=deployedAssets[id]||{};
+    const meta=batchMeta.get(id)||null;
     return {
       id,
       url,
@@ -423,8 +436,16 @@ async function initArm(){
       machineStructure:null,
       audioUrl:asset.audio||null,
       audioSource:asset.source_audio||null,
-      audioSha:asset.audio_sha256||null
+      audioSha:asset.audio_sha256||null,
+      reviewBatch:meta?reviewBatch.batch_id:null,
+      reviewLabel:meta?meta.label:null
     };
+  });
+  docs.sort((a,b)=>{
+    const ai=batchRank.has(a.id)?batchRank.get(a.id):Number.MAX_SAFE_INTEGER;
+    const bi=batchRank.has(b.id)?batchRank.get(b.id):Number.MAX_SAFE_INTEGER;
+    if(ai!==bi)return ai-bi;
+    return a.filename.localeCompare(b.filename);
   });
   await Promise.all(docs.map(async doc=>{
     if(!doc.structureUrl)return;
