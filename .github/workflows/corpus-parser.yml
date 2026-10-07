@@ -61,6 +61,7 @@ jobs:
         run: PYTHONPATH=. pytest -q tests/test_parser.py tests/test_layout.py tests/test_task_structure.py tests/test_calibration_eval.py tests/test_corpus_graph.py tests/test_crawler.py
 
       - name: Parse Dropbox RAW into canonical layout
+        if: github.event_name != 'push'
         run: python parser.py --max-documents "$PARSER_MAX_DOCUMENTS"
 
       - name: Continue next parser batch
