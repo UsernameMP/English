@@ -10,3 +10,8 @@ The Android pilot bundles the following upstream projects as pinned git submodul
 - Cozy Café · Memories 2010 — nisanurtezcan/cozyCafeGame — commit 24d7f7be4913fe6a532bb13655e05430f86e4767
 
 The host application keeps the upstream repositories pinned and unmodified. A local Android adaptation layer adds a secure appassets origin, mobile viewport/layout patches, touch semantics, the 60-second session lifecycle, and learning-session integration. Upstream license files remain packaged with each game.
+
+
+## Production adaptations
+
+The Rembound Match-3 submodule remains pinned for source history and its MIT notice, but the production Match 3 adapter now points to an original offline `game_custom/match3` implementation with power gems and mobile-first interaction. Other upstream game repositories remain pinned and unmodified; their mobile presentation changes are applied by the Android host adaptation layer.
