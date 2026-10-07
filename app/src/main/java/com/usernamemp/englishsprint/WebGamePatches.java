@@ -50,17 +50,50 @@ final class WebGamePatches {
           if(window.__englishSprintTower)return;
           window.__englishSprintTower=true;
           var style=document.createElement('style');
-          style.textContent='.landing{opacity:0!important;pointer-events:none!important;}';
+          style.textContent=
+            '.landing{opacity:0!important;pointer-events:none!important;}'+
+            '#es-tower-motion{position:fixed;right:10px;bottom:12px;z-index:9999;border:0;border-radius:18px;'+
+            'padding:9px 13px;background:rgba(17,24,39,.82);color:#fff;font:600 13px sans-serif;box-shadow:0 4px 18px rgba(0,0,0,.25);}';
           document.head.appendChild(style);
+
+          var motion='slow';
+          function installMotion(){
+            try{
+              if(!window.game||!game.getVariable)return false;
+              var opt=game.getVariable('GAME_USER_OPTION');
+              if(!opt)return false;
+              opt.hookSpeed=function(successCount){
+                if(motion==='off'||Number(successCount)<1)return 0;
+                var divisor=Number(successCount)<10?500:(Number(successCount)<20?440:390);
+                return Math.sin(performance.now()/divisor);
+              };
+              return true;
+            }catch(e){return false;}
+          }
+
+          var button=document.createElement('button');
+          button.id='es-tower-motion';
+          button.textContent='Swing: slow';
+          function toggle(e){
+            if(e){e.preventDefault();e.stopPropagation();}
+            motion=motion==='slow'?'off':'slow';
+            button.textContent=motion==='slow'?'Swing: slow':'Swing: off';
+            installMotion();
+          }
+          button.addEventListener('click',toggle);
+          button.addEventListener('touchstart',function(e){e.stopPropagation();},{passive:true});
+          document.body.appendChild(button);
+
           var attempts=0;
           function enterGame(){
             attempts++;
+            installMotion();
             var landing=document.querySelector('.landing');
             var start=document.getElementById('start');
-            if(start && landing && getComputedStyle(landing).display!=='none'){
+            if(start&&landing&&getComputedStyle(landing).display!=='none'){
               try{start.click();}catch(e){}
             }
-            if(window.gameStart || attempts>100){clearInterval(timer);}
+            if((window.gameStart&&installMotion())||attempts>120)clearInterval(timer);
           }
           var timer=setInterval(enterGame,50);
           enterGame();
@@ -92,32 +125,25 @@ final class WebGamePatches {
 
     static final String COZY_CAFE = """
         (function(){
-          if(window.__englishSprintCozyCamera)return;
-          window.__englishSprintCozyCamera=true;
+          if(window.__englishSprintCozyFit)return;
+          window.__englishSprintCozyFit=true;
           var c=document.getElementById('gameCanvas');if(!c)return;
           document.documentElement.style.overflow='hidden';
-          document.body.style.cssText+=';display:block!important;position:relative!important;width:100vw!important;height:100vh!important;overflow:hidden!important;';
+          document.body.style.cssText+=';display:block!important;position:relative!important;width:100vw!important;height:100vh!important;overflow:hidden!important;background:#151515!important;';
           c.style.position='absolute';
           c.style.margin='0';
           c.style.maxWidth='none';
-          function currentState(){
-            try{return Number(gameState)||0;}catch(e){return 0;}
-          }
           function fit(){
             var vw=window.innerWidth,vh=window.innerHeight;
-            var scale=vh/768;
+            var scale=vw/1024;
             var renderedW=1024*scale;
-            var state=currentState();
-            var focus=state===0?160:(state===1?770:(state===2?330:512));
-            var left=vw/2-focus*scale;
-            var minLeft=vw-renderedW;
-            left=Math.min(0,Math.max(minLeft,left));
+            var renderedH=768*scale;
             c.style.width=renderedW+'px';
-            c.style.height=(768*scale)+'px';
-            c.style.left=left+'px';
-            c.style.top='0px';
+            c.style.height=renderedH+'px';
+            c.style.left=Math.max(0,(vw-renderedW)/2)+'px';
+            c.style.top=Math.max(0,(vh-renderedH)/2)+'px';
           }
-          fit();window.addEventListener('resize',fit);setInterval(fit,120);
+          fit();setTimeout(fit,80);window.addEventListener('resize',fit);
         })();
         """;
 
@@ -130,8 +156,42 @@ final class WebGamePatches {
             proto.__englishSprintFillText=proto.fillText;
             proto.fillText=function(text){
               var value=String(text||'');
-              if(value.indexOf('Bubble Shooter Example')===0 || value.indexOf('Fps:')===0)return;
+              if(value.indexOf('Bubble Shooter Example')===0||value.indexOf('Fps:')===0)return;
               return proto.__englishSprintFillText.apply(this,arguments);
+            };
+          }
+          if(!proto.__englishSprintDrawImage){
+            proto.__englishSprintDrawImage=proto.drawImage;
+            var palette=['#ff4f87','#45d7e8','#7c6cff','#ffd447','#45d483','#3987ff','#ff934d'];
+            proto.drawImage=function(img){
+              var src='';
+              try{src=String(img&&img.src||'');}catch(e){}
+              if(src.indexOf('bubble-sprites.png')>=0&&arguments.length===9){
+                var sx=Number(arguments[1])||0;
+                var dx=Number(arguments[5])||0,dy=Number(arguments[6])||0;
+                var dw=Number(arguments[7])||40,dh=Number(arguments[8])||40;
+                var idx=Math.max(0,Math.min(palette.length-1,Math.round(sx/40)));
+                var cx=dx+dw/2,cy=dy+dh/2,r=Math.min(dw,dh)*.45;
+                this.save();
+                this.shadowColor='rgba(15,23,42,.28)';
+                this.shadowBlur=Math.max(2,r*.18);
+                this.shadowOffsetY=Math.max(1,r*.08);
+                var g=this.createRadialGradient(cx-r*.32,cy-r*.38,r*.08,cx,cy,r);
+                g.addColorStop(0,'#ffffff');
+                g.addColorStop(.16,palette[idx]);
+                g.addColorStop(1,palette[idx]);
+                this.fillStyle=g;
+                this.beginPath();this.arc(cx,cy,r,0,Math.PI*2);this.fill();
+                this.shadowColor='transparent';
+                this.lineWidth=Math.max(1.5,r*.08);
+                this.strokeStyle='rgba(255,255,255,.72)';
+                this.stroke();
+                this.fillStyle='rgba(255,255,255,.65)';
+                this.beginPath();this.arc(cx-r*.28,cy-r*.30,r*.15,0,Math.PI*2);this.fill();
+                this.restore();
+                return;
+              }
+              return proto.__englishSprintDrawImage.apply(this,arguments);
             };
           }
         })();
