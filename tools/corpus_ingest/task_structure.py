@@ -50,7 +50,7 @@ SECTION_PATTERNS = [
 ]
 
 KIND_RULES = [
-    ("SELECT_MULTIPLE", re.compile(r"выберите\s+(?:все|несколько).*?(?:правильн|верн)|укажите\s+все\s+верн", re.I | re.S)),
+    ("SELECT_MULTIPLE", re.compile(r"choose\s+(?:all|two|three|several|multiple).*?(?:correct|true)|select\s+(?:all|two|three|several|multiple).*?(?:correct|true)|выберите\s+(?:все|несколько).*?(?:правильн|верн)|укажите\s+все\s+верн", re.I | re.S)),
     ("TRUE_FALSE_NOT_STATED", re.compile(r"true\s*\([^)]*\).*false\s*\([^)]*\).*not\s+stated|true.*false.*not\s+stated", re.I | re.S)),
     ("TRUE_FALSE", re.compile(r"\btrue\b.*\bfalse\b", re.I | re.S)),
     ("FORM_FILL", re.compile(r"complete\s+the\s+form|fill\s+in\s+the\s+form", re.I)),
