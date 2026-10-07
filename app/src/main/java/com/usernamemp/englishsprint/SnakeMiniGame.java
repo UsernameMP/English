@@ -1,0 +1,9 @@
+package com.usernamemp.englishsprint;
+import android.os.*;import android.widget.*;import java.util.*;
+public final class SnakeMiniGame extends ArcadeMiniGame{
+ private final Handler h=new Handler(Looper.getMainLooper());private final Random r=new Random();private final LinkedList<Integer>s=new LinkedList<>();private TextView board;private int dir=1,food=55;private boolean run;
+ public String id(){return "snake";}protected String[] upgrades(){return new String[]{"shield","magnet","length"};}protected String label(String u){return u;}
+ protected void game(LinearLayout root){s.add(44);for(int i=0;i<lv("length");i++)s.add(43-i);board=t("",17,1);root.addView(board,m());LinearLayout keys=new LinearLayout(a);for(String d:new String[]{"←","↑","↓","→"}){Button k=b(d);k.setOnClickListener(v->dir="←".equals(d)?-1:"→".equals(d)?1:"↑".equals(d)?-10:10);keys.addView(k,new LinearLayout.LayoutParams(0,dp(54),1));}root.addView(keys,m());run=true;draw();tick();}
+ private void tick(){if(!run)return;int head=s.getFirst(),col=head%10,n=head+dir;if((dir==1&&col==9)||(dir==-1&&col==0)||n<0||n>=100||s.contains(n)){if(lv("shield")>0){dir=-dir;h.postDelayed(this::tick,250);return;}run=false;return;}s.addFirst(n);if(n==food||(lv("magnet")>1&&Math.abs(n/10-food/10)+Math.abs(n%10-food%10)<=1)){add(10);do food=r.nextInt(100);while(s.contains(food));}else s.removeLast();draw();h.postDelayed(this::tick,Math.max(120,300-lv("magnet")*10));}
+ private void draw(){StringBuilder x=new StringBuilder();for(int i=0;i<100;i++){x.append(i==food?"◆":s.contains(i)?"●":"·");if(i%10==9)x.append("\n");}board.setText(x);}
+}
