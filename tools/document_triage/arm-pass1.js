@@ -2,7 +2,7 @@ const PASS1_FIELDS=["role","subject","language","academic_year","grades","compet
 
 const PASS1_OPTIONS={
   role:["TASK_SET","ANSWER_KEY","CRITERIA","LISTENING_SCRIPT","OTHER"],
-  subject:["ENGLISH","RUSSIAN","OTHER"],
+  subject:["ENGLISH","RUSSIAN","MATHEMATICS","GEOGRAPHY","BIOLOGY","PHYSICS","INFORMATICS","CHEMISTRY","HISTORY","OTHER"],
   language:["RU+EN","RU","EN","UNKNOWN","OTHER"],
   competition:["VSOSh","OTHER"],
   stage:["MUNICIPAL","REGIONAL","OTHER"],
