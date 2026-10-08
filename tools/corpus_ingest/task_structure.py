@@ -189,26 +189,26 @@ def _normalize_instruction_text(text: str) -> str:
 
 
 OPTION_LINE_RE = re.compile(
-    r"^\\s*(?:[A-HА-З][.)]|\\([A-HА-З]\\)|[0-9]{1,2}[.)])\\s+\\S",
+    r"^\s*(?:[A-HА-З][.)]|\([A-HА-З]\)|[0-9]{1,2}[.)])\s+\S",
     re.I,
 )
 CAPTION_RE = re.compile(
-    r"^\\s*(?:рис\\.?|рисунок|figure|fig\\.?|table|таблица|map|карта|graph|chart|график|diagram|схема)\\b",
+    r"^\s*(?:рис\.?|рисунок|figure|fig\.?|table|таблица|map|карта|graph|chart|график|diagram|схема)\b",
     re.I,
 )
 INSTRUCTION_RE = re.compile(
-    r"\\b(?:choose|select|match|complete|fill|answer|write|read|listen|calculate|compute|find|prove|"
+    r"\b(?:choose|select|match|complete|fill|answer|write|read|listen|calculate|compute|find|prove|"
     r"выберите|укажите|соотнесите|установите|заполните|ответьте|напишите|прочитайте|вычислите|найдите|докажите|"
-    r"расположите|определите|рассмотрите)\\b",
+    r"расположите|определите|рассмотрите)\b",
     re.I,
 )
 DEPENDENCY_RE = re.compile(
-    r"\\b(?:previous|preceding|above|earlier|using\\s+your\\s+answer|"
-    r"предыдущ|выше|полученн|используя\\s+ответ)\\b",
+    r"\b(?:previous|preceding|above|earlier|using\s+your\s+answer|"
+    r"предыдущ|выше|полученн|используя\s+ответ)\b",
     re.I,
 )
-FORMULA_SIGNAL_RE = re.compile(r"[=<>±×÷√∑∫∞≈≠≤≥]|(?:\\b[a-zA-Z]\\s*[²³^]|\\d+\\s*/\\s*\\d+)")
-CODE_SIGNAL_RE = re.compile(r"\\b(?:for|while|if|else|return|def|class|print|input|int|float|bool|var|let|const)\\b|[{};]", re.I)
+FORMULA_SIGNAL_RE = re.compile(r"[=<>±×÷√∑∫∞≈≠≤≥]|(?:\b[a-zA-Z]\s*[²³^]|\d+\s*/\s*\d+)")
+CODE_SIGNAL_RE = re.compile(r"\b(?:for|while|if|else|return|def|class|print|input|int|float|bool|var|let|const)\b|[{};]", re.I)
 
 
 def _union_boxes(boxes: list[list[float]]) -> list[float]:
@@ -294,7 +294,27 @@ def _task_body(
             "source_index": idx,
         }
         blocks.append(row)
-        if role not in {"TASK_MARKER", "FOOTNOTE"}:
+        if idx == start:
+            marker = TASK_RE.match(str(line.get("text") or ""))
+            inline_text = (marker.group(2) if marker else "").strip()
+            if inline_text:
+                inline_line = {**line, "text": inline_text}
+                inline_role, inline_conf, inline_reason = _line_role(inline_line, is_marker=False)
+                blocks.append({
+                    "id": _stable("task_block", task_id, line.get("id"), "inline_statement"),
+                    "source_block_id": line.get("block_id"),
+                    "line_ids": [line.get("id")],
+                    "page": int(line.get("page") or 1),
+                    "bbox": [round(float(x), 3) for x in (line.get("bbox") or [0, 0, 0, 0])],
+                    "reading_order": int(line.get("reading_order") or 0),
+                    "text": inline_text,
+                    "role": inline_role,
+                    "role_confidence": inline_conf,
+                    "role_reason": "inline_task_statement:" + inline_reason,
+                    "source_index": idx,
+                })
+                owned_lines.append(inline_line)
+        elif role not in {"TASK_MARKER", "FOOTNOTE"}:
             owned_lines.append(line)
 
     by_page: dict[int, list[list[float]]] = {}
@@ -304,7 +324,7 @@ def _task_body(
         {"page": page, "bbox": _union_boxes(boxes)}
         for page, boxes in sorted(by_page.items())
     ]
-    body_text = "\\n".join(
+    body_text = "\n".join(
         b["text"] for b in blocks if b["role"] not in {"TASK_MARKER", "FOOTNOTE"}
     ).strip()
 

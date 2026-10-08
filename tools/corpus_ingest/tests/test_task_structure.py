@@ -84,7 +84,7 @@ def test_visual_table_is_attached_as_artifact():
     task = flatten_tasks(propose_structure(layout))[0]
     assert task["kind"] in {"TABLE_GAP_FILL", "GAP_FILL"}
     # Table detection is additive and backend-version dependent; drawings must at least survive.
-    assert any(a["kind"] in {"TABLE", "GRID", "DIAGRAM"} for a in task["artifacts"])
+    assert any(a["kind"] in {"TABLE", "GRID", "DIAGRAM", "RESPONSE_TABLE"} for a in task["artifacts"])
 
 
 def test_no_task_heading_does_not_promote_bare_numbers_to_tasks():

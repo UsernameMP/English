@@ -1,4 +1,4 @@
-from calibration_eval import evaluate
+from calibration_eval import evaluate, evaluate_document
 
 
 def test_calibration_eval_matches_repeated_sections_and_tasks():
