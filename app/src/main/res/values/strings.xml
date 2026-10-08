@@ -2,7 +2,7 @@
 <resources>
     <string name="rift_eyebrow">Your knowledge universe</string>
     <string name="rift_hero_kicker">YOUR NEXT ADVENTURE</string>
-    <string name="rift_hero_title">Unlock what you're capable of.</string>
+    <string name="rift_hero_title">Unlock what you are capable of.</string>
     <string name="rift_hero_subtitle">One challenge at a time. Every skill moves you forward.</string>
     <string name="rift_explore">Explore Rift</string>
     <string name="rift_explore_caption">Choose where your next discovery begins</string>
