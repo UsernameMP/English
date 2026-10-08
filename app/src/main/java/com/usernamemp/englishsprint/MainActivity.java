@@ -216,10 +216,6 @@ public class MainActivity extends Activity {
         shopButton.setOnClickListener(v -> showShop());
         LinearLayout.LayoutParams shopLp=matchWrap(); shopLp.topMargin=dp(8); root.addView(shopButton,shopLp);
 
-        Button randomGameButton = secondaryButton(getString(R.string.random_game_preview));
-        randomGameButton.setOnClickListener(v -> miniGames.startRandomPreview(this, this::showHome));
-        LinearLayout.LayoutParams randomGameLp=matchWrap(); randomGameLp.topMargin=dp(8); root.addView(randomGameButton,randomGameLp);
-
         setScrollable(root);
     }
 
