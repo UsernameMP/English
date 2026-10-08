@@ -23,7 +23,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
@@ -46,14 +45,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MainActivity extends Activity {
-    private static final int BG = RiftStyle.BACKGROUND;
-    private static final int INK = RiftStyle.INK;
-    private static final int MUTED = RiftStyle.MUTED;
-    private static final int PRIMARY = RiftStyle.BLUE;
-    private static final int GOOD = RiftStyle.GOOD;
+    private static final int BG = Color.rgb(246, 247, 251);
+    private static final int INK = Color.rgb(24, 29, 38);
+    private static final int MUTED = Color.rgb(96, 105, 122);
+    private static final int PRIMARY = Color.rgb(47, 82, 235);
+    private static final int GOOD = Color.rgb(24, 145, 92);
     private static final int BAD = Color.rgb(205, 63, 72);
     private static final int CARD = Color.WHITE;
-    private static final int SOFT = RiftStyle.STROKE;
+    private static final int SOFT = Color.rgb(232, 236, 246);
     private static final int HIGHLIGHT = Color.rgb(255, 236, 153);
 
     private ProgressStore progress;
@@ -200,74 +199,45 @@ public class MainActivity extends Activity {
         hideSystemNavigation();
         audio.stop();
         LinearLayout root = column();
-        root.setPadding(dp(20), dp(18), dp(20), dp(36));
+        root.setPadding(dp(20), dp(18), dp(20), dp(30));
 
-        LinearLayout masthead = row();
-        ImageView mark = new ImageView(this);
-        mark.setImageResource(R.drawable.rift_art);
-        mark.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        mark.setBackground(RiftStyle.shape(this, RiftStyle.NAVY,
-                17, 0, Color.TRANSPARENT));
-        mark.setClipToOutline(true);
-        mark.setContentDescription(getString(R.string.app_name));
-        RiftStyle.raise(mark, 3);
-        masthead.addView(mark, new LinearLayout.LayoutParams(dp(52), dp(52)));
-        LinearLayout brand = column();
-        brand.setPadding(dp(12), 0, 0, 0);
-        brand.addView(text(getString(R.string.app_name), 28, INK, Typeface.BOLD));
-        brand.addView(text(getString(R.string.rift_eyebrow), 12, MUTED, Typeface.NORMAL));
-        masthead.addView(brand, new LinearLayout.LayoutParams(0,
-                ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
+        LinearLayout header = row();
+        LinearLayout titles = column();
+        titles.addView(text(getString(R.string.app_name), 29, INK, Typeface.BOLD));
+        titles.addView(text(getString(R.string.dashboard_caption), 14, MUTED, Typeface.NORMAL));
+        header.addView(titles, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
         Button settings = compactButton("⚙");
-        settings.setContentDescription(getString(R.string.settings));
         settings.setOnClickListener(v -> showSettings());
-        masthead.addView(settings, new LinearLayout.LayoutParams(dp(50), dp(50)));
-        root.addView(masthead);
-        root.addView(space(22));
+        header.addView(settings, new LinearLayout.LayoutParams(dp(52), dp(44)));
+        root.addView(header);
 
-        LinearLayout hero = column();
-        hero.setPadding(dp(22), dp(22), dp(22), dp(22));
-        hero.setBackground(RiftStyle.cosmic(this, 26));
-        RiftStyle.raise(hero, 8);
-
-        TextView label = text(getString(R.string.rift_hero_kicker), 12,
-                RiftStyle.CYAN, Typeface.BOLD);
-        label.setLetterSpacing(.14f);
-        hero.addView(label);
-        hero.addView(space(14));
-        TextView title = text(getString(R.string.rift_hero_title), 30,
-                Color.WHITE, Typeface.BOLD);
-        title.setLineSpacing(dp(3), 1f);
-        hero.addView(title);
-        hero.addView(space(8));
-        TextView detail = text(getString(R.string.rift_hero_subtitle), 15,
-                Color.rgb(214, 224, 255), Typeface.NORMAL);
-        detail.setLineSpacing(dp(3), 1f);
-        hero.addView(detail);
-        hero.addView(space(22));
-
-        Button start = primaryButton(getString(R.string.learn_now) + "  →");
-        start.setBackground(RiftStyle.shape(this, Color.WHITE, 17, 0, Color.TRANSPARENT));
-        start.setTextColor(RiftStyle.NAVY);
-        start.setMinHeight(dp(60));
-        start.setOnClickListener(v -> showLearnHub());
-        hero.addView(start, matchWrap());
-        root.addView(hero, matchWrap());
-
-        root.addView(space(20));
+        root.addView(space(16));
         root.addView(progressCard());
-        root.addView(space(23));
+        root.addView(space(16));
 
-        root.addView(sectionHeading(getString(R.string.rift_explore), getString(R.string.rift_explore_caption)));
-        root.addView(space(12));
-        root.addView(featureCard("◇", getString(R.string.skill_map),
-                getString(R.string.rift_atlas_caption), RiftStyle.BLUE, () -> showProgress()));
-        root.addView(space(10));
-        root.addView(featureCard("✦", getString(R.string.my_world),
-                getString(R.string.rift_world_caption), RiftStyle.VIOLET, () -> showMyWorld()));
-        root.addView(space(10));
-        root.addView(featureCard("◈", getString(R.string.shop),
-                getString(R.string.rift_shop_caption), RiftStyle.GOOD, () -> showShop()));
+        Button learn = primaryButton(getString(R.string.learn_now));
+        learn.setTextSize(22);
+        learn.setMinHeight(dp(72));
+        learn.setOnClickListener(v -> showLearnHub());
+        root.addView(learn, matchWrap());
+
+        List<String> homeFocus = QuestionBank.recommendedKnowledge(progress, 1);
+        TextView focus = text(homeFocus.isEmpty() ? getString(R.string.training_mode) : getString(R.string.focus_compact,
+                QuestionBank.knowledgeLabel(homeFocus.get(0), Locale.getDefault())),
+                13, MUTED, Typeface.NORMAL);
+        focus.setGravity(Gravity.CENTER);
+        focus.setPadding(0, dp(8), 0, dp(14));
+        root.addView(focus);
+
+        Button world = secondaryButton(getString(R.string.my_world) + " · " + modeName(metaGame.preferredMode()));
+        world.setMinHeight(dp(58));
+        world.setOnClickListener(v -> showMyWorld());
+        root.addView(world, matchWrap());
+
+        Button shopButton = secondaryButton(getString(R.string.shop));
+        shopButton.setOnClickListener(v -> showShop());
+        LinearLayout.LayoutParams shopLp=matchWrap(); shopLp.topMargin=dp(8); root.addView(shopButton,shopLp);
+
         setScrollable(root);
     }
 
@@ -294,97 +264,36 @@ public class MainActivity extends Activity {
 
     private void showCourseStorefront() {
         audio.stop();
-        LinearLayout root = column();
-        root.setPadding(dp(20), dp(18), dp(20), dp(34));
-        Button back = compactButton("←");
-        back.setContentDescription(getString(R.string.home));
-        back.setOnClickListener(v -> showHome());
-        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
-        root.addView(space(24));
+        LinearLayout root=column(); root.setPadding(dp(20),dp(18),dp(20),dp(30));
+        Button back=compactButton("←"); back.setOnClickListener(v->showHome()); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
+        root.addView(space(12)); root.addView(text(getString(R.string.choose_subject),28,INK,Typeface.BOLD));
+        root.addView(text(getString(R.string.choose_subject_caption),14,MUTED,Typeface.NORMAL)); root.addView(space(14));
 
-        TextView eyebrow = text(getString(R.string.rift_course_kicker), 12, PRIMARY, Typeface.BOLD);
-        eyebrow.setLetterSpacing(.14f);
-        root.addView(eyebrow);
-        root.addView(space(6));
-        root.addView(text(getString(R.string.choose_subject), 30, INK, Typeface.BOLD));
-        TextView caption = text(getString(R.string.choose_subject_caption), 15, MUTED, Typeface.NORMAL);
-        caption.setPadding(0, dp(7), 0, 0);
-        root.addView(caption);
-        root.addView(space(22));
-
-        ContentCatalog catalog = new ContentCatalog(this);
-        EntitlementStore entitlements = new EntitlementStore(this);
-        EntitlementProductCatalog products = new EntitlementProductCatalog(this);
-        List<String> subjects = catalog.subjects();
-        for (int i = 0; i < subjects.size(); i += 2) {
-            LinearLayout line = row();
-            for (int j = i; j < Math.min(i + 2, subjects.size()); j++) {
-                String subject = subjects.get(j);
-                boolean unlocked = subjectUnlocked(subject, catalog, entitlements);
-                int index = j;
-                View tile = subjectCard(subject, unlocked, () -> {
-                    if (unlocked) showGradePicker(subject);
-                    else showSubscriptionOffer(subject, products);
-                });
-                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                        0, dp(168), 1f);
-                if (index % 2 == 1) lp.leftMargin = dp(10);
-                line.addView(tile, lp);
+        ContentCatalog catalog=new ContentCatalog(this);
+        EntitlementStore entitlements=new EntitlementStore(this);
+        EntitlementProductCatalog products=new EntitlementProductCatalog(this);
+        List<String> subjects=catalog.subjects();
+        for(int i=0;i<subjects.size();i+=2){
+            LinearLayout line=row();
+            for(int j=i;j<Math.min(i+2,subjects.size());j++){
+                final String subject=subjects.get(j);
+                boolean unlocked=subjectUnlocked(subject,catalog,entitlements);
+                String icon="english".equals(subject)?"Aa":
+                        ("mathematics".equals(subject)?"∑":
+                        ("biology".equals(subject)?"🧬":
+                        ("geography".equals(subject)?"◎":
+                        ("history".equals(subject)?"⌛":
+                        ("social_science".equals(subject)?"§":
+                        ("ecology".equals(subject)?"♻":"</>"))))));
+                Button tile=secondaryButton(icon+"\n"+subjectLabel(subject)+(unlocked?"":"\n🔒"));
+                tile.setTextSize(17); tile.setMinHeight(dp(100));
+                tile.setOnClickListener(v->{ if(unlocked) showGradePicker(subject); else showSubscriptionOffer(subject,products); });
+                LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(108),1f); if(j%2==1) lp.leftMargin=dp(8); line.addView(tile,lp);
             }
-            if (line.getChildCount() == 1) line.addView(new View(this),
-                    new LinearLayout.LayoutParams(0, dp(168), 1f));
-            LinearLayout.LayoutParams lp = matchWrap();
-            lp.bottomMargin = dp(10);
-            root.addView(line, lp);
+            if(line.getChildCount()==1) line.addView(space(1),new LinearLayout.LayoutParams(0,dp(108),1f));
+            LinearLayout.LayoutParams rlp=matchWrap(); rlp.bottomMargin=dp(8); root.addView(line,rlp);
         }
         setScrollable(root);
-    }
-
-    private String subjectGlyph(String subject) {
-        if ("english".equals(subject)) return "Aa";
-        if ("mathematics".equals(subject)) return "∑";
-        if ("informatics".equals(subject)) return "</>";
-        if ("biology".equals(subject)) return "DNA";
-        if ("geography".equals(subject)) return "◎";
-        if ("history".equals(subject)) return "⌛";
-        if ("ecology".equals(subject)) return "♧";
-        if ("social_science".equals(subject)) return "§";
-        return "✦";
-    }
-
-    private int subjectTint(String subject) {
-        if ("english".equals(subject)) return RiftStyle.BLUE;
-        if ("mathematics".equals(subject)) return RiftStyle.VIOLET;
-        if ("biology".equals(subject) || "ecology".equals(subject)) return RiftStyle.GOOD;
-        if ("geography".equals(subject)) return Color.rgb(13, 146, 195);
-        if ("history".equals(subject)) return Color.rgb(198, 121, 49);
-        return Color.rgb(90, 93, 172);
-    }
-
-    private View subjectCard(String subject, boolean unlocked, Runnable onClick) {
-        int tint = subjectTint(subject);
-        LinearLayout tile = column();
-        tile.setPadding(dp(16), dp(16), dp(12), dp(13));
-        tile.setBackground(RiftStyle.shape(this, Color.WHITE, 21, 1, SOFT));
-        RiftStyle.raise(tile, 2);
-        TextView glyph = text(subjectGlyph(subject),
-                subjectGlyph(subject).length() > 2 ? 16 : 27, tint, Typeface.BOLD);
-        glyph.setGravity(Gravity.CENTER);
-        glyph.setBackground(RiftStyle.shape(this,
-                tint == RiftStyle.GOOD ? Color.rgb(233, 249, 239)
-                        : Color.rgb(238, 239, 255), 16, 0, Color.TRANSPARENT));
-        tile.addView(glyph, new LinearLayout.LayoutParams(dp(51), dp(51)));
-        tile.addView(space(15));
-        TextView name = text(subjectLabel(subject), 15, INK, Typeface.BOLD);
-        name.setMaxLines(2);
-        name.setEllipsize(android.text.TextUtils.TruncateAt.END);
-        tile.addView(name);
-        tile.addView(space(5));
-        tile.addView(text(getString(unlocked ? R.string.rift_open : R.string.rift_locked),
-                12, unlocked ? tint : MUTED, Typeface.BOLD));
-        tile.setAlpha(unlocked ? 1f : .78f);
-        tile.setOnClickListener(v -> onClick.run());
-        return tile;
     }
 
     private boolean subjectUnlocked(String subject,ContentCatalog catalog,EntitlementStore entitlements){
@@ -412,76 +321,36 @@ public class MainActivity extends Activity {
                 .setNegativeButton(getString(R.string.dictionary_close),null).show();
     }
 
-    private void showGradePicker(String subject) {
-        ContentCatalog catalog = new ContentCatalog(this);
-        List<Integer> grades = catalog.grades(subject);
-        LinearLayout root = column();
-        root.setPadding(dp(20), dp(18), dp(20), dp(36));
-        Button back = compactButton("←");
-        back.setOnClickListener(v -> showCourseStorefront());
-        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
-        root.addView(space(24));
-        TextView eyebrow = text(getString(R.string.rift_course_kicker),
-                12, PRIMARY, Typeface.BOLD);
-        eyebrow.setLetterSpacing(.14f);
-        root.addView(eyebrow);
-        root.addView(space(6));
-        root.addView(text(getString(R.string.choose_grade), 30, INK, Typeface.BOLD));
-        root.addView(space(8));
-        root.addView(text(subjectLabel(subject), 15, MUTED, Typeface.NORMAL));
-        root.addView(space(23));
-        LinearLayout line = null;
-        for (int i = 0; i < grades.size(); i++) {
-            if (i % 3 == 0) {
-                line = row();
-                LinearLayout.LayoutParams lp = matchWrap();
-                lp.bottomMargin = dp(10);
-                root.addView(line, lp);
-            }
-            final int grade = grades.get(i);
-            Button b = secondaryButton(String.valueOf(grade));
-            b.setTextSize(24);
-            b.setTextColor(PRIMARY);
-            b.setBackground(RiftStyle.shape(this, Color.WHITE, 20, 1, SOFT));
-            b.setOnClickListener(v -> showCompetitionPicker(subject, grade));
-            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, dp(84), 1f);
-            if (i % 3 > 0) lp.leftMargin = dp(10);
-            line.addView(b, lp);
+    private void showGradePicker(String subject){
+        ContentCatalog catalog=new ContentCatalog(this);
+        List<Integer> grades=catalog.grades(subject);
+        LinearLayout root=column(); root.setPadding(dp(20),dp(18),dp(20),dp(30));
+        Button back=compactButton("←"); back.setOnClickListener(v->showCourseStorefront()); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
+        root.addView(space(12)); root.addView(text(getString(R.string.choose_grade),28,INK,Typeface.BOLD));
+        root.addView(text(subjectLabel(subject),14,MUTED,Typeface.NORMAL)); root.addView(space(14));
+        LinearLayout line=null;
+        for(int i=0;i<grades.size();i++){
+            if(i%3==0){line=row(); root.addView(line,matchWrap());}
+            final int grade=grades.get(i);
+            Button b=secondaryButton(String.valueOf(grade)); b.setTextSize(20); b.setOnClickListener(v->showCompetitionPicker(subject,grade));
+            LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(66),1f); if(i%3>0)lp.leftMargin=dp(8); line.addView(b,lp);
         }
         setScrollable(root);
     }
 
-    private void showCompetitionPicker(String subject, int grade) {
-        ContentCatalog catalog = new ContentCatalog(this);
-        List<ContentCatalog.Course> courses = catalog.applicable(subject, grade);
-        LinearLayout root = column();
-        root.setPadding(dp(20), dp(18), dp(20), dp(36));
-        Button back = compactButton("←");
-        back.setOnClickListener(v -> showGradePicker(subject));
-        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
-        root.addView(space(24));
-        TextView eyebrow = text(getString(R.string.rift_training_kicker),
-                12, PRIMARY, Typeface.BOLD);
-        eyebrow.setLetterSpacing(.14f);
-        root.addView(eyebrow);
-        root.addView(space(6));
-        root.addView(text(getString(R.string.choose_goal), 30, INK, Typeface.BOLD));
-        root.addView(space(8));
-        root.addView(text(subjectLabel(subject) + " · " +
-                getString(R.string.grade_fmt, grade), 15, MUTED, Typeface.NORMAL));
-        root.addView(space(23));
-
-        Button all = primaryButton(getString(R.string.all_olympiads) + "  →");
-        all.setOnClickListener(v -> selectFirstApplicable(courses, grade));
-        root.addView(all, matchWrap());
-        root.addView(space(14));
-        for (ContentCatalog.Course c : courses) {
-            View tile = featureCard("◇", competitionLabel(c.competition),
-                    getString(R.string.rift_atlas_caption), RiftStyle.BLUE,
-                    () -> selectCourse(c.packId, grade, c.competition));
-            LinearLayout.LayoutParams lp = matchWrap();
-            lp.bottomMargin = dp(10);
-            root.addView(tile, lp);
+    private void showCompetitionPicker(String subject,int grade){
+        ContentCatalog catalog=new ContentCatalog(this);
+        List<ContentCatalog.Course> courses=catalog.applicable(subject,grade);
+        LinearLayout root=column(); root.setPadding(dp(20),dp(18),dp(20),dp(30));
+        Button back=compactButton("←"); back.setOnClickListener(v->showGradePicker(subject)); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
+        root.addView(space(12)); root.addView(text(getString(R.string.choose_goal),28,INK,Typeface.BOLD));
+        root.addView(text(subjectLabel(subject)+" · "+getString(R.string.grade_fmt,grade),14,MUTED,Typeface.NORMAL)); root.addView(space(14));
+        Button all=primaryButton(getString(R.string.all_olympiads)); all.setOnClickListener(v->selectFirstApplicable(courses,grade)); root.addView(all,matchWrap());
+        root.addView(space(10));
+        for(ContentCatalog.Course c:courses){
+            Button b=secondaryButton(competitionLabel(c.competition));
+            b.setOnClickListener(v->selectCourse(c.packId,grade,c.competition));
+            LinearLayout.LayoutParams lp=matchWrap(); lp.bottomMargin=dp(8); root.addView(b,lp);
         }
         setScrollable(root);
     }
@@ -505,126 +374,56 @@ public class MainActivity extends Activity {
         showTrainingHub();
     }
 
-    private void showTrainingHub() {
-        LinearLayout root = column();
-        root.setPadding(dp(20), dp(18), dp(20), dp(36));
-        Button back = compactButton("←");
-        back.setOnClickListener(v -> showHome());
-        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
-        root.addView(space(22));
-
-        TextView kicker = text(getString(R.string.rift_training_kicker),
-                12, PRIMARY, Typeface.BOLD);
-        kicker.setLetterSpacing(.14f);
-        root.addView(kicker);
-        root.addView(space(6));
-        root.addView(text(getString(R.string.learn_title), 30, INK, Typeface.BOLD));
-        root.addView(space(18));
-        String target = learningContext.target();
-        String targetLabel = LearningContextStore.ALL_OLYMPIADS.equals(target)
-                ? getString(R.string.all_olympiads) : competitionLabel(target);
-
-        LinearLayout hero = column();
-        hero.setPadding(dp(20), dp(21), dp(20), dp(21));
-        hero.setBackground(RiftStyle.cosmic(this, 23));
-        RiftStyle.raise(hero, 5);
-        TextView label = text(subjectLabel(QuestionBank.currentPack().subject), 24,
-                Color.WHITE, Typeface.BOLD);
-        hero.addView(label);
-        hero.addView(space(5));
-        hero.addView(text(getString(R.string.grade_fmt, learningContext.grade())
-                        + " · " + targetLabel, 14, Color.rgb(212, 224, 255), Typeface.NORMAL));
-        hero.addView(space(19));
-        Button auto = primaryButton(getString(R.string.auto_training) + "  →");
-        auto.setBackground(RiftStyle.shape(this, Color.WHITE, 17, 0, Color.TRANSPARENT));
-        auto.setTextColor(RiftStyle.NAVY);
-        auto.setOnClickListener(v -> startSession(getString(R.string.quick_training), quickSession()));
-        hero.addView(auto, matchWrap());
-        root.addView(hero, matchWrap());
-
-        root.addView(space(10));
-        Button change = secondaryButton(getString(R.string.change_course) + "  ↗");
-        change.setOnClickListener(v -> showCourseStorefront());
-        root.addView(change, matchWrap());
-        root.addView(space(24));
-
-        root.addView(sectionHeading(getString(R.string.choose_topic),
-                getString(R.string.rift_explore_caption)));
-        root.addView(space(13));
-        if ("english".equals(QuestionBank.currentPack().subject))
-            addTopicGrid(root, new String[]{"A+", "⌕", "♫", "✦"},
-                    new int[]{R.string.grammar_title, R.string.reading_title,
-                            R.string.listening_title, R.string.story_title},
-                    new Question.Type[]{Question.Type.GRAMMAR, Question.Type.READING,
-                            Question.Type.LISTENING, Question.Type.STORY});
+    private void showTrainingHub(){
+        LinearLayout root=column(); root.setPadding(dp(20),dp(18),dp(20),dp(30));
+        Button back=compactButton("←"); back.setOnClickListener(v->showHome()); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
+        root.addView(space(12)); root.addView(text(getString(R.string.learn_title),28,INK,Typeface.BOLD));
+        String target=learningContext.target();
+        String targetLabel=LearningContextStore.ALL_OLYMPIADS.equals(target)?getString(R.string.all_olympiads):competitionLabel(target);
+        Button context=secondaryButton(subjectLabel(QuestionBank.currentPack().subject)+" · "+getString(R.string.grade_fmt,learningContext.grade())+" · "+targetLabel+" ▾");
+        context.setContentDescription(getString(R.string.change_course));
+        context.setOnClickListener(v->showCourseStorefront()); root.addView(context,matchWrap()); root.addView(space(14));
+        Button auto=primaryButton(getString(R.string.auto_training)); auto.setOnClickListener(v->startSession(getString(R.string.quick_training),quickSession())); root.addView(auto,matchWrap());
+        root.addView(space(14)); root.addView(text(getString(R.string.choose_topic),18,INK,Typeface.BOLD)); root.addView(space(10));
+        if("english".equals(QuestionBank.currentPack().subject)) addTopicGrid(root,new String[]{"A+","⌕","▶","✦"},new int[]{R.string.grammar_title,R.string.reading_title,R.string.listening_title,R.string.story_title},new Question.Type[]{Question.Type.GRAMMAR,Question.Type.READING,Question.Type.LISTENING,Question.Type.STORY});
         else addKnowledgeTopicGrid(root);
-
-        root.addView(space(14));
-        root.addView(featureCard("◇", getString(R.string.skill_map),
-                getString(R.string.rift_atlas_caption), RiftStyle.BLUE, () -> showProgress()));
+        root.addView(space(10)); Button atlas=secondaryButton(getString(R.string.skill_map)); atlas.setOnClickListener(v->showProgress()); root.addView(atlas,matchWrap());
         setScrollable(root);
     }
 
-    private View topicCard(String glyph, String title, int color, Runnable action) {
-        LinearLayout tile = column();
-        tile.setPadding(dp(15), dp(15), dp(14), dp(12));
-        tile.setBackground(RiftStyle.shape(this, Color.WHITE, 19, 1, SOFT));
-        TextView badge = text(glyph, 24, color, Typeface.BOLD);
-        badge.setGravity(Gravity.CENTER);
-        badge.setBackground(RiftStyle.shape(this, Color.rgb(239, 240, 255),
-                14, 0, Color.TRANSPARENT));
-        tile.addView(badge, new LinearLayout.LayoutParams(dp(48), dp(48)));
-        tile.addView(space(10));
-        TextView heading = text(title, 15, INK, Typeface.BOLD);
-        heading.setMaxLines(2);
-        heading.setEllipsize(android.text.TextUtils.TruncateAt.END);
-        tile.addView(heading);
-        tile.setClickable(true);
-        tile.setOnClickListener(v -> action.run());
-        return tile;
-    }
-
-    private void addTopicGrid(LinearLayout root, String[] icons, int[] labels, Question.Type[] types) {
-        for (int row = 0; row < 2; row++) {
-            LinearLayout line = row();
-            for (int col = 0; col < 2; col++) {
-                int n = row * 2 + col;
-                final Question.Type type = types[n];
-                int title = labels[n];
-                View tile = topicCard(icons[n], getString(title),
-                        n % 2 == 0 ? RiftStyle.BLUE : RiftStyle.VIOLET,
-                        () -> startTopic(type, getString(title)));
-                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                        0, dp(140), 1f);
-                if (col == 1) lp.leftMargin = dp(10);
-                line.addView(tile, lp);
+    private void addTopicGrid(LinearLayout root,String[] icons,int[] labels,Question.Type[] types) {
+        for(int row=0;row<2;row++) {
+            LinearLayout line=row();
+            for(int col=0;col<2;col++) {
+                int n=row*2+col;
+                Button tile=secondaryButton(icons[n]+"\n"+getString(labels[n]));
+                tile.setTextSize(17); tile.setMinHeight(dp(86));
+                final Question.Type type=types[n];
+                tile.setOnClickListener(v->startTopic(type,getString(labels[n])));
+                LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(92),1f);
+                if(col==1) lp.leftMargin=dp(8);
+                line.addView(tile,lp);
             }
-            LinearLayout.LayoutParams lp = matchWrap();
-            lp.bottomMargin = dp(10);
-            root.addView(line, lp);
+            LinearLayout.LayoutParams rlp=matchWrap(); rlp.bottomMargin=dp(8); root.addView(line,rlp);
         }
     }
 
     private void addKnowledgeTopicGrid(LinearLayout root) {
-        List<String> ids = QuestionBank.knowledgeIds();
-        int count = Math.min(8, ids.size());
-        for (int start = 0; start < count; start += 2) {
-            LinearLayout line = row();
-            for (int i = start; i < Math.min(start + 2, count); i++) {
-                final String id = ids.get(i);
-                View tile = topicCard("◇",
-                        QuestionBank.knowledgeLabel(id, Locale.getDefault()),
-                        i % 2 == 0 ? RiftStyle.BLUE : RiftStyle.VIOLET,
-                        () -> startKnowledgeTopic(id));
-                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, dp(140), 1f);
-                if (i % 2 == 1) lp.leftMargin = dp(10);
-                line.addView(tile, lp);
+        List<String> ids=QuestionBank.knowledgeIds();
+        int count=Math.min(8,ids.size());
+        for(int start=0;start<count;start+=2) {
+            LinearLayout line=row();
+            for(int n=start;n<Math.min(start+2,count);n++) {
+                final String id=ids.get(n);
+                Button tile=secondaryButton("◆\n"+QuestionBank.knowledgeLabel(id,Locale.getDefault()));
+                tile.setTextSize(15); tile.setMinHeight(dp(86));
+                tile.setOnClickListener(v->startKnowledgeTopic(id));
+                LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(92),1f);
+                if(n%2==1) lp.leftMargin=dp(8);
+                line.addView(tile,lp);
             }
-            if (line.getChildCount() == 1) line.addView(new View(this),
-                    new LinearLayout.LayoutParams(0, dp(140), 1f));
-            LinearLayout.LayoutParams lp = matchWrap();
-            lp.bottomMargin = dp(10);
-            root.addView(line, lp);
+            if(line.getChildCount()==1) line.addView(space(1),new LinearLayout.LayoutParams(0,dp(92),1f));
+            LinearLayout.LayoutParams rlp=matchWrap(); rlp.bottomMargin=dp(8); root.addView(line,rlp);
         }
     }
 
@@ -671,137 +470,71 @@ public class MainActivity extends Activity {
 
     private void showMyWorld() {
         homeVisible = false;
-        LinearLayout root = column();
-        root.setPadding(dp(20), dp(18), dp(20), dp(36));
-        Button back = compactButton("←");
-        back.setOnClickListener(v -> showHome());
-        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
-        root.addView(space(23));
-
-        TextView kicker = text(getString(R.string.rift_world_kicker),
-                12, PRIMARY, Typeface.BOLD);
-        kicker.setLetterSpacing(.14f);
-        root.addView(kicker);
-        root.addView(space(7));
-        root.addView(text(getString(R.string.my_world), 30, INK, Typeface.BOLD));
-        root.addView(space(7));
-        root.addView(text(getString(R.string.my_world_caption), 15, MUTED, Typeface.NORMAL));
-        root.addView(space(18));
-
-        LinearLayout stage = column();
-        stage.setPadding(dp(20), dp(22), dp(20), dp(23));
-        stage.setBackground(RiftStyle.cosmic(this, 24));
-        RiftStyle.raise(stage, 5);
-        TextView stageTitle = text("✦", 45, RiftStyle.CYAN, Typeface.BOLD);
-        stage.addView(stageTitle);
-        stage.addView(space(10));
-        stage.addView(text(modeName(metaGame.preferredMode()), 25, Color.WHITE, Typeface.BOLD));
-        stage.addView(space(8));
-        stage.addView(text(getString(R.string.shop_balance_fmt, economy.balance()),
-                15, Color.rgb(212, 225, 255), Typeface.BOLD));
-        root.addView(stage, matchWrap());
-        root.addView(space(22));
-        root.addView(text(getString(R.string.rift_explore), 21, INK, Typeface.BOLD));
-        root.addView(space(12));
-
-        String mode = metaGame.preferredMode();
-        if (MetaGameStore.DEFENSE.equals(mode)) {
-            addWorldItems(root, mode, new String[]{"barrier", "sensor", "defense_module"},
-                    new int[]{25, 60, 140});
-            root.addView(text(getString(R.string.game_prototype_notice),
-                    13, MUTED, Typeface.NORMAL));
-        } else if (MetaGameStore.HERO.equals(mode))
-            addWorldItems(root, mode, new String[]{"outfit", "gear", "ability"},
-                    new int[]{20, 55, 130});
-        else addWorldItems(root, mode, new String[]{"collar", "toy", "room"},
-                    new int[]{20, 45, 120});
+        LinearLayout root=column(); root.setPadding(dp(20),dp(20),dp(20),dp(30));
+        Button back=compactButton("←"); back.setOnClickListener(v->showHome()); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
+        root.addView(space(12)); root.addView(text(getString(R.string.my_world),28,INK,Typeface.BOLD));
+        root.addView(text(getString(R.string.my_world_caption),14,MUTED,Typeface.NORMAL));
+        root.addView(text(getString(R.string.shop_balance_fmt,economy.balance()),18,PRIMARY,Typeface.BOLD));
+        root.addView(space(14));
+        String mode=metaGame.preferredMode();
+        if(MetaGameStore.DEFENSE.equals(mode)) {
+            addWorldItems(root,mode,new String[]{"barrier","sensor","defense_module"},new int[]{25,60,140});
+            root.addView(text(getString(R.string.game_prototype_notice),13,MUTED,Typeface.NORMAL));
+        } else if(MetaGameStore.HERO.equals(mode)) addWorldItems(root,mode,new String[]{"outfit","gear","ability"},new int[]{20,55,130});
+        else addWorldItems(root,mode,new String[]{"collar","toy","room"},new int[]{20,45,120});
         setScrollable(root);
     }
 
-    private void addWorldItems(LinearLayout root, String mode, String[] ids, int[] prices) {
-        for (int i = 0; i < ids.length; i++) {
-            final String id = ids[i];
-            final int price = prices[i];
-            LinearLayout card = column();
-            card.setPadding(dp(16), dp(16), dp(16), dp(16));
-            card.setBackground(RiftStyle.shape(this, Color.WHITE, 20, 1, SOFT));
-            RiftStyle.raise(card, 2);
-            LinearLayout heading = row();
-            TextView badge = text(i == 0 ? "◇" : i == 1 ? "✦" : "◈",
-                    26, i == 1 ? RiftStyle.VIOLET : RiftStyle.BLUE, Typeface.BOLD);
-            badge.setGravity(Gravity.CENTER);
-            badge.setBackground(RiftStyle.shape(this, Color.rgb(237, 240, 255),
-                    16, 0, Color.TRANSPARENT));
-            heading.addView(badge, new LinearLayout.LayoutParams(dp(52), dp(52)));
-            LinearLayout info = column();
-            info.setPadding(dp(13), 0, 0, 0);
-            info.addView(text(getString(getResources().getIdentifier(
-                    "meta_" + id, "string", getPackageName())), 18, INK, Typeface.BOLD));
-            info.addView(space(5));
-            info.addView(text(getString(R.string.meta_level,
-                    metaGame.level(mode, id)), 13, MUTED, Typeface.NORMAL));
-            heading.addView(info);
-            card.addView(heading);
-            card.addView(space(14));
-            Button buy = secondaryButton(getString(R.string.meta_upgrade, price));
-            buy.setOnClickListener(v -> {
-                if (metaGame.buyLevel(mode, id, price)) showMyWorld();
-                else new AlertDialog.Builder(this)
-                        .setMessage(getString(R.string.shop_not_enough))
-                        .setPositiveButton(getString(R.string.got_it), null).show();
-            });
-            card.addView(buy, matchWrap());
-            LinearLayout.LayoutParams lp = matchWrap();
-            lp.bottomMargin = dp(11);
-            root.addView(card, lp);
+    private void addWorldItems(LinearLayout root,String mode,String[] ids,int[] prices) {
+        for(int i=0;i<ids.length;i++){
+            final String id=ids[i]; final int price=prices[i];
+            LinearLayout card=column(); card.setPadding(dp(16),dp(14),dp(16),dp(14)); card.setBackground(roundRect(CARD,14,1,SOFT));
+            card.addView(text(getString(getResources().getIdentifier("meta_"+id,"string",getPackageName())),18,INK,Typeface.BOLD));
+            card.addView(text(getString(R.string.meta_level,metaGame.level(mode,id)),13,MUTED,Typeface.NORMAL));
+            Button buy=secondaryButton(getString(R.string.meta_upgrade,price));
+            buy.setOnClickListener(v->{ if(metaGame.buyLevel(mode,id,price)) showMyWorld(); else new AlertDialog.Builder(this).setMessage(getString(R.string.shop_not_enough)).setPositiveButton(getString(R.string.got_it),null).show();});
+            card.addView(buy,matchWrap()); LinearLayout.LayoutParams lp=matchWrap(); lp.bottomMargin=dp(9); root.addView(card,lp);
         }
     }
 
     private View progressCard() {
         LinearLayout card = column();
-        card.setPadding(dp(18), dp(17), dp(18), dp(18));
-        card.setBackground(RiftStyle.shape(this, Color.WHITE, 21, 1, SOFT));
-        RiftStyle.raise(card, 2);
+        card.setPadding(dp(18), dp(16), dp(18), dp(16));
+        int frameStroke = shop == null ? Color.TRANSPARENT : shop.frameStrokeColor(Color.TRANSPARENT);
+        card.setBackground(roundRect(CARD, 18, frameStroke == Color.TRANSPARENT ? 0 : 2, frameStroke));
 
         LinearLayout top = row();
-        LinearLayout main = column();
-        TextView heading = text(getString(R.string.rift_your_progress), 12, MUTED, Typeface.BOLD);
-        heading.setLetterSpacing(.08f);
-        main.addView(heading);
-        main.addView(space(6));
-        main.addView(text(getString(R.string.level_fmt, progress.level()), 24, INK, Typeface.BOLD));
-        top.addView(main, new LinearLayout.LayoutParams(0,
-                ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
-        top.addView(RiftStyle.pill(this, progress.xpInLevel() + " / 350 XP",
-                PRIMARY, Color.rgb(235, 234, 255)));
+        TextView level = text(getString(R.string.level_fmt, progress.level()), 18, INK, Typeface.BOLD);
+        TextView resources = text(progress.xp() + " XP   ·   "
+                        + getString(R.string.crystals_fmt, economy.balance()) + "   ·   "
+                        + getString(R.string.play_credits_fmt, playCredits.balance()),
+                16, PRIMARY, Typeface.BOLD);
+        top.addView(level, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
+        top.addView(resources);
         card.addView(top);
 
         ProgressBar bar = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
         bar.setMax(350);
         bar.setProgress(progress.xpInLevel());
-        bar.setProgressTintList(android.content.res.ColorStateList.valueOf(PRIMARY));
-        bar.setProgressBackgroundTintList(android.content.res.ColorStateList.valueOf(SOFT));
-        LinearLayout.LayoutParams bp = new LinearLayout.LayoutParams(
+        LinearLayout.LayoutParams barLp = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, dp(8));
-        bp.topMargin = dp(15);
-        card.addView(bar, bp);
-        card.addView(space(15));
+        barLp.topMargin = dp(10);
+        card.addView(bar, barLp);
 
-        LinearLayout chips = row();
-        TextView crystals = RiftStyle.pill(this,
-                "◇  " + getString(R.string.crystals_fmt, economy.balance()),
-                RiftStyle.BLUE, Color.rgb(239, 241, 255));
-        crystals.setSingleLine(true);
-        crystals.setEllipsize(android.text.TextUtils.TruncateAt.END);
-        chips.addView(crystals, new LinearLayout.LayoutParams(0, dp(39), 1f));
-        chips.addView(spaceHorizontal(8));
-        TextView credits = RiftStyle.pill(this,
-                "✦  " + getString(R.string.play_credits_fmt, playCredits.balance()),
-                RiftStyle.VIOLET, Color.rgb(246, 239, 255));
-        credits.setSingleLine(true);
-        credits.setEllipsize(android.text.TextUtils.TruncateAt.END);
-        chips.addView(credits, new LinearLayout.LayoutParams(0, dp(39), 1f));
-        card.addView(chips);
+        TextView stats = text(getString(R.string.combo_stats_fmt, progress.combo(),
+                progress.bestCombo(), progress.answered()), 13, MUTED, Typeface.NORMAL);
+        LinearLayout.LayoutParams statsLp = matchWrap();
+        statsLp.topMargin = dp(10);
+        card.addView(stats, statsLp);
+
+        String equippedTitle = shop == null ? "" : shop.customTitle(Locale.getDefault());
+        String rankValue = equippedTitle.isEmpty() ? rankForCombo(progress.bestCombo()) : equippedTitle;
+        TextView rank = text(getString(R.string.rank_fmt, rankValue),
+                13, PRIMARY, Typeface.BOLD);
+        LinearLayout.LayoutParams rankLp = matchWrap();
+        rankLp.topMargin = dp(6);
+        card.addView(rank, rankLp);
+
         return card;
     }
 
@@ -919,8 +652,6 @@ public class MainActivity extends Activity {
         ProgressBar bar = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
         bar.setMax(session.size());
         bar.setProgress(questionIndex);
-        bar.setProgressTintList(android.content.res.ColorStateList.valueOf(PRIMARY));
-        bar.setProgressBackgroundTintList(android.content.res.ColorStateList.valueOf(SOFT));
         LinearLayout.LayoutParams pblp = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, dp(6));
         pblp.topMargin = dp(6);
@@ -930,15 +661,14 @@ public class MainActivity extends Activity {
 
         TextView chip = text(skillName(q.skill), 13, PRIMARY, Typeface.BOLD);
         chip.setPadding(dp(10), dp(6), dp(10), dp(6));
-        chip.setBackground(RiftStyle.shape(this, Color.rgb(235, 235, 255),
-                20, 0, Color.TRANSPARENT));
+        chip.setBackground(roundRect(Color.rgb(232, 237, 255), 20, 0, Color.TRANSPARENT));
         root.addView(chip, new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
         root.addView(space(12));
 
         TextView prompt = text(q.prompt, 24, INK, Typeface.BOLD);
-        prompt.setLineSpacing(dp(3), 1.12f);
+        prompt.setLineSpacing(0, 1.08f);
         enableDictionaryLinks(prompt, q.prompt);
         root.addView(prompt);
 
@@ -1296,9 +1026,9 @@ public class MainActivity extends Activity {
 
         LinearLayout feedback = column();
         feedback.setPadding(dp(16), dp(14), dp(16), dp(14));
-        feedback.setBackground(RiftStyle.shape(this,
-                correct ? Color.rgb(232, 249, 241) : Color.rgb(239, 242, 252),
-                19, 1, correct ? Color.rgb(193, 235, 213) : SOFT));
+        feedback.setBackground(roundRect(
+                correct ? Color.rgb(232, 248, 240) : Color.rgb(246, 247, 251),
+                14, 0, Color.TRANSPARENT));
 
         TextView verdict = text(reaction.symbol + "  " + reaction.headline,
                 17, correct ? GOOD : MUTED, Typeface.BOLD);
@@ -1421,66 +1151,48 @@ public class MainActivity extends Activity {
         audio.stop();
         activity.recordSessionCompleted();
         LinearLayout root = column();
-        root.setPadding(dp(20), dp(24), dp(20), dp(36));
-        int percent = session.isEmpty() ? 0 :
-                Math.round(sessionCorrect * 100f / session.size());
+        root.setPadding(dp(20), dp(28), dp(20), dp(30));
 
-        TextView eyebrow = text(getString(R.string.rift_result_kicker),
-                12, PRIMARY, Typeface.BOLD);
-        eyebrow.setLetterSpacing(.14f);
-        root.addView(eyebrow);
-        root.addView(space(9));
-        root.addView(text(sessionTitle, 28, INK, Typeface.BOLD));
-        root.addView(space(16));
+        int percent = session.isEmpty() ? 0 : Math.round(sessionCorrect * 100f / session.size());
+        TextView title = text(sessionTitle, 18, MUTED, Typeface.BOLD);
+        root.addView(title);
 
-        LinearLayout result = column();
-        result.setGravity(Gravity.CENTER_HORIZONTAL);
-        result.setPadding(dp(18), dp(24), dp(18), dp(24));
-        result.setBackground(RiftStyle.shape(this, Color.WHITE, 25, 1, SOFT));
-        RiftStyle.raise(result, 4);
-        RiftStyle.ScoreRing ring = new RiftStyle.ScoreRing(this, percent);
-        result.addView(ring, new LinearLayout.LayoutParams(dp(166), dp(166)));
-        result.addView(space(6));
-        result.addView(text(sessionCorrect + " / " + session.size(),
-                23, INK, Typeface.BOLD));
-        result.addView(space(5));
-        result.addView(text(getString(R.string.rift_milestone), 14, MUTED, Typeface.NORMAL));
-        root.addView(result, matchWrap());
+        TextView score = text(sessionCorrect + " / " + session.size(), 48,
+                percent >= 75 ? GOOD : INK, Typeface.BOLD);
+        score.setPadding(0, dp(10), 0, 0);
+        root.addView(score);
 
-        root.addView(space(24));
-        root.addView(sectionHeading(getString(R.string.what_next),
-                getString(R.string.rift_atlas_caption)));
-        root.addView(space(12));
+        TextView percentView = text(percent + "%", 20, MUTED, Typeface.BOLD);
+        root.addView(percentView);
+
+        root.addView(space(22));
+
+        TextView weakTitle = text(getString(R.string.what_next), 20, INK, Typeface.BOLD);
+        root.addView(weakTitle);
+        root.addView(space(8));
 
         List<Map.Entry<String, int[]>> entries = new ArrayList<>(sessionStats.entrySet());
         entries.sort(Comparator.comparingDouble(e -> {
-            int[] scores = e.getValue();
-            return scores[0] == 0 ? 1.0 : (double) scores[1] / scores[0];
+            int[] s = e.getValue();
+            return s[0] == 0 ? 1.0 : (double) s[1] / s[0];
         }));
+
         int shown = 0;
-        for (Map.Entry<String, int[]> entry : entries) {
-            if (shown++ >= 4) break;
-            ProgressStore.SkillState state = progress.state(entry.getKey());
-            LinearLayout line = row();
-            line.setPadding(dp(15), dp(14), dp(15), dp(14));
-            line.setBackground(RiftStyle.shape(this, Color.WHITE, 16, 1, SOFT));
-            TextView dot = text("◆", 15, state == ProgressStore.SkillState.CONFIDENT
-                    ? GOOD : PRIMARY, Typeface.BOLD);
-            line.addView(dot);
-            TextView name = text(skillName(entry.getKey()), 15, INK, Typeface.BOLD);
-            name.setPadding(dp(10), 0, dp(8), 0);
-            line.addView(name, new LinearLayout.LayoutParams(0,
-                    ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
-            TextView stage = text(skillStateLabel(state), 12, MUTED, Typeface.NORMAL);
-            line.addView(stage);
-            LinearLayout.LayoutParams lp = matchWrap();
-            lp.bottomMargin = dp(9);
-            root.addView(line, lp);
+        for (Map.Entry<String, int[]> e : entries) {
+            int[] s = e.getValue();
+            if (shown >= 4) break;
+            ProgressStore.SkillState skillState = progress.state(e.getKey());
+            TextView row = text(skillName(e.getKey()) + "   ·   " + skillStateLabel(skillState), 16,
+                    INK, Typeface.NORMAL);
+            row.setPadding(0, dp(6), 0, dp(6));
+            root.addView(row);
+            shown++;
         }
-        root.addView(space(18));
-        Button again = primaryButton(getString(R.string.another_quick) + "  →");
-        again.setOnClickListener(v -> startSession(
-                getString(R.string.quick_training), quickSession()));
+
+        root.addView(space(20));
+
+        Button again = primaryButton(getString(R.string.another_quick));
+        again.setOnClickListener(v -> startSession(getString(R.string.quick_training), quickSession()));
         root.addView(again, matchWrap());
 
         Button home = secondaryButton(getString(R.string.home));
@@ -1488,68 +1200,55 @@ public class MainActivity extends Activity {
         LinearLayout.LayoutParams hlp = matchWrap();
         hlp.topMargin = dp(10);
         root.addView(home, hlp);
+
         setScrollable(root);
     }
 
     private void showProgress() {
         LinearLayout root = column();
-        root.setPadding(dp(18), dp(18), dp(18), dp(36));
+        root.setPadding(dp(20), dp(20), dp(20), dp(28));
+
         Button back = compactButton("←");
         back.setOnClickListener(v -> showHome());
-        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
-        root.addView(space(23));
-        TextView kicker = text(getString(R.string.rift_atlas_kicker), 12, PRIMARY, Typeface.BOLD);
-        kicker.setLetterSpacing(.14f);
-        root.addView(kicker);
-        root.addView(space(6));
-        root.addView(text(getString(R.string.rift_paths), 30, INK, Typeface.BOLD));
-        TextView description = text(getString(R.string.rift_nodes_hint), 15, MUTED, Typeface.NORMAL);
-        description.setPadding(0, dp(8), 0, 0);
-        root.addView(description);
-        root.addView(space(18));
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
 
-        LinearLayout summary = row();
-        summary.setPadding(dp(16), dp(15), dp(16), dp(15));
-        summary.setBackground(RiftStyle.shape(this, Color.WHITE, 18, 1, SOFT));
+        root.addView(space(14));
+        root.addView(text(getString(R.string.skill_map), 28, INK, Typeface.BOLD));
+        root.addView(text(getString(R.string.skill_map_caption),
+                14, MUTED, Typeface.NORMAL));
+        root.addView(space(16));
+
         List<String> skills = new ArrayList<>(QuestionBank.knowledgeIds());
-        int mastered = 0;
-        for (String id : skills)
-            if (progress.state(id) == ProgressStore.SkillState.CONFIDENT) mastered++;
-        summary.addView(text(mastered + " / " + skills.size(), 25, PRIMARY, Typeface.BOLD));
-        TextView note = text("  " + getString(R.string.rift_mastered), 14, MUTED, Typeface.NORMAL);
-        summary.addView(note);
-        root.addView(summary);
-
         skills.sort((a, b) -> {
-            int deps = Integer.compare(QuestionBank.prerequisitesForKnowledge(a).size(),
-                    QuestionBank.prerequisitesForKnowledge(b).size());
-            return deps != 0 ? deps : a.compareTo(b);
+            int state = Integer.compare(progress.state(a).ordinal(), progress.state(b).ordinal());
+            if (state != 0) return state;
+            return Integer.compare(progress.attempts(a), progress.attempts(b));
         });
-        List<String> names = new ArrayList<>();
-        List<Integer> statuses = new ArrayList<>();
-        for (String id : skills) {
-            names.add(QuestionBank.knowledgeLabel(id, Locale.getDefault()));
-            ProgressStore.SkillState state = progress.state(id);
-            statuses.add(state == ProgressStore.SkillState.CONFIDENT ? 3 :
-                    state == ProgressStore.SkillState.GROWING ? 2 :
-                    state == ProgressStore.SkillState.LEARNING ? 1 : 0);
+
+        for (String skill : skills) {
+            ProgressStore.SkillState state = progress.state(skill);
+            LinearLayout line = row();
+            line.setPadding(dp(14), dp(13), dp(14), dp(13));
+            line.setBackground(roundRect(CARD, 12, 1, SOFT));
+
+            TextView name = text(skillName(skill), 15, INK, Typeface.BOLD);
+            int stateColor;
+            switch (state) {
+                case CONFIDENT: stateColor = GOOD; break;
+                case GROWING: stateColor = Color.rgb(176, 119, 20); break;
+                case LEARNING: stateColor = PRIMARY; break;
+                default: stateColor = MUTED;
+            }
+            TextView value = text(skillStateLabel(state), 14, stateColor, Typeface.BOLD);
+            line.addView(name, new LinearLayout.LayoutParams(0,
+                    ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
+            line.addView(value);
+
+            LinearLayout.LayoutParams lp = matchWrap();
+            lp.bottomMargin = dp(7);
+            root.addView(line, lp);
         }
-        RiftStyle.KnowledgeMap atlas = new RiftStyle.KnowledgeMap(this, skills, names, statuses,
-                QuestionBank.knowledgeRelations(), id -> {
-            List<String> prereqs = QuestionBank.prerequisitesForKnowledge(id);
-            StringBuilder details = new StringBuilder(skillStateLabel(progress.state(id)));
-            details.append("\n\n").append(getString(R.string.rift_node_prereqs)).append(":\n");
-            if (prereqs.isEmpty()) details.append(getString(R.string.rift_no_prereqs));
-            else for (String pre : prereqs)
-                details.append("• ").append(QuestionBank.knowledgeLabel(pre, Locale.getDefault())).append("\n");
-            new AlertDialog.Builder(this)
-                    .setTitle(QuestionBank.knowledgeLabel(id, Locale.getDefault()))
-                    .setMessage(details.toString().trim())
-                    .setPositiveButton(getString(R.string.learn_now), (d, w) -> startKnowledgeTopic(id))
-                    .setNegativeButton(getString(R.string.dictionary_close), null)
-                    .show();
-        });
-        root.addView(atlas, matchWrap());
+
         setScrollable(root);
     }
 
@@ -1763,14 +1462,9 @@ public class MainActivity extends Activity {
         Button back = compactButton("←");
         back.setOnClickListener(v -> showHome());
         root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
-        root.addView(space(24));
-        TextView dictionaryKicker = text(getString(R.string.rift_eyebrow),
-                12, PRIMARY, Typeface.BOLD);
-        dictionaryKicker.setLetterSpacing(.14f);
-        root.addView(dictionaryKicker);
-        root.addView(space(7));
-        root.addView(text(getString(R.string.dictionary_title), 30, INK, Typeface.BOLD));
-        root.addView(space(20));
+        root.addView(space(14));
+        root.addView(text(getString(R.string.dictionary_title), 28, INK, Typeface.BOLD));
+        root.addView(space(14));
 
         List<DictionaryEntry> saved = dictionary.savedEntries();
         if (saved.isEmpty()) {
@@ -1781,8 +1475,7 @@ public class MainActivity extends Activity {
             for (DictionaryEntry entry : saved) {
                 LinearLayout card = column();
                 card.setPadding(dp(16), dp(13), dp(16), dp(13));
-                card.setBackground(RiftStyle.shape(this, CARD, 19, 1, SOFT));
-                RiftStyle.raise(card, 2);
+                card.setBackground(roundRect(CARD, 14, 1, SOFT));
                 card.setOnClickListener(v -> showDictionaryEntry(entry));
                 card.setClickable(true);
 
@@ -1833,43 +1526,31 @@ public class MainActivity extends Activity {
     private void showShop() {
         homeVisible = false;
         LinearLayout root = column();
-        root.setPadding(dp(20), dp(18), dp(20), dp(36));
+        root.setPadding(dp(20), dp(20), dp(20), dp(30));
+
         Button back = compactButton("←");
         back.setOnClickListener(v -> showHome());
-        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
-        root.addView(space(23));
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
+        root.addView(space(14));
+        root.addView(text(getString(R.string.shop_title), 28, INK, Typeface.BOLD));
+        root.addView(text(getString(R.string.shop_balance_fmt, economy.balance()), 18, PRIMARY, Typeface.BOLD));
+        root.addView(space(16));
 
-        TextView kicker = text(getString(R.string.rift_shop_kicker), 12, PRIMARY, Typeface.BOLD);
-        kicker.setLetterSpacing(.14f);
-        root.addView(kicker);
-        root.addView(space(6));
-        root.addView(text(getString(R.string.shop_title), 30, INK, Typeface.BOLD));
-        root.addView(space(17));
+        for (ShopItem item : shop.items()) {
+            root.addView(shopItemCard(item));
+        }
 
-        LinearLayout balance = column();
-        balance.setPadding(dp(20), dp(20), dp(20), dp(22));
-        balance.setBackground(RiftStyle.cosmic(this, 22));
-        RiftStyle.raise(balance, 4);
-        balance.addView(text("◇", 28, RiftStyle.CYAN, Typeface.BOLD));
-        balance.addView(space(7));
-        balance.addView(text(getString(R.string.shop_balance_fmt, economy.balance()),
-                23, Color.WHITE, Typeface.BOLD));
-        balance.addView(space(7));
-        balance.addView(text(getString(R.string.rift_shop_caption),
-                14, Color.rgb(213, 223, 255), Typeface.NORMAL));
-        root.addView(balance, matchWrap());
-        root.addView(space(22));
-
-        for (ShopItem item : shop.items()) root.addView(shopItemCard(item));
-
-        root.addView(space(17));
+        root.addView(space(18));
         root.addView(text(getString(R.string.digital_rewards), 22, INK, Typeface.BOLD));
-        TextView security = text(getString(R.string.reward_local_security_note),
-                13, MUTED, Typeface.NORMAL);
+        TextView security = text(getString(R.string.reward_local_security_note), 13, MUTED, Typeface.NORMAL);
         security.setLineSpacing(dp(3), 1.04f);
-        security.setPadding(0, dp(8), 0, dp(14));
+        security.setPadding(0, dp(5), 0, dp(12));
         root.addView(security);
-        for (DigitalRewardItem item : digitalRewards.items()) root.addView(digitalRewardCard(item));
+
+        for (DigitalRewardItem item : digitalRewards.items()) {
+            root.addView(digitalRewardCard(item));
+        }
+
         setScrollable(root);
     }
 
@@ -1900,32 +1581,23 @@ public class MainActivity extends Activity {
 
     private void showWorkshop() {
         LinearLayout root = column();
-        root.setPadding(dp(20), dp(18), dp(20), dp(36));
+        root.setPadding(dp(20), dp(20), dp(20), dp(30));
         Button back = compactButton("←");
         back.setOnClickListener(v -> showHome());
-        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
-        root.addView(space(22));
-        TextView kicker = text(getString(R.string.rift_shop_kicker), 12, PRIMARY, Typeface.BOLD);
-        kicker.setLetterSpacing(.14f);
-        root.addView(kicker);
-        root.addView(space(7));
-        root.addView(text(getString(R.string.workshop_title), 30, INK, Typeface.BOLD));
-        root.addView(space(7));
-        root.addView(text(getString(R.string.workshop_caption), 15, MUTED, Typeface.NORMAL));
-        root.addView(space(13));
-        root.addView(RiftStyle.pill(this,
-                "◇  " + getString(R.string.shop_balance_fmt, economy.balance()),
-                PRIMARY, Color.rgb(238, 239, 255)));
-        root.addView(space(23));
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
+        root.addView(space(14));
+        root.addView(text(getString(R.string.workshop_title), 28, INK, Typeface.BOLD));
+        root.addView(text(getString(R.string.workshop_caption), 14, MUTED, Typeface.NORMAL));
+        root.addView(text(getString(R.string.shop_balance_fmt, economy.balance()), 18, PRIMARY, Typeface.BOLD));
+        root.addView(space(14));
         for (WorkshopItem item : workshop.items()) root.addView(workshopCard(item));
         setScrollable(root);
     }
 
     private View workshopCard(WorkshopItem item) {
         LinearLayout card = column();
-        card.setPadding(dp(17), dp(17), dp(17), dp(17));
-        card.setBackground(RiftStyle.shape(this, CARD, 20, 1, SOFT));
-        RiftStyle.raise(card, 2);
+        card.setPadding(dp(16), dp(14), dp(16), dp(14));
+        card.setBackground(roundRect(CARD, 14, 1, SOFT));
         card.addView(text(item.icon + "  " + item.name(Locale.getDefault()), 19, INK, Typeface.BOLD));
         card.addView(text(item.description(Locale.getDefault()), 14, MUTED, Typeface.NORMAL));
         Button action;
@@ -1954,20 +1626,19 @@ public class MainActivity extends Activity {
 
     private View shopItemCard(ShopItem item) {
         LinearLayout card = column();
-        card.setPadding(dp(17), dp(17), dp(17), dp(17));
+        card.setPadding(dp(16), dp(14), dp(16), dp(14));
 
         int previewColor = CARD;
         if ("background".equals(item.type)) {
             try { previewColor = Color.parseColor(item.payload.optString("color")); }
             catch (Exception ignored) {}
         }
-        card.setBackground(RiftStyle.shape(this, previewColor, 20, 1, SOFT));
-        RiftStyle.raise(card, 2);
+        card.setBackground(roundRect(previewColor, 14, 1, SOFT));
 
         LinearLayout head = row();
         head.addView(text(item.name(Locale.getDefault()), 18, INK, Typeface.BOLD),
                 new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
-        head.addView(text("◇ " + item.priceCrystals, 15, PRIMARY, Typeface.BOLD));
+        head.addView(text("💎 " + item.priceCrystals, 15, PRIMARY, Typeface.BOLD));
         card.addView(head);
 
         TextView desc = text(item.description(Locale.getDefault()), 14, MUTED, Typeface.NORMAL);
@@ -2016,14 +1687,13 @@ public class MainActivity extends Activity {
 
     private View digitalRewardCard(DigitalRewardItem item) {
         LinearLayout card = column();
-        card.setPadding(dp(17), dp(17), dp(17), dp(17));
-        card.setBackground(RiftStyle.shape(this, CARD, 20, 1, SOFT));
-        RiftStyle.raise(card, 2);
+        card.setPadding(dp(16), dp(14), dp(16), dp(14));
+        card.setBackground(roundRect(CARD, 14, 1, SOFT));
 
         LinearLayout head = row();
         head.addView(text(item.name(Locale.getDefault()), 17, INK, Typeface.BOLD),
                 new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
-        head.addView(text("◇ " + item.priceCrystals, 15, PRIMARY, Typeface.BOLD));
+        head.addView(text("💎 " + item.priceCrystals, 15, PRIMARY, Typeface.BOLD));
         card.addView(head);
 
         TextView desc = text(item.description(Locale.getDefault()), 14, MUTED, Typeface.NORMAL);
@@ -2108,17 +1778,11 @@ public class MainActivity extends Activity {
         Button back = compactButton("←");
         back.setOnClickListener(v -> showHome());
         root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
-        root.addView(space(23));
-        TextView settingsKicker = text(getString(R.string.rift_eyebrow),
-                12, PRIMARY, Typeface.BOLD);
-        settingsKicker.setLetterSpacing(.14f);
-        root.addView(settingsKicker);
-        root.addView(space(7));
-        root.addView(text(getString(R.string.settings), 30, INK, Typeface.BOLD));
-        root.addView(space(8));
+        root.addView(space(14));
+        root.addView(text(getString(R.string.settings), 28, INK, Typeface.BOLD));
         root.addView(text(getString(R.string.settings_caption),
-                15, MUTED, Typeface.NORMAL));
-        root.addView(space(23));
+                14, MUTED, Typeface.NORMAL));
+        root.addView(space(18));
 
         android.widget.Switch sound = new android.widget.Switch(this);
         sound.setText(getString(R.string.combo_sounds));
@@ -2348,46 +2012,6 @@ public class MainActivity extends Activity {
         ).show();
     }
 
-    private View sectionHeading(String heading, String caption) {
-        LinearLayout group = column();
-        group.addView(text(heading, 21, INK, Typeface.BOLD));
-        TextView supporting = text(caption, 13, MUTED, Typeface.NORMAL);
-        supporting.setPadding(0, dp(4), 0, 0);
-        group.addView(supporting);
-        return group;
-    }
-
-    private View spaceHorizontal(int width) {
-        Space spacer = new Space(this);
-        spacer.setLayoutParams(new LinearLayout.LayoutParams(dp(width), 1));
-        return spacer;
-    }
-
-    private View featureCard(String symbol, String heading, String caption, int tint, Runnable action) {
-        LinearLayout card = row();
-        card.setPadding(dp(15), dp(15), dp(15), dp(15));
-        card.setBackground(RiftStyle.shape(this, Color.WHITE, 19, 1, SOFT));
-        RiftStyle.raise(card, 2);
-        TextView emblem = text(symbol, 26, tint, Typeface.BOLD);
-        emblem.setGravity(Gravity.CENTER);
-        emblem.setBackground(RiftStyle.shape(this,
-                tint == RiftStyle.VIOLET ? Color.rgb(245, 238, 255) :
-                tint == RiftStyle.GOOD ? Color.rgb(231, 249, 241) :
-                Color.rgb(237, 240, 255), 16, 0, Color.TRANSPARENT));
-        card.addView(emblem, new LinearLayout.LayoutParams(dp(56), dp(56)));
-        LinearLayout labels = column();
-        labels.setPadding(dp(14), 0, 0, 0);
-        labels.addView(text(heading, 17, INK, Typeface.BOLD));
-        labels.addView(space(4));
-        labels.addView(text(caption, 13, MUTED, Typeface.NORMAL));
-        card.addView(labels, new LinearLayout.LayoutParams(0,
-                ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
-        card.addView(text("›", 28, tint, Typeface.BOLD));
-        card.setOnClickListener(v -> action.run());
-        card.setClickable(true);
-        return card;
-    }
-
     private LinearLayout column() {
         LinearLayout l = new LinearLayout(this);
         l.setOrientation(LinearLayout.VERTICAL);
@@ -2409,8 +2033,6 @@ public class MainActivity extends Activity {
         scroll.addView(content, new ScrollView.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         setContentView(scroll);
-        scroll.setAlpha(0f);
-        scroll.animate().alpha(1f).setDuration(180).start();
         hideSystemNavigation();
     }
 
@@ -2419,24 +2041,20 @@ public class MainActivity extends Activity {
         t.setText(value);
         t.setTextSize(sp);
         t.setTextColor(color);
-        t.setIncludeFontPadding(false);
-        t.setTypeface(Typeface.create(style == Typeface.BOLD ? "sans-serif-medium" : "sans-serif",
-                style));
+        t.setTypeface(Typeface.DEFAULT, style);
         return t;
     }
 
     private Button answerButton(String value) {
         Button b = new Button(this);
         b.setText(value);
-        b.setTextSize(17);
-        b.setTypeface(Typeface.create("sans-serif-medium", Typeface.NORMAL));
+        b.setTextSize(18);
         b.setTextColor(INK);
         b.setAllCaps(false);
         b.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
-        b.setPadding(dp(18), dp(11), dp(18), dp(11));
+        b.setPadding(dp(18), dp(10), dp(18), dp(10));
         b.setMinHeight(dp(64));
-        b.setBackground(RiftStyle.shape(this, CARD, 17, 1, SOFT));
-        b.setElevation(0);
+        b.setBackground(roundRect(CARD, shop == null ? 14 : shop.buttonRadius(14), 1, SOFT));
         return b;
     }
 
@@ -2445,11 +2063,10 @@ public class MainActivity extends Activity {
         b.setText(value);
         b.setTextSize(17);
         b.setTextColor(Color.WHITE);
-        b.setTypeface(Typeface.create("sans-serif-medium", Typeface.BOLD));
+        b.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         b.setAllCaps(false);
         b.setMinHeight(dp(58));
-        b.setBackground(RiftStyle.gradient(this, 18, RiftStyle.BLUE, RiftStyle.VIOLET));
-        RiftStyle.raise(b, 3);
+        b.setBackground(roundRect(PRIMARY, shop == null ? 14 : shop.buttonRadius(14), 0, Color.TRANSPARENT));
         return b;
     }
 
@@ -2458,11 +2075,9 @@ public class MainActivity extends Activity {
         b.setText(value);
         b.setTextSize(16);
         b.setTextColor(INK);
-        b.setTypeface(Typeface.create("sans-serif-medium", Typeface.BOLD));
         b.setAllCaps(false);
         b.setMinHeight(dp(54));
-        b.setBackground(RiftStyle.shape(this, CARD, 17, 1, SOFT));
-        b.setElevation(0);
+        b.setBackground(roundRect(CARD, shop == null ? 14 : shop.buttonRadius(14), 1, SOFT));
         return b;
     }
 
@@ -2473,8 +2088,7 @@ public class MainActivity extends Activity {
         b.setTextColor(INK);
         b.setAllCaps(false);
         b.setPadding(0, 0, 0, 0);
-        b.setBackground(RiftStyle.shape(this, CARD, 15, 1, SOFT));
-        b.setElevation(0);
+        b.setBackground(roundRect(CARD, 12, 1, SOFT));
         return b;
     }
 
