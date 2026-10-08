@@ -412,36 +412,76 @@ public class MainActivity extends Activity {
                 .setNegativeButton(getString(R.string.dictionary_close),null).show();
     }
 
-    private void showGradePicker(String subject){
-        ContentCatalog catalog=new ContentCatalog(this);
-        List<Integer> grades=catalog.grades(subject);
-        LinearLayout root=column(); root.setPadding(dp(20),dp(18),dp(20),dp(30));
-        Button back=compactButton("←"); back.setOnClickListener(v->showCourseStorefront()); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
-        root.addView(space(12)); root.addView(text(getString(R.string.choose_grade),28,INK,Typeface.BOLD));
-        root.addView(text(subjectLabel(subject),14,MUTED,Typeface.NORMAL)); root.addView(space(14));
-        LinearLayout line=null;
-        for(int i=0;i<grades.size();i++){
-            if(i%3==0){line=row(); root.addView(line,matchWrap());}
-            final int grade=grades.get(i);
-            Button b=secondaryButton(String.valueOf(grade)); b.setTextSize(20); b.setOnClickListener(v->showCompetitionPicker(subject,grade));
-            LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(66),1f); if(i%3>0)lp.leftMargin=dp(8); line.addView(b,lp);
+    private void showGradePicker(String subject) {
+        ContentCatalog catalog = new ContentCatalog(this);
+        List<Integer> grades = catalog.grades(subject);
+        LinearLayout root = column();
+        root.setPadding(dp(20), dp(18), dp(20), dp(36));
+        Button back = compactButton("←");
+        back.setOnClickListener(v -> showCourseStorefront());
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
+        root.addView(space(24));
+        TextView eyebrow = text(getString(R.string.rift_course_kicker),
+                12, PRIMARY, Typeface.BOLD);
+        eyebrow.setLetterSpacing(.14f);
+        root.addView(eyebrow);
+        root.addView(space(6));
+        root.addView(text(getString(R.string.choose_grade), 30, INK, Typeface.BOLD));
+        root.addView(space(8));
+        root.addView(text(subjectLabel(subject), 15, MUTED, Typeface.NORMAL));
+        root.addView(space(23));
+        LinearLayout line = null;
+        for (int i = 0; i < grades.size(); i++) {
+            if (i % 3 == 0) {
+                line = row();
+                LinearLayout.LayoutParams lp = matchWrap();
+                lp.bottomMargin = dp(10);
+                root.addView(line, lp);
+            }
+            final int grade = grades.get(i);
+            Button b = secondaryButton(String.valueOf(grade));
+            b.setTextSize(24);
+            b.setTextColor(PRIMARY);
+            b.setBackground(RiftStyle.shape(this, Color.WHITE, 20, 1, SOFT));
+            b.setOnClickListener(v -> showCompetitionPicker(subject, grade));
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, dp(84), 1f);
+            if (i % 3 > 0) lp.leftMargin = dp(10);
+            line.addView(b, lp);
         }
         setScrollable(root);
     }
 
-    private void showCompetitionPicker(String subject,int grade){
-        ContentCatalog catalog=new ContentCatalog(this);
-        List<ContentCatalog.Course> courses=catalog.applicable(subject,grade);
-        LinearLayout root=column(); root.setPadding(dp(20),dp(18),dp(20),dp(30));
-        Button back=compactButton("←"); back.setOnClickListener(v->showGradePicker(subject)); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
-        root.addView(space(12)); root.addView(text(getString(R.string.choose_goal),28,INK,Typeface.BOLD));
-        root.addView(text(subjectLabel(subject)+" · "+getString(R.string.grade_fmt,grade),14,MUTED,Typeface.NORMAL)); root.addView(space(14));
-        Button all=primaryButton(getString(R.string.all_olympiads)); all.setOnClickListener(v->selectFirstApplicable(courses,grade)); root.addView(all,matchWrap());
-        root.addView(space(10));
-        for(ContentCatalog.Course c:courses){
-            Button b=secondaryButton(competitionLabel(c.competition));
-            b.setOnClickListener(v->selectCourse(c.packId,grade,c.competition));
-            LinearLayout.LayoutParams lp=matchWrap(); lp.bottomMargin=dp(8); root.addView(b,lp);
+    private void showCompetitionPicker(String subject, int grade) {
+        ContentCatalog catalog = new ContentCatalog(this);
+        List<ContentCatalog.Course> courses = catalog.applicable(subject, grade);
+        LinearLayout root = column();
+        root.setPadding(dp(20), dp(18), dp(20), dp(36));
+        Button back = compactButton("←");
+        back.setOnClickListener(v -> showGradePicker(subject));
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
+        root.addView(space(24));
+        TextView eyebrow = text(getString(R.string.rift_training_kicker),
+                12, PRIMARY, Typeface.BOLD);
+        eyebrow.setLetterSpacing(.14f);
+        root.addView(eyebrow);
+        root.addView(space(6));
+        root.addView(text(getString(R.string.choose_goal), 30, INK, Typeface.BOLD));
+        root.addView(space(8));
+        root.addView(text(subjectLabel(subject) + " · " +
+                getString(R.string.grade_fmt, grade), 15, MUTED, Typeface.NORMAL));
+        root.addView(space(23));
+
+        Button all = primaryButton(getString(R.string.all_olympiads) + "  →");
+        all.setOnClickListener(v -> selectFirstApplicable(courses, grade));
+        root.addView(all, matchWrap());
+        root.addView(space(14));
+        for (ContentCatalog.Course c : courses) {
+            View tile = featureCard("◇", competitionLabel(c.competition),
+                    getString(R.string.rift_atlas_caption), RiftStyle.BLUE,
+                    () -> selectCourse(c.packId, grade, c.competition));
+            LinearLayout.LayoutParams lp = matchWrap();
+            lp.bottomMargin = dp(10);
+            root.addView(tile, lp);
         }
         setScrollable(root);
     }
@@ -1715,9 +1755,14 @@ public class MainActivity extends Activity {
         Button back = compactButton("←");
         back.setOnClickListener(v -> showHome());
         root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
-        root.addView(space(14));
-        root.addView(text(getString(R.string.dictionary_title), 28, INK, Typeface.BOLD));
-        root.addView(space(14));
+        root.addView(space(24));
+        TextView dictionaryKicker = text(getString(R.string.rift_eyebrow),
+                12, PRIMARY, Typeface.BOLD);
+        dictionaryKicker.setLetterSpacing(.14f);
+        root.addView(dictionaryKicker);
+        root.addView(space(7));
+        root.addView(text(getString(R.string.dictionary_title), 30, INK, Typeface.BOLD));
+        root.addView(space(20));
 
         List<DictionaryEntry> saved = dictionary.savedEntries();
         if (saved.isEmpty()) {
@@ -1728,7 +1773,8 @@ public class MainActivity extends Activity {
             for (DictionaryEntry entry : saved) {
                 LinearLayout card = column();
                 card.setPadding(dp(16), dp(13), dp(16), dp(13));
-                card.setBackground(roundRect(CARD, 14, 1, SOFT));
+                card.setBackground(RiftStyle.shape(this, CARD, 19, 1, SOFT));
+                RiftStyle.raise(card, 2);
                 card.setOnClickListener(v -> showDictionaryEntry(entry));
                 card.setClickable(true);
 
@@ -2054,11 +2100,17 @@ public class MainActivity extends Activity {
         Button back = compactButton("←");
         back.setOnClickListener(v -> showHome());
         root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
-        root.addView(space(14));
-        root.addView(text(getString(R.string.settings), 28, INK, Typeface.BOLD));
+        root.addView(space(23));
+        TextView settingsKicker = text(getString(R.string.rift_eyebrow),
+                12, PRIMARY, Typeface.BOLD);
+        settingsKicker.setLetterSpacing(.14f);
+        root.addView(settingsKicker);
+        root.addView(space(7));
+        root.addView(text(getString(R.string.settings), 30, INK, Typeface.BOLD));
+        root.addView(space(8));
         root.addView(text(getString(R.string.settings_caption),
-                14, MUTED, Typeface.NORMAL));
-        root.addView(space(18));
+                15, MUTED, Typeface.NORMAL));
+        root.addView(space(23));
 
         android.widget.Switch sound = new android.widget.Switch(this);
         sound.setText(getString(R.string.combo_sounds));
