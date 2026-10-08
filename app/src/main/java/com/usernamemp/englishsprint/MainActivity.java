@@ -155,6 +155,28 @@ public class MainActivity extends Activity {
         if (hasFocus) hideSystemNavigation();
     }
 
+    @Override
+    public void setContentView(View view) {
+        super.setContentView(view);
+
+        // Android 15+ draws app content behind the transparent status bar.
+        // Account for the actual system-bar/cutout height on every screen,
+        // without altering pre-Android-15 layout behavior or immersive navigation.
+        if (Build.VERSION.SDK_INT < 35) return;
+
+        final int left = view.getPaddingLeft();
+        final int top = view.getPaddingTop();
+        final int right = view.getPaddingRight();
+        final int bottom = view.getPaddingBottom();
+        view.setOnApplyWindowInsetsListener((target, insets) -> {
+            int safeTop = insets.getInsets(
+                    WindowInsets.Type.statusBars() | WindowInsets.Type.displayCutout()).top;
+            target.setPadding(left, top + safeTop, right, bottom);
+            return insets;
+        });
+        view.requestApplyInsets();
+    }
+
     private void hideSystemNavigation() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             WindowInsetsController controller = getWindow().getInsetsController();
