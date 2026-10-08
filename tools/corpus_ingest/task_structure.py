@@ -975,7 +975,7 @@ def _semantic_task(
     line = lines[start]
     text = "\n".join(x["text"] for x in lines[start:end])
     resolved_kind = kind if kind != "INFER" else infer_task_kind(text)
-    return {
+    task = {
         "id": _stable("task", sid, label),
         "label": label,
         "number": "",
@@ -985,10 +985,11 @@ def _semantic_task(
         "page_end": lines[end - 1]["page"],
         "anchor": {"page": line["page"], "line_id": line["id"], "text": line["text"]},
         "parts": [],
-        "artifacts": _artifact_nodes(layout, lines, start, end, sid),
+        "artifacts": [],
         "confidence": confidence,
         "proposal_source": "LAYOUT_RULES",
     }
+    return _enrich_task(task, layout, lines, start, end)
 
 
 def _answer_tasks(
@@ -1007,7 +1008,7 @@ def _answer_tasks(
             if number in seen:
                 continue
             seen.add(number)
-            tasks.append({
+            task = {
                 "id": _stable("task", sid, lines[i]["id"], number),
                 "label": f"Task {number}",
                 "number": number,
@@ -1020,7 +1021,12 @@ def _answer_tasks(
                 "artifacts": [],
                 "confidence": 0.91,
                 "proposal_source": "LAYOUT_RULES",
-            })
+            }
+            stop = next(
+                (j for j in range(i + 1, end) if TASK_RE.match(lines[j]["text"]) or ANSWER_QUESTION_RE.search(lines[j]["text"])),
+                end,
+            )
+            tasks.append(_enrich_task(task, layout, lines, i, stop))
     if tasks:
         return tasks
     return [_semantic_task(layout, lines, start, end, sid, "Answers", "ANSWER_GROUP", 0.76)]
@@ -1035,7 +1041,7 @@ def _script_structure(layout: dict[str, Any], lines: list[dict[str, Any]], diges
             end = task_starts[pos + 1] if pos + 1 < len(task_starts) else len(lines)
             heading = lines[start]
             number = _task_number(heading["text"])
-            tasks.append({
+            task = {
                 "id": _stable("task", sid, heading["id"], number),
                 "label": f"Task {number}",
                 "number": number,
@@ -1045,10 +1051,11 @@ def _script_structure(layout: dict[str, Any], lines: list[dict[str, Any]], diges
                 "page_end": lines[end - 1]["page"],
                 "anchor": {"page": heading["page"], "line_id": heading["id"], "text": heading["text"]},
                 "parts": [],
-                "artifacts": _artifact_nodes(layout, lines, start, end, sid),
+                "artifacts": [],
                 "confidence": 0.96,
                 "proposal_source": "LAYOUT_RULES",
-            })
+            }
+            tasks.append(_enrich_task(task, layout, lines, start, end))
     else:
         tasks.append(_semantic_task(layout, lines, 0, len(lines), sid, "Transcript segment", "TRANSCRIPT_SEGMENT", 0.82))
     section = {
@@ -1131,7 +1138,6 @@ def propose_structure(layout: dict[str, Any], *, filename: str = "", document_ro
                 parts = _part_nodes(lines, tstart, tend, tid)
                 if not parts:
                     parts = _subpart_nodes(lines, tstart, tend, tid, base_kind)
-                artifacts = _artifact_nodes(layout, lines, tstart, tend, tid)
                 kind = "COMPOSITE" if parts else base_kind
                 if semantic_type in {"SPEAKING_SET", "SPEAKING"}:
                     kind = "ORAL_RESPONSE"
@@ -1148,13 +1154,13 @@ def propose_structure(layout: dict[str, Any], *, filename: str = "", document_ro
                     "page_end": task_end_page,
                     "anchor": {"page": heading["page"], "line_id": heading["id"], "text": heading["text"]},
                     "parts": parts,
-                    "artifacts": artifacts,
+                    "artifacts": [],
                     "confidence": 0.97,
                     "proposal_source": "LAYOUT_RULES",
                 }
                 if item_range:
                     task["item_range"] = item_range
-                tasks.append(task)
+                tasks.append(_enrich_task(task, layout, lines, tstart, tend, repeated_headers))
 
             if not tasks and semantic_type == "WRITING" and role == "TASK_SET":
                 writing_text = "\n".join(x["text"] for x in lines[start:end])
