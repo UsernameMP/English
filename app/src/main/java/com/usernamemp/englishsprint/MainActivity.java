@@ -45,14 +45,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MainActivity extends Activity {
-    private static final int BG = Color.rgb(246, 247, 251);
-    private static final int INK = Color.rgb(24, 29, 38);
-    private static final int MUTED = Color.rgb(96, 105, 122);
-    private static final int PRIMARY = Color.rgb(47, 82, 235);
-    private static final int GOOD = Color.rgb(24, 145, 92);
+    private static final int BG = RiftStyle.BACKGROUND;
+    private static final int INK = RiftStyle.INK;
+    private static final int MUTED = RiftStyle.MUTED;
+    private static final int PRIMARY = RiftStyle.BLUE;
+    private static final int GOOD = RiftStyle.GOOD;
     private static final int BAD = Color.rgb(205, 63, 72);
     private static final int CARD = Color.WHITE;
-    private static final int SOFT = Color.rgb(232, 236, 246);
+    private static final int SOFT = RiftStyle.STROKE;
     private static final int HIGHLIGHT = Color.rgb(255, 236, 153);
 
     private ProgressStore progress;
@@ -199,45 +199,71 @@ public class MainActivity extends Activity {
         hideSystemNavigation();
         audio.stop();
         LinearLayout root = column();
-        root.setPadding(dp(20), dp(18), dp(20), dp(30));
+        root.setPadding(dp(20), dp(18), dp(20), dp(36));
 
-        LinearLayout header = row();
-        LinearLayout titles = column();
-        titles.addView(text(getString(R.string.app_name), 29, INK, Typeface.BOLD));
-        titles.addView(text(getString(R.string.dashboard_caption), 14, MUTED, Typeface.NORMAL));
-        header.addView(titles, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
+        LinearLayout masthead = row();
+        TextView mark = text("R", 26, Color.WHITE, Typeface.BOLD);
+        mark.setGravity(Gravity.CENTER);
+        mark.setBackground(RiftStyle.gradient(this, 17,
+                RiftStyle.BLUE, RiftStyle.VIOLET));
+        RiftStyle.raise(mark, 3);
+        masthead.addView(mark, new LinearLayout.LayoutParams(dp(52), dp(52)));
+        LinearLayout brand = column();
+        brand.setPadding(dp(12), 0, 0, 0);
+        brand.addView(text(getString(R.string.app_name), 28, INK, Typeface.BOLD));
+        brand.addView(text(getString(R.string.rift_eyebrow), 12, MUTED, Typeface.NORMAL));
+        masthead.addView(brand, new LinearLayout.LayoutParams(0,
+                ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
         Button settings = compactButton("⚙");
+        settings.setContentDescription(getString(R.string.settings));
         settings.setOnClickListener(v -> showSettings());
-        header.addView(settings, new LinearLayout.LayoutParams(dp(52), dp(44)));
-        root.addView(header);
+        masthead.addView(settings, new LinearLayout.LayoutParams(dp(50), dp(50)));
+        root.addView(masthead);
+        root.addView(space(22));
 
-        root.addView(space(16));
+        LinearLayout hero = column();
+        hero.setPadding(dp(22), dp(22), dp(22), dp(22));
+        hero.setBackground(RiftStyle.cosmic(this, 26));
+        RiftStyle.raise(hero, 8);
+
+        TextView label = text(getString(R.string.rift_hero_kicker), 12,
+                RiftStyle.CYAN, Typeface.BOLD);
+        label.setLetterSpacing(.14f);
+        hero.addView(label);
+        hero.addView(space(14));
+        TextView title = text(getString(R.string.rift_hero_title), 30,
+                Color.WHITE, Typeface.BOLD);
+        title.setLineSpacing(dp(3), 1f);
+        hero.addView(title);
+        hero.addView(space(8));
+        TextView detail = text(getString(R.string.rift_hero_subtitle), 15,
+                Color.rgb(214, 224, 255), Typeface.NORMAL);
+        detail.setLineSpacing(dp(3), 1f);
+        hero.addView(detail);
+        hero.addView(space(22));
+
+        Button start = primaryButton(getString(R.string.learn_now) + "  →");
+        start.setBackground(RiftStyle.shape(this, Color.WHITE, 17, 0, Color.TRANSPARENT));
+        start.setTextColor(RiftStyle.NAVY);
+        start.setMinHeight(dp(60));
+        start.setOnClickListener(v -> showLearnHub());
+        hero.addView(start, matchWrap());
+        root.addView(hero, matchWrap());
+
+        root.addView(space(20));
         root.addView(progressCard());
-        root.addView(space(16));
+        root.addView(space(23));
 
-        Button learn = primaryButton(getString(R.string.learn_now));
-        learn.setTextSize(22);
-        learn.setMinHeight(dp(72));
-        learn.setOnClickListener(v -> showLearnHub());
-        root.addView(learn, matchWrap());
-
-        List<String> homeFocus = QuestionBank.recommendedKnowledge(progress, 1);
-        TextView focus = text(homeFocus.isEmpty() ? getString(R.string.training_mode) : getString(R.string.focus_compact,
-                QuestionBank.knowledgeLabel(homeFocus.get(0), Locale.getDefault())),
-                13, MUTED, Typeface.NORMAL);
-        focus.setGravity(Gravity.CENTER);
-        focus.setPadding(0, dp(8), 0, dp(14));
-        root.addView(focus);
-
-        Button world = secondaryButton(getString(R.string.my_world) + " · " + modeName(metaGame.preferredMode()));
-        world.setMinHeight(dp(58));
-        world.setOnClickListener(v -> showMyWorld());
-        root.addView(world, matchWrap());
-
-        Button shopButton = secondaryButton(getString(R.string.shop));
-        shopButton.setOnClickListener(v -> showShop());
-        LinearLayout.LayoutParams shopLp=matchWrap(); shopLp.topMargin=dp(8); root.addView(shopButton,shopLp);
-
+        root.addView(sectionHeading(getString(R.string.rift_explore), getString(R.string.rift_explore_caption)));
+        root.addView(space(12));
+        root.addView(featureCard("◇", getString(R.string.skill_map),
+                getString(R.string.rift_atlas_caption), RiftStyle.BLUE, () -> showProgress()));
+        root.addView(space(10));
+        root.addView(featureCard("✦", getString(R.string.my_world),
+                getString(R.string.rift_world_caption), RiftStyle.VIOLET, () -> showMyWorld()));
+        root.addView(space(10));
+        root.addView(featureCard("◈", getString(R.string.shop),
+                getString(R.string.rift_shop_caption), RiftStyle.GOOD, () -> showShop()));
         setScrollable(root);
     }
 
@@ -499,42 +525,41 @@ public class MainActivity extends Activity {
 
     private View progressCard() {
         LinearLayout card = column();
-        card.setPadding(dp(18), dp(16), dp(18), dp(16));
-        int frameStroke = shop == null ? Color.TRANSPARENT : shop.frameStrokeColor(Color.TRANSPARENT);
-        card.setBackground(roundRect(CARD, 18, frameStroke == Color.TRANSPARENT ? 0 : 2, frameStroke));
+        card.setPadding(dp(18), dp(17), dp(18), dp(18));
+        card.setBackground(RiftStyle.shape(this, Color.WHITE, 21, 1, SOFT));
+        RiftStyle.raise(card, 2);
 
         LinearLayout top = row();
-        TextView level = text(getString(R.string.level_fmt, progress.level()), 18, INK, Typeface.BOLD);
-        TextView resources = text(progress.xp() + " XP   ·   "
-                        + getString(R.string.crystals_fmt, economy.balance()) + "   ·   "
-                        + getString(R.string.play_credits_fmt, playCredits.balance()),
-                16, PRIMARY, Typeface.BOLD);
-        top.addView(level, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
-        top.addView(resources);
+        LinearLayout main = column();
+        TextView heading = text(getString(R.string.rift_your_progress), 12, MUTED, Typeface.BOLD);
+        heading.setLetterSpacing(.08f);
+        main.addView(heading);
+        main.addView(space(6));
+        main.addView(text(getString(R.string.level_fmt, progress.level()), 24, INK, Typeface.BOLD));
+        top.addView(main, new LinearLayout.LayoutParams(0,
+                ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
+        top.addView(RiftStyle.pill(this, progress.xpInLevel() + " / 350 XP",
+                PRIMARY, Color.rgb(235, 234, 255)));
         card.addView(top);
 
         ProgressBar bar = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
         bar.setMax(350);
         bar.setProgress(progress.xpInLevel());
-        LinearLayout.LayoutParams barLp = new LinearLayout.LayoutParams(
+        bar.setProgressTintList(android.content.res.ColorStateList.valueOf(PRIMARY));
+        bar.setProgressBackgroundTintList(android.content.res.ColorStateList.valueOf(SOFT));
+        LinearLayout.LayoutParams bp = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, dp(8));
-        barLp.topMargin = dp(10);
-        card.addView(bar, barLp);
+        bp.topMargin = dp(15);
+        card.addView(bar, bp);
+        card.addView(space(15));
 
-        TextView stats = text(getString(R.string.combo_stats_fmt, progress.combo(),
-                progress.bestCombo(), progress.answered()), 13, MUTED, Typeface.NORMAL);
-        LinearLayout.LayoutParams statsLp = matchWrap();
-        statsLp.topMargin = dp(10);
-        card.addView(stats, statsLp);
-
-        String equippedTitle = shop == null ? "" : shop.customTitle(Locale.getDefault());
-        String rankValue = equippedTitle.isEmpty() ? rankForCombo(progress.bestCombo()) : equippedTitle;
-        TextView rank = text(getString(R.string.rank_fmt, rankValue),
-                13, PRIMARY, Typeface.BOLD);
-        LinearLayout.LayoutParams rankLp = matchWrap();
-        rankLp.topMargin = dp(6);
-        card.addView(rank, rankLp);
-
+        LinearLayout chips = row();
+        chips.addView(RiftStyle.pill(this, "◇  " + getString(R.string.crystals_fmt, economy.balance()),
+                RiftStyle.BLUE, Color.rgb(239, 241, 255)));
+        chips.addView(spaceHorizontal(8));
+        chips.addView(RiftStyle.pill(this, "✦  " + getString(R.string.play_credits_fmt, playCredits.balance()),
+                RiftStyle.VIOLET, Color.rgb(246, 239, 255)));
+        card.addView(chips);
         return card;
     }
 
@@ -2012,6 +2037,46 @@ public class MainActivity extends Activity {
         ).show();
     }
 
+    private View sectionHeading(String heading, String caption) {
+        LinearLayout group = column();
+        group.addView(text(heading, 21, INK, Typeface.BOLD));
+        TextView supporting = text(caption, 13, MUTED, Typeface.NORMAL);
+        supporting.setPadding(0, dp(4), 0, 0);
+        group.addView(supporting);
+        return group;
+    }
+
+    private View spaceHorizontal(int width) {
+        Space spacer = new Space(this);
+        spacer.setLayoutParams(new LinearLayout.LayoutParams(dp(width), 1));
+        return spacer;
+    }
+
+    private View featureCard(String symbol, String heading, String caption, int tint, Runnable action) {
+        LinearLayout card = row();
+        card.setPadding(dp(15), dp(15), dp(15), dp(15));
+        card.setBackground(RiftStyle.shape(this, Color.WHITE, 19, 1, SOFT));
+        RiftStyle.raise(card, 2);
+        TextView emblem = text(symbol, 26, tint, Typeface.BOLD);
+        emblem.setGravity(Gravity.CENTER);
+        emblem.setBackground(RiftStyle.shape(this,
+                tint == RiftStyle.VIOLET ? Color.rgb(245, 238, 255) :
+                tint == RiftStyle.GOOD ? Color.rgb(231, 249, 241) :
+                Color.rgb(237, 240, 255), 16, 0, Color.TRANSPARENT));
+        card.addView(emblem, new LinearLayout.LayoutParams(dp(56), dp(56)));
+        LinearLayout labels = column();
+        labels.setPadding(dp(14), 0, 0, 0);
+        labels.addView(text(heading, 17, INK, Typeface.BOLD));
+        labels.addView(space(4));
+        labels.addView(text(caption, 13, MUTED, Typeface.NORMAL));
+        card.addView(labels, new LinearLayout.LayoutParams(0,
+                ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
+        card.addView(text("›", 28, tint, Typeface.BOLD));
+        card.setOnClickListener(v -> action.run());
+        card.setClickable(true);
+        return card;
+    }
+
     private LinearLayout column() {
         LinearLayout l = new LinearLayout(this);
         l.setOrientation(LinearLayout.VERTICAL);
@@ -2033,6 +2098,8 @@ public class MainActivity extends Activity {
         scroll.addView(content, new ScrollView.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         setContentView(scroll);
+        scroll.setAlpha(0f);
+        scroll.animate().alpha(1f).setDuration(180).start();
         hideSystemNavigation();
     }
 
@@ -2041,20 +2108,24 @@ public class MainActivity extends Activity {
         t.setText(value);
         t.setTextSize(sp);
         t.setTextColor(color);
-        t.setTypeface(Typeface.DEFAULT, style);
+        t.setIncludeFontPadding(false);
+        t.setTypeface(Typeface.create(style == Typeface.BOLD ? "sans-serif-medium" : "sans-serif",
+                style));
         return t;
     }
 
     private Button answerButton(String value) {
         Button b = new Button(this);
         b.setText(value);
-        b.setTextSize(18);
+        b.setTextSize(17);
+        b.setTypeface(Typeface.create("sans-serif-medium", Typeface.NORMAL));
         b.setTextColor(INK);
         b.setAllCaps(false);
         b.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
-        b.setPadding(dp(18), dp(10), dp(18), dp(10));
+        b.setPadding(dp(18), dp(11), dp(18), dp(11));
         b.setMinHeight(dp(64));
-        b.setBackground(roundRect(CARD, shop == null ? 14 : shop.buttonRadius(14), 1, SOFT));
+        b.setBackground(RiftStyle.shape(this, CARD, 17, 1, SOFT));
+        b.setElevation(0);
         return b;
     }
 
@@ -2063,10 +2134,11 @@ public class MainActivity extends Activity {
         b.setText(value);
         b.setTextSize(17);
         b.setTextColor(Color.WHITE);
-        b.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
+        b.setTypeface(Typeface.create("sans-serif-medium", Typeface.BOLD));
         b.setAllCaps(false);
         b.setMinHeight(dp(58));
-        b.setBackground(roundRect(PRIMARY, shop == null ? 14 : shop.buttonRadius(14), 0, Color.TRANSPARENT));
+        b.setBackground(RiftStyle.gradient(this, 18, RiftStyle.BLUE, RiftStyle.VIOLET));
+        RiftStyle.raise(b, 3);
         return b;
     }
 
@@ -2075,9 +2147,11 @@ public class MainActivity extends Activity {
         b.setText(value);
         b.setTextSize(16);
         b.setTextColor(INK);
+        b.setTypeface(Typeface.create("sans-serif-medium", Typeface.BOLD));
         b.setAllCaps(false);
         b.setMinHeight(dp(54));
-        b.setBackground(roundRect(CARD, shop == null ? 14 : shop.buttonRadius(14), 1, SOFT));
+        b.setBackground(RiftStyle.shape(this, CARD, 17, 1, SOFT));
+        b.setElevation(0);
         return b;
     }
 
@@ -2088,7 +2162,8 @@ public class MainActivity extends Activity {
         b.setTextColor(INK);
         b.setAllCaps(false);
         b.setPadding(0, 0, 0, 0);
-        b.setBackground(roundRect(CARD, 12, 1, SOFT));
+        b.setBackground(RiftStyle.shape(this, CARD, 15, 1, SOFT));
+        b.setElevation(0);
         return b;
     }
 
