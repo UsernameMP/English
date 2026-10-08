@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="rift_eyebrow">Твоя вселенная знаний</string>
+    <string name="rift_hero_kicker">НОВОЕ ПРИКЛЮЧЕНИЕ</string>
+    <string name="rift_hero_title">Открой свои возможности.</string>
+    <string name="rift_hero_subtitle">Одно испытание за другим. Каждый навык ведёт вперёд.</string>
+    <string name="rift_explore">Исследуй Rift</string>
+    <string name="rift_explore_caption">Выбери направление нового открытия</string>
+    <string name="rift_atlas_caption">Узнай, как связаны твои знания</string>
+    <string name="rift_world_caption">Преврати награды в свой мир</string>
+    <string name="rift_shop_caption">Создай собственный стиль</string>
+    <string name="rift_your_progress">ТВОЙ ПРОГРЕСС</string>
+    <string name="rift_paths">Твой путь знаний</string>
+    <string name="rift_nodes_hint">Нажми на узел, чтобы изучить тему</string>
+    <string name="rift_node_prereqs">Для изучения нужно</string>
+    <string name="rift_no_prereqs">Можно изучать сейчас</string>
+    <string name="rift_result_kicker">ИСПЫТАНИЕ ПРОЙДЕНО</string>
+    <string name="rift_milestone">Каждый ответ делает тебя сильнее</string>
+    <string name="rift_training_kicker">ВЫБЕРИ ПУТЬ</string>
+    <string name="rift_course_kicker">НОВЫЕ ОТКРЫТИЯ</string>
+    <string name="rift_world_kicker">ТВОЯ ВСЕЛЕННАЯ</string>
+    <string name="rift_shop_kicker">УСИЛЕНИЯ</string>
+    <string name="rift_atlas_kicker">АТЛАС ЗНАНИЙ</string>
+    <string name="rift_open">Открыть</string>
+    <string name="rift_locked">Закрыто</string>
+    <string name="rift_mastered">Освоено</string>
+    <string name="rift_in_progress">Изучается</string>
     <string name="app_name">Rift</string>
     <string name="deadline_remaining">%1$d дн. до 9 октября</string>
     <string name="training_mode">Тренировочный режим</string>
