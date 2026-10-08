@@ -290,36 +290,97 @@ public class MainActivity extends Activity {
 
     private void showCourseStorefront() {
         audio.stop();
-        LinearLayout root=column(); root.setPadding(dp(20),dp(18),dp(20),dp(30));
-        Button back=compactButton("←"); back.setOnClickListener(v->showHome()); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
-        root.addView(space(12)); root.addView(text(getString(R.string.choose_subject),28,INK,Typeface.BOLD));
-        root.addView(text(getString(R.string.choose_subject_caption),14,MUTED,Typeface.NORMAL)); root.addView(space(14));
+        LinearLayout root = column();
+        root.setPadding(dp(20), dp(18), dp(20), dp(34));
+        Button back = compactButton("←");
+        back.setContentDescription(getString(R.string.home));
+        back.setOnClickListener(v -> showHome());
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
+        root.addView(space(24));
 
-        ContentCatalog catalog=new ContentCatalog(this);
-        EntitlementStore entitlements=new EntitlementStore(this);
-        EntitlementProductCatalog products=new EntitlementProductCatalog(this);
-        List<String> subjects=catalog.subjects();
-        for(int i=0;i<subjects.size();i+=2){
-            LinearLayout line=row();
-            for(int j=i;j<Math.min(i+2,subjects.size());j++){
-                final String subject=subjects.get(j);
-                boolean unlocked=subjectUnlocked(subject,catalog,entitlements);
-                String icon="english".equals(subject)?"Aa":
-                        ("mathematics".equals(subject)?"∑":
-                        ("biology".equals(subject)?"🧬":
-                        ("geography".equals(subject)?"◎":
-                        ("history".equals(subject)?"⌛":
-                        ("social_science".equals(subject)?"§":
-                        ("ecology".equals(subject)?"♻":"</>"))))));
-                Button tile=secondaryButton(icon+"\n"+subjectLabel(subject)+(unlocked?"":"\n🔒"));
-                tile.setTextSize(17); tile.setMinHeight(dp(100));
-                tile.setOnClickListener(v->{ if(unlocked) showGradePicker(subject); else showSubscriptionOffer(subject,products); });
-                LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(108),1f); if(j%2==1) lp.leftMargin=dp(8); line.addView(tile,lp);
+        TextView eyebrow = text(getString(R.string.rift_course_kicker), 12, PRIMARY, Typeface.BOLD);
+        eyebrow.setLetterSpacing(.14f);
+        root.addView(eyebrow);
+        root.addView(space(6));
+        root.addView(text(getString(R.string.choose_subject), 30, INK, Typeface.BOLD));
+        TextView caption = text(getString(R.string.choose_subject_caption), 15, MUTED, Typeface.NORMAL);
+        caption.setPadding(0, dp(7), 0, 0);
+        root.addView(caption);
+        root.addView(space(22));
+
+        ContentCatalog catalog = new ContentCatalog(this);
+        EntitlementStore entitlements = new EntitlementStore(this);
+        EntitlementProductCatalog products = new EntitlementProductCatalog(this);
+        List<String> subjects = catalog.subjects();
+        for (int i = 0; i < subjects.size(); i += 2) {
+            LinearLayout line = row();
+            for (int j = i; j < Math.min(i + 2, subjects.size()); j++) {
+                String subject = subjects.get(j);
+                boolean unlocked = subjectUnlocked(subject, catalog, entitlements);
+                int index = j;
+                View tile = subjectCard(subject, unlocked, () -> {
+                    if (unlocked) showGradePicker(subject);
+                    else showSubscriptionOffer(subject, products);
+                });
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                        0, dp(152), 1f);
+                if (index % 2 == 1) lp.leftMargin = dp(10);
+                line.addView(tile, lp);
             }
-            if(line.getChildCount()==1) line.addView(space(1),new LinearLayout.LayoutParams(0,dp(108),1f));
-            LinearLayout.LayoutParams rlp=matchWrap(); rlp.bottomMargin=dp(8); root.addView(line,rlp);
+            if (line.getChildCount() == 1) line.addView(new View(this),
+                    new LinearLayout.LayoutParams(0, dp(152), 1f));
+            LinearLayout.LayoutParams lp = matchWrap();
+            lp.bottomMargin = dp(10);
+            root.addView(line, lp);
         }
         setScrollable(root);
+    }
+
+    private String subjectGlyph(String subject) {
+        if ("english".equals(subject)) return "Aa";
+        if ("mathematics".equals(subject)) return "∑";
+        if ("informatics".equals(subject)) return "</>";
+        if ("biology".equals(subject)) return "DNA";
+        if ("geography".equals(subject)) return "◎";
+        if ("history".equals(subject)) return "⌛";
+        if ("ecology".equals(subject)) return "♧";
+        if ("social_science".equals(subject)) return "§";
+        return "✦";
+    }
+
+    private int subjectTint(String subject) {
+        if ("english".equals(subject)) return RiftStyle.BLUE;
+        if ("mathematics".equals(subject)) return RiftStyle.VIOLET;
+        if ("biology".equals(subject) || "ecology".equals(subject)) return RiftStyle.GOOD;
+        if ("geography".equals(subject)) return Color.rgb(13, 146, 195);
+        if ("history".equals(subject)) return Color.rgb(198, 121, 49);
+        return Color.rgb(90, 93, 172);
+    }
+
+    private View subjectCard(String subject, boolean unlocked, Runnable onClick) {
+        int tint = subjectTint(subject);
+        LinearLayout tile = column();
+        tile.setPadding(dp(16), dp(16), dp(12), dp(13));
+        tile.setBackground(RiftStyle.shape(this, Color.WHITE, 21, 1, SOFT));
+        RiftStyle.raise(tile, 2);
+        TextView glyph = text(subjectGlyph(subject),
+                subjectGlyph(subject).length() > 2 ? 16 : 27, tint, Typeface.BOLD);
+        glyph.setGravity(Gravity.CENTER);
+        glyph.setBackground(RiftStyle.shape(this,
+                tint == RiftStyle.GOOD ? Color.rgb(233, 249, 239)
+                        : Color.rgb(238, 239, 255), 16, 0, Color.TRANSPARENT));
+        tile.addView(glyph, new LinearLayout.LayoutParams(dp(51), dp(51)));
+        tile.addView(space(15));
+        TextView name = text(subjectLabel(subject), 15, INK, Typeface.BOLD);
+        name.setMaxLines(2);
+        name.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        tile.addView(name);
+        tile.addView(space(5));
+        tile.addView(text(getString(unlocked ? R.string.rift_open : R.string.rift_locked),
+                12, unlocked ? tint : MUTED, Typeface.BOLD));
+        tile.setAlpha(unlocked ? 1f : .78f);
+        tile.setOnClickListener(v -> onClick.run());
+        return tile;
     }
 
     private boolean subjectUnlocked(String subject,ContentCatalog catalog,EntitlementStore entitlements){
@@ -400,56 +461,126 @@ public class MainActivity extends Activity {
         showTrainingHub();
     }
 
-    private void showTrainingHub(){
-        LinearLayout root=column(); root.setPadding(dp(20),dp(18),dp(20),dp(30));
-        Button back=compactButton("←"); back.setOnClickListener(v->showHome()); root.addView(back,new LinearLayout.LayoutParams(dp(52),dp(44)));
-        root.addView(space(12)); root.addView(text(getString(R.string.learn_title),28,INK,Typeface.BOLD));
-        String target=learningContext.target();
-        String targetLabel=LearningContextStore.ALL_OLYMPIADS.equals(target)?getString(R.string.all_olympiads):competitionLabel(target);
-        Button context=secondaryButton(subjectLabel(QuestionBank.currentPack().subject)+" · "+getString(R.string.grade_fmt,learningContext.grade())+" · "+targetLabel+" ▾");
-        context.setContentDescription(getString(R.string.change_course));
-        context.setOnClickListener(v->showCourseStorefront()); root.addView(context,matchWrap()); root.addView(space(14));
-        Button auto=primaryButton(getString(R.string.auto_training)); auto.setOnClickListener(v->startSession(getString(R.string.quick_training),quickSession())); root.addView(auto,matchWrap());
-        root.addView(space(14)); root.addView(text(getString(R.string.choose_topic),18,INK,Typeface.BOLD)); root.addView(space(10));
-        if("english".equals(QuestionBank.currentPack().subject)) addTopicGrid(root,new String[]{"A+","⌕","▶","✦"},new int[]{R.string.grammar_title,R.string.reading_title,R.string.listening_title,R.string.story_title},new Question.Type[]{Question.Type.GRAMMAR,Question.Type.READING,Question.Type.LISTENING,Question.Type.STORY});
+    private void showTrainingHub() {
+        LinearLayout root = column();
+        root.setPadding(dp(20), dp(18), dp(20), dp(36));
+        Button back = compactButton("←");
+        back.setOnClickListener(v -> showHome());
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
+        root.addView(space(22));
+
+        TextView kicker = text(getString(R.string.rift_training_kicker),
+                12, PRIMARY, Typeface.BOLD);
+        kicker.setLetterSpacing(.14f);
+        root.addView(kicker);
+        root.addView(space(6));
+        root.addView(text(getString(R.string.learn_title), 30, INK, Typeface.BOLD));
+        root.addView(space(18));
+        String target = learningContext.target();
+        String targetLabel = LearningContextStore.ALL_OLYMPIADS.equals(target)
+                ? getString(R.string.all_olympiads) : competitionLabel(target);
+
+        LinearLayout hero = column();
+        hero.setPadding(dp(20), dp(21), dp(20), dp(21));
+        hero.setBackground(RiftStyle.cosmic(this, 23));
+        RiftStyle.raise(hero, 5);
+        TextView label = text(subjectLabel(QuestionBank.currentPack().subject), 24,
+                Color.WHITE, Typeface.BOLD);
+        hero.addView(label);
+        hero.addView(space(5));
+        hero.addView(text(getString(R.string.grade_fmt, learningContext.grade())
+                        + " · " + targetLabel, 14, Color.rgb(212, 224, 255), Typeface.NORMAL));
+        hero.addView(space(19));
+        Button auto = primaryButton(getString(R.string.auto_training) + "  →");
+        auto.setBackground(RiftStyle.shape(this, Color.WHITE, 17, 0, Color.TRANSPARENT));
+        auto.setTextColor(RiftStyle.NAVY);
+        auto.setOnClickListener(v -> startSession(getString(R.string.quick_training), quickSession()));
+        hero.addView(auto, matchWrap());
+        root.addView(hero, matchWrap());
+
+        root.addView(space(10));
+        Button change = secondaryButton(getString(R.string.change_course) + "  ↗");
+        change.setOnClickListener(v -> showCourseStorefront());
+        root.addView(change, matchWrap());
+        root.addView(space(24));
+
+        root.addView(sectionHeading(getString(R.string.choose_topic),
+                getString(R.string.rift_explore_caption)));
+        root.addView(space(13));
+        if ("english".equals(QuestionBank.currentPack().subject))
+            addTopicGrid(root, new String[]{"A+", "⌕", "♫", "✦"},
+                    new int[]{R.string.grammar_title, R.string.reading_title,
+                            R.string.listening_title, R.string.story_title},
+                    new Question.Type[]{Question.Type.GRAMMAR, Question.Type.READING,
+                            Question.Type.LISTENING, Question.Type.STORY});
         else addKnowledgeTopicGrid(root);
-        root.addView(space(10)); Button atlas=secondaryButton(getString(R.string.skill_map)); atlas.setOnClickListener(v->showProgress()); root.addView(atlas,matchWrap());
+
+        root.addView(space(14));
+        root.addView(featureCard("◇", getString(R.string.skill_map),
+                getString(R.string.rift_atlas_caption), RiftStyle.BLUE, () -> showProgress()));
         setScrollable(root);
     }
 
-    private void addTopicGrid(LinearLayout root,String[] icons,int[] labels,Question.Type[] types) {
-        for(int row=0;row<2;row++) {
-            LinearLayout line=row();
-            for(int col=0;col<2;col++) {
-                int n=row*2+col;
-                Button tile=secondaryButton(icons[n]+"\n"+getString(labels[n]));
-                tile.setTextSize(17); tile.setMinHeight(dp(86));
-                final Question.Type type=types[n];
-                tile.setOnClickListener(v->startTopic(type,getString(labels[n])));
-                LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(92),1f);
-                if(col==1) lp.leftMargin=dp(8);
-                line.addView(tile,lp);
+    private View topicCard(String glyph, String title, int color, Runnable action) {
+        LinearLayout tile = column();
+        tile.setPadding(dp(15), dp(15), dp(14), dp(12));
+        tile.setBackground(RiftStyle.shape(this, Color.WHITE, 19, 1, SOFT));
+        TextView badge = text(glyph, 24, color, Typeface.BOLD);
+        badge.setGravity(Gravity.CENTER);
+        badge.setBackground(RiftStyle.shape(this, Color.rgb(239, 240, 255),
+                14, 0, Color.TRANSPARENT));
+        tile.addView(badge, new LinearLayout.LayoutParams(dp(48), dp(48)));
+        tile.addView(space(10));
+        TextView heading = text(title, 15, INK, Typeface.BOLD);
+        heading.setMaxLines(2);
+        heading.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        tile.addView(heading);
+        tile.setClickable(true);
+        tile.setOnClickListener(v -> action.run());
+        return tile;
+    }
+
+    private void addTopicGrid(LinearLayout root, String[] icons, int[] labels, Question.Type[] types) {
+        for (int row = 0; row < 2; row++) {
+            LinearLayout line = row();
+            for (int col = 0; col < 2; col++) {
+                int n = row * 2 + col;
+                final Question.Type type = types[n];
+                int title = labels[n];
+                View tile = topicCard(icons[n], getString(title),
+                        n % 2 == 0 ? RiftStyle.BLUE : RiftStyle.VIOLET,
+                        () -> startTopic(type, getString(title)));
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                        0, dp(118), 1f);
+                if (col == 1) lp.leftMargin = dp(10);
+                line.addView(tile, lp);
             }
-            LinearLayout.LayoutParams rlp=matchWrap(); rlp.bottomMargin=dp(8); root.addView(line,rlp);
+            LinearLayout.LayoutParams lp = matchWrap();
+            lp.bottomMargin = dp(10);
+            root.addView(line, lp);
         }
     }
 
     private void addKnowledgeTopicGrid(LinearLayout root) {
-        List<String> ids=QuestionBank.knowledgeIds();
-        int count=Math.min(8,ids.size());
-        for(int start=0;start<count;start+=2) {
-            LinearLayout line=row();
-            for(int n=start;n<Math.min(start+2,count);n++) {
-                final String id=ids.get(n);
-                Button tile=secondaryButton("◆\n"+QuestionBank.knowledgeLabel(id,Locale.getDefault()));
-                tile.setTextSize(15); tile.setMinHeight(dp(86));
-                tile.setOnClickListener(v->startKnowledgeTopic(id));
-                LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(92),1f);
-                if(n%2==1) lp.leftMargin=dp(8);
-                line.addView(tile,lp);
+        List<String> ids = QuestionBank.knowledgeIds();
+        int count = Math.min(8, ids.size());
+        for (int start = 0; start < count; start += 2) {
+            LinearLayout line = row();
+            for (int i = start; i < Math.min(start + 2, count); i++) {
+                final String id = ids.get(i);
+                View tile = topicCard("◇",
+                        QuestionBank.knowledgeLabel(id, Locale.getDefault()),
+                        i % 2 == 0 ? RiftStyle.BLUE : RiftStyle.VIOLET,
+                        () -> startKnowledgeTopic(id));
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, dp(118), 1f);
+                if (i % 2 == 1) lp.leftMargin = dp(10);
+                line.addView(tile, lp);
             }
-            if(line.getChildCount()==1) line.addView(space(1),new LinearLayout.LayoutParams(0,dp(92),1f));
-            LinearLayout.LayoutParams rlp=matchWrap(); rlp.bottomMargin=dp(8); root.addView(line,rlp);
+            if (line.getChildCount() == 1) line.addView(new View(this),
+                    new LinearLayout.LayoutParams(0, dp(118), 1f));
+            LinearLayout.LayoutParams lp = matchWrap();
+            lp.bottomMargin = dp(10);
+            root.addView(line, lp);
         }
     }
 
@@ -1231,49 +1362,63 @@ public class MainActivity extends Activity {
 
     private void showProgress() {
         LinearLayout root = column();
-        root.setPadding(dp(20), dp(20), dp(20), dp(28));
-
+        root.setPadding(dp(18), dp(18), dp(18), dp(36));
         Button back = compactButton("←");
         back.setOnClickListener(v -> showHome());
-        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
+        root.addView(space(23));
+        TextView kicker = text(getString(R.string.rift_atlas_kicker), 12, PRIMARY, Typeface.BOLD);
+        kicker.setLetterSpacing(.14f);
+        root.addView(kicker);
+        root.addView(space(6));
+        root.addView(text(getString(R.string.rift_paths), 30, INK, Typeface.BOLD));
+        TextView description = text(getString(R.string.rift_nodes_hint), 15, MUTED, Typeface.NORMAL);
+        description.setPadding(0, dp(8), 0, 0);
+        root.addView(description);
+        root.addView(space(18));
 
-        root.addView(space(14));
-        root.addView(text(getString(R.string.skill_map), 28, INK, Typeface.BOLD));
-        root.addView(text(getString(R.string.skill_map_caption),
-                14, MUTED, Typeface.NORMAL));
-        root.addView(space(16));
-
+        LinearLayout summary = row();
+        summary.setPadding(dp(16), dp(15), dp(16), dp(15));
+        summary.setBackground(RiftStyle.shape(this, Color.WHITE, 18, 1, SOFT));
         List<String> skills = new ArrayList<>(QuestionBank.knowledgeIds());
+        int mastered = 0;
+        for (String id : skills)
+            if (progress.state(id) == ProgressStore.SkillState.CONFIDENT) mastered++;
+        summary.addView(text(mastered + " / " + skills.size(), 25, PRIMARY, Typeface.BOLD));
+        TextView note = text("  " + getString(R.string.rift_mastered), 14, MUTED, Typeface.NORMAL);
+        summary.addView(note);
+        root.addView(summary);
+
         skills.sort((a, b) -> {
-            int state = Integer.compare(progress.state(a).ordinal(), progress.state(b).ordinal());
-            if (state != 0) return state;
-            return Integer.compare(progress.attempts(a), progress.attempts(b));
+            int deps = Integer.compare(QuestionBank.prerequisitesForKnowledge(a).size(),
+                    QuestionBank.prerequisitesForKnowledge(b).size());
+            return deps != 0 ? deps : a.compareTo(b);
         });
-
-        for (String skill : skills) {
-            ProgressStore.SkillState state = progress.state(skill);
-            LinearLayout line = row();
-            line.setPadding(dp(14), dp(13), dp(14), dp(13));
-            line.setBackground(roundRect(CARD, 12, 1, SOFT));
-
-            TextView name = text(skillName(skill), 15, INK, Typeface.BOLD);
-            int stateColor;
-            switch (state) {
-                case CONFIDENT: stateColor = GOOD; break;
-                case GROWING: stateColor = Color.rgb(176, 119, 20); break;
-                case LEARNING: stateColor = PRIMARY; break;
-                default: stateColor = MUTED;
-            }
-            TextView value = text(skillStateLabel(state), 14, stateColor, Typeface.BOLD);
-            line.addView(name, new LinearLayout.LayoutParams(0,
-                    ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
-            line.addView(value);
-
-            LinearLayout.LayoutParams lp = matchWrap();
-            lp.bottomMargin = dp(7);
-            root.addView(line, lp);
+        List<String> names = new ArrayList<>();
+        List<Integer> statuses = new ArrayList<>();
+        for (String id : skills) {
+            names.add(QuestionBank.knowledgeLabel(id, Locale.getDefault()));
+            ProgressStore.SkillState state = progress.state(id);
+            statuses.add(state == ProgressStore.SkillState.CONFIDENT ? 3 :
+                    state == ProgressStore.SkillState.GROWING ? 2 :
+                    state == ProgressStore.SkillState.LEARNING ? 1 : 0);
         }
-
+        RiftStyle.KnowledgeMap atlas = new RiftStyle.KnowledgeMap(this, skills, names, statuses,
+                QuestionBank.knowledgeRelations(), id -> {
+            List<String> prereqs = QuestionBank.prerequisitesForKnowledge(id);
+            StringBuilder details = new StringBuilder(skillStateLabel(progress.state(id)));
+            details.append("\n\n").append(getString(R.string.rift_node_prereqs)).append(":\n");
+            if (prereqs.isEmpty()) details.append(getString(R.string.rift_no_prereqs));
+            else for (String pre : prereqs)
+                details.append("• ").append(QuestionBank.knowledgeLabel(pre, Locale.getDefault())).append("\n");
+            new AlertDialog.Builder(this)
+                    .setTitle(QuestionBank.knowledgeLabel(id, Locale.getDefault()))
+                    .setMessage(details.toString().trim())
+                    .setPositiveButton(getString(R.string.learn_now), (d, w) -> startKnowledgeTopic(id))
+                    .setNegativeButton(getString(R.string.dictionary_close), null)
+                    .show();
+        });
+        root.addView(atlas, matchWrap());
         setScrollable(root);
     }
 
