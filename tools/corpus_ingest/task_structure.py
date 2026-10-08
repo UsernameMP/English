@@ -197,7 +197,7 @@ CAPTION_RE = re.compile(
     re.I,
 )
 INSTRUCTION_RE = re.compile(
-    r"\b(?:choose|select|match|complete|fill|answer|write|read|listen|calculate|compute|find|prove|"
+    r"\b(?:choose|select|match|complete|fill|answer|write|read|listen|calculate|compute|find|prove|determine|identify|arrange|compare|explain|"
     r"выберите|укажите|соотнесите|установите|заполните|ответьте|напишите|прочитайте|вычислите|найдите|докажите|"
     r"расположите|определите|рассмотрите)\b",
     re.I,
