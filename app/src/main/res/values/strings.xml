@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">English Sprint</string>
+    <string name="app_name">Rift</string>
     <string name="deadline_remaining">%1$d days until October 9</string>
     <string name="training_mode">Training mode</string>
     <string name="play">▶  PLAY</string>
