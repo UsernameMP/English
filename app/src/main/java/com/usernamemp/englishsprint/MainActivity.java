@@ -867,6 +867,8 @@ public class MainActivity extends Activity {
         ProgressBar bar = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
         bar.setMax(session.size());
         bar.setProgress(questionIndex);
+        bar.setProgressTintList(android.content.res.ColorStateList.valueOf(PRIMARY));
+        bar.setProgressBackgroundTintList(android.content.res.ColorStateList.valueOf(SOFT));
         LinearLayout.LayoutParams pblp = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, dp(6));
         pblp.topMargin = dp(6);
@@ -876,14 +878,15 @@ public class MainActivity extends Activity {
 
         TextView chip = text(skillName(q.skill), 13, PRIMARY, Typeface.BOLD);
         chip.setPadding(dp(10), dp(6), dp(10), dp(6));
-        chip.setBackground(roundRect(Color.rgb(232, 237, 255), 20, 0, Color.TRANSPARENT));
+        chip.setBackground(RiftStyle.shape(this, Color.rgb(235, 235, 255),
+                20, 0, Color.TRANSPARENT));
         root.addView(chip, new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
         root.addView(space(12));
 
         TextView prompt = text(q.prompt, 24, INK, Typeface.BOLD);
-        prompt.setLineSpacing(0, 1.08f);
+        prompt.setLineSpacing(dp(3), 1.12f);
         enableDictionaryLinks(prompt, q.prompt);
         root.addView(prompt);
 
@@ -1241,9 +1244,9 @@ public class MainActivity extends Activity {
 
         LinearLayout feedback = column();
         feedback.setPadding(dp(16), dp(14), dp(16), dp(14));
-        feedback.setBackground(roundRect(
-                correct ? Color.rgb(232, 248, 240) : Color.rgb(246, 247, 251),
-                14, 0, Color.TRANSPARENT));
+        feedback.setBackground(RiftStyle.shape(this,
+                correct ? Color.rgb(232, 249, 241) : Color.rgb(239, 242, 252),
+                19, 1, correct ? Color.rgb(193, 235, 213) : SOFT));
 
         TextView verdict = text(reaction.symbol + "  " + reaction.headline,
                 17, correct ? GOOD : MUTED, Typeface.BOLD);
@@ -1772,31 +1775,43 @@ public class MainActivity extends Activity {
     private void showShop() {
         homeVisible = false;
         LinearLayout root = column();
-        root.setPadding(dp(20), dp(20), dp(20), dp(30));
-
+        root.setPadding(dp(20), dp(18), dp(20), dp(36));
         Button back = compactButton("←");
         back.setOnClickListener(v -> showHome());
-        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
-        root.addView(space(14));
-        root.addView(text(getString(R.string.shop_title), 28, INK, Typeface.BOLD));
-        root.addView(text(getString(R.string.shop_balance_fmt, economy.balance()), 18, PRIMARY, Typeface.BOLD));
-        root.addView(space(16));
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
+        root.addView(space(23));
 
-        for (ShopItem item : shop.items()) {
-            root.addView(shopItemCard(item));
-        }
+        TextView kicker = text(getString(R.string.rift_shop_kicker), 12, PRIMARY, Typeface.BOLD);
+        kicker.setLetterSpacing(.14f);
+        root.addView(kicker);
+        root.addView(space(6));
+        root.addView(text(getString(R.string.shop_title), 30, INK, Typeface.BOLD));
+        root.addView(space(17));
 
-        root.addView(space(18));
+        LinearLayout balance = column();
+        balance.setPadding(dp(20), dp(20), dp(20), dp(22));
+        balance.setBackground(RiftStyle.cosmic(this, 22));
+        RiftStyle.raise(balance, 4);
+        balance.addView(text("◇", 28, RiftStyle.CYAN, Typeface.BOLD));
+        balance.addView(space(7));
+        balance.addView(text(getString(R.string.shop_balance_fmt, economy.balance()),
+                23, Color.WHITE, Typeface.BOLD));
+        balance.addView(space(7));
+        balance.addView(text(getString(R.string.rift_shop_caption),
+                14, Color.rgb(213, 223, 255), Typeface.NORMAL));
+        root.addView(balance, matchWrap());
+        root.addView(space(22));
+
+        for (ShopItem item : shop.items()) root.addView(shopItemCard(item));
+
+        root.addView(space(17));
         root.addView(text(getString(R.string.digital_rewards), 22, INK, Typeface.BOLD));
-        TextView security = text(getString(R.string.reward_local_security_note), 13, MUTED, Typeface.NORMAL);
+        TextView security = text(getString(R.string.reward_local_security_note),
+                13, MUTED, Typeface.NORMAL);
         security.setLineSpacing(dp(3), 1.04f);
-        security.setPadding(0, dp(5), 0, dp(12));
+        security.setPadding(0, dp(8), 0, dp(14));
         root.addView(security);
-
-        for (DigitalRewardItem item : digitalRewards.items()) {
-            root.addView(digitalRewardCard(item));
-        }
-
+        for (DigitalRewardItem item : digitalRewards.items()) root.addView(digitalRewardCard(item));
         setScrollable(root);
     }
 
@@ -1827,23 +1842,32 @@ public class MainActivity extends Activity {
 
     private void showWorkshop() {
         LinearLayout root = column();
-        root.setPadding(dp(20), dp(20), dp(20), dp(30));
+        root.setPadding(dp(20), dp(18), dp(20), dp(36));
         Button back = compactButton("←");
         back.setOnClickListener(v -> showHome());
-        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(44)));
-        root.addView(space(14));
-        root.addView(text(getString(R.string.workshop_title), 28, INK, Typeface.BOLD));
-        root.addView(text(getString(R.string.workshop_caption), 14, MUTED, Typeface.NORMAL));
-        root.addView(text(getString(R.string.shop_balance_fmt, economy.balance()), 18, PRIMARY, Typeface.BOLD));
-        root.addView(space(14));
+        root.addView(back, new LinearLayout.LayoutParams(dp(52), dp(48)));
+        root.addView(space(22));
+        TextView kicker = text(getString(R.string.rift_shop_kicker), 12, PRIMARY, Typeface.BOLD);
+        kicker.setLetterSpacing(.14f);
+        root.addView(kicker);
+        root.addView(space(7));
+        root.addView(text(getString(R.string.workshop_title), 30, INK, Typeface.BOLD));
+        root.addView(space(7));
+        root.addView(text(getString(R.string.workshop_caption), 15, MUTED, Typeface.NORMAL));
+        root.addView(space(13));
+        root.addView(RiftStyle.pill(this,
+                "◇  " + getString(R.string.shop_balance_fmt, economy.balance()),
+                PRIMARY, Color.rgb(238, 239, 255)));
+        root.addView(space(23));
         for (WorkshopItem item : workshop.items()) root.addView(workshopCard(item));
         setScrollable(root);
     }
 
     private View workshopCard(WorkshopItem item) {
         LinearLayout card = column();
-        card.setPadding(dp(16), dp(14), dp(16), dp(14));
-        card.setBackground(roundRect(CARD, 14, 1, SOFT));
+        card.setPadding(dp(17), dp(17), dp(17), dp(17));
+        card.setBackground(RiftStyle.shape(this, CARD, 20, 1, SOFT));
+        RiftStyle.raise(card, 2);
         card.addView(text(item.icon + "  " + item.name(Locale.getDefault()), 19, INK, Typeface.BOLD));
         card.addView(text(item.description(Locale.getDefault()), 14, MUTED, Typeface.NORMAL));
         Button action;
@@ -1872,19 +1896,20 @@ public class MainActivity extends Activity {
 
     private View shopItemCard(ShopItem item) {
         LinearLayout card = column();
-        card.setPadding(dp(16), dp(14), dp(16), dp(14));
+        card.setPadding(dp(17), dp(17), dp(17), dp(17));
 
         int previewColor = CARD;
         if ("background".equals(item.type)) {
             try { previewColor = Color.parseColor(item.payload.optString("color")); }
             catch (Exception ignored) {}
         }
-        card.setBackground(roundRect(previewColor, 14, 1, SOFT));
+        card.setBackground(RiftStyle.shape(this, previewColor, 20, 1, SOFT));
+        RiftStyle.raise(card, 2);
 
         LinearLayout head = row();
         head.addView(text(item.name(Locale.getDefault()), 18, INK, Typeface.BOLD),
                 new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
-        head.addView(text("💎 " + item.priceCrystals, 15, PRIMARY, Typeface.BOLD));
+        head.addView(text("◇ " + item.priceCrystals, 15, PRIMARY, Typeface.BOLD));
         card.addView(head);
 
         TextView desc = text(item.description(Locale.getDefault()), 14, MUTED, Typeface.NORMAL);
@@ -1933,13 +1958,14 @@ public class MainActivity extends Activity {
 
     private View digitalRewardCard(DigitalRewardItem item) {
         LinearLayout card = column();
-        card.setPadding(dp(16), dp(14), dp(16), dp(14));
-        card.setBackground(roundRect(CARD, 14, 1, SOFT));
+        card.setPadding(dp(17), dp(17), dp(17), dp(17));
+        card.setBackground(RiftStyle.shape(this, CARD, 20, 1, SOFT));
+        RiftStyle.raise(card, 2);
 
         LinearLayout head = row();
         head.addView(text(item.name(Locale.getDefault()), 17, INK, Typeface.BOLD),
                 new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
-        head.addView(text("💎 " + item.priceCrystals, 15, PRIMARY, Typeface.BOLD));
+        head.addView(text("◇ " + item.priceCrystals, 15, PRIMARY, Typeface.BOLD));
         card.addView(head);
 
         TextView desc = text(item.description(Locale.getDefault()), 14, MUTED, Typeface.NORMAL);
