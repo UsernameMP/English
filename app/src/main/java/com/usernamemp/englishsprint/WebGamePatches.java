@@ -127,61 +127,25 @@ final class WebGamePatches {
 
     static final String COZY_CAFE = """
         (function(){
-          if(window.__englishSprintCozySquare)return;
-          window.__englishSprintCozySquare=true;
+          if(window.__englishSprintCozyFit)return;
+          window.__englishSprintCozyFit=true;
           var c=document.getElementById('gameCanvas');if(!c)return;
-
           document.documentElement.style.overflow='hidden';
-          document.body.style.cssText+=';margin:0!important;display:flex!important;align-items:center!important;justify-content:center!important;'+
-            'width:100vw!important;height:100vh!important;overflow:hidden!important;background:#171311!important;';
-
-          var stage=document.createElement('div');
-          stage.id='es-cafe-stage';
-          stage.style.cssText='position:relative;width:min(100vw,100vh);height:min(100vw,100vh);max-width:100vw;max-height:100vh;'+
-            'display:flex;flex-direction:column;background:#eadcc7;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.28);';
-
-          var panel=document.createElement('div');
-          panel.id='es-cafe-panel';
-          panel.style.cssText='height:25%;box-sizing:border-box;padding:7px 10px 8px;background:#f3e8d7;color:#2a211d;'+
-            'font-family:system-ui,-apple-system,sans-serif;display:flex;flex-direction:column;gap:4px;overflow:hidden;border-top:1px solid rgba(70,50,35,.16);';
-
-          var messageBox=document.createElement('div');
-          messageBox.style.cssText='font-size:12px;line-height:1.22;font-weight:700;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;';
-
-          var recipeBox=document.createElement('div');
-          recipeBox.style.cssText='font-size:11px;line-height:1.18;font-weight:600;color:#5a463a;overflow:hidden;';
-
-          panel.appendChild(messageBox);
-          panel.appendChild(recipeBox);
-          c.parentNode.insertBefore(stage,c);
-          stage.appendChild(c);
-          stage.appendChild(panel);
-
-          c.style.cssText='display:block!important;position:static!important;width:100%!important;height:75%!important;'+
-            'margin:0!important;max-width:none!important;image-rendering:pixelated;flex:none;';
-
-          try{drawDarkSide=function(){};}catch(e){}
-
-          try{
-            printMessage=function(){
-              try{messageBox.textContent=String(message||'').replace(/\n+/g,' ');}catch(e){messageBox.textContent='';}
-            };
-            printRecipe=function(){
-              try{
-                if(!currentRecipe){recipeBox.textContent='';return;}
-                recipeBox.textContent=currentRecipe.title+' · '+currentRecipe.instruction1+' · '+currentRecipe.instruction2+
-                  ' · '+currentRecipe.instruction3+' · '+currentRecipe.hint;
-              }catch(e){recipeBox.textContent='';}
-            };
-          }catch(e){}
-
+          document.body.style.cssText+=';display:block!important;position:relative!important;width:100vw!important;height:100vh!important;overflow:hidden!important;background:#151515!important;';
+          c.style.position='absolute';
+          c.style.margin='0';
+          c.style.maxWidth='none';
           function fit(){
-            var size=Math.min(window.innerWidth,window.innerHeight);
-            stage.style.width=size+'px';
-            stage.style.height=size+'px';
+            var vw=window.innerWidth,vh=window.innerHeight;
+            var scale=vw/1024;
+            var renderedW=1024*scale;
+            var renderedH=768*scale;
+            c.style.width=renderedW+'px';
+            c.style.height=renderedH+'px';
+            c.style.left=Math.max(0,(vw-renderedW)/2)+'px';
+            c.style.top=Math.max(0,(vh-renderedH)/2)+'px';
           }
-          fit();window.addEventListener('resize',fit);
-          try{drawScene();}catch(e){}
+          fit();setTimeout(fit,80);window.addEventListener('resize',fit);
         })();
         """;
 
