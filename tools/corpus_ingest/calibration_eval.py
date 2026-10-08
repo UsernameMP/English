@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 from typing import Any
 
-SCHEMA_VERSION = "calibration-report.v1"
+SCHEMA_VERSION = "calibration-report.v2"
 
 
 def _norm(value: object) -> str:
@@ -84,6 +84,11 @@ def evaluate_document(
     gold_artifact_total = 0
     artifact_kind_hits = 0
     task_span_results: list[bool] = []
+    body_reconstructed_tasks = 0
+    review_required_tasks = 0
+    asset_binding_confidences: list[float] = []
+    gold_body_span_total = 0
+    gold_body_span_hits = 0
     misses: list[dict[str, Any]] = []
 
     for gold_section, machine_section in section_pairs:
@@ -111,6 +116,24 @@ def evaluate_document(
                 })
                 continue
             task_hits += 1
+
+            if mt.get("body_blocks") and mt.get("body_spans"):
+                body_reconstructed_tasks += 1
+            if bool(mt.get("review_required")):
+                review_required_tasks += 1
+            for artifact in mt.get("artifacts") or []:
+                if artifact.get("asset_binding_confidence") is not None:
+                    asset_binding_confidences.append(float(artifact["asset_binding_confidence"]))
+
+            gold_body_spans = list(gt.get("body_spans") or [])
+            if gold_body_spans:
+                gold_body_span_total += 1
+                machine_body_spans = list(mt.get("body_spans") or [])
+                gp = {(int(x.get("page") or 0), tuple(round(float(v), 1) for v in (x.get("bbox") or []))) for x in gold_body_spans}
+                mp = {(int(x.get("page") or 0), tuple(round(float(v), 1) for v in (x.get("bbox") or []))) for x in machine_body_spans}
+                if gp == mp:
+                    gold_body_span_hits += 1
+
             gkind = str(gt.get("kind") or "UNKNOWN")
             if gkind != "UNKNOWN":
                 known_kind_total += 1
@@ -158,6 +181,13 @@ def evaluate_document(
     artifact_recall = ratio(artifact_kind_hits, gold_artifact_total)
     section_span_accuracy = ratio(sum(bool(x) for x in section_span_scored), len(section_span_scored))
     task_span_accuracy = ratio(sum(bool(x) for x in task_span_results), len(task_span_results))
+    body_reconstruction_coverage = ratio(body_reconstructed_tasks, task_hits)
+    body_span_accuracy = ratio(gold_body_span_hits, gold_body_span_total)
+    review_required_rate = ratio(review_required_tasks, task_hits)
+    asset_binding_confidence_avg = (
+        round(sum(asset_binding_confidences) / len(asset_binding_confidences), 4)
+        if asset_binding_confidences else None
+    )
 
     reviewable = (
         (section_recall is None or section_recall >= 0.90)
@@ -177,6 +207,11 @@ def evaluate_document(
         "machine": {
             "sections": len(machine_sections),
             "extra_sections": [x.get("label") for x in section_extras],
+            "matched_tasks": task_hits,
+            "body_reconstructed_tasks": body_reconstructed_tasks,
+            "review_required_tasks": review_required_tasks,
+            "asset_binding_samples": len(asset_binding_confidences),
+            "asset_binding_confidence_sum": round(sum(asset_binding_confidences), 6),
         },
         "metrics": {
             "section_recall": section_recall,
@@ -185,6 +220,10 @@ def evaluate_document(
             "task_span_accuracy": task_span_accuracy,
             "known_kind_accuracy": known_kind_accuracy,
             "artifact_recall": artifact_recall,
+            "body_reconstruction_coverage": body_reconstruction_coverage,
+            "body_span_accuracy": body_span_accuracy,
+            "asset_binding_confidence_avg": asset_binding_confidence_avg,
+            "review_required_rate": review_required_rate,
         },
         "reviewable": reviewable,
         "misses": misses,
@@ -215,6 +254,12 @@ def evaluate(gold: dict[str, Any], structures: dict[str, dict[str, Any]]) -> dic
                 num += round((d["metrics"][metric] or 0) * g["artifacts"])
         return round(num / den, 4) if den else None
 
+    matched = sum(int(d["machine"].get("matched_tasks") or 0) for d in docs)
+    body_done = sum(int(d["machine"].get("body_reconstructed_tasks") or 0) for d in docs)
+    review_required = sum(int(d["machine"].get("review_required_tasks") or 0) for d in docs)
+    binding_samples = sum(int(d["machine"].get("asset_binding_samples") or 0) for d in docs)
+    binding_sum = sum(float(d["machine"].get("asset_binding_confidence_sum") or 0) for d in docs)
+
     return {
         "schema_version": SCHEMA_VERSION,
         "document_count": len(docs),
@@ -224,6 +269,9 @@ def evaluate(gold: dict[str, Any], structures: dict[str, dict[str, Any]]) -> dic
             "task_recall_micro": micro("task_recall", "task_hits", "tasks"),
             "known_kind_accuracy_micro": micro("known_kind_accuracy", "known_kind_hits", "known_kinds"),
             "artifact_recall_micro": micro("artifact_recall", "artifact_hits", "artifacts"),
+            "body_reconstruction_coverage_micro": round(body_done / matched, 4) if matched else None,
+            "asset_binding_confidence_micro": round(binding_sum / binding_samples, 4) if binding_samples else None,
+            "review_required_rate_micro": round(review_required / matched, 4) if matched else None,
         },
         "documents": docs,
     }

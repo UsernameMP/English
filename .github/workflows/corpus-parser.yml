@@ -24,6 +24,9 @@ on:
       - "tools/corpus_ingest/tests/test_task_structure.py"
       - "tools/corpus_ingest/tests/test_calibration_eval.py"
       - "tools/corpus_ingest/tests/test_corpus_graph.py"
+      - "tools/document_triage/arm-pass2.js"
+      - "tools/document_triage/arm-viewer.js"
+      - "tools/document_triage/arm-core.js"
 
 permissions:
   contents: read
@@ -59,6 +62,13 @@ jobs:
 
       - name: Test parser
         run: PYTHONPATH=. pytest -q tests/test_parser.py tests/test_layout.py tests/test_task_structure.py tests/test_calibration_eval.py tests/test_corpus_graph.py tests/test_crawler.py
+
+      - name: Check reconstruction Workbench JavaScript
+        working-directory: .
+        run: |
+          node --check tools/document_triage/arm-core.js
+          node --check tools/document_triage/arm-viewer.js
+          node --check tools/document_triage/arm-pass2.js
 
       - name: Parse Dropbox RAW into canonical layout
         if: github.event_name != 'push'

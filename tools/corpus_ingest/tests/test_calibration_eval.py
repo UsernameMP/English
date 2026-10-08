@@ -1,4 +1,4 @@
-from calibration_eval import evaluate
+from calibration_eval import evaluate, evaluate_document
 
 
 def test_calibration_eval_matches_repeated_sections_and_tasks():
@@ -46,3 +46,41 @@ def test_artifact_compatibility_accepts_generic_grid_for_crossword():
     ]}}
     report=evaluate(gold,machine)
     assert report["metrics"]["artifact_recall_micro"] == 1.0
+
+
+def test_reconstruction_metrics_are_reported():
+    gold = {
+        "sections": [{
+            "label": "Tasks",
+            "semantic_type": "UNKNOWN",
+            "page_start": 1,
+            "page_end": 1,
+            "tasks": [{"label": "Task 1", "kind": "SELECT_ONE", "anchor_page": 1, "artifacts": []}],
+        }]
+    }
+    machine = {
+        "sections": [{
+            "label": "Tasks",
+            "semantic_type": "UNKNOWN",
+            "page_start": 1,
+            "page_end": 1,
+            "tasks": [{
+                "label": "Task 1",
+                "number": "1",
+                "kind": "SELECT_ONE",
+                "page_start": 1,
+                "page_end": 1,
+                "body_blocks": [{"id": "b1"}],
+                "body_spans": [{"page": 1, "bbox": [10, 10, 100, 80]}],
+                "review_required": False,
+                "artifacts": [{
+                    "kind": "FIGURE",
+                    "asset_binding_confidence": 0.8,
+                }],
+            }],
+        }]
+    }
+    report = evaluate_document("demo", gold, machine)
+    assert report["metrics"]["body_reconstruction_coverage"] == 1.0
+    assert report["metrics"]["review_required_rate"] == 0.0
+    assert report["metrics"]["asset_binding_confidence_avg"] == 0.8

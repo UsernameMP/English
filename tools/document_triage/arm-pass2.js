@@ -1,3 +1,14 @@
+function safeHtml(value){
+  return String(value==null?"":value)
+    .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;").replaceAll("'","&#39;");
+}
+function taskReconstructionNeedsReview(task){
+  if(!task)return false;
+  const c=Number(task.reconstruction_confidence);
+  return task.review_required===true||(Number.isFinite(c)&&c<.78);
+}
+
 function calibrationStructure(doc){
   const gold=calibrationGold&&calibrationGold.documents&&calibrationGold.documents[doc.id];
   if(!gold||!Array.isArray(gold.sections))return null;
@@ -28,6 +39,15 @@ function calibrationStructure(doc){
       artifacts:(task.artifacts||[]).map(a=>({...a})),
       item_range:task.item_range||null,
       response_constraints:task.response_constraints||null,
+      body_text:task.body_text||"",
+      body_blocks:(task.body_blocks||[]).map(x=>({...x})),
+      body_spans:(task.body_spans||[]).map(x=>({...x})),
+      boundary_confidence:task.boundary_confidence==null?null:Number(task.boundary_confidence),
+      boundary_reasons:[...(task.boundary_reasons||[])],
+      reconstruction_confidence:task.reconstruction_confidence==null?null:Number(task.reconstruction_confidence),
+      review_required:task.review_required===true,
+      reconstruction_reasons:task.reconstruction_reasons||null,
+      composition:task.composition?structuredClone(task.composition):null,
       confidence:String(task.quality||"")==="NEEDS_BOUNDARY_RECHECK"?.55:.995,
       confirmed:false,
       human_created:false,
@@ -61,6 +81,16 @@ function machineStructure(doc){
       parts:(task.parts||[]).map((p,pi)=>({...p,order:pi})),
       artifacts:(task.artifacts||[]).map(a=>({...a})),
       item_range:task.item_range||null,
+      body_text:task.body_text||"",
+      body_blocks:(task.body_blocks||[]).map(x=>({...x})),
+      body_spans:(task.body_spans||[]).map(x=>({...x})),
+      boundary_confidence:task.boundary_confidence==null?null:Number(task.boundary_confidence),
+      boundary_reasons:[...(task.boundary_reasons||[])],
+      block_role_confidence:task.block_role_confidence==null?null:Number(task.block_role_confidence),
+      reconstruction_confidence:task.reconstruction_confidence==null?null:Number(task.reconstruction_confidence),
+      review_required:task.review_required===true,
+      reconstruction_reasons:task.reconstruction_reasons||null,
+      composition:task.composition?structuredClone(task.composition):null,
       confidence:Number(task.confidence)||.6,
       confirmed:false,
       human_created:false,
@@ -145,7 +175,7 @@ function initialStructure(doc){
 function recalcChildren(node){
   const span={page_start:node.start,page_end:node.end};
   (node.tasks||[]).forEach((task,index)=>{
-    task.span={...span};
+    task.span=task.span||{...span};
     task.order=index;
     (task.subtasks||[]).forEach((subtask,subIndex)=>{
       if(typeof subtask==="string")return;
@@ -196,11 +226,15 @@ function reviewSequence(doc){
 function selectReviewItem(doc,node,task=null){
   selectedNode=node.id;
   selectedTask=task?task.id:null;
-  const evidence=(task&&task.evidence)||node.evidence||{
+  let evidence=(task&&task.evidence)||node.evidence||{
     page:node.start,
     search:(task&&task.label)||node.label,
     snippet:(task&&task.label)||node.label
   };
+  if(task&&Array.isArray(task.body_spans)&&task.body_spans.length){
+    const span=task.body_spans[0];
+    evidence={page:Number(span.page)||evidence.page,bbox:span.bbox,snippet:task.label,source:"document"};
+  }
   focusEvidence(evidence);
   renderPass2(doc);
 }
@@ -317,7 +351,7 @@ function renderPass2(doc){
   const treePane=tree.closest(".pass2-tree-pane");
   const priorScroll=treePane?treePane.scrollTop:0;
   tree.innerHTML="";
-  const shown=conflictsOnly?nodes.filter(n=>n.confidence<.8):nodes;
+  const shown=conflictsOnly?nodes.filter(n=>n.confidence<.8||(n.tasks||[]).some(taskReconstructionNeedsReview)):nodes;
 
   if(!selectedNode&&nodes[0]){
     selectedNode=nodes[0].id;
@@ -328,12 +362,14 @@ function renderPass2(doc){
     const el=document.createElement("div");
     el.className="tree-node "+(selectedNode===n.id?"selected ":"")+(n.confidence<.8?"conflict":"");
     const children=(n.tasks||[]).map(t=>{
-      const cls="task-child "+(selectedTask===t.id?"selected-task":"");
+      const cls="task-child "+(selectedTask===t.id?"selected-task ":"")+(taskReconstructionNeedsReview(t)?"reconstruction-conflict":"");
       const meta=[];
       if(t.kind&&t.kind!=="UNKNOWN")meta.push(t.kind);
       if(t.parts&&t.parts.length)meta.push((uiLocale==="ru"?"частей ":"parts ")+t.parts.length);
       if(t.artifacts&&t.artifacts.length)meta.push((uiLocale==="ru"?"объектов ":"artifacts ")+t.artifacts.length);
       if(t.item_range&&t.item_range.start!=null)meta.push(String(t.item_range.start)+"-"+String(t.item_range.end));
+      if(Number.isFinite(Number(t.reconstruction_confidence)))meta.push("recon "+Math.round(Number(t.reconstruction_confidence)*100)+"%");
+      if(t.review_required)meta.push(uiLocale==="ru"?"проверить":"review");
       return '<div class="'+cls+'" data-task-id="'+t.id+'">→ '+t.label+(meta.length?" · "+meta.join(" · "):"")+'</div>';
     }).join("");
 
@@ -400,10 +436,37 @@ function renderBoundaryEditor(doc,node,task=null){
   const source=selected.proposal_source||node.proposal_source||(selected.human_created?"HUMAN":"FILENAME_HEURISTIC");
   const selectedConfidence=selected.confidence==null?node.confidence:selected.confidence;
   const subtasks=task&&task.subtasks&&task.subtasks.length
-    ?'<div class="context-subtasks">'+task.subtasks.map(s=>'<div class="context-chip">'+s+'</div>').join("")+'</div>'
+    ?'<div class="context-subtasks">'+task.subtasks.map(s=>'<div class="context-chip">'+safeHtml(s)+'</div>').join("")+'</div>'
     :"";
+  const bodyBlocks=task&&Array.isArray(task.body_blocks)?task.body_blocks:[];
+  const bodySpans=task&&Array.isArray(task.body_spans)?task.body_spans:[];
+  const bodyPanel=task&&bodyBlocks.length
+    ?'<div class="reconstruction-panel"><div class="subhead">'+(uiLocale==="ru"?"Тело задания":"Task body")+'</div>'+
+      '<div class="reconstruction-summary">'+(uiLocale==="ru"?"Граница ":"Boundary ")+
+      Math.round(Number(task.boundary_confidence||0)*100)+'% · '+bodySpans.map(s=>"p."+s.page).join(", ")+'</div>'+
+      '<div class="task-body-preview">'+safeHtml(String(task.body_text||"").slice(0,1000))+'</div>'+
+      '<div class="block-role-list">'+bodyBlocks.slice(0,18).map(b=>
+        '<button class="block-role-chip" data-body-block="'+safeHtml(b.id)+'" data-page="'+Number(b.page||1)+'" data-bbox="'+safeHtml(JSON.stringify(b.bbox||[]))+'">'+
+        safeHtml(b.role||"UNKNOWN")+' · '+safeHtml(String(b.text||"").slice(0,90))+'</button>'
+      ).join("")+'</div></div>'
+    :"";
+  const taskOptions=node&&task?(node.tasks||[]).map(t=>
+    '<option value="'+safeHtml(t.id)+'">'+safeHtml(t.label)+'</option>'
+  ).join(""):"";
   const artifacts=task&&task.artifacts&&task.artifacts.length
-    ?'<div class="context-subtasks">'+task.artifacts.map(a=>'<div class="context-chip">◆ '+(a.kind||"ARTIFACT")+(a.page?" · p."+a.page:"")+'</div>').join("")+'</div>'
+    ?'<div class="reconstruction-panel"><div class="subhead">'+(uiLocale==="ru"?"Объекты задания":"Task artifacts")+'</div>'+
+      task.artifacts.map(a=>'<div class="artifact-review" data-artifact-id="'+safeHtml(a.id)+'">'+
+        '<div><b>◆ '+safeHtml(a.kind||"ARTIFACT")+'</b> · p.'+Number(a.page||1)+
+        ' · bind '+Math.round(Number(a.asset_binding_confidence==null?a.confidence:a.asset_binding_confidence)*100)+'%'+
+        (a.caption_text?' · '+safeHtml(a.caption_text):'')+'</div>'+
+        '<div class="artifact-review-actions"><button data-focus-artifact="'+safeHtml(a.id)+'">'+(uiLocale==="ru"?"Показать":"Show")+'</button>'+
+        '<select data-move-artifact="'+safeHtml(a.id)+'">'+taskOptions.replace('value="'+safeHtml(task.id)+'"','value="'+safeHtml(task.id)+'" selected')+'</select></div>'+
+      '</div>').join("")+'</div>'
+    :"";
+  const composition=task&&task.composition
+    ?'<div class="reconstruction-panel"><div class="subhead">Composition</div>'+
+      '<div class="reconstruction-summary">'+safeHtml((task.composition.nodes||[]).map(n=>n.kind).join(" · "))+
+      ' · '+safeHtml((task.composition.edges||[]).map(e=>e.type).join(" · "))+'</div></div>'
     :"";
 
   const kinds=(taskTaxonomy&&Array.isArray(taskTaxonomy.task_kinds)&&taskTaxonomy.task_kinds.length?taskTaxonomy.task_kinds:["UNKNOWN","COMPOSITE","SELECT_ONE","MATCHING","GAP_FILL","OPEN_SHORT","EXTENDED_RESPONSE","ORAL_RESPONSE","OTHER"]);
@@ -411,7 +474,8 @@ function renderBoundaryEditor(doc,node,task=null){
   const taskEditor=task
     ?'<label class="muted">'+(uiLocale==="ru"?"Название задания":"Task label")+'</label><input id="taskLabel" class="human-input" value="'+String(task.label||"").replaceAll('"','&quot;')+'">'+
       '<label class="muted">'+(uiLocale==="ru"?"Тип задания":"Task kind")+'</label><select id="taskKind" class="human-input">'+kindOptions+'</select>'+
-      subtasks+artifacts+
+      subtasks+bodyPanel+artifacts+composition+
+      '<div class="boundary-source-actions"><button data-task-op="body-start">'+(uiLocale==="ru"?"Начало тела = текущая страница":"Body start = current page")+'</button><button data-task-op="body-end">'+(uiLocale==="ru"?"Конец тела = текущая страница":"Body end = current page")+'</button><button data-task-op="toggle-shared">'+(uiLocale==="ru"?"Переключить shared stimulus":"Toggle shared stimulus")+'</button></div>'+
       '<div class="boundary-source-actions"><button data-task-op="anchor-current">'+(uiLocale==="ru"?"Привязать к текущей странице PDF":"Anchor task to current PDF page")+'</button><button data-task-op="accept">'+(uiLocale==="ru"?"Подтвердить задание":"Accept task")+'</button><button data-task-op="delete">'+(uiLocale==="ru"?"Удалить задание":"Delete task")+'</button></div>'
     :"";
 
@@ -511,6 +575,58 @@ function renderBoundaryEditor(doc,node,task=null){
       task.corrected=true;
       invalidateStructure(doc);
     }
+    if(b.dataset.taskOp==="body-start"||b.dataset.taskOp==="body-end"){
+      const page=currentPdfPage();
+      const spans=Array.isArray(task.body_spans)?task.body_spans:[];
+      if(!spans.length)spans.push({page,bbox:null,human_corrected:true});
+      if(b.dataset.taskOp==="body-start"){
+        task.body_page_start=page;
+      }else{
+        task.body_page_end=page;
+      }
+      task.boundary_confidence=1;
+      task.boundary_reasons=["human_boundary"];
+      task.reconstruction_confidence=Math.max(Number(task.reconstruction_confidence)||0,1);
+      task.review_required=false;
+      task.corrected=true;
+      task.reconstruction_evidence={source:"human-boundary",page};
+      invalidateStructure(doc);
+    }
+    if(b.dataset.taskOp==="toggle-shared"){
+      task.shared_stimulus_confirmed=!task.shared_stimulus_confirmed;
+      task.corrected=true;
+      invalidateStructure(doc);
+    }
+    armSave();
+    renderPass2(doc);
+  });
+
+  box.querySelectorAll("[data-body-block]").forEach(b=>b.onclick=()=>{
+    let bbox=[];
+    try{bbox=JSON.parse(b.dataset.bbox||"[]")}catch(e){}
+    focusEvidence({page:Number(b.dataset.page)||1,bbox,snippet:task?task.label:"body block",source:"document"});
+  });
+  box.querySelectorAll("[data-focus-artifact]").forEach(b=>b.onclick=()=>{
+    if(!task)return;
+    const artifact=(task.artifacts||[]).find(a=>a.id===b.dataset.focusArtifact);
+    if(artifact)focusEvidence({page:Number(artifact.page)||1,bbox:artifact.bbox,snippet:artifact.kind||"artifact",source:"document"});
+  });
+  box.querySelectorAll("[data-move-artifact]").forEach(select=>select.onchange=()=>{
+    if(!task||!node)return;
+    const artifactIndex=(task.artifacts||[]).findIndex(a=>a.id===select.dataset.moveArtifact);
+    if(artifactIndex<0||select.value===task.id)return;
+    const target=(node.tasks||[]).find(t=>t.id===select.value);
+    if(!target)return;
+    const [artifact]=task.artifacts.splice(artifactIndex,1);
+    artifact.human_reassigned=true;
+    artifact.asset_binding_confidence=1;
+    artifact.binding_reasons=["human_reassigned"];
+    target.artifacts=target.artifacts||[];
+    target.artifacts.push(artifact);
+    task.corrected=true;
+    target.corrected=true;
+    task.review_required=false;
+    invalidateStructure(doc);
     armSave();
     renderPass2(doc);
   });

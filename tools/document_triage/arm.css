@@ -54,3 +54,14 @@ button:hover,.buttonlike:hover{background:#f4f7f9}button.primary{background:#182
 .edge-actions{flex-wrap:wrap;justify-content:flex-end;max-width:170px}
 
 button.decision-active{background:#18212b;color:#fff;border-color:#18212b}button.decision-active:hover{background:#283746}
+
+.reconstruction-conflict{border-left:3px solid #d17b16;background:#fffaf2}
+.reconstruction-panel{border:1px solid #dce4ea;background:#f8fafb;border-radius:9px;padding:9px;margin:9px 0}
+.reconstruction-summary{font-size:11px;color:#61717e;margin-bottom:6px}
+.task-body-preview{white-space:pre-wrap;max-height:150px;overflow:auto;font:11px/1.4 ui-monospace,monospace;background:#fff;border:1px solid #e2e8ed;border-radius:7px;padding:8px}
+.block-role-list{display:grid;gap:4px;margin-top:7px}
+.block-role-chip{text-align:left;font-size:10px;padding:5px 7px;background:#fff}
+.artifact-review{display:grid;gap:6px;padding:7px 0;border-top:1px solid #e3e8ed;font-size:11px}
+.artifact-review:first-of-type{border-top:0}
+.artifact-review-actions{display:flex;gap:6px;align-items:center}
+.artifact-review-actions select{min-width:150px;max-width:260px;border:1px solid #ccd6df;border-radius:6px;padding:5px;background:#fff}

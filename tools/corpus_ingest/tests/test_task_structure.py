@@ -84,7 +84,7 @@ def test_visual_table_is_attached_as_artifact():
     task = flatten_tasks(propose_structure(layout))[0]
     assert task["kind"] in {"TABLE_GAP_FILL", "GAP_FILL"}
     # Table detection is additive and backend-version dependent; drawings must at least survive.
-    assert any(a["kind"] in {"TABLE", "GRID", "DIAGRAM"} for a in task["artifacts"])
+    assert any(a["kind"] in {"TABLE", "GRID", "DIAGRAM", "RESPONSE_TABLE"} for a in task["artifacts"])
 
 
 def test_no_task_heading_does_not_promote_bare_numbers_to_tasks():
@@ -290,3 +290,82 @@ def test_answer_part_group_detects_answer_to_question_lines():
     assert proposal["sections"][0]["semantic_type"] == "PART_GROUP"
     assert [t["label"] for t in proposal["sections"][0]["tasks"]] == ["Task 1", "Task 2"]
     assert all(t["kind"] == "ANSWER_GROUP" for t in proposal["sections"][0]["tasks"])
+
+
+def test_task_reconstruction_separates_marker_from_statement_blocks():
+    layout = layout_from_pages([[
+        ("GEOGRAPHY", 18),
+        "Task 1",
+        "Determine the map scale using the information below.",
+        "A. 1:10 000",
+        "B. 1:100 000",
+        "Task 2",
+        "Name the process.",
+    ]])
+    tasks = flatten_tasks(propose_structure(layout, filename="tasks-geog-demo.pdf"))
+    first = tasks[0]
+    assert first["body_blocks"][0]["role"] == "TASK_MARKER"
+    assert "Task 1" not in first["body_text"]
+    assert "Determine the map scale" in first["body_text"]
+    assert any(b["role"] == "INSTRUCTION" for b in first["body_blocks"])
+    assert all(b.get("source_block_id") for b in first["body_blocks"])
+    assert first["body_spans"]
+    assert first["boundary_confidence"] >= 0.8
+
+
+def test_task_boundary_does_not_swallow_next_task_heading():
+    layout = layout_from_pages([[
+        "Task 1",
+        "Read this statement carefully.",
+        "First body line.",
+        "Task 2",
+        "Second body line.",
+    ]])
+    tasks = flatten_tasks(propose_structure(layout, filename="tasks-history-demo.pdf"))
+    assert len(tasks) == 2
+    assert "Task 2" not in tasks[0]["body_text"]
+    assert "Second body line" not in tasks[0]["body_text"]
+    assert "Second body line" in tasks[1]["body_text"]
+
+
+def test_composite_task_emits_task_group_and_shared_stimulus_edges():
+    layout = layout_from_pages([[
+        "Problem 1. Read the common source.",
+        "The same source is used for both parts.",
+        "a) Find the first value.",
+        "b) Using the previous answer, prove the claim.",
+    ]])
+    task = flatten_tasks(propose_structure(layout, filename="tasks-math-demo.pdf"))[0]
+    composition = task["composition"]
+    kinds = {n["kind"] for n in composition["nodes"]}
+    edge_types = {e["type"] for e in composition["edges"]}
+    assert "TASK_GROUP" in kinds
+    assert "SHARED_STIMULUS" in kinds
+    assert "OWNS_PART" in edge_types
+    assert "USES_STIMULUS" in edge_types
+    assert "DEPENDS_ON" in edge_types
+
+
+def test_formula_text_becomes_typed_artifact():
+    layout = layout_from_pages([[
+        "Problem 1. Calculate the value.",
+        "x^2 + y^2 = 25",
+        "Find x when y = 3.",
+    ]])
+    task = flatten_tasks(propose_structure(layout, filename="tasks-math-demo.pdf"))[0]
+    assert any(a["kind"] == "FORMULA" for a in task["artifacts"])
+    formula = next(a for a in task["artifacts"] if a["kind"] == "FORMULA")
+    assert formula["asset_binding_confidence"] >= 0.9
+
+
+def test_reconstruction_confidence_and_review_flag_are_emitted():
+    layout = layout_from_pages([[
+        "Task 1",
+        "Choose the correct answer.",
+        "A. Alpha",
+        "B. Beta",
+    ]])
+    task = flatten_tasks(propose_structure(layout, filename="tasks-demo.pdf"))[0]
+    assert 0 <= task["reconstruction_confidence"] <= 1
+    assert isinstance(task["review_required"], bool)
+    assert "boundary" in task["reconstruction_reasons"]
