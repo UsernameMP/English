@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="rift_eyebrow">Your knowledge universe</string>
+    <string name="rift_hero_kicker">YOUR NEXT ADVENTURE</string>
+    <string name="rift_hero_title">Unlock what you're capable of.</string>
+    <string name="rift_hero_subtitle">One challenge at a time. Every skill moves you forward.</string>
+    <string name="rift_explore">Explore Rift</string>
+    <string name="rift_explore_caption">Choose where your next discovery begins</string>
+    <string name="rift_atlas_caption">See how everything you learn connects</string>
+    <string name="rift_world_caption">Your rewards become a living world</string>
+    <string name="rift_shop_caption">Make progress yours</string>
+    <string name="rift_your_progress">YOUR PROGRESS</string>
+    <string name="rift_paths">Your learning path</string>
+    <string name="rift_nodes_hint">Touch a node to explore or practice</string>
+    <string name="rift_node_prereqs">Unlock path</string>
+    <string name="rift_no_prereqs">Ready to explore</string>
+    <string name="rift_result_kicker">CHALLENGE COMPLETE</string>
+    <string name="rift_milestone">Every answer builds your skills</string>
+    <string name="rift_training_kicker">PICK YOUR PATH</string>
+    <string name="rift_course_kicker">NEW DISCOVERIES</string>
+    <string name="rift_world_kicker">YOUR UNIVERSE</string>
+    <string name="rift_shop_kicker">POWER UP</string>
+    <string name="rift_atlas_kicker">KNOWLEDGE ATLAS</string>
+    <string name="rift_open">Explore</string>
+    <string name="rift_locked">Locked</string>
+    <string name="rift_mastered">Mastered</string>
+    <string name="rift_in_progress">Learning</string>
     <string name="app_name">Rift</string>
     <string name="deadline_remaining">%1$d days until October 9</string>
     <string name="training_mode">Training mode</string>
