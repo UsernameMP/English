@@ -5,7 +5,7 @@ import re
 from collections import Counter
 from typing import Any
 
-SCHEMA_VERSION = "structure-proposal.v2"
+SCHEMA_VERSION = "structure-proposal.v3"
 
 TASK_RE = re.compile(
     r"^\s*(?:task|problem|question|exercise|задача|задание|вопрос)\b\s*"
@@ -132,11 +132,21 @@ def infer_document_role(filename: str, explicit: str = "") -> str:
 
 
 def flatten_lines(layout: dict[str, Any]) -> list[dict[str, Any]]:
+    """Flatten canonical layout without discarding block provenance.
+
+    Lines remain the segmentation primitive, but every line keeps its source
+    block geometry/read order so downstream reconstruction can distinguish a
+    task marker from the actual statement and preserve two-dimensional context.
+    """
     lines: list[dict[str, Any]] = []
     for page in layout.get("pages", []):
         page_no = int(page.get("page_number") or 1)
         page_h = float(page.get("height") or 0)
+        page_w = float(page.get("width") or 0)
         for block in page.get("blocks", []):
+            block_id = block.get("id") or _stable("block", page_no, block.get("bbox"), block.get("text"))
+            block_bbox = block.get("bbox") or [0, 0, 0, 0]
+            block_order = int(block.get("reading_order") or 0)
             for line in block.get("lines", []):
                 text = str(line.get("text") or "").strip()
                 if not text:
@@ -144,6 +154,7 @@ def flatten_lines(layout: dict[str, Any]) -> list[dict[str, Any]]:
                 spans = line.get("spans") or []
                 sizes = [float(s.get("size") or 0) for s in spans if float(s.get("size") or 0) > 0]
                 flags = [int(s.get("flags") or 0) for s in spans]
+                fonts = [str(s.get("font") or "") for s in spans if str(s.get("font") or "")]
                 lines.append({
                     "id": line.get("id") or _stable("line", page_no, line.get("bbox"), text),
                     "text": text,
@@ -151,11 +162,23 @@ def flatten_lines(layout: dict[str, Any]) -> list[dict[str, Any]]:
                     "bbox": line.get("bbox") or [0, 0, 0, 0],
                     "font_size": max(sizes) if sizes else 0.0,
                     "boldish": any(f & 16 for f in flags),
+                    "fonts": fonts,
+                    "reading_order": int(line.get("reading_order") or block_order),
+                    "block_id": block_id,
+                    "block_bbox": block_bbox,
+                    "block_reading_order": block_order,
                     "page_height": page_h,
+                    "page_width": page_w,
                 })
-    lines.sort(key=lambda x: (x["page"], round(float(x["bbox"][1]), 2), float(x["bbox"][0])))
+    # Keep canonical extractor reading order first. y/x is only a deterministic
+    # tie breaker and no longer destroys column order supplied by the PDF.
+    lines.sort(key=lambda x: (
+        x["page"],
+        int(x.get("reading_order") or 0),
+        round(float(x["bbox"][1]), 2),
+        float(x["bbox"][0]),
+    ))
     return lines
-
 
 def _normalize_instruction_text(text: str) -> str:
     value = str(text or "")
@@ -163,6 +186,165 @@ def _normalize_instruction_text(text: str) -> str:
     # Join only alphabetic fragments, then normalize whitespace.
     value = re.sub(r"([A-Za-zА-Яа-яЁё])-\s*\n\s*([A-Za-zА-Яа-яЁё])", r"\1\2", value)
     return re.sub(r"\s+", " ", value).strip()
+
+
+OPTION_LINE_RE = re.compile(
+    r"^\\s*(?:[A-HА-З][.)]|\\([A-HА-З]\\)|[0-9]{1,2}[.)])\\s+\\S",
+    re.I,
+)
+CAPTION_RE = re.compile(
+    r"^\\s*(?:рис\\.?|рисунок|figure|fig\\.?|table|таблица|map|карта|graph|chart|график|diagram|схема)\\b",
+    re.I,
+)
+INSTRUCTION_RE = re.compile(
+    r"\\b(?:choose|select|match|complete|fill|answer|write|read|listen|calculate|compute|find|prove|"
+    r"выберите|укажите|соотнесите|установите|заполните|ответьте|напишите|прочитайте|вычислите|найдите|докажите|"
+    r"расположите|определите|рассмотрите)\\b",
+    re.I,
+)
+DEPENDENCY_RE = re.compile(
+    r"\\b(?:previous|preceding|above|earlier|using\\s+your\\s+answer|"
+    r"предыдущ|выше|полученн|используя\\s+ответ)\\b",
+    re.I,
+)
+FORMULA_SIGNAL_RE = re.compile(r"[=<>±×÷√∑∫∞≈≠≤≥]|(?:\\b[a-zA-Z]\\s*[²³^]|\\d+\\s*/\\s*\\d+)")
+CODE_SIGNAL_RE = re.compile(r"\\b(?:for|while|if|else|return|def|class|print|input|int|float|bool|var|let|const)\\b|[{};]", re.I)
+
+
+def _union_boxes(boxes: list[list[float]]) -> list[float]:
+    usable = [b for b in boxes if b and len(b) == 4]
+    if not usable:
+        return [0.0, 0.0, 0.0, 0.0]
+    return [
+        round(min(float(b[0]) for b in usable), 3),
+        round(min(float(b[1]) for b in usable), 3),
+        round(max(float(b[2]) for b in usable), 3),
+        round(max(float(b[3]) for b in usable), 3),
+    ]
+
+
+def _horizontal_overlap_ratio(a: list[float], b: list[float]) -> float:
+    if not a or not b or len(a) != 4 or len(b) != 4:
+        return 0.0
+    inter = max(0.0, min(float(a[2]), float(b[2])) - max(float(a[0]), float(b[0])))
+    denom = max(1.0, min(float(a[2]) - float(a[0]), float(b[2]) - float(b[0])))
+    return min(1.0, inter / denom)
+
+
+def _vertical_gap(a: list[float], b: list[float]) -> float:
+    if not a or not b or len(a) != 4 or len(b) != 4:
+        return 10_000.0
+    if float(a[3]) < float(b[1]):
+        return float(b[1]) - float(a[3])
+    if float(b[3]) < float(a[1]):
+        return float(a[1]) - float(b[3])
+    return 0.0
+
+
+def _line_role(line: dict[str, Any], *, is_marker: bool = False) -> tuple[str, float, str]:
+    text = str(line.get("text") or "").strip()
+    if is_marker:
+        return "TASK_MARKER", 0.99, "explicit_task_marker"
+    page_h = float(line.get("page_height") or 0)
+    if page_h and float((line.get("bbox") or [0, 0, 0, 0])[1]) >= page_h * 0.94:
+        return "FOOTNOTE", 0.72, "bottom_margin"
+    if CAPTION_RE.match(text):
+        return "CAPTION", 0.92, "caption_prefix"
+    if OPTION_LINE_RE.match(text):
+        return "OPTION_LIST", 0.90, "option_marker"
+    fonts = " ".join(line.get("fonts") or []).lower()
+    if ("courier" in fonts or "mono" in fonts) and CODE_SIGNAL_RE.search(text):
+        return "CODE_BLOCK", 0.88, "monospace_code_signal"
+    math_hits = len(FORMULA_SIGNAL_RE.findall(text))
+    if math_hits >= 2 or (math_hits >= 1 and len(text) <= 90):
+        return "FORMULA_TEXT", 0.84, "formula_symbols"
+    if INSTRUCTION_RE.search(text):
+        return "INSTRUCTION", 0.88, "instruction_verb"
+    if len(text) <= 2:
+        return "UNKNOWN", 0.45, "too_short"
+    return "BODY_TEXT", 0.80, "default_body"
+
+
+def _task_body(
+    lines: list[dict[str, Any]],
+    start: int,
+    end: int,
+    task_id: str,
+    repeated_headers: set[str] | None = None,
+) -> dict[str, Any]:
+    repeated_headers = repeated_headers or set()
+    blocks: list[dict[str, Any]] = []
+    owned_lines: list[dict[str, Any]] = []
+    for idx in range(start, end):
+        line = lines[idx]
+        if idx != start and _norm_header(line.get("text") or "") in repeated_headers:
+            continue
+        role, confidence, reason = _line_role(line, is_marker=idx == start)
+        row = {
+            "id": _stable("task_block", task_id, line.get("id")),
+            "source_block_id": line.get("block_id"),
+            "line_ids": [line.get("id")],
+            "page": int(line.get("page") or 1),
+            "bbox": [round(float(x), 3) for x in (line.get("bbox") or [0, 0, 0, 0])],
+            "reading_order": int(line.get("reading_order") or 0),
+            "text": str(line.get("text") or ""),
+            "role": role,
+            "role_confidence": confidence,
+            "role_reason": reason,
+            "source_index": idx,
+        }
+        blocks.append(row)
+        if role not in {"TASK_MARKER", "FOOTNOTE"}:
+            owned_lines.append(line)
+
+    by_page: dict[int, list[list[float]]] = {}
+    for line in owned_lines:
+        by_page.setdefault(int(line["page"]), []).append(line.get("bbox") or [0, 0, 0, 0])
+    spans = [
+        {"page": page, "bbox": _union_boxes(boxes)}
+        for page, boxes in sorted(by_page.items())
+    ]
+    body_text = "\\n".join(
+        b["text"] for b in blocks if b["role"] not in {"TASK_MARKER", "FOOTNOTE"}
+    ).strip()
+
+    reasons = ["explicit_task_marker"]
+    confidence = 0.97
+    if not body_text:
+        confidence = 0.42
+        reasons.append("empty_body")
+    if len(spans) > 1:
+        confidence = min(confidence, 0.93)
+        reasons.append("multi_page_body")
+
+    # Multiple narrow x-clusters on one page are a useful warning for columns.
+    for page, page_blocks in _group_by(blocks, "page").items():
+        width = max((float(lines[b["source_index"]].get("page_width") or 0) for b in page_blocks), default=0.0)
+        centers = [
+            (float(b["bbox"][0]) + float(b["bbox"][2])) / 2
+            for b in page_blocks
+            if width and (float(b["bbox"][2]) - float(b["bbox"][0])) < width * 0.72
+        ]
+        if centers and min(centers) < width * 0.42 and max(centers) > width * 0.58:
+            confidence = min(confidence, 0.82)
+            reasons.append(f"multi_column_page:{page}")
+
+    role_conf = min((float(b["role_confidence"]) for b in blocks if b["role"] != "TASK_MARKER"), default=0.5)
+    return {
+        "body_text": body_text,
+        "body_blocks": blocks,
+        "body_spans": spans,
+        "boundary_confidence": round(confidence, 3),
+        "boundary_reasons": sorted(dict.fromkeys(reasons)),
+        "block_role_confidence": round(role_conf, 3),
+    }
+
+
+def _group_by(rows: list[dict[str, Any]], key: str) -> dict[Any, list[dict[str, Any]]]:
+    out: dict[Any, list[dict[str, Any]]] = {}
+    for row in rows:
+        out.setdefault(row.get(key), []).append(row)
+    return out
 
 
 def infer_task_kind(text: str, *, has_parts: bool = False) -> str:
@@ -479,6 +661,7 @@ def _item_range(lines: list[dict[str, Any]], start: int, end: int) -> dict[str, 
 
 
 def _task_region(lines: list[dict[str, Any]], start: int, end: int) -> dict[int, tuple[float, float]]:
+    """Compatibility vertical bands used only as a loose candidate gate."""
     first = lines[start]
     last = lines[end - 1]
     pages = range(first["page"], last["page"] + 1)
@@ -504,63 +687,268 @@ def _overlaps_vertical(box: list[float], band: tuple[float, float]) -> bool:
     return min(float(box[3]), band[1]) - max(float(box[1]), band[0]) > 1
 
 
-def _artifact_nodes(layout: dict[str, Any], lines: list[dict[str, Any]], start: int, end: int, task_id: str) -> list[dict[str, Any]]:
+def _nearby_text(lines: list[dict[str, Any]], page: int, box: list[float], max_gap: float = 72.0) -> str:
+    nearby = []
+    for line in lines:
+        if int(line.get("page") or 0) != page:
+            continue
+        if _vertical_gap(line.get("bbox") or [0, 0, 0, 0], box) <= max_gap:
+            nearby.append(str(line.get("text") or ""))
+    return " ".join(nearby)
+
+
+def _artifact_kind(raw_kind: str, task_kind: str, nearby: str, cells: int = 0) -> tuple[str, float, str]:
+    text = nearby.lower()
+    if raw_kind == "table":
+        if task_kind in {"TRUE_FALSE", "TRUE_FALSE_NOT_STATED", "TABLE_GAP_FILL"}:
+            return "RESPONSE_TABLE", 0.94, "task_kind_table"
+        if task_kind == "FORM_FILL":
+            return "FORM", 0.92, "form_fill_table"
+        if re.search(r"word\\s*bank|слова\\s+для\\s+справ", text, re.I):
+            return "WORD_BANK", 0.90, "nearby_word_bank_caption"
+        if cells >= 16:
+            return "GRID", 0.82, "dense_cell_grid"
+        return "TABLE", 0.91, "pdf_table"
+    if re.search(r"\\b(?:map|карта|картосхем|контурн)", text, re.I):
+        return "MAP", 0.88, "nearby_map_caption"
+    if re.search(r"\\b(?:graph|chart|plot|график|климатограмм)", text, re.I):
+        return "GRAPH", 0.88, "nearby_graph_caption"
+    if re.search(r"\\b(?:figure|fig\\.?|рисунок|рис\\.)", text, re.I):
+        return "FIGURE", 0.87, "nearby_figure_caption"
+    if raw_kind == "image":
+        return "FIGURE", 0.78, "generic_image"
+    return "DIAGRAM", 0.72, "vector_drawing_group"
+
+
+def _artifact_binding(
+    box: list[float],
+    page: int,
+    body_spans: list[dict[str, Any]],
+    page_width: float,
+) -> tuple[float, list[str]]:
+    span = next((s.get("bbox") for s in body_spans if int(s.get("page") or 0) == page), None)
+    if not span:
+        return 0.0, ["no_task_body_on_page"]
+    x_overlap = _horizontal_overlap_ratio(box, span)
+    gap = _vertical_gap(box, span)
+    wide = page_width and (float(box[2]) - float(box[0])) >= page_width * 0.72
+    reasons = []
+    score = 0.36
+    if x_overlap >= 0.5:
+        score += 0.34
+        reasons.append("x_overlap")
+    elif x_overlap >= 0.15:
+        score += 0.18
+        reasons.append("partial_x_overlap")
+    elif wide:
+        score += 0.14
+        reasons.append("full_width_asset")
+    if gap == 0:
+        score += 0.22
+        reasons.append("body_overlap")
+    elif gap <= 48:
+        score += 0.16
+        reasons.append("near_body")
+    elif gap <= 120:
+        score += 0.08
+        reasons.append("within_task_neighborhood")
+    else:
+        score -= 0.18
+        reasons.append("far_from_body")
+    return round(max(0.0, min(0.98, score)), 3), reasons
+
+
+def _artifact_nodes(
+    layout: dict[str, Any],
+    lines: list[dict[str, Any]],
+    start: int,
+    end: int,
+    task_id: str,
+    task_kind: str = "UNKNOWN",
+    body: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
+    body = body or _task_body(lines, start, end, task_id)
     regions = _task_region(lines, start, end)
     artifacts: list[dict[str, Any]] = []
-    for page in layout.get("pages", []):
-        page_no = int(page.get("page_number") or 1)
+    pages = {int(p.get("page_number") or 1): p for p in layout.get("pages", [])}
+
+    def add(raw_kind: str, source: dict[str, Any], *, cells: int = 0, source_ids: list[str] | None = None):
+        page_no = int(source.get("_page") or 1)
+        box = source.get("bbox") or [0, 0, 0, 0]
         band = regions.get(page_no)
-        if not band:
-            continue
+        if not band or not _overlaps_vertical(box, band):
+            return
+        page_width = float((pages.get(page_no) or {}).get("width") or 0)
+        binding_conf, binding_reasons = _artifact_binding(box, page_no, body.get("body_spans") or [], page_width)
+        # Require two-dimensional evidence. Wide assets are allowed because many
+        # maps/tables deliberately span both columns.
+        if binding_conf < 0.42:
+            return
+        nearby = _nearby_text(lines, page_no, box)
+        kind, type_conf, type_reason = _artifact_kind(raw_kind, task_kind, nearby, cells)
+        caption = next(
+            (str(line.get("text") or "") for line in lines
+             if int(line.get("page") or 0) == page_no
+             and CAPTION_RE.match(str(line.get("text") or ""))
+             and _vertical_gap(line.get("bbox") or [0, 0, 0, 0], box) <= 72),
+            "",
+        )
+        row = {
+            "id": _stable("artifact", task_id, source.get("id") or box),
+            "kind": kind,
+            "page": page_no,
+            "bbox": [round(float(x), 3) for x in box],
+            "source_id": source.get("id"),
+            "confidence": round(min(type_conf, binding_conf), 3),
+            "type_confidence": type_conf,
+            "type_reason": type_reason,
+            "asset_binding_confidence": binding_conf,
+            "binding_reasons": binding_reasons,
+            "caption_text": caption,
+        }
+        if source_ids:
+            row["source_ids"] = source_ids
+        artifacts.append(row)
+
+    for page_no, page in pages.items():
         for table in page.get("tables", []):
-            box = table.get("bbox") or [0, 0, 0, 0]
-            if not _overlaps_vertical(box, band):
-                continue
-            cells = table.get("cells") or []
-            w = max(1.0, float(box[2]) - float(box[0]))
-            h = max(1.0, float(box[3]) - float(box[1]))
-            ratio = w / h
-            kind = "GRID" if len(cells) >= 16 and 0.55 <= ratio <= 1.8 else "TABLE"
-            artifacts.append({
-                "id": _stable("artifact", task_id, table.get("id") or box),
-                "kind": kind,
-                "page": page_no,
-                "bbox": box,
-                "source_id": table.get("id"),
-                "confidence": 0.90 if kind == "TABLE" else 0.78,
-            })
+            add("table", {**table, "_page": page_no}, cells=len(table.get("cells") or []))
         for image in page.get("images", []):
-            box = image.get("bbox") or [0, 0, 0, 0]
-            if _overlaps_vertical(box, band):
-                artifacts.append({
-                    "id": _stable("artifact", task_id, image.get("id") or box),
-                    "kind": "IMAGE",
-                    "page": page_no,
-                    "bbox": box,
-                    "source_id": image.get("id"),
-                    "confidence": 0.92,
-                })
-        drawings = [d for d in page.get("drawings", []) if _overlaps_vertical(d.get("bbox") or [0, 0, 0, 0], band)]
+            add("image", {**image, "_page": page_no})
+        drawings = [
+            d for d in page.get("drawings", [])
+            if regions.get(page_no) and _overlaps_vertical(d.get("bbox") or [0, 0, 0, 0], regions[page_no])
+        ]
         if len(drawings) >= 4:
-            box = [
-                min(float(d["bbox"][0]) for d in drawings),
-                min(float(d["bbox"][1]) for d in drawings),
-                max(float(d["bbox"][2]) for d in drawings),
-                max(float(d["bbox"][3]) for d in drawings),
-            ]
+            box = _union_boxes([d.get("bbox") or [0, 0, 0, 0] for d in drawings])
             if _bbox_area(box) > 100 and not any(
-                a["page"] == page_no and a["kind"] in {"TABLE", "GRID"} and _bbox_iou(a.get("bbox"), box) >= 0.70
+                a["page"] == page_no and a["kind"] in {"TABLE", "GRID", "RESPONSE_TABLE", "FORM"} and _bbox_iou(a.get("bbox"), box) >= 0.70
                 for a in artifacts
             ):
-                artifacts.append({
-                    "id": _stable("artifact", task_id, page_no, "drawings", len(drawings)),
-                    "kind": "DIAGRAM",
-                    "page": page_no,
-                    "bbox": [round(x, 3) for x in box],
-                    "source_ids": [d.get("id") for d in drawings],
-                    "confidence": 0.62,
-                })
-    return artifacts
+                add(
+                    "drawing",
+                    {"id": _stable("drawing_group", task_id, page_no, len(drawings)), "bbox": box, "_page": page_no},
+                    source_ids=[str(d.get("id") or "") for d in drawings],
+                )
+
+    # Formula/code blocks are semantic artifacts even when the PDF stores them as text.
+    for block in body.get("body_blocks") or []:
+        if block.get("role") not in {"FORMULA_TEXT", "CODE_BLOCK"}:
+            continue
+        kind = "FORMULA" if block["role"] == "FORMULA_TEXT" else "CODE_BLOCK"
+        artifacts.append({
+            "id": _stable("artifact", task_id, block["id"], kind),
+            "kind": kind,
+            "page": block["page"],
+            "bbox": block["bbox"],
+            "source_id": block.get("source_block_id"),
+            "confidence": block.get("role_confidence", 0.8),
+            "type_confidence": block.get("role_confidence", 0.8),
+            "type_reason": block.get("role_reason"),
+            "asset_binding_confidence": 0.99,
+            "binding_reasons": ["owned_text_block"],
+            "caption_text": "",
+        })
+
+    # Same canonical source should not appear twice in one task.
+    dedup: dict[tuple, dict[str, Any]] = {}
+    for artifact in artifacts:
+        key = (artifact.get("page"), artifact.get("source_id"), tuple(artifact.get("bbox") or []), artifact.get("kind"))
+        prior = dedup.get(key)
+        if prior is None or float(artifact.get("confidence") or 0) > float(prior.get("confidence") or 0):
+            dedup[key] = artifact
+    return list(dedup.values())
+
+
+def _composition_graph(
+    task_id: str,
+    parts: list[dict[str, Any]],
+    body: dict[str, Any],
+    artifacts: list[dict[str, Any]],
+) -> dict[str, Any] | None:
+    if len(parts) < 2:
+        return None
+    group_id = _stable("task_group", task_id)
+    nodes: list[dict[str, Any]] = [{"id": group_id, "kind": "TASK_GROUP", "task_id": task_id}]
+    edges: list[dict[str, Any]] = []
+
+    for part in parts:
+        edges.append({"from": group_id, "type": "OWNS_PART", "to": part["id"]})
+
+    first_anchor = str(parts[0].get("anchor", {}).get("line_id") or "")
+    first_index = next(
+        (int(b["source_index"]) for b in body.get("body_blocks") or [] if first_anchor in (b.get("line_ids") or [])),
+        None,
+    )
+    shared_blocks = [
+        b["id"] for b in body.get("body_blocks") or []
+        if b.get("role") not in {"TASK_MARKER", "FOOTNOTE"}
+        and (first_index is None or int(b.get("source_index") or 0) < first_index)
+    ]
+    shared_artifacts = [a["id"] for a in artifacts]
+    if shared_blocks or shared_artifacts:
+        stimulus_id = _stable("shared_stimulus", task_id, *shared_blocks, *shared_artifacts)
+        nodes.append({
+            "id": stimulus_id,
+            "kind": "SHARED_STIMULUS",
+            "block_ids": shared_blocks,
+            "artifact_ids": shared_artifacts,
+            "confidence": 0.86 if shared_blocks else 0.78,
+        })
+        for part in parts:
+            edges.append({"from": part["id"], "type": "USES_STIMULUS", "to": stimulus_id})
+        for artifact_id in shared_artifacts:
+            edges.append({"from": stimulus_id, "type": "USES_ARTIFACT", "to": artifact_id})
+
+    body_text = str(body.get("body_text") or "")
+    if DEPENDENCY_RE.search(body_text):
+        for previous, current in zip(parts, parts[1:]):
+            edges.append({"from": current["id"], "type": "DEPENDS_ON", "to": previous["id"]})
+
+    return {"nodes": nodes, "edges": edges, "confidence": 0.84}
+
+
+def _enrich_task(
+    task: dict[str, Any],
+    layout: dict[str, Any],
+    lines: list[dict[str, Any]],
+    start: int,
+    end: int,
+    repeated_headers: set[str] | None = None,
+) -> dict[str, Any]:
+    body = _task_body(lines, start, end, task["id"], repeated_headers)
+    artifacts = _artifact_nodes(
+        layout, lines, start, end, task["id"],
+        task_kind=str(task.get("kind") or "UNKNOWN"),
+        body=body,
+    )
+    task.update(body)
+    task["artifacts"] = artifacts
+    composition = _composition_graph(task["id"], task.get("parts") or [], body, artifacts)
+    if composition:
+        task["composition"] = composition
+
+    asset_conf = min((float(a.get("asset_binding_confidence") or 0) for a in artifacts), default=1.0)
+    composition_conf = float(composition.get("confidence") or 1.0) if composition else 1.0
+    reconstruction = min(
+        float(body.get("boundary_confidence") or 0),
+        float(body.get("block_role_confidence") or 0),
+        asset_conf,
+        composition_conf,
+    )
+    task["reconstruction_confidence"] = round(reconstruction, 3)
+    task["review_required"] = reconstruction < 0.78 or any(
+        float(a.get("asset_binding_confidence") or 0) < 0.65 for a in artifacts
+    )
+    task["reconstruction_reasons"] = {
+        "boundary": body.get("boundary_reasons") or [],
+        "low_confidence_artifacts": [
+            a["id"] for a in artifacts if float(a.get("asset_binding_confidence") or 0) < 0.65
+        ],
+    }
+    return task
+
+
 
 
 def _section_label(line: dict[str, Any], semantic_type: str | None) -> str:
