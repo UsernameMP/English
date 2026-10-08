@@ -310,12 +310,32 @@ def _task_body(
 
     reasons = ["explicit_task_marker"]
     confidence = 0.97
+    if end < len(lines):
+        boundary_text = str(lines[end].get("text") or "")
+        if TASK_RE.match(boundary_text) or DECIMAL_TASK_RE.match(boundary_text):
+            reasons.append("next_task_marker")
+        elif _explicit_section_type(boundary_text):
+            reasons.append("next_section_boundary")
+        else:
+            reasons.append("layout_boundary")
+    else:
+        reasons.append("document_end")
     if not body_text:
         confidence = 0.42
         reasons.append("empty_body")
     if len(spans) > 1:
         confidence = min(confidence, 0.93)
         reasons.append("multi_page_body")
+
+    content_blocks = [b for b in blocks if b["role"] not in {"TASK_MARKER", "FOOTNOTE"}]
+    for prev, current in zip(content_blocks, content_blocks[1:]):
+        if prev["page"] != current["page"]:
+            continue
+        gap = float(current["bbox"][1]) - float(prev["bbox"][3])
+        if gap > 96:
+            confidence = min(confidence, 0.76)
+            reasons.append(f"large_layout_gap:{current['page']}")
+            break
 
     # Multiple narrow x-clusters on one page are a useful warning for columns.
     for page, page_blocks in _group_by(blocks, "page").items():
@@ -923,6 +943,12 @@ def _enrich_task(
         body=body,
     )
     task.update(body)
+    if body.get("body_spans"):
+        task["body_page_start"] = min(int(s["page"]) for s in body["body_spans"])
+        task["body_page_end"] = max(int(s["page"]) for s in body["body_spans"])
+    else:
+        task["body_page_start"] = int(task.get("page_start") or 1)
+        task["body_page_end"] = int(task.get("page_end") or task["body_page_start"])
     task["artifacts"] = artifacts
     composition = _composition_graph(task["id"], task.get("parts") or [], body, artifacts)
     if composition:
