@@ -327,12 +327,12 @@ public class MainActivity extends Activity {
                     else showSubscriptionOffer(subject, products);
                 });
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                        0, dp(152), 1f);
+                        0, dp(168), 1f);
                 if (index % 2 == 1) lp.leftMargin = dp(10);
                 line.addView(tile, lp);
             }
             if (line.getChildCount() == 1) line.addView(new View(this),
-                    new LinearLayout.LayoutParams(0, dp(152), 1f));
+                    new LinearLayout.LayoutParams(0, dp(168), 1f));
             LinearLayout.LayoutParams lp = matchWrap();
             lp.bottomMargin = dp(10);
             root.addView(line, lp);
@@ -595,7 +595,7 @@ public class MainActivity extends Activity {
                         n % 2 == 0 ? RiftStyle.BLUE : RiftStyle.VIOLET,
                         () -> startTopic(type, getString(title)));
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                        0, dp(118), 1f);
+                        0, dp(140), 1f);
                 if (col == 1) lp.leftMargin = dp(10);
                 line.addView(tile, lp);
             }
@@ -616,12 +616,12 @@ public class MainActivity extends Activity {
                         QuestionBank.knowledgeLabel(id, Locale.getDefault()),
                         i % 2 == 0 ? RiftStyle.BLUE : RiftStyle.VIOLET,
                         () -> startKnowledgeTopic(id));
-                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, dp(118), 1f);
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, dp(140), 1f);
                 if (i % 2 == 1) lp.leftMargin = dp(10);
                 line.addView(tile, lp);
             }
             if (line.getChildCount() == 1) line.addView(new View(this),
-                    new LinearLayout.LayoutParams(0, dp(118), 1f));
+                    new LinearLayout.LayoutParams(0, dp(140), 1f));
             LinearLayout.LayoutParams lp = matchWrap();
             lp.bottomMargin = dp(10);
             root.addView(line, lp);
@@ -788,11 +788,19 @@ public class MainActivity extends Activity {
         card.addView(space(15));
 
         LinearLayout chips = row();
-        chips.addView(RiftStyle.pill(this, "◇  " + getString(R.string.crystals_fmt, economy.balance()),
-                RiftStyle.BLUE, Color.rgb(239, 241, 255)));
+        TextView crystals = RiftStyle.pill(this,
+                "◇  " + getString(R.string.crystals_fmt, economy.balance()),
+                RiftStyle.BLUE, Color.rgb(239, 241, 255));
+        crystals.setSingleLine(true);
+        crystals.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        chips.addView(crystals, new LinearLayout.LayoutParams(0, dp(39), 1f));
         chips.addView(spaceHorizontal(8));
-        chips.addView(RiftStyle.pill(this, "✦  " + getString(R.string.play_credits_fmt, playCredits.balance()),
-                RiftStyle.VIOLET, Color.rgb(246, 239, 255)));
+        TextView credits = RiftStyle.pill(this,
+                "✦  " + getString(R.string.play_credits_fmt, playCredits.balance()),
+                RiftStyle.VIOLET, Color.rgb(246, 239, 255));
+        credits.setSingleLine(true);
+        credits.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        chips.addView(credits, new LinearLayout.LayoutParams(0, dp(39), 1f));
         card.addView(chips);
         return card;
     }
