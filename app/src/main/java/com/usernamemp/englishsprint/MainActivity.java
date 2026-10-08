@@ -23,6 +23,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
@@ -202,10 +203,13 @@ public class MainActivity extends Activity {
         root.setPadding(dp(20), dp(18), dp(20), dp(36));
 
         LinearLayout masthead = row();
-        TextView mark = text("R", 26, Color.WHITE, Typeface.BOLD);
-        mark.setGravity(Gravity.CENTER);
-        mark.setBackground(RiftStyle.gradient(this, 17,
-                RiftStyle.BLUE, RiftStyle.VIOLET));
+        ImageView mark = new ImageView(this);
+        mark.setImageResource(R.drawable.rift_art);
+        mark.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        mark.setBackground(RiftStyle.shape(this, RiftStyle.NAVY,
+                17, 0, Color.TRANSPARENT));
+        mark.setClipToOutline(true);
+        mark.setContentDescription(getString(R.string.app_name));
         RiftStyle.raise(mark, 3);
         masthead.addView(mark, new LinearLayout.LayoutParams(dp(52), dp(52)));
         LinearLayout brand = column();
