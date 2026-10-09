@@ -24,8 +24,8 @@
       "competition": "Olympiad pilot",
       "season": "2026-2027",
       "license_id": "project.original.v1",
-      "content_version": "0.2.0",
-      "sha256": "731607cad0d8a3121e43475020bd1a36c85e13d05e2197511405187f038497c8",
+      "content_version": "0.2.1",
+      "sha256": "66777dcafffa37751c1e26fe495e2fd6fd2d00d425893b669aeb46ece5b7166e",
       "enabled": true
     },
     {
@@ -50,8 +50,8 @@
       "competition": "Olympiad pilot",
       "season": "2026-2027",
       "license_id": "project.original.v1",
-      "content_version": "0.1.0",
-      "sha256": "78cb4ee5b1aecd32bf21a2e7c1d3ce6ae2f057148e50f3ed748bc98e7041511c",
+      "content_version": "0.1.1",
+      "sha256": "6603194af45c5d80a0e56e606948250827434dded4d8d342294c3d64617dd0ee",
       "enabled": true
     },
     {

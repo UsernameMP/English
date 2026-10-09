@@ -56,6 +56,9 @@ jobs:
       - name: Validate content bank
         run: python3 scripts/validate_content.py
 
+      - name: Validate Russian STEM task localization
+        run: python3 scripts/validate_stem_locale.py
+
       - name: Enforce Atlas and interaction coverage
         run: |
           python3 -m unittest discover -s tools/corpus_ingest/tests -p 'test_coverage.py'
