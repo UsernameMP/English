@@ -1,18 +1,739 @@
 {
-  "schema_version":"1.0","bank_id":"math-olympiad-5-7-pilot","title":"Mathematics Olympiad Pilot","locale":"en","content_version":"0.1.0",
-  "pack":{"id":"mathematics.olympiad.5-7.global.2026","subject":"mathematics","grade_min":5,"grade_max":7,"competition":"Olympiad pilot","region":"Global","season":"2026-2027","title":{"en":"Mathematics Sprint","ru":"Mathematics Sprint"},"subtitle":{"en":"Original olympiad pilot · Grades 5–7","ru":"Оригинальный олимпиадный пилот · 5–7 класс"}},
-  "questions":[
-    {"id":"math_div_001","subject":"mathematics","grade_min":5,"grade_max":7,"interaction":"single_choice","mode":"practice","skills":["divisibility"],"difficulty":1,"source":{"competition":"Olympiad pilot","region":"Global","year":"training","original":true},"stimulus":{},"prompt":"Which number is divisible by both 3 and 4?","options":[{"id":"a","text":"18"},{"id":"b","text":"24"},{"id":"c","text":"28"}],"answer":["b"],"feedback":{"short":{"en":"Use the common multiple.","ru":"Используй общее кратное."},"full":{"en":"A number divisible by 3 and 4 is divisible by 12; 24 is.","ru":"Число, делящееся на 3 и 4, делится на 12; это 24."},"rule":{"en":"Common divisibility can be checked with the least common multiple.","ru":"Общую делимость можно проверить через НОК."}},"review":{"status":"published"},"knowledge":[{"id":"MATH.NUMBER.DIVISIBILITY","weight":1}],"prerequisites":[]},
-    {"id":"math_div_002","subject":"mathematics","grade_min":5,"grade_max":7,"interaction":"numeric","mode":"practice","skills":["divisibility"],"difficulty":2,"source":{"competition":"Olympiad pilot","region":"Global","year":"training","original":true},"stimulus":{},"prompt":"What remainder does 2026 leave when divided by 9?","answer":["1"],"answer_policy":{"tolerance":0},"feedback":{"short":{"en":"Use the digit sum.","ru":"Используй сумму цифр."},"full":{"en":"2+0+2+6=10, and 10 leaves remainder 1 modulo 9.","ru":"2+0+2+6=10, а 10 даёт остаток 1 по модулю 9."},"rule":{"en":"A number and its digit sum have the same remainder modulo 9.","ru":"Число и сумма его цифр дают одинаковый остаток по модулю 9."}},"review":{"status":"published"},"knowledge":[{"id":"MATH.NUMBER.DIVISIBILITY","weight":1}],"prerequisites":[]},
-    {"id":"math_ratio_001","subject":"mathematics","grade_min":5,"grade_max":7,"interaction":"numeric","mode":"practice","skills":["ratios"],"difficulty":1,"source":{"competition":"Olympiad pilot","region":"Global","year":"training","original":true},"stimulus":{"text":"Red : blue marbles = 2 : 3. There are 15 blue marbles."},"prompt":"How many red marbles are there?","answer":["10"],"answer_policy":{"tolerance":0},"feedback":{"short":{"en":"Three parts equal 15.","ru":"Три части равны 15."},"full":{"en":"One part is 5, so two red parts equal 10.","ru":"Одна часть равна 5, значит две красные части равны 10."},"rule":{"en":"Scale both sides of a ratio by the same factor.","ru":"Умножай обе части отношения на один коэффициент."}},"review":{"status":"published"},"knowledge":[{"id":"MATH.ARITHMETIC.RATIOS","weight":1}],"prerequisites":["MATH.NUMBER.DIVISIBILITY"]},
-    {"id":"math_ratio_002","subject":"mathematics","grade_min":5,"grade_max":7,"interaction":"single_choice","mode":"practice","skills":["ratios"],"difficulty":2,"source":{"competition":"Olympiad pilot","region":"Global","year":"training","original":true},"stimulus":{},"prompt":"A price rises by 20% and then falls by 20%. Compared with the start, it is…","options":[{"id":"a","text":"the same"},{"id":"b","text":"4% lower"},{"id":"c","text":"4% higher"}],"answer":["b"],"feedback":{"short":{"en":"The percentages use different bases.","ru":"Проценты считаются от разных оснований."},"full":{"en":"1.2 × 0.8 = 0.96, so the result is 4% lower.","ru":"1,2 × 0,8 = 0,96, поэтому результат ниже на 4%."},"rule":{"en":"Successive percentage changes multiply.","ru":"Последовательные процентные изменения перемножаются."}},"review":{"status":"published"},"knowledge":[{"id":"MATH.ARITHMETIC.RATIOS","weight":1}],"prerequisites":["MATH.NUMBER.DIVISIBILITY"]},
-    {"id":"math_count_001","subject":"mathematics","grade_min":5,"grade_max":7,"interaction":"numeric","mode":"practice","skills":["counting"],"difficulty":1,"source":{"competition":"Olympiad pilot","region":"Global","year":"training","original":true},"stimulus":{},"prompt":"How many two-digit numbers can be formed using 1, 2 and 3 without repeating a digit?","answer":["6"],"answer_policy":{"tolerance":0},"feedback":{"short":{"en":"Choose tens, then units.","ru":"Выбери десятки, затем единицы."},"full":{"en":"There are 3 choices for tens and 2 remaining choices for units: 3×2=6.","ru":"Для десятков 3 варианта, для единиц остаётся 2: 3×2=6."},"rule":{"en":"Independent stages multiply their choice counts.","ru":"Числа вариантов независимых этапов перемножаются."}},"review":{"status":"published"},"knowledge":[{"id":"MATH.COMBINATORICS.COUNTING","weight":1}],"prerequisites":[]},
-    {"id":"math_count_002","subject":"mathematics","grade_min":5,"grade_max":7,"interaction":"multi_choice","mode":"practice","skills":["counting"],"difficulty":2,"source":{"competition":"Olympiad pilot","region":"Global","year":"training","original":true},"stimulus":{},"prompt":"Select every even two-digit number whose digits sum to 5.","options":[{"id":"a","text":"14"},{"id":"b","text":"23"},{"id":"c","text":"32"},{"id":"d","text":"41"}],"answer":["a","c"],"feedback":{"short":{"en":"Even numbers end in an even digit.","ru":"Чётные числа оканчиваются чётной цифрой."},"full":{"en":"14 and 32 both have digit sum 5 and an even final digit.","ru":"У 14 и 32 сумма цифр равна 5, а последняя цифра чётная."},"rule":{"en":"Apply all constraints, not only one.","ru":"Применяй все ограничения, а не одно."}},"review":{"status":"published"},"knowledge":[{"id":"MATH.COMBINATORICS.COUNTING","weight":0.6},{"id":"MATH.LOGIC.INVARIANTS","weight":0.4}],"prerequisites":["MATH.NUMBER.DIVISIBILITY"]},
-    {"id":"math_area_001","subject":"mathematics","grade_min":5,"grade_max":7,"interaction":"numeric","mode":"practice","skills":["area"],"difficulty":1,"source":{"competition":"Olympiad pilot","region":"Global","year":"training","original":true},"stimulus":{"text":"A rectangle is 8 cm by 5 cm."},"prompt":"Enter its area in cm².","answer":["40 cm²"],"answer_policy":{"tolerance":0,"unit":"cm²"},"feedback":{"short":{"en":"Multiply side lengths.","ru":"Перемножь длины сторон."},"full":{"en":"8×5=40 cm².","ru":"8×5=40 см²."},"rule":{"en":"Rectangle area equals length times width.","ru":"Площадь прямоугольника равна произведению сторон."}},"review":{"status":"published"},"knowledge":[{"id":"MATH.GEOMETRY.AREA","weight":1}],"prerequisites":[]},
-    {"id":"math_area_002","subject":"mathematics","grade_min":5,"grade_max":7,"interaction":"single_choice","mode":"practice","skills":["area"],"difficulty":2,"source":{"competition":"Olympiad pilot","region":"Global","year":"training","original":true},"stimulus":{"text":"A 6×6 square has a 2×2 corner removed."},"prompt":"What area remains?","options":[{"id":"a","text":"28"},{"id":"b","text":"32"},{"id":"c","text":"34"}],"answer":["b"],"feedback":{"short":{"en":"Subtract the removed area.","ru":"Вычти удалённую площадь."},"full":{"en":"36−4=32 square units.","ru":"36−4=32 квадратные единицы."},"rule":{"en":"Decompose or subtract non-overlapping regions.","ru":"Разбивай фигуру или вычитай непересекающиеся части."}},"review":{"status":"published"},"knowledge":[{"id":"MATH.GEOMETRY.AREA","weight":1}],"prerequisites":[]},
-    {"id":"math_inv_001","subject":"mathematics","grade_min":5,"grade_max":7,"interaction":"single_choice","mode":"practice","skills":["invariants"],"difficulty":2,"source":{"competition":"Olympiad pilot","region":"Global","year":"training","original":true},"stimulus":{"text":"Start with an even number. Each move adds 2."},"prompt":"Which statement is always true?","options":[{"id":"a","text":"The number stays even"},{"id":"b","text":"The number becomes odd"},{"id":"c","text":"The number becomes prime"}],"answer":["a"],"feedback":{"short":{"en":"Track parity.","ru":"Следи за чётностью."},"full":{"en":"Even plus 2 is even, so parity never changes.","ru":"Чётное плюс 2 остаётся чётным, поэтому чётность не меняется."},"rule":{"en":"An invariant is a property preserved by every move.","ru":"Инвариант — свойство, сохраняемое каждым ходом."}},"review":{"status":"published"},"knowledge":[{"id":"MATH.LOGIC.INVARIANTS","weight":1}],"prerequisites":["MATH.NUMBER.DIVISIBILITY"]},
-    {"id":"math_inv_002","subject":"mathematics","grade_min":5,"grade_max":7,"interaction":"multi_choice","mode":"practice","skills":["invariants"],"difficulty":2,"source":{"competition":"Olympiad pilot","region":"Global","year":"training","original":true},"stimulus":{},"prompt":"Select every sum that must be even.","options":[{"id":"a","text":"even + even"},{"id":"b","text":"odd + odd"},{"id":"c","text":"even + odd"}],"answer":["a","b"],"feedback":{"short":{"en":"Compare parity pairs.","ru":"Сравни пары чётностей."},"full":{"en":"Two numbers of the same parity have an even sum.","ru":"Два числа одинаковой чётности дают чётную сумму."},"rule":{"en":"Parity addition follows fixed cases.","ru":"Сложение чётностей подчиняется фиксированным случаям."}},"review":{"status":"published"},"knowledge":[{"id":"MATH.LOGIC.INVARIANTS","weight":1}],"prerequisites":["MATH.NUMBER.DIVISIBILITY"]},
-    {"id":"math_seq_001","subject":"mathematics","grade_min":5,"grade_max":7,"interaction":"sequence","mode":"practice","skills":["divisibility"],"difficulty":2,"source":{"competition":"Olympiad pilot","region":"Global","year":"training","original":true},"stimulus":{},"prompt":"Order the steps for finding the remainder of 347 when divided by 9.","options":[{"id":"a","text":"Add the digits: 3+4+7"},{"id":"b","text":"Reduce 14 modulo 9"},{"id":"c","text":"State the remainder 5"}],"answer":["a","b","c"],"feedback":{"short":{"en":"Transform, reduce, conclude.","ru":"Преобразуй, сократи, сделай вывод."},"full":{"en":"The digit sum is 14; 14 modulo 9 is 5.","ru":"Сумма цифр равна 14; остаток 14 по модулю 9 равен 5."},"rule":{"en":"A solution sequence preserves the logical dependency of its steps.","ru":"Последовательность решения сохраняет логическую зависимость шагов."}},"review":{"status":"published"},"knowledge":[{"id":"MATH.NUMBER.DIVISIBILITY","weight":1}],"prerequisites":[]},
-    {"id":"math_mix_001","subject":"mathematics","grade_min":5,"grade_max":7,"interaction":"numeric","mode":"practice","skills":["counting","invariants"],"difficulty":3,"source":{"competition":"Olympiad pilot","region":"Global","year":"training","original":true},"stimulus":{},"prompt":"How many integers from 1 through 20 are divisible by 3 or by 5?","answer":["9"],"answer_policy":{"tolerance":0},"feedback":{"short":{"en":"Use inclusion–exclusion.","ru":"Используй включение–исключение."},"full":{"en":"There are 6 multiples of 3 and 4 of 5, but 15 was counted twice: 6+4−1=9.","ru":"Есть 6 кратных 3 и 4 кратных 5, но 15 посчитано дважды: 6+4−1=9."},"rule":{"en":"Subtract the overlap after adding two counted sets.","ru":"После сложения двух множеств вычти их пересечение."}},"review":{"status":"published"},"knowledge":[{"id":"MATH.COMBINATORICS.COUNTING","weight":0.5},{"id":"MATH.NUMBER.DIVISIBILITY","weight":0.5}],"prerequisites":[]}
+  "schema_version": "1.0",
+  "bank_id": "math-olympiad-5-7-pilot",
+  "title": "Олимпиадная математика — пилот",
+  "locale": "ru",
+  "content_version": "0.1.1",
+  "pack": {
+    "id": "mathematics.olympiad.5-7.global.2026",
+    "subject": "mathematics",
+    "grade_min": 5,
+    "grade_max": 7,
+    "competition": "Olympiad pilot",
+    "region": "Global",
+    "season": "2026-2027",
+    "title": {
+      "ru": "Математика · олимпиадный тренажёр",
+      "en": "Математика · олимпиадный тренажёр"
+    },
+    "subtitle": {
+      "en": "Original olympiad pilot · Grades 5–7",
+      "ru": "Оригинальный олимпиадный пилот · 5–7 класс"
+    }
+  },
+  "questions": [
+    {
+      "id": "math_div_001",
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "divisibility"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какое число делится и на 3, и на 4?",
+      "options": [
+        {
+          "id": "a",
+          "text": "18"
+        },
+        {
+          "id": "b",
+          "text": "24"
+        },
+        {
+          "id": "c",
+          "text": "28"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Используй общее кратное.",
+          "ru": "Используй общее кратное."
+        },
+        "full": {
+          "en": "Число, делящееся на 3 и 4, делится на 12; это 24.",
+          "ru": "Число, делящееся на 3 и 4, делится на 12; это 24."
+        },
+        "rule": {
+          "en": "Общую делимость можно проверить через НОК.",
+          "ru": "Общую делимость можно проверить через НОК."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "MATH.NUMBER.DIVISIBILITY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "math_div_002",
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "divisibility"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какой остаток получится при делении 2026 на 9?",
+      "answer": [
+        "1"
+      ],
+      "answer_policy": {
+        "tolerance": 0
+      },
+      "feedback": {
+        "short": {
+          "en": "Используй сумму цифр.",
+          "ru": "Используй сумму цифр."
+        },
+        "full": {
+          "en": "2+0+2+6=10, а 10 даёт остаток 1 по модулю 9.",
+          "ru": "2+0+2+6=10, а 10 даёт остаток 1 по модулю 9."
+        },
+        "rule": {
+          "en": "Число и сумма его цифр дают одинаковый остаток по модулю 9.",
+          "ru": "Число и сумма его цифр дают одинаковый остаток по модулю 9."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "MATH.NUMBER.DIVISIBILITY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "math_ratio_001",
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "ratios"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Отношение числа красных шариков к числу синих равно 2 : 3. Синих шариков 15."
+      },
+      "prompt": "Сколько красных шариков?",
+      "answer": [
+        "10"
+      ],
+      "answer_policy": {
+        "tolerance": 0
+      },
+      "feedback": {
+        "short": {
+          "en": "Три части равны 15.",
+          "ru": "Три части равны 15."
+        },
+        "full": {
+          "en": "Одна часть равна 5, значит две красные части равны 10.",
+          "ru": "Одна часть равна 5, значит две красные части равны 10."
+        },
+        "rule": {
+          "en": "Умножай обе части отношения на один коэффициент.",
+          "ru": "Умножай обе части отношения на один коэффициент."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "MATH.ARITHMETIC.RATIOS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [
+        "MATH.NUMBER.DIVISIBILITY"
+      ]
+    },
+    {
+      "id": "math_ratio_002",
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "ratios"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Цену сначала повысили на 20%, затем снизили на 20%. Как изменилась цена относительно первоначальной?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Не изменилась"
+        },
+        {
+          "id": "b",
+          "text": "Уменьшилась на 4%"
+        },
+        {
+          "id": "c",
+          "text": "Увеличилась на 4%"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Проценты считаются от разных оснований.",
+          "ru": "Проценты считаются от разных оснований."
+        },
+        "full": {
+          "en": "1,2 × 0,8 = 0,96, поэтому результат ниже на 4%.",
+          "ru": "1,2 × 0,8 = 0,96, поэтому результат ниже на 4%."
+        },
+        "rule": {
+          "en": "Последовательные процентные изменения перемножаются.",
+          "ru": "Последовательные процентные изменения перемножаются."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "MATH.ARITHMETIC.RATIOS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [
+        "MATH.NUMBER.DIVISIBILITY"
+      ]
+    },
+    {
+      "id": "math_count_001",
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "counting"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Сколько двузначных чисел можно составить из цифр 1, 2 и 3 без повторения цифр?",
+      "answer": [
+        "6"
+      ],
+      "answer_policy": {
+        "tolerance": 0
+      },
+      "feedback": {
+        "short": {
+          "en": "Выбери десятки, затем единицы.",
+          "ru": "Выбери десятки, затем единицы."
+        },
+        "full": {
+          "en": "Для десятков 3 варианта, для единиц остаётся 2: 3×2=6.",
+          "ru": "Для десятков 3 варианта, для единиц остаётся 2: 3×2=6."
+        },
+        "rule": {
+          "en": "Числа вариантов независимых этапов перемножаются.",
+          "ru": "Числа вариантов независимых этапов перемножаются."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "MATH.COMBINATORICS.COUNTING",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "math_count_002",
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "counting"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Выбери все чётные двузначные числа, сумма цифр которых равна 5.",
+      "options": [
+        {
+          "id": "a",
+          "text": "14"
+        },
+        {
+          "id": "b",
+          "text": "23"
+        },
+        {
+          "id": "c",
+          "text": "32"
+        },
+        {
+          "id": "d",
+          "text": "41"
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Чётные числа оканчиваются чётной цифрой.",
+          "ru": "Чётные числа оканчиваются чётной цифрой."
+        },
+        "full": {
+          "en": "У 14 и 32 сумма цифр равна 5, а последняя цифра чётная.",
+          "ru": "У 14 и 32 сумма цифр равна 5, а последняя цифра чётная."
+        },
+        "rule": {
+          "en": "Применяй все ограничения, а не одно.",
+          "ru": "Применяй все ограничения, а не одно."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "MATH.COMBINATORICS.COUNTING",
+          "weight": 0.6
+        },
+        {
+          "id": "MATH.LOGIC.INVARIANTS",
+          "weight": 0.4
+        }
+      ],
+      "prerequisites": [
+        "MATH.NUMBER.DIVISIBILITY"
+      ]
+    },
+    {
+      "id": "math_area_001",
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "area"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Длины сторон прямоугольника равны 8 см и 5 см."
+      },
+      "prompt": "Введи площадь прямоугольника в см² (с единицей измерения).",
+      "answer": [
+        "40 см²"
+      ],
+      "answer_policy": {
+        "tolerance": 0,
+        "unit": "см²"
+      },
+      "feedback": {
+        "short": {
+          "en": "Перемножь длины сторон.",
+          "ru": "Перемножь длины сторон."
+        },
+        "full": {
+          "en": "8×5=40 см².",
+          "ru": "8×5=40 см²."
+        },
+        "rule": {
+          "en": "Площадь прямоугольника равна произведению сторон.",
+          "ru": "Площадь прямоугольника равна произведению сторон."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "MATH.GEOMETRY.AREA",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "math_area_002",
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "area"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "От квадрата 6 × 6 отрезали угловой квадрат 2 × 2."
+      },
+      "prompt": "Какая площадь осталась?",
+      "options": [
+        {
+          "id": "a",
+          "text": "28"
+        },
+        {
+          "id": "b",
+          "text": "32"
+        },
+        {
+          "id": "c",
+          "text": "34"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Вычти удалённую площадь.",
+          "ru": "Вычти удалённую площадь."
+        },
+        "full": {
+          "en": "36−4=32 квадратные единицы.",
+          "ru": "36−4=32 квадратные единицы."
+        },
+        "rule": {
+          "en": "Разбивай фигуру или вычитай непересекающиеся части.",
+          "ru": "Разбивай фигуру или вычитай непересекающиеся части."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "MATH.GEOMETRY.AREA",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "math_inv_001",
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "invariants"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Начальное число чётное. За один ход к нему прибавляют 2."
+      },
+      "prompt": "Какое утверждение всегда верно?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Число остаётся чётным"
+        },
+        {
+          "id": "b",
+          "text": "Число становится нечётным"
+        },
+        {
+          "id": "c",
+          "text": "Число становится простым"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Следи за чётностью.",
+          "ru": "Следи за чётностью."
+        },
+        "full": {
+          "en": "Чётное плюс 2 остаётся чётным, поэтому чётность не меняется.",
+          "ru": "Чётное плюс 2 остаётся чётным, поэтому чётность не меняется."
+        },
+        "rule": {
+          "en": "Инвариант — свойство, сохраняемое каждым ходом.",
+          "ru": "Инвариант — свойство, сохраняемое каждым ходом."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "MATH.LOGIC.INVARIANTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [
+        "MATH.NUMBER.DIVISIBILITY"
+      ]
+    },
+    {
+      "id": "math_inv_002",
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "invariants"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Выбери все суммы, которые обязательно будут чётными.",
+      "options": [
+        {
+          "id": "a",
+          "text": "чётное + чётное"
+        },
+        {
+          "id": "b",
+          "text": "нечётное + нечётное"
+        },
+        {
+          "id": "c",
+          "text": "чётное + нечётное"
+        }
+      ],
+      "answer": [
+        "a",
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Сравни пары чётностей.",
+          "ru": "Сравни пары чётностей."
+        },
+        "full": {
+          "en": "Два числа одинаковой чётности дают чётную сумму.",
+          "ru": "Два числа одинаковой чётности дают чётную сумму."
+        },
+        "rule": {
+          "en": "Сложение чётностей подчиняется фиксированным случаям.",
+          "ru": "Сложение чётностей подчиняется фиксированным случаям."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "MATH.LOGIC.INVARIANTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [
+        "MATH.NUMBER.DIVISIBILITY"
+      ]
+    },
+    {
+      "id": "math_seq_001",
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "divisibility"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Расположи по порядку шаги нахождения остатка от деления 347 на 9.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Сложить цифры: 3 + 4 + 7"
+        },
+        {
+          "id": "b",
+          "text": "Найти остаток от деления 14 на 9"
+        },
+        {
+          "id": "c",
+          "text": "Записать ответ: остаток равен 5"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Преобразуй, сократи, сделай вывод.",
+          "ru": "Преобразуй, сократи, сделай вывод."
+        },
+        "full": {
+          "en": "Сумма цифр равна 14; остаток 14 по модулю 9 равен 5.",
+          "ru": "Сумма цифр равна 14; остаток 14 по модулю 9 равен 5."
+        },
+        "rule": {
+          "en": "Последовательность решения сохраняет логическую зависимость шагов.",
+          "ru": "Последовательность решения сохраняет логическую зависимость шагов."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "MATH.NUMBER.DIVISIBILITY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "math_mix_001",
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "counting",
+        "invariants"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Сколько целых чисел от 1 до 20 включительно делятся на 3 или на 5?",
+      "answer": [
+        "9"
+      ],
+      "answer_policy": {
+        "tolerance": 0
+      },
+      "feedback": {
+        "short": {
+          "en": "Используй включение–исключение.",
+          "ru": "Используй включение–исключение."
+        },
+        "full": {
+          "en": "Есть 6 кратных 3 и 4 кратных 5, но 15 посчитано дважды: 6+4−1=9.",
+          "ru": "Есть 6 кратных 3 и 4 кратных 5, но 15 посчитано дважды: 6+4−1=9."
+        },
+        "rule": {
+          "en": "После сложения двух множеств вычти их пересечение.",
+          "ru": "После сложения двух множеств вычти их пересечение."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "MATH.COMBINATORICS.COUNTING",
+          "weight": 0.5
+        },
+        {
+          "id": "MATH.NUMBER.DIVISIBILITY",
+          "weight": 0.5
+        }
+      ],
+      "prerequisites": []
+    }
   ]
 }
