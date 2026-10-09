@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
   "bank_id": "informatics-olympiad-5-7-pilot",
-  "title": "Informatics Olympiad Pilot",
-  "locale": "en",
-  "content_version": "0.2.0",
+  "title": "Олимпиадная информатика — пилот",
+  "locale": "ru",
+  "content_version": "0.2.1",
   "pack": {
     "id": "informatics.olympiad.5-7.global.2026",
     "subject": "informatics",
@@ -13,8 +13,8 @@
     "region": "Global",
     "season": "2026-2027",
     "title": {
-      "en": "Informatics Sprint",
-      "ru": "Informatics Sprint"
+      "ru": "Информатика · олимпиадный тренажёр",
+      "en": "Информатика · олимпиадный тренажёр"
     },
     "subtitle": {
       "en": "Olympiad pilot · Grades 5–7",
@@ -40,19 +40,19 @@
         "original": true
       },
       "stimulus": {},
-      "prompt": "Which value makes (A AND true) equal true?",
+      "prompt": "При каком значении A выражение (A И ИСТИНА) будет истинным?",
       "options": [
         {
           "id": "a",
-          "text": "A = true"
+          "text": "A = ИСТИНА"
         },
         {
           "id": "b",
-          "text": "A = false"
+          "text": "A = ЛОЖЬ"
         },
         {
           "id": "c",
-          "text": "Either value"
+          "text": "При любом значении A"
         }
       ],
       "answer": [
@@ -60,16 +60,16 @@
       ],
       "feedback": {
         "short": {
-          "en": "AND is true only when both operands are true.",
+          "en": "AND истинно, только когда истинны оба операнда.",
           "ru": "AND истинно, только когда истинны оба операнда."
         },
         "full": {
-          "en": "The second operand is already true, so the expression copies A.",
+          "en": "Второй операнд уже истинен, поэтому выражение совпадает с A.",
           "ru": "Второй операнд уже истинен, поэтому выражение совпадает с A."
         },
         "rule": {
-          "en": "true AND true = true.",
-          "ru": "true AND true = true."
+          "en": "ИСТИНА И ИСТИНА = ИСТИНА.",
+          "ru": "ИСТИНА И ИСТИНА = ИСТИНА."
         }
       },
       "review": {
@@ -101,15 +101,15 @@
         "original": true
       },
       "stimulus": {},
-      "prompt": "What is NOT (true OR false)?",
+      "prompt": "Каково значение выражения НЕ (ИСТИНА ИЛИ ЛОЖЬ)?",
       "options": [
         {
           "id": "a",
-          "text": "true"
+          "text": "ИСТИНА"
         },
         {
           "id": "b",
-          "text": "false"
+          "text": "ЛОЖЬ"
         }
       ],
       "answer": [
@@ -117,16 +117,16 @@
       ],
       "feedback": {
         "short": {
-          "en": "Evaluate OR first, then negate.",
-          "ru": "Сначала вычисли OR, затем отрицание."
+          "en": "Сначала вычисли ИЛИ, затем примени отрицание.",
+          "ru": "Сначала вычисли ИЛИ, затем примени отрицание."
         },
         "full": {
-          "en": "true OR false is true; NOT true is false.",
-          "ru": "true OR false даёт true; NOT true даёт false."
+          "en": "ИСТИНА ИЛИ ЛОЖЬ даёт ИСТИНА; отрицание ИСТИНА даёт ЛОЖЬ.",
+          "ru": "ИСТИНА ИЛИ ЛОЖЬ даёт ИСТИНА; отрицание ИСТИНА даёт ЛОЖЬ."
         },
         "rule": {
-          "en": "Parentheses are evaluated before NOT.",
-          "ru": "Скобки вычисляются до NOT."
+          "en": "Сначала вычисляют выражение в скобках, затем применяют НЕ.",
+          "ru": "Сначала вычисляют выражение в скобках, затем применяют НЕ."
         }
       },
       "review": {
@@ -160,7 +160,7 @@
       "stimulus": {
         "text": "x = 3; x = x + 2; x = x × 2"
       },
-      "prompt": "What is the final value of x?",
+      "prompt": "Чему равно значение x после выполнения всех команд?",
       "options": [
         {
           "id": "a",
@@ -180,15 +180,15 @@
       ],
       "feedback": {
         "short": {
-          "en": "Follow assignments in order.",
+          "en": "Выполняй присваивания по порядку.",
           "ru": "Выполняй присваивания по порядку."
         },
         "full": {
-          "en": "3 becomes 5, then 5 × 2 becomes 10.",
+          "en": "3 превращается в 5, затем 5 × 2 даёт 10.",
           "ru": "3 превращается в 5, затем 5 × 2 даёт 10."
         },
         "rule": {
-          "en": "Each assignment changes the current state.",
+          "en": "Каждое присваивание меняет текущее состояние.",
           "ru": "Каждое присваивание меняет текущее состояние."
         }
       },
@@ -221,9 +221,9 @@
         "original": true
       },
       "stimulus": {
-        "text": "s = 0; repeat 4 times: s = s + 3"
+        "text": "s = 0; повторить 4 раза: s = s + 3"
       },
-      "prompt": "What is the final value of s?",
+      "prompt": "Чему равно значение s после выполнения цикла?",
       "options": [
         {
           "id": "a",
@@ -243,15 +243,15 @@
       ],
       "feedback": {
         "short": {
-          "en": "Apply the loop body four times.",
+          "en": "Выполни тело цикла четыре раза.",
           "ru": "Выполни тело цикла четыре раза."
         },
         "full": {
-          "en": "The values are 3, 6, 9 and 12.",
+          "en": "Значения: 3, 6, 9 и 12.",
           "ru": "Значения: 3, 6, 9 и 12."
         },
         "rule": {
-          "en": "A repeat loop applies the same state change repeatedly.",
+          "en": "Цикл повторяет одно изменение состояния.",
           "ru": "Цикл повторяет одно изменение состояния."
         }
       },
@@ -284,7 +284,7 @@
         "original": true
       },
       "stimulus": {},
-      "prompt": "What decimal number is binary 101?",
+      "prompt": "Какому числу в десятичной системе соответствует двоичное число 101₂?",
       "options": [
         {
           "id": "a",
@@ -304,7 +304,7 @@
       ],
       "feedback": {
         "short": {
-          "en": "Use place values 4, 2 and 1.",
+          "en": "Используй разряды 4, 2 и 1.",
           "ru": "Используй разряды 4, 2 и 1."
         },
         "full": {
@@ -312,7 +312,7 @@
           "ru": "101₂ = 1×4 + 0×2 + 1×1 = 5."
         },
         "rule": {
-          "en": "Binary place values are powers of two.",
+          "en": "Разряды двоичной записи — степени двойки.",
           "ru": "Разряды двоичной записи — степени двойки."
         }
       },
@@ -345,7 +345,7 @@
         "original": true
       },
       "stimulus": {},
-      "prompt": "Which binary representation equals decimal 6?",
+      "prompt": "Какая запись в двоичной системе соответствует десятичному числу 6?",
       "options": [
         {
           "id": "a",
@@ -365,15 +365,15 @@
       ],
       "feedback": {
         "short": {
-          "en": "Decompose 6 into powers of two.",
+          "en": "Разложи 6 на степени двойки.",
           "ru": "Разложи 6 на степени двойки."
         },
         "full": {
-          "en": "6 = 4 + 2 + 0, so the bits are 110.",
+          "en": "6 = 4 + 2 + 0, поэтому запись — 110.",
           "ru": "6 = 4 + 2 + 0, поэтому запись — 110."
         },
         "rule": {
-          "en": "Write one for each included power of two.",
+          "en": "Ставь единицу у каждой используемой степени двойки.",
           "ru": "Ставь единицу у каждой используемой степени двойки."
         }
       },
@@ -406,9 +406,9 @@
         "original": true
       },
       "stimulus": {
-        "text": "repeat n times: print('*')"
+        "text": "повторить n раз: вывести('*')"
       },
-      "prompt": "How many print operations occur?",
+      "prompt": "Сколько раз будет выполнена команда вывода?",
       "options": [
         {
           "id": "a",
@@ -428,15 +428,15 @@
       ],
       "feedback": {
         "short": {
-          "en": "Count one operation per iteration.",
+          "en": "Посчитай одну операцию на итерацию.",
           "ru": "Посчитай одну операцию на итерацию."
         },
         "full": {
-          "en": "The loop has n iterations and prints once in each.",
+          "en": "Цикл делает n итераций и печатает один раз на каждой.",
           "ru": "Цикл делает n итераций и печатает один раз на каждой."
         },
         "rule": {
-          "en": "Total operations = iterations × operations per iteration.",
+          "en": "Число операций = итерации × операции на итерацию.",
           "ru": "Число операций = итерации × операции на итерацию."
         }
       },
@@ -471,9 +471,9 @@
         "original": true
       },
       "stimulus": {
-        "text": "repeat 3 times: repeat 4 times: add 1"
+        "text": "повторить 3 раза: повторить 4 раза: прибавить 1"
       },
-      "prompt": "How many additions occur?",
+      "prompt": "Сколько всего операций сложения будет выполнено?",
       "options": [
         {
           "id": "a",
@@ -493,15 +493,15 @@
       ],
       "feedback": {
         "short": {
-          "en": "Multiply the nested loop counts.",
+          "en": "Перемножь числа повторов вложенных циклов.",
           "ru": "Перемножь числа повторов вложенных циклов."
         },
         "full": {
-          "en": "For each of 3 outer iterations, the inner loop adds 4 times: 3 × 4 = 12.",
+          "en": "На каждой из 3 внешних итераций внутренний цикл выполняет 4 сложения: 3 × 4 = 12.",
           "ru": "На каждой из 3 внешних итераций внутренний цикл выполняет 4 сложения: 3 × 4 = 12."
         },
         "rule": {
-          "en": "Nested fixed loops multiply operation counts.",
+          "en": "Вложенные фиксированные циклы перемножают число операций.",
           "ru": "Вложенные фиксированные циклы перемножают число операций."
         }
       },
@@ -525,19 +525,47 @@
       "grade_max": 7,
       "interaction": "numeric",
       "mode": "practice",
-      "skills": ["tracing"],
+      "skills": [
+        "tracing"
+      ],
       "difficulty": 2,
-      "source": {"competition":"Olympiad pilot","region":"Global","year":"training","original":true},
-      "stimulus": {"text":"x = 5; repeat 3 times: x = x + 4"},
-      "prompt": "Enter the final value of x.",
-      "answer": ["17", "17.0"],
-      "feedback": {
-        "short": {"en":"Trace all three additions.","ru":"Выполни все три сложения."},
-        "full": {"en":"Start at 5, then obtain 9, 13 and 17.","ru":"Начни с 5, затем получатся 9, 13 и 17."},
-        "rule": {"en":"Update the current state once per iteration.","ru":"Изменяй текущее состояние один раз на каждой итерации."}
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
       },
-      "review": {"status":"published"},
-      "knowledge": [{"id":"CS.ALGORITHMS.TRACING","weight":1}],
+      "stimulus": {
+        "text": "x = 5; повторить 3 раза: x = x + 4"
+      },
+      "prompt": "Введи итоговое значение x.",
+      "answer": [
+        "17",
+        "17.0"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Выполни все три сложения.",
+          "ru": "Выполни все три сложения."
+        },
+        "full": {
+          "en": "Начни с 5, затем получатся 9, 13 и 17.",
+          "ru": "Начни с 5, затем получатся 9, 13 и 17."
+        },
+        "rule": {
+          "en": "Изменяй текущее состояние один раз на каждой итерации.",
+          "ru": "Изменяй текущее состояние один раз на каждой итерации."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.ALGORITHMS.TRACING",
+          "weight": 1
+        }
+      ],
       "prerequisites": []
     },
     {
@@ -547,20 +575,50 @@
       "grade_max": 7,
       "interaction": "numeric",
       "mode": "practice",
-      "skills": ["binary"],
+      "skills": [
+        "binary"
+      ],
       "difficulty": 2,
-      "source": {"competition":"Olympiad pilot","region":"Global","year":"training","original":true},
-      "stimulus": {"text":"Binary number: 1111₂"},
-      "prompt": "Enter its decimal value.",
-      "answer": ["15", "15.0"],
-      "answer_policy": {"tolerance": 0},
-      "feedback": {
-        "short": {"en":"Add the active place values.","ru":"Сложи активные разряды."},
-        "full": {"en":"8 + 4 + 2 + 1 = 15.","ru":"8 + 4 + 2 + 1 = 15."},
-        "rule": {"en":"Binary place values are powers of two.","ru":"Разряды двоичной записи — степени двойки."}
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
       },
-      "review": {"status":"published"},
-      "knowledge": [{"id":"CS.DATA.BINARY","weight":1}],
+      "stimulus": {
+        "text": "Двоичное число: 1111₂"
+      },
+      "prompt": "Введи его значение в десятичной системе.",
+      "answer": [
+        "15",
+        "15.0"
+      ],
+      "answer_policy": {
+        "tolerance": 0
+      },
+      "feedback": {
+        "short": {
+          "en": "Сложи активные разряды.",
+          "ru": "Сложи активные разряды."
+        },
+        "full": {
+          "en": "8 + 4 + 2 + 1 = 15.",
+          "ru": "8 + 4 + 2 + 1 = 15."
+        },
+        "rule": {
+          "en": "Разряды двоичной записи — степени двойки.",
+          "ru": "Разряды двоичной записи — степени двойки."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.DATA.BINARY",
+          "weight": 1
+        }
+      ],
       "prerequisites": []
     },
     {
@@ -570,25 +628,63 @@
       "grade_max": 7,
       "interaction": "multi_choice",
       "mode": "practice",
-      "skills": ["boolean"],
-      "difficulty": 2,
-      "source": {"competition":"Olympiad pilot","region":"Global","year":"training","original":true},
-      "stimulus": {},
-      "prompt": "Select every expression that is true.",
-      "options": [
-        {"id":"a","text":"true AND true"},
-        {"id":"b","text":"false OR false"},
-        {"id":"c","text":"NOT false"},
-        {"id":"d","text":"true AND false"}
+      "skills": [
+        "boolean"
       ],
-      "answer": ["a", "c"],
-      "feedback": {
-        "short": {"en":"Two expressions evaluate to true.","ru":"Два выражения дают true."},
-        "full": {"en":"true AND true and NOT false are true; the other two are false.","ru":"true AND true и NOT false истинны; остальные два выражения ложны."},
-        "rule": {"en":"A multi-select answer is correct only when the complete set is selected.","ru":"Ответ с несколькими вариантами верен только при выборе полного множества."}
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
       },
-      "review": {"status":"published"},
-      "knowledge": [{"id":"CS.LOGIC.BOOLEAN","weight":1}],
+      "stimulus": {},
+      "prompt": "Выбери все истинные логические выражения.",
+      "options": [
+        {
+          "id": "a",
+          "text": "ИСТИНА И ИСТИНА"
+        },
+        {
+          "id": "b",
+          "text": "ЛОЖЬ ИЛИ ЛОЖЬ"
+        },
+        {
+          "id": "c",
+          "text": "НЕ ЛОЖЬ"
+        },
+        {
+          "id": "d",
+          "text": "ИСТИНА И ЛОЖЬ"
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Два выражения дают true.",
+          "ru": "Два выражения дают true."
+        },
+        "full": {
+          "en": "ИСТИНА И ИСТИНА и НЕ ЛОЖЬ — истинные выражения.",
+          "ru": "ИСТИНА И ИСТИНА и НЕ ЛОЖЬ — истинные выражения."
+        },
+        "rule": {
+          "en": "Ответ с несколькими вариантами верен только при выборе полного множества.",
+          "ru": "Ответ с несколькими вариантами верен только при выборе полного множества."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.LOGIC.BOOLEAN",
+          "weight": 1
+        }
+      ],
       "prerequisites": []
     },
     {
@@ -598,21 +694,53 @@
       "grade_max": 7,
       "interaction": "numeric",
       "mode": "practice",
-      "skills": ["complexity"],
+      "skills": [
+        "complexity"
+      ],
       "difficulty": 2,
-      "source": {"competition":"Olympiad pilot","region":"Global","year":"training","original":true},
-      "stimulus": {"text":"A 10 MB file is transferred in 4 seconds at a constant rate."},
-      "prompt": "Enter the transfer rate, including the unit MB/s.",
-      "answer": ["2.5 MB/s"],
-      "answer_policy": {"tolerance":0.01,"unit":"MB/s"},
-      "feedback": {
-        "short": {"en":"Divide data size by time.","ru":"Раздели объём данных на время."},
-        "full": {"en":"10 ÷ 4 = 2.5 MB/s.","ru":"10 ÷ 4 = 2,5 МБ/с."},
-        "rule": {"en":"Rate equals amount divided by elapsed time.","ru":"Скорость равна объёму, делённому на время."}
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
       },
-      "review": {"status":"published"},
-      "knowledge": [{"id":"CS.ALGORITHMS.COMPLEXITY.INTRO","weight":1}],
-      "prerequisites": ["CS.ALGORITHMS.TRACING"]
+      "stimulus": {
+        "text": "Файл размером 10 МБ передаётся за 4 секунды с постоянной скоростью."
+      },
+      "prompt": "Введи скорость передачи данных в МБ/с (с единицей измерения).",
+      "answer": [
+        "2,5 МБ/с"
+      ],
+      "answer_policy": {
+        "tolerance": 0.01,
+        "unit": "МБ/с"
+      },
+      "feedback": {
+        "short": {
+          "en": "Раздели объём данных на время.",
+          "ru": "Раздели объём данных на время."
+        },
+        "full": {
+          "en": "10 МБ ÷ 4 с = 2,5 МБ/с.",
+          "ru": "10 МБ ÷ 4 с = 2,5 МБ/с."
+        },
+        "rule": {
+          "en": "Скорость равна объёму, делённому на время.",
+          "ru": "Скорость равна объёму, делённому на время."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.ALGORITHMS.COMPLEXITY.INTRO",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [
+        "CS.ALGORITHMS.TRACING"
+      ]
     }
   ]
 }
