@@ -48,7 +48,8 @@ def main():
                 verify_text(option["text"], f"{qid}: option {index}")
             for key in ("short", "full", "rule"):
                 fb = q["feedback"][key]
-                verify_text(fb["ru"], f"{qid}: feedback.{key}", True)
+                # Numeric formulas may contain no Cyrillic characters but are language-neutral.
+                verify_text(fb["ru"], f"{qid}: feedback.{key}")
                 if fb.get("en") != fb["ru"]:
                     raise AssertionError(f"{qid}: feedback.{key} must remain Russian on English device locale")
             if q.get("interaction") == "numeric" and "unit" in q.get("answer_policy", {}):
