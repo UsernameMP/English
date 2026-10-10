@@ -531,6 +531,114 @@
         "en": "Sustainability decisions"
       },
       "relations": []
+    },
+    {
+      "id": "CS.ALGORITHMS.LOOPS",
+      "kind": "method",
+      "legacy_skill": "loops",
+      "labels": {
+        "ru": "Циклы и вложенные повторения",
+        "en": "Loops and nested repetition"
+      }
+    },
+    {
+      "id": "CS.ALGORITHMS.EXECUTORS",
+      "kind": "method",
+      "legacy_skill": "executors",
+      "labels": {
+        "ru": "Исполнители и команды",
+        "en": "Algorithm executors"
+      }
+    },
+    {
+      "id": "CS.OPTIMIZATION.INTRO",
+      "kind": "strategy",
+      "legacy_skill": "optimization",
+      "labels": {
+        "ru": "Оптимизация команд",
+        "en": "Command optimization"
+      }
+    },
+    {
+      "id": "CS.LOGIC.CONSTRAINTS",
+      "kind": "strategy",
+      "legacy_skill": "constraints",
+      "labels": {
+        "ru": "Логические ограничения",
+        "en": "Logical constraints"
+      }
+    },
+    {
+      "id": "CS.DATA.CODING",
+      "kind": "representation",
+      "legacy_skill": "coding",
+      "labels": {
+        "ru": "Двоичные коды и длина записи",
+        "en": "Binary coding"
+      }
+    },
+    {
+      "id": "CS.DATA.TABLES",
+      "kind": "method",
+      "legacy_skill": "tables",
+      "labels": {
+        "ru": "Поиск и фильтрация таблиц",
+        "en": "Filtering tables"
+      }
+    },
+    {
+      "id": "CS.COMBINATORICS.COUNTING",
+      "kind": "method",
+      "legacy_skill": "counting",
+      "labels": {
+        "ru": "Комбинаторный подсчёт",
+        "en": "Counting arrangements"
+      }
+    },
+    {
+      "id": "CS.GRAPHS.ROUTES",
+      "kind": "method",
+      "legacy_skill": "routes",
+      "labels": {
+        "ru": "Маршруты в графах",
+        "en": "Graph routes"
+      }
+    },
+    {
+      "id": "CS.GRAPHS.COLORING",
+      "kind": "concept",
+      "legacy_skill": "coloring",
+      "labels": {
+        "ru": "Раскраска графов",
+        "en": "Graph coloring"
+      }
+    },
+    {
+      "id": "CS.LOGIC.INVARIANTS",
+      "kind": "strategy",
+      "legacy_skill": "invariants",
+      "labels": {
+        "ru": "Инварианты и достижимость",
+        "en": "Invariants and reachability"
+      }
+    },
+    {
+      "id": "CS.LOGIC.DIGITS",
+      "kind": "strategy",
+      "legacy_skill": "digits",
+      "labels": {
+        "ru": "Ограничения на цифры",
+        "en": "Digit constraints"
+      }
+    },
+    {
+      "id": "CS.OPTIMIZATION.SORTING",
+      "kind": "method",
+      "legacy_skill": "sorting",
+      "labels": {
+        "ru": "Сортировка и перестановки",
+        "en": "Sorting and swaps"
+      }
     }
   ]
 }
