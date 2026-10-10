@@ -16,6 +16,20 @@
       "device_policy": "local_pilot"
     },
     {
+      "id": "pilot.informatics.g5.extended",
+      "source": "pilot",
+      "active": true,
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "competition": "Олимпиадный практикум · 5 класс",
+      "season": "2026-2027",
+      "pack_ids": [
+        "informatics.olympiad.5.ru.2026"
+      ],
+      "device_policy": "local_pilot"
+    },
+    {
       "id": "pilot.informatics.g5g7",
       "source": "pilot",
       "active": true,

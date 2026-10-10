@@ -161,6 +161,56 @@
       "from": "ECO.SUSTAINABILITY.DECISIONS",
       "type": "requires",
       "to": "ECO.HUMAN.IMPACT"
+    },
+    {
+      "from": "CS.ALGORITHMS.LOOPS",
+      "type": "requires",
+      "to": "CS.ALGORITHMS.TRACING"
+    },
+    {
+      "from": "CS.ALGORITHMS.EXECUTORS",
+      "type": "requires",
+      "to": "CS.ALGORITHMS.TRACING"
+    },
+    {
+      "from": "CS.OPTIMIZATION.INTRO",
+      "type": "requires",
+      "to": "CS.ALGORITHMS.TRACING"
+    },
+    {
+      "from": "CS.LOGIC.CONSTRAINTS",
+      "type": "requires",
+      "to": "CS.LOGIC.BOOLEAN"
+    },
+    {
+      "from": "CS.DATA.CODING",
+      "type": "requires",
+      "to": "CS.DATA.BINARY"
+    },
+    {
+      "from": "CS.DATA.TABLES",
+      "type": "requires",
+      "to": "CS.LOGIC.BOOLEAN"
+    },
+    {
+      "from": "CS.GRAPHS.ROUTES",
+      "type": "requires",
+      "to": "CS.ALGORITHMS.EXECUTORS"
+    },
+    {
+      "from": "CS.LOGIC.INVARIANTS",
+      "type": "requires",
+      "to": "CS.ALGORITHMS.TRACING"
+    },
+    {
+      "from": "CS.LOGIC.DIGITS",
+      "type": "requires",
+      "to": "CS.COMBINATORICS.COUNTING"
+    },
+    {
+      "from": "CS.OPTIMIZATION.SORTING",
+      "type": "requires",
+      "to": "CS.ALGORITHMS.TRACING"
     }
   ]
 }

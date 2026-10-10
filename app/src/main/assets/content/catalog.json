@@ -16,6 +16,19 @@
       "enabled": true
     },
     {
+      "id": "informatics.olympiad.5.ru.2026",
+      "asset": "content/informatics_g5_olympiad_extended.json",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "competition": "Олимпиадный практикум · 5 класс",
+      "season": "2026-2027",
+      "license_id": "project.original.v1",
+      "content_version": "1.0.0",
+      "sha256": "15d76b155c75a0cc839696782a190ed3e9551f970119bc26c01a1258ae7d0e1a",
+      "enabled": true
+    },
+    {
       "id": "informatics.olympiad.5-7.global.2026",
       "asset": "content/informatics_g5_7_pilot.json",
       "subject": "informatics",

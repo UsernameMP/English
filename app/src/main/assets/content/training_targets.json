@@ -12,6 +12,16 @@
       "mode": "competition"
     },
     {
+      "pack_id": "informatics.olympiad.5.ru.2026",
+      "subject": "informatics",
+      "grade": 5,
+      "competition": "Олимпиадный практикум · 5 класс",
+      "region": "Россия",
+      "season": "2026-2027",
+      "target_date": "2027-03-01",
+      "mode": "competition"
+    },
+    {
       "pack_id": "informatics.olympiad.5-7.global.2026",
       "subject": "informatics",
       "grade": 5,

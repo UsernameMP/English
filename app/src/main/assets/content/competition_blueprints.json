@@ -23,6 +23,71 @@
       ]
     },
     {
+      "pack_id": "informatics.olympiad.5.ru.2026",
+      "coverage": [
+        {
+          "knowledge_id": "CS.ALGORITHMS.TRACING",
+          "weight": 0.06666666666666667
+        },
+        {
+          "knowledge_id": "CS.ALGORITHMS.LOOPS",
+          "weight": 0.06666666666666667
+        },
+        {
+          "knowledge_id": "CS.ALGORITHMS.EXECUTORS",
+          "weight": 0.06666666666666667
+        },
+        {
+          "knowledge_id": "CS.OPTIMIZATION.INTRO",
+          "weight": 0.06666666666666667
+        },
+        {
+          "knowledge_id": "CS.LOGIC.BOOLEAN",
+          "weight": 0.06666666666666667
+        },
+        {
+          "knowledge_id": "CS.LOGIC.CONSTRAINTS",
+          "weight": 0.06666666666666667
+        },
+        {
+          "knowledge_id": "CS.DATA.BINARY",
+          "weight": 0.06666666666666667
+        },
+        {
+          "knowledge_id": "CS.DATA.CODING",
+          "weight": 0.06666666666666667
+        },
+        {
+          "knowledge_id": "CS.DATA.TABLES",
+          "weight": 0.06666666666666667
+        },
+        {
+          "knowledge_id": "CS.COMBINATORICS.COUNTING",
+          "weight": 0.06666666666666667
+        },
+        {
+          "knowledge_id": "CS.GRAPHS.ROUTES",
+          "weight": 0.06666666666666667
+        },
+        {
+          "knowledge_id": "CS.GRAPHS.COLORING",
+          "weight": 0.06666666666666667
+        },
+        {
+          "knowledge_id": "CS.LOGIC.INVARIANTS",
+          "weight": 0.06666666666666667
+        },
+        {
+          "knowledge_id": "CS.LOGIC.DIGITS",
+          "weight": 0.06666666666666667
+        },
+        {
+          "knowledge_id": "CS.OPTIMIZATION.SORTING",
+          "weight": 0.06666666666666667
+        }
+      ]
+    },
+    {
       "pack_id": "informatics.olympiad.5-7.global.2026",
       "coverage": [
         {
