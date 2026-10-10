@@ -165,7 +165,7 @@ for q in qs:
     elif family == "sorting" and interaction == "sequence":
         values = {}
         for option in q["options"]:
-            match = re.fullmatch(r"([А-Г]): (\\d+) ([−+×]) (\\d+)", option["text"])
+            match = re.fullmatch(r"([А-Г]): (\d+) ([−+×]) (\d+)", option["text"])
             check(match is not None, f"{ident}: invalid expression")
             first, operator, second = int(match.group(2)), match.group(3), int(match.group(4))
             values[option["id"]] = (
