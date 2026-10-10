@@ -1,0 +1,746 @@
+{
+  "schema_version": "1.0",
+  "bank_id": "informatics-olympiad-5-7-pilot",
+  "title": "Олимпиадная информатика — пилот",
+  "locale": "ru",
+  "content_version": "0.2.1",
+  "pack": {
+    "id": "informatics.olympiad.5-7.global.2026",
+    "subject": "informatics",
+    "grade_min": 5,
+    "grade_max": 7,
+    "competition": "Olympiad pilot",
+    "region": "Global",
+    "season": "2026-2027",
+    "title": {
+      "ru": "Информатика · олимпиадный тренажёр",
+      "en": "Информатика · олимпиадный тренажёр"
+    },
+    "subtitle": {
+      "en": "Олимпиадный пилот · 5–7 класс",
+      "ru": "Олимпиадный пилот · 5–7 класс"
+    }
+  },
+  "questions": [
+    {
+      "id": "cs_bool_001",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "boolean"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "При каком значении A выражение (A И ИСТИНА) будет истинным?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A = ИСТИНА"
+        },
+        {
+          "id": "b",
+          "text": "A = ЛОЖЬ"
+        },
+        {
+          "id": "c",
+          "text": "При любом значении A"
+        }
+      ],
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Операция И даёт ИСТИНА только тогда, когда оба операнда истинны.",
+          "ru": "Операция И даёт ИСТИНА только тогда, когда оба операнда истинны."
+        },
+        "full": {
+          "en": "Второй операнд уже истинен, поэтому выражение совпадает с A.",
+          "ru": "Второй операнд уже истинен, поэтому выражение совпадает с A."
+        },
+        "rule": {
+          "en": "ИСТИНА И ИСТИНА = ИСТИНА.",
+          "ru": "ИСТИНА И ИСТИНА = ИСТИНА."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.LOGIC.BOOLEAN",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "cs_bool_002",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "boolean"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Каково значение выражения НЕ (ИСТИНА ИЛИ ЛОЖЬ)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ИСТИНА"
+        },
+        {
+          "id": "b",
+          "text": "ЛОЖЬ"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Сначала вычисли ИЛИ, затем примени отрицание.",
+          "ru": "Сначала вычисли ИЛИ, затем примени отрицание."
+        },
+        "full": {
+          "en": "ИСТИНА ИЛИ ЛОЖЬ даёт ИСТИНА; отрицание ИСТИНА даёт ЛОЖЬ.",
+          "ru": "ИСТИНА ИЛИ ЛОЖЬ даёт ИСТИНА; отрицание ИСТИНА даёт ЛОЖЬ."
+        },
+        "rule": {
+          "en": "Сначала вычисляют выражение в скобках, затем применяют НЕ.",
+          "ru": "Сначала вычисляют выражение в скобках, затем применяют НЕ."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.LOGIC.BOOLEAN",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "cs_trace_001",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "tracing"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "x = 3; x = x + 2; x = x × 2"
+      },
+      "prompt": "Чему равно значение x после выполнения всех команд?",
+      "options": [
+        {
+          "id": "a",
+          "text": "7"
+        },
+        {
+          "id": "b",
+          "text": "10"
+        },
+        {
+          "id": "c",
+          "text": "12"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Выполняй присваивания по порядку.",
+          "ru": "Выполняй присваивания по порядку."
+        },
+        "full": {
+          "en": "3 превращается в 5, затем 5 × 2 даёт 10.",
+          "ru": "3 превращается в 5, затем 5 × 2 даёт 10."
+        },
+        "rule": {
+          "en": "Каждое присваивание меняет текущее состояние.",
+          "ru": "Каждое присваивание меняет текущее состояние."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.ALGORITHMS.TRACING",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "cs_trace_002",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "tracing"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "s = 0; повторить 4 раза: s = s + 3"
+      },
+      "prompt": "Чему равно значение s после выполнения цикла?",
+      "options": [
+        {
+          "id": "a",
+          "text": "7"
+        },
+        {
+          "id": "b",
+          "text": "12"
+        },
+        {
+          "id": "c",
+          "text": "16"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Выполни тело цикла четыре раза.",
+          "ru": "Выполни тело цикла четыре раза."
+        },
+        "full": {
+          "en": "Значения: 3, 6, 9 и 12.",
+          "ru": "Значения: 3, 6, 9 и 12."
+        },
+        "rule": {
+          "en": "Цикл повторяет одно изменение состояния.",
+          "ru": "Цикл повторяет одно изменение состояния."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.ALGORITHMS.TRACING",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "cs_binary_001",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "binary"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какому числу в десятичной системе соответствует двоичное число 101₂?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4"
+        },
+        {
+          "id": "b",
+          "text": "5"
+        },
+        {
+          "id": "c",
+          "text": "6"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Используй разряды 4, 2 и 1.",
+          "ru": "Используй разряды 4, 2 и 1."
+        },
+        "full": {
+          "en": "101₂ = 1×4 + 0×2 + 1×1 = 5.",
+          "ru": "101₂ = 1×4 + 0×2 + 1×1 = 5."
+        },
+        "rule": {
+          "en": "Разряды двоичной записи — степени двойки.",
+          "ru": "Разряды двоичной записи — степени двойки."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.DATA.BINARY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "cs_binary_002",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "binary"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какая запись в двоичной системе соответствует десятичному числу 6?",
+      "options": [
+        {
+          "id": "a",
+          "text": "101"
+        },
+        {
+          "id": "b",
+          "text": "110"
+        },
+        {
+          "id": "c",
+          "text": "111"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Разложи 6 на степени двойки.",
+          "ru": "Разложи 6 на степени двойки."
+        },
+        "full": {
+          "en": "6 = 4 + 2 + 0, поэтому запись — 110.",
+          "ru": "6 = 4 + 2 + 0, поэтому запись — 110."
+        },
+        "rule": {
+          "en": "Ставь единицу у каждой используемой степени двойки.",
+          "ru": "Ставь единицу у каждой используемой степени двойки."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.DATA.BINARY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "cs_complexity_001",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "complexity"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "повторить n раз: вывести('*')"
+      },
+      "prompt": "Сколько раз будет выполнена команда вывода?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1"
+        },
+        {
+          "id": "b",
+          "text": "n"
+        },
+        {
+          "id": "c",
+          "text": "n × n"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Посчитай одну операцию на итерацию.",
+          "ru": "Посчитай одну операцию на итерацию."
+        },
+        "full": {
+          "en": "Цикл делает n итераций и печатает один раз на каждой.",
+          "ru": "Цикл делает n итераций и печатает один раз на каждой."
+        },
+        "rule": {
+          "en": "Число операций = итерации × операции на итерацию.",
+          "ru": "Число операций = итерации × операции на итерацию."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.ALGORITHMS.COMPLEXITY.INTRO",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [
+        "CS.ALGORITHMS.TRACING"
+      ]
+    },
+    {
+      "id": "cs_complexity_002",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "complexity"
+      ],
+      "difficulty": 3,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "повторить 3 раза: повторить 4 раза: прибавить 1"
+      },
+      "prompt": "Сколько всего операций сложения будет выполнено?",
+      "options": [
+        {
+          "id": "a",
+          "text": "7"
+        },
+        {
+          "id": "b",
+          "text": "12"
+        },
+        {
+          "id": "c",
+          "text": "16"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Перемножь числа повторов вложенных циклов.",
+          "ru": "Перемножь числа повторов вложенных циклов."
+        },
+        "full": {
+          "en": "На каждой из 3 внешних итераций внутренний цикл выполняет 4 сложения: 3 × 4 = 12.",
+          "ru": "На каждой из 3 внешних итераций внутренний цикл выполняет 4 сложения: 3 × 4 = 12."
+        },
+        "rule": {
+          "en": "Вложенные фиксированные циклы перемножают число операций.",
+          "ru": "Вложенные фиксированные циклы перемножают число операций."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.ALGORITHMS.COMPLEXITY.INTRO",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [
+        "CS.ALGORITHMS.TRACING"
+      ]
+    },
+    {
+      "id": "cs_numeric_001",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "tracing"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "x = 5; повторить 3 раза: x = x + 4"
+      },
+      "prompt": "Введи итоговое значение x.",
+      "answer": [
+        "17",
+        "17.0"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Выполни все три сложения.",
+          "ru": "Выполни все три сложения."
+        },
+        "full": {
+          "en": "Начни с 5, затем получатся 9, 13 и 17.",
+          "ru": "Начни с 5, затем получатся 9, 13 и 17."
+        },
+        "rule": {
+          "en": "Изменяй текущее состояние один раз на каждой итерации.",
+          "ru": "Изменяй текущее состояние один раз на каждой итерации."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.ALGORITHMS.TRACING",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "cs_numeric_002",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "binary"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Двоичное число: 1111₂"
+      },
+      "prompt": "Введи его значение в десятичной системе.",
+      "answer": [
+        "15",
+        "15.0"
+      ],
+      "answer_policy": {
+        "tolerance": 0
+      },
+      "feedback": {
+        "short": {
+          "en": "Сложи активные разряды.",
+          "ru": "Сложи активные разряды."
+        },
+        "full": {
+          "en": "8 + 4 + 2 + 1 = 15.",
+          "ru": "8 + 4 + 2 + 1 = 15."
+        },
+        "rule": {
+          "en": "Разряды двоичной записи — степени двойки.",
+          "ru": "Разряды двоичной записи — степени двойки."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.DATA.BINARY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "cs_multi_001",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "boolean"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Выбери все истинные логические выражения.",
+      "options": [
+        {
+          "id": "a",
+          "text": "ИСТИНА И ИСТИНА"
+        },
+        {
+          "id": "b",
+          "text": "ЛОЖЬ ИЛИ ЛОЖЬ"
+        },
+        {
+          "id": "c",
+          "text": "НЕ ЛОЖЬ"
+        },
+        {
+          "id": "d",
+          "text": "ИСТИНА И ЛОЖЬ"
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "en": "Истинны ровно два выражения.",
+          "ru": "Истинны ровно два выражения."
+        },
+        "full": {
+          "en": "ИСТИНА И ИСТИНА и НЕ ЛОЖЬ — истинные выражения.",
+          "ru": "ИСТИНА И ИСТИНА и НЕ ЛОЖЬ — истинные выражения."
+        },
+        "rule": {
+          "en": "Ответ с несколькими вариантами верен только при выборе полного множества.",
+          "ru": "Ответ с несколькими вариантами верен только при выборе полного множества."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.LOGIC.BOOLEAN",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "cs_numeric_003",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 7,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "complexity"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Olympiad pilot",
+        "region": "Global",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Файл размером 10 МБ передаётся за 4 секунды с постоянной скоростью."
+      },
+      "prompt": "Введи скорость передачи данных в МБ/с (с единицей измерения).",
+      "answer": [
+        "2,5 МБ/с"
+      ],
+      "answer_policy": {
+        "tolerance": 0.01,
+        "unit": "МБ/с"
+      },
+      "feedback": {
+        "short": {
+          "en": "Раздели объём данных на время.",
+          "ru": "Раздели объём данных на время."
+        },
+        "full": {
+          "en": "10 МБ ÷ 4 с = 2,5 МБ/с.",
+          "ru": "10 МБ ÷ 4 с = 2,5 МБ/с."
+        },
+        "rule": {
+          "en": "Скорость равна объёму, делённому на время.",
+          "ru": "Скорость равна объёму, делённому на время."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "CS.ALGORITHMS.COMPLEXITY.INTRO",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [
+        "CS.ALGORITHMS.TRACING"
+      ]
+    }
+  ]
+}
