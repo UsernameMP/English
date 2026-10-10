@@ -17,8 +17,8 @@
       "en": "Информатика · 5 класс"
     },
     "subtitle": {
-      "ru": "150 авторских олимпиадных задач",
-      "en": "150 авторских олимпиадных задач"
+      "ru": "170 авторских олимпиадных задач",
+      "en": "170 авторских олимпиадных задач"
     }
   },
   "editorial": {
@@ -29,7 +29,14 @@
       "https://pro-schools.ru/olimpiady/informatika/shkolnyj-etap-2025-2026/5-6-klass/",
       "https://pro-schools.ru/olimpiady/informatika/priglasitelnyj-etap-2023-2024/4-5-klass/"
     ],
-    "reasoning_notes": "Reference solutions are not observed student reasoning. Display only after submitting an answer."
+    "reasoning_notes": "Reference solutions are not observed student reasoning. Display only after submitting an answer.",
+    "exercise_mechanisms": [
+      "numeric",
+      "single_choice",
+      "multi_choice",
+      "matching",
+      "sequence"
+    ]
   },
   "questions": [
     {
@@ -9713,6 +9720,1666 @@
           "Посчитать нарушения порядка",
           "Нужно не меньше 3",
           "Алгоритм достигает 3"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_order_001",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "sorting"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Нажимай карточки в нужном порядке. Их числовые значения нужно вычислить самостоятельно."
+      },
+      "prompt": "Расположи четыре карточки по возрастанию значений выражений (набор 1).",
+      "options": [
+        {
+          "id": "a",
+          "text": "А: 9 − 2"
+        },
+        {
+          "id": "b",
+          "text": "Б: 1 × 1"
+        },
+        {
+          "id": "c",
+          "text": "В: 8 + 3"
+        },
+        {
+          "id": "d",
+          "text": "Г: 4 + 0"
+        }
+      ],
+      "answer": [
+        "b",
+        "d",
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Значения карточек: А = 7; Б = 1; В = 11; Г = 4. Возрастание: Б → Г → А → В.",
+          "en": "Значения карточек: А = 7; Б = 1; В = 11; Г = 4. Возрастание: Б → Г → А → В."
+        },
+        "rule": {
+          "ru": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения.",
+          "en": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.OPTIMIZATION.SORTING",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Получить четыре значения",
+          "Сравнить значения",
+          "Выбрать по возрастанию"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_order_002",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "sorting"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Нажимай карточки в нужном порядке. Их числовые значения нужно вычислить самостоятельно."
+      },
+      "prompt": "Расположи четыре карточки по возрастанию значений выражений (набор 2).",
+      "options": [
+        {
+          "id": "a",
+          "text": "А: 12 − 2"
+        },
+        {
+          "id": "b",
+          "text": "Б: 4 × 1"
+        },
+        {
+          "id": "c",
+          "text": "В: 11 + 3"
+        },
+        {
+          "id": "d",
+          "text": "Г: 7 + 0"
+        }
+      ],
+      "answer": [
+        "b",
+        "d",
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Значения карточек: А = 10; Б = 4; В = 14; Г = 7. Возрастание: Б → Г → А → В.",
+          "en": "Значения карточек: А = 10; Б = 4; В = 14; Г = 7. Возрастание: Б → Г → А → В."
+        },
+        "rule": {
+          "ru": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения.",
+          "en": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.OPTIMIZATION.SORTING",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Получить четыре значения",
+          "Сравнить значения",
+          "Выбрать по возрастанию"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_order_003",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "sorting"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Нажимай карточки в нужном порядке. Их числовые значения нужно вычислить самостоятельно."
+      },
+      "prompt": "Расположи четыре карточки по возрастанию значений выражений (набор 3).",
+      "options": [
+        {
+          "id": "a",
+          "text": "А: 15 − 2"
+        },
+        {
+          "id": "b",
+          "text": "Б: 7 × 1"
+        },
+        {
+          "id": "c",
+          "text": "В: 14 + 3"
+        },
+        {
+          "id": "d",
+          "text": "Г: 10 + 0"
+        }
+      ],
+      "answer": [
+        "b",
+        "d",
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Значения карточек: А = 13; Б = 7; В = 17; Г = 10. Возрастание: Б → Г → А → В.",
+          "en": "Значения карточек: А = 13; Б = 7; В = 17; Г = 10. Возрастание: Б → Г → А → В."
+        },
+        "rule": {
+          "ru": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения.",
+          "en": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.OPTIMIZATION.SORTING",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Получить четыре значения",
+          "Сравнить значения",
+          "Выбрать по возрастанию"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_order_004",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "sorting"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Нажимай карточки в нужном порядке. Их числовые значения нужно вычислить самостоятельно."
+      },
+      "prompt": "Расположи четыре карточки по возрастанию значений выражений (набор 4).",
+      "options": [
+        {
+          "id": "a",
+          "text": "А: 18 − 2"
+        },
+        {
+          "id": "b",
+          "text": "Б: 10 × 1"
+        },
+        {
+          "id": "c",
+          "text": "В: 17 + 3"
+        },
+        {
+          "id": "d",
+          "text": "Г: 13 + 0"
+        }
+      ],
+      "answer": [
+        "b",
+        "d",
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Значения карточек: А = 16; Б = 10; В = 20; Г = 13. Возрастание: Б → Г → А → В.",
+          "en": "Значения карточек: А = 16; Б = 10; В = 20; Г = 13. Возрастание: Б → Г → А → В."
+        },
+        "rule": {
+          "ru": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения.",
+          "en": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.OPTIMIZATION.SORTING",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Получить четыре значения",
+          "Сравнить значения",
+          "Выбрать по возрастанию"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_order_005",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "sorting"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Нажимай карточки в нужном порядке. Их числовые значения нужно вычислить самостоятельно."
+      },
+      "prompt": "Расположи четыре карточки по возрастанию значений выражений (набор 5).",
+      "options": [
+        {
+          "id": "a",
+          "text": "А: 21 − 2"
+        },
+        {
+          "id": "b",
+          "text": "Б: 13 × 1"
+        },
+        {
+          "id": "c",
+          "text": "В: 20 + 3"
+        },
+        {
+          "id": "d",
+          "text": "Г: 16 + 0"
+        }
+      ],
+      "answer": [
+        "b",
+        "d",
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Значения карточек: А = 19; Б = 13; В = 23; Г = 16. Возрастание: Б → Г → А → В.",
+          "en": "Значения карточек: А = 19; Б = 13; В = 23; Г = 16. Возрастание: Б → Г → А → В."
+        },
+        "rule": {
+          "ru": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения.",
+          "en": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.OPTIMIZATION.SORTING",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Получить четыре значения",
+          "Сравнить значения",
+          "Выбрать по возрастанию"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_order_006",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "sorting"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Нажимай карточки в нужном порядке. Их числовые значения нужно вычислить самостоятельно."
+      },
+      "prompt": "Расположи четыре карточки по возрастанию значений выражений (набор 6).",
+      "options": [
+        {
+          "id": "a",
+          "text": "А: 24 − 2"
+        },
+        {
+          "id": "b",
+          "text": "Б: 16 × 1"
+        },
+        {
+          "id": "c",
+          "text": "В: 23 + 3"
+        },
+        {
+          "id": "d",
+          "text": "Г: 19 + 0"
+        }
+      ],
+      "answer": [
+        "b",
+        "d",
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Значения карточек: А = 22; Б = 16; В = 26; Г = 19. Возрастание: Б → Г → А → В.",
+          "en": "Значения карточек: А = 22; Б = 16; В = 26; Г = 19. Возрастание: Б → Г → А → В."
+        },
+        "rule": {
+          "ru": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения.",
+          "en": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.OPTIMIZATION.SORTING",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Получить четыре значения",
+          "Сравнить значения",
+          "Выбрать по возрастанию"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_order_007",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "sorting"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Нажимай карточки в нужном порядке. Их числовые значения нужно вычислить самостоятельно."
+      },
+      "prompt": "Расположи четыре карточки по возрастанию значений выражений (набор 7).",
+      "options": [
+        {
+          "id": "a",
+          "text": "А: 27 − 2"
+        },
+        {
+          "id": "b",
+          "text": "Б: 19 × 1"
+        },
+        {
+          "id": "c",
+          "text": "В: 26 + 3"
+        },
+        {
+          "id": "d",
+          "text": "Г: 22 + 0"
+        }
+      ],
+      "answer": [
+        "b",
+        "d",
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Значения карточек: А = 25; Б = 19; В = 29; Г = 22. Возрастание: Б → Г → А → В.",
+          "en": "Значения карточек: А = 25; Б = 19; В = 29; Г = 22. Возрастание: Б → Г → А → В."
+        },
+        "rule": {
+          "ru": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения.",
+          "en": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.OPTIMIZATION.SORTING",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Получить четыре значения",
+          "Сравнить значения",
+          "Выбрать по возрастанию"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_order_008",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "sorting"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Нажимай карточки в нужном порядке. Их числовые значения нужно вычислить самостоятельно."
+      },
+      "prompt": "Расположи четыре карточки по возрастанию значений выражений (набор 8).",
+      "options": [
+        {
+          "id": "a",
+          "text": "А: 30 − 2"
+        },
+        {
+          "id": "b",
+          "text": "Б: 22 × 1"
+        },
+        {
+          "id": "c",
+          "text": "В: 29 + 3"
+        },
+        {
+          "id": "d",
+          "text": "Г: 25 + 0"
+        }
+      ],
+      "answer": [
+        "b",
+        "d",
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Значения карточек: А = 28; Б = 22; В = 32; Г = 25. Возрастание: Б → Г → А → В.",
+          "en": "Значения карточек: А = 28; Б = 22; В = 32; Г = 25. Возрастание: Б → Г → А → В."
+        },
+        "rule": {
+          "ru": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения.",
+          "en": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.OPTIMIZATION.SORTING",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Получить четыре значения",
+          "Сравнить значения",
+          "Выбрать по возрастанию"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_order_009",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "sorting"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Нажимай карточки в нужном порядке. Их числовые значения нужно вычислить самостоятельно."
+      },
+      "prompt": "Расположи четыре карточки по возрастанию значений выражений (набор 9).",
+      "options": [
+        {
+          "id": "a",
+          "text": "А: 33 − 2"
+        },
+        {
+          "id": "b",
+          "text": "Б: 25 × 1"
+        },
+        {
+          "id": "c",
+          "text": "В: 32 + 3"
+        },
+        {
+          "id": "d",
+          "text": "Г: 28 + 0"
+        }
+      ],
+      "answer": [
+        "b",
+        "d",
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Значения карточек: А = 31; Б = 25; В = 35; Г = 28. Возрастание: Б → Г → А → В.",
+          "en": "Значения карточек: А = 31; Б = 25; В = 35; Г = 28. Возрастание: Б → Г → А → В."
+        },
+        "rule": {
+          "ru": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения.",
+          "en": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.OPTIMIZATION.SORTING",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Получить четыре значения",
+          "Сравнить значения",
+          "Выбрать по возрастанию"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_order_010",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "sorting"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Нажимай карточки в нужном порядке. Их числовые значения нужно вычислить самостоятельно."
+      },
+      "prompt": "Расположи четыре карточки по возрастанию значений выражений (набор 10).",
+      "options": [
+        {
+          "id": "a",
+          "text": "А: 36 − 2"
+        },
+        {
+          "id": "b",
+          "text": "Б: 28 × 1"
+        },
+        {
+          "id": "c",
+          "text": "В: 35 + 3"
+        },
+        {
+          "id": "d",
+          "text": "Г: 31 + 0"
+        }
+      ],
+      "answer": [
+        "b",
+        "d",
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Значения карточек: А = 34; Б = 28; В = 38; Г = 31. Возрастание: Б → Г → А → В.",
+          "en": "Значения карточек: А = 34; Б = 28; В = 38; Г = 31. Возрастание: Б → Г → А → В."
+        },
+        "rule": {
+          "ru": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения.",
+          "en": "Задача именно на упорядочивание вычисленных значений, а не на выбор промежуточных шагов решения."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.OPTIMIZATION.SORTING",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Получить четыре значения",
+          "Сравнить значения",
+          "Выбрать по возрастанию"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_multi_001",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "constraints"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Условия связаны словом «и». Нужно выбрать каждый подходящий вариант и не выбрать неподходящий."
+      },
+      "prompt": "Выбери все числа, которые одновременно делятся на 3 и больше 6 (набор 1).",
+      "options": [
+        {
+          "id": "a",
+          "text": "12"
+        },
+        {
+          "id": "b",
+          "text": "13"
+        },
+        {
+          "id": "c",
+          "text": "15"
+        },
+        {
+          "id": "d",
+          "text": "16"
+        },
+        {
+          "id": "e",
+          "text": "17"
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Числа 12 и 15 делятся на 3 без остатка и превышают 6; остальные числа не делятся на 3 без остатка.",
+          "en": "Числа 12 и 15 делятся на 3 без остатка и превышают 6; остальные числа не делятся на 3 без остатка."
+        },
+        "rule": {
+          "ru": "При выборе нескольких ответов проверяются оба условия для каждого варианта.",
+          "en": "При выборе нескольких ответов проверяются оба условия для каждого варианта."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.LOGIC.CONSTRAINTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Проверить величину чисел",
+          "Проверить кратность 3",
+          "Получить два варианта"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_multi_002",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "constraints"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Условия связаны словом «и». Нужно выбрать каждый подходящий вариант и не выбрать неподходящий."
+      },
+      "prompt": "Выбери все числа, которые одновременно делятся на 4 и больше 7 (набор 2).",
+      "options": [
+        {
+          "id": "a",
+          "text": "16"
+        },
+        {
+          "id": "b",
+          "text": "17"
+        },
+        {
+          "id": "c",
+          "text": "20"
+        },
+        {
+          "id": "d",
+          "text": "21"
+        },
+        {
+          "id": "e",
+          "text": "22"
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Числа 16 и 20 делятся на 4 без остатка и превышают 7; остальные числа не делятся на 4 без остатка.",
+          "en": "Числа 16 и 20 делятся на 4 без остатка и превышают 7; остальные числа не делятся на 4 без остатка."
+        },
+        "rule": {
+          "ru": "При выборе нескольких ответов проверяются оба условия для каждого варианта.",
+          "en": "При выборе нескольких ответов проверяются оба условия для каждого варианта."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.LOGIC.CONSTRAINTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Проверить величину чисел",
+          "Проверить кратность 4",
+          "Получить два варианта"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_multi_003",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "constraints"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Условия связаны словом «и». Нужно выбрать каждый подходящий вариант и не выбрать неподходящий."
+      },
+      "prompt": "Выбери все числа, которые одновременно делятся на 5 и больше 8 (набор 3).",
+      "options": [
+        {
+          "id": "a",
+          "text": "20"
+        },
+        {
+          "id": "b",
+          "text": "21"
+        },
+        {
+          "id": "c",
+          "text": "25"
+        },
+        {
+          "id": "d",
+          "text": "26"
+        },
+        {
+          "id": "e",
+          "text": "27"
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Числа 20 и 25 делятся на 5 без остатка и превышают 8; остальные числа не делятся на 5 без остатка.",
+          "en": "Числа 20 и 25 делятся на 5 без остатка и превышают 8; остальные числа не делятся на 5 без остатка."
+        },
+        "rule": {
+          "ru": "При выборе нескольких ответов проверяются оба условия для каждого варианта.",
+          "en": "При выборе нескольких ответов проверяются оба условия для каждого варианта."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.LOGIC.CONSTRAINTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Проверить величину чисел",
+          "Проверить кратность 5",
+          "Получить два варианта"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_multi_004",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "constraints"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Условия связаны словом «и». Нужно выбрать каждый подходящий вариант и не выбрать неподходящий."
+      },
+      "prompt": "Выбери все числа, которые одновременно делятся на 6 и больше 9 (набор 4).",
+      "options": [
+        {
+          "id": "a",
+          "text": "24"
+        },
+        {
+          "id": "b",
+          "text": "25"
+        },
+        {
+          "id": "c",
+          "text": "30"
+        },
+        {
+          "id": "d",
+          "text": "31"
+        },
+        {
+          "id": "e",
+          "text": "32"
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Числа 24 и 30 делятся на 6 без остатка и превышают 9; остальные числа не делятся на 6 без остатка.",
+          "en": "Числа 24 и 30 делятся на 6 без остатка и превышают 9; остальные числа не делятся на 6 без остатка."
+        },
+        "rule": {
+          "ru": "При выборе нескольких ответов проверяются оба условия для каждого варианта.",
+          "en": "При выборе нескольких ответов проверяются оба условия для каждого варианта."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.LOGIC.CONSTRAINTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Проверить величину чисел",
+          "Проверить кратность 6",
+          "Получить два варианта"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_multi_005",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "constraints"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Условия связаны словом «и». Нужно выбрать каждый подходящий вариант и не выбрать неподходящий."
+      },
+      "prompt": "Выбери все числа, которые одновременно делятся на 3 и больше 6 (набор 5).",
+      "options": [
+        {
+          "id": "a",
+          "text": "12"
+        },
+        {
+          "id": "b",
+          "text": "13"
+        },
+        {
+          "id": "c",
+          "text": "15"
+        },
+        {
+          "id": "d",
+          "text": "16"
+        },
+        {
+          "id": "e",
+          "text": "17"
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Числа 12 и 15 делятся на 3 без остатка и превышают 6; остальные числа не делятся на 3 без остатка.",
+          "en": "Числа 12 и 15 делятся на 3 без остатка и превышают 6; остальные числа не делятся на 3 без остатка."
+        },
+        "rule": {
+          "ru": "При выборе нескольких ответов проверяются оба условия для каждого варианта.",
+          "en": "При выборе нескольких ответов проверяются оба условия для каждого варианта."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.LOGIC.CONSTRAINTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Проверить величину чисел",
+          "Проверить кратность 3",
+          "Получить два варианта"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_multi_006",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "constraints"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Условия связаны словом «и». Нужно выбрать каждый подходящий вариант и не выбрать неподходящий."
+      },
+      "prompt": "Выбери все числа, которые одновременно делятся на 4 и больше 7 (набор 6).",
+      "options": [
+        {
+          "id": "a",
+          "text": "16"
+        },
+        {
+          "id": "b",
+          "text": "17"
+        },
+        {
+          "id": "c",
+          "text": "20"
+        },
+        {
+          "id": "d",
+          "text": "21"
+        },
+        {
+          "id": "e",
+          "text": "22"
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Числа 16 и 20 делятся на 4 без остатка и превышают 7; остальные числа не делятся на 4 без остатка.",
+          "en": "Числа 16 и 20 делятся на 4 без остатка и превышают 7; остальные числа не делятся на 4 без остатка."
+        },
+        "rule": {
+          "ru": "При выборе нескольких ответов проверяются оба условия для каждого варианта.",
+          "en": "При выборе нескольких ответов проверяются оба условия для каждого варианта."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.LOGIC.CONSTRAINTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Проверить величину чисел",
+          "Проверить кратность 4",
+          "Получить два варианта"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_multi_007",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "constraints"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Условия связаны словом «и». Нужно выбрать каждый подходящий вариант и не выбрать неподходящий."
+      },
+      "prompt": "Выбери все числа, которые одновременно делятся на 5 и больше 8 (набор 7).",
+      "options": [
+        {
+          "id": "a",
+          "text": "20"
+        },
+        {
+          "id": "b",
+          "text": "21"
+        },
+        {
+          "id": "c",
+          "text": "25"
+        },
+        {
+          "id": "d",
+          "text": "26"
+        },
+        {
+          "id": "e",
+          "text": "27"
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Числа 20 и 25 делятся на 5 без остатка и превышают 8; остальные числа не делятся на 5 без остатка.",
+          "en": "Числа 20 и 25 делятся на 5 без остатка и превышают 8; остальные числа не делятся на 5 без остатка."
+        },
+        "rule": {
+          "ru": "При выборе нескольких ответов проверяются оба условия для каждого варианта.",
+          "en": "При выборе нескольких ответов проверяются оба условия для каждого варианта."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.LOGIC.CONSTRAINTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Проверить величину чисел",
+          "Проверить кратность 5",
+          "Получить два варианта"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_multi_008",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "constraints"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Условия связаны словом «и». Нужно выбрать каждый подходящий вариант и не выбрать неподходящий."
+      },
+      "prompt": "Выбери все числа, которые одновременно делятся на 6 и больше 9 (набор 8).",
+      "options": [
+        {
+          "id": "a",
+          "text": "24"
+        },
+        {
+          "id": "b",
+          "text": "25"
+        },
+        {
+          "id": "c",
+          "text": "30"
+        },
+        {
+          "id": "d",
+          "text": "31"
+        },
+        {
+          "id": "e",
+          "text": "32"
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Числа 24 и 30 делятся на 6 без остатка и превышают 9; остальные числа не делятся на 6 без остатка.",
+          "en": "Числа 24 и 30 делятся на 6 без остатка и превышают 9; остальные числа не делятся на 6 без остатка."
+        },
+        "rule": {
+          "ru": "При выборе нескольких ответов проверяются оба условия для каждого варианта.",
+          "en": "При выборе нескольких ответов проверяются оба условия для каждого варианта."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.LOGIC.CONSTRAINTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Проверить величину чисел",
+          "Проверить кратность 6",
+          "Получить два варианта"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_multi_009",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "constraints"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Условия связаны словом «и». Нужно выбрать каждый подходящий вариант и не выбрать неподходящий."
+      },
+      "prompt": "Выбери все числа, которые одновременно делятся на 3 и больше 6 (набор 9).",
+      "options": [
+        {
+          "id": "a",
+          "text": "12"
+        },
+        {
+          "id": "b",
+          "text": "13"
+        },
+        {
+          "id": "c",
+          "text": "15"
+        },
+        {
+          "id": "d",
+          "text": "16"
+        },
+        {
+          "id": "e",
+          "text": "17"
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Числа 12 и 15 делятся на 3 без остатка и превышают 6; остальные числа не делятся на 3 без остатка.",
+          "en": "Числа 12 и 15 делятся на 3 без остатка и превышают 6; остальные числа не делятся на 3 без остатка."
+        },
+        "rule": {
+          "ru": "При выборе нескольких ответов проверяются оба условия для каждого варианта.",
+          "en": "При выборе нескольких ответов проверяются оба условия для каждого варианта."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.LOGIC.CONSTRAINTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Проверить величину чисел",
+          "Проверить кратность 3",
+          "Получить два варианта"
+        ],
+        "observed_from_learner": false
+      }
+    },
+    {
+      "id": "cs5_multi_010",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "constraints"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "Авторский олимпиадный практикум",
+        "region": "Россия",
+        "year": "training",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Условия связаны словом «и». Нужно выбрать каждый подходящий вариант и не выбрать неподходящий."
+      },
+      "prompt": "Выбери все числа, которые одновременно делятся на 4 и больше 7 (набор 10).",
+      "options": [
+        {
+          "id": "a",
+          "text": "16"
+        },
+        {
+          "id": "b",
+          "text": "17"
+        },
+        {
+          "id": "c",
+          "text": "20"
+        },
+        {
+          "id": "d",
+          "text": "21"
+        },
+        {
+          "id": "e",
+          "text": "22"
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Проверь свой ответ после выполнения.",
+          "en": "Проверь свой ответ после выполнения."
+        },
+        "full": {
+          "ru": "Числа 16 и 20 делятся на 4 без остатка и превышают 7; остальные числа не делятся на 4 без остатка.",
+          "en": "Числа 16 и 20 делятся на 4 без остатка и превышают 7; остальные числа не делятся на 4 без остатка."
+        },
+        "rule": {
+          "ru": "При выборе нескольких ответов проверяются оба условия для каждого варианта.",
+          "en": "При выборе нескольких ответов проверяются оба условия для каждого варианта."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.LOGIC.CONSTRAINTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Проверить величину чисел",
+          "Проверить кратность 4",
+          "Получить два варианта"
         ],
         "observed_from_learner": false
       }
