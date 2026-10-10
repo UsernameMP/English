@@ -162,11 +162,20 @@ for q in qs:
             check(chosen == format(decimal,"b"), f"{ident}: inverse binary")
         checked[family] += 1
 
-    elif family == "order":
-        expected_names = ["Б", "Г", "А", "В"]
-        selected = [next(x["text"][0] for x in q["options"] if x["id"] == key) for key in ans]
-        check(selected == expected_names, f"{ident}: invalid sorting sequence")
-        checked[family] += 1
+    elif family == "sorting" and interaction == "sequence":
+        values = {}
+        for option in q["options"]:
+            match = re.fullmatch(r"([А-Г]): (\\d+) ([−+×]) (\\d+)", option["text"])
+            check(match is not None, f"{ident}: invalid expression")
+            first, operator, second = int(match.group(2)), match.group(3), int(match.group(4))
+            values[option["id"]] = (
+                first-second if operator == "−"
+                else first+second if operator == "+"
+                else first*second
+            )
+        actual = sorted(values, key=lambda name: values[name])
+        check(ans == actual, f"{ident}: wrong sequence")
+        checked["order"] += 1
 
     elif family == "multi":
         m = re.search(r"делятся на (\d+) и больше (\d+)",q["prompt"])
