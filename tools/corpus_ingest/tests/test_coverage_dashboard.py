@@ -57,6 +57,17 @@ class CoverageDashboardTests(unittest.TestCase):
         self.assertEqual(meta["grade_band"], "5–6")
         self.assertEqual(meta["subject_id"], "mathematics")
 
+    def test_github_only_discoveries_survive_full_dropbox(self):
+        old = {"document_id": "a", "url": "https://test.example/a.pdf",
+               "status": "PENDING", "updated_at": "2026-10-01T12:00:00Z"}
+        newer = {**old, "status": "DOWNLOADED", "updated_at": "2026-10-02T12:00:00Z"}
+        github_only = {"document_id": "b", "url": "https://test.example/b.pdf",
+                       "status": "PENDING", "updated_at": "2026-10-02T12:00:00Z"}
+        rows = coverage.merge_checkpoint_rows([newer, github_only], [old])
+        self.assertEqual(len(rows), 2)
+        self.assertEqual(next(row for row in rows if row["document_id"] == "a")["status"], "DOWNLOADED")
+        self.assertTrue(any(row["document_id"] == "b" for row in rows))
+
     def test_competition_does_not_guess_missing_metadata(self):
         m = coverage.identify({"url": "https://somehost.ru/unknown.pdf",
                                "source_id": "external", "status": "PENDING"}, REGISTRY)
