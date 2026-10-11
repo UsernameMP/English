@@ -125,12 +125,20 @@ def identify(record: dict, registry: dict) -> dict:
     yr = re.search(r"(?<!\d)(20\d{2})[-/](20\d{2})(?!\d)", url)
     season = int(yr.group(1)) if yr else None
     if season is None:
-        yr = re.search(r"(?<!\d)(\d{2})-(\d{2})(?!\d)", name)
-        if yr and int(yr.group(2)) == (int(yr.group(1))+1) % 100:
-            season = 2000 + int(yr.group(1))
-    if season is None:
+        # Paths like /tasks/73/2024/ are unambiguous. Prefer them over
+        # grade bands like iikt-10-11 which otherwise look like year 2010/11.
         yr = re.search(r"/(20\d{2})/", url)
         season = int(yr.group(1)) if yr else None
+    if season is None:
+        # When the URL has no explicit four-digit year, a trailing two-digit
+        # season may be inferred only after all grade-band tokens.
+        years = [
+            2000 + int(m.group(1))
+            for m in re.finditer(r"(?<!\d)(\d{2})-(\d{2})(?!\d)", name)
+            if int(m.group(2)) == (int(m.group(1)) + 1) % 100
+        ]
+        if years:
+            season = years[-1]
 
     stage = None
     for pattern, value in ((r"(?:-|/)sch(?:-|/|\.|$)|school", "school"),
