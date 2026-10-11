@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-11T19:13:07.773Z",
+  "updated_at": "2026-10-11T19:13:57.942Z",
   "deferred_shards": [
     1,
     2,
@@ -29,5 +29,10 @@
   ],
   "pending_labels_count": 78,
   "canonical_merge_status": "partial_17_merged_78_pending",
-  "canonical_merged_in_cycle": 1
+  "canonical_merged_in_cycle": 1,
+  "noncontiguous_review": {
+    "resource_shard": "resource_000120.jsonl",
+    "reviewed_row_range": "0-19",
+    "checkpointed_count": 20
+  }
 }
