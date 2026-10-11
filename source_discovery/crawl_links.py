@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """RIFT: resumable public HTML link inventory. Never downloads task files."""
 import hashlib
+import html
 import json
 import os
 import re
@@ -29,6 +30,17 @@ KEYWORDS = ("olymp", "olimpi", "olimpí", "archive", "past", "problem",
             "zadani", "zadání", "zadania", "provas", "gabarito", "sujet",
             "corrig", "задач", "олимпи", "решени", "задани", "архив",
             "математ", "отбор", "тур", "competition", "paper", "round")
+
+
+def decode_href(value):
+    """Preserve bare ampersands such as ?item=problems&section=2026 in href."""
+    # html.parser unescapes semicolonless entities in attribute values:
+    # '&section' otherwise turns into '§ion'.
+    safe = re.sub(
+        r'&(?!(?:#[0-9]+|#[xX][0-9A-Fa-f]+|[A-Za-z][A-Za-z0-9]+);)',
+        '&amp;', value
+    )
+    return html.unescape(safe)
 
 
 def now():
@@ -69,6 +81,16 @@ class Links(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == "a":
+            # HTMLParser's attrs are already unescaped; use raw start tag.
+            raw_tag = self.get_starttag_text() or ""
+            found = re.search(
+                r"""\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))""",
+                raw_tag, flags=re.IGNORECASE
+            )
+            if found:
+                raw_href = next((v for v in found.groups() if v is not None), "")
+                attrs["href"] = decode_href(raw_href)
         if tag in ("h1", "h2", "h3", "h4"):
             self.in_heading = True
             self.heading_parts = []
@@ -145,9 +167,21 @@ def main():
     legacy = read_jsonl(RAW)
     shard_paths = sorted(SHARDS.glob("batch_*.jsonl"))
     seen = {row.get("id") for row in legacy}
+    malformed_parents = set()
     for fp in shard_paths:
         for row in read_jsonl(fp):
             seen.add(row.get("id"))
+            if "§ion" in row.get("url", "") and row.get("parent_url"):
+                malformed_parents.add(row["parent_url"])
+    # One-time re-enumeration of pages with corrupted URL parameters.
+    if not state.get("html_ampersand_repair_v1"):
+        for parent in sorted(malformed_parents):
+            visited.discard(parent)
+            if parent not in queued:
+                queue.insert(0, {"url": parent, "root": parent, "depth": 0})
+                queued.add(parent)
+        state["html_ampersand_repair_v1"] = True
+        state["html_ampersand_requeued"] = len(malformed_parents)
     new = []
     per_site = defaultdict(int)
     robots = {}
