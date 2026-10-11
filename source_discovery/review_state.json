@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-11T17:12:42.823Z",
+  "updated_at": "2026-10-11T17:16:43.904Z",
   "deferred_shards": [
     1,
     2,
@@ -13,7 +13,6 @@
     5
   ],
   "pending_label_checkpoints": [
-    "labels_checkpoint_20261011_17_01.jsonl",
     "labels_checkpoint_20261011_17_02.jsonl",
     "labels_checkpoint_20261011_17_03.jsonl",
     "labels_checkpoint_20261011_17_04.jsonl",
@@ -21,6 +20,7 @@
     "labels_checkpoint_20261011_17_06.jsonl",
     "labels_checkpoint_20261011_17_07.jsonl"
   ],
-  "pending_labels_count": 48,
-  "canonical_merge_status": "blocked_by_connector_safety_checks"
+  "pending_labels_count": 44,
+  "canonical_merge_status": "blocked_by_connector_safety_checks",
+  "canonical_merged_in_cycle": 4
 }
