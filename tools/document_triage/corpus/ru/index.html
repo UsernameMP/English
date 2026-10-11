@@ -1,145 +1,221 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#17233b">
-<title>Corpus Discovery · RU | Rift</title>
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#14253f">
+<title>RU · минимальное RAW-покрытие олимпиад</title>
 <style>
-:root{color-scheme:light;font-family:Inter,"Segoe UI",Arial,sans-serif;color:#1b2941;background:#f4f7fa}
-*{box-sizing:border-box}body{margin:0}a{color:#205da6;text-decoration:none}a:hover{text-decoration:underline}
-header{background:#16253e;color:white;padding:24px max(18px,calc((100vw - 1320px)/2))}header small{letter-spacing:.15em;color:#9dbbdb;font-size:11px;font-weight:700}header h1{margin:8px 0 9px;font-size:30px}header p{color:#c9d5e6;font-size:14px;line-height:1.6;margin:0;max-width:950px}
-main{max-width:1400px;margin:auto;padding:18px 22px 64px}.breadcrumbs{display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:8px;color:#65758c;font-size:12px;margin-bottom:15px}
-.panel{background:white;border:1px solid #dde5ee;border-radius:13px;padding:17px}.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end}
-input,select,button{font:inherit}input,select{padding:10px 11px;background:#f9fbff;border:1px solid #d7e2ef;border-radius:8px;color:#25334a;min-height:39px}
-label{font-size:12px;font-weight:600;color:#5d6d86;display:flex;flex-direction:column;gap:5px;flex:1 1 210px}label.search{flex:3 1 340px}input{width:100%}
-.nav{display:flex;gap:6px;overflow-x:auto;padding:14px 0 13px}.nav button{border:1px solid #dbe3ee;background:#fff;padding:10px 15px;border-radius:9px;color:#50627b;white-space:nowrap;cursor:pointer}
-.nav button.active{background:#20385b;color:#fff;border-color:#20385b}.nav button:focus-visible,.result:focus-visible{outline:3px solid #4688e8;outline-offset:2px}
-.layout{display:grid;grid-template-columns:minmax(340px,1fr) minmax(320px,.82fr);gap:14px;align-items:start}
-h2{font-size:17px;margin:0}h3{font-size:15px;margin:0 0 12px}.hint{color:#65758c;font-size:12px;line-height:1.6}
-.items{display:flex;flex-direction:column;gap:8px;margin-top:14px;max-height:72vh;overflow:auto}
-.result{background:#fbfcff;border:1px solid #e0e7f1;border-radius:9px;padding:12px;text-align:left;width:100%;cursor:pointer;color:inherit}
-.result:hover,.result.current{border-color:#7aa5d8;background:#f2f8ff}.result strong{display:block;font-size:13px;overflow-wrap:anywhere}
-.result small{display:block;margin-top:5px;line-height:1.6;color:#71839a;overflow-wrap:anywhere}.tag{display:inline-block;font-size:10px;border-radius:5px;background:#e9eff7;color:#3b638f;padding:3px 6px;margin-left:6px;vertical-align:middle}
-.content{margin-top:12px}.line{display:grid;grid-template-columns:minmax(100px,160px) 1fr;gap:9px;padding:10px 0;border-bottom:1px solid #edf1f5;font-size:12px}.line b{font-weight:600;color:#66758b}.line span{word-break:break-word}
-.links a{display:block;border-bottom:1px solid #e8edf4;padding:10px 0;overflow-wrap:anywhere;font-size:13px}.links a small{display:block;color:#7a8b9e;margin-top:4px}
-.empty{padding:17px;background:#f4f7fb;border-radius:9px;color:#6d7e94;font-size:13px;line-height:1.6;margin-top:12px}
-.note{margin:15px 0;font-size:12px;line-height:1.6;color:#697b93}.meta{font-size:12px;color:#708198}.pill{display:inline-block;background:#eaf3ff;color:#326b9d;border-radius:5px;padding:3px 7px;font-size:11px}
-@media(max-width:930px){.layout{grid-template-columns:1fr}.items{max-height:50vh}}@media(max-width:570px){header{padding:22px 16px}header h1{font-size:26px}main{padding:14px 11px}.panel{padding:13px}.line{grid-template-columns:100px 1fr}}
-</style>
-</head>
-<body>
-<header><small>RIFT · REASONING DATA FOUNDRY · DISCOVERY NETWORK</small><h1>Первoисточники / RU</h1>
-<p>Российский сегмент поиска олимпиадных материалов. Изучайте сеть сайтов, архивных ссылок, уже известных олимпиад и сохранённых исходных файлов. Неопознанные документы не теряются и отображаются отдельно.</p></header>
+:root{font-family:Inter,"Segoe UI",Arial,sans-serif;color:#16243d;background:#f5f7fa}
+*{box-sizing:border-box}body{margin:0}a{color:#2762a8;text-decoration:none}a:hover{text-decoration:underline}
+header{background:#14253f;color:white;padding:25px max(18px,calc((100vw - 1410px)/2))}
+header small{letter-spacing:.12em;font-size:11px;color:#abc7e9;font-weight:700}header h1{font-size:clamp(24px,3vw,34px);margin:9px 0}
+header p{font-size:13px;line-height:1.65;max-width:930px;color:#cbd8e9;margin:0}
+main{max-width:1470px;margin:auto;padding:18px 20px 65px}
+nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between;margin-bottom:12px;font-size:13px}
+nav .links{display:flex;gap:12px;flex-wrap:wrap}
+.panel{background:white;border-radius:13px;border:1px solid #dce5ef;padding:16px;margin-bottom:13px}
+h2{margin:0;font-size:17px}h3{font-size:14px;margin:13px 0 8px}.muted{font-size:12px;line-height:1.6;color:#61728b}
+.filters{display:flex;gap:11px;flex-wrap:wrap;align-items:flex-end;margin-top:15px}
+label{display:flex;flex:1 1 145px;flex-direction:column;gap:6px;font-size:12px;font-weight:650;color:#60718b}
+select{font:inherit;border:1px solid #d4deeb;background:#f9fbff;color:#213049;padding:10px 9px;min-height:40px;border-radius:9px;width:100%;font-size:13px}
+button{cursor:pointer;font:inherit}button:focus-visible,select:focus-visible{outline:3px solid #326cdb;outline-offset:2px}
+.legend{display:flex;gap:15px;align-items:center;flex-wrap:wrap;margin:15px 0 3px;color:#516681;font-size:12px}
+.legend b{font-size:12px}.sw{display:inline-block;width:13px;height:13px;border-radius:3px;margin-right:6px;vertical-align:-2px;border:1px solid rgba(0,0,0,.11)}
+:root{--unknown:#fbdcdc;--catalogued:#fbd3a8;--located:#f9df79;--raw:#a9e4c2;--notapp:#edf1f5}
+.scroll{overflow:auto;border:1px solid #dce4ee;border-radius:10px;margin-top:13px;max-height:70vh}
+table.matrix{border-spacing:0;border-collapse:separate;min-width:800px;width:100%}
+.matrix th,.matrix td{padding:5px 4px;border-bottom:1px solid #e8edf4;text-align:center}
+.matrix thead th{font-size:11px;background:#f0f4f9;position:sticky;top:0;z-index:3;white-space:nowrap;padding:12px 8px}
+.matrix th:first-child{min-width:165px;width:175px;position:sticky;left:0;z-index:2;text-align:left;background:white;font-weight:650;font-size:12px}
+.matrix thead th:first-child{background:#f0f4f9;z-index:4}
+.matrix tr:hover th{background:#f5f9ff}
+.cell{width:100%;border:1px solid rgba(0,0,0,.04);border-radius:6px;min-width:57px;max-width:98px;min-height:44px;padding:5px 4px;color:#26354c;background:var(--unknown);display:flex;flex-direction:column;align-items:center;justify-content:space-around;gap:5px}
+.cell.catalogued{background:var(--catalogued)}.cell.located{background:var(--located)}.cell.raw{background:var(--raw)}
+.cell.active{outline:2px solid #2548a1;outline-offset:1px}
+.cell .mini{display:flex;gap:1px;width:100%;justify-content:center}
+.cell .mini i{display:block;height:7px;flex:1;max-width:8px;border-radius:2px;background:var(--unknown)}
+.cell .mini i.catalogued{background:#d88e49}.cell .mini i.located{background:#c89e22}.cell .mini i.raw{background:#258756}
+.cell .number{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+.cell .number em{font-weight:400;font-size:10px;font-style:normal}
+.below{display:grid;grid-template-columns:1.15fr .9fr;gap:13px}
+.grades{display:grid;grid-template-columns:repeat(11,minmax(36px,1fr));gap:5px;margin:14px 0}
+.g{border:1px solid rgba(0,0,0,.06);border-radius:8px;padding:12px 4px;background:var(--unknown);font-size:12px;font-weight:700}
+.g.catalogued{background:var(--catalogued)}.g.located{background:var(--located)}.g.raw{background:var(--raw)}
+.g.active{outline:2px solid #2455b6;outline-offset:1px}
+.details{margin-top:13px}.detail{padding:10px 0;border-bottom:1px solid #ecf0f5;font-size:13px}
+.detail:last-child{border:0}.detail strong{display:block}.detail small{font-size:12px;color:#6e7c90;display:block;margin-top:4px}
+.docs{padding:0;list-style:none;margin:12px 0;max-height:390px;overflow:auto}
+.docs li{padding:9px 0;border-bottom:1px solid #e9eef5;overflow-wrap:anywhere;font-size:12px}
+.docs small{color:#75859b;display:block;margin-top:4px}
+.note{padding:14px;border-radius:9px;background:#f4f6fa;color:#5f728c;font-size:13px;line-height:1.6;margin-top:10px}
+.empty{padding:15px;color:#64768d;background:#f4f6fa;border-radius:9px;font-size:13px;line-height:1.6}
+.fine{line-height:1.6;color:#667a91;font-size:12px;margin-top:14px}
+@media(max-width:950px){.below{grid-template-columns:1fr}.grades{gap:3px}}
+@media(max-width:620px){main{padding:13px 10px}header{padding:22px 14px}.panel{padding:12px}.cell{min-width:48px}.grades{grid-template-columns:repeat(6,minmax(35px,1fr))}nav{align-items:flex-start}}
+</style></head><body>
+<header><small>RIFT · CORPUS DISCOVERY · RU</small><h1>Карта минимального RAW-покрытия</h1>
+<p>Предмет × учебный сезон × класс. Задача — увидеть, где уже сохранён хотя бы один первоисточник заданий, а где мы только знаем олимпиады или ссылки. Цвет не означает полную оцифровку и не измеряет качество reasoning.</p></header>
 <main>
-<div class="breadcrumbs"><span><a href="../">Corpus Coverage</a> / Discovery Network / RU</span><span id="stamp">Загрузка реестра…</span></div>
-<div class="panel">
-<div class="toolbar"><label class="search">Название, адрес сайта, URL или хеш<input type="search" id="search" placeholder="Например, Казанская олимпиада, anokmc.ru, 2025, pdf"></label>
-<label>Предмет<select id="subject"><option value="">Все предметы</option></select></label>
-<label>Год / сезон<select id="year"><option value="">Все годы</option></select></label>
-</div><div class="hint" style="margin-top:10px">География обнаружения: <b>RU</b>. Материалы могут быть на английском и находиться на серверах других стран. Метки географии олимпиады не выводятся из домена.</div>
+<nav><div class="links"><strong>RU · Школьные олимпиады</strong><a href="./network.html">Сеть источников ↗</a><a href="../">Прежняя матрица ↗</a></div><div class="muted" id="stamp">Подключаем данные…</div></nav>
+<section class="panel"><h2>Минимальное присутствие оригинальных заданий</h2>
+<div class="muted">Каждая ячейка — предмет и год. При выборе всех классов внутри видно 11 тонких полосок — по одной на класс. Нажмите на ячейку, чтобы раскрыть все классы и конкретные оригиналы.</div>
+<div class="filters">
+<label>Уровень обучения<select id="level"><option value="school">Школа · 1–11 классы</option><option value="university">Университет · отдельно</option></select></label>
+<label>Класс<select id="grade"><option value="">Все классы · 1–11</option></select></label>
+<label>Показывать годы с<select id="from"><option value="2014">2014</option><option value="2020">2020</option><option value="2010">2010</option><option value="2000">2000</option><option value="1990">1990</option><option value="1980">1980</option></select></label>
+<label>До года<select id="to"></select></label>
 </div>
-<nav class="nav" id="nav" aria-label="Каталог">
-<button data-tab="archives" class="active">Архивы</button>
-<button data-tab="competitions">Олимпиады</button>
-<button data-tab="sites">Сайты</button>
-<button data-tab="observations">Найденные документы</button>
-<button data-tab="unresolved">Неопознанные</button>
-<button data-tab="assets">Оригиналы RAW</button>
-</nav>
-<div class="layout">
-<section class="panel"><div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><h2 id="sectionName">Архивы</h2><span id="count" class="meta"></span></div>
-<div id="desc" class="hint" style="margin-top:7px"></div>
-<div class="items" id="items"></div><div id="more" class="note"></div></section>
-<aside class="panel"><h2 id="detailsTitle">Карточка объекта</h2><div id="details" class="content"><div class="empty">Выберите элемент слева, чтобы увидеть исходные ссылки, происхождение и статус.</div></div></aside>
+<div class="legend">
+<span><i class="sw" style="background:var(--unknown)"></i>Не обнаружено свидетельств</span>
+<span><i class="sw" style="background:var(--catalogued)"></i>Известна олимпиада (примерный диапазон)</span>
+<span><i class="sw" style="background:var(--located)"></i>Ссылка на задания обнаружена</span>
+<span><i class="sw" style="background:var(--raw)"></i>RAW заданий сохранён</span>
 </div>
-<div class="note">Ограничение первой версии: новые олимпиады автоматически появятся после внедрения регистрации кандидатов; пока отображаются подтверждённый исходный справочник и реальные наблюдения краулера. Ссылка на архив означает только его обнаружение, а не полный сбор. <a href="https://github.com/UsernameMP/English/blob/main/docs/corpus_discovery_network_tz.md" target="_blank" rel="noopener">Полное техническое задание</a>.</div>
+<div class="scroll"><table class="matrix"><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
+<div class="fine">Красный означает <strong>«у нас пока нет свидетельств»</strong>, а не «такой олимпиады не существовало». Границы периодов из старого каталога — ориентиры поиска, не подтверждение каждого выпуска. Зелёный — минимальное наличие исходного файла с SHA-256; год и класс пока могут быть определены по имени файла.</div>
+</section>
+<div class="below">
+<section class="panel"><h2 id="selected">Выберите предмет и год</h2>
+<p class="muted" id="selectedNote">В этой панели появится разрез по классам и олимпиадам.</p>
+<div id="grades" class="grades"></div><div id="detailed" class="details"></div></section>
+<section class="panel"><h2>Материалы и источники</h2>
+<div id="sourceDescription" class="muted">Откройте конкретную ячейку.</div>
+<ul class="docs" id="docs"></ul>
+<h3>Материалы, не распределённые по ячейкам</h3>
+<div class="muted" id="unplaced"></div>
+</section>
+</div>
+<footer class="fine">Период отображения — <strong>окно исследования</strong>, а не объявление года возникновения школьного предмета. Университетские соревнования намеренно не приравниваются к 12-му классу. Сведения поступают из сохранённого снимка RAW и справочника олимпиад; обработанные задачи и reasoning в этой карте не учитываются. <a href="https://github.com/UsernameMP/English/blob/main/docs/corpus_discovery_network_tz.md" target="_blank" rel="noopener">Техническое задание ↗</a></footer>
 </main>
 <script>
 "use strict";
-const $=id=>document.getElementById(id), escapeHtml=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-let network=null,tab="archives",current=null;
-const dict={archives:["Архивы","Известные места хранения заданий, включая внешние папки. Ссылки не означают, что архив уже обойдён."],
-competitions:["Олимпиады","Подтверждённые записи исходного реестра. Автоматические кандидаты будут подключены отдельно."],
-sites:["Сайты","Домены, где размещены ссылки на архивы или URL, обнаруженные краулером. Домен не определяет географию олимпиады."],
-observations:["Найденные документы","Все URL из текущего checkpoint, включая ожидание и ошибки; год или этап может быть неизвестен."],
-unresolved:["Неопознанные","Обнаружения с неизвестным соревнованием, предметом, годом или этапом. Сами ссылки не теряются."],
-assets:["Оригиналы RAW","Файлы, у которых есть реальный SHA-256; совпадение байтов объединяет зеркала."]};
-const obsById=new Map(),compById=new Map(),sitesById=new Map();
-function itemTitle(type,x){return type==="competitions"?x.name:type==="archives"?(x.titles[0]||x.url):type==="sites"?x.hostname:type==="assets"?x.sha256:x.url.split("/").pop()||x.url}
-function itemNote(type,x){
-if(type==="competitions")return x.subject_ids.join(", ")+" · классы "+x.grade_min+"–"+x.grade_max+" · "+x.stages.map(s=>s.name).join(", ");
-if(type==="archives")return x.url;
-if(type==="sites")return "Архивы известны: "+(x.has_archive_link?"да":"нет")+" · URL в checkpoint: "+x.observed_url_count;
-if(type==="assets")return "Зеркал: "+x.mirror_count+" · "+(x.bytes||"неизвестно")+" байт";
-return (x.fetch_status||"")+(x.classification?.competition_id?" · "+(compById.get(x.classification.competition_id)?.name||""):" · не определена олимпиада");
+const $=id=>document.getElementById(id);
+const escapeHtml=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const names={unknown:"Нет свидетельств",catalogued:"Олимпиада в каталоге",located:"URL заданий найден",raw:"RAW заданий сохранён"};
+const rank={unknown:0,catalogued:1,located:2,raw:3};
+let model,lookup=new Map(),subjectNames=new Map(),contests=new Map(),selected=null;
+const yearString=y=>String(y)+"/"+String((y+1)%100).padStart(2,"0");
+const key=(lvl,sub,y,grade)=>[lvl,sub,y,grade].join("|");
+const get=(lvl,sub,y,grade)=>lookup.get(key(lvl,sub,y,grade))||{state:"unknown",raw_task_count_unique:0,task_urls:0,catalog_competition_ids:[],observed_competition_ids:[],raw_evidence:[],located_evidence:[],other_material_urls:0};
+const p=(str)=>document.createElement(str);
+function makeOption(id,value,label){const o=p("option");o.value=String(value);o.textContent=label;$(id).append(o)}
+function scope(){return {level:$("level").value,grade:$("grade").value,from:Number($("from").value),to:Number($("to").value)}}
+function candidates(level,sub,y){
+  if(level==="university")return [get(level,sub,y,"university")];
+  return Array.from({length:11},(_,i)=>get(level,sub,y,String(i+1)));
 }
-function chosenTabItems(){
-if(tab==="archives")return network.archives;
-if(tab==="competitions")return network.approved_competitions;
-if(tab==="sites")return network.sites;
-if(tab==="assets")return network.raw_assets;
-if(tab==="unresolved"){const ids=new Set(network.unresolved_observation_ids);return network.observations.filter(x=>ids.has(x.id))}
-return network.observations;
-}
-function selectedText(x){return [x.name,x.hostname,x.url,x.sha256,...(x.titles||[]),x.source_id,x.classification?.competition_id, x.classification?.season].filter(Boolean).join(" ").toLocaleLowerCase("ru-RU")}
-function passes(x){
-const query=$("search").value.trim().toLocaleLowerCase("ru-RU"),subject=$("subject").value,year=$("year").value;
-if(query&&!selectedText(x).includes(query)){if(tab==="archives"){let related=x.competition_ids.map(id=>compById.get(id)?.name||"").join(" ").toLocaleLowerCase("ru-RU");if(!related.includes(query))return false}else return false}
-if(subject){
-if(tab==="competitions"&&!x.subject_ids.includes(subject))return false;
-if(tab==="archives"&&!x.competition_ids.some(id=>(compById.get(id)?.subject_ids||[]).includes(subject)))return false;
-if((tab==="observations"||tab==="unresolved")&&x.classification?.subject_id!==subject)return false;
-if(tab==="assets"&&!x.observation_ids.some(id=>obsById.get(id)?.classification?.subject_id===subject))return false;
-}
-if(year){
-if(tab==="competitions"&&(+year<x.season_from||+year>x.season_to))return false;
-if((tab==="observations"||tab==="unresolved")&&x.classification?.season!==Number(year))return false;
-if(tab==="assets"&&!x.observation_ids.some(id=>obsById.get(id)?.classification?.season===Number(year)))return false;
-}
-return true
-}
-function external(url,text){if(!/^https?:\/\//.test(url||""))return "<span>"+escapeHtml(text||url)+"</span>";return '<a href="'+escapeHtml(url)+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(text||url)+" ↗</a>"}
-function row(name,value){return '<div class="line"><b>'+escapeHtml(name)+'</b><span>'+escapeHtml(value??"Не установлено")+"</span></div>"}
-function links(list){return '<div class="links">'+list.map(x=>external(x.url,x.text)).join("")+"</div>"}
-function details(x){
-const d=$("details");$("detailsTitle").textContent=itemTitle(tab,x);
-if(tab==="competitions"){
-const a=network.archives.filter(y=>y.competition_ids.includes(x.id)),rs=network.observations.filter(y=>y.classification.competition_id===x.id);
-d.innerHTML=row("Субъект",x.subject_ids.join(", "))+row("ID",x.id)+row("Туры",x.stages.map(s=>s.name).join(" / "))+row("Период в реестре",x.season_from+"–"+x.season_to)+row("Наблюдения",rs.length)+row("Идентичность",x.identity_status)+"<h3>Известные архивы</h3>"+links(a.map(y=>({url:y.url,text:y.titles[0]})));
-}else if(tab==="archives"){
-d.innerHTML=row("Состояние", "Ссылка известна, факт скачивания всего архива не установлен")+row("Сайт",sitesById.get(x.site_id)?.hostname)+row("Связанные олимпиады",x.competition_ids.map(i=>compById.get(i)?.name||i).join("; "))+row("ID",x.id)+"<h3>Исходная ссылка</h3>"+links([{url:x.url,text:x.url}]);
-}else if(tab==="sites"){
-const known=network.archives.filter(y=>y.site_id===x.id),observed=network.observations.filter(y=>y.site_id===x.id).slice(0,12);
-d.innerHTML=row("Хост",x.hostname)+row("Известно архивов",known.length)+row("Ссылок на документы",x.observed_url_count)+"<h3>Каталоги / архивы</h3>"+links(known.map(y=>({url:y.url,text:y.titles[0]})))+"<h3>Примеры документов</h3>"+links(observed.map(y=>({url:y.url,text:y.url.split("/").pop()})));
-}else if(tab==="assets"){
-const obs=x.observation_ids.map(id=>obsById.get(id)).filter(Boolean);
-d.innerHTML=row("SHA-256",x.sha256)+row("Объём, байт",x.bytes)+row("Тип",x.content_type)+row("Зеркала",obs.length)+row("Оригинал скачан",x.has_raw_download?"Да":"Нет")+"<h3>Адреса обнаружений</h3>"+links(obs.slice(0,40).map(y=>({url:y.url,text:y.url})));
-}else{
-const c=x.classification||{};
-d.innerHTML=row("Состояние",x.fetch_status)+row("Олимпиада",compById.get(c.competition_id)?.name||"Не установлена")+row("Предмет",c.subject_id)+row("Сезон",c.season)+row("Этап",c.stage_id)+row("Группа классов",c.grade_band)+row("Тип файла",c.document_role)+row("Источник поиска",x.source_id)+row("Впервые найден",x.first_seen)+row("SHA-256",x.asset_id||"RAW ещё не подтверждён")+"<h3>Доказательства происхождения</h3>"+links([{url:x.url,text:"Исходный URL"},{url:x.discovered_from,text:"Страница обнаружения"}].filter(y=>y.url));
-}}
+function aggregate(arr){return arr.reduce((prev,x)=>rank[x.state]>rank[prev.state]?x:prev,{state:"unknown"})}
 function render(){
-const [name,sub]=dict[tab];$("sectionName").textContent=name;$("desc").textContent=sub;
-document.querySelectorAll("#nav button").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));
-const all=chosenTabItems(),visible=all.filter(passes),limit=120;
-$("count").textContent=visible.length+" из "+all.length;
-const box=$("items");box.replaceChildren();
-for(const x of visible.slice(0,limit)){
-const b=document.createElement("button");b.className="result"+(x.id===current?.id?" current":"");b.type="button";b.innerHTML="<strong>"+escapeHtml(itemTitle(tab,x))+"</strong><small>"+escapeHtml(itemNote(tab,x))+"</small>";b.addEventListener("click",()=>{current=x;details(x);renderSelection()});box.append(b)}
-$("more").textContent=visible.length>limit?"Показаны первые "+limit+". Уточните поиск для остальных "+(visible.length-limit)+".":"";
-if(!visible.length)box.innerHTML='<div class="empty">Нет записей по выбранным фильтрам. Это не подтверждает отсутствие первоисточников.</div>';
+ const f=scope(),rows=model.subject_catalog;
+ $("grade").disabled=f.level==="university";
+ const years=[];for(let y=f.to;y>=f.from;y--)years.push(y);
+ $("thead").innerHTML="<tr><th>Предмет</th>"+years.map(y=>"<th>"+yearString(y)+"</th>").join("")+"</tr>";
+ const tb=$("tbody");tb.replaceChildren();
+ for(const s of rows){
+  let row=p("tr"),th=p("th");th.textContent=s.name;row.append(th);
+  for(const year of years){
+   const td=p("td"),byGrade=candidates(f.level,s.id,year);
+   const chosen=f.level==="school"&&f.grade?get("school",s.id,year,f.grade):aggregate(byGrade);
+   const button=p("button");button.type="button";button.className="cell "+chosen.state+(selected?.subject===s.id&&selected?.year===year&&selected?.level===f.level?" active":"");
+   let found=byGrade.filter(x=>x.state==="raw").length;
+   const main=p("span");main.className="number";
+   if(f.level==="school"&&!f.grade){main.textContent=found?found+" кл.":"·";}
+   else main.textContent=chosen.state==="raw"?"RAW":chosen.state==="unknown"?"·":chosen.state==="located"?"URL":"○";
+   button.append(main);
+   if(f.level==="school"&&!f.grade){
+     let mini=p("span");mini.className="mini";
+     byGrade.forEach((cell,i)=>{const bar=p("i");bar.className=cell.state;bar.title=(i+1)+" класс: "+names[cell.state];mini.append(bar)});
+     button.append(mini);
+   }
+   button.title=s.name+" · "+yearString(year)+" · "+(f.grade?"класс "+f.grade+": ":"")+names[chosen.state]+(f.grade?"":", RAW обнаружен для "+found+" классов");
+   button.setAttribute("aria-label",button.title);
+   button.onclick=()=>{selected={subject:s.id,year:year,level:f.level,grade:f.grade||null};render();showDetail()};
+   td.append(button);row.append(td);
+  }tb.append(row)
+ }
+ if(selected&&(!years.includes(selected.year)||selected.level!==f.level)){selected=null;clearDetail();}
+ if(selected)showDetail();
 }
-function renderSelection(){document.querySelectorAll("#items button.result").forEach(b=>b.classList.toggle("current",b.textContent.includes(itemTitle(tab,current))))}
-async function start(){
-const resp=await fetch("./network.json",{cache:"no-store"});if(!resp.ok)throw Error("HTTP "+resp.status);
-network=await resp.json();network.observations.forEach(x=>obsById.set(x.id,x));network.approved_competitions.forEach(x=>compById.set(x.id,x));network.sites.forEach(x=>sitesById.set(x.id,x));
-$("stamp").textContent="Снимок: "+new Date(network.generated_at).toLocaleString("ru-RU")+" · "+network.summary.url_observations+" URL · "+network.summary.unique_raw_hashes+" уникальных SHA-256";
-const subjects=new Set(network.approved_competitions.flatMap(x=>x.subject_ids));[...subjects].sort().forEach(id=>{const o=document.createElement("option");o.value=id;o.textContent=id;$("subject").append(o)});
-const seasons=new Set(network.observations.map(x=>x.classification.season).filter(Boolean));[...seasons].sort((a,b)=>b-a).forEach(y=>{const o=document.createElement("option");o.value=y;o.textContent=y+"/"+String((y+1)%100).padStart(2,"0");$("year").append(o)});
-document.querySelectorAll("#nav button").forEach(b=>b.addEventListener("click",()=>{tab=b.dataset.tab;current=null;$("detailsTitle").textContent="Карточка объекта";$("details").innerHTML='<div class="empty">Выберите элемент слева.</div>';render()}));
-["search","subject","year"].forEach(id=>$(id).addEventListener(id==="search"?"input":"change",render));
-render()
+function clearDetail(){
+ $("selected").textContent="Выберите предмет и год";
+ $("selectedNote").textContent="В этой панели появится разрез по классам и олимпиадам.";
+ $("grades").replaceChildren();$("detailed").replaceChildren();$("docs").replaceChildren();
+ $("sourceDescription").textContent="Откройте конкретную ячейку."
 }
-start().catch(err=>{$("stamp").textContent="Не удалось открыть сеть RU: "+err.message;$("items").innerHTML='<div class="empty">Не найден network.json. Проверьте публикацию Pages и состояние Dropbox checkpoint.</div>'});
-</script>
-</body></html>
+function showDetail(){
+ if(!selected)return;
+ const {subject,year,level}=selected;
+ const subjectLabel=subjectNames.get(subject)||subject;
+ $("selected").textContent=subjectLabel+" · "+yearString(year);
+ const grades=level==="school"?Array.from({length:11},(_,i)=>String(i+1)):["university"];
+ const cells=grades.map(g=>({grade:g,cell:get(level,subject,year,g)}));
+ const gr=$("grades");gr.replaceChildren();
+ for(const x of cells){
+   const b=p("button");b.type="button";b.className="g "+x.cell.state+(x.grade===selected.grade?" active":"");
+   b.textContent=x.grade==="university"?"ВУЗ":x.grade;
+   b.title=x.grade+" · "+names[x.cell.state];
+   b.onclick=()=>{selected.grade=x.grade;showDetail()};
+   gr.append(b);
+ }
+ if(!selected.grade || !grades.includes(selected.grade)){
+   selected.grade=cells.find(x=>x.cell.state==="raw")?.grade||
+     cells.find(x=>x.cell.state==="located")?.grade||
+     cells.find(x=>x.cell.state==="catalogued")?.grade||grades[0];
+   Array.from(gr.children).forEach((b,i)=>b.classList.toggle("active",grades[i]===selected.grade));
+ }
+ const cell=get(level,subject,year,selected.grade);
+ $("selectedNote").textContent=(level==="school"?"Класс "+selected.grade:"Университет")+
+  " · "+names[cell.state]+(cell.state==="raw"?" (есть файл заданий, не обязательно весь комплект)":"");
+ const namesAll=new Set([...cell.catalog_competition_ids,...cell.observed_competition_ids]);
+ const detail=$("detailed");detail.replaceChildren();
+ if(!namesAll.size){const div=p("div");div.className="empty";div.textContent="В нашем реестре не установлено олимпиады для этой координаты. Это не означает, что таких олимпиад не существует.";detail.append(div);}
+ for(const id of namesAll){
+   const item=contests.get(id);if(!item)continue;
+   const d=p("div");d.className="detail";const title=p("strong");title.textContent=item.name;d.append(title);
+   const sub=p("small");sub.textContent=(cell.observed_competition_ids.includes(id)?"Есть документы, связанные с олимпиадой":"Каталожный ориентир по году и классу")+
+    " · Этапы: "+(item.native_stages||[]).map(x=>x.name).join(", ");
+   d.append(sub);
+   for(const link of (item.archive_links||[]).slice(0,4)){
+     const a=p("a");a.href=link.url;a.textContent=link.title+" ↗";a.target="_blank";a.rel="noopener noreferrer";a.style.display="block";a.style.fontSize="12px";a.style.marginTop="5px";d.append(a);
+   }
+   detail.append(d);
+ }
+ const docs=$("docs");docs.replaceChildren();
+ let raw=cell.raw_evidence||[],located=cell.located_evidence||[];
+ $("sourceDescription").textContent=level==="school"?"Класс "+selected.grade+" · "+yearString(year)+
+  " · документов-ссылок с ролью «задания»: "+cell.task_urls+
+  " · различных RAW SHA-256: "+cell.raw_task_count_unique:
+  "Высшее образование · "+yearString(year)+" · ещё не подключённые верифицированные студенческие источники показываются как неизвестные.";
+ const seen=new Set();
+ for(const item of [...raw,...located]){
+   if(seen.has(item.url))continue;seen.add(item.url);
+   const li=p("li"),a=p("a");a.textContent=(item.url||"").split("/").pop()||item.url;a.href=item.url;a.target="_blank";a.rel="noopener noreferrer";li.append(a);
+   const small=p("small");small.textContent=(item.sha256?"RAW · ":"URL · ")+(item.round_id||"тур не определён")+
+    " · "+(item.competition_id?(contests.get(item.competition_id)?.name||item.competition_id):"олимпиада не установлена");
+   li.append(small);docs.append(li);
+ }
+ if(!seen.size){let li=p("li");li.className="empty";li.textContent=cell.state==="catalogued"?"Олимпиада известна по каталогу, но файл заданий для выбранного года/класса не обнаружен.":"У нас пока нет оригинальных заданий для этой ячейки.";docs.append(li);}
+}
+async function init(){
+ const response=await fetch("./presence.json",{cache:"no-store"});
+ if(!response.ok)throw Error("presence.json: HTTP "+response.status);
+ model=await response.json();
+ model.cells.forEach(c=>lookup.set(key(c.education_level,c.subject_id,c.season,c.grade),c));
+ model.subject_catalog.forEach(s=>subjectNames.set(s.id,s.name));
+ model.competition_catalog.forEach(c=>contests.set(c.id,c));
+ const last=new Date(model.generated_at).toLocaleString("ru-RU");
+ $("stamp").textContent="Сегмент "+model.segment.id+" · снимок "+last;
+ for(let i=1;i<=11;i++)makeOption("grade",i,i+" класс");
+ const top=Math.max(2026,new Date().getFullYear());
+ for(let y=top;y>=2014;y--)makeOption("to",y,yearString(y));
+ $("to").value=String(top);
+ $("unplaced").textContent="URL, которые пока нельзя привязать к предмету, году и классу: "+
+   model.unplaced_observation_count+". Они остаются в каталоге исходников и не закрашивают ячейки по догадке.";
+ for(const id of ["level","grade","from","to"])$(id).addEventListener("change",()=>{
+   if(Number($("from").value)>Number($("to").value))$("from").value="2014";
+   selected=null;clearDetail();render();
+ });
+ render();
+}
+init().catch(err=>{$("stamp").textContent="Не удалось загрузить: "+err.message;
+ $("tbody").innerHTML='<tr><td colspan="100">Не найден или недоступен срез данных.</td></tr>'});
+</script></body></html>
