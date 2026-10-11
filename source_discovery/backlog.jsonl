@@ -1,0 +1,9 @@
+{"scope":"global","kind":"search","topic":"Regional Russian archives and subject Olympiad centres","status":"pending"}
+{"scope":"global","kind":"search","topic":"Central Asian national and university Olympiads beyond Kazakhstan","status":"pending"}
+{"scope":"global","kind":"search","topic":"China, Vietnam, Taiwan, Korea and Japan national archives","status":"pending"}
+{"scope":"global","kind":"search","topic":"Africa and Latin America national and university competitions","status":"pending"}
+{"scope":"global","kind":"search","topic":"University mathematics, physics, linguistics and research tournaments","status":"pending"}
+{"scope":"global","kind":"search","topic":"Historical archives, mirror sites and problem book indexes","status":"pending"}
+{"scope":"IMC","kind":"url_repair","topic":"Re-enumerate pages where HTMLParser previously changed &section into §ion; retain historical raw records and verify corrected URLs","status":"pending","origin":"crawl_links.py regression 2026-10-11"}
+{"scope":"TUBITAK","kind":"classification_gap","topic":"Resolve subject and competition for archive downloads whose filenames encode year/round but not subject; inspect parent page and adjacent headings","status":"pending","origin":"Review 2026-10-11"}
+{"scope":"global","kind":"coverage_gap","topic":"Enumerate javascript-only archive links, sitemap/API pagination, mirrors and missing historical years; never count HTML frontier exhaustion as total source completeness","status":"pending","origin":"Crawler audit 2026-10-11"}

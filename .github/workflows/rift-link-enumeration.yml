@@ -1,0 +1,52 @@
+name: RIFT Link Enumeration
+on:
+  push:
+    branches: [rift-source-index]
+    paths:
+      - source_discovery/sources.jsonl
+      - source_discovery/run_trigger.json
+      - source_discovery/crawl_links.py
+      - source_discovery/merge_sources.py
+      - source_discovery/test_discovery.py
+  workflow_dispatch:
+  schedule:
+    - cron: "19 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rift-source-crawl
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - name: Checkout index branch
+        uses: actions/checkout@v4
+        with:
+          ref: rift-source-index
+          persist-credentials: true
+      - name: Verify discovery and crawler regressions
+        run: |
+          python -m py_compile source_discovery/crawl_links.py source_discovery/merge_sources.py
+          python -m unittest discover -s source_discovery -p 'test_*.py' -v
+      - name: Merge discovered sources into the registry
+        run: python source_discovery/merge_sources.py
+      - name: Enumerate publicly accessible HTML links
+        env:
+          RIFT_PAGES_PER_RUN: "60"
+          RIFT_PAGES_PER_SITE: "12"
+          RIFT_MAX_DEPTH: "6"
+        run: python source_discovery/crawl_links.py
+      - name: Persist results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add source_discovery/sources.jsonl source_discovery/links_raw.jsonl source_discovery/links_shards source_discovery/crawl_state.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "RIFT: checkpoint link crawl"
+          git pull --rebase origin rift-source-index
+          git push origin HEAD:rift-source-index
