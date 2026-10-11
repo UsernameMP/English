@@ -3,6 +3,10 @@ name: Corpus Coverage validation
 on:
   pull_request:
     paths:
+      - "tools/corpus_ingest/crawler.py"
+      - "tools/corpus_ingest/registry/sources.csv"
+      - "tools/corpus_ingest/tests/test_crawler.py"
+      - ".github/workflows/corpus-crawler.yml"
       - "tools/corpus_ingest/coverage_dashboard.py"
       - "tools/corpus_ingest/discovery_network.py"
       - "tools/corpus_ingest/raw_presence.py"
@@ -17,6 +21,10 @@ on:
   push:
     branches: [main]
     paths:
+      - "tools/corpus_ingest/crawler.py"
+      - "tools/corpus_ingest/registry/sources.csv"
+      - "tools/corpus_ingest/tests/test_crawler.py"
+      - ".github/workflows/corpus-crawler.yml"
       - "tools/corpus_ingest/coverage_dashboard.py"
       - "tools/corpus_ingest/discovery_network.py"
       - "tools/corpus_ingest/raw_presence.py"
@@ -40,6 +48,10 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - name: Install crawler test dependencies
+        run: pip install -r tools/corpus_ingest/crawler_requirements.txt
+      - name: Test school-only stage discovery and crawler
+        run: PYTHONPATH=tools/corpus_ingest pytest -q tools/corpus_ingest/tests/test_crawler.py
       - name: Test coverage model and seeded facts
         run: python -m unittest discover -s tools/corpus_ingest/tests -p test_coverage_dashboard.py -v
       - name: Test RU source graph, RAW SHA links and unknown preservation
