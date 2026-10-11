@@ -6,7 +6,7 @@ import json
 import os
 import re
 import time
-from collections import defaultdict
+from collections import defaultdict, deque
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -152,19 +152,19 @@ def fetch_html(url):
 
 def prioritize_queue(queue):
     """Prefer archive sections without starving peripheral navigation or large sites."""
-    important, peripheral = [], []
+    important, peripheral = deque(), deque()
     for task in queue:
-        if task.get("priority", hint(task["url"])["priority"]) >= 2:
-            important.append(task)
-        else:
-            peripheral.append(task)
+        priority = task.get("priority")
+        if priority is None:
+            priority = hint(task["url"])["priority"]
+        (important if priority >= 2 else peripheral).append(task)
     ordered = []
-    # Four likely archive pages, one exploratory page. All pages stay queued.
+    # Four likely archive pages, one exploratory page. Every page stays queued.
     while important or peripheral:
-        ordered.extend(important[:4])
-        del important[:4]
+        for _ in range(min(4, len(important))):
+            ordered.append(important.popleft())
         if peripheral:
-            ordered.append(peripheral.pop(0))
+            ordered.append(peripheral.popleft())
     return ordered
 
 
