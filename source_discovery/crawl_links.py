@@ -107,20 +107,18 @@ def permitted(url, cache):
 
 
 def fetch_html(url):
-    # HEAD ensures that binary task files are not downloaded.
-    req = Request(url, method="HEAD", headers={"User-Agent": "RIFTResearchBot/0.1"})
-    with urlopen(req, timeout=18) as resp:
+    # Only read response bodies when the server declares HTML.
+    req = Request(url, headers={"User-Agent": "RIFTResearchBot/0.1",
+                                "Accept": "text/html,application/xhtml+xml"})
+    with urlopen(req, timeout=20) as resp:
         kind = resp.headers.get("Content-Type", "").lower()
-    if not ("text/html" in kind or "application/xhtml" in kind):
-        return None, "non-html:" + kind
-    req = Request(url, headers={"User-Agent": "RIFTResearchBot/0.1"})
-    with urlopen(req, timeout=22) as resp:
+        if not ("text/html" in kind or "application/xhtml" in kind):
+            return None, "non-html:" + kind
         data = resp.read(2_000_001)
-        kind = resp.headers.get("Content-Type", "").lower()
     if len(data) > 2_000_000:
         return None, "html-page-too-large"
     charset = "utf-8"
-    m = re.search(r"charset=([\\w-]+)", kind)
+    m = re.search(r"charset=([A-Za-z0-9_-]+)", kind)
     if m:
         charset = m.group(1)
     return data.decode(charset, errors="replace"), None
