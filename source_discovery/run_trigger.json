@@ -1,6 +1,6 @@
 {
-  "requested_at": "2026-10-11T15:28:19.585Z",
-  "cycle": "repair-20261011T152819",
-  "reason": "verify crawler parsing, migration and discovery merging after fix",
-  "previous_cycle": "hourly-20261011T150741"
+  "requested_at": "2026-10-11T16:03:06.802Z",
+  "cycle": "hourly-20261011T160306Z",
+  "reason": "scheduled discovery review audit; crawl link shards",
+  "previous_cycle": "repair-20261011T152819"
 }
