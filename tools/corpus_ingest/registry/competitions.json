@@ -119,7 +119,10 @@
           "url": "https://olimpiada.ru/"
         }
       ],
-      "notes": "Наличие этапа зависит от класса, предмета и сезона. Ячейки показывают обнаружение, а не доказанную полноту."
+      "notes": "Наличие этапа зависит от класса, предмета и сезона. Ячейки показывают обнаружение, а не доказанную полноту.",
+      "discovery_segment_ids": [
+        "RU"
+      ]
     },
     {
       "id": "rt_republic_math",
@@ -159,6 +162,9 @@
           "title": "Финальный архив с 2013/14",
           "url": "https://drive.google.com/drive/folders/1iLjXc-k8GA8TdILm1_Nua5l5nA19xGhr"
         }
+      ],
+      "discovery_segment_ids": [
+        "RU"
       ]
     },
     {
@@ -187,6 +193,9 @@
           "title": "Страница КМО — задания и ответы",
           "url": "https://anokmc.ru/km-olymp"
         }
+      ],
+      "discovery_segment_ids": [
+        "RU"
       ]
     },
     {
@@ -215,6 +224,9 @@
           "title": "Задания 2025",
           "url": "https://disk.yandex.ru/d/L8qmzyK2u5BNbQ"
         }
+      ],
+      "discovery_segment_ids": [
+        "RU"
       ]
     },
     {
@@ -243,6 +255,9 @@
           "title": "Задания 2025",
           "url": "https://disk.yandex.ru/d/fWNX99_goSLIWg"
         }
+      ],
+      "discovery_segment_ids": [
+        "RU"
       ]
     },
     {
@@ -267,6 +282,9 @@
           "title": "Архив заданий прошлых лет",
           "url": "https://drive.google.com/open?id=167wEbxqFLpslbNz5mDzh4XbjMgslz95o"
         }
+      ],
+      "discovery_segment_ids": [
+        "RU"
       ]
     },
     {
@@ -291,6 +309,9 @@
           "title": "Сайт организаторов",
           "url": "https://matolimp-spb.org/"
         }
+      ],
+      "discovery_segment_ids": [
+        "RU"
       ]
     },
     {
@@ -315,6 +336,9 @@
           "title": "Сайт олимпиады",
           "url": "https://mathbaby.ru/"
         }
+      ],
+      "discovery_segment_ids": [
+        "RU"
       ]
     },
     {
@@ -339,6 +363,9 @@
           "title": "Архив турнира",
           "url": "https://turgor.ru/"
         }
+      ],
+      "discovery_segment_ids": [
+        "RU"
       ]
     },
     {
@@ -363,6 +390,9 @@
           "title": "Сайт ЮМШ",
           "url": "https://yumsh.ru/"
         }
+      ],
+      "discovery_segment_ids": [
+        "RU"
       ]
     },
     {
@@ -387,12 +417,26 @@
           "title": "Сайт IGO",
           "url": "https://igo-official.com/"
         }
+      ],
+      "discovery_segment_ids": [
+        "RU"
       ]
     }
   ],
   "rules": {
     "season": "Год начала учебного сезона, например 2025 = 2025/26",
     "zero": "Ноль обнаруженных документов, не ноль существующих",
-    "source_of_truth": "Изменения реестра только здесь; coverage.json генерируется из Dropbox checkpoint."
-  }
+    "source_of_truth": "Изменения реестра только здесь; coverage.json генерируется из Dropbox checkpoint.",
+    "discovery_segment": "Сегмент поиска и страна олимпиады не равны; country_codes заполняются только подтверждёнными сведениями, не выводятся из домена."
+  },
+  "segments": [
+    {
+      "id": "RU",
+      "name": "Россия",
+      "country_code": "RU",
+      "kind": "geographic_discovery_scope",
+      "description": "Контур поиска источников, а не язык документов, TLD или гражданство участников.",
+      "publication_path": "corpus/ru"
+    }
+  ]
 }
