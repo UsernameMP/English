@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-11T17:18:03.823Z",
+  "updated_at": "2026-10-11T19:13:01.494Z",
   "deferred_shards": [
     1,
     2,
@@ -20,7 +20,7 @@
     "labels_checkpoint_20261011_17_06.jsonl",
     "labels_checkpoint_20261011_17_07.jsonl"
   ],
-  "pending_labels_count": 40,
-  "canonical_merge_status": "partial_8_merged_40_pending",
-  "canonical_merged_in_cycle": 8
+  "pending_labels_count": 78,
+  "canonical_merge_status": "partial_17_merged_78_pending",
+  "canonical_merged_in_cycle": 1
 }
