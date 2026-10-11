@@ -1,5 +1,5 @@
 {
-  "requested_at": "2026-10-11T12:57:00Z",
-  "reason": "initial link inventory",
-  "requested_by": "RIFT ChatGPT scheduled research"
+  "requested_at": "2026-10-11T13:05:00Z",
+  "reason": "migrate oversized raw link ledger to readable shards",
+  "cycle": "fix-shards-01"
 }
