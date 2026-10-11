@@ -37,6 +37,23 @@ def read_jsonl(path: Path) -> list[dict]:
     return read_jsonl_bytes(path.read_bytes()) if path.exists() else []
 
 
+def merge_checkpoint_rows(github_rows: list[dict], dropbox_rows: list[dict]) -> list[dict]:
+    """Keep the freshest record of each document from GitHub or Dropbox.
+
+    GitHub can continue to record discoveries when Dropbox reaches capacity,
+    so a successful Dropbox fetch does NOT imply its state is complete.
+    """
+    merged: dict[str, dict] = {}
+    for row in [*dropbox_rows, *github_rows]:
+        identity = row.get("document_id") or row.get("url")
+        if not identity:
+            continue
+        old = merged.get(identity)
+        if old is None or (row.get("updated_at") or "") >= (old.get("updated_at") or ""):
+            merged[identity] = row
+    return sorted(merged.values(), key=lambda row: (row.get("source_id", ""), row.get("url", "")))
+
+
 def dropbox_checkpoint(filename: str = "checkpoint.jsonl") -> bytes | None:
     key, secret, refresh = (os.getenv(k, "") for k in
                             ("DROPBOX_APP_KEY", "DROPBOX_APP_SECRET", "DROPBOX_REFRESH_TOKEN"))
@@ -223,9 +240,12 @@ def main() -> None:
             return
         else:
             raise SystemExit("Cannot build: no checkpoint and no existing coverage snapshot")
-    records = read_jsonl_bytes(checkpoint)
+    # Include GitHub-side discoveries not yet written back to a full Dropbox.
+    records = merge_checkpoint_rows(read_jsonl(args.checkpoint), read_jsonl_bytes(checkpoint))
     if not records:
         raise SystemExit("Refusing to replace coverage with an empty checkpoint")
+    if args.checkpoint.exists() and args.checkpoint.stat().st_size:
+        origin += " + GitHub local crawler state (latest wins)"
     parsed = read_jsonl(args.parse_state)
     if args.refresh_dropbox:
         try:
