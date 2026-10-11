@@ -26,7 +26,7 @@ PARSE = ROOT / "tools/corpus_ingest/state/parse_state.jsonl"
 
 STATUS_KEYS = ("PENDING", "DOWNLOADED", "DUPLICATE", "FAILED_RETRYABLE",
                "FAILED_TERMINAL", "CLAIMED", "DOWNLOADING")
-ROLE_KEYS = ("tasks", "answers", "criteria", "script", "audio", "other")
+ROLE_KEYS = ("tasks", "answers", "solutions", "criteria", "script", "audio", "other")
 
 
 def read_jsonl_bytes(data: bytes) -> list[dict]:
@@ -172,6 +172,7 @@ def identify(record: dict, registry: dict) -> dict:
 
     if re.search(r"(?:^|[-/])(tasks?|zadan)", name): role = "tasks"
     elif re.search(r"(?:^|[-/])(ans|otv)", name): role = "answers"
+    elif re.search(r"(?:^|[-/])(sol|solution|solutions)(?:[-/.]|$)", name): role = "solutions"
     elif re.search(r"(?:^|[-/])(krit|crit|criteria)", name): role = "criteria"
     elif re.search(r"(?:^|[-/])script", name): role = "script"
     elif name.endswith((".mp3", ".wav", ".m4a")): role = "audio"
