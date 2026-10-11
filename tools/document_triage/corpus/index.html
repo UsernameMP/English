@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#15243b">
+<title>Corpus Coverage · Rift</title>
+<style>
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#1b2941;background:#f5f7fa}
+*{box-sizing:border-box}body{margin:0}a{color:#1765ac;text-decoration:none}a:hover{text-decoration:underline}
+header{padding:31px max(22px,calc((100vw - 1320px)/2));background:#14233c;color:#fff}
+header small{font-size:11px;color:#a6c6ec;letter-spacing:.2em;font-weight:700}h1{font-size:clamp(28px,3.5vw,40px);margin:8px 0}header p{max-width:800px;line-height:1.6;font-size:14px;color:#c6d2e5;margin:0}
+main{max-width:1370px;padding:24px;margin:0 auto}h2{font-size:18px;margin:0 0 6px}h3{font-size:15px;margin:15px 0 9px}.sub{color:#6a7891;font-size:12px;line-height:1.5}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:16px 0}
+.stat,section{background:white;border:1px solid #e0e6ef;border-radius:14px}
+.stat{padding:16px}.stat span{font-size:12px;color:#667791}.stat b{display:block;font-size:27px;margin-top:7px;font-variant-numeric:tabular-nums}
+section{padding:18px;margin-bottom:16px}.headrow{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+.filters{display:grid;grid-template-columns:1fr 1.3fr .8fr 1fr .8fr;gap:12px;margin:20px 0}
+label{display:flex;flex-direction:column;gap:6px;color:#586b88;font-size:12px;font-weight:600}
+select{background:#f9fbfe;border:1px solid #d8e0ec;border-radius:9px;padding:10px 7px;color:#23334b;width:100%;font-size:13px}
+.legend{display:flex;flex-wrap:wrap;gap:15px;color:#748298;font-size:12px;margin:10px 0}
+.dot{width:11px;height:11px;display:inline-block;border-radius:3px;vertical-align:-1px;margin-right:4px}
+.scroll{max-height:610px;overflow:auto;border-radius:10px;border:1px solid #e5eaf2}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:810px}th,td{border-bottom:1px solid #edf0f5;padding:8px;text-align:center}
+thead th{position:sticky;top:0;background:#f8fafc;z-index:2;font-size:12px;color:#677791}
+tr th:first-child{text-align:left;position:sticky;left:0;min-width:225px;background:#fff;z-index:1;font-size:13px}thead th:first-child{background:#f8fafc;z-index:3}
+th small{display:block;font-size:11px;font-weight:400;color:#94a0b1;margin-top:3px}
+.tile{display:block;width:100%;min-height:35px;border:1px solid transparent;border-radius:8px;font-weight:700;cursor:pointer;background:#f2f4f7;color:#8490a0}
+.tile.done{background:#ddf5e8;color:#176b4a}.tile.pending{background:#fff0d4;color:#885e0b}.tile.selected{outline:2px solid #335edb;outline-offset:1px}
+.tile:hover{filter:brightness(.97)}.tile:focus-visible{outline:3px solid #4277fa}
+.bottom{display:grid;grid-template-columns:1fr 1fr;gap:16px}.kv{display:flex;justify-content:space-between;gap:15px;padding:10px 0;font-size:13px;border-bottom:1px solid #edf0f5}.kv:last-child{border-bottom:0}
+.stage{border:1px solid #e5eaf3;border-radius:9px;padding:11px;margin-top:8px;font-size:13px}.stage small{display:block;margin-top:4px;color:#7b8aa1}
+.links{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.links a{display:inline-block;padding:8px 9px;border-radius:8px;background:#f4f8ff;border:1px solid #deebfa;font-size:12px}
+.docs{list-style:none;padding:0;max-height:260px;overflow:auto}.docs li{padding:8px 0;border-bottom:1px solid #e9edf5;font-size:12px;overflow-wrap:anywhere}
+.docs li small{display:block;color:#8794a7;margin-top:4px}
+.notice{background:#f4f6fa;border-radius:9px;padding:14px;color:#6b7990;font-size:13px}
+footer{padding:15px 0 30px;font-size:12px;line-height:1.7;color:#67758d}
+@media(max-width:950px){.stats{grid-template-columns:repeat(3,1fr)}.filters{grid-template-columns:repeat(3,1fr)}.bottom{grid-template-columns:1fr}}
+@media(max-width:570px){header{padding:26px 19px}main{padding:13px}.stats{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:repeat(2,1fr)}section{padding:13px}.stat{padding:12px}.stat b{font-size:23px}}
+</style></head>
+<body><header><small>RIFT · CORPUS ENGINE</small><h1>Corpus Coverage</h1>
+<p>Карта сбора исходных олимпиадных заданий: предметы, соревнования, учебные сезоны, классы и собственные этапы каждой олимпиады. Цель — находить пробелы в RAW-корпусе до распознавания и разметки.</p></header>
+<main>
+<div id="fresh" class="sub">Загружаем состояния…</div><div class="stats" id="stats"></div>
+<section><div class="headrow"><h2>Матрица покрытия источниками</h2><a href="./coverage.json">Открыть coverage.json ↗</a></div>
+<div class="filters">
+<label>Предмет<select id="subject"></select></label><label>Олимпиада<select id="competition"></select></label><label>Сезон<select id="season"></select></label><label>Этап / тур<select id="stage"></select></label><label>Группа классов<select id="grade"></select></label>
+</div>
+<div class="legend"><span><i class="dot" style="background:#ddf5e8"></i>Есть скачанные RAW</span><span><i class="dot" style="background:#fff0d4"></i>Только обнаружены ссылки</span><span><i class="dot" style="background:#f2f4f7"></i>Не обнаружено</span><span>Числа — URL, не количество задач</span></div>
+<div class="scroll"><table><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
+</section><div class="bottom">
+<section><h2 id="detailName">Детализация</h2><div id="detailSub" class="sub">Выбери ячейку в матрице.</div><div id="details"></div></section>
+<section><h2>Где искать оригиналы</h2><div class="sub">Архивы из справочника: известный адрес ещё не означает, что файлы собраны.</div><div class="links" id="links"></div><h3>Примеры файлов из состояния краулера</h3><ul class="docs" id="docs"></ul></section>
+</div>
+<footer>«Не обнаружено» означает только отсутствие URL в текущем индексе; это не доказательство отсутствия документов. Число ссылок не является процентом полноты: количество ожидаемых документов пока неизвестно. Неопределённые годы или этапы не приписываются к соседним ячейкам. <a href="https://github.com/UsernameMP/English/blob/main/tools/corpus_ingest/registry/competitions.json">Единственный редактируемый справочник</a>.</footer>
+</main>
+<script>
+"use strict";
+var registry=null,data=null,active=null;
+var $=function(id){return document.getElementById(id)};
+var fmt=function(n){return new Intl.NumberFormat("ru-RU").format(n||0)};
+var escape=function(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
+var lookup=function(arr,id){return arr.find(function(x){return x.id===id})};
+var yearlabel=function(y){return y+"/"+String((Number(y)+1)%100).padStart(2,"0")};
+function sel(id,arr,placeholder){
+ var el=$(id),prev=el.value;el.replaceChildren();
+ [["",placeholder]].concat(arr).forEach(function(item){var op=document.createElement("option");op.value=item[0];op.textContent=item[1];el.append(op)});
+ if(Array.from(el.options).some(function(x){return x.value===prev}))el.value=prev;
+}
+function filters(){return{subject:$("subject").value,comp:$("competition").value,season:$("season").value,stage:$("stage").value,grade:$("grade").value}}
+function matches(c,f){return(!f.subject||c.subject_id===f.subject)&&(!f.comp||c.competition_id===f.comp)&&(!f.season||c.season===Number(f.season))&&(!f.stage||c.stage_id===f.stage)&&(!f.grade||c.grade_band===f.grade)}
+function sums(items){var result={urls:0,downloaded:0,pending:0,parsed:0,failed:0};items.forEach(function(c){result.urls+=c.urls||0;result.downloaded+=(c.statuses.DOWNLOADED||0);result.pending+=(c.statuses.PENDING||0);result.failed+=(c.statuses.FAILED_RETRYABLE||0)+(c.statuses.FAILED_TERMINAL||0);result.parsed+=(c.parse_statuses.PARSED||0)});return result}
+function detail(comp,year,f){
+ var meta=lookup(registry.competitions,comp);if(!meta)return;
+ var rows=data.cells.filter(function(c){return c.competition_id===comp&&c.season===year&&matches(c,f)});
+ $("detailName").textContent=meta.name;
+ $("detailSub").textContent=yearlabel(year)+" · "+meta.grade_min+"–"+meta.grade_max+" классы";
+ var totals=sums(rows);
+ $("details").innerHTML=[["Обнаружено URL",totals.urls],["Скачано RAW",totals.downloaded],["Ожидают",totals.pending],["Разобрано по SHA",totals.parsed],["Ошибки загрузки",totals.failed]].map(function(x){return '<div class="kv"><span>'+escape(x[0])+'</span><b>'+fmt(x[1])+'</b></div>'}).join("");
+ var h=document.createElement("h3");h.textContent="Этапы и туры";$("details").append(h);
+ meta.stages.forEach(function(stage){if(f.stage&&f.stage!==stage.id)return;var rows2=rows.filter(function(c){return c.stage_id===stage.id}),v=sums(rows2),box=document.createElement("div");box.className="stage";box.innerHTML="<b>"+escape(stage.name)+"</b><small>"+fmt(v.urls)+" URL · "+fmt(v.downloaded)+" RAW · "+fmt(v.pending)+" в очереди</small>";$("details").append(box)});
+ $("links").replaceChildren();(meta.archive_links||[]).forEach(function(item){var a=document.createElement("a");a.href=item.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=item.title+" ↗";$("links").append(a)});
+ $("docs").replaceChildren();var seen=new Set();rows.forEach(function(c){(c.examples||[]).forEach(function(doc){if(seen.size>=24||seen.has(doc.url))return;seen.add(doc.url);var li=document.createElement("li"),a=document.createElement("a");a.href=doc.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=doc.url.split("/").pop();li.append(a);var note=document.createElement("small");note.textContent=doc.status+" · "+doc.role+" · "+c.grade_band;li.append(note);$("docs").append(li)})});
+ if(!seen.size){var li=document.createElement("li");li.className="notice";li.textContent="В выбранном срезе нет обнаруженных файлов. Проверь известные архивы выше."; $("docs").append(li)}
+}
+function render(){
+ var f=filters(),comps=registry.competitions.filter(function(c){return(!f.comp||c.id===f.comp)&&(!f.subject||c.subject_ids.includes(f.subject))&&(!f.stage||c.stages.some(function(s){return s.id===f.stage}))});
+ var to=Math.max.apply(null,registry.competitions.map(function(c){return c.to})),from=Math.min.apply(null,registry.competitions.map(function(c){return c.from}));
+ var years=[];for(var y=to;y>=from;y--)if(!f.season||Number(f.season)===y)years.push(y);
+ $("thead").innerHTML="<tr><th>Олимпиада</th>"+years.map(function(y){return "<th>"+yearlabel(y)+"</th>"}).join("")+"</tr>";
+ $("tbody").replaceChildren();
+ comps.forEach(function(c){
+ var tr=document.createElement("tr"),th=document.createElement("th");th.innerHTML=escape(c.name)+"<small>"+c.grade_min+"–"+c.grade_max+" классы</small>";tr.append(th);
+ years.forEach(function(y){var td=document.createElement("td");if(y<c.from||y>c.to){td.textContent="—";tr.append(td);return}
+ var rows=data.cells.filter(function(x){return x.competition_id===c.id&&x.season===y&&matches(x,f)}),v=sums(rows),button=document.createElement("button");button.className="tile "+(v.downloaded?"done":v.urls?"pending":"")+(active&&active.comp===c.id&&active.year===y?" selected":"");button.textContent=v.urls?fmt(v.urls):"·";button.title=fmt(v.urls)+" URL, "+fmt(v.downloaded)+" скачано";button.setAttribute("aria-label",c.name+" "+yearlabel(y)+": "+button.title);button.addEventListener("click",function(){active={comp:c.id,year:y};render()});td.append(button);tr.append(td)});
+ $("tbody").append(tr)
+ });
+ if(!comps.length){var tr=document.createElement("tr");tr.innerHTML='<td colspan="100">Нет олимпиад по выбранным фильтрам.</td>';$("tbody").append(tr)}
+ var v=sums(data.cells.filter(function(x){return matches(x,f)})),status=data.summary.statuses;
+ var cards=[["Всего ссылок",data.summary.urls],["Скачано RAW",status.DOWNLOADED||0],["В очереди",status.PENDING||0],["В срезе",v.urls],["Без полной классификации",data.summary.unclassified_urls]];
+ $("stats").innerHTML=cards.map(function(x){return '<div class="stat"><span>'+escape(x[0])+'</span><b>'+fmt(x[1])+'</b></div>'}).join("");
+ if(!active||!comps.some(function(c){return c.id===active.comp})||!years.includes(active.year)){var c=comps.find(function(c){return c.id==="vsosh"})||comps[0];if(c){var year=years.find(function(y){return y>=c.from&&y<=c.to});active={comp:c.id,year:year||c.to}}}
+ if(active)detail(active.comp,active.year,f)
+}
+function stages(){var comp=$("competition").value,map=new Map();registry.competitions.filter(function(c){return !comp||c.id===comp}).forEach(function(c){c.stages.forEach(function(s){map.set(s.id,s.name)})});sel("stage",Array.from(map),"Все этапы / туры")}
+async function init(){
+ var result=await Promise.all([fetch("./coverage.json",{cache:"no-store"}),fetch("./registry.json",{cache:"no-store"})]);if(!result[0].ok||!result[1].ok)throw Error("JSON: "+result[0].status+" / "+result[1].status);
+ data=await result[0].json();registry=await result[1].json();
+ var ts=data.state_latest_update?new Date(data.state_latest_update).toLocaleString("ru-RU"):"нет даты";
+ $("fresh").textContent="Источник: "+data.origin+" · последняя запись: "+ts+" · "+fmt(data.summary.urls)+" URL";
+ sel("subject",registry.subjects.map(function(x){return [x.id,x.name]}),"Все предметы");sel("competition",registry.competitions.map(function(x){return [x.id,x.name]}),"Все олимпиады");
+ var years=[];for(var y=2026;y>=2014;y--)years.push([String(y),yearlabel(y)]);sel("season",years,"Все сезоны");
+ sel("grade",Array.from(new Set(data.cells.map(function(c){return c.grade_band}))).sort().map(function(x){return[x,x]}),"Все группы классов");
+ stages();["subject","competition","season","stage","grade"].forEach(function(id){$(id).addEventListener("change",function(){if(id==="competition")stages();active=null;render()})});render()
+}
+init().catch(function(e){ $("fresh").textContent="Ошибка загрузки дашборда: "+e.message});
+</script></body></html>
