@@ -1,6 +1,7 @@
 {
-  "requested_at": "2026-10-11T16:07:55.090Z",
-  "cycle": "hourly-20261011T160755Z",
-  "reason": "merge verified discovery_20261011_08 sources and continue enumeration",
-  "previous_cycle": "hourly-20261011T160306Z"
+  "requested_at": "2026-10-11T17:09:07.685Z",
+  "cycle": "hourly-20261011T170907Z",
+  "cycle_number": 2,
+  "reason": "RIFT automation Discovery+Review+Audit; enumerate new verified sources; preserve raw shards",
+  "previous_cycle": "hourly-20261011T160755Z"
 }
