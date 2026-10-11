@@ -1,1586 +1,6 @@
 {
   "queue": [
     {
-      "url": "https://www.imojp.org/overseas/apmo_statistics.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/overseas/egmo_statistics.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/zaidan/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/zaidan/greetings.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/zaidan/history.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/zaidan/articles.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/zaidan/privacy_rules.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/zaidan/information_disclosure_rules.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/zaidan/officers.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/zaidan/plan.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/zaidan/report.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/zaidan/Specified_Commercial_Transaction_Act.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/contribution/toyotarika.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/imo/result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/apmo/result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/imo/quick_report/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/jgmo/jgmo_apply.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/jjmo/jjmo_apply.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/egmo/flash_report.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/imo/contestants.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/apmo/kaijyo.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/jmo/prizewinners.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/jjmo/prizewinners.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/jmo/jyukenhyo_wasureh.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/egmo/contestants.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/jgmo/prizewinners.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/jmo/honsen_kaijyo.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/jjmo/honsen_kaijyo.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/news/2018_and_after/top_page.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/domestic/jgmo_apply.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/domestic/jjmo_apply.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/domestic/jjmo_books.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/column/PeterFrankl1.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/column/PeterFrankl2.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/zaidan/greetings.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/zaidan/history.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/resu.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/imoj.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/sche.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/regu.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/tokyo.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/spon.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/mof.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/imo.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/support/IMO2023sponsors.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/support/IMO2023logo.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/support/IMO2023committee.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/support/documents/IMO2023leaflet.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/domestic/jmo_results.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/domestic/jmo.overview.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/application/2026kaitei.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/jmo/yosen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2025/jmo/yosen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2024/jmo/yosen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2023/jmo2023/yosen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2022/jmo2022/yosen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2021/jmo2021/yosen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2020/jmo2020/yosen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2019/jmo2019/yosen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2018/jmo2018/yosen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2017/jmo2017/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2016/jmo2016/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2015/jmo2015/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2014/jmo2014/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2013/jmo2013/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2012/jmo2012/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2011/jmo2011/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2010/jmo2010/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2009/jmo2009/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2008/jmo2008/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2007/jmo2007/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2006/jmo2006/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2005/jmo2005/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2004/jmo2004/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2003/jmo2003/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2002/jmo2002/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2001/jmo2001/jmoSuccess.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/outreach/event/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/international/sanka/entry-656.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/newsletter/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/leaflet/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/outreach/books.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/support-list.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/channel.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/updated.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/newsletter/entry-664.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/outreach/event/entry-662.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/1st-jikken-awards-comment.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/candidate.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/career/entry-661.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/career/entry-659.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/1st-prize.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/2nd-prize.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/outreach/event/entry-657.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=day1",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob1q",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob2q",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob3q",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob4q",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob5q",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=day2",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob6q",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob7q",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob8q",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob9q",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob10q",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=1994",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=1995",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=1996",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=1997",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=1998",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=1999",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2000",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2001",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2002",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2003",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2004",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2005",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2006",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2007",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2008",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2009",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2010",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2011",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2012",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2013",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2014",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2015",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2016",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2017",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2018",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2019",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2020",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2021",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2022",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2023",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2024",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2025",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 1
-    },
-    {
-      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/tr/ana-sayfa",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 1
-    },
-    {
-      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/tr",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 1
-    },
-    {
-      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/en",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 1
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 1
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/ulusal-bilim-olimpiyatlari",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 1
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/online-sinav",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 1
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/index.html",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 1
-    },
-    {
-      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/tr/kvkk",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 1
-    },
-    {
-      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/tr/takvim",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 1
-    },
-    {
-      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/tr/gizlilik-sozlesmesi",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/plan-raboty/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/vacancy-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d1%8b-2/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/darynkz/darynkz-kalendar/daryn.php",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/pravila-i-polozhenie-meropriyatii/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/uchebno-trenirovochnye-sbory/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "http://qabyldau.daryn.kz",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/%d1%88%d0%ba%d0%be%d0%bb%d0%b0-%d0%be%d0%bb%d0%b8%d0%bc%d0%bf%d0%b8%d0%b9%d1%81%d0%ba%d0%be%d0%b3%d0%be-%d1%80%d0%b5%d0%b7%d0%b5%d1%80%d0%b2%d0%b0/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/%d0%bf%d1%80%d0%b0%d0%b2%d0%b8%d0%bb%d0%b0-%d0%b8-%d0%bf%d0%be%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%b8%d1%8f-%d0%be%d0%bb%d0%b8%d0%bc%d0%bf%d0%b8%d0%b0%d0%b4-%d0%b8-%d0%ba%d0%be%d0%bd%d0%ba%d1%83%d1%80/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/%d0%bc%d0%b5%d1%82%d0%be%d0%b4%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b0%d1%8f-%d0%ba%d0%be%d0%bf%d0%b8%d0%bb%d0%ba%d0%b0/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/sbornikiru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/bastau-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/5-6-ro-rus/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/resp-junior-olimpiad-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/respa/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/aul-olimp/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/po-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/karjy-sauattylygy-ru-2/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/philosophy-syni-oilau-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/finance-economica/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/resp-ol-lingvist/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/zhautyk-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/evraziyskaya-olymp-inform-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/satpaev-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/abay-oqulary-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/%d0%ba%d0%b5%d0%ba%d0%b8%d0%bb%d1%8c%d0%b1%d0%b0%d0%b5%d0%b2-%d1%80%d0%b5%d1%81%d0%bf-%d1%87%d1%82%d0%b5%d0%bd%d0%b8%d0%b5/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/jyr-alyby-jambyl-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/akberen-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/rknp-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/zerde-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/pro-eco/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/moya-malaya-rodina-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/omn-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/kk/zholdasbekov-kz/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/pedstart-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/mahambet-okulary-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/blog/2026/09/23/23092026-psychology-seminar-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/blog/2026/10/06/%d0%b3%d0%bb%d0%b0%d0%b2%d0%b0-%d0%b3%d0%be%d1%81%d1%83%d0%b4%d0%b0%d1%80%d1%81%d1%82%d0%b2%d0%b0-%d0%bf%d0%be%d0%b7%d0%b4%d1%80%d0%b0%d0%b2%d0%b8%d0%bb-%d1%83%d1%87%d0%b8%d1%82%d0%b5%d0%bb%d0%b5/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/blog/2026/10/05/ai-digital-bridge-2026-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/blog/2026/10/02/%d0%b4%d0%be%d1%80%d0%be%d0%b3%d0%b8%d0%b5-%d1%83%d1%87%d0%b8%d1%82%d0%b5%d0%bb%d1%8f/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/blog/2026/09/30/30092026-janalyk-1-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/blog/2026/09/25/25092026-science-seminar-2/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/blog/2026/09/22/23092026-psychology-seminar-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/blog/2026/08/31/ijgo-2026-ru/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/kk/zhanalyqtar-baspasoz-kz/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "http://daryn.kz/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "http://daryn.kz/о-центре/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://daryn.kz/правила-и-положения-олимпиад-и-конкур/",
-      "root": "https://daryn.kz/",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/domestic/jmo_honsen.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/domestic/jmo_prize.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/domestic/jmo_books.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/jmo/jmo_apply.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2023/jmo/problems/jmo33hq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32hq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2021/jmo2021/problems/jmo31yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2021/jmo2021/problems/jmo31hq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2020/jmo2020/problems/jmo30yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2020/jmo2020/problems/jmo30hq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2019/jmo2019/problems/jmo29yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2019/jmo2019/problems/jmo29mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2018/jmo2018/problems/jmo28yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2018/jmo2018/problems/jmo28mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2017/jmo2017/problems/jmo27yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2017/jmo2017/problems/jmo27mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2016/jmo2016/problems/jmo26yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2016/jmo2016/problems/jmo26mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2015/jmo2015/problems/jmo25yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2015/jmo2015/problems/jmo25mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2014/jmo2014/problems/jmo24yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2014/jmo2014/problems/jmo24mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2013/jmo2013/problems/jmo23yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2013/jmo2013/problems/jmo23mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2012/jmo2012/problems/jmo22yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2012/jmo2012/problems/jmo22mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2011/jmo2011/problems/jmo21yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2011/jmo2011/problems/jmo21mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2010/jmo2010/problems/jmo20yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2010/jmo2010/problems/jmo20mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2009/jmo2009/problems/jmo19yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2009/jmo2009/problems/jmo19mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2008/jmo2008/problems/jmo18yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2008/jmo2008/problems/jmo18mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2007/jmo2007/problems/jmo17yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2007/jmo2007/problems/jmo17mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2006/jmo2006/problems/jmo16yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2006/jmo2006/problems/jmo16mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2005/jmo2005/problems/jmo15yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2005/jmo2005/problems/jmo15mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2004/jmo2004/problems/jmo14yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2004/jmo2004/problems/jmo14mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2003/jmo2003/problems/jmo13yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2003/jmo2003/problems/jmo13mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2002/jmo2002/problems/jmo12yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2002/jmo2002/problems/jmo12mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2001/jmo2001/problems/jmo11yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2001/jmo2001/problems/jmo11mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2025/jmo/honsen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2024/jmo/honsen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2023/jmo/honsen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2022/jmo2022/honsen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2021/jmo2021/honsen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2020/jmo2020/honsen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2019/jmo2019/honsen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2018/jmo2018/honsen_result.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/site_map2.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/1063/58d252f7d20abc7e/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/1069/8a8a3fc25686df3b/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/1062/7a49b73178265634/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/1061/dad3306c6809078d/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/media/002/202602/PhysChall2025Applications.jpg?v=20260210135510",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/media/002/202602/PhysChall2025-Applications-Prefectures.jpg?v=20260210135522",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/international/sanka/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/international/i-result.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/international/i-exam.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/international/i-books.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/media/004/202602/IPhO-ParticipatingCountries.jpg?v=20260210140204",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/outreach/onsite.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/outreach/news.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/career/entry-653.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/career/entry-648.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/media-download/742/dff43e1015530b5c/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/jpho.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/membership.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/history.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/regulation.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/executive/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/news.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/media-download/1079/9567eb1e0348a870/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/media-download/1026/b57a2821de7bf7d8/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/media-download/963/b2a0e30683c8ad68/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/media-download/461/ea06fd187f138bdd/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/office/media-download/462/ac6bc951fdc1e30e/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/1063/58d252f7d20abc7e/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/1069/8a8a3fc25686df3b/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/1062/7a49b73178265634/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/1061/dad3306c6809078d/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/record.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/boshu.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/866/92eb3b4346bc6bd6/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/964/ecde00a7fe7cfb3b/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/1057/44321f820ce0712b/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/1058/6178f8ce0baf9fc3/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/prize.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/support.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2026/news.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2025/record.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2025/entry-200.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2025/entry-201.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2025/media-download/861/d43c4fd024c848b6/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2025/media-download/986/53470c26d2b91d5f/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/international/sanka/entry-651.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2025/prize.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2025/support.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2025/news.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/ocsc-2026-list/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/mathematical-olympiad-2024-2025/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IPhO2024.jpg",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IOAA2024.jpg",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/ioaa-host.jpg",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IMO2024.jpg",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IChO2023.jpg",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IBO2024.jpeg",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/announcements/list-of-selected-participants-for-astronomy-and-physics-olympiad-exposure-camps-2026/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/announcements/chemistry_oec_2026_list/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 2
-    },
-    {
       "url": "https://olympiads.hbcse.tifr.res.in/announcements/list-of-selected-candidates-for-the-biology-olympiad-exposure-camp-2026/",
       "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
       "depth": 2
@@ -15889,21 +14309,2553 @@
       "url": "https://aktobe.daryn.kz/",
       "root": "https://daryn.kz/",
       "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/overseas/apmo_results.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2017/apmo2017/problems/apmo29q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2016/apmo2016/problems/apmo28q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2015/apmo2015/problems/apmo27q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2014/apmo2014/problems/apmo26q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2013/apmo2013/problems/apmo25q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2012/apmo2012/problems/apmo24q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2011/apmo2011/problems/apmo23q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2010/apmo2010/problems/apmo22q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2009/apmo2009/problems/apmo21q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2008/apmo2008/problems/apmo20q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2007/apmo2007/problems/apmo19q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2006/apmo2006/problems/apmo18q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2005/apmo2005/problems/apmo17q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2025/egmo/flash_report.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2024/egmo/flash_report.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2023/egmo/flash_report.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2022/egmo2022/flash_report.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2021/egmo2021/flash_report.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/overseas/cgmo_results.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/sheet/youshiki001.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/committee/officers2025-2026.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/committee/officers2024-2025.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/committee/officers2022-2024.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/committee/officers2020-2022.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/committee/officers2018-2020.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/committee/2016/committee2016-17.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/committee/2014/committee2014-15.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/committee/2012/committee2012-13.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/committee/2010/committee2010-11.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/committee/2008/committee2008-09.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/committee/2006/committee2006-07.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/yearly_plans/2021.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/yearly_plans/2020.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/yearly_plans/2019.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/yearly_plans/2018.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/yearly_plans/2017.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/yearly_plans/2016.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/yearly_plans/2015.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/yearly_plans/2014.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/yearly_plans/2013.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/yearly_plans/2012.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/enterprise/2018/enterprise2018.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2018/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/enterprise/2017/enterprise2017.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2017/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/enterprise/2016/enterprise2016.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2016/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/enterprise/2015/enterprise2015.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2015/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/enterprise/2014/enterprise2014.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2014/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/enterprise/2013/enterprise2013.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2013/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/enterprise/2012/enterprise2012.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2012/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/enterprise/2011/enterprise2011.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2011/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/enterprise/2010/enterprise2010.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2010/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/enterprise/2009/enterprise2009.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2009/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/enterprise/2008/enterprise2008.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2008/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/media-download/1070/316ac10a2eba9198/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/event/entry-663.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/event/entry-647.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/event/entry-646.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/event/entry-645.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/event/entry-228.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/event/entry-206.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/event/entry-633.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/event/entry-632.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/event/entry-631.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/event/entry-630.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/event/entry-205.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/international/media-download/1031/ec5cd7c8cc4197ea/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/international/media-download/1043/f97342cc1889ce9a/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/international/media-download/1032/5e2f0fe8b482f165/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/460/c6e0a137d4f1bab0/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/463/d8314753ce9b4f26/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/464/7430c58515e36fbc/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/465/18492ce6757b1b5f/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/467/d6eeffdf3eda3322/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/468/e5479089b9508936/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/470/dfc49901ea91706a/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/471/f625d28c4ffecafe/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/472/325b57e5dadcdfc6/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/473/0197006686f7020c/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/426/8bcaf79e9533da4e/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/427/91f33b06a6c74ca4/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/428/59ea40fb329ec039/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/429/cd73575437139a96/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/430/33388dcfecf96cc3/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/431/b0ab18962c7adcaa/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/432/5931d79e0a76283a/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/433/d705da7c0f9ebaf0/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/434/e39f5b72d020e015/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/435/f49bcdd1fbaa67a0/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/436/90372eb252c6674e/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/437/7a980cda3e491f7f/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/438/d7b823fcae02fea8/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/439/cf203be7ddf57b8e/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/440/201ed2b204f2b7f2/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/441/b3037ab7efcd0ced/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/442/83507731a0f52c20/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/443/b9e9a49071f9d09b/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/444/241a8574b2f1b2fd/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/446/e766edac1bdc3058/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/447/fdf0f5e4dbcab8df/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/448/8f9084cebe4acf6b/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/450/9110ebae32b35397/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/451/f0e7d8680e88056c/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/452/7900ed6b3bd82a30/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/453/5f8889b23e4e6015/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/454/ecdb3a3067ff65e8/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/455/14bde0dbed8b4089/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/456/291bc562afab3846/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/457/f215268dd7e23378/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/458/f48f8be4dc10418d/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/459/6bf288783b09af0a/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/338/8d0189c3b7e07aae/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/337/5bddbf90da17f2c8/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/336/4429bcfd70991846/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/335/dc0c8c7040f67d56/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/334/b0c1f3bdfb519b62/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/333/8aaad2d3c1a10d04/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/332/c18e0f4064652b94/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/textbook/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/media-download/1079/9567eb1e0348a870/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/media-download/1063/58d252f7d20abc7e/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/media-download/1069/8a8a3fc25686df3b/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/media-download/1062/7a49b73178265634/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/media-download/1061/dad3306c6809078d/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/media-download/1026/b57a2821de7bf7d8/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/media-download/963/b2a0e30683c8ad68/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/media-download/1072/58c5935cb03b7b87/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 3
+    },
+    {
+      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/en/the-olympiads",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/en/national-science-olympiads",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/en/regional-science-olympiads",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/en/international-science-olympiads",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/en/about-the-program",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/en/alumni",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/en/awards-and-opportunities",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/en/online-exam",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/en/home-page",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/en/announcements",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/en/about-the-program",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/en/awards-and-opportunities",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/en/calendar",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/en/kvkk",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/en/calendar",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/en/confidentiality-agreement",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/kk/blog/2026/09/25/25092026-ai-seminar/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/kk/blog/2026/09/24/24092026-qazaqt-seminar/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/rknp-ru",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/uchebno-trener-sbory/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/al-beruni/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/eupho/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/conference/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/til-symvol-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/5-6-resp-olymp/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/luchshi-psiholog-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/blog/2024/03/04/%d1%80%d0%bd%d0%bf%d1%86-%d0%b4%d0%b0%d1%80%d1%8b%d0%bd-%d1%81%d0%be%d0%b2%d0%bc%d0%b5%d1%81%d1%82%d0%bd%d0%be-%d1%81-%d1%88%d0%b5%d0%bb%d0%bb-%d0%ba%d0%b0%d0%b7%d0%b0%d1%85%d1%81%d1%82/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/math-regata-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/apho-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/tuimada-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/imo/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/ihpo/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/icho/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/iol/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/igeo/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/%d0%bf%d0%be%d0%b4%d0%b3%d0%be%d1%82%d0%be%d0%b2%d0%ba%d0%b0-%d1%88%d0%ba%d0%be%d0%bb%d1%8c%d0%bd%d0%b8%d0%ba%d0%be%d0%b2-%d0%ba-%d0%be%d0%bb%d0%b8%d0%bc%d0%bf%d0%b8%d0%b0%d0%b4%d0%b0%d0%bc-%d0%bf/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/olymp-shyny-2/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/blog/2024/10/30/%d0%b8%d0%bd%d1%84%d0%be%d1%80%d0%bc%d0%b0%d1%86%d0%b8%d0%be%d0%bd%d0%bd%d0%be%d0%b5-%d0%bf%d0%b8%d1%81%d1%8c%d0%bc%d0%be-%d1%80%d0%b5%d1%81%d0%bf%d1%83%d0%b1%d0%bb%d0%b8%d0%ba%d0%b0%d0%bd%d1%81-2/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/matem-seminar-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/blog/2025/02/25/%d0%b8%d0%bd%d1%84%d0%be%d1%80%d0%bc%d0%b0%d1%86%d0%b8%d0%be%d0%bd%d0%bd%d0%be%d0%b5-%d0%bf%d0%b8%d1%81%d1%8c%d0%bc%d0%be-%d0%bc%d0%b5%d0%b6%d0%b4%d1%83%d0%bd%d0%b0%d1%80%d0%be%d0%b4%d0%bd%d0%be-2/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/%d1%80%d0%b5%d1%81%d0%bf%d1%83%d0%b1%d0%bb%d0%b8%d0%ba%d0%b0%d0%bd%d1%81%d0%ba%d0%b8%d0%b9-%d1%83%d1%87%d0%b5%d0%b1%d0%bd%d1%8b%d0%b9-%d1%81%d0%b5%d0%bc%d0%b8%d0%bd%d0%b0%d1%80-%d0%b8%d0%bd/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/zhizn-bezgranichnyh-vozmozhnostei-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/al-horezmi/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/ispho-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/ejoi/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/karjy-sauattylygy-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/akbota-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/kk/akberen-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/blog/2025/09/19/robotics-seminar-19092025-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/blog/2025/11/25/nxplorers-%d0%b6%d0%b0%d1%81%d1%8b%d0%bb-%d2%b1%d1%80%d0%bf%d0%b0%d2%9b-%d0%b1%d3%99%d0%b9%d0%b3%d0%b5%d1%81%d1%96-%d0%b7%d0%b0%d0%ba%d0%bb%d1%8e%d1%87%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/avtorskaya-programma-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/bebras-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/festival-robotov-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/festival-ped-idei-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/teachers-hackathon-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://qabyldau.daryn.kz/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/xxi-koshbasshysy-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/resp-first-robotics-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/zasedaniye-uchebno-metod-sovet/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/atmo-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/talant-uchitel-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/blog/2024/03/07/43-%d0%bf%d1%80%d0%b8%d0%b7%d0%b5%d1%80%d0%b0-%d0%be%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d1%8b-%d0%bf%d0%be-%d0%b8%d1%82%d0%be%d0%b3%d0%b0%d0%bc-%d1%80%d0%b5%d1%81%d0%bf%d1%83%d0%b1%d0%bb/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/altyn-tugyr-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/blog/2024/02/08/%d0%be%d0%bb%d0%b8%d0%bc%d0%bf%d0%b8%d0%b0%d0%b4%d0%b0-%d0%b4%d0%bb%d1%8f-%d1%83%d1%87%d0%b8%d1%82%d0%b5%d0%bb%d0%b5%d0%b9-%d0%bc%d0%b0%d1%82%d0%b5%d0%bc%d0%b0%d1%82%d0%b8%d0%ba%d0%b8-%d0%bc/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/kenguru-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/kk/blog/2023/02/15/zholdasbekov-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/mendeleev-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/tarih-ata-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/%d1%80%d0%b5%d1%81%d0%bf%d1%83%d0%b1%d0%bb%d0%b8%d0%ba%d0%b0%d0%bd%d1%81%d0%ba%d0%b0%d1%8f-%d0%be%d0%bb%d0%b8%d0%bc%d0%bf%d0%b8%d0%b0%d0%b4%d0%b0-%d0%b8%d0%bc%d0%b5%d0%bd%d0%b8-%d0%ba%d0%b0%d0%bd/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/%d1%80%d0%b5%d1%81%d0%bf%d1%83%d0%b1%d0%bb%d0%b8%d0%ba%d0%b0%d0%bd%d1%81%d0%ba%d0%b8%d0%b9-%d1%83%d1%87%d0%b5%d0%b1%d0%bd%d0%be-%d0%bc%d0%b5%d1%82%d0%be%d0%b4%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/mezhdunarodnaya-balkan-olymp-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/isef-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/ibo/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/jbmo/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/kk/magzhan-oqu-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/ata-zhurt-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/egeo/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/ieo-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/ijso-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/ioi/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://daryn.kz/august-ped-soveshaniye-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/kz",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/index.php",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/schools_2026.php.html",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/schools.php",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/jasulan.php",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/jassarbaz.php",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/schools_base.php",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/results2021.php",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/results2022.php",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/schools_2023.php.html",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/schools_2024.php.html",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/schools_2025.php.html",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/step1.php",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/results.php",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/contacts.php",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/5grade2025.jpg",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/6grade2025.jpg",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/7grade2025.jpg",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/kz/schools_base.php",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://qabyldau.daryn.kz/kz/contacts.php",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "http://www.daryn.kz",
+      "root": "https://daryn.kz/",
+      "depth": 2
+    },
+    {
+      "url": "https://olympiads.hbcse.tifr.res.in/inmo2025-result/",
+      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "depth": 3
+    },
+    {
+      "url": "https://olympiads.hbcse.tifr.res.in/rmo-2024-results/",
+      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "depth": 3
+    },
+    {
+      "url": "https://olympiads.hbcse.tifr.res.in/author/hb_oly/",
+      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "depth": 3
+    },
+    {
+      "url": "https://olympiads.hbcse.tifr.res.in/category/announcements/",
+      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "depth": 3
+    },
+    {
+      "url": "https://olympiads.hbcse.tifr.res.in/author/admin/",
+      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "depth": 3
+    },
+    {
+      "url": "https://olympiads.hbcse.tifr.res.in/category/front-page-announcement/",
+      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/contribution/toyotarika.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/imo/result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/apmo/result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/imo/quick_report/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/jgmo/jgmo_apply.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/jjmo/jjmo_apply.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/egmo/flash_report.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/imo/contestants.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/apmo/kaijyo.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/jmo/prizewinners.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/jjmo/prizewinners.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/jmo/jyukenhyo_wasureh.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/egmo/contestants.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/jgmo/prizewinners.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/jmo/honsen_kaijyo.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/jjmo/honsen_kaijyo.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/news/2018_and_after/top_page.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/domestic/jgmo_apply.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/domestic/jjmo_apply.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/domestic/jjmo_books.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/column/PeterFrankl1.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/column/PeterFrankl2.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/zaidan/greetings.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/zaidan/history.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/resu.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/imoj.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/sche.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/regu.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/tokyo.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/spon.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/mof.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/imo.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/support/IMO2023sponsors.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/support/IMO2023logo.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/support/IMO2023committee.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/support/documents/IMO2023leaflet.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/domestic/jmo_results.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/domestic/jmo.overview.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/application/2026kaitei.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/jmo/yosen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2025/jmo/yosen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2024/jmo/yosen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2023/jmo2023/yosen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2022/jmo2022/yosen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2021/jmo2021/yosen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2020/jmo2020/yosen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2019/jmo2019/yosen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2018/jmo2018/yosen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2017/jmo2017/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2016/jmo2016/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2015/jmo2015/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2014/jmo2014/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2013/jmo2013/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2012/jmo2012/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2011/jmo2011/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2010/jmo2010/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2009/jmo2009/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2008/jmo2008/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2007/jmo2007/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2006/jmo2006/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2005/jmo2005/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2004/jmo2004/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2003/jmo2003/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2002/jmo2002/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2001/jmo2001/jmoSuccess.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/career/entry-661.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/career/entry-659.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/1st-prize.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/2nd-prize.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/event/entry-657.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=day1",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob1q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob2q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob3q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob4q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob5q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=day2",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob6q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob7q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob8q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob9q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob10q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=1994",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=1995",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=1996",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=1997",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=1998",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=1999",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2000",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2001",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2002",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2003",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2004",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2005",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2006",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2007",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2008",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2009",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2010",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2011",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2012",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2013",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2014",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2015",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2016",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2017",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2018",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2019",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2020",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2021",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2022",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2023",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2024",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2025",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/5-6-ro-rus/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/resp-junior-olimpiad-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/respa/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/aul-olimp/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/po-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/karjy-sauattylygy-ru-2/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/philosophy-syni-oilau-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/finance-economica/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/resp-ol-lingvist/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/zhautyk-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/evraziyskaya-olymp-inform-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/satpaev-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/abay-oqulary-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/%d0%ba%d0%b5%d0%ba%d0%b8%d0%bb%d1%8c%d0%b1%d0%b0%d0%b5%d0%b2-%d1%80%d0%b5%d1%81%d0%bf-%d1%87%d1%82%d0%b5%d0%bd%d0%b8%d0%b5/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/jyr-alyby-jambyl-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/akberen-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/rknp-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/zerde-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/pro-eco/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/moya-malaya-rodina-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/omn-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/kk/zholdasbekov-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/pedstart-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/mahambet-okulary-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/blog/2026/09/23/23092026-psychology-seminar-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/blog/2026/10/06/%d0%b3%d0%bb%d0%b0%d0%b2%d0%b0-%d0%b3%d0%be%d1%81%d1%83%d0%b4%d0%b0%d1%80%d1%81%d1%82%d0%b2%d0%b0-%d0%bf%d0%be%d0%b7%d0%b4%d1%80%d0%b0%d0%b2%d0%b8%d0%bb-%d1%83%d1%87%d0%b8%d1%82%d0%b5%d0%bb%d0%b5/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/blog/2026/10/05/ai-digital-bridge-2026-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/blog/2026/10/02/%d0%b4%d0%be%d1%80%d0%be%d0%b3%d0%b8%d0%b5-%d1%83%d1%87%d0%b8%d1%82%d0%b5%d0%bb%d1%8f/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/blog/2026/09/30/30092026-janalyk-1-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/blog/2026/09/25/25092026-science-seminar-2/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/blog/2026/09/22/23092026-psychology-seminar-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/blog/2026/08/31/ijgo-2026-ru/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/kk/zhanalyqtar-baspasoz-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "http://daryn.kz/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "http://daryn.kz/о-центре/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://daryn.kz/правила-и-положения-олимпиад-и-конкур/",
+      "root": "https://daryn.kz/",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/domestic/jmo_honsen.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/domestic/jmo_prize.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/domestic/jmo_books.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/jmo/jmo_apply.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2023/jmo/problems/jmo33hq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32hq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2021/jmo2021/problems/jmo31yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2021/jmo2021/problems/jmo31hq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2020/jmo2020/problems/jmo30yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2020/jmo2020/problems/jmo30hq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2019/jmo2019/problems/jmo29yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2019/jmo2019/problems/jmo29mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2018/jmo2018/problems/jmo28yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2018/jmo2018/problems/jmo28mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2017/jmo2017/problems/jmo27yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2017/jmo2017/problems/jmo27mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2016/jmo2016/problems/jmo26yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2016/jmo2016/problems/jmo26mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2015/jmo2015/problems/jmo25yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2015/jmo2015/problems/jmo25mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2014/jmo2014/problems/jmo24yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2014/jmo2014/problems/jmo24mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2013/jmo2013/problems/jmo23yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2013/jmo2013/problems/jmo23mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2012/jmo2012/problems/jmo22yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2012/jmo2012/problems/jmo22mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2011/jmo2011/problems/jmo21yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2011/jmo2011/problems/jmo21mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2010/jmo2010/problems/jmo20yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2010/jmo2010/problems/jmo20mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2009/jmo2009/problems/jmo19yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2009/jmo2009/problems/jmo19mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2008/jmo2008/problems/jmo18yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2008/jmo2008/problems/jmo18mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2007/jmo2007/problems/jmo17yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2007/jmo2007/problems/jmo17mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2006/jmo2006/problems/jmo16yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2006/jmo2006/problems/jmo16mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2005/jmo2005/problems/jmo15yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2005/jmo2005/problems/jmo15mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2004/jmo2004/problems/jmo14yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2004/jmo2004/problems/jmo14mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2003/jmo2003/problems/jmo13yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2003/jmo2003/problems/jmo13mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2002/jmo2002/problems/jmo12yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2002/jmo2002/problems/jmo12mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2001/jmo2001/problems/jmo11yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2001/jmo2001/problems/jmo11mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2025/jmo/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2024/jmo/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2023/jmo/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2022/jmo2022/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2021/jmo2021/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2020/jmo2020/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2019/jmo2019/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2018/jmo2018/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/site_map2.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/1063/58d252f7d20abc7e/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/1069/8a8a3fc25686df3b/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/1062/7a49b73178265634/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/1061/dad3306c6809078d/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/media/002/202602/PhysChall2025Applications.jpg?v=20260210135510",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/media/002/202602/PhysChall2025-Applications-Prefectures.jpg?v=20260210135522",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/international/sanka/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/international/i-result.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/international/i-exam.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/international/i-books.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/media/004/202602/IPhO-ParticipatingCountries.jpg?v=20260210140204",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/onsite.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/outreach/news.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/career/entry-653.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/career/entry-648.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/742/dff43e1015530b5c/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/office/jpho.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/office/membership.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/office/history.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/office/regulation.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/office/executive/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/office/news.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/1079/9567eb1e0348a870/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/1026/b57a2821de7bf7d8/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/963/b2a0e30683c8ad68/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/461/ea06fd187f138bdd/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/office/media-download/462/ac6bc951fdc1e30e/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/1063/58d252f7d20abc7e/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/1069/8a8a3fc25686df3b/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/1062/7a49b73178265634/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/1061/dad3306c6809078d/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/record.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/boshu.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/866/92eb3b4346bc6bd6/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/964/ecde00a7fe7cfb3b/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/1057/44321f820ce0712b/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/media-download/1058/6178f8ce0baf9fc3/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/prize.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/support.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2026/news.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2025/record.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2025/entry-200.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2025/entry-201.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2025/media-download/861/d43c4fd024c848b6/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2025/media-download/986/53470c26d2b91d5f/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/international/sanka/entry-651.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2025/prize.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2025/support.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2025/news.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 2
     }
   ],
   "visited": [
     "http://bilimolimpiyatlari.tubitak.gov.tr/",
+    "http://bilimolimpiyatlari.tubitak.gov.tr/en",
+    "http://bilimolimpiyatlari.tubitak.gov.tr/tr",
+    "http://bilimolimpiyatlari.tubitak.gov.tr/tr/ana-sayfa",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/barbaros@istanbul.edu.tr",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/bilim-olimpiyatlari",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/bolgesel-bilim-olimpiyatlari",
+    "http://bilimolimpiyatlari.tubitak.gov.tr/tr/gizlilik-sozlesmesi",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/index.html",
+    "http://bilimolimpiyatlari.tubitak.gov.tr/tr/kvkk",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/mezunlar",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/oduller-ve-olanaklar",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/online-sinav",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/program-hakkinda",
+    "http://bilimolimpiyatlari.tubitak.gov.tr/tr/takvim",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/ulusal-bilim-olimpiyatlari",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/uluslararasi-bilim-olimpiyatlari",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/yerli@metu.edu.tr",
+    "http://qabyldau.daryn.kz",
     "http://www.imc-math.org.uk",
     "http://www.imc-math.org.uk/?year=1994",
     "http://www.imc-math.org.uk/?year=1995",
@@ -15918,15 +16870,19 @@
     "https://amt.edu.au/department/past-papers",
     "https://aplo.asia/problems/problems-by-year/",
     "https://bilimolimpiyatlari.tubitak.gov.tr/",
+    "https://bilimolimpiyatlari.tubitak.gov.tr/tr",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/barbaros@istanbul.edu.tr",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/bolgesel-bilim-olimpiyatlari",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/duyurular",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+    "https://bilimolimpiyatlari.tubitak.gov.tr/tr/index.html",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/kayip-mezun",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/mezunlar",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/olimpiyatlar",
+    "https://bilimolimpiyatlari.tubitak.gov.tr/tr/online-sinav",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/program-hakkinda",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/takvim",
+    "https://bilimolimpiyatlari.tubitak.gov.tr/tr/ulusal-bilim-olimpiyatlari",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/uluslararasi-bilim-olimpiyatlari",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/yerli@metu.edu.tr",
     "https://bmos.ukmt.org.uk/",
@@ -15956,16 +16912,27 @@
     "https://daryn.kz/%d0%b0%d0%bd%d1%82%d0%b8%d0%ba%d0%be%d1%80%d1%80%d1%83%d0%bf%d1%86%d0%b8%d0%be%d0%bd%d0%bd%d1%8b%d0%b9-%d1%81%d1%82%d0%b0%d0%bd%d0%b4%d0%b0%d1%80%d1%82/",
     "https://daryn.kz/%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d1%8b-%d0%b8-%d0%be%d1%82%d0%b2%d0%b5%d1%82%d1%8b/",
     "https://daryn.kz/%d0%ba%d0%b0%d1%80%d1%82%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%bc%d0%b0-%d0%ba%d0%be%d1%80%d1%80%d1%83%d0%bf%d1%86%d0%b8%d0%b8/",
+    "https://daryn.kz/%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d1%8b-2/",
     "https://daryn.kz/%d0%bb%d1%83%d1%87%d1%88%d0%b8%d0%b9-%d1%81%d0%be%d1%82%d1%80%d1%83%d0%b4%d0%bd%d0%b8%d0%ba-%d0%bc%d0%b5%d1%81%d1%8f%d1%86%d0%b0/",
+    "https://daryn.kz/%d0%bc%d0%b5%d1%82%d0%be%d0%b4%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b0%d1%8f-%d0%ba%d0%be%d0%bf%d0%b8%d0%bb%d0%ba%d0%b0/",
     "https://daryn.kz/%d0%bd%d0%be%d1%80%d0%bc%d0%b0%d1%82%d0%b8%d0%b2%d0%bd%d0%be-%d0%bf%d1%80%d0%b0%d0%b2%d0%be%d0%b2%d1%8b%d0%b5-%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d1%8b/",
     "https://daryn.kz/%d0%be-%d1%86%d0%b5%d0%bd%d1%82%d1%80%d0%b5/",
+    "https://daryn.kz/%d0%bf%d1%80%d0%b0%d0%b2%d0%b8%d0%bb%d0%b0-%d0%b8-%d0%bf%d0%be%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%b8%d1%8f-%d0%be%d0%bb%d0%b8%d0%bc%d0%bf%d0%b8%d0%b0%d0%b4-%d0%b8-%d0%ba%d0%be%d0%bd%d0%ba%d1%83%d1%80/",
     "https://daryn.kz/%d1%83%d0%bf%d0%be%d0%bb%d0%bd%d0%be%d0%bc%d0%be%d1%87%d0%b5%d0%bd%d0%bd%d1%8b%d0%b9-%d0%bf%d0%be-%d1%8d%d1%82%d0%b8%d0%ba%d0%b5-%d0%b8-%d0%bf%d1%80%d0%be%d1%82%d0%b8%d0%b2%d0%be%d0%b4%d0%b5%d0%b9/",
+    "https://daryn.kz/%d1%88%d0%ba%d0%be%d0%bb%d0%b0-%d0%be%d0%bb%d0%b8%d0%bc%d0%bf%d0%b8%d0%b9%d1%81%d0%ba%d0%be%d0%b3%d0%be-%d1%80%d0%b5%d0%b7%d0%b5%d1%80%d0%b2%d0%b0/",
+    "https://daryn.kz/bastau-ru/",
+    "https://daryn.kz/darynkz/darynkz-kalendar/daryn.php",
+    "https://daryn.kz/plan-raboty/",
+    "https://daryn.kz/pravila-i-polozhenie-meropriyatii/",
     "https://daryn.kz/reg/",
     "https://daryn.kz/region-centre/",
+    "https://daryn.kz/sbornikiru/",
     "https://daryn.kz/set-shkol/",
     "https://daryn.kz/structura/",
     "https://daryn.kz/structura/kk/structura-list-kz/",
     "https://daryn.kz/structure-list/",
+    "https://daryn.kz/uchebno-trenirovochnye-sbory/",
+    "https://daryn.kz/vacancy-ru/",
     "https://eupho.ee",
     "https://eupho.ee/",
     "https://eupho.ee/about/",
@@ -16023,8 +16990,18 @@
     "https://olympiads.hbcse.tifr.res.in/about-olympiads/infosys-award-function/infosys-award-function-2025/",
     "https://olympiads.hbcse.tifr.res.in/about-olympiads/people/",
     "https://olympiads.hbcse.tifr.res.in/about-olympiads/stages/",
+    "https://olympiads.hbcse.tifr.res.in/announcements/chemistry_oec_2026_list/",
+    "https://olympiads.hbcse.tifr.res.in/announcements/list-of-selected-participants-for-astronomy-and-physics-olympiad-exposure-camps-2026/",
     "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
     "https://olympiads.hbcse.tifr.res.in/information-brochures/",
+    "https://olympiads.hbcse.tifr.res.in/mathematical-olympiad-2024-2025/",
+    "https://olympiads.hbcse.tifr.res.in/ocsc-2026-list/",
+    "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IBO2024.jpeg",
+    "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IChO2023.jpg",
+    "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IMO2024.jpg",
+    "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IOAA2024.jpg",
+    "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IPhO2024.jpg",
+    "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/ioaa-host.jpg",
     "https://om.sem.edu.pl/",
     "https://om.sem.edu.pl/articles",
     "https://om.sem.edu.pl/camps/",
@@ -16083,12 +17060,24 @@
     "https://www.imojp.org/index.html",
     "https://www.imojp.org/inquiry.html",
     "https://www.imojp.org/newsletter/index.html",
+    "https://www.imojp.org/overseas/apmo_statistics.html",
+    "https://www.imojp.org/overseas/egmo_statistics.html",
     "https://www.imojp.org/overseas/imo.html",
     "https://www.imojp.org/overseas/imo_statistics.html",
     "https://www.imojp.org/seminar.html",
     "https://www.imojp.org/support/donation/JMOsanjokai190626.html",
     "https://www.imojp.org/support/index.html",
     "https://www.imojp.org/support/sponsorship.html",
+    "https://www.imojp.org/zaidan/Specified_Commercial_Transaction_Act.html",
+    "https://www.imojp.org/zaidan/articles.html",
+    "https://www.imojp.org/zaidan/greetings.html",
+    "https://www.imojp.org/zaidan/history.html",
+    "https://www.imojp.org/zaidan/index.html",
+    "https://www.imojp.org/zaidan/information_disclosure_rules.html",
+    "https://www.imojp.org/zaidan/officers.html",
+    "https://www.imojp.org/zaidan/plan.html",
+    "https://www.imojp.org/zaidan/privacy_rules.html",
+    "https://www.imojp.org/zaidan/report.html",
     "https://www.ioling.org/problems/",
     "https://www.ioling.org/subscribe",
     "https://www.itym.org/about-us",
@@ -16107,14 +17096,26 @@
     "https://www.jpho.jp/challenge/c-exam.html",
     "https://www.jpho.jp/challenge/challenge2025/",
     "https://www.jpho.jp/challenge/challenge2026/",
+    "https://www.jpho.jp/challenge/challenge2026/1st-jikken-awards-comment.html",
+    "https://www.jpho.jp/challenge/challenge2026/candidate.html",
     "https://www.jpho.jp/challenge/media-download/1055/3492955587b3f14e/PDF/",
     "https://www.jpho.jp/challenge/media-download/1057/44321f820ce0712b/PDF/",
     "https://www.jpho.jp/challenge/media-download/1058/6178f8ce0baf9fc3/PDF/",
     "https://www.jpho.jp/challenge/media-download/866/92eb3b4346bc6bd6/PDF/",
     "https://www.jpho.jp/international/",
+    "https://www.jpho.jp/international/sanka/entry-656.html",
     "https://www.jpho.jp/office/",
+    "https://www.jpho.jp/office/channel.html",
     "https://www.jpho.jp/office/donation.html",
+    "https://www.jpho.jp/office/leaflet/",
+    "https://www.jpho.jp/office/newsletter/",
+    "https://www.jpho.jp/office/newsletter/entry-664.html",
+    "https://www.jpho.jp/office/support-list.html",
     "https://www.jpho.jp/outreach/",
+    "https://www.jpho.jp/outreach/books.html",
+    "https://www.jpho.jp/outreach/event/",
+    "https://www.jpho.jp/outreach/event/entry-662.html",
+    "https://www.jpho.jp/updated.html",
     "https://www.komal.hu/",
     "https://www.komal.hu/a_lap.e.shtml",
     "https://www.komal.hu/cikkek.e.shtml",
@@ -16186,23 +17187,23 @@
     "https://ioaastrophysics.org/resources/problems-from-past-ioaa": "robots-denied-or-unavailable",
     "https://aplo.asia/problems/problems-by-year/": "robots-denied-or-unavailable",
     "https://www.imc-math.org.uk/?year=2026§ion=problems&item=day1": {
-      "tries": 1,
+      "tries": 2,
       "error": "UnicodeEncodeError"
     },
     "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob1q": {
-      "tries": 1,
+      "tries": 2,
       "error": "UnicodeEncodeError"
     },
     "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob2q": {
-      "tries": 1,
+      "tries": 2,
       "error": "UnicodeEncodeError"
     },
     "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob3q": {
-      "tries": 1,
+      "tries": 2,
       "error": "UnicodeEncodeError"
     },
     "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob4q": {
-      "tries": 1,
+      "tries": 2,
       "error": "UnicodeEncodeError"
     },
     "https://www.jpho.jp/challenge/media-download/866/92eb3b4346bc6bd6/PDF/": "non-html:application/pdf",
@@ -16220,16 +17221,35 @@
     "https://aktobe.daryn.kz/": {
       "tries": 1,
       "error": "HTTPError"
-    }
+    },
+    "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob5q": {
+      "tries": 1,
+      "error": "UnicodeEncodeError"
+    },
+    "https://www.imc-math.org.uk/?year=2026§ion=problems&item=day2": {
+      "tries": 1,
+      "error": "UnicodeEncodeError"
+    },
+    "https://www.imc-math.org.uk/?year=2026§ion=problems&item=prob6q": {
+      "tries": 1,
+      "error": "UnicodeEncodeError"
+    },
+    "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IPhO2024.jpg": "non-html:image/jpeg",
+    "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IOAA2024.jpg": "non-html:image/jpeg",
+    "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/ioaa-host.jpg": "non-html:image/jpeg",
+    "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IMO2024.jpg": "non-html:image/jpeg",
+    "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IChO2023.jpg": "non-html:image/jpeg",
+    "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IBO2024.jpeg": "non-html:image/jpeg"
   },
   "version": 1,
-  "updated_at": "2026-10-11T15:29:48+00:00",
+  "updated_at": "2026-10-11T15:32:01+00:00",
   "last_run": {
     "html_pages": 60,
-    "new_links": 1981,
-    "pending_pages": 3178,
-    "blocked_or_failed": 22
+    "new_links": 2551,
+    "pending_pages": 3367,
+    "blocked_or_failed": 31
   },
   "html_ampersand_repair_v1": true,
-  "html_ampersand_requeued": 4
+  "html_ampersand_requeued": 4,
+  "html_ampersand_repair_v2": true
 }
