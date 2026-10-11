@@ -24,6 +24,11 @@ class CrawlHtmlTests(unittest.TestCase):
         parser.feed('<a href="https://example.org/?a=1&amp;b=2">Archive</a>')
         self.assertEqual(parser.links[0]["href"], "https://example.org/?a=1&b=2")
 
+    def test_data_href_must_not_override_real_href(self):
+        parser = Links()
+        parser.feed('<a data-href="?section=wrong" href="?section=right">Archive</a>')
+        self.assertEqual(parser.links[0]["href"], "?section=right")
+
     def test_single_quoted_query(self):
         parser = Links()
         parser.feed("<a href='?year=2019&section=2'>tasks</a>")
