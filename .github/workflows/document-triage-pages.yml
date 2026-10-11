@@ -9,6 +9,10 @@ on:
       - "tools/corpus_ingest/task_structure.py"
       - "tools/corpus_ingest/calibration_eval.py"
       - ".github/workflows/document-triage-pages.yml"
+      - "tools/corpus_ingest/coverage_dashboard.py"
+      - "tools/corpus_ingest/registry/competitions.json"
+      - "tools/corpus_ingest/tests/test_coverage_dashboard.py"
+      - "tools/document_triage/corpus/**"
   workflow_dispatch:
 
 permissions:
@@ -37,6 +41,26 @@ jobs:
 
       - name: Install layout dependency
         run: pip install "PyMuPDF>=1.24,<2"
+
+      - name: Validate and refresh Corpus Coverage
+        env:
+          DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+          DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
+          DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+          DROPBOX_ROOT: /OlympiadCorpus
+        run: |
+          python -m unittest discover -s tools/corpus_ingest/tests -p test_coverage_dashboard.py -v
+          python tools/corpus_ingest/coverage_dashboard.py --refresh-dropbox
+          cp tools/corpus_ingest/registry/competitions.json tools/document_triage/corpus/registry.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('tools/document_triage/corpus')
+          data = json.loads((root/'coverage.json').read_text(encoding='utf-8'))
+          registry = json.loads((root/'registry.json').read_text(encoding='utf-8'))
+          assert data['summary']['urls'] > 0 and len(registry['competitions']) > 0
+          print('Corpus dashboard ready:', data['summary']['urls'], 'URLs')
+          PY
 
       - name: Build review assets
         run: |

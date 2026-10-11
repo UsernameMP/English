@@ -1,0 +1,398 @@
+{
+  "schema_version": "corpus_registry.v1",
+  "description": "Единственный редактируемый справочник предметов, олимпиад, родных этапов и известных архивов. Результаты краулера сюда не записываются.",
+  "subjects": [
+    {
+      "id": "mathematics",
+      "name": "Математика"
+    },
+    {
+      "id": "informatics",
+      "name": "Информатика"
+    },
+    {
+      "id": "english",
+      "name": "Английский язык"
+    },
+    {
+      "id": "russian",
+      "name": "Русский язык"
+    },
+    {
+      "id": "physics",
+      "name": "Физика"
+    },
+    {
+      "id": "chemistry",
+      "name": "Химия"
+    },
+    {
+      "id": "biology",
+      "name": "Биология"
+    },
+    {
+      "id": "geography",
+      "name": "География"
+    },
+    {
+      "id": "history",
+      "name": "История"
+    },
+    {
+      "id": "social_science",
+      "name": "Обществознание"
+    },
+    {
+      "id": "literature",
+      "name": "Литература"
+    },
+    {
+      "id": "ecology",
+      "name": "Экология"
+    },
+    {
+      "id": "economics",
+      "name": "Экономика"
+    },
+    {
+      "id": "astronomy",
+      "name": "Астрономия"
+    },
+    {
+      "id": "robotics",
+      "name": "Робототехника"
+    }
+  ],
+  "competitions": [
+    {
+      "id": "vsosh",
+      "name": "ВсОШ",
+      "subject_ids": [
+        "english",
+        "mathematics",
+        "informatics",
+        "russian",
+        "physics",
+        "chemistry",
+        "biology",
+        "geography",
+        "history",
+        "social_science",
+        "literature",
+        "ecology",
+        "economics",
+        "astronomy"
+      ],
+      "grade_min": 4,
+      "grade_max": 11,
+      "from": 2019,
+      "to": 2026,
+      "stages": [
+        {
+          "id": "school",
+          "name": "Школьный"
+        },
+        {
+          "id": "municipal",
+          "name": "Муниципальный"
+        },
+        {
+          "id": "regional",
+          "name": "Региональный"
+        },
+        {
+          "id": "final",
+          "name": "Заключительный"
+        }
+      ],
+      "source_ids": [
+        "olimpiada_ru_engl_archive",
+        "vosh_engl_official_tasks"
+      ],
+      "archive_links": [
+        {
+          "title": "Московский архив ВсОШ",
+          "url": "https://vos.olimpiada.ru/tasks"
+        },
+        {
+          "title": "Общий архив ВсОШ",
+          "url": "https://olimpiada.ru/"
+        }
+      ],
+      "notes": "Наличие этапа зависит от класса, предмета и сезона. Ячейки показывают обнаружение, а не доказанную полноту."
+    },
+    {
+      "id": "rt_republic_math",
+      "name": "Республиканская олимпиада РТ",
+      "subject_ids": [
+        "mathematics"
+      ],
+      "grade_min": 4,
+      "grade_max": 7,
+      "from": 2014,
+      "to": 2026,
+      "stages": [
+        {
+          "id": "school",
+          "name": "Школьный"
+        },
+        {
+          "id": "municipal",
+          "name": "Муниципальный"
+        },
+        {
+          "id": "final",
+          "name": "Заключительный"
+        }
+      ],
+      "source_ids": [],
+      "archive_links": [
+        {
+          "title": "Архив школьного этапа",
+          "url": "https://disk.yandex.ru/d/REcBv-izodFFKw"
+        },
+        {
+          "title": "Муниципальный архив с 2014",
+          "url": "https://drive.google.com/drive/folders/1W9PhHk5eyyNxzlvvAmyHkvjMnnZXODXu"
+        },
+        {
+          "title": "Финальный архив с 2013/14",
+          "url": "https://drive.google.com/drive/folders/1iLjXc-k8GA8TdILm1_Nua5l5nA19xGhr"
+        }
+      ]
+    },
+    {
+      "id": "kmo",
+      "name": "Казанская математическая олимпиада",
+      "subject_ids": [
+        "mathematics"
+      ],
+      "grade_min": 2,
+      "grade_max": 6,
+      "from": 2024,
+      "to": 2026,
+      "stages": [
+        {
+          "id": "qualifier",
+          "name": "Отборочный"
+        },
+        {
+          "id": "final",
+          "name": "Финальный"
+        }
+      ],
+      "source_ids": [],
+      "archive_links": [
+        {
+          "title": "Страница КМО — задания и ответы",
+          "url": "https://anokmc.ru/km-olymp"
+        }
+      ]
+    },
+    {
+      "id": "golden_fleece",
+      "name": "Золотое руно",
+      "subject_ids": [
+        "mathematics"
+      ],
+      "grade_min": 6,
+      "grade_max": 8,
+      "from": 2024,
+      "to": 2026,
+      "stages": [
+        {
+          "id": "series",
+          "name": "Устные тематические туры (до 6)"
+        }
+      ],
+      "source_ids": [],
+      "archive_links": [
+        {
+          "title": "Задания 2024",
+          "url": "https://drive.google.com/open?id=161CD-2ct42o-CcSLkU5ed95Ay64P10go"
+        },
+        {
+          "title": "Задания 2025",
+          "url": "https://disk.yandex.ru/d/L8qmzyK2u5BNbQ"
+        }
+      ]
+    },
+    {
+      "id": "golden_path",
+      "name": "Золотой путь",
+      "subject_ids": [
+        "mathematics"
+      ],
+      "grade_min": 5,
+      "grade_max": 6,
+      "from": 2024,
+      "to": 2026,
+      "stages": [
+        {
+          "id": "series",
+          "name": "Устные тематические туры (до 4)"
+        }
+      ],
+      "source_ids": [],
+      "archive_links": [
+        {
+          "title": "Задания 2024",
+          "url": "https://drive.google.com/open?id=165_56EFriaMKd6NlbtxzpAyzBirZ-Zgr"
+        },
+        {
+          "title": "Задания 2025",
+          "url": "https://disk.yandex.ru/d/fWNX99_goSLIWg"
+        }
+      ]
+    },
+    {
+      "id": "math_journey",
+      "name": "Математическое путешествие",
+      "subject_ids": [
+        "mathematics"
+      ],
+      "grade_min": 4,
+      "grade_max": 5,
+      "from": 2024,
+      "to": 2026,
+      "stages": [
+        {
+          "id": "oral",
+          "name": "Устная олимпиада"
+        }
+      ],
+      "source_ids": [],
+      "archive_links": [
+        {
+          "title": "Архив заданий прошлых лет",
+          "url": "https://drive.google.com/open?id=167wEbxqFLpslbNz5mDzh4XbjMgslz95o"
+        }
+      ]
+    },
+    {
+      "id": "spb_primary",
+      "name": "Санкт-Петербургская олимпиада начальной школы",
+      "subject_ids": [
+        "mathematics"
+      ],
+      "grade_min": 1,
+      "grade_max": 4,
+      "from": 2024,
+      "to": 2026,
+      "stages": [
+        {
+          "id": "event",
+          "name": "Олимпиада"
+        }
+      ],
+      "source_ids": [],
+      "archive_links": [
+        {
+          "title": "Сайт организаторов",
+          "url": "https://matolimp-spb.org/"
+        }
+      ]
+    },
+    {
+      "id": "two_by_two",
+      "name": "Олимпиада 2×2",
+      "subject_ids": [
+        "mathematics"
+      ],
+      "grade_min": 1,
+      "grade_max": 6,
+      "from": 2024,
+      "to": 2026,
+      "stages": [
+        {
+          "id": "event",
+          "name": "Олимпиада"
+        }
+      ],
+      "source_ids": [],
+      "archive_links": [
+        {
+          "title": "Сайт олимпиады",
+          "url": "https://mathbaby.ru/"
+        }
+      ]
+    },
+    {
+      "id": "tournament_cities",
+      "name": "Турнир городов",
+      "subject_ids": [
+        "mathematics"
+      ],
+      "grade_min": 8,
+      "grade_max": 11,
+      "from": 2024,
+      "to": 2026,
+      "stages": [
+        {
+          "id": "event",
+          "name": "Туры организаторов"
+        }
+      ],
+      "source_ids": [],
+      "archive_links": [
+        {
+          "title": "Архив турнира",
+          "url": "https://turgor.ru/"
+        }
+      ]
+    },
+    {
+      "id": "yms",
+      "name": "Олимпиада ЮМШ",
+      "subject_ids": [
+        "mathematics"
+      ],
+      "grade_min": 4,
+      "grade_max": 11,
+      "from": 2024,
+      "to": 2026,
+      "stages": [
+        {
+          "id": "event",
+          "name": "Олимпиада"
+        }
+      ],
+      "source_ids": [],
+      "archive_links": [
+        {
+          "title": "Сайт ЮМШ",
+          "url": "https://yumsh.ru/"
+        }
+      ]
+    },
+    {
+      "id": "iran_geometry",
+      "name": "Иранская олимпиада по геометрии",
+      "subject_ids": [
+        "mathematics"
+      ],
+      "grade_min": 8,
+      "grade_max": 11,
+      "from": 2024,
+      "to": 2026,
+      "stages": [
+        {
+          "id": "event",
+          "name": "Олимпиада"
+        }
+      ],
+      "source_ids": [],
+      "archive_links": [
+        {
+          "title": "Сайт IGO",
+          "url": "https://igo-official.com/"
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "season": "Год начала учебного сезона, например 2025 = 2025/26",
+    "zero": "Ноль обнаруженных документов, не ноль существующих",
+    "source_of_truth": "Изменения реестра только здесь; coverage.json генерируется из Dropbox checkpoint."
+  }
+}

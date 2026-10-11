@@ -1,0 +1,4688 @@
+{
+  "schema_version": "corpus_coverage.v1",
+  "generated_at": "2026-10-11T06:42:58.273Z",
+  "state_latest_update": "2026-10-04T21:34:35+00:00",
+  "origin": "Dropbox /OlympiadCorpus/state/checkpoint.jsonl · snapshot 2026-10-04",
+  "summary": {
+    "urls": 2704,
+    "statuses": {
+      "DOWNLOADED": 615,
+      "DUPLICATE": 9,
+      "FAILED_RETRYABLE": 22,
+      "FAILED_TERMINAL": 1,
+      "PENDING": 2057
+    },
+    "identified_urls": 2503,
+    "unclassified_urls": 201,
+    "parsed_document_hashes": 615
+  },
+  "unclassified_reasons": {
+    "subject_id": 4,
+    "season": 115,
+    "season,stage_id": 10,
+    "stage_id": 72
+  },
+  "cells": [
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2025,
+      "stage_id": "municipal",
+      "grade_band": "11",
+      "statuses": {
+        "DOWNLOADED": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {
+        "PARSED": 3,
+        "UNSUPPORTED": 1
+      },
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/ans-engl-11-pism-mun-mosobl-25-26.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/audio-engl-11-pism-mun-mosobl-25-26.mp3",
+          "status": "DOWNLOADED",
+          "role": "audio"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/script-engl-11-pism-mun-mosobl-25-26.pdf",
+          "status": "DOWNLOADED",
+          "role": "script"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/tasks-engl-11-pism-mun-mosobl-25-26.pdf",
+          "status": "DOWNLOADED",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2025,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 157,
+        "DOWNLOADED": 2
+      },
+      "roles": {
+        "answers": 31,
+        "audio": 35,
+        "criteria": 14,
+        "script": 28,
+        "tasks": 51
+      },
+      "parse_statuses": {
+        "PARSED": 2
+      },
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/ans-engl-7-8-pism-mun-arh-25-26.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/ans-engl-7-8-pism-mun-bash-25-26.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/ans-engl-7-8-pism-mun-belgor-25-26.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/ans-engl-7-8-pism-mun-bryansk-25-26.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 159
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2025,
+      "stage_id": "municipal",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 8
+      },
+      "roles": {
+        "answers": 2,
+        "audio": 2,
+        "script": 2,
+        "tasks": 2
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/ans-engl-9-pism-mun-dnr-25-26.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/audio-engl-9-pism-mun-dnr-25-26.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/script-engl-9-pism-mun-dnr-25-26.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/tasks-engl-9-pism-mun-dnr-25-26.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 8
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2025,
+      "stage_id": "municipal",
+      "grade_band": "9–10",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/ans-engl-9-10-pism-mun-mosobl-25-26.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/audio-engl-9-10-pism-mun-mosobl-25-26.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/script-engl-9-10-pism-mun-mosobl-25-26.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/tasks-engl-9-10-pism-mun-mosobl-25-26.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2025,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "DOWNLOADED": 144,
+        "FAILED_RETRYABLE": 1,
+        "FAILED_TERMINAL": 1
+      },
+      "roles": {
+        "answers": 28,
+        "audio": 32,
+        "criteria": 14,
+        "script": 25,
+        "tasks": 47
+      },
+      "parse_statuses": {
+        "PARSED": 113,
+        "UNSUPPORTED": 31
+      },
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/ans-engl-9-11-pism-mun-arh-25-26.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/ans-engl-9-11-pism-mun-bash-25-26.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/ans-engl-9-11-pism-mun-belgor-25-26.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/ans-engl-9-11-pism-mun-bryansk-25-26.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        }
+      ],
+      "urls": 146
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2025,
+      "stage_id": "school",
+      "grade_band": "7–8",
+      "statuses": {
+        "DOWNLOADED": 3
+      },
+      "roles": {
+        "answers": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {
+        "PARSED": 3
+      },
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2025-26/school/engl/ans-engl-7-8-sch-msk-25-26.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2025-26/school/engl/script-engl-7-8-sch-msk-25-26.pdf",
+          "status": "DOWNLOADED",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2025-26/school/engl/tasks-engl-7-8-sch-msk-25-26.pdf",
+          "status": "DOWNLOADED",
+          "role": "tasks"
+        }
+      ],
+      "urls": 3
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2024,
+      "stage_id": "final",
+      "grade_band": "9–11",
+      "statuses": {
+        "DOWNLOADED": 7
+      },
+      "roles": {
+        "other": 1,
+        "audio": 1,
+        "criteria": 1,
+        "script": 1,
+        "tasks": 3
+      },
+      "parse_statuses": {
+        "PARSED": 6,
+        "UNSUPPORTED": 1
+      },
+      "examples": [
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/final/engl/anskrit-engl-9-11-pism-final-24-25.pdf",
+          "status": "DOWNLOADED",
+          "role": "other"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/final/engl/audio-engl-9-11-pism-final-24-25.mp3",
+          "status": "DOWNLOADED",
+          "role": "audio"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/final/engl/krit-engl-9-11-ustn-final-24-25.pdf",
+          "status": "DOWNLOADED",
+          "role": "criteria"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/final/engl/script-engl-9-11-pism-final-24-25.pdf",
+          "status": "DOWNLOADED",
+          "role": "script"
+        }
+      ],
+      "urls": 7
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2024,
+      "stage_id": "municipal",
+      "grade_band": "11",
+      "statuses": {
+        "DOWNLOADED": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {
+        "PARSED": 3,
+        "UNSUPPORTED": 1
+      },
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/ans-engl-11-pism-mun-mosobl-24-25.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/audio-engl-11-pism-mun-mosobl-24-25.mp3",
+          "status": "DOWNLOADED",
+          "role": "audio"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/script-engl-11-pism-mun-mosobl-24-25.pdf",
+          "status": "DOWNLOADED",
+          "role": "script"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/tasks-engl-11-pism-mun-mosobl-24-25.pdf",
+          "status": "DOWNLOADED",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2024,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 160
+      },
+      "roles": {
+        "answers": 34,
+        "audio": 32,
+        "criteria": 13,
+        "script": 31,
+        "tasks": 50
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/ans-engl-7-8-pism-mun-arh-24-25.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/ans-engl-7-8-pism-mun-bash-24-25.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/ans-engl-7-8-pism-mun-belgor-24-25.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/ans-engl-7-8-pism-mun-bryansk-24-25.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 160
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2024,
+      "stage_id": "municipal",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 10
+      },
+      "roles": {
+        "answers": 3,
+        "audio": 2,
+        "script": 2,
+        "tasks": 3
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/ans-engl-9-pism-mun-dnr-24-25.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/ans-engl-9-pism-mun-ml-24-25.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/audio-engl-9-pism-mun-dnr-24-25.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/script-engl-9-pism-mun-dnr-24-25.pdf",
+          "status": "PENDING",
+          "role": "script"
+        }
+      ],
+      "urls": 10
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2024,
+      "stage_id": "municipal",
+      "grade_band": "9–10",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/ans-engl-9-10-pism-mun-mosobl-24-25.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/audio-engl-9-10-pism-mun-mosobl-24-25.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/script-engl-9-10-pism-mun-mosobl-24-25.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/tasks-engl-9-10-pism-mun-mosobl-24-25.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2024,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "DOWNLOADED": 138,
+        "DUPLICATE": 2,
+        "FAILED_RETRYABLE": 1
+      },
+      "roles": {
+        "answers": 30,
+        "audio": 26,
+        "criteria": 11,
+        "script": 29,
+        "tasks": 45
+      },
+      "parse_statuses": {
+        "PARSED": 114,
+        "UNSUPPORTED": 25,
+        "NEEDS_OCR": 1
+      },
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/ans-engl-9-11-pism-mun-arh-24-25.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/ans-engl-9-11-pism-mun-bash-24-25.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/ans-engl-9-11-pism-mun-belgor-24-25.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2024/ans-engl-9-11-pism-mun-bryansk-24-25.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        }
+      ],
+      "urls": 141
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2024,
+      "stage_id": "school",
+      "grade_band": "5–6",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/school/engl/ans-engl-5-6-sch-msk-24-25.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/school/engl/audio-engl-5-6-sch-msk-24-25.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/school/engl/script-engl-5-6-sch-msk-24-25.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/school/engl/tasks-engl-5-6-sch-msk-24-25.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2024,
+      "stage_id": "school",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/school/engl/ans-engl-7-8-sch-msk-24-25.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/school/engl/audio-engl-7-8-sch-msk-24-25.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/school/engl/script-engl-7-8-sch-msk-24-25.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/school/engl/tasks-engl-7-8-sch-msk-24-25.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2024,
+      "stage_id": "school",
+      "grade_band": "9–11",
+      "statuses": {
+        "DOWNLOADED": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {
+        "PARSED": 3,
+        "UNSUPPORTED": 1
+      },
+      "examples": [
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/school/engl/ans-engl-9-11-sch-msk-24-25.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/school/engl/audio-engl-9-11-sch-msk-24-25.mp3",
+          "status": "DOWNLOADED",
+          "role": "audio"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/school/engl/script-engl-9-11-sch-msk-24-25.pdf",
+          "status": "DOWNLOADED",
+          "role": "script"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2024-25/school/engl/tasks-engl-9-11-sch-msk-24-25.pdf",
+          "status": "DOWNLOADED",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2023,
+      "stage_id": "final",
+      "grade_band": "9–11",
+      "statuses": {
+        "DOWNLOADED": 6,
+        "DUPLICATE": 1
+      },
+      "roles": {
+        "other": 1,
+        "audio": 1,
+        "criteria": 1,
+        "tasks": 4
+      },
+      "parse_statuses": {
+        "PARSED": 6,
+        "UNSUPPORTED": 1
+      },
+      "examples": [
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/final/engl/anskrit-engl-9-11-pism-final-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "other"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/final/engl/audio-engl-9-11-pism-final-23-24.mp3",
+          "status": "DOWNLOADED",
+          "role": "audio"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/final/engl/krit-engl-9-11-ustn-final-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "criteria"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/final/engl/tasks-engl-9-11-pism-final-23-24.pdf",
+          "status": "DUPLICATE",
+          "role": "tasks"
+        }
+      ],
+      "urls": 7
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2023,
+      "stage_id": "municipal",
+      "grade_band": "10",
+      "statuses": {
+        "PENDING": 12
+      },
+      "roles": {
+        "answers": 3,
+        "audio": 2,
+        "criteria": 1,
+        "script": 2,
+        "tasks": 4
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-10-pism-mun-ml-23-24.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-10-pism-mun-mosobl-23-24.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-10-pism-mun-nn-23-24.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/audio-engl-10-pism-mun-mosobl-23-24.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        }
+      ],
+      "urls": 12
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2023,
+      "stage_id": "municipal",
+      "grade_band": "11",
+      "statuses": {
+        "DOWNLOADED": 11,
+        "DUPLICATE": 1
+      },
+      "roles": {
+        "answers": 3,
+        "audio": 2,
+        "criteria": 1,
+        "script": 2,
+        "tasks": 4
+      },
+      "parse_statuses": {
+        "PARSED": 10,
+        "UNSUPPORTED": 2
+      },
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-11-pism-mun-ml-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-11-pism-mun-mosobl-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-11-pism-mun-nn-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/audio-engl-11-pism-mun-mosobl-23-24.mp3",
+          "status": "DUPLICATE",
+          "role": "audio"
+        }
+      ],
+      "urls": 12
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2023,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 165
+      },
+      "roles": {
+        "tasks": 51,
+        "answers": 36,
+        "audio": 33,
+        "criteria": 13,
+        "script": 31,
+        "other": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/84/2023/tasks-engl-7-8-pism-mun-vologda-23-24.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-7-8-pism-mun-arh-23-24.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-7-8-pism-mun-bash-23-24.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-7-8-pism-mun-bryansk-23-24.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 165
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2023,
+      "stage_id": "municipal",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 21
+      },
+      "roles": {
+        "answers": 5,
+        "audio": 4,
+        "criteria": 1,
+        "script": 4,
+        "tasks": 7
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-9-pism-mun-bash-23-24.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-9-pism-mun-ml-23-24.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-9-pism-mun-mosobl-23-24.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-9-pism-mun-nn-23-24.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 21
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2023,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "DOWNLOADED": 124,
+        "FAILED_RETRYABLE": 15
+      },
+      "roles": {
+        "tasks": 43,
+        "answers": 31,
+        "audio": 28,
+        "criteria": 9,
+        "script": 27,
+        "other": 1
+      },
+      "parse_statuses": {
+        "PARSED": 98,
+        "UNSUPPORTED": 25,
+        "NEEDS_OCR": 1
+      },
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/87/2023/tasks-engl-9-11-pism-mun-vologda-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "tasks"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-9-11-pism-mun-arh-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-9-11-pism-mun-bryansk-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-9-11-pism-mun-bur-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        }
+      ],
+      "urls": 139
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2023,
+      "stage_id": "regional",
+      "grade_band": "9–11",
+      "statuses": {
+        "DOWNLOADED": 7,
+        "FAILED_RETRYABLE": 1
+      },
+      "roles": {
+        "other": 1,
+        "audio": 1,
+        "criteria": 1,
+        "script": 2,
+        "tasks": 3
+      },
+      "parse_statuses": {
+        "PARSED": 7
+      },
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/anskrit-engl-9-11-pism-reg-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "other"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/audio-engl-9-11-pism-reg-23-24.mp3",
+          "status": "FAILED_RETRYABLE",
+          "role": "audio"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/krit-engl-9-11-ustn-reg-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "criteria"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/script-engl-9-11-pism-reg-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "script"
+        }
+      ],
+      "urls": 8
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2023,
+      "stage_id": "school",
+      "grade_band": "5–6",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/school/engl/ans-engl-5-6-sch-msk-23-24.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/school/engl/audio-engl-5-6-sch-msk-23-24.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/school/engl/script-engl-5-6-sch-msk-23-24.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/school/engl/tasks-engl-5-6-sch-msk-23-24.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2023,
+      "stage_id": "school",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/school/engl/ans-engl-7-8-sch-msk-23-24.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/school/engl/audio-engl-7-8-sch-msk-23-24.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/school/engl/script-engl-7-8-sch-msk-23-24.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/school/engl/tasks-engl-7-8-sch-msk-23-24.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2023,
+      "stage_id": "school",
+      "grade_band": "9–11",
+      "statuses": {
+        "DOWNLOADED": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {
+        "PARSED": 3,
+        "UNSUPPORTED": 1
+      },
+      "examples": [
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/school/engl/ans-engl-9-11-sch-msk-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/school/engl/audio-engl-9-11-sch-msk-23-24.mp3",
+          "status": "DOWNLOADED",
+          "role": "audio"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/school/engl/script-engl-9-11-sch-msk-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "script"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2023-24/school/engl/tasks-engl-9-11-sch-msk-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "final",
+      "grade_band": "10",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "other": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/final/engl/anskrit-engl-10-pism-final-22-23.pdf",
+          "status": "PENDING",
+          "role": "other"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/final/engl/tasks-engl-10-pism-final-22-23.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "final",
+      "grade_band": "11",
+      "statuses": {
+        "DOWNLOADED": 2
+      },
+      "roles": {
+        "other": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {
+        "PARSED": 2
+      },
+      "examples": [
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/final/engl/anskrit-engl-11-pism-final-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "other"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/final/engl/tasks-engl-11-pism-final-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "final",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "other": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/final/engl/anskrit-engl-9-pism-final-22-23.pdf",
+          "status": "PENDING",
+          "role": "other"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/final/engl/tasks-engl-9-pism-final-22-23.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "final",
+      "grade_band": "9–11",
+      "statuses": {
+        "DOWNLOADED": 3
+      },
+      "roles": {
+        "audio": 1,
+        "criteria": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {
+        "UNSUPPORTED": 1,
+        "PARSED": 2
+      },
+      "examples": [
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/final/engl/audio-engl-9-11-pism-final-22-23.mp3",
+          "status": "DOWNLOADED",
+          "role": "audio"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/final/engl/krit-engl-9-11-ustn-final-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "criteria"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/final/engl/tasks-engl-9-11-ustn-final-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "tasks"
+        }
+      ],
+      "urls": 3
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "municipal",
+      "grade_band": "10",
+      "statuses": {
+        "PENDING": 3
+      },
+      "roles": {
+        "answers": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/ans-engl-10-pism-mun-mosobl-22-23.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/script-engl-10-pism-mun-mosobl-22-23.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/tasks-engl-10-pism-mun-mosobl-22-23.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 3
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "municipal",
+      "grade_band": "11",
+      "statuses": {
+        "DOWNLOADED": 3
+      },
+      "roles": {
+        "answers": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {
+        "PARSED": 3
+      },
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/ans-engl-11-pism-mun-mosobl-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/script-engl-11-pism-mun-mosobl-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "script"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/tasks-engl-11-pism-mun-mosobl-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "tasks"
+        }
+      ],
+      "urls": 3
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "municipal",
+      "grade_band": "7–11",
+      "statuses": {
+        "DOWNLOADED": 1
+      },
+      "roles": {
+        "criteria": 1
+      },
+      "parse_statuses": {
+        "PARSED": 1
+      },
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/krit-engl-7-11-ustn-mun-kalug-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "criteria"
+        }
+      ],
+      "urls": 1
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 93
+      },
+      "roles": {
+        "answers": 21,
+        "audio": 18,
+        "criteria": 5,
+        "script": 18,
+        "tasks": 31
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/ans-engl-7-8-pism-mun-amur-22-23.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/ans-engl-7-8-pism-mun-arh-22-23.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/ans-engl-7-8-pism-mun-bash-22-23.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/ans-engl-7-8-pism-mun-bryansk-22-23.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 93
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "municipal",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 7
+      },
+      "roles": {
+        "answers": 2,
+        "script": 2,
+        "tasks": 2,
+        "audio": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/ans-engl-9-pism-mun-mosobl-22-23.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/script-engl-9-pism-mun-mosobl-22-23.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/tasks-engl-9-pism-mun-mosobl-22-23.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2022-23/mun/engl/ans-engl-9-mun-msk-22-23.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 7
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "DOWNLOADED": 81,
+        "FAILED_RETRYABLE": 4,
+        "DUPLICATE": 1
+      },
+      "roles": {
+        "answers": 19,
+        "audio": 17,
+        "criteria": 5,
+        "script": 16,
+        "tasks": 29
+      },
+      "parse_statuses": {
+        "PARSED": 66,
+        "UNSUPPORTED": 16
+      },
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/ans-engl-9-11-pism-mun-amur-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/ans-engl-9-11-pism-mun-arh-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/ans-engl-9-11-pism-mun-bash-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2022/ans-engl-9-11-pism-mun-bryansk-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        }
+      ],
+      "urls": 86
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "regional",
+      "grade_band": "10",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/reg/engl/ans-engl-10-pism-reg-22-23.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/reg/engl/tasks-engl-10-pism-reg-22-23.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "regional",
+      "grade_band": "11",
+      "statuses": {
+        "DOWNLOADED": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {
+        "PARSED": 2
+      },
+      "examples": [
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/reg/engl/ans-engl-11-pism-reg-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/reg/engl/tasks-engl-11-pism-reg-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "regional",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/reg/engl/ans-engl-9-pism-reg-22-23.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/reg/engl/tasks-engl-9-pism-reg-22-23.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "regional",
+      "grade_band": "9–11",
+      "statuses": {
+        "DOWNLOADED": 3,
+        "DUPLICATE": 1
+      },
+      "roles": {
+        "audio": 1,
+        "criteria": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {
+        "UNSUPPORTED": 1,
+        "PARSED": 3
+      },
+      "examples": [
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/reg/engl/audio-engl-9-11-pism-reg-22-23.mp3",
+          "status": "DOWNLOADED",
+          "role": "audio"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/reg/engl/krit-engl-9-11-ustn-reg-22-23.pdf",
+          "status": "DUPLICATE",
+          "role": "criteria"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/reg/engl/script-engl-9-11-pism-reg-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "script"
+        },
+        {
+          "url": "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/upload/files/Arhive_tasks/2022-23/reg/engl/tasks-engl-9-11-ustn-reg-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "school",
+      "grade_band": "5–6",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2022-23/school/engl/ans-engl-5-6-sch-msk-22-23.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2022-23/school/engl/audio-engl-5-6-sch-msk-22-23.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2022-23/school/engl/script-engl-5-6-sch-msk-22-23.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2022-23/school/engl/tasks-engl-5-6-sch-msk-22-23.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "school",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2022-23/school/engl/ans-engl-7-8-sch-msk-22-23.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2022-23/school/engl/audio-engl-7-8-sch-msk-22-23.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2022-23/school/engl/script-engl-7-8-sch-msk-22-23.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2022-23/school/engl/tasks-engl-7-8-sch-msk-22-23.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2022,
+      "stage_id": "school",
+      "grade_band": "9–11",
+      "statuses": {
+        "DOWNLOADED": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {
+        "PARSED": 3,
+        "UNSUPPORTED": 1
+      },
+      "examples": [
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2022-23/school/engl/ans-engl-9-11-sch-msk-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2022-23/school/engl/audio-engl-9-11-sch-msk-22-23.mp3",
+          "status": "DOWNLOADED",
+          "role": "audio"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2022-23/school/engl/script-engl-9-11-sch-msk-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "script"
+        },
+        {
+          "url": "https://Ð²ÑÐ¾Ñ.ÑÐ¿Ð¼.ÑÑ/upload/files/Arhive_tasks/2022-23/school/engl/tasks-engl-9-11-sch-msk-22-23.pdf",
+          "status": "DOWNLOADED",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "final",
+      "grade_band": "10",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/final/engl/ans-engl-10-pism-final-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/final/engl/tasks-engl-10-pism-final-21-22.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "final",
+      "grade_band": "11",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/final/engl/ans-engl-11-pism-final-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/final/engl/tasks-engl-11-pism-final-21-22.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "final",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/final/engl/ans-engl-9-pism-final-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/final/engl/tasks-engl-9-pism-final-21-22.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "final",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 3
+      },
+      "roles": {
+        "criteria": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/final/engl/krit-engl-9-11-ustn-final-21-22.pdf",
+          "status": "PENDING",
+          "role": "criteria"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/final/engl/script-engl-9-11-pism-final-21-22.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/final/engl/tasks-engl-9-11-ustn-final-21-22.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 3
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "municipal",
+      "grade_band": "10",
+      "statuses": {
+        "PENDING": 6
+      },
+      "roles": {
+        "answers": 2,
+        "audio": 1,
+        "script": 1,
+        "tasks": 2
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-10-pism-mun-chuk-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-10-pism-mun-mosobl-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/audio-engl-10-pism-mun-mosobl-21-22.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/script-engl-10-pism-mun-mosobl-21-22.pdf",
+          "status": "PENDING",
+          "role": "script"
+        }
+      ],
+      "urls": 6
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "municipal",
+      "grade_band": "11",
+      "statuses": {
+        "DOWNLOADED": 2,
+        "DUPLICATE": 1,
+        "PENDING": 3
+      },
+      "roles": {
+        "answers": 2,
+        "audio": 1,
+        "script": 1,
+        "tasks": 2
+      },
+      "parse_statuses": {
+        "PARSED": 2,
+        "UNSUPPORTED": 1
+      },
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-11-pism-mun-chuk-21-22.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-11-pism-mun-mosobl-21-22.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/audio-engl-11-pism-mun-mosobl-21-22.mp3",
+          "status": "DUPLICATE",
+          "role": "audio"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/script-engl-11-pism-mun-mosobl-21-22.pdf",
+          "status": "PENDING",
+          "role": "script"
+        }
+      ],
+      "urls": 6
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "municipal",
+      "grade_band": "7",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-7-pism-mun-chuk-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/tasks-engl-7-pism-mun-chuk-21-22.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "municipal",
+      "grade_band": "7–11",
+      "statuses": {
+        "PENDING": 1
+      },
+      "roles": {
+        "criteria": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/krit-engl-7-11-ustn-mun-kaliningrad-21-22.pdf",
+          "status": "PENDING",
+          "role": "criteria"
+        }
+      ],
+      "urls": 1
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 111
+      },
+      "roles": {
+        "answers": 20,
+        "other": 2,
+        "audio": 23,
+        "criteria": 22,
+        "script": 14,
+        "tasks": 30
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-7-8-pism-mun-amur-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-7-8-pism-mun-buryat-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-7-8-pism-mun-chel-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-7-8-pism-mun-kaliningrad-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 111
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "municipal",
+      "grade_band": "8",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-8-pism-mun-chuk-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/tasks-engl-8-pism-mun-chuk-21-22.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "municipal",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 10
+      },
+      "roles": {
+        "answers": 3,
+        "audio": 2,
+        "script": 2,
+        "tasks": 3
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-9-pism-mun-chuk-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-9-pism-mun-mosobl-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/audio-engl-9-pism-mun-mosobl-21-22.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/script-engl-9-pism-mun-mosobl-21-22.pdf",
+          "status": "PENDING",
+          "role": "script"
+        }
+      ],
+      "urls": 10
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "DOWNLOADED": 25,
+        "PENDING": 79
+      },
+      "roles": {
+        "answers": 18,
+        "other": 1,
+        "audio": 21,
+        "criteria": 23,
+        "script": 13,
+        "tasks": 28
+      },
+      "parse_statuses": {
+        "PARSED": 19,
+        "UNSUPPORTED": 6
+      },
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-9-11-pism-mun-amur-21-22.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-9-11-pism-mun-buryat-21-22.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-9-11-pism-mun-chel-21-22.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2021/ans-engl-9-11-pism-mun-kaliningrad-21-22.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        }
+      ],
+      "urls": 104
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "regional",
+      "grade_band": "10",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/reg/engl/ans-engl-10-pism-reg-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/reg/engl/audio-engl-10-pism-reg-21-22.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/reg/engl/script-engl-10-pism-reg-21-22.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/reg/engl/tasks-engl-10-pism-reg-21-22.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "regional",
+      "grade_band": "11",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/reg/engl/ans-engl-11-pism-reg-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/reg/engl/audio-engl-11-pism-reg-21-22.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/reg/engl/script-engl-11-pism-reg-21-22.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/reg/engl/tasks-engl-11-pism-reg-21-22.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "regional",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/reg/engl/ans-engl-9-pism-reg-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/reg/engl/audio-engl-9-pism-reg-21-22.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/reg/engl/script-engl-9-pism-reg-21-22.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/reg/engl/tasks-engl-9-pism-reg-21-22.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "regional",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/reg/engl/ans-engl-9-11-ustn-reg-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/reg/engl/tasks-engl-9-11-ustn-reg-21-22.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "school",
+      "grade_band": "5–6",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/school/engl/ans-engl-5-6-sch-msk-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/school/engl/audio-engl-5-6-sch-msk-21-22.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/school/engl/script-engl-5-6-sch-msk-21-22.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/school/engl/tasks-engl-5-6-sch-msk-21-22.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "school",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/school/engl/ans-engl-7-8-sch-msk-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/school/engl/audio-engl-7-8-sch-msk-21-22.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/school/engl/script-engl-7-8-sch-msk-21-22.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/school/engl/tasks-engl-7-8-sch-msk-21-22.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2021,
+      "stage_id": "school",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/school/engl/ans-engl-9-11-sch-msk-21-22.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/school/engl/audio-engl-9-11-sch-msk-21-22.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/school/engl/script-engl-9-11-sch-msk-21-22.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2021-22/school/engl/tasks-engl-9-11-sch-msk-21-22.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "final",
+      "grade_band": "10",
+      "statuses": {
+        "PENDING": 1
+      },
+      "roles": {
+        "answers": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/final/engl/ans-engl-10-pism-final-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 1
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "final",
+      "grade_band": "11",
+      "statuses": {
+        "PENDING": 1
+      },
+      "roles": {
+        "answers": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/final/engl/ans-engl-11-pism-final-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 1
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "final",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 1
+      },
+      "roles": {
+        "answers": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/final/engl/ans-engl-9-pism-final-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 1
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "municipal",
+      "grade_band": "10",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/ans-engl-10-pism-mun-chuk-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/tasks-engl-10-pism-mun-chuk-20-21.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "municipal",
+      "grade_band": "11",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/ans-engl-11-pism-mun-chuk-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/tasks-engl-11-pism-mun-chuk-20-21.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "municipal",
+      "grade_band": "7",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/ans-engl-7-pism-mun-chuk-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/tasks-engl-7-pism-mun-chuk-20-21.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "municipal",
+      "grade_band": "7–11",
+      "statuses": {
+        "PENDING": 1
+      },
+      "roles": {
+        "criteria": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/krit-engl-7-11-pism-mun-saratov-20-21.pdf",
+          "status": "PENDING",
+          "role": "criteria"
+        }
+      ],
+      "urls": 1
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 115
+      },
+      "roles": {
+        "answers": 26,
+        "audio": 26,
+        "criteria": 13,
+        "script": 16,
+        "tasks": 34
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/ans-engl-7-8-pism-mun-bryansk-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/ans-engl-7-8-pism-mun-bush-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/ans-engl-7-8-pism-mun-chel-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/ans-engl-7-8-pism-mun-irk-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 115
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "municipal",
+      "grade_band": "8",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/ans-engl-8-pism-mun-chuk-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/tasks-engl-8-pism-mun-chuk-20-21.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "municipal",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/ans-engl-9-pism-mun-chuk-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/tasks-engl-9-pism-mun-chuk-20-21.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 112
+      },
+      "roles": {
+        "answers": 26,
+        "audio": 26,
+        "criteria": 11,
+        "script": 18,
+        "tasks": 31
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/ans-engl-9-11-pism-mun-bryansk-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/ans-engl-9-11-pism-mun-bush-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/ans-engl-9-11-pism-mun-chel-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2020/ans-engl-9-11-pism-mun-irk-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 112
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "regional",
+      "grade_band": "10",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/reg/engl/ans-engl-10-pism-reg-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/reg/engl/tasks-engl-10-pism-reg-20-21.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "regional",
+      "grade_band": "11",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/reg/engl/ans-engl-11-pism-reg-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/reg/engl/tasks-engl-11-pism-reg-20-21.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "regional",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/reg/engl/ans-engl-9-pism-reg-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/reg/engl/tasks-engl-9-pism-reg-20-21.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "regional",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 3
+      },
+      "roles": {
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/reg/engl/audio-engl-9-11-pism-reg-20-21.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/reg/engl/script-engl-9-11-pism-reg-20-21.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/reg/engl/tasks-engl-9-11-ustn-reg-20-21.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 3
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "school",
+      "grade_band": "5–6",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/school/engl/ans-engl-5-6-sch-msk-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/school/engl/audio-engl-5-6-sch-msk-20-21.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/school/engl/script-engl-5-6-sch-msk-20-21.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/school/engl/tasks-engl-5-6-sch-msk-20-21.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "school",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/school/engl/ans-engl-7-8-sch-msk-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/school/engl/audio-engl-7-8-sch-msk-20-21.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/school/engl/script-engl-7-8-sch-msk-20-21.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/school/engl/tasks-engl-7-8-sch-msk-20-21.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2020,
+      "stage_id": "school",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/school/engl/ans-engl-9-11-sch-msk-20-21.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/school/engl/audio-engl-9-11-sch-msk-20-21.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/school/engl/script-engl-9-11-sch-msk-20-21.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2020-21/school/engl/tasks-engl-9-11-sch-msk-20-21.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2019,
+      "stage_id": "municipal",
+      "grade_band": "7–11",
+      "statuses": {
+        "PENDING": 1
+      },
+      "roles": {
+        "criteria": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2019/krit-engl-7-11-ustn-mun-ml-19-20.pdf",
+          "status": "PENDING",
+          "role": "criteria"
+        }
+      ],
+      "urls": 1
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2019,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 112
+      },
+      "roles": {
+        "answers": 26,
+        "audio": 26,
+        "criteria": 9,
+        "tasks": 37,
+        "script": 12,
+        "other": 2
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks//88/2019/ans-engl-7-8-mun-omsk-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks//88/2019/ans-engl-7-8-pism-mun-astrah-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks//88/2019/ans-engl-7-8-pism-mun-lenobl-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks//88/2019/audio-engl-7-8-pism-mun-astrah-19-20.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        }
+      ],
+      "urls": 112
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2019,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 112
+      },
+      "roles": {
+        "answers": 29,
+        "audio": 28,
+        "criteria": 5,
+        "script": 12,
+        "tasks": 36,
+        "other": 2
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks//88/2019/ans-engl-9-11-mun-omsk-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks//88/2019/ans-engl-9-11-pism-mun-astrah-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks//88/2019/ans-engl-9-11-pism-mun-lenobl-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks//88/2019/audio-engl-9-11-pism-mun-astrah-19-20.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        }
+      ],
+      "urls": 112
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2019,
+      "stage_id": "municipal",
+      "grade_band": "не указан",
+      "statuses": {
+        "PENDING": 13
+      },
+      "roles": {
+        "answers": 4,
+        "script": 2,
+        "tasks": 7
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2019/ans-engl-pism-7-8-mun-kem-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2019/ans-engl-pism-7-8-mun-kursk-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2019/ans-engl-pism-9-11-mun-kem-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2019/ans-engl-pism-9-11-mun-kursk-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 13
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2019,
+      "stage_id": "regional",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 7
+      },
+      "roles": {
+        "answers": 2,
+        "audio": 1,
+        "script": 1,
+        "tasks": 2,
+        "other": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/region/engl/ans-engl-9-11-pism-reg-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/region/engl/ans-engl-9-11-ustn-reg-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/region/engl/audio-engl-9-11-pism-reg-19-20.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/region/engl/script-engl-9-11-pism-reg-19-20.pdf",
+          "status": "PENDING",
+          "role": "script"
+        }
+      ],
+      "urls": 7
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2019,
+      "stage_id": "school",
+      "grade_band": "5–6",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/school/engl/ans-engl-5-6-sch-msk-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/school/engl/audio-engl-5-6-sch-msk-19-20.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/school/engl/script-engl-5-6-sch-msk-19-20.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/school/engl/tasks-engl-5-6-sch-msk-19-20.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2019,
+      "stage_id": "school",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/school/engl/ans-engl-7-8-sch-msk-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/school/engl/audio-engl-7-8-sch-msk-19-20.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/school/engl/script-engl-7-8-sch-msk-19-20.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/school/engl/tasks-engl-7-8-sch-msk-19-20.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2019,
+      "stage_id": "school",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 1,
+        "audio": 1,
+        "script": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/school/engl/ans-engl-9-11-sch-msk-19-20.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/school/engl/audio-engl-9-11-sch-msk-19-20.mp3",
+          "status": "PENDING",
+          "role": "audio"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/school/engl/script-engl-9-11-sch-msk-19-20.pdf",
+          "status": "PENDING",
+          "role": "script"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2019-20/school/engl/tasks-engl-9-11-sch-msk-19-20.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2018,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 29
+      },
+      "roles": {
+        "other": 2,
+        "answers": 6,
+        "audio": 6,
+        "criteria": 1,
+        "script": 5,
+        "tasks": 9
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2018/88-ans-engl-7-8-mun-spb-18-9.pdf",
+          "status": "PENDING",
+          "role": "other"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2018/88-tasks-engl-7-8-mun-spb-18-9.pdf",
+          "status": "PENDING",
+          "role": "other"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2018/ans-engl-7-8-mun-kryar-18-9.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2018/ans-engl-7-8-mun-lenobl-18-9.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 29
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2018,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 31
+      },
+      "roles": {
+        "other": 2,
+        "answers": 8,
+        "audio": 6,
+        "script": 5,
+        "tasks": 10
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2018/88-ans-engl-9-11-mun-spb-18-9.pdf",
+          "status": "PENDING",
+          "role": "other"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2018/88-tasks-engl-9-11-mun-spb-18-9.pdf",
+          "status": "PENDING",
+          "role": "other"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2018/ans-engl-9-11-mun-kryar-18-9.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2018/ans-engl-9-11-mun-lenobl-18-9.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 31
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2018,
+      "stage_id": "municipal",
+      "grade_band": "не указан",
+      "statuses": {
+        "PENDING": 46
+      },
+      "roles": {
+        "other": 34,
+        "audio": 12
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2018/88-ans-engl-7_8-mun-amur-18-9.pdf",
+          "status": "PENDING",
+          "role": "other"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2018/88-ans-engl-7_8-mun-arh-18-9.pdf",
+          "status": "PENDING",
+          "role": "other"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2018/88-ans-engl-7_8-mun-smol-18-9.pdf",
+          "status": "PENDING",
+          "role": "other"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2018/88-ans-engl-7_8-mun-sverd-18-9.pdf",
+          "status": "PENDING",
+          "role": "other"
+        }
+      ],
+      "urls": 46
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2017,
+      "stage_id": "municipal",
+      "grade_band": "7",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2017/ans-engl-7-Komi-mun-17-18.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2017/tasks-engl-7-Komi-mun-17-18.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2017,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 36
+      },
+      "roles": {
+        "answers": 16,
+        "tasks": 20
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2017/ans-engl-7-8-Kalin-mun-17-18.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2017/ans-engl-7-8-Kemer-mun-17-18.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2017/ans-engl-7-8-Khak-mun-17-18.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2017/ans-engl-7-8-Krdar-mun-17-18.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 36
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2017,
+      "stage_id": "municipal",
+      "grade_band": "8–9",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2017/ans-engl-8-9-Komi-mun-17-18.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2017/tasks-engl-8-9-Komi-mun-17-18.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2017,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 36
+      },
+      "roles": {
+        "answers": 16,
+        "tasks": 20
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2017/ans-engl-9-11-Kalin-mun-17-18.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2017/ans-engl-9-11-Kemer-mun-17-18.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2017/ans-engl-9-11-Khak-mun-17-18.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2017/ans-engl-9-11-Krdar-mun-17-18.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 36
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2016,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 21
+      },
+      "roles": {
+        "answers": 11,
+        "tasks": 10
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2016/ans-engl-7-8-Alt-mun-16-7.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2016/ans-engl-7-8-Bryan-mun-16-7.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2016/ans-engl-7-8-Kalin-mun-16-7.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2016/ans-engl-7-8-Nnovg-mun-16-7.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 21
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2016,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 29
+      },
+      "roles": {
+        "answers": 15,
+        "tasks": 14
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2016/ans-engl-9-11-Alt-mun-16-7.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2016/ans-engl-9-11-Bryan-mun-16-7.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2016/ans-engl-9-11-Kalin-mun-16-7.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2016/ans-engl-9-11-Nnovg-mun-16-7.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 29
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2015,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 33
+      },
+      "roles": {
+        "answers": 16,
+        "tasks": 17
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2015/ans-engl-7-8-Alt-mun-15-6.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2015/ans-engl-7-8-Arkh-mun-15-6.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2015/ans-engl-7-8-Bash-mun-15-6.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2015/ans-engl-7-8-Kalin-mun-15-6.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 33
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2015,
+      "stage_id": "municipal",
+      "grade_band": "8–9",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2015/ans-engl-8-9-Kursk-mun-15-6.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2015/task-engl-8-9-Kursk-mun-15-6.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2015,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 36
+      },
+      "roles": {
+        "answers": 18,
+        "tasks": 18
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2015/ans-engl-9-11-Alt-mun-15-6.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2015/ans-engl-9-11-Arkh-mun-15-6.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2015/ans-engl-9-11-Bash-mun-15-6.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2015/ans-engl-9-11-Kalin-mun-15-6.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 36
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2014,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 12
+      },
+      "roles": {
+        "answers": 6,
+        "tasks": 6
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2014/ans-engl-7-8-Alt-mun-14-5.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2014/ans-engl-7-8-Arkh-mun-14-5.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2014/ans-engl-7-8-Bryan-mun-14-5.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2014/ans-engl-7-8-Kalin-mun-14-5.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 12
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2014,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 12
+      },
+      "roles": {
+        "answers": 6,
+        "tasks": 6
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2014/ans-engl-9-11-Alt-mun-14-5.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2014/ans-engl-9-11-Arkh-mun-14-5.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2014/ans-engl-9-11-Bryan-mun-14-5.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2014/ans-engl-9-11-Kalin-mun-14-5.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 12
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2013,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 6
+      },
+      "roles": {
+        "answers": 3,
+        "tasks": 3
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2013/ans-engl-7-8-Alt-mun-13-4.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2013/ans-engl-7-8-Arkh-mun-13-4.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2013/ans-engl-7-8-Kalin-mun-13-4.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2013/task-engl-7-8-Alt-mun-13-4.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 6
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2013,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 6
+      },
+      "roles": {
+        "answers": 3,
+        "tasks": 3
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2013/ans-engl-9-11-Alt-mun-13-4.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2013/ans-engl-9-11-Arkh-mun-13-4.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2013/ans-engl-9-11-Kalin-mun-13-4.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2013/task-engl-9-11-Alt-mun-13-4.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 6
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2012,
+      "stage_id": "municipal",
+      "grade_band": "7",
+      "statuses": {
+        "PENDING": 1
+      },
+      "roles": {
+        "answers": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2012/ans-engl-7-Kalin-mun-12-3.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 1
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2012,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 2,
+        "tasks": 2
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2012/ans-engl-7-8-Alt-mun-12-3.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2012/ans-engl-7-8-Kalin-mun-12-3.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2012/task-engl-7-8-Alt-mun-12-3.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2012/task-engl-7-8-Kalin-mun-12-3.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2012,
+      "stage_id": "municipal",
+      "grade_band": "8",
+      "statuses": {
+        "PENDING": 1
+      },
+      "roles": {
+        "answers": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2012/ans-engl-8-Kalin-mun-12-3.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 1
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2012,
+      "stage_id": "municipal",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 1
+      },
+      "roles": {
+        "answers": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2012/ans-engl-9-Kalin-mun-12-3.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        }
+      ],
+      "urls": 1
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2012,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 2,
+        "tasks": 2
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2012/ans-engl-9-11-Alt-mun-12-3.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2012/ans-engl-9-11-Kalin-mun-12-3.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2012/task-engl-9-11-Alt-mun-12-3.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2012/task-engl-9-11-Kalin-mun-12-3.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2012,
+      "stage_id": "school",
+      "grade_band": "5–6",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/tasks-2012-2013/sch-tasks-2012-2013/engl/ans-engl-5-6-sch-2012-3.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/tasks-2012-2013/sch-tasks-2012-2013/engl/tasks-engl-5-6-sch-2012-3.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2012,
+      "stage_id": "school",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/tasks-2012-2013/sch-tasks-2012-2013/engl/ans-engl-7-8-sch-2012-3.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/tasks-2012-2013/sch-tasks-2012-2013/engl/tasks-engl-7-8-sch-2012-3.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2012,
+      "stage_id": "school",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/tasks-2012-2013/sch-tasks-2012-2013/engl/ans-engl-9-11-sch-2012-3.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/tasks-2012-2013/sch-tasks-2012-2013/engl/tasks-engl-9-11-sch-2012-3.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2011,
+      "stage_id": "final",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2011-2012/final_tasks/new-cut/engl/ans-engl-9-11-final-2011-2.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2011-2012/final_tasks/new-cut/engl/tasks-engl-9-11-final-2011-2.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2011,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 2,
+        "tasks": 2
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2011/ans-engl-7-8-Arkh-mun-11-2.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2011/ans-engl-7-8-Kalin-mun-11-2.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2011/task-engl-7-8-Arkh-mun-11-2.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2011/task-engl-7-8-Kalin-mun-11-2.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2011,
+      "stage_id": "municipal",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 4
+      },
+      "roles": {
+        "answers": 2,
+        "tasks": 2
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2011/ans-engl-9-11-Arkh-mun-11-2.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2011/ans-engl-9-11-Kalin-mun-11-2.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2011/task-engl-9-11-Arkh-mun-11-2.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2011/task-engl-9-11-Kalin-mun-11-2.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 4
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2011,
+      "stage_id": "regional",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 3
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 2
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2011-2012/region_tasks/new-cut/engl/ans-engl-9-11-reg-2011-2.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2011-2012/region_tasks/new-cut/engl/tasks-engl-9-11-reg-2011-2.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2011-2012/region_tasks/new-cut/engl/tasks-engl-9-11-script-reg-2011-2.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 3
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2010,
+      "stage_id": "final",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2010-2011/final_tasks/new-cut/engl/ans-engl-9-11-final-2010-1.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2010-2011/final_tasks/new-cut/engl/tasks-engl-9-11-final-2010-1.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2010,
+      "stage_id": "municipal",
+      "grade_band": "10–11",
+      "statuses": {
+        "PENDING": 7,
+        "DOWNLOADED": 31,
+        "DUPLICATE": 2
+      },
+      "roles": {
+        "answers": 11,
+        "tasks": 12,
+        "audio": 9,
+        "script": 8
+      },
+      "parse_statuses": {
+        "PARSED": 25,
+        "UNSUPPORTED": 8
+      },
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2012/ans-engl-10-11-Kalin-mun-12-3.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2017/ans-engl-10-11-Komi-mun-17-18.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2017/tasks-engl-10-11-Komi-mun-17-18.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2023/ans-engl-10-11-pism-mun-bash-23-24.pdf",
+          "status": "DOWNLOADED",
+          "role": "answers"
+        }
+      ],
+      "urls": 40
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2010,
+      "stage_id": "municipal",
+      "grade_band": "11",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2010/ans-engl-11-Kalin-mun-10-1.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2010/task-engl-11-Kalin-mun-10-1.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2010,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2010/ans-engl-7-8-Kalin-mun-10-1.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2010/task-engl-7-8-Kalin-mun-10-1.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2010,
+      "stage_id": "municipal",
+      "grade_band": "9–10",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2010/ans-engl-9-10-Kalin-mun-10-1.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2010/task-engl-9-10-Kalin-mun-10-1.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2010,
+      "stage_id": "regional",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 3
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 2
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2010-2011/region_tasks/new-cut/engl/ans-engl-9-11-reg-2010-1.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2010-2011/region_tasks/new-cut/engl/tasks-engl-9-11-reg-2010-1.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2010-2011/region_tasks/new-cut/engl/tasks-engl-9-11-script-reg-2010-1.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 3
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2009,
+      "stage_id": "final",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2009-2010/final_tasks/new-cut/engl/ans-engl-9-11-final-2009-10.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2009-2010/final_tasks/new-cut/engl/tasks-engl-9-11-final-2009-10.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2009,
+      "stage_id": "municipal",
+      "grade_band": "11",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2009/ans-engl-11-Kalin-mun-09-0.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2009/task-engl-11-Kalin-mun-09-0.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2009,
+      "stage_id": "municipal",
+      "grade_band": "7–8",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2009/ans-engl-7-8-Kalin-mun-09-0.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2009/task-engl-7-8-Kalin-mun-09-0.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2009,
+      "stage_id": "municipal",
+      "grade_band": "9–10",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2009/ans-engl-9-10-Kalin-mun-09-0.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2009/task-engl-9-10-Kalin-mun-09-0.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2009,
+      "stage_id": "regional",
+      "grade_band": "9–11",
+      "statuses": {
+        "PENDING": 3
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 2
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2009-2010/region_tasks/new-cut/engl/ans-engl-9-11-reg-2009-10.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2009-2010/region_tasks/new-cut/engl/tasks-engl-9-11-reg-2009-10.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        },
+        {
+          "url": "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2009-2010/region_tasks/new-cut/engl/tasks-engl-9-11-script-reg-2009-10.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 3
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2008,
+      "stage_id": "municipal",
+      "grade_band": "10",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2008/ans-engl-10-Kalin-mun-08-9.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2008/task-engl-10-Kalin-mun-08-9.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2008,
+      "stage_id": "municipal",
+      "grade_band": "11",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2008/ans-engl-11-Kalin-mun-08-9.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2008/task-engl-11-Kalin-mun-08-9.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2008,
+      "stage_id": "municipal",
+      "grade_band": "7",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2008/ans-engl-7-Kalin-mun-08-9.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2008/task-engl-7-Kalin-mun-08-9.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2008,
+      "stage_id": "municipal",
+      "grade_band": "8",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2008/ans-engl-8-Kalin-mun-08-9.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2008/task-engl-8-Kalin-mun-08-9.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2008,
+      "stage_id": "municipal",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2008/ans-engl-9-Kalin-mun-08-9.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2008/task-engl-9-Kalin-mun-08-9.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2007,
+      "stage_id": "municipal",
+      "grade_band": "10",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2007/ans-engl-10-Kalin-mun-07-8.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2007/task-engl-10-Kalin-mun-07-8.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    },
+    {
+      "competition_id": "vsosh",
+      "subject_id": "english",
+      "season": 2007,
+      "stage_id": "municipal",
+      "grade_band": "9",
+      "statuses": {
+        "PENDING": 2
+      },
+      "roles": {
+        "answers": 1,
+        "tasks": 1
+      },
+      "parse_statuses": {},
+      "examples": [
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2007/ans-engl-9-Kalin-mun-07-8.pdf",
+          "status": "PENDING",
+          "role": "answers"
+        },
+        {
+          "url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2007/task-engl-9-Kalin-mun-07-8.pdf",
+          "status": "PENDING",
+          "role": "tasks"
+        }
+      ],
+      "urls": 2
+    }
+  ]
+}
