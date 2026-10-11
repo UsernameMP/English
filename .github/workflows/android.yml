@@ -59,6 +59,9 @@ jobs:
       - name: Validate 5th-grade informatics bank and answer keys
         run: python3 scripts/validate_informatics_g5.py
 
+      - name: Validate 30 original fifth-grade mathematics/informatics tasks
+        run: python3 scripts/validate_grade5_new15.py
+
       - name: Validate Russian STEM task localization
         run: python3 scripts/validate_stem_locale.py
 

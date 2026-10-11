@@ -88,6 +88,59 @@
       ]
     },
     {
+      "pack_id": "informatics.olympiad.5.new15.ru.2026",
+      "coverage": [
+        {
+          "knowledge_id": "CS.ALGORITHMS.EXECUTORS",
+          "weight": 0.066667
+        },
+        {
+          "knowledge_id": "CS.ALGORITHMS.LOOPS",
+          "weight": 0.133333
+        },
+        {
+          "knowledge_id": "CS.ALGORITHMS.TRACING",
+          "weight": 0.066667
+        },
+        {
+          "knowledge_id": "CS.COMBINATORICS.COUNTING",
+          "weight": 0.066667
+        },
+        {
+          "knowledge_id": "CS.DATA.BINARY",
+          "weight": 0.066667
+        },
+        {
+          "knowledge_id": "CS.DATA.CODING",
+          "weight": 0.133333
+        },
+        {
+          "knowledge_id": "CS.DATA.TABLES",
+          "weight": 0.066667
+        },
+        {
+          "knowledge_id": "CS.GRAPHS.COLORING",
+          "weight": 0.066667
+        },
+        {
+          "knowledge_id": "CS.GRAPHS.ROUTES",
+          "weight": 0.133333
+        },
+        {
+          "knowledge_id": "CS.LOGIC.BOOLEAN",
+          "weight": 0.066667
+        },
+        {
+          "knowledge_id": "CS.LOGIC.CONSTRAINTS",
+          "weight": 0.066667
+        },
+        {
+          "knowledge_id": "CS.OPTIMIZATION.SORTING",
+          "weight": 0.066665
+        }
+      ]
+    },
+    {
       "pack_id": "informatics.olympiad.5-7.global.2026",
       "coverage": [
         {
@@ -175,6 +228,31 @@
         },
         {
           "knowledge_id": "BIO.ECOLOGY.FOOD_WEBS",
+          "weight": 0.2
+        }
+      ]
+    },
+    {
+      "pack_id": "mathematics.olympiad.5.new15.ru.2026",
+      "coverage": [
+        {
+          "knowledge_id": "MATH.ARITHMETIC.RATIOS",
+          "weight": 0.133333
+        },
+        {
+          "knowledge_id": "MATH.COMBINATORICS.COUNTING",
+          "weight": 0.266667
+        },
+        {
+          "knowledge_id": "MATH.GEOMETRY.AREA",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "MATH.LOGIC.INVARIANTS",
+          "weight": 0.2
+        },
+        {
+          "knowledge_id": "MATH.NUMBER.DIVISIBILITY",
           "weight": 0.2
         }
       ]

@@ -29,6 +29,19 @@
       "enabled": true
     },
     {
+      "id": "informatics.olympiad.5.new15.ru.2026",
+      "asset": "content/informatics_g5_new15_2026.json",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "competition": "Авторский олимпиадный практикум · 5 класс",
+      "season": "2026-2027",
+      "license_id": "project.original.v1",
+      "content_version": "1.0.0",
+      "sha256": "dfcae48bcae5d3a434cc29862b49547991b6ae71bff05b1f656d08454502204f",
+      "enabled": true
+    },
+    {
       "id": "informatics.olympiad.5-7.global.2026",
       "asset": "content/informatics_g5_7_pilot.json",
       "subject": "informatics",
@@ -65,6 +78,19 @@
       "license_id": "project.original.v1",
       "content_version": "0.1.1",
       "sha256": "6603194af45c5d80a0e56e606948250827434dded4d8d342294c3d64617dd0ee",
+      "enabled": true
+    },
+    {
+      "id": "mathematics.olympiad.5.new15.ru.2026",
+      "asset": "content/math_g5_new15_2026.json",
+      "subject": "mathematics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "competition": "Авторский олимпиадный практикум · 5 класс",
+      "season": "2026-2027",
+      "license_id": "project.original.v1",
+      "content_version": "1.0.0",
+      "sha256": "c858abac02f178206da58d2e97af89048d8d0ff7c860211eb2b160d887832be7",
       "enabled": true
     },
     {
