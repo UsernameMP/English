@@ -38,3 +38,12 @@ This is a persistent staging registry. It does NOT download Olympiad task docume
 - \`merge_sources.py\` consolidates \`runs/discovery_*.jsonl\` and \`runs/new_kg_source.jsonl\` into \`sources.jsonl\` without dropping existing rows. The crawler workflow runs the merger before enumeration.
 - Regression tests run before the crawler and must pass before updated results are committed.
 - Historical corruption, blocked pages and unclassified documents remain open audit findings, not presumed successfully processed.
+
+
+## Link intelligence and unique resources
+- \`link_intelligence.py\`: conservative multilingual \`type_hint\` (task / solution / criteria / archive / review) and navigation priority. Hints are **not** validated semantic labels; no language rule deletes raw URLs.
+- Archive-priority pages are explored before peripheral site navigation while every low-priority URL remains in the persistent frontier. Large archives are not capped or marked complete based on size.
+- \`resource_observations.jsonl\`: MIME-only evidence for extensionless PDF/ZIP/images and other non-HTML responses; no binary response bodies are saved. MIME responses are not counted as HTTP/crawler errors.
+- \`build_resource_index.py\` generates \`resources_shards/resource_*.jsonl\` with one stable \`resource_id\` for each canonical target URL. Every original link occurrence remains in \`links_shards/\`, including all parent URLs and anchor context. Deduplication is at the resource level only; identical contents behind different URLs cannot be proven at this link-only stage.
+- The canonical reviewed labels in \`link_labels.jsonl\` remain separate from rule-based hints. Scheduled ChatGPT review should prefer \`resources_shards/\` for prioritization and copy verified labels into the reviewed ledger. It must not treat \`type_hint\` as a reviewed ground truth or rewrite old raw evidence.
+- HTML-only navigation still has known blind spots: JavaScript-generated links, archives behind APIs, and manually listed but unlinked historical years are audit backlogs.
