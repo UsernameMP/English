@@ -90,12 +90,20 @@ def identify(record: dict, registry: dict) -> dict:
         competition = next(c for c in registry["competitions"] if c["id"] == "vsosh")
 
     subjects = {"engl": "english", "math": "mathematics",
-                "inf": "informatics", "fiz": "physics", "bio": "biology",
+                "inf": "informatics", "iikt": "informatics",
+                "prog": "informatics", "robot": "informatics",
+                "fiz": "physics", "bio": "biology",
                 "chem": "chemistry", "rus": "russian"}
-    short = re.search(r"(?:^|-)(engl|math|inf|fiz|bio|chem|rus)(?:-|\.)", name)
+    short = re.search(r"(?:^|-)(engl|math|inf|iikt|prog|robot|fiz|bio|chem|rus)(?:-|\.)", name)
     subject = subjects[short.group(1)] if short else None
     if not subject and sid.startswith("vosh_engl"):
         subject = "english"
+    if not subject and (sid.startswith("olimpiada_ru_math_school")
+                        or sid.startswith("vosh_2024_math_school")):
+        subject = "mathematics"
+    if not subject and (sid.startswith("olimpiada_ru_inf_school")
+                        or sid.startswith("vosh_2024_inf_school")):
+        subject = "informatics"
 
     yr = re.search(r"(?<!\d)(20\d{2})[-/](20\d{2})(?!\d)", url)
     season = int(yr.group(1)) if yr else None
@@ -115,6 +123,13 @@ def identify(record: dict, registry: dict) -> dict:
         if re.search(pattern, name + " " + urlparse(url).path.lower()):
             stage = value
             break
+    # This fallback is allowed only for source IDs whose crawler adapter
+    # explicitly restricts discovery to the school-stage HTML section.
+    if stage is None and sid in {
+        "olimpiada_ru_math_school_archive", "olimpiada_ru_inf_school_archive",
+        "vosh_2024_math_school_sirius_11", "vosh_2024_inf_school_sirius_10_11",
+    }:
+        stage = "school"
 
     grades = None
     if short:
