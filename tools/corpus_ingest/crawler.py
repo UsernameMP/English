@@ -157,6 +157,70 @@ class LinkParser(HTMLParser):
                 self.hrefs.append(href)
 
 
+class SchoolStageLinkParser(HTMLParser):
+    """Restrict archive documents to the school's own stage section.
+
+    The parent year/class links are still traversed with parse_links().
+    This keeps municipal/regional/final tasks from being mislabeled as school.
+    Filename-based school markers are a conservative fallback for older HTML.
+    """
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.in_heading: str | None = None
+        self.heading_text: list[str] = []
+        self.in_school_section = False
+        self.current_anchor: str | None = None
+        self.hrefs: list[str] = []
+
+    def handle_starttag(self, tag, attrs) -> None:
+        tag = tag.lower()
+        if tag in {"h2", "h3", "h4"}:
+            self.in_heading = tag
+            self.heading_text = []
+        if tag == "a":
+            self.current_anchor = dict(attrs).get("href")
+            if self.current_anchor and self.in_school_section:
+                self.hrefs.append(self.current_anchor)
+
+    def handle_data(self, data: str) -> None:
+        if self.in_heading:
+            self.heading_text.append(data)
+
+    def handle_endtag(self, tag) -> None:
+        tag = tag.lower()
+        if self.in_heading == tag:
+            text = " ".join("".join(self.heading_text).split()).casefold()
+            if text == "школьный этап":
+                self.in_school_section = True
+            elif text in {"муниципальный этап", "региональный этап",
+                          "заключительный этап", "пригласительный этап"}:
+                self.in_school_section = False
+            self.in_heading = None
+            self.heading_text = []
+        if tag == "a":
+            self.current_anchor = None
+
+
+def parse_school_stage_links(html: str, base_url: str) -> list[str]:
+    """Find school-stage documents without swallowing other VsOSH stages."""
+    parser = SchoolStageLinkParser()
+    parser.feed(html)
+    # Filenames carrying explicit -sch- markers remain usable on old layouts.
+    school_hrefs = set(parser.hrefs)
+    all_links = parse_links(html, base_url)
+    result = []
+    for url in all_links:
+        if not looks_like_document(url):
+            continue
+        path = urlparse(url).path.lower()
+        explicit_school = bool(re.search(r"(?<![a-z])sch(?![a-z])|school", path))
+        if (any(urldefrag(urljoin(base_url, href))[0] == url for href in school_hrefs)
+                or explicit_school):
+            result.append(url)
+    return result
+
+
 def parse_links(html: str, base_url: str) -> list[str]:
     parser = LinkParser()
     parser.feed(html)
@@ -536,9 +600,13 @@ class Crawler:
                 visited.add(page_url)
                 r = self.http.get(page_url, timeout=45)
                 r.raise_for_status()
-                for link in parse_links(r.text, page_url):
+                page_links = parse_links(r.text, page_url)
+                document_links = (set(parse_school_stage_links(r.text, page_url))
+                                  if source.adapter == "school_section" else set(page_links))
+                for link in page_links:
                     if looks_like_document(link):
-                        if allowed_by_patterns(link, source.include_regex, source.exclude_regex):
+                        if (link in document_links
+                                and allowed_by_patterns(link, source.include_regex, source.exclude_regex)):
                             self.record_discovery(source, link, page_url)
                     elif depth < source.max_depth_int and should_crawl_page(source, link):
                         queue.append((link, depth + 1))
