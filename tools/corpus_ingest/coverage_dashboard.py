@@ -132,11 +132,18 @@ def identify(record: dict, registry: dict) -> dict:
     if season is None:
         # When the URL has no explicit four-digit year, a trailing two-digit
         # season may be inferred only after all grade-band tokens.
-        years = [
-            2000 + int(m.group(1))
-            for m in re.finditer(r"(?<!\d)(\d{2})-(\d{2})(?!\d)", name)
-            if int(m.group(2)) == (int(m.group(1)) + 1) % 100
-        ]
+        years = []
+        for match in re.finditer(r"(?<!\d)(\d{2})-(\d{2})(?!\d)", name):
+            if int(match.group(2)) != (int(match.group(1)) + 1) % 100:
+                continue
+            preceding = name[:match.start()]
+            suffix = name[match.end():]
+            is_after_stage = bool(re.search(
+                r"(?:^|[-_])(?:sch|school|mun|reg|fin|final)[-_]", preceding))
+            is_final_suffix = bool(re.fullmatch(
+                r"(?:[-_](?:pdf|docx?|zip))?\.(?:pdf|docx?|zip)", suffix))
+            if is_after_stage or is_final_suffix:
+                years.append(2000 + int(match.group(1)))
         if years:
             season = years[-1]
 
