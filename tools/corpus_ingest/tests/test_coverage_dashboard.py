@@ -98,5 +98,31 @@ class CoverageDashboardTests(unittest.TestCase):
         self.assertGreater(saved["summary"]["urls"], 2500)
 
 
+
+
+    def test_grade5_math_and_informatics_school_metadata(self):
+        cases = [
+            ("math", "5", "mathematics", 2025, "tasks", "tasks"),
+            ("iikt", "5-6", "informatics", 2025, "tasks", "tasks"),
+            ("math", "5", "mathematics", 2024, "sol", "solutions"),
+            ("iikt", "5-6", "informatics", 2023, "sol", "solutions"),
+        ]
+        for tag, grades, subject, year, prefix, expected_role in cases:
+            yy, following = str(year)[-2:], str(year+1)[-2:]
+            doc = {
+                "url": f"https://vos.olimpiada.ru/upload/files/Arhive_tasks/"
+                       f"{year}-{following}/school/{tag}/"
+                       f"{prefix}-{tag}-{grades}-sch-msk-{yy}-{following}.pdf",
+                "source_id": f"vosh_{'math' if tag == 'math' else 'inf'}5_school_{year}_{prefix}",
+                "status": "PENDING",
+            }
+            identified = coverage.identify(doc, REGISTRY)
+            self.assertEqual(identified["subject_id"], subject)
+            self.assertEqual(identified["grade_band"].replace("–", "-"), grades)
+            self.assertEqual(identified["competition_id"], "vsosh")
+            self.assertEqual(identified["season"], year)
+            self.assertEqual(identified["stage_id"], "school")
+            self.assertEqual(identified["role"], expected_role)
+
 if __name__ == "__main__":
     unittest.main()
