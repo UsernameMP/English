@@ -1,5 +1,1 @@
-{
-  "requested_at": "2026-10-11T13:05:00Z",
-  "reason": "migrate oversized raw link ledger to readable shards",
-  "cycle": "fix-shards-01"
-}
+{"requested_at":"2026-10-11T13:30:00Z","cycle":"hourly-02","reason":"continue link discovery"}
