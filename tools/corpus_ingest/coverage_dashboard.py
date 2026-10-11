@@ -15,6 +15,7 @@ import os
 from pathlib import Path
 import re
 import urllib.request
+import urllib.parse
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -36,7 +37,7 @@ def read_jsonl(path: Path) -> list[dict]:
     return read_jsonl_bytes(path.read_bytes()) if path.exists() else []
 
 
-def dropbox_checkpoint() -> bytes | None:
+def dropbox_checkpoint(filename: str = "checkpoint.jsonl") -> bytes | None:
     key, secret, refresh = (os.getenv(k, "") for k in
                             ("DROPBOX_APP_KEY", "DROPBOX_APP_SECRET", "DROPBOX_REFRESH_TOKEN"))
     if not all((key, secret, refresh)):
@@ -50,7 +51,7 @@ def dropbox_checkpoint() -> bytes | None:
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         token = json.load(response)["access_token"]
-    path = os.getenv("DROPBOX_ROOT", "/OlympiadCorpus").rstrip("/") + "/state/checkpoint.jsonl"
+    path = os.getenv("DROPBOX_ROOT", "/OlympiadCorpus").rstrip("/") + "/state/" + filename
     download = urllib.request.Request(
         "https://content.dropboxapi.com/2/files/download",
         data=b"",
@@ -181,7 +182,6 @@ def generate(registry: dict, records: list[dict], parsed: list[dict] | None = No
 
 
 def main() -> None:
-    import urllib.parse
     parser = argparse.ArgumentParser()
     parser.add_argument("--registry", type=Path, default=REGISTRY)
     parser.add_argument("--checkpoint", type=Path, default=STATE)
@@ -211,7 +211,15 @@ def main() -> None:
     records = read_jsonl_bytes(checkpoint)
     if not records:
         raise SystemExit("Refusing to replace coverage with an empty checkpoint")
-    result = generate(registry, records, read_jsonl(args.parse_state), origin)
+    parsed = read_jsonl(args.parse_state)
+    if args.refresh_dropbox:
+        try:
+            parsed_bytes = dropbox_checkpoint("parse_state.jsonl")
+            if parsed_bytes:
+                parsed = read_jsonl_bytes(parsed_bytes)
+        except Exception as exc:
+            print(f"WARNING: parse-state unavailable: {exc}")
+    result = generate(registry, records, parsed, origin)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Coverage built: {result['summary']['urls']} URLs / {len(result['cells'])} cells / {result['summary']['unclassified_urls']} unclassified")
