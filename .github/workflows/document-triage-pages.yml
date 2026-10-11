@@ -13,6 +13,8 @@ on:
       - "tools/corpus_ingest/registry/competitions.json"
       - "tools/corpus_ingest/tests/test_coverage_dashboard.py"
       - "tools/corpus_ingest/discovery_network.py"
+      - "tools/corpus_ingest/raw_presence.py"
+      - "tools/corpus_ingest/tests/test_raw_presence.py"
       - "tools/corpus_ingest/tests/test_discovery_network.py"
       - "tools/document_triage/corpus/**"
   workflow_dispatch:
@@ -55,6 +57,19 @@ jobs:
           python tools/corpus_ingest/coverage_dashboard.py --refresh-dropbox
           python -m unittest discover -s tools/corpus_ingest/tests -p test_discovery_network.py -v
           python tools/corpus_ingest/discovery_network.py --refresh-dropbox
+          python -m unittest discover -s tools/corpus_ingest/tests -p test_raw_presence.py -v
+          python tools/corpus_ingest/raw_presence.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('tools/document_triage/corpus/ru')
+          data = json.loads((root/'presence.json').read_text(encoding='utf-8'))
+          assert data['schema_version'] == 'discovery.raw_presence.v1'
+          assert data['segment']['id'] == 'RU'
+          assert any(c['state'] == 'raw' for c in data['cells'])
+          assert all(c['education_level'] in ('school', 'university') for c in data['cells'])
+          print('RU minimum RAW presence:', len(data['cells']), 'classified cells')
+          PY
           python - <<'PY'
           import json
           from pathlib import Path
