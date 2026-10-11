@@ -129,3 +129,33 @@ def test_math_and_informatics_school_archive_registry(tmp_path):
         assert source.max_depth_int >= 2
     assert by_id["vosh_2024_math_school_sirius_11"].source_type == "document"
     assert by_id["vosh_2024_inf_school_sirius_10_11"].source_type == "document"
+
+
+def test_grade5_school_math_informatics_official_pdf_seeds():
+    """5th-grade prep means 5th grade only, with shared 5-6 informatics packs."""
+    from pathlib import Path
+    sources = read_sources(Path(__file__).resolve().parents[1] / "registry" / "sources.csv")
+    by_id = {s.source_id: s for s in sources}
+    expected = {
+        ("math", year, role) for year in (2023, 2024, 2025)
+        for role in ("tasks", "sol") if year != 2023 or role == "tasks"
+    } | {
+        ("iikt", year, role) for year in (2023, 2024, 2025)
+        for role in ("tasks", "sol")
+    }
+    assert len(expected) == 11
+    for subject_tag, year, role in expected:
+        short = "math" if subject_tag == "math" else "inf"
+        source = by_id[f"vosh_{short}5_school_{year}_{'tasks' if role == 'tasks' else 'solutions'}"]
+        grade_band = "5" if subject_tag == "math" else "5-6"
+        yy, next_yy = str(year)[-2:], str(year + 1)[-2:]
+        filename = f"{role}-{subject_tag}-{grade_band}-sch-msk-{yy}-{next_yy}.pdf"
+        assert source.url == (f"https://vos.olimpiada.ru/upload/files/Arhive_tasks/"
+                              f"{year}-{next_yy}/school/{subject_tag}/{filename}")
+        assert source.grades == grade_band
+        assert source.stage == "school"
+        assert source.source_type == "document" and source.adapter == "direct"
+        assert source.priority_int >= 230
+        assert source.is_enabled
+    assert all("2026-27" not in by_id[s.source_id].url for s in sources
+               if s.source_id.startswith("vosh_math5_") or s.source_id.startswith("vosh_inf5_"))
