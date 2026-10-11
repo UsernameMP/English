@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#17233b">
+<title>Corpus Discovery · RU | Rift</title>
+<style>
+:root{color-scheme:light;font-family:Inter,"Segoe UI",Arial,sans-serif;color:#1b2941;background:#f4f7fa}
+*{box-sizing:border-box}body{margin:0}a{color:#205da6;text-decoration:none}a:hover{text-decoration:underline}
+header{background:#16253e;color:white;padding:24px max(18px,calc((100vw - 1320px)/2))}header small{letter-spacing:.15em;color:#9dbbdb;font-size:11px;font-weight:700}header h1{margin:8px 0 9px;font-size:30px}header p{color:#c9d5e6;font-size:14px;line-height:1.6;margin:0;max-width:950px}
+main{max-width:1400px;margin:auto;padding:18px 22px 64px}.breadcrumbs{display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:8px;color:#65758c;font-size:12px;margin-bottom:15px}
+.panel{background:white;border:1px solid #dde5ee;border-radius:13px;padding:17px}.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end}
+input,select,button{font:inherit}input,select{padding:10px 11px;background:#f9fbff;border:1px solid #d7e2ef;border-radius:8px;color:#25334a;min-height:39px}
+label{font-size:12px;font-weight:600;color:#5d6d86;display:flex;flex-direction:column;gap:5px;flex:1 1 210px}label.search{flex:3 1 340px}input{width:100%}
+.nav{display:flex;gap:6px;overflow-x:auto;padding:14px 0 13px}.nav button{border:1px solid #dbe3ee;background:#fff;padding:10px 15px;border-radius:9px;color:#50627b;white-space:nowrap;cursor:pointer}
+.nav button.active{background:#20385b;color:#fff;border-color:#20385b}.nav button:focus-visible,.result:focus-visible{outline:3px solid #4688e8;outline-offset:2px}
+.layout{display:grid;grid-template-columns:minmax(340px,1fr) minmax(320px,.82fr);gap:14px;align-items:start}
+h2{font-size:17px;margin:0}h3{font-size:15px;margin:0 0 12px}.hint{color:#65758c;font-size:12px;line-height:1.6}
+.items{display:flex;flex-direction:column;gap:8px;margin-top:14px;max-height:72vh;overflow:auto}
+.result{background:#fbfcff;border:1px solid #e0e7f1;border-radius:9px;padding:12px;text-align:left;width:100%;cursor:pointer;color:inherit}
+.result:hover,.result.current{border-color:#7aa5d8;background:#f2f8ff}.result strong{display:block;font-size:13px;overflow-wrap:anywhere}
+.result small{display:block;margin-top:5px;line-height:1.6;color:#71839a;overflow-wrap:anywhere}.tag{display:inline-block;font-size:10px;border-radius:5px;background:#e9eff7;color:#3b638f;padding:3px 6px;margin-left:6px;vertical-align:middle}
+.content{margin-top:12px}.line{display:grid;grid-template-columns:minmax(100px,160px) 1fr;gap:9px;padding:10px 0;border-bottom:1px solid #edf1f5;font-size:12px}.line b{font-weight:600;color:#66758b}.line span{word-break:break-word}
+.links a{display:block;border-bottom:1px solid #e8edf4;padding:10px 0;overflow-wrap:anywhere;font-size:13px}.links a small{display:block;color:#7a8b9e;margin-top:4px}
+.empty{padding:17px;background:#f4f7fb;border-radius:9px;color:#6d7e94;font-size:13px;line-height:1.6;margin-top:12px}
+.note{margin:15px 0;font-size:12px;line-height:1.6;color:#697b93}.meta{font-size:12px;color:#708198}.pill{display:inline-block;background:#eaf3ff;color:#326b9d;border-radius:5px;padding:3px 7px;font-size:11px}
+@media(max-width:930px){.layout{grid-template-columns:1fr}.items{max-height:50vh}}@media(max-width:570px){header{padding:22px 16px}header h1{font-size:26px}main{padding:14px 11px}.panel{padding:13px}.line{grid-template-columns:100px 1fr}}
+</style>
+</head>
+<body>
+<header><small>RIFT · REASONING DATA FOUNDRY · DISCOVERY NETWORK</small><h1>Первoисточники / RU</h1>
+<p>Российский сегмент поиска олимпиадных материалов. Изучайте сеть сайтов, архивных ссылок, уже известных олимпиад и сохранённых исходных файлов. Неопознанные документы не теряются и отображаются отдельно.</p></header>
+<main>
+<div class="breadcrumbs"><span><a href="../">Corpus Coverage</a> / Discovery Network / RU</span><span id="stamp">Загрузка реестра…</span></div>
+<div class="panel">
+<div class="toolbar"><label class="search">Название, адрес сайта, URL или хеш<input type="search" id="search" placeholder="Например, Казанская олимпиада, anokmc.ru, 2025, pdf"></label>
+<label>Предмет<select id="subject"><option value="">Все предметы</option></select></label>
+<label>Год / сезон<select id="year"><option value="">Все годы</option></select></label>
+</div><div class="hint" style="margin-top:10px">География обнаружения: <b>RU</b>. Материалы могут быть на английском и находиться на серверах других стран. Метки географии олимпиады не выводятся из домена.</div>
+</div>
+<nav class="nav" id="nav" aria-label="Каталог">
+<button data-tab="archives" class="active">Архивы</button>
+<button data-tab="competitions">Олимпиады</button>
+<button data-tab="sites">Сайты</button>
+<button data-tab="observations">Найденные документы</button>
+<button data-tab="unresolved">Неопознанные</button>
+<button data-tab="assets">Оригиналы RAW</button>
+</nav>
+<div class="layout">
+<section class="panel"><div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><h2 id="sectionName">Архивы</h2><span id="count" class="meta"></span></div>
+<div id="desc" class="hint" style="margin-top:7px"></div>
+<div class="items" id="items"></div><div id="more" class="note"></div></section>
+<aside class="panel"><h2 id="detailsTitle">Карточка объекта</h2><div id="details" class="content"><div class="empty">Выберите элемент слева, чтобы увидеть исходные ссылки, происхождение и статус.</div></div></aside>
+</div>
+<div class="note">Ограничение первой версии: новые олимпиады автоматически появятся после внедрения регистрации кандидатов; пока отображаются подтверждённый исходный справочник и реальные наблюдения краулера. Ссылка на архив означает только его обнаружение, а не полный сбор. <a href="https://github.com/UsernameMP/English/blob/main/docs/corpus_discovery_network_tz.md" target="_blank" rel="noopener">Полное техническое задание</a>.</div>
+</main>
+<script>
+"use strict";
+const $=id=>document.getElementById(id), escapeHtml=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let network=null,tab="archives",current=null;
+const dict={archives:["Архивы","Известные места хранения заданий, включая внешние папки. Ссылки не означают, что архив уже обойдён."],
+competitions:["Олимпиады","Подтверждённые записи исходного реестра. Автоматические кандидаты будут подключены отдельно."],
+sites:["Сайты","Домены, где размещены ссылки на архивы или URL, обнаруженные краулером. Домен не определяет географию олимпиады."],
+observations:["Найденные документы","Все URL из текущего checkpoint, включая ожидание и ошибки; год или этап может быть неизвестен."],
+unresolved:["Неопознанные","Обнаружения с неизвестным соревнованием, предметом, годом или этапом. Сами ссылки не теряются."],
+assets:["Оригиналы RAW","Файлы, у которых есть реальный SHA-256; совпадение байтов объединяет зеркала."]};
+const obsById=new Map(),compById=new Map(),sitesById=new Map();
+function itemTitle(type,x){return type==="competitions"?x.name:type==="archives"?(x.titles[0]||x.url):type==="sites"?x.hostname:type==="assets"?x.sha256:x.url.split("/").pop()||x.url}
+function itemNote(type,x){
+if(type==="competitions")return x.subject_ids.join(", ")+" · классы "+x.grade_min+"–"+x.grade_max+" · "+x.stages.map(s=>s.name).join(", ");
+if(type==="archives")return x.url;
+if(type==="sites")return "Архивы известны: "+(x.has_archive_link?"да":"нет")+" · URL в checkpoint: "+x.observed_url_count;
+if(type==="assets")return "Зеркал: "+x.mirror_count+" · "+(x.bytes||"неизвестно")+" байт";
+return (x.fetch_status||"")+(x.classification?.competition_id?" · "+(compById.get(x.classification.competition_id)?.name||""):" · не определена олимпиада");
+}
+function chosenTabItems(){
+if(tab==="archives")return network.archives;
+if(tab==="competitions")return network.approved_competitions;
+if(tab==="sites")return network.sites;
+if(tab==="assets")return network.raw_assets;
+if(tab==="unresolved"){const ids=new Set(network.unresolved_observation_ids);return network.observations.filter(x=>ids.has(x.id))}
+return network.observations;
+}
+function selectedText(x){return [x.name,x.hostname,x.url,x.sha256,...(x.titles||[]),x.source_id,x.classification?.competition_id, x.classification?.season].filter(Boolean).join(" ").toLocaleLowerCase("ru-RU")}
+function passes(x){
+const query=$("search").value.trim().toLocaleLowerCase("ru-RU"),subject=$("subject").value,year=$("year").value;
+if(query&&!selectedText(x).includes(query)){if(tab==="archives"){let related=x.competition_ids.map(id=>compById.get(id)?.name||"").join(" ").toLocaleLowerCase("ru-RU");if(!related.includes(query))return false}else return false}
+if(subject){
+if(tab==="competitions"&&!x.subject_ids.includes(subject))return false;
+if(tab==="archives"&&!x.competition_ids.some(id=>(compById.get(id)?.subject_ids||[]).includes(subject)))return false;
+if((tab==="observations"||tab==="unresolved")&&x.classification?.subject_id!==subject)return false;
+if(tab==="assets"&&!x.observation_ids.some(id=>obsById.get(id)?.classification?.subject_id===subject))return false;
+}
+if(year){
+if(tab==="competitions"&&(+year<x.season_from||+year>x.season_to))return false;
+if((tab==="observations"||tab==="unresolved")&&x.classification?.season!==Number(year))return false;
+if(tab==="assets"&&!x.observation_ids.some(id=>obsById.get(id)?.classification?.season===Number(year)))return false;
+}
+return true
+}
+function external(url,text){if(!/^https?:\/\//.test(url||""))return "<span>"+escapeHtml(text||url)+"</span>";return '<a href="'+escapeHtml(url)+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(text||url)+" ↗</a>"}
+function row(name,value){return '<div class="line"><b>'+escapeHtml(name)+'</b><span>'+escapeHtml(value??"Не установлено")+"</span></div>"}
+function links(list){return '<div class="links">'+list.map(x=>external(x.url,x.text)).join("")+"</div>"}
+function details(x){
+const d=$("details");$("detailsTitle").textContent=itemTitle(tab,x);
+if(tab==="competitions"){
+const a=network.archives.filter(y=>y.competition_ids.includes(x.id)),rs=network.observations.filter(y=>y.classification.competition_id===x.id);
+d.innerHTML=row("Субъект",x.subject_ids.join(", "))+row("ID",x.id)+row("Туры",x.stages.map(s=>s.name).join(" / "))+row("Период в реестре",x.season_from+"–"+x.season_to)+row("Наблюдения",rs.length)+row("Идентичность",x.identity_status)+"<h3>Известные архивы</h3>"+links(a.map(y=>({url:y.url,text:y.titles[0]})));
+}else if(tab==="archives"){
+d.innerHTML=row("Состояние", "Ссылка известна, факт скачивания всего архива не установлен")+row("Сайт",sitesById.get(x.site_id)?.hostname)+row("Связанные олимпиады",x.competition_ids.map(i=>compById.get(i)?.name||i).join("; "))+row("ID",x.id)+"<h3>Исходная ссылка</h3>"+links([{url:x.url,text:x.url}]);
+}else if(tab==="sites"){
+const known=network.archives.filter(y=>y.site_id===x.id),observed=network.observations.filter(y=>y.site_id===x.id).slice(0,12);
+d.innerHTML=row("Хост",x.hostname)+row("Известно архивов",known.length)+row("Ссылок на документы",x.observed_url_count)+"<h3>Каталоги / архивы</h3>"+links(known.map(y=>({url:y.url,text:y.titles[0]})))+"<h3>Примеры документов</h3>"+links(observed.map(y=>({url:y.url,text:y.url.split("/").pop()})));
+}else if(tab==="assets"){
+const obs=x.observation_ids.map(id=>obsById.get(id)).filter(Boolean);
+d.innerHTML=row("SHA-256",x.sha256)+row("Объём, байт",x.bytes)+row("Тип",x.content_type)+row("Зеркала",obs.length)+row("Оригинал скачан",x.has_raw_download?"Да":"Нет")+"<h3>Адреса обнаружений</h3>"+links(obs.slice(0,40).map(y=>({url:y.url,text:y.url})));
+}else{
+const c=x.classification||{};
+d.innerHTML=row("Состояние",x.fetch_status)+row("Олимпиада",compById.get(c.competition_id)?.name||"Не установлена")+row("Предмет",c.subject_id)+row("Сезон",c.season)+row("Этап",c.stage_id)+row("Группа классов",c.grade_band)+row("Тип файла",c.document_role)+row("Источник поиска",x.source_id)+row("Впервые найден",x.first_seen)+row("SHA-256",x.asset_id||"RAW ещё не подтверждён")+"<h3>Доказательства происхождения</h3>"+links([{url:x.url,text:"Исходный URL"},{url:x.discovered_from,text:"Страница обнаружения"}].filter(y=>y.url));
+}}
+function render(){
+const [name,sub]=dict[tab];$("sectionName").textContent=name;$("desc").textContent=sub;
+document.querySelectorAll("#nav button").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));
+const all=chosenTabItems(),visible=all.filter(passes),limit=120;
+$("count").textContent=visible.length+" из "+all.length;
+const box=$("items");box.replaceChildren();
+for(const x of visible.slice(0,limit)){
+const b=document.createElement("button");b.className="result"+(x.id===current?.id?" current":"");b.type="button";b.innerHTML="<strong>"+escapeHtml(itemTitle(tab,x))+"</strong><small>"+escapeHtml(itemNote(tab,x))+"</small>";b.addEventListener("click",()=>{current=x;details(x);renderSelection()});box.append(b)}
+$("more").textContent=visible.length>limit?"Показаны первые "+limit+". Уточните поиск для остальных "+(visible.length-limit)+".":"";
+if(!visible.length)box.innerHTML='<div class="empty">Нет записей по выбранным фильтрам. Это не подтверждает отсутствие первоисточников.</div>';
+}
+function renderSelection(){document.querySelectorAll("#items button.result").forEach(b=>b.classList.toggle("current",b.textContent.includes(itemTitle(tab,current))))}
+async function start(){
+const resp=await fetch("./network.json",{cache:"no-store"});if(!resp.ok)throw Error("HTTP "+resp.status);
+network=await resp.json();network.observations.forEach(x=>obsById.set(x.id,x));network.approved_competitions.forEach(x=>compById.set(x.id,x));network.sites.forEach(x=>sitesById.set(x.id,x));
+$("stamp").textContent="Снимок: "+new Date(network.generated_at).toLocaleString("ru-RU")+" · "+network.summary.url_observations+" URL · "+network.summary.unique_raw_hashes+" уникальных SHA-256";
+const subjects=new Set(network.approved_competitions.flatMap(x=>x.subject_ids));[...subjects].sort().forEach(id=>{const o=document.createElement("option");o.value=id;o.textContent=id;$("subject").append(o)});
+const seasons=new Set(network.observations.map(x=>x.classification.season).filter(Boolean));[...seasons].sort((a,b)=>b-a).forEach(y=>{const o=document.createElement("option");o.value=y;o.textContent=y+"/"+String((y+1)%100).padStart(2,"0");$("year").append(o)});
+document.querySelectorAll("#nav button").forEach(b=>b.addEventListener("click",()=>{tab=b.dataset.tab;current=null;$("detailsTitle").textContent="Карточка объекта";$("details").innerHTML='<div class="empty">Выберите элемент слева.</div>';render()}));
+["search","subject","year"].forEach(id=>$(id).addEventListener(id==="search"?"input":"change",render));
+render()
+}
+start().catch(err=>{$("stamp").textContent="Не удалось открыть сеть RU: "+err.message;$("items").innerHTML='<div class="empty">Не найден network.json. Проверьте публикацию Pages и состояние Dropbox checkpoint.</div>'});
+</script>
+</body></html>

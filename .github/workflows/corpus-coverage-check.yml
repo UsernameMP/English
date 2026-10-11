@@ -4,6 +4,9 @@ on:
   pull_request:
     paths:
       - "tools/corpus_ingest/coverage_dashboard.py"
+      - "tools/corpus_ingest/discovery_network.py"
+      - "tools/corpus_ingest/tests/test_discovery_network.py"
+      - "docs/corpus_discovery_network_tz.md"
       - "tools/corpus_ingest/registry/competitions.json"
       - "tools/corpus_ingest/tests/test_coverage_dashboard.py"
       - "tools/document_triage/corpus/**"
@@ -13,6 +16,9 @@ on:
     branches: [main]
     paths:
       - "tools/corpus_ingest/coverage_dashboard.py"
+      - "tools/corpus_ingest/discovery_network.py"
+      - "tools/corpus_ingest/tests/test_discovery_network.py"
+      - "docs/corpus_discovery_network_tz.md"
       - "tools/corpus_ingest/registry/competitions.json"
       - "tools/corpus_ingest/tests/test_coverage_dashboard.py"
       - "tools/document_triage/corpus/**"
@@ -32,6 +38,8 @@ jobs:
           python-version: "3.12"
       - name: Test coverage model and seeded facts
         run: python -m unittest discover -s tools/corpus_ingest/tests -p test_coverage_dashboard.py -v
+      - name: Test RU source graph, RAW SHA links and unknown preservation
+        run: python -m unittest discover -s tools/corpus_ingest/tests -p test_discovery_network.py -v
       - name: Test reproducible JSON generation from small fixtures
         run: |
           python - <<'PY'
