@@ -1,666 +1,6 @@
 {
   "queue": [
     {
-      "url": "https://naclo.org/past_competitions.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/international.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/related_events.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/current_press.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/past_press.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/current_sponsors.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/past_sponsors.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/main.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/problems_2010.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/2010A.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/2010C.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/problems_2011.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/2011A.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/problems_2012.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/2012A.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/2012D.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/2012E.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/2012F.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/2012H.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/2012O.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/problems_2013.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/2013C.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/2013G.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/problems_2014.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/2014A.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/2014B.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/practice/2014C.html",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/registration_page.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/resources.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/register_highhost.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/register_highsite.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/register_univhost.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/help.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/privacy_policy.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/site_map.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://naclo.org/credits.php",
-      "root": "https://naclo.org/practice.php",
-      "depth": 1
-    },
-    {
-      "url": "https://www.itym.org/welcome",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "https://www.itym.org/rules",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "https://www.itym.org/results",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "https://www.itym.org/practical-information",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "https://www.itym.org/about-us",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "https://www.itym.org/ommie",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "https://www.itym.org/ommie/summer-school",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "https://www.itym.org/ommie/mathematics-club",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "https://www.itym.org/ommie/matklub",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2024",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2023",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2022",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2021",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2020",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2019",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2018",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2017",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2016",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2015",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2014",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2013",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2012",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2011",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2010",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "http://www.itym.org/results-2009",
-      "root": "https://www.itym.org/archive",
-      "depth": 1
-    },
-    {
-      "url": "https://icpc.foundation/",
-      "root": "https://icpc.foundation/archive/",
-      "depth": 1
-    },
-    {
-      "url": "https://icpc.foundation/projects/",
-      "root": "https://icpc.foundation/archive/",
-      "depth": 1
-    },
-    {
-      "url": "https://icpc.foundation/people/",
-      "root": "https://icpc.foundation/archive/",
-      "depth": 1
-    },
-    {
-      "url": "https://icpc.foundation/contact/",
-      "root": "https://icpc.foundation/archive/",
-      "depth": 1
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2026&item=info",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2026&item=schedule",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2026&item=problems",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2026&item=results",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2026&item=contact",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2026§ion=info&item=ivan",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=1994",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=1995",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=1996",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=1997",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=1998",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=1999",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2000",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2001",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2002",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2003",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2004",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2005",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2006",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2007",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2008",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2009",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2010",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2011",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2012",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2013",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2014",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2015",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2016",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2017",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2018",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2019",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2020",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2021",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2022",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2023",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2024",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "http://www.imc-math.org.uk/?year=2025",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?year=2026§ion=info&item=ivan",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?act=results&by=sum&year=2026",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?act=teams&year=2026",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imc-math.org.uk/?act=leaders&year=2026",
-      "root": "https://www.imc-math.org.uk/?item=problems",
-      "depth": 2
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/yerli@metu.edu.tr",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/barbaros@istanbul.edu.tr",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/mezunlar",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/bolgesel-bilim-olimpiyatlari",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/uluslararasi-bilim-olimpiyatlari",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/tr/index.html",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/tr/yerli@metu.edu.tr",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/tr/barbaros@istanbul.edu.tr",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/kayip-mezun",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/duyurular",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/olimpiyatlar",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/oduller-ve-olanaklar",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/index.html",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/kvkk",
-      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
-      "depth": 2
-    },
-    {
-      "url": "https://daryn.kz",
-      "root": "https://daryn.kz/",
-      "depth": 2
-    },
-    {
-      "url": "https://games.daryn.kz/register_student.php",
-      "root": "https://daryn.kz/",
-      "depth": 2
-    },
-    {
-      "url": "https://daryn.kz/structure-list/",
-      "root": "https://daryn.kz/",
-      "depth": 2
-    },
-    {
-      "url": "https://daryn.kz/structura/kk/structura-list-kz/",
-      "root": "https://daryn.kz/",
-      "depth": 2
-    },
-    {
-      "url": "https://aktobe.daryn.kz/",
-      "root": "https://daryn.kz/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/domestic/jjmo_overview.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/domestic/jgmo_overview.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/seminar.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/overseas/imo.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/overseas/imo_statistics.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
       "url": "https://www.imojp.org/overseas/apmo_statistics.html",
       "root": "https://www.imojp.org/domestic/jmo_overview.html",
       "depth": 2
@@ -15059,24 +14399,1536 @@
       "url": "https://eupho.ee/eupho-2020/",
       "root": "https://eupho.ee/archive/",
       "depth": 1
+    },
+    {
+      "url": "https://math.naboj.org/uz/ru/archive/",
+      "root": "https://math.naboj.org/uz/ru/archive/",
+      "depth": 0
+    },
+    {
+      "url": "https://www.obmep.org.br/provas.htm",
+      "root": "https://www.obmep.org.br/provas.htm",
+      "depth": 0
+    },
+    {
+      "url": "https://www.lhsmath.org/LMT/Problems_and_Solutions",
+      "root": "https://www.lhsmath.org/LMT/Problems_and_Solutions",
+      "depth": 0
+    },
+    {
+      "url": "https://www.concurs.imclain.ro/probleme.php",
+      "root": "https://www.concurs.imclain.ro/probleme.php",
+      "depth": 0
+    },
+    {
+      "url": "https://olympia.uz/ru/archive/index",
+      "root": "https://olympia.uz/ru/archive/index",
+      "depth": 0
+    },
+    {
+      "url": "https://concursgm.mateil.ro/index.html",
+      "root": "https://concursgm.mateil.ro/index.html",
+      "depth": 0
+    },
+    {
+      "url": "https://ksms.kg/instrukcia-dlya-uchastnikov-rom",
+      "root": "https://ksms.kg/instrukcia-dlya-uchastnikov-rom",
+      "depth": 0
+    },
+    {
+      "url": "https://elibrary.auca.kg/handle/123456789/2777",
+      "root": "https://elibrary.auca.kg/handle/123456789/2777",
+      "depth": 0
+    },
+    {
+      "url": "https://phoxiv.org/",
+      "root": "https://phoxiv.org/",
+      "depth": 0
+    },
+    {
+      "url": "https://belastro.org/republican.html",
+      "root": "https://belastro.org/republican.html",
+      "depth": 0
+    },
+    {
+      "url": "https://www.oecho.at/bewerb/aufgaben/",
+      "root": "https://www.oecho.at/bewerb/aufgaben/",
+      "depth": 0
+    },
+    {
+      "url": "https://icho.sk/competition-problems/",
+      "root": "https://icho.sk/competition-problems/",
+      "depth": 0
+    },
+    {
+      "url": "https://belmath.org/archive/",
+      "root": "https://belmath.org/archive/",
+      "depth": 0
+    },
+    {
+      "url": "https://www.olchem.edu.pl/zadania/",
+      "root": "https://www.olchem.edu.pl/zadania/",
+      "depth": 0
+    },
+    {
+      "url": "https://konkurschem.umk.pl/pages/main_page/",
+      "root": "https://konkurschem.umk.pl/pages/main_page/",
+      "depth": 0
+    },
+    {
+      "url": "https://www.chemia.polsl.pl/konkurs/archiwum.html",
+      "root": "https://www.chemia.polsl.pl/konkurs/archiwum.html",
+      "depth": 0
+    },
+    {
+      "url": "https://www.konkurschemiczny.ch.pw.edu.pl/materialy-archiwalne/",
+      "root": "https://www.konkurschemiczny.ch.pw.edu.pl/materialy-archiwalne/",
+      "depth": 0
+    },
+    {
+      "url": "https://www.icho2026.uz/problems",
+      "root": "https://www.icho2026.uz/problems",
+      "depth": 0
+    },
+    {
+      "url": "https://www.diament.agh.edu.pl/kategoria-zadan/chemia/",
+      "root": "https://www.diament.agh.edu.pl/kategoria-zadan/chemia/",
+      "depth": 0
+    },
+    {
+      "url": "https://physicswithstefan.com/usapho-papers/",
+      "root": "https://physicswithstefan.com/usapho-papers/",
+      "depth": 0
+    },
+    {
+      "url": "https://chemia.uwb.edu.pl/dla-szkol/podlaski-konkurs-chemiczny",
+      "root": "https://chemia.uwb.edu.pl/dla-szkol/podlaski-konkurs-chemiczny",
+      "depth": 0
+    },
+    {
+      "url": "https://www.imo.kg/",
+      "root": "https://www.imo.kg/",
+      "depth": 0
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026&section=problems&item=day1",
+      "root": "https://www.imc-math.org.uk/?year=2026&item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026&section=problems&item=prob1q",
+      "root": "https://www.imc-math.org.uk/?year=2026&item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026&section=problems&item=prob2q",
+      "root": "https://www.imc-math.org.uk/?year=2026&item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026&section=problems&item=prob3q",
+      "root": "https://www.imc-math.org.uk/?year=2026&item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026&section=problems&item=prob4q",
+      "root": "https://www.imc-math.org.uk/?year=2026&item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026&section=problems&item=prob5q",
+      "root": "https://www.imc-math.org.uk/?year=2026&item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026&section=problems&item=day2",
+      "root": "https://www.imc-math.org.uk/?year=2026&item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026&section=problems&item=prob6q",
+      "root": "https://www.imc-math.org.uk/?year=2026&item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026&section=problems&item=prob7q",
+      "root": "https://www.imc-math.org.uk/?year=2026&item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026&section=problems&item=prob8q",
+      "root": "https://www.imc-math.org.uk/?year=2026&item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026&section=problems&item=prob9q",
+      "root": "https://www.imc-math.org.uk/?year=2026&item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026&section=problems&item=prob10q",
+      "root": "https://www.imc-math.org.uk/?year=2026&item=problems",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026&section=info&item=ivan",
+      "root": "https://www.imc-math.org.uk/?year=2026&item=info",
+      "depth": 1
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2026&section=info&item=ivan",
+      "root": "http://www.imc-math.org.uk",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/naclo2026.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2025.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2024.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2023.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2022.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2021.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2020.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2019.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2018.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2017.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2016.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2015.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2014.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2013.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2012.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2011.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2010.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2009.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2008.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/naclo2007.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/password/reset/",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "https://naclo.org/resend-confirmation/",
+      "root": "https://naclo.org/practice.php",
+      "depth": 2
+    },
+    {
+      "url": "http://www.itym.org/rules",
+      "root": "https://www.itym.org/archive",
+      "depth": 2
+    },
+    {
+      "url": "http://www.itym.org/welcome",
+      "root": "https://www.itym.org/archive",
+      "depth": 2
+    },
+    {
+      "url": "http://www.itym.org/results",
+      "root": "https://www.itym.org/archive",
+      "depth": 2
+    },
+    {
+      "url": "http://www.itym.org/practical-information",
+      "root": "https://www.itym.org/archive",
+      "depth": 2
+    },
+    {
+      "url": "http://www.itym.org/archive",
+      "root": "https://www.itym.org/archive",
+      "depth": 2
+    },
+    {
+      "url": "http://www.itym.org/about-us",
+      "root": "https://www.itym.org/archive",
+      "depth": 2
+    },
+    {
+      "url": "http://www.itym.org/ommie",
+      "root": "https://www.itym.org/archive",
+      "depth": 2
+    },
+    {
+      "url": "http://www.itym.org/ommie/summer-school",
+      "root": "https://www.itym.org/archive",
+      "depth": 2
+    },
+    {
+      "url": "http://www.itym.org/ommie/mathematics-club",
+      "root": "https://www.itym.org/archive",
+      "depth": 2
+    },
+    {
+      "url": "http://www.itym.org/ommie/matklub",
+      "root": "https://www.itym.org/archive",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2026&section=problems&item=day1",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2026&section=problems&item=prob1q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2026&section=problems&item=prob2q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2026&section=problems&item=prob3q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2026&section=problems&item=prob4q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2026&section=problems&item=prob5q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2026&section=problems&item=day2",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2026&section=problems&item=prob6q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2026&section=problems&item=prob7q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2026&section=problems&item=prob8q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2026&section=problems&item=prob9q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2026&section=problems&item=prob10q",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?act=results&by=sum&year=2026",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?act=teams&year=2026",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?act=leaders&year=2026",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=1994?year=1994&item=info",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=1994?year=1994&item=results",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=1994?year=1994&item=problems",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=1994?year=1994",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=1995?year=1995&item=info",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=1995?year=1995&item=results",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=1995?year=1995&item=problems",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=1995?year=1995",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 3
+    },
+    {
+      "url": "http://bilimolimpiyatlari.tubitak.gov.tr/index.html",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 3
+    },
+    {
+      "url": "https://games.daryn.kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://games.daryn.kz/old2023_2026/index.php",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://games.daryn.kz/students/index.php",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/til-symvol-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/reg-2/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/%d0%be%d1%80%d1%82%d0%b0%d0%bb%d1%8b%d2%9b-%d1%82%d1%83%d1%80%d0%b0%d0%bb%d1%8b/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/structura-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/%d0%bd%d0%be%d1%80%d0%bc%d0%b0%d1%82%d0%b8%d0%b2%d1%82%d1%96%d0%ba-%d2%9b%d2%b1%d2%9b%d1%8b%d2%9b%d1%82%d1%8b%d2%9b-%d2%9b%d2%b1%d0%b6%d0%b0%d1%82%d1%82%d0%b0%d1%80/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/%d3%99%d0%b4%d0%b5%d0%bf-%d0%b6%d3%99%d0%bd%d0%b5-%d1%81%d1%8b%d0%b1%d0%b0%d0%b9%d0%bb%d0%b0%d1%81-%d0%b6%d0%b5%d0%bc%d2%9b%d0%be%d1%80%d0%bb%d1%8b%d2%9b-%d1%82%d3%99%d1%83%d0%b5%d0%ba%d0%b5%d0%bb/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/%d1%81%d1%8b%d0%b1%d0%b0%d0%b9%d0%bb%d0%b0%d1%81-%d0%b6%d0%b5%d0%bc%d2%9b%d0%be%d1%80%d0%bb%d1%8b%d2%9b%d2%9b%d0%b0-%d2%9b%d0%b0%d1%80%d1%81%d1%8b-%d1%81%d1%82%d0%b0%d0%bd%d0%b4%d0%b0%d1%80%d1%82/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/%d1%81%d1%8b%d0%b1%d0%b0%d0%b9%d0%bb%d0%b0%d1%81-%d0%b6%d0%b5%d0%bc%d2%9b%d0%be%d1%80%d0%bb%d1%8b%d2%9b-%d0%ba%d0%b0%d1%80%d1%82%d0%be%d0%b3%d0%b0%d0%bc%d0%bc%d0%b0%d1%81%d1%8b/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/%d1%81%d2%b1%d1%80%d0%b0%d2%9b%d1%82%d0%b0%d1%80-%d0%bc%d0%b5%d0%bd-%d0%b6%d0%b0%d1%83%d0%b0%d0%bf%d1%82%d0%b0%d1%80/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/%d0%b0%d0%b9%d0%b4%d1%8b%d2%a3-%d2%af%d0%b7%d0%b4%d1%96%d0%ba-%d2%9b%d1%8b%d0%b7%d0%bc%d0%b5%d1%82%d0%ba%d0%b5%d1%80%d1%96/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/region-centre-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/set-shkol-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/plan-raboty-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/vacancy-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/%d0%b1%d0%b0%d0%b9%d0%bb%d0%b0%d0%bd%d1%8b%d1%81%d1%82%d0%b0%d1%80/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/darynkz/darynkz-kalendar/darynkz.php",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/pravila-i-polozhenie-meropriyatii-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/uchebno-trenirovochnye-sbory-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/%d0%be%d0%bb%d0%b8%d0%bc%d0%bf%d0%b8%d0%b0%d0%b4%d0%b0%d0%bb%d1%8b%d2%9b-%d1%80%d0%b5%d0%b7%d0%b5%d1%80%d0%b2-%d0%bc%d0%b5%d0%ba%d1%82%d0%b5%d0%b1%d1%96/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/%d0%bc%d2%b1%d2%93%d0%b0%d0%bb%d1%96%d0%bc%d0%b4%d0%b5%d1%80%d0%b3%d0%b5-%d0%b0%d1%80%d0%bd%d0%b0%d0%bb%d2%93%d0%b0%d0%bd-%d0%be%d0%bb%d0%b8%d0%bc%d0%bf%d0%b8%d0%b0%d0%b4%d0%b0%d0%bb%d0%b0%d1%80/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/method-recomend-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/%d0%b6%d0%b8%d0%bd%d0%b0%d2%9b%d1%82%d0%b0%d1%80/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/bastau-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/5-6-ro/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/resp-junior-olimpiad-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/respa-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/aul-olimp-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/po-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/karjy-sauattylygy/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/philosophy-syni-oilau/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/finance-economica-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/resp-ol-lingvist-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/zhautyk-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/evraziyskaya-olymp-inform-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/satpaev-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/abay-oqulary-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/%d0%b0-%d0%ba%d0%b5%d0%ba%d1%96%d0%bb%d0%b1%d0%b0%d0%b5%d0%b2-%d0%b0%d1%82%d1%8b%d0%bd%d0%b4%d0%b0%d2%93%d1%8b-%d1%80%d0%b5%d1%81%d0%bf%d1%83%d0%b1%d0%bb%d0%b8%d0%ba%d0%b0%d0%bb%d1%8b%d2%9b-%d0%be/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/jyr-alyby-jambyl/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/rknp-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/zerde-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/pro-eco-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/moya-malaya-rodina-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/omn-kz/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://daryn.kz/kk/мұғалімдерге-арналған-олимпиадалар/",
+      "root": "https://daryn.kz/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/domestic/jjmo_yosen.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/domestic/jjmo_honsen.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21yqa.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21hq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20hq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2020/jjmo2020/problems/jjmo18yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2020/jjmo2020/problems/jjmo18hq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2019/jjmo2019/problems/jjmo17yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2019/jjmo2019/problems/jjmo17mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2018/jjmo2018/problems/jjmo16yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2018/jjmo2018/problems/jjmo16mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2017/jjmo2017/problems/jjmo15yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2017/jjmo2017/problems/jjmo15mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2016/jjmo2016/problems/jjmo14yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2016/jjmo2016/problems/jjmo14mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2015/jjmo2015/problems/jjmo13yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2015/jjmo2015/problems/jjmo13mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2014/jjmo2014/problems/jjmo12yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2014/jjmo2014/problems/jjmo12mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2013/jjmo2013/problems/jjmo11yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2013/jjmo2013/problems/jjmo11mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2012/jjmo2012/problems/jjmo10yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2012/jjmo2012/problems/jjmo10mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2011/jjmo2011/problems/jjmo9yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2011/jjmo2011/problems/jjmo9mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2010/jjmo2010/problems/jjmo8yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2010/jjmo2010/problems/jjmo8mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2009/jjmo2009/problems/jjmo7yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2009/jjmo2009/problems/jjmo7mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2008/jjmo2008/problems/jjmo6q.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2007/jjmo2007/problems/jjmo5q.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2006/jjmo2006/problems/jjmo4q.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2005/jjmo2005/problems/jjmo3q.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2004/jjmo2004/problems/jjmo2q.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2003/jjmo2003/problems/jjmo1q.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2025/jjmo/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2024/jjmo/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2023/jjmo/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2022/jjmo2022/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2020/jjmo2020/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2019/jjmo2019/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2018/jjmo2018/honsen_result.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/overseas/egmo_results.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2025/jgmo/jgmo_apply.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2023/jegmo/problems/jegmo12q.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2022/jegmo2022/problems/jegmo11q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2021/jegmo2021/problems/jegmo10q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2020/jegmo2020/problems/jegmo9q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2019/jegmo2019/problems/jegmo8q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2018/jegmo2018/problems/jegmo7q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2017/jegmo2017/problems/jegmo6q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2016/jegmo2016/problems/jegmo5q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2015/jegmo2015/problems/jegmo4q.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/domestic/jgmo_yosen.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/domestic/jgmo_honsen.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2016/seminar2016/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2017/seminar2017/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2018/seminar2018/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2019/seminar2019/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2022/seminar2022/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2023/seminar2023/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2024/seminar/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2025/seminar/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/seminar/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/overseas/imo_results2018-.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/overseas/imo_results.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/overseas/imo_regulation.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2025/imo/quick_report/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2024/imo/quick_report/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2023/imo2023/quick_report/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2022/imo2022/quick_report/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2021/imo2021/flash_report/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2020/imo2020/flash_report/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2019/imo2019/flash_report/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2007/imo2007/problems/imo48.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2005/imo2005/problems/imo46.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2004/imo2004/problems/imo45.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2003/imo2003/problems/imo44.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2002/imo2002/problems/imo43.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2001/imo2001/problems/imo42.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2000/imo2000/problems/imo41.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 3
+    },
+    {
+      "url": "https://naclo.org/practice/2011A.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/practice/problems_2012.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/practice/2012A.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/practice/2012D.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/practice/2012E.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/practice/2012F.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/practice/2012H.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/practice/2012O.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/practice/problems_2013.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/practice/2013C.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/practice/2013G.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/practice/problems_2014.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/practice/2014A.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/practice/2014B.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/practice/2014C.html",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/registration_page.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/resources.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/register_highhost.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/register_highsite.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/register_univhost.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/help.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/privacy_policy.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/site_map.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "https://naclo.org/credits.php",
+      "root": "https://naclo.org/practice.php",
+      "depth": 1
+    },
+    {
+      "url": "http://www.itym.org/results-2021",
+      "root": "https://www.itym.org/archive",
+      "depth": 1
+    },
+    {
+      "url": "http://www.itym.org/results-2020",
+      "root": "https://www.itym.org/archive",
+      "depth": 1
+    },
+    {
+      "url": "http://www.itym.org/results-2019",
+      "root": "https://www.itym.org/archive",
+      "depth": 1
+    },
+    {
+      "url": "http://www.itym.org/results-2018",
+      "root": "https://www.itym.org/archive",
+      "depth": 1
+    },
+    {
+      "url": "http://www.itym.org/results-2017",
+      "root": "https://www.itym.org/archive",
+      "depth": 1
+    },
+    {
+      "url": "http://www.itym.org/results-2016",
+      "root": "https://www.itym.org/archive",
+      "depth": 1
+    },
+    {
+      "url": "http://www.itym.org/results-2015",
+      "root": "https://www.itym.org/archive",
+      "depth": 1
+    },
+    {
+      "url": "http://www.itym.org/results-2014",
+      "root": "https://www.itym.org/archive",
+      "depth": 1
+    },
+    {
+      "url": "http://www.itym.org/results-2013",
+      "root": "https://www.itym.org/archive",
+      "depth": 1
+    },
+    {
+      "url": "http://www.itym.org/results-2012",
+      "root": "https://www.itym.org/archive",
+      "depth": 1
+    },
+    {
+      "url": "http://www.itym.org/results-2011",
+      "root": "https://www.itym.org/archive",
+      "depth": 1
+    },
+    {
+      "url": "http://www.itym.org/results-2010",
+      "root": "https://www.itym.org/archive",
+      "depth": 1
+    },
+    {
+      "url": "http://www.itym.org/results-2009",
+      "root": "https://www.itym.org/archive",
+      "depth": 1
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2026§ion=info&item=ivan",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=1996",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=1997",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=1998",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=1999",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2000",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2001",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2002",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2003",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2004",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2005",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2006",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2007",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2008",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2009",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2010",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2011",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2012",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2013",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2014",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2015",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2016",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2017",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2018",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2019",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2020",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2021",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2022",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2023",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2024",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "http://www.imc-math.org.uk/?year=2025",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?year=2026§ion=info&item=ivan",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?act=results&by=sum&year=2026",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?act=teams&year=2026",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imc-math.org.uk/?act=leaders&year=2026",
+      "root": "https://www.imc-math.org.uk/?item=problems",
+      "depth": 2
+    },
+    {
+      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/oduller-ve-olanaklar",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/index.html",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/kvkk",
+      "root": "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+      "depth": 2
+    },
+    {
+      "url": "https://aktobe.daryn.kz/",
+      "root": "https://daryn.kz/",
+      "depth": 2
     }
   ],
   "visited": [
+    "http://bilimolimpiyatlari.tubitak.gov.tr/",
+    "http://bilimolimpiyatlari.tubitak.gov.tr/tr/barbaros@istanbul.edu.tr",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/bilim-olimpiyatlari",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/bolgesel-bilim-olimpiyatlari",
+    "http://bilimolimpiyatlari.tubitak.gov.tr/tr/index.html",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/mezunlar",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/oduller-ve-olanaklar",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/online-sinav",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/program-hakkinda",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/ulusal-bilim-olimpiyatlari",
     "http://bilimolimpiyatlari.tubitak.gov.tr/tr/uluslararasi-bilim-olimpiyatlari",
+    "http://bilimolimpiyatlari.tubitak.gov.tr/tr/yerli@metu.edu.tr",
     "http://www.imc-math.org.uk",
+    "http://www.imc-math.org.uk/?year=1994",
+    "http://www.imc-math.org.uk/?year=1995",
+    "http://www.imc-math.org.uk/?year=2026&item=contact",
+    "http://www.imc-math.org.uk/?year=2026&item=info",
+    "http://www.imc-math.org.uk/?year=2026&item=problems",
+    "http://www.imc-math.org.uk/?year=2026&item=results",
+    "http://www.imc-math.org.uk/?year=2026&item=schedule",
+    "http://www.itym.org/results-2022",
+    "http://www.itym.org/results-2023",
+    "http://www.itym.org/results-2024",
     "https://amt.edu.au/department/past-papers",
     "https://aplo.asia/problems/problems-by-year/",
     "https://bilimolimpiyatlari.tubitak.gov.tr/",
+    "https://bilimolimpiyatlari.tubitak.gov.tr/tr/barbaros@istanbul.edu.tr",
+    "https://bilimolimpiyatlari.tubitak.gov.tr/tr/bolgesel-bilim-olimpiyatlari",
+    "https://bilimolimpiyatlari.tubitak.gov.tr/tr/duyurular",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
+    "https://bilimolimpiyatlari.tubitak.gov.tr/tr/kayip-mezun",
+    "https://bilimolimpiyatlari.tubitak.gov.tr/tr/mezunlar",
+    "https://bilimolimpiyatlari.tubitak.gov.tr/tr/olimpiyatlar",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/program-hakkinda",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/takvim",
+    "https://bilimolimpiyatlari.tubitak.gov.tr/tr/uluslararasi-bilim-olimpiyatlari",
+    "https://bilimolimpiyatlari.tubitak.gov.tr/tr/yerli@metu.edu.tr",
     "https://bmos.ukmt.org.uk/",
     "https://bmos.ukmt.org.uk/home/bmo",
     "https://bmos.ukmt.org.uk/home/bmo.shtml",
@@ -15099,6 +15951,7 @@
     "https://cms.math.ca/about-the-cms/governance/terms-of-reference/",
     "https://cms.math.ca/bylaws-of-the-cms/",
     "https://cms.math.ca/competitions/cmo/",
+    "https://daryn.kz",
     "https://daryn.kz/",
     "https://daryn.kz/%d0%b0%d0%bd%d1%82%d0%b8%d0%ba%d0%be%d1%80%d1%80%d1%83%d0%bf%d1%86%d0%b8%d0%be%d0%bd%d0%bd%d1%8b%d0%b9-%d1%81%d1%82%d0%b0%d0%bd%d0%b4%d0%b0%d1%80%d1%82/",
     "https://daryn.kz/%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d1%8b-%d0%b8-%d0%be%d1%82%d0%b2%d0%b5%d1%82%d1%8b/",
@@ -15111,6 +15964,8 @@
     "https://daryn.kz/region-centre/",
     "https://daryn.kz/set-shkol/",
     "https://daryn.kz/structura/",
+    "https://daryn.kz/structura/kk/structura-list-kz/",
+    "https://daryn.kz/structure-list/",
     "https://eupho.ee",
     "https://eupho.ee/",
     "https://eupho.ee/about/",
@@ -15124,21 +15979,38 @@
     "https://eupho.ee/links/",
     "https://eupho.ee/posts/",
     "https://eupho.ee/rules/",
+    "https://games.daryn.kz/register_student.php",
     "https://home.pmo.ph/downloads/",
+    "https://icpc.foundation/",
     "https://icpc.foundation/archive/",
+    "https://icpc.foundation/contact/",
+    "https://icpc.foundation/people/",
+    "https://icpc.foundation/projects/",
     "https://ioaastrophysics.org/resources/problems-from-past-ioaa",
     "https://jarnik.osu.cz/problems",
     "https://maa.org/maa-putnam-archive/",
     "https://naclo.org",
     "https://naclo.org/about.php",
+    "https://naclo.org/current_press.php",
+    "https://naclo.org/current_sponsors.php",
     "https://naclo.org/donate.php",
     "https://naclo.org/high_school_sites.php",
     "https://naclo.org/homeschool_coordinators.php",
     "https://naclo.org/hs_coordinators.php",
     "https://naclo.org/index.php",
+    "https://naclo.org/international.php",
+    "https://naclo.org/main.php",
     "https://naclo.org/organizing_committee.php",
+    "https://naclo.org/past_competitions.php",
+    "https://naclo.org/past_press.php",
+    "https://naclo.org/past_sponsors.php",
     "https://naclo.org/practice.php",
+    "https://naclo.org/practice/2010A.html",
+    "https://naclo.org/practice/2010C.html",
+    "https://naclo.org/practice/problems_2010.html",
+    "https://naclo.org/practice/problems_2011.html",
     "https://naclo.org/program_committee.php",
+    "https://naclo.org/related_events.php",
     "https://naclo.org/univ_coordinators.php",
     "https://naclo.org/university_sites.php",
     "https://olympiads.hbcse.tifr.res.in/",
@@ -15202,6 +16074,8 @@
     "https://www.imc-math.org.uk/?year=2026&item=schedule",
     "https://www.imojp.org/archive/contribution/index.html",
     "https://www.imojp.org/archive/imo2003/index.html",
+    "https://www.imojp.org/domestic/jgmo_overview.html",
+    "https://www.imojp.org/domestic/jjmo_overview.html",
     "https://www.imojp.org/domestic/jmo.html",
     "https://www.imojp.org/domestic/jmo_apply.html",
     "https://www.imojp.org/domestic/jmo_overview.html",
@@ -15209,12 +16083,24 @@
     "https://www.imojp.org/index.html",
     "https://www.imojp.org/inquiry.html",
     "https://www.imojp.org/newsletter/index.html",
+    "https://www.imojp.org/overseas/imo.html",
+    "https://www.imojp.org/overseas/imo_statistics.html",
+    "https://www.imojp.org/seminar.html",
     "https://www.imojp.org/support/donation/JMOsanjokai190626.html",
     "https://www.imojp.org/support/index.html",
     "https://www.imojp.org/support/sponsorship.html",
     "https://www.ioling.org/problems/",
     "https://www.ioling.org/subscribe",
+    "https://www.itym.org/about-us",
     "https://www.itym.org/archive",
+    "https://www.itym.org/ommie",
+    "https://www.itym.org/ommie/mathematics-club",
+    "https://www.itym.org/ommie/matklub",
+    "https://www.itym.org/ommie/summer-school",
+    "https://www.itym.org/practical-information",
+    "https://www.itym.org/results",
+    "https://www.itym.org/rules",
+    "https://www.itym.org/welcome",
     "https://www.jpho.jp/",
     "https://www.jpho.jp/career/",
     "https://www.jpho.jp/challenge/",
@@ -15326,14 +16212,24 @@
     "https://olympiads.hbcse.tifr.res.in/?page_id=55": {
       "tries": 1,
       "error": "HTTPError"
+    },
+    "http://www.imc-math.org.uk/?year=2026§ion=info&item=ivan": {
+      "tries": 1,
+      "error": "UnicodeEncodeError"
+    },
+    "https://aktobe.daryn.kz/": {
+      "tries": 1,
+      "error": "HTTPError"
     }
   },
   "version": 1,
-  "updated_at": "2026-10-11T15:08:49+00:00",
+  "updated_at": "2026-10-11T15:29:48+00:00",
   "last_run": {
     "html_pages": 60,
-    "new_links": 3362,
-    "pending_pages": 3012,
-    "blocked_or_failed": 20
-  }
+    "new_links": 1981,
+    "pending_pages": 3178,
+    "blocked_or_failed": 22
+  },
+  "html_ampersand_repair_v1": true,
+  "html_ampersand_requeued": 4
 }
