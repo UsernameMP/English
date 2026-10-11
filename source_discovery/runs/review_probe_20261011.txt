@@ -1,1 +1,2 @@
 RIFT review checkpoint: shard 5 inspected; Japanese math archive links examined.
+{"id":"548d02aca92a54f5ed6b9ed7","type":"task","year":2026}
