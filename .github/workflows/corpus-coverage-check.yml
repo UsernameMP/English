@@ -1,0 +1,50 @@
+name: Corpus Coverage validation
+
+on:
+  pull_request:
+    paths:
+      - "tools/corpus_ingest/coverage_dashboard.py"
+      - "tools/corpus_ingest/registry/competitions.json"
+      - "tools/corpus_ingest/tests/test_coverage_dashboard.py"
+      - "tools/document_triage/corpus/**"
+      - ".github/workflows/document-triage-pages.yml"
+      - ".github/workflows/corpus-coverage-check.yml"
+  push:
+    branches: [main]
+    paths:
+      - "tools/corpus_ingest/coverage_dashboard.py"
+      - "tools/corpus_ingest/registry/competitions.json"
+      - "tools/corpus_ingest/tests/test_coverage_dashboard.py"
+      - "tools/document_triage/corpus/**"
+      - ".github/workflows/corpus-coverage-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Test coverage model and seeded facts
+        run: python -m unittest discover -s tools/corpus_ingest/tests -p test_coverage_dashboard.py -v
+      - name: Test reproducible JSON generation from small fixtures
+        run: |
+          python - <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, "tools/corpus_ingest")
+          import coverage_dashboard as c
+          registry = json.loads(c.REGISTRY.read_text(encoding="utf-8"))
+          record = {"url": "https://tasks.olimpiada.ru/upload/files/tasks/88/2025/tasks-engl-7-8-mun-25-26.pdf", "source_id": "olimpiada_ru_engl_archive", "status": "DOWNLOADED"}
+          result = c.generate(registry, [record], [])
+          assert result["summary"]["identified_urls"] == 1
+          assert result["cells"][0]["season"] == 2025
+          assert result["cells"][0]["stage_id"] == "municipal"
+          print("Coverage generator OK")
+          PY
