@@ -15,7 +15,9 @@ from urllib.robotparser import RobotFileParser
 
 ROOT = Path(__file__).resolve().parent
 STATE = ROOT / "crawl_state.json"
-RAW = ROOT / "links_raw.jsonl"
+RAW = ROOT / "links_raw.jsonl"  # legacy staging file, migrated into readable shards
+SHARDS = ROOT / "links_shards"
+SHARD_ROWS = 100
 SOURCES = ROOT / "sources.jsonl"
 MAX_PAGES = int(os.getenv("RIFT_PAGES_PER_RUN", "60"))
 PER_SITE = int(os.getenv("RIFT_PAGES_PER_SITE", "12"))
@@ -138,8 +140,14 @@ def main():
             queue.append({"url": u, "root": u, "depth": 0})
             queued.add(u)
 
-    old = read_jsonl(RAW)
-    seen = {x.get("id") for x in old}
+    # Migrate any older large single-file ledger into small connector-readable shards.
+    SHARDS.mkdir(exist_ok=True)
+    legacy = read_jsonl(RAW)
+    shard_paths = sorted(SHARDS.glob("batch_*.jsonl"))
+    seen = {row.get("id") for row in legacy}
+    for fp in shard_paths:
+        for row in read_jsonl(fp):
+            seen.add(row.get("id"))
     new = []
     per_site = defaultdict(int)
     robots = {}
@@ -211,10 +219,27 @@ def main():
         time.sleep(0.25)
 
     queue.extend(stopped)
-    if new:
-        with RAW.open("a", encoding="utf-8") as f:
-            for item in new:
-                f.write(json.dumps(item, ensure_ascii=False) + "\n")
+    # Commit-sized shards let ChatGPT fetch and classify URLs without truncation.
+    # Keep EVERY raw candidate. Do not discard entries based on heuristic score.
+    records = legacy + new
+    if records:
+        last_num = int(shard_paths[-1].stem.split("_")[-1]) if shard_paths else 0
+        last_path = shard_paths[-1] if shard_paths else None
+        last_count = len(read_jsonl(last_path)) if last_path else 0
+        index = 0
+        while index < len(records):
+            if last_path is None or last_count >= SHARD_ROWS:
+                last_num += 1
+                last_path = SHARDS / f"batch_{last_num:06d}.jsonl"
+                last_count = 0
+            take = min(SHARD_ROWS - last_count, len(records) - index)
+            with last_path.open("a", encoding="utf-8") as output:
+                for row in records[index:index + take]:
+                    output.write(json.dumps(row, ensure_ascii=False) + "\n")
+            index += take
+            last_count += take
+        # Legacy file is emptied only after all records have been copied.
+        RAW.write_text("", encoding="utf-8")
     state["queue"] = queue
     state["visited"] = sorted(visited)
     state["updated_at"] = now()
