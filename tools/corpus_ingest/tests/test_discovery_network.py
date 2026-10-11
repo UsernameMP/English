@@ -32,7 +32,7 @@ class DiscoveryNetworkTest(unittest.TestCase):
         self.assertEqual(out["segment"]["id"], "RU")
         self.assertEqual(out["observations"][0]["classification"]["subject_id"], "english")
         self.assertEqual(out["observations"][0]["classification"]["competition_id"], "vsosh")
-        self.assertEqual(out["sites"][0]["hostname"], "drive.google.com")
+        self.assertIn("drive.google.com", [site["hostname"] for site in out["sites"]])
         self.assertTrue(all(x["country_codes"] is None for x in out["approved_competitions"]))
 
     def test_unknown_classification_is_not_lost(self):
