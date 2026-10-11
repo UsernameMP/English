@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-11T19:13:01.494Z",
+  "updated_at": "2026-10-11T19:13:07.773Z",
   "deferred_shards": [
     1,
     2,
@@ -18,7 +18,14 @@
     "labels_checkpoint_20261011_17_04.jsonl",
     "labels_checkpoint_20261011_17_05.jsonl",
     "labels_checkpoint_20261011_17_06.jsonl",
-    "labels_checkpoint_20261011_17_07.jsonl"
+    "labels_checkpoint_20261011_17_07.jsonl",
+    "labels_checkpoint_20261011_1907_ibo01.jsonl",
+    "labels_checkpoint_20261011_1907_ibo02.jsonl",
+    "labels_checkpoint_20261011_1907_ibo03.jsonl",
+    "labels_checkpoint_20261011_1907_recovered02.jsonl",
+    "labels_checkpoint_20261011_1907_recovered03.jsonl",
+    "labels_checkpoint_20261011_1907_recovered05.jsonl",
+    "labels_checkpoint_20261011_1907_retry02.jsonl"
   ],
   "pending_labels_count": 78,
   "canonical_merge_status": "partial_17_merged_78_pending",
