@@ -46,6 +46,8 @@ NAVIGATION = (
     "privacy", "impressum", "contact", "kontakt", "datenschutz",
     "about us", "membership", "member", "registration", "login",
     "news", "newsletter", "donate", "cookies", "support", "sponsor",
+    "inscripcion", "inscrição", "inscricao", "anmeldung", "registrierung",
+    "membership", "socio", "contacto", "contato", "newsletter",
     "datenschutzerklärung", "inscription", "inscripción", "datenschutz",
     "политика конфиденциальности", "контакты", "о нас",
 )
