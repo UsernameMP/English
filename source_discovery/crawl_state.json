@@ -1,1321 +1,6 @@
 {
   "queue": [
     {
-      "url": "https://www.mathe-wettbewerbe.de/team",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/gremien",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/bildung-und-begabung",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/datenschutz/",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/impressum",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/datenschutz",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/info-in-english",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/instructies-eerste-ronde",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/instructions-first-round",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/tijdpad-vervolgrondes",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/trainingsmateriaal",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/wedstrijdreglement",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/voor-en-door-docenten",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/1e-ronde",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/2e-ronde",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/finale",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/junior-wiskunde-olympiade",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/teamselectie",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/boeken",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/boeken/cheryl",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/boeken/successtrategieen",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/boeken/finaletraining",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/boeken/leessuggesties",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/artikelen",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/puzzelposters",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/puzzelspel",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/documentaire",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/overig",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/overig/jaarverslagen",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/overig/vriendennieuwsbrief",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/wie-doet-wat",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/contact",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/sponsors/sponsoroverzicht",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/sponsors/wiskunde-olympiade-voor-bedrijven",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/vrienden",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/sociale-veiligheid/gedragscode",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/sociale-veiligheid/vertrouwenspersonen",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/sociale-veiligheid/klachtenprocedure",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/privacyverklaring",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/logo",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/links",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/index.php",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://rsme.es/forma-parte-de-la-RSME",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/index.php/la-sociedad/organizacion-interna/junta-de-gobierno/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/index.php/comisiones-comites-y-grupos/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://gaceta.rsme.es/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/premios/medallas-de-la-rsme/medallas-de-la-rsme-listado/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/fallo-del-v-premio-ual-rsme-al-mejor-trabajo-fin-de-grado-del-grado-en-matematicas/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/ampliado-el-plazo-para-presentar-propuestas-de-sesiones-paralelas-del-ii-encuentro-internacional-rsme-ams/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/abiertas-las-inscripciones-para-la-segunda-edicion-del/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/declaracion-de-la-real-sociedad-matematica-espanola-rsme-ante-los-recientes-avances-en-inteligencia-artificial-y-la-resolucion-de-navier-stokes/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/que-preocupa-a-los-jovenes-matematicos-en-la-actualidad/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/rsme-y-fundacion-unicaja-impulsan-el-talento-matematico-entre-los-jovenes-de-malaga/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/alberto-gonzalez-sanz-las-matematicas-teoricas-son-importantes-no-solo-para-construir-nuevos-metodos-sino-tambien-para-comprender-los-que-ya-existen/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/carme-torras-me-preocupa-la-utilizacion-indiscriminada-de-la-ia-basada-en-datos-masivos-en-detrimento-de-procedimientos-mas-sostenibles-transparentes-y-explicables/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/alberto-elduque-las-algebras-de-composicion-todavia-nos-van-a-deparar-muchas-sorpresas/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/noticias-rsme/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.rsme.es/la-sociedad/quienes-somos/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.rsme.es/la-sociedad/organizacion-interna/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.rsme.es/la-sociedad/socios-y-socias/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.rsme.es/centenario",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.rsme.es/la-sociedad/quienes-somos/historia/historico-de-presidentes/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.rsme.es/la-sociedad/quienes-somos/historia/equipos-directivos-recientes/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/la-sociedad/organizacion-interna/junta-de-gobierno/actividades-anuales/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.rsme.es/la-sociedad/organizacion-interna/delegados-as-de-la-rsme/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/la-sociedad/organizacion-interna/junta-de-gobierno/pablomanuel.berna@utamed.es",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.rsme.es/la-sociedad/organizacion-interna/junta-de-gobierno/actividades-anuales/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-cientifica/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-divulgacion/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-educacion/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-jovenes/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-mujeres-y-matematicas/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-olimpiadas/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-profesiones-y-empleabilidad/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-publicaciones/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-relaciones-internacionales/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-transferencia/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-rsme-rae/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comite-bibliografico/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comite-de-informatica/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comite-de-la-biblioteca-estimulos-matematicos/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comite-imaginary/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/comite-ArbolMat/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://rsme.es/comisiones-comites-y-grupos/grupo-de-historia-de-las-matematicas/",
-      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/news-item/call-of-interest-for-cms-committee-membership/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/news-item/call-for-competition-volunteers/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/news-item/dr-clotilde-djuikem-and-uw-wim-committee-named-recipients-of-cms-inclusion-in-math-prize/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/awards/excellence-in-teaching-award/nomination-information/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/news-item/all-members-of-math-team-canada-win-medals-at-67th-imo/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/news-item/canadian-mathematical-society-congratulates-dr-jacob-tsimerman-on-receiving-the-2026-fields-medal/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/news-item/cms-to-host-2027-aip-conference/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/wp-content/uploads/2020/09/OpeningCeremony-1.jpg",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/wp-content/uploads/2020/04/EGMO350.jpg",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/wp-content/uploads/2020/11/IMG_1773.png",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/wp-content/uploads/2020/11/2020-National-Camp-screenshot-cropped-and-removed-names.png",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/wp-content/uploads/2020/11/image31-scaled.jpeg",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/wp-content/uploads/2020/11/IMG_8113.jpg",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/wp-content/uploads/2020/11/EGMO-Summer-Camp-Screenshot-with-names-removed.png",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/wp-content/uploads/2020/11/Ec_FG-GXkAE5tJu-1.png",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/competitions/cms-inclusion-initiative/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/competitions/canada-jay-mathematical-competition-cjmc/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://portal.cms.math.ca/mrm/donations/donationdetail.aspx?ctra_askid=2",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "http://cms.math.ca/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "http://cms.math.ca/Membership/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "http://cms.math.ca/Education/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "http://cms.math.ca/Publications/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://portal.cms.math.ca/mrm/hub/accounthub.aspx",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/competitions/portal",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://portal.cms.math.ca/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/publications/cms-notes/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/publications/cjm/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/publications/cmb/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "http://summer24.cms.math.ca",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/about-the-cms/governance/bylaws/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/about-the-cms/governance/leadership-opportunities/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://portal.cms.math.ca/mrm/userlogin.aspx?goto=/mrm/Hub/AccountHub.aspx",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/about-the-cms/governance/elections/2025-election-results/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/about-the-cms/governance/elections/2023-election-results/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/about-the-cms/governance/elections/2021-election-results/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/about-the-cms/governance/elections/2019-election-results/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/publications/cms-caims-series/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://cms.math.ca/conflict-of-interest-policy-awards-prizes/",
-      "root": "https://cms.math.ca/competitions/cmo/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?article=154",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?article=153",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?article=152",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?article=146",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/workshops/problems.php?year=2026&month=10",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?article=151",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?article=145",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?article=144",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?article=143",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?page=1",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?page=2",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?page=3",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?page=4",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?page=5",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?page=6",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?page=7",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?page=8",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/?page=9",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=150",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=149",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=148",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=147",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=138",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=137",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=136",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=135",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=0",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=1",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=2",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=3",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=4",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=5",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=6",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=7",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=8",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=9",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/?year=2025",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/?year=2024",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/?year=2023",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/?year=2022",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/?year=2021",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/?year=2020",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/?year=2019",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/user/profile.php",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2026",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2025",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2024",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2023",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2022",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2021",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2020",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2019",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2018",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2017",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2016",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2015",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2014",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2013",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2012",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2011",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2010",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2009",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2008",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2007",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2006",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2005",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2004",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2003",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2002",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2001",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2000",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1999",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1998",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1997",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1996",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1995",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1994",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1993",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1992",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1991",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1990",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1989",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1988",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/egmo/results/?year=2026",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/egmo/results/?year=2025",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2024",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2023",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2022",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2021",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2020",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2019",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2018",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2017",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2016",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2015",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2014",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2013",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2012",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2011",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2010",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2009",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2008",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2007",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2006",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2005",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2024",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2023",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2022",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2021",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2020",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2019",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2018",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2017",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2016",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2015",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2014",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2013",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2012",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2011",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2010",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2025",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2024",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2023",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2022",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2021",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2020",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2012",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2011",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2010",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2009",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/competitions/cmc/results/?year=2020",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/user/register.php",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mathsolympiad.org.nz/workshops/info [at] mathsolympiad.org.nz",
-      "root": "https://www.mathsolympiad.org.nz/resources/",
-      "depth": 2
-    },
-    {
-      "url": "https://eupho.ee/wp-content/uploads/2026/06/IMG_2503-scaled.jpg",
-      "root": "https://eupho.ee/archive/",
-      "depth": 2
-    },
-    {
-      "url": "https://eupho.ee/wp-content/uploads/2026/06/IMG_2430-scaled.jpg",
-      "root": "https://eupho.ee/archive/",
-      "depth": 2
-    },
-    {
-      "url": "https://eupho.ee/wp-content/uploads/2026/06/IMG_2663-scaled.jpg",
-      "root": "https://eupho.ee/archive/",
-      "depth": 2
-    },
-    {
-      "url": "https://eupho.ee/wp-content/uploads/2026/06/IMG_2659-scaled.jpg",
-      "root": "https://eupho.ee/archive/",
-      "depth": 2
-    },
-    {
-      "url": "https://eupho.ee/wp-content/uploads/2026/06/IMG_2641-scaled.jpg",
-      "root": "https://eupho.ee/archive/",
-      "depth": 2
-    },
-    {
       "url": "https://eupho.ee/wp-content/uploads/2026/06/IMG_2642-scaled.jpg",
       "root": "https://eupho.ee/archive/",
       "depth": 2
@@ -22714,6 +21399,1321 @@
       "url": "https://om.sem.edu.pl/post/233",
       "root": "https://om.sem.edu.pl/",
       "depth": 1
+    },
+    {
+      "url": "https://wedstrijd.wiskundeolympiade.nl",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/video.html",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/old/opgaven/index.html",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/index.php/la-sociedad/organizacion-interna/junta-de-gobierno/pablomanuel.berna@utamed.es",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://gaceta.rsme.es/index.php",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://gaceta.rsme.es/direccion.php",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://gaceta.rsme.es/redaccion.php",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://gaceta.rsme.es/comasesor.php",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://gaceta.rsme.es/respsecciones.php",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://gaceta.rsme.es/secciones.php",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://gaceta.rsme.es/busqueda.php",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://gaceta.rsme.es/otrosnumeros.php",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://gaceta.rsme.es/planoweb.php",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://gaceta.rsme.es/informacion.php",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://gaceta.rsme.es/publicidad.php",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://gaceta.rsme.es/suscripcion.php",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://gaceta.rsme.es/contacto.php",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://gaceta.rsme.es/vernumero.php?id=132",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "http://www.rsme.es",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/premios/medallas-de-la-rsme/resolucion-de-la-edicion-de-2015-de-las-medallas-de-la-rsme/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/premios/medallas-de-la-rsme/resolucion-de-la-edicion-de-2016-de-las-medallas-de-la-rsme/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/premios/medallas-de-la-rsme/resolucion-de-la-edicion-de-2017-de-las-medallas-de-la-rsme/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/premios/medallas-de-la-rsme/resolucion-de-la-edicion-de-2018-de-las-medallas-de-la-rsme/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/premios/medallas-de-la-rsme/resolucion-de-la-edicion-de-2019-de-las-medallas-de-la-rsme/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/premios/medallas-de-la-rsme/resolucion-de-la-edicion-de-2020-de-las-medallas-de-la-rsme/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/premios/medallas-de-la-rsme/resolucion-de-la-edicion-de-2021-de-las-medallas-de-la-rsme/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/premios/medallas-de-la-rsme/resolucion-de-la-edicion-de-2022-de-las-medallas-de-la-rsme/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/premios/medallas-de-la-rsme/resolucion-de-la-edicion-de-2023-de-las-medallas-de-la-rsme/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/premios/medallas-de-la-rsme/resolucion-de-la-edicion-de-2024-de-las-medallas-de-la-rsme-2/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/premios/medallas-de-la-rsme/resolucion-de-la-edicion-de-2025-de-las-medallas-de-la-rsme/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/tres-reconocidos-matematicos-distinguidos-con-las-medallas-rsme-2026/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/2026/10/06/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/author/comunicacion-rsme/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/2026/10/05/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/2026/09/28/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/2026/09/16/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/2026/09/15/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/2026/09/04/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://rsme.es/2026/07/31/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 3
+    },
+    {
+      "url": "https://awardnoms.cms.math.ca/en-ca/nomination_package/5",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 3
+    },
+    {
+      "url": "http://tkousha.cms.math.ca/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 3
+    },
+    {
+      "url": "http://cms.math.ca",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/egmo/results/2026.php",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/2025.php",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=142",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=141",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=140",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=139",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=134",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=133",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=132",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=131",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=130",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=123",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=122",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=121",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=120",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=119",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=118",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?article=117",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 3
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/boeken",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/boeken/cheryl",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/boeken/successtrategieen",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/boeken/finaletraining",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/boeken/leessuggesties",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/artikelen",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/puzzelposters",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/puzzelspel",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/documentaire",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/overig",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/overig/jaarverslagen",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/overig/vriendennieuwsbrief",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/wie-doet-wat",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/contact",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/sponsors/sponsoroverzicht",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/sponsors/wiskunde-olympiade-voor-bedrijven",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/vrienden",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/sociale-veiligheid/gedragscode",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/sociale-veiligheid/vertrouwenspersonen",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/sociale-veiligheid/klachtenprocedure",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/privacyverklaring",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/logo",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/links",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/index.php",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://rsme.es/carme-torras-me-preocupa-la-utilizacion-indiscriminada-de-la-ia-basada-en-datos-masivos-en-detrimento-de-procedimientos-mas-sostenibles-transparentes-y-explicables/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/alberto-elduque-las-algebras-de-composicion-todavia-nos-van-a-deparar-muchas-sorpresas/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/noticias-rsme/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.rsme.es/la-sociedad/quienes-somos/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.rsme.es/la-sociedad/organizacion-interna/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.rsme.es/la-sociedad/socios-y-socias/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.rsme.es/centenario",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.rsme.es/la-sociedad/quienes-somos/historia/historico-de-presidentes/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.rsme.es/la-sociedad/quienes-somos/historia/equipos-directivos-recientes/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/la-sociedad/organizacion-interna/junta-de-gobierno/actividades-anuales/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.rsme.es/la-sociedad/organizacion-interna/delegados-as-de-la-rsme/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/la-sociedad/organizacion-interna/junta-de-gobierno/pablomanuel.berna@utamed.es",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.rsme.es/la-sociedad/organizacion-interna/junta-de-gobierno/actividades-anuales/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-cientifica/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-divulgacion/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-educacion/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-jovenes/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-mujeres-y-matematicas/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-olimpiadas/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-profesiones-y-empleabilidad/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-publicaciones/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-relaciones-internacionales/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-de-transferencia/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comision-rsme-rae/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comite-bibliografico/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comite-de-informatica/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comite-de-la-biblioteca-estimulos-matematicos/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comite-imaginary/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/comite-ArbolMat/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://rsme.es/comisiones-comites-y-grupos/grupo-de-historia-de-las-matematicas/",
+      "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/wp-content/uploads/2020/11/IMG_8113.jpg",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/wp-content/uploads/2020/11/EGMO-Summer-Camp-Screenshot-with-names-removed.png",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/wp-content/uploads/2020/11/Ec_FG-GXkAE5tJu-1.png",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/competitions/cms-inclusion-initiative/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/competitions/canada-jay-mathematical-competition-cjmc/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://portal.cms.math.ca/mrm/donations/donationdetail.aspx?ctra_askid=2",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "http://cms.math.ca/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "http://cms.math.ca/Membership/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "http://cms.math.ca/Education/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "http://cms.math.ca/Publications/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://portal.cms.math.ca/mrm/hub/accounthub.aspx",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/competitions/portal",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://portal.cms.math.ca/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/publications/cms-notes/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/publications/cjm/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/publications/cmb/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "http://summer24.cms.math.ca",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/about-the-cms/governance/bylaws/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/about-the-cms/governance/leadership-opportunities/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://portal.cms.math.ca/mrm/userlogin.aspx?goto=/mrm/Hub/AccountHub.aspx",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/about-the-cms/governance/elections/2025-election-results/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/about-the-cms/governance/elections/2023-election-results/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/about-the-cms/governance/elections/2021-election-results/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/about-the-cms/governance/elections/2019-election-results/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/publications/cms-caims-series/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://cms.math.ca/conflict-of-interest-policy-awards-prizes/",
+      "root": "https://cms.math.ca/competitions/cmo/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?page=4",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?page=5",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?page=6",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?page=7",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?page=8",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/?page=9",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=150",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=149",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=148",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=147",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=138",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=137",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=136",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?article=135",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=0",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=1",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=2",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=3",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=4",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=5",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=6",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=7",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=8",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/news/reports/?page=9",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/?year=2025",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/?year=2024",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/?year=2023",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/?year=2022",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/?year=2021",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/?year=2020",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/results/?year=2019",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/user/profile.php",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2026",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2025",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2024",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2023",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2022",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2021",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2020",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2019",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2018",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2017",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2016",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2015",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2014",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2013",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2012",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2011",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2010",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2009",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2008",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2007",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2006",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2005",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2004",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2003",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2002",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2001",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=2000",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1999",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1998",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1997",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1996",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1995",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1994",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1993",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1992",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1991",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1990",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1989",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/imo/results/?year=1988",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/egmo/results/?year=2026",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/egmo/results/?year=2025",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2024",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2023",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2022",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2021",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2020",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2019",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2018",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2017",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2016",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2015",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2014",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2013",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2012",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2011",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2010",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2009",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2008",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2007",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2006",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/apmo/results/?year=2005",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2024",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2023",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2022",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2021",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2020",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2019",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2018",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2017",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2016",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2015",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2014",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2013",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2012",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2011",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/amo/results/?year=2010",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2025",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2024",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2023",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2022",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2021",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2020",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2012",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2011",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2010",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/bmo2/results/?year=2009",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/competitions/cmc/results/?year=2020",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/user/register.php",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathsolympiad.org.nz/workshops/info [at] mathsolympiad.org.nz",
+      "root": "https://www.mathsolympiad.org.nz/resources/",
+      "depth": 2
     }
   ],
   "visited": [
@@ -22801,8 +22801,20 @@
     "https://cms.math.ca/about-the-cms/governance/executive-committee/",
     "https://cms.math.ca/about-the-cms/governance/standing-policies/",
     "https://cms.math.ca/about-the-cms/governance/terms-of-reference/",
+    "https://cms.math.ca/awards/excellence-in-teaching-award/nomination-information/",
     "https://cms.math.ca/bylaws-of-the-cms/",
     "https://cms.math.ca/competitions/cmo/",
+    "https://cms.math.ca/news-item/all-members-of-math-team-canada-win-medals-at-67th-imo/",
+    "https://cms.math.ca/news-item/call-for-competition-volunteers/",
+    "https://cms.math.ca/news-item/call-of-interest-for-cms-committee-membership/",
+    "https://cms.math.ca/news-item/canadian-mathematical-society-congratulates-dr-jacob-tsimerman-on-receiving-the-2026-fields-medal/",
+    "https://cms.math.ca/news-item/cms-to-host-2027-aip-conference/",
+    "https://cms.math.ca/news-item/dr-clotilde-djuikem-and-uw-wim-committee-named-recipients-of-cms-inclusion-in-math-prize/",
+    "https://cms.math.ca/wp-content/uploads/2020/04/EGMO350.jpg",
+    "https://cms.math.ca/wp-content/uploads/2020/09/OpeningCeremony-1.jpg",
+    "https://cms.math.ca/wp-content/uploads/2020/11/2020-National-Camp-screenshot-cropped-and-removed-names.png",
+    "https://cms.math.ca/wp-content/uploads/2020/11/IMG_1773.png",
+    "https://cms.math.ca/wp-content/uploads/2020/11/image31-scaled.jpeg",
     "https://daryn.kz",
     "https://daryn.kz/",
     "https://daryn.kz/%d0%b0%d0%bd%d1%82%d0%b8%d0%ba%d0%be%d1%80%d1%80%d1%83%d0%bf%d1%86%d0%b8%d0%be%d0%bd%d0%bd%d1%8b%d0%b9-%d1%81%d1%82%d0%b0%d0%bd%d0%b4%d0%b0%d1%80%d1%82/",
@@ -22842,6 +22854,12 @@
     "https://eupho.ee/links/",
     "https://eupho.ee/posts/",
     "https://eupho.ee/rules/",
+    "https://eupho.ee/wp-content/uploads/2026/06/IMG_2430-scaled.jpg",
+    "https://eupho.ee/wp-content/uploads/2026/06/IMG_2503-scaled.jpg",
+    "https://eupho.ee/wp-content/uploads/2026/06/IMG_2641-scaled.jpg",
+    "https://eupho.ee/wp-content/uploads/2026/06/IMG_2659-scaled.jpg",
+    "https://eupho.ee/wp-content/uploads/2026/06/IMG_2663-scaled.jpg",
+    "https://gaceta.rsme.es/",
     "https://games.daryn.kz/register_student.php",
     "https://home.pmo.ph/downloads/",
     "https://icpc.foundation/",
@@ -22948,9 +22966,17 @@
     "https://om.sem.edu.pl/schedule/",
     "https://portal.cms.math.ca/mrm/Hub/AccountHub.aspx",
     "https://rsme.es",
+    "https://rsme.es/abiertas-las-inscripciones-para-la-segunda-edicion-del/",
+    "https://rsme.es/alberto-gonzalez-sanz-las-matematicas-teoricas-son-importantes-no-solo-para-construir-nuevos-metodos-sino-tambien-para-comprender-los-que-ya-existen/",
+    "https://rsme.es/ampliado-el-plazo-para-presentar-propuestas-de-sesiones-paralelas-del-ii-encuentro-internacional-rsme-ams/",
     "https://rsme.es/comisiones-comites-y-grupos/",
+    "https://rsme.es/declaracion-de-la-real-sociedad-matematica-espanola-rsme-ante-los-recientes-avances-en-inteligencia-artificial-y-la-resolucion-de-navier-stokes/",
     "https://rsme.es/delegados-as-de-la-rsme/",
     "https://rsme.es/estatutos/",
+    "https://rsme.es/fallo-del-v-premio-ual-rsme-al-mejor-trabajo-fin-de-grado-del-grado-en-matematicas/",
+    "https://rsme.es/forma-parte-de-la-RSME",
+    "https://rsme.es/index.php/comisiones-comites-y-grupos/",
+    "https://rsme.es/index.php/la-sociedad/organizacion-interna/junta-de-gobierno/",
     "https://rsme.es/inscripcion-nuevo-socio/",
     "https://rsme.es/la-sociedad/",
     "https://rsme.es/la-sociedad/organizacion-interna/",
@@ -22960,10 +22986,20 @@
     "https://rsme.es/la-sociedad/quienes-somos/historia/",
     "https://rsme.es/la-sociedad/quienes-somos/mision/",
     "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+    "https://rsme.es/premios/medallas-de-la-rsme/medallas-de-la-rsme-listado/",
+    "https://rsme.es/que-preocupa-a-los-jovenes-matematicos-en-la-actualidad/",
+    "https://rsme.es/rsme-y-fundacion-unicaja-impulsan-el-talento-matematico-entre-los-jovenes-de-malaga/",
     "https://wiskundeolympiade.nl/",
     "https://wiskundeolympiade.nl/?start=6",
     "https://wiskundeolympiade.nl/docenten",
+    "https://wiskundeolympiade.nl/docenten/info-in-english",
     "https://wiskundeolympiade.nl/docenten/informatie-voor-wiskunde-docenten",
+    "https://wiskundeolympiade.nl/docenten/instructies-eerste-ronde",
+    "https://wiskundeolympiade.nl/docenten/instructions-first-round",
+    "https://wiskundeolympiade.nl/docenten/tijdpad-vervolgrondes",
+    "https://wiskundeolympiade.nl/docenten/trainingsmateriaal",
+    "https://wiskundeolympiade.nl/docenten/voor-en-door-docenten",
+    "https://wiskundeolympiade.nl/docenten/wedstrijdreglement",
     "https://wiskundeolympiade.nl/leerlingen",
     "https://wiskundeolympiade.nl/leerlingen/agenda-wedstrijdrondes",
     "https://wiskundeolympiade.nl/leerlingen/finaletraining",
@@ -22984,6 +23020,11 @@
     "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief/314-nederland-wint-twee-medailles-op-internationale-wiskunde-olympiade",
     "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief/315-inschrijving-eerste-ronde-2027-geopend",
     "https://wiskundeolympiade.nl/wedstrijdarchief",
+    "https://wiskundeolympiade.nl/wedstrijdarchief/1e-ronde",
+    "https://wiskundeolympiade.nl/wedstrijdarchief/2e-ronde",
+    "https://wiskundeolympiade.nl/wedstrijdarchief/finale",
+    "https://wiskundeolympiade.nl/wedstrijdarchief/junior-wiskunde-olympiade",
+    "https://wiskundeolympiade.nl/wedstrijdarchief/teamselectie",
     "https://www.hmmt.org/www/archive/problems",
     "https://www.imc-math.org.uk/?item=problems",
     "https://www.imc-math.org.uk/?year=2026&item=contact",
@@ -23133,18 +23174,24 @@
     "https://www.matematickaolympiada.cz/partneri-a-sponzori",
     "https://www.matematickaolympiada.cz/prubeh-rocniku-mo",
     "https://www.matematickaolympiada.cz/stranky-kraju",
+    "https://www.mathe-wettbewerbe.de",
     "https://www.mathe-wettbewerbe.de/",
     "https://www.mathe-wettbewerbe.de/abschluss-aimo-2026-das-imo-team",
     "https://www.mathe-wettbewerbe.de/aufgaben",
+    "https://www.mathe-wettbewerbe.de/bildung-und-begabung",
     "https://www.mathe-wettbewerbe.de/bspv-2025",
     "https://www.mathe-wettbewerbe.de/bundesrunde-mathematik-olympiade-2026",
     "https://www.mathe-wettbewerbe.de/bundessieger-bwm-2025",
     "https://www.mathe-wettbewerbe.de/bundeswettbewerb-mathematik",
+    "https://www.mathe-wettbewerbe.de/datenschutz",
+    "https://www.mathe-wettbewerbe.de/datenschutz/",
     "https://www.mathe-wettbewerbe.de/egmo-2026",
     "https://www.mathe-wettbewerbe.de/egmo-seminar-2026",
     "https://www.mathe-wettbewerbe.de/europa-seminar-imo-2026",
     "https://www.mathe-wettbewerbe.de/fileadmin/Mathe-Wettbewerbe/Mathematik-Olympiade/Fotos/Mathematik-Olympiade_2023/Originaltiger.JPG",
+    "https://www.mathe-wettbewerbe.de/gremien",
     "https://www.mathe-wettbewerbe.de/imo-2026",
+    "https://www.mathe-wettbewerbe.de/impressum",
     "https://www.mathe-wettbewerbe.de/internationale-mathematik-olympiade",
     "https://www.mathe-wettbewerbe.de/jugend-trainiert-mathematik",
     "https://www.mathe-wettbewerbe.de/kontaktlehrkraefte",
@@ -23158,6 +23205,7 @@
     "https://www.mathe-wettbewerbe.de/mitmachen",
     "https://www.mathe-wettbewerbe.de/regionale-preisverleihungen-bwm-2025",
     "https://www.mathe-wettbewerbe.de/spotlight-mathe",
+    "https://www.mathe-wettbewerbe.de/team",
     "https://www.mathe-wettbewerbe.de/ueber-uns",
     "https://www.mathsolympiad.org.nz/",
     "https://www.mathsolympiad.org.nz/calendar/",
@@ -23169,9 +23217,21 @@
     "https://www.mathsolympiad.org.nz/competitions/imo/",
     "https://www.mathsolympiad.org.nz/competitions/nzmo/",
     "https://www.mathsolympiad.org.nz/news/",
+    "https://www.mathsolympiad.org.nz/news/?article=143",
+    "https://www.mathsolympiad.org.nz/news/?article=144",
+    "https://www.mathsolympiad.org.nz/news/?article=145",
+    "https://www.mathsolympiad.org.nz/news/?article=146",
+    "https://www.mathsolympiad.org.nz/news/?article=151",
+    "https://www.mathsolympiad.org.nz/news/?article=152",
+    "https://www.mathsolympiad.org.nz/news/?article=153",
+    "https://www.mathsolympiad.org.nz/news/?article=154",
+    "https://www.mathsolympiad.org.nz/news/?page=1",
+    "https://www.mathsolympiad.org.nz/news/?page=2",
+    "https://www.mathsolympiad.org.nz/news/?page=3",
     "https://www.mathsolympiad.org.nz/news/reports/",
     "https://www.mathsolympiad.org.nz/resources/",
     "https://www.mathsolympiad.org.nz/workshops/",
+    "https://www.mathsolympiad.org.nz/workshops/problems.php?year=2026&month=10",
     "https://www.obm.org.br/como-se-preparar/provas-e-gabaritos/",
     "https://www.olymp.am/hy/node/13",
     "https://www.samf.ac.za/EN/tertiary-olympiad"
@@ -23259,15 +23319,26 @@
     "https://www.jpho.jp/challenge/media-download/864/1ae467c2be6e8a21/PDF/": "non-html:application/pdf",
     "https://www.jpho.jp/challenge/media-download/785/df0ef443fbca2864/PDF/": "non-html:application/pdf",
     "https://www.mathe-wettbewerbe.de/fileadmin/Mathe-Wettbewerbe/Mathematik-Olympiade/Fotos/Mathematik-Olympiade_2023/Originaltiger.JPG": "non-html:image/jpeg",
-    "http://wedstrijd.wiskundeolympiade.nl/login.php": "robots-denied-or-unavailable"
+    "http://wedstrijd.wiskundeolympiade.nl/login.php": "robots-denied-or-unavailable",
+    "https://cms.math.ca/wp-content/uploads/2020/09/OpeningCeremony-1.jpg": "non-html:image/jpeg",
+    "https://cms.math.ca/wp-content/uploads/2020/04/EGMO350.jpg": "non-html:image/jpeg",
+    "https://cms.math.ca/wp-content/uploads/2020/11/IMG_1773.png": "non-html:image/png",
+    "https://cms.math.ca/wp-content/uploads/2020/11/2020-National-Camp-screenshot-cropped-and-removed-names.png": "non-html:image/png",
+    "https://cms.math.ca/wp-content/uploads/2020/11/image31-scaled.jpeg": "non-html:image/jpeg",
+    "https://www.mathsolympiad.org.nz/workshops/problems.php?year=2026&month=10": "non-html:application/pdf",
+    "https://eupho.ee/wp-content/uploads/2026/06/IMG_2503-scaled.jpg": "non-html:image/jpeg",
+    "https://eupho.ee/wp-content/uploads/2026/06/IMG_2430-scaled.jpg": "non-html:image/jpeg",
+    "https://eupho.ee/wp-content/uploads/2026/06/IMG_2663-scaled.jpg": "non-html:image/jpeg",
+    "https://eupho.ee/wp-content/uploads/2026/06/IMG_2659-scaled.jpg": "non-html:image/jpeg",
+    "https://eupho.ee/wp-content/uploads/2026/06/IMG_2641-scaled.jpg": "non-html:image/jpeg"
   },
   "version": 1,
-  "updated_at": "2026-10-11T16:09:33+00:00",
+  "updated_at": "2026-10-11T17:10:30+00:00",
   "last_run": {
     "html_pages": 60,
-    "new_links": 2670,
+    "new_links": 3556,
     "pending_pages": 4543,
-    "blocked_or_failed": 44
+    "blocked_or_failed": 55
   },
   "html_ampersand_repair_v1": true,
   "html_ampersand_requeued": 4,
