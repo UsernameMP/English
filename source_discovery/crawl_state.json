@@ -1,1146 +1,6 @@
 {
   "queue": [
     {
-      "url": "https://www.komal.hu/verseny/2000-12/A.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-12/B.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-12/C.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-12/P.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-11/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-11/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-11/A.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-11/B.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-11/C.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-11/P.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-10/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-10/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-10/A.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-10/B.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-10/C.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-10/P.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-09/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-09/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-09/A.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-09/B.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-09/C.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-09/P.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-05/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-05/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-05/A.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-05/B.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-05/C.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-05/P.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-04/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-04/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-04/A.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-04/B.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-04/C.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-04/P.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-03/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-03/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-03/A.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-03/B.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-03/C.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-03/P.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-02/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-02/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-02/A.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-02/B.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-02/C.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-02/P.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-01/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-01/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-01/A.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-01/B.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-01/C.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/2000-01/P.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-12/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-12/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-12/A.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-12/B.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-12/C.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-12/P.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-11/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-11/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-11/A.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-11/B.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-11/C.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-11/P.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-10/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-10/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-10/A.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-10/B.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-10/C.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-10/P.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-09/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-09/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-09/A.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-09/B.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-09/C.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-09/P.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-05/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-05/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-04/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-04/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-03/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-03/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-02/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-02/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-01/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1999-01/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-12/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-12/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-11/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-11/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-10/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-10/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-09/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-09/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-05/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-05/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-04/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-04/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-03/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-03/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-02/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-02/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-01/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1998-01/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1997-12/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1997-12/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1997-11/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1997-11/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1997-10/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1997-10/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1997-09/mat.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/verseny/1997-09/fiz.e.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/info/cimek.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/info/impresszum.h.shtml",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/oldal?lap=AdatkezelesiTajekoztato",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/articles",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/general/about",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/schedule/",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/previous_olympiads/",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/problems/",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/camps/",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/for_student",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/for_student/for_student_grades",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/faq",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/for_student/quiz_stage_description",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/for_student/open_first_stage_description",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/for_student/second_and_third_stage",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/for_student/appeals",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/for_student/previous_olympiads",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/for_student/books",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/for_student/websites",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/for_student/camps",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/for_student/articles",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/for_student/other_sources",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/for_teacher",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/documents",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/committees",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/donation/",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/contact/",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/donors",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/login/",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/english_templates/about/",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/post/237",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/post/236",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/post/234",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://om.sem.edu.pl/post/233",
-      "root": "https://om.sem.edu.pl/",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/mitmachen",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/bundeswettbewerb-mathematik",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/mathematik-olympiade",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/internationale-mathematik-olympiade",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/jugend-trainiert-mathematik",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/mathe-ah",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/lehrkraefte",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/spotlight-mathe",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/kontaktlehrkraefte",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/mathe-ah-fuer-lehrkraefte",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/lehrkraefte/mathematik-olympiade",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/ueber-uns",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/team",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/gremien",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/bildung-und-begabung",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/datenschutz/",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/impressum",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de/datenschutz",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mathe-wettbewerbe.de",
-      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
-      "depth": 1
-    },
-    {
-      "url": "https://bmos.ukmt.org.uk/",
-      "root": "https://bmos.ukmt.org.uk/home/bmo",
-      "depth": 1
-    },
-    {
-      "url": "https://bmos.ukmt.org.uk/home/bmo.shtml",
-      "root": "https://bmos.ukmt.org.uk/home/bmo",
-      "depth": 1
-    },
-    {
-      "url": "https://bmos.ukmt.org.uk/home/calendar.shtml",
-      "root": "https://bmos.ukmt.org.uk/home/bmo",
-      "depth": 1
-    },
-    {
-      "url": "https://bmos.ukmt.org.uk/home/news.shtml",
-      "root": "https://bmos.ukmt.org.uk/home/bmo",
-      "depth": 1
-    },
-    {
-      "url": "https://bmos.ukmt.org.uk/links.shtml",
-      "root": "https://bmos.ukmt.org.uk/home/bmo",
-      "depth": 1
-    },
-    {
-      "url": "https://bmos.ukmt.org.uk/home/eligibility.shtml",
-      "root": "https://bmos.ukmt.org.uk/home/bmo",
-      "depth": 1
-    },
-    {
-      "url": "https://bmos.ukmt.org.uk/solutions/",
-      "root": "https://bmos.ukmt.org.uk/home/bmo",
-      "depth": 1
-    },
-    {
-      "url": "https://bmos.ukmt.org.uk/home/wanted.shtml",
-      "root": "https://bmos.ukmt.org.uk/home/bmo",
-      "depth": 1
-    },
-    {
-      "url": "https://bmos.ukmt.org.uk/home/bmo1-2006-prizewinners.shtml",
-      "root": "https://bmos.ukmt.org.uk/home/bmo",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/leerlingen",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/leerlingen/wat-is-het",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/leerlingen/overzicht-rondes",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/leerlingen/agenda-wedstrijdrondes",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/leerlingen/wildcards",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/leerlingen/finaletraining",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/leerlingen/internationale-ronde",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/leerlingen/voor-en-door-leerlingen",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/informatie-voor-wiskunde-docenten",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/info-in-english",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/instructies-eerste-ronde",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/instructions-first-round",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/tijdpad-vervolgrondes",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/trainingsmateriaal",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/wedstrijdreglement",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/docenten/voor-en-door-docenten",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/1e-ronde",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/2e-ronde",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/finale",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/junior-wiskunde-olympiade",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/teamselectie",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/boeken",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/boeken/cheryl",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/boeken/successtrategieen",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/boeken/finaletraining",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/boeken/leessuggesties",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/artikelen",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/puzzelposters",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/puzzelspel",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/documentaire",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/overig",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/overig/jaarverslagen",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/publicaties/overig/vriendennieuwsbrief",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/wie-doet-wat",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/contact",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/sponsors/sponsoroverzicht",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/sponsors/wiskunde-olympiade-voor-bedrijven",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/vrienden",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/sociale-veiligheid/gedragscode",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/sociale-veiligheid/vertrouwenspersonen",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/sociale-veiligheid/klachtenprocedure",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/privacyverklaring",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/organisatie/logo",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/links",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/index.php",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "depth": 1
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "depth": 1
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/en/system/web-admin",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "depth": 1
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/en/system/your-browser-is-outdated",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "depth": 1
-    },
-    {
       "url": "https://rsme.es/inscripcion-nuevo-socio/",
       "root": "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
       "depth": 1
@@ -10549,6 +9409,4341 @@
       "url": "https://www.komal.hu/verseny/2000-12/fiz.e.shtml",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-09/kiiras.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 2
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/232",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 2
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/231",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 2
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/230",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 2
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/229",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 2
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/228",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 2
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/227",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 2
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/226",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 2
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/215",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 2
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/211",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 2
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/203",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 2
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/195",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 2
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/101",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 2
+    },
+    {
+      "url": "https://om.sem.edu.pl/distinguished",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/memo-2026",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/imo-2026",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/europa-seminar-imo-2026",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/bundesrunde-mathematik-olympiade-2026",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/abschluss-aimo-2026-das-imo-team",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/bspv-2025",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/egmo-2026",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/egmo-seminar-2026",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/bundessieger-bwm-2025",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/regionale-preisverleihungen-bwm-2025",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/maedchenfoerderung",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/fileadmin/Mathe-Wettbewerbe/Mathematik-Olympiade/Fotos/Mathematik-Olympiade_2023/Originaltiger.JPG",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/fileadmin/Mathe-Wettbewerbe/Mathematik-Olympiade/Fotos/Mathematik-Olympiade_2023/csm_2023-10-10-Bundeswettbewerb-Mathematik-Preisverleihung-Bonn-022_2530ced6b7.jpg",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 2
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/fileadmin/Mathe-Wettbewerbe/Mathematik-Olympiade/Fotos/Mathematik-Olympiade_2023/Mathema-Tigerin_-_230803_RZ_-_CMYK_300_dpi.jpg",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/training.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/lecture.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/prizes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/balkan.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/rmm.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/egmo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/history.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/committee.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/people.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/usage.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/contact.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260924-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260719-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260712-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260527-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260507-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260414-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260412-00-egmoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260411-00-egmoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260407-01-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260407-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260312-00-rmmdeputyreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260227-00-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260216-01-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260216-00-bmomarked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260123-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo2-2026/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20260107-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20251218-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20251121-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2026/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20251010-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20251009-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/calendar-past.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250927-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250718-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250712-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250505-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250429-00-egmodeputyreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250428-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250416-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250414-00-egmoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250413-00-egmoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250408-01-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250408-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250214-00-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250211-01-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250211-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250124-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo2-2025/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20250108-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20241218-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20241122-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2025/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20241023-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20241003-00-eligibility.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/multiple-countries.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240927-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240720-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240717-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240713-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240527-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240430-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240415-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240414-00-egmoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240413-00-egmoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240408-01-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240408-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240301-00-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240213-01-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240213-00-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240126-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo2-2024/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20240105-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20231219-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20231117-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2024/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20231024-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230929-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230924-00-balkanreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230808-00-mentoring.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230803-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230711-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230709-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230705-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230530-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230511-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230417-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230416-00-egmo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230402-01-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230402-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230304-00-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230302-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230224-00-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230127-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20230105-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20221219-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20221118-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2023/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20221021-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220930-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220928-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220907-00-mentoring.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220714-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220709-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220531-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220522-00-balkanreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220512-00-balkanstudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220507-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220412-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220409-00-egmo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220404-01-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220404-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220403-00-imocamp.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220224-00-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220221-00-olympiadcamp.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220218-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220128-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220112-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20220110-00-bmo1report.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20211204-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2022/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20211107-00-ukmogreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20211008-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210924-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210910-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210908-00-balkan.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210816-00-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210723-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210606-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210420-01-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210420-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210415-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210413-00-egmo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210306-00-olympiadcamp.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210226-00-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210219-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210129-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20210104-00-rmmselection.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20201218-00-bmo1report.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20201216-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20201202-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2021/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20201105-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20201101-00-balkan.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20201022-00-ukmogreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20201018-00-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20201015-00-ukmogsolutions.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20201009-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200927-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200923-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200920-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200722-00-cmc.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200601-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200421-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200418-00-egmo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200316-00-cambridgecamp.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200311-00-cambridgecamp.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200301-00-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200213-00-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200212-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200131-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200116-00-imolecture.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200111-00-bmo1report.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200108-00-walterhayman.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20200105-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20191213-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20191209-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20191130-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2020/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20191105-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20191009-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190719-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190717-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190713-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190528-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190508-00-balkanreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190504-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190411-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190410-00-egmoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190409-00-egmoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190407-01-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190407-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190317-00-rmmreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190305-00-bradleyprize.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/bradleyprize.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190224-00-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190212-00-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190125-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190107-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20190105-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20181201-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2019/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20181109-00-imolecture.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20181028-00-ukmogreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20181003-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180809-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180805-00-imodeputyreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180712-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180710-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180706-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180703-00-balkanreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180530-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180514-00-davidmonk.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180510-01-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180510-00-balkan.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180414-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180412-00-egmoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180411-00-egmoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180409-01-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180409-00-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180226-00-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180212-00-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180205-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180126-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180105-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20180103-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20171219-00-imolecture.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20171202-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2018/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20171102-00-ukmogprize.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20171028-00-ukmogreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20171006-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170808-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170725-00-imopress.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170721-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170719-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170716-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170531-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170519-00-balkanreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170506-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170410-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170409-00-egmoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170408-00-egmoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170403-01-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170403-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170315-00-rmmreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170226-00-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170225-00-rmm.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170210-00-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170208-00-bradleyprize.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20131020-00-bradleyprize.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170207-00-brianwilson.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170205-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170127-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20170106-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20161219-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20161217-00-ukmogprize.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20161203-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2017/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20161012-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20161006-00-imolecture.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160813-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160728-00-imodeputyreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160715-00-imopress.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160714-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160712-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160708-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160601-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160521-00-balkanreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160508-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160414-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160413-00-egmoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160412-00-egmoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160404-01-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160404-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160229-01-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160229-00-rmmday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160227-00-rmmday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160215-00-bradleyprize.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160212-00-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160207-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160129-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20160108-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20151217-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20151128-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2016/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20151021-00-ukmogreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20151019-00-ukmogmarked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150930-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150902-00-balkanreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150807-00-imostudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150729-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150726-00-imodeputyreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150714-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150711-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150707-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150527-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150506-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150418-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150417-00-egmoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150416-00-egmoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150330-01-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150330-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150305-00-rmmreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150301-01-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150301-00-rmmday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150228-00-rmmday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150208-01-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150208-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150130-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20150108-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20141214-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20141129-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2015/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20141113-00-bmo1solutions.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2014/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20141024-00-ukmogprize.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20141019-00-ukmogsolutions.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20141017-00-ukmogmarked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140928-00-imostudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140926-00-ukmogsolutions.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140925-00-royalsociety.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140924-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140807-00-imodeputyreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140723-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140711-01-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140711-00-imo2019.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140709-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140705-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140604-00-egmoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140528-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140507-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140505-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140504-00-balkan.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140425-00-egmostudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140414-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140413-00-egmoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140412-00-egmoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140410-00-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140407-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140210-00-bradleyprize.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140208-01-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140208-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140131-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20140122-00-rmm.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20131208-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20131130-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20131103-00-bmo1solutions.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2013/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20131016-00-ukmogsolutions.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20131011-00-ukmogmarked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130930-01-royalsociety.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130930-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130924-00-benelliott.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130914-01-imostudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130914-00-imodeputyreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130910-00-balkanstudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130831-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130817-00-imostudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130805-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130804-00-balkanreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130801-00-imopress.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/imo-2013-press.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130729-00-imopress.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130727-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130724-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130720-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130711-00-christopherbradley.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130701-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130630-00-balkan.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130626-00-egmostudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130529-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130508-00-egmoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130430-00-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130412-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130411-00-egmoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130410-00-egmoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130408-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130403-00-rmmreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130402-00-rmmstudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130303-01-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130303-00-rmmday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130302-00-rmmday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130209-02-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130209-01-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130209-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20130201-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20121218-00-bmo2cutoffs.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20121209-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20121201-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20121011-00-ukmogsolutions.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20121001-00-royalsociety.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120930-00-ukmogmarked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120921-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120814-00-imostudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120801-00-imostudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120724-01-imoobservations.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120724-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120716-00-imopress.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120715-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120711-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120707-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120606-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120523-00-balkanstudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120516-00-egmoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120512-00-balkanreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120505-00-egmostudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120501-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120430-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120428-00-balkan.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120422-00-rmmstudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120414-00-egmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120413-00-egmoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120412-00-egmoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120402-01-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120402-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120315-00-rmmreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120303-01-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120303-00-rmmday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120302-00-rmmday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120212-00-egmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120204-01-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120204-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20120127-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20111216-00-bmo2cutoffs.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20111212-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20111203-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2012/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110926-00-royalsociety.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110808-00-imostudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110803-00-imoobservations.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110729-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110722-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110719-00-imoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110718-00-imoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110713-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110708-00-ukmogsolutions.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110704-00-ukmogmarked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110624-00-ukmog.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110601-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110512-00-balkanreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110508-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110506-00-balkan.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110426-00-rmmstudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110418-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110330-00-bym.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110312-00-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110308-00-egmo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110303-00-reports.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/cgmo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110227-00-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110226-00-rmmday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110225-00-rmmday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110211-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110205-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20110128-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20101214-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20101207-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2011/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20101205-00-jacquilewis.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20101201-00-bmo1weather.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20101104-00-bmo1solutions.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2010/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100920-00-royalsociety.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100910-00-imostudentreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100813-01-cgmo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100813-00-cgmoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100811-00-cgmoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100810-01-cgmoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100810-00-otherolympiads.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100809-00-cgmoarrive.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100331-00-cgmoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100802-00-cgmotrain.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100723-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100711-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100708-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100704-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100602-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100522-00-rmmreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100517-00-balkanreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100507-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100505-00-balkannews.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100412-01-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100412-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100228-00-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100206-01-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100206-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20100129-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20091213-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20091204-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090929-00-bmofees.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090921-00-royalsociety.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090801-00-balkanreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090728-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090719-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090716-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090709-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090527-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090503-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090430-00-balkan.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090406-01-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090406-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090314-00-rmmreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090301-00-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090225-00-bmo2nz.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090208-01-bmo2results.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090208-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090129-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090128-00-bmo2embargo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20090120-00-bmo2typo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20081214-00-bmo1results.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20081205-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20081204-00-bmo1embargo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20081203-00-bmo1weather.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20081111-01-rmm.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20081111-00-austradio.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20081007-00-royalsociety.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080729-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080720-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080717-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080714-00-ashes.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080528-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080516-00-balkanphotos.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080508-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080506-00-balkan.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080411-00-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080409-00-areals.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080407-01-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080407-00-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080221-01-bmo2solutions.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080221-00-rmmreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080216-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080214-00-rmmpress.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/rmm-2008-press.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080210-00-rmmresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080209-00-rmm.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080131-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080130-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20080104-00-rmmteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20071218-00-bmo1results.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20071209-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20071130-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20071014-00-bym.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20071001-00-royalsociety.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20070812-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20070728-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20070726-00-imoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20070725-00-imoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20070530-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20070430-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20070402-01-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20070402-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20070211-00-bmo2top.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20070210-00-bmo2marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20070130-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20061214-00-bmo2cutoffs.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20061210-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20061201-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20060925-00-royalsociety.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20060824-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20060714-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20060713-00-imoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20060712-00-imoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20060710-00-imoarrive.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20060531-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20060504-00-balkandetails.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20060430-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20060411-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20060305-00-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20060131-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20060119-00-bmo1prize.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20051130-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050919-00-royalsociety.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050916-00-balkanreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050729-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050720-01-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050720-00-imobulletin2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/2005-bulletin-2.txt",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050718-00-hurricane.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050717-00-hurricane.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050714-00-imoday2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050713-00-imoday1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050702-00-imobulletin1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/2005-bulletin-1.txt",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050601-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050507-00-balkanresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050412-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050224-00-balkanteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050125-00-balkanarrange.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20050117-00-bmo1histogram.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20041213-00-bmo1marked.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20041125-00-imomove.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20041110-00-imodeputy.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20040920-00-royalsociety.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20040728-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20040719-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20040716-00-imobulletin3.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/2004-bulletin-3.txt",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20040715-00-imobulletin2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/2004-bulletin-2.txt",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20040714-00-imobulletin1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/home/2004-bulletin-1.txt",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20040713-00-imo.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20040711-00-imopapers.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20040602-00-imoteam.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20040405-00-imosquad.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20040224-00-bmo2.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20031203-00-bmo1.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20030929-00-royalsociety.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20030731-00-imoreport.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/news/20030717-00-imoresults.shtml",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2006/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2007/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2008/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2009/",
+      "root": "https://bmos.ukmt.org.uk/home/bmo",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief/315-inschrijving-eerste-ronde-2027-geopend",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "http://wedstrijd.wiskundeolympiade.nl/login.php",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief/314-nederland-wint-twee-medailles-op-internationale-wiskunde-olympiade",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief/313-uitslag-junior-wiskunde-olympiade-2026-bekend",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief/312-nederlands-team-internationale-wiskunde-olympiade-bekend-10",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief/311-vijf-medailles-voor-nederland-bij-benelux-wiskunde-olympiade",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief/310-twee-zilveren-medailles-voor-nederland-bij-europese-wiskundewedstrijd",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief/309-uitslag-tweede-ronde-2026-bekend",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief/307-nederlandse-internationale-teams-egmo-en-bxmo-geselecteerd-3",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief/306-uitslag-eerste-ronde-bekend-5",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief/305-nieuwkomer-imc-trading-wint-wiskunde-olympiade-voor-bedrijven-2026-bij-cbs-in-den-haag",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/?start=6",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/?start=12",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/?start=18",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/?start=24",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/?start=30",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/?start=36",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/?start=42",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/?start=48",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/?start=54",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/?start=192",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief?start=10",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief?start=20",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief?start=30",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief?start=40",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief?start=50",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief?start=60",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief?start=70",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief?start=80",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief?start=90",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief?start=190",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/junior",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/phocadownload/finaletraining/plaatje_voorkant_FT_2025.png",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/training",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "http://wedstrijd.wiskundeolympiade.nl",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/co-je-mo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/jak-se-zapojit",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/prubeh-rocniku-mo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/dokumenty-mo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/stranky-kraju",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/partneri-a-sponzori",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/kontakt-na-organizatory",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/mo-pro-zs",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/mo-pro-zs/aktualni-rocnik",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/mo-pro-zs/rocnik",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/mo-pro-ss",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/mo-pro-ss/aktualni-rocnik",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/mo-pro-ss/rocnik",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/mo-v-programovani",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/mezinarodni-mo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/ruzne",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/ruzne/jak-se-zdokonalit-v-reseni-mo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/ruzne/matematicke-kalendare",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/ruzne/matematicky-rozcestnik",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/76-rocnik-mo-zacina",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/7-zlatych-z-memo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/imo-a-imsc-2026",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/caps2026",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/system/spravce-stranek",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/system/pouzivate-stary-prohlizec",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/en/kontakt-na-organizatory",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "depth": 2
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-10/A.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-10/B.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-10/C.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-10/P.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-09/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-09/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-09/A.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-09/B.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-09/C.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-09/P.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-05/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-05/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-05/A.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-05/B.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-05/C.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-05/P.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-04/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-04/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-04/A.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-04/B.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-04/C.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-04/P.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-03/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-03/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-03/A.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-03/B.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-03/C.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-03/P.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-02/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-02/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-02/A.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-02/B.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-02/C.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-02/P.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-01/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-01/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-01/A.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-01/B.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-01/C.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/2000-01/P.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-12/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-12/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-12/A.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-12/B.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-12/C.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-12/P.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-11/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-11/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-11/A.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-11/B.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-11/C.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-11/P.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-10/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-10/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-10/A.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-10/B.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-10/C.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-10/P.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-09/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-09/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-09/A.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-09/B.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-09/C.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-09/P.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-05/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-05/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-04/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-04/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-03/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-03/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-02/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-02/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-01/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1999-01/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-12/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-12/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-11/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-11/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-10/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-10/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-09/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-09/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-05/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-05/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-04/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-04/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-03/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-03/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-02/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-02/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-01/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1998-01/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1997-12/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1997-12/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1997-11/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1997-11/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1997-10/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1997-10/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1997-09/mat.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/verseny/1997-09/fiz.e.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/info/cimek.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/info/impresszum.h.shtml",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://www.komal.hu/oldal?lap=AdatkezelesiTajekoztato",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/for_student/appeals",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/for_student/previous_olympiads",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/for_student/books",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/for_student/websites",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/for_student/camps",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/for_student/articles",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/for_student/other_sources",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/for_teacher",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/documents",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/committees",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/donation/",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/contact/",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/donors",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/login/",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/english_templates/about/",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/237",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/236",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/234",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://om.sem.edu.pl/post/233",
+      "root": "https://om.sem.edu.pl/",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/ueber-uns",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/team",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/gremien",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/bildung-und-begabung",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/datenschutz/",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/impressum",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de/datenschutz",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mathe-wettbewerbe.de",
+      "root": "https://www.mathe-wettbewerbe.de/aufgaben",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/docenten/info-in-english",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/docenten/instructies-eerste-ronde",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/docenten/instructions-first-round",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/docenten/tijdpad-vervolgrondes",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/docenten/trainingsmateriaal",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/docenten/wedstrijdreglement",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/docenten/voor-en-door-docenten",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/1e-ronde",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/2e-ronde",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/finale",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/junior-wiskunde-olympiade",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/wedstrijdarchief/teamselectie",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/boeken",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/boeken/cheryl",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/boeken/successtrategieen",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/boeken/finaletraining",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/boeken/leessuggesties",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/artikelen",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/puzzelposters",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/puzzelspel",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/documentaire",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/overig",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/overig/jaarverslagen",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/publicaties/overig/vriendennieuwsbrief",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/wie-doet-wat",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/contact",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/sponsors/sponsoroverzicht",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/sponsors/wiskunde-olympiade-voor-bedrijven",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/vrienden",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/sociale-veiligheid/gedragscode",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/sociale-veiligheid/vertrouwenspersonen",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/sociale-veiligheid/klachtenprocedure",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/privacyverklaring",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/organisatie/logo",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/links",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/index.php",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "depth": 1
     }
   ],
   "visited": [
@@ -10567,7 +13762,16 @@
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/gecmis-sinav-sorulari",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/program-hakkinda",
     "https://bilimolimpiyatlari.tubitak.gov.tr/tr/takvim",
+    "https://bmos.ukmt.org.uk/",
     "https://bmos.ukmt.org.uk/home/bmo",
+    "https://bmos.ukmt.org.uk/home/bmo.shtml",
+    "https://bmos.ukmt.org.uk/home/bmo1-2006-prizewinners.shtml",
+    "https://bmos.ukmt.org.uk/home/calendar.shtml",
+    "https://bmos.ukmt.org.uk/home/eligibility.shtml",
+    "https://bmos.ukmt.org.uk/home/news.shtml",
+    "https://bmos.ukmt.org.uk/home/wanted.shtml",
+    "https://bmos.ukmt.org.uk/links.shtml",
+    "https://bmos.ukmt.org.uk/solutions/",
     "https://cms.math.ca/competitions/cmo/",
     "https://daryn.kz/",
     "https://daryn.kz/%d0%b0%d0%bd%d1%82%d0%b8%d0%ba%d0%be%d1%80%d1%80%d1%83%d0%bf%d1%86%d0%b8%d0%be%d0%bd%d0%bd%d1%8b%d0%b9-%d1%81%d1%82%d0%b0%d0%bd%d0%b4%d0%b0%d1%80%d1%82/",
@@ -10601,7 +13805,31 @@
     "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
     "https://olympiads.hbcse.tifr.res.in/information-brochures/",
     "https://om.sem.edu.pl/",
+    "https://om.sem.edu.pl/articles",
+    "https://om.sem.edu.pl/camps/",
+    "https://om.sem.edu.pl/faq",
+    "https://om.sem.edu.pl/for_student",
+    "https://om.sem.edu.pl/for_student/for_student_grades",
+    "https://om.sem.edu.pl/for_student/open_first_stage_description",
+    "https://om.sem.edu.pl/for_student/quiz_stage_description",
+    "https://om.sem.edu.pl/for_student/second_and_third_stage",
+    "https://om.sem.edu.pl/general/about",
+    "https://om.sem.edu.pl/previous_olympiads/",
+    "https://om.sem.edu.pl/problems/",
+    "https://om.sem.edu.pl/schedule/",
     "https://rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
+    "https://wiskundeolympiade.nl/",
+    "https://wiskundeolympiade.nl/docenten",
+    "https://wiskundeolympiade.nl/docenten/informatie-voor-wiskunde-docenten",
+    "https://wiskundeolympiade.nl/leerlingen",
+    "https://wiskundeolympiade.nl/leerlingen/agenda-wedstrijdrondes",
+    "https://wiskundeolympiade.nl/leerlingen/finaletraining",
+    "https://wiskundeolympiade.nl/leerlingen/internationale-ronde",
+    "https://wiskundeolympiade.nl/leerlingen/overzicht-rondes",
+    "https://wiskundeolympiade.nl/leerlingen/voor-en-door-leerlingen",
+    "https://wiskundeolympiade.nl/leerlingen/wat-is-het",
+    "https://wiskundeolympiade.nl/leerlingen/wildcards",
+    "https://wiskundeolympiade.nl/voorpagina/nieuwsarchief",
     "https://wiskundeolympiade.nl/wedstrijdarchief",
     "https://www.hmmt.org/www/archive/problems",
     "https://www.imc-math.org.uk/?item=problems",
@@ -10651,8 +13879,35 @@
     "https://www.komal.hu/oldal?lap=whatiskomal",
     "https://www.komal.hu/u?a=login",
     "https://www.komal.hu/u?a=reg",
+    "https://www.komal.hu/verseny/2000-10/fiz.e.shtml",
+    "https://www.komal.hu/verseny/2000-10/mat.e.shtml",
+    "https://www.komal.hu/verseny/2000-11/A.h.shtml",
+    "https://www.komal.hu/verseny/2000-11/B.h.shtml",
+    "https://www.komal.hu/verseny/2000-11/C.h.shtml",
+    "https://www.komal.hu/verseny/2000-11/P.h.shtml",
+    "https://www.komal.hu/verseny/2000-11/fiz.e.shtml",
+    "https://www.komal.hu/verseny/2000-11/mat.e.shtml",
+    "https://www.komal.hu/verseny/2000-12/A.h.shtml",
+    "https://www.komal.hu/verseny/2000-12/B.h.shtml",
+    "https://www.komal.hu/verseny/2000-12/C.h.shtml",
+    "https://www.komal.hu/verseny/2000-12/P.h.shtml",
+    "https://www.matematickaolympiada.cz/",
     "https://www.matematickaolympiada.cz/en",
+    "https://www.matematickaolympiada.cz/en/system/web-admin",
+    "https://www.matematickaolympiada.cz/en/system/your-browser-is-outdated",
+    "https://www.mathe-wettbewerbe.de/",
     "https://www.mathe-wettbewerbe.de/aufgaben",
+    "https://www.mathe-wettbewerbe.de/bundeswettbewerb-mathematik",
+    "https://www.mathe-wettbewerbe.de/internationale-mathematik-olympiade",
+    "https://www.mathe-wettbewerbe.de/jugend-trainiert-mathematik",
+    "https://www.mathe-wettbewerbe.de/kontaktlehrkraefte",
+    "https://www.mathe-wettbewerbe.de/lehrkraefte",
+    "https://www.mathe-wettbewerbe.de/lehrkraefte/mathematik-olympiade",
+    "https://www.mathe-wettbewerbe.de/mathe-ah",
+    "https://www.mathe-wettbewerbe.de/mathe-ah-fuer-lehrkraefte",
+    "https://www.mathe-wettbewerbe.de/mathematik-olympiade",
+    "https://www.mathe-wettbewerbe.de/mitmachen",
+    "https://www.mathe-wettbewerbe.de/spotlight-mathe",
     "https://www.mathsolympiad.org.nz/resources/",
     "https://www.obm.org.br/como-se-preparar/provas-e-gabaritos/",
     "https://www.olymp.am/hy/node/13",
@@ -10699,11 +13954,11 @@
     }
   },
   "version": 1,
-  "updated_at": "2026-10-11T13:04:52+00:00",
+  "updated_at": "2026-10-11T14:10:12+00:00",
   "last_run": {
-    "html_pages": 35,
-    "new_links": 1237,
-    "pending_pages": 2110,
+    "html_pages": 60,
+    "new_links": 3708,
+    "pending_pages": 2749,
     "blocked_or_failed": 20
   }
 }
