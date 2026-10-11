@@ -1,7 +1,7 @@
 {
-  "requested_at": "2026-10-11T17:14:26.147Z",
-  "cycle": "hourly-20261011T171426Z",
-  "cycle_number": 2,
-  "reason": "merge source discovery_20261011_09.jsonl into canonical sources and enumerate",
-  "previous_cycle": "hourly-20261011T170907Z"
+  "requested_at": "2026-10-11T18:11:47.212Z",
+  "cycle": "quality-update-20261011T181147",
+  "cycle_number": 3,
+  "reason": "Deploy and test multilingual MIME and unique resource index after quality fixes",
+  "previous_cycle": "hourly-20261011T171426Z"
 }
