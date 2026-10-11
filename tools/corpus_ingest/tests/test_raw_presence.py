@@ -112,5 +112,28 @@ class RawPresenceTest(unittest.TestCase):
         self.assertEqual(generated(docs), generated(list(reversed(docs))))
 
 
+
+
+    def test_official_grade5_seed_marks_both_subjects_without_misclassifying_solutions(self):
+        from coverage_dashboard import identify
+        originals = []
+        for tag, grades in (("math", "5"), ("iikt", "5-6")):
+            for kind in ("tasks", "sol"):
+                source = "math" if tag == "math" else "inf"
+                originals.append({
+                    "url": f"https://vos.olimpiada.ru/upload/files/Arhive_tasks/"
+                           f"2025-26/school/{tag}/{kind}-{tag}-{grades}-sch-msk-25-26.pdf",
+                    "document_id": tag+"-"+kind, "source_id": f"vosh_{source}5_school_2025_{kind}",
+                    "status": "DOWNLOADED",
+                    "sha256": HASH if tag == "math" else HASH2,
+                })
+        view = generated(originals)
+        self.assertEqual(cell(view, "mathematics", 2025, 5)["state"], "raw")
+        self.assertEqual(cell(view, "informatics", 2025, 5)["state"], "raw")
+        self.assertEqual(cell(view, "informatics", 2025, 6)["state"], "raw")
+        self.assertEqual(cell(view, "mathematics", 2025, 6)["state"], "catalogued")
+        self.assertEqual(cell(view, "mathematics", 2025, 5)["task_urls"], 1)
+        self.assertEqual(cell(view, "informatics", 2025, 5)["task_urls"], 1)
+
 if __name__ == "__main__":
     unittest.main()
