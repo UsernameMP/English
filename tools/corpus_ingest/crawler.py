@@ -207,7 +207,7 @@ def parse_school_stage_links(html: str, base_url: str) -> list[str]:
     parser = SchoolStageLinkParser()
     parser.feed(html)
     # Filenames carrying explicit -sch- markers remain usable on old layouts.
-    school_hrefs = set(parser.hrefs)
+    school_urls = {urldefrag(urljoin(base_url, href))[0] for href in parser.hrefs}
     all_links = parse_links(html, base_url)
     result = []
     for url in all_links:
@@ -215,8 +215,7 @@ def parse_school_stage_links(html: str, base_url: str) -> list[str]:
             continue
         path = urlparse(url).path.lower()
         explicit_school = bool(re.search(r"(?<![a-z])sch(?![a-z])|school", path))
-        if (any(urldefrag(urljoin(base_url, href))[0] == url for href in school_hrefs)
-                or explicit_school):
+        if url in school_urls or explicit_school:
             result.append(url)
     return result
 
@@ -804,15 +803,17 @@ def main() -> None:
         quota_bytes=args.quota_bytes,
         quota_stop_ratio=args.quota_stop_ratio,
     )
+    # Discovery must remain independent of Dropbox RAW capacity. Even when
+    # the account is full, new links belong in the GitHub checkpoint and can
+    # be downloaded after additional space becomes available.
+    discovery = crawler.discover_all()
     try:
         crawler.enforce_quota(0)
     except (QuotaLimitReached, QuotaCheckUnavailable) as exc:
         crawler.quota_warning = str(exc)
         print(f"::warning::{crawler.quota_warning}")
-        discovery = []
         processed = 0
     else:
-        discovery = crawler.discover_all()
         dbx.upload_checkpoint(state)
         processed = crawler.process_batch(max(0, args.max_documents))
     save_state(args.state, state)
