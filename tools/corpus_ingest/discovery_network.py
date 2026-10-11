@@ -17,7 +17,7 @@ from urllib.parse import urlsplit, urlunsplit
 
 from coverage_dashboard import (
     REGISTRY, STATE, dropbox_checkpoint, identify, read_jsonl_bytes,
-    validate_registry,
+    read_jsonl, merge_checkpoint_rows, validate_registry,
 )
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -237,9 +237,13 @@ def main() -> None:
             return
         else:
             raise SystemExit("No checkpoint and no existing network snapshot; refusing fake zero inventory")
-    rows = read_jsonl_bytes(content)
+    # Dropbox can be full while GitHub's crawler state keeps collecting links.
+    # Never let a stale Dropbox checkpoint hide these newly discovered URLs.
+    rows = merge_checkpoint_rows(read_jsonl(args.checkpoint), read_jsonl_bytes(content))
     if not rows:
         raise SystemExit("Empty checkpoint: refusing to overwrite previous network view")
+    if args.checkpoint.exists() and args.checkpoint.stat().st_size:
+        origin += " + GitHub crawler discoveries (latest wins)"
     out = build_network(registry, rows, args.segment, origin)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

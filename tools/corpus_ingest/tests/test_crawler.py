@@ -6,6 +6,8 @@ from crawler import (
     merge_states,
     normalize_refresh_token,
     parse_links,
+    parse_school_stage_links,
+    read_sources,
     raw_dropbox_path,
     stable_document_id,
 )
@@ -78,3 +80,52 @@ def test_configured_two_gib_limit_wins_over_larger_account_allocation():
     two_gib = 2 * 1024 * 1024 * 1024
     report = build_quota_report(0, 10 * two_gib, two_gib, 0.95, 0)
     assert report["effective_quota"] == two_gib
+
+
+def test_school_stage_parser_excludes_municipal_and_regional_links():
+    html = """
+    <h3>Школьный этап</h3>
+    <h4>Группа 1</h4>
+    <a href="tasks-iikt-10-11-gr1-sch-sirius-24-25.pdf">Задания</a>
+    <a href="/files/solutions-without-stage-name.pdf">Решения</a>
+    <h3>Муниципальный этап</h3>
+    <a href="tasks-iikt-10-11-mun-msk-24-25.pdf">Задания</a>
+    <h3>Региональный этап</h3>
+    <a href="/reg-tasks.pdf">Задания</a>
+    """
+    found = parse_school_stage_links(html, "https://olimpiada.ru/activity/73/tasks/2024")
+    assert found == [
+        "https://olimpiada.ru/activity/73/tasks/tasks-iikt-10-11-gr1-sch-sirius-24-25.pdf",
+        "https://olimpiada.ru/files/solutions-without-stage-name.pdf",
+    ]
+
+
+def test_school_stage_filename_fallback_and_no_section():
+    html = """
+    <a href="/media/tasks-math-7-8-sch-msk-23-24.pdf">School file</a>
+    <a href="/media/tasks-math-7-8-mun-msk-23-24.pdf">Municipal file</a>
+    """
+    assert parse_school_stage_links(html, "https://olimpiada.ru/activity/72/tasks") == [
+        "https://olimpiada.ru/media/tasks-math-7-8-sch-msk-23-24.pdf",
+    ]
+
+
+def test_math_and_informatics_school_archive_registry(tmp_path):
+    csv = tmp_path / "sources.csv"
+    from pathlib import Path
+    original = Path(__file__).resolve().parents[1] / "registry" / "sources.csv"
+    sources = read_sources(original)
+    by_id = {s.source_id: s for s in sources}
+    for source_id, subject, activity in [
+        ("olimpiada_ru_math_school_archive", "mathematics", "72"),
+        ("olimpiada_ru_inf_school_archive", "informatics", "73"),
+    ]:
+        source = by_id[source_id]
+        assert source.adapter == "school_section"
+        assert source.subject == subject and source.stage == "school"
+        assert source.is_enabled is True
+        assert source.priority_int > 120
+        assert f"/activity/{activity}/tasks" in source.url
+        assert source.max_depth_int >= 2
+    assert by_id["vosh_2024_math_school_sirius_11"].source_type == "document"
+    assert by_id["vosh_2024_inf_school_sirius_10_11"].source_type == "document"

@@ -37,6 +37,23 @@ def read_jsonl(path: Path) -> list[dict]:
     return read_jsonl_bytes(path.read_bytes()) if path.exists() else []
 
 
+def merge_checkpoint_rows(github_rows: list[dict], dropbox_rows: list[dict]) -> list[dict]:
+    """Keep the freshest record of each document from GitHub or Dropbox.
+
+    GitHub can continue to record discoveries when Dropbox reaches capacity,
+    so a successful Dropbox fetch does NOT imply its state is complete.
+    """
+    merged: dict[str, dict] = {}
+    for row in [*dropbox_rows, *github_rows]:
+        identity = row.get("document_id") or row.get("url")
+        if not identity:
+            continue
+        old = merged.get(identity)
+        if old is None or (row.get("updated_at") or "") >= (old.get("updated_at") or ""):
+            merged[identity] = row
+    return sorted(merged.values(), key=lambda row: (row.get("source_id", ""), row.get("url", "")))
+
+
 def dropbox_checkpoint(filename: str = "checkpoint.jsonl") -> bytes | None:
     key, secret, refresh = (os.getenv(k, "") for k in
                             ("DROPBOX_APP_KEY", "DROPBOX_APP_SECRET", "DROPBOX_REFRESH_TOKEN"))
@@ -90,22 +107,45 @@ def identify(record: dict, registry: dict) -> dict:
         competition = next(c for c in registry["competitions"] if c["id"] == "vsosh")
 
     subjects = {"engl": "english", "math": "mathematics",
-                "inf": "informatics", "fiz": "physics", "bio": "biology",
+                "inf": "informatics", "iikt": "informatics",
+                "prog": "informatics", "robot": "informatics",
+                "fiz": "physics", "bio": "biology",
                 "chem": "chemistry", "rus": "russian"}
-    short = re.search(r"(?:^|-)(engl|math|inf|fiz|bio|chem|rus)(?:-|\.)", name)
+    short = re.search(r"(?:^|-)(engl|math|inf|iikt|prog|robot|fiz|bio|chem|rus)(?:-|\.)", name)
     subject = subjects[short.group(1)] if short else None
     if not subject and sid.startswith("vosh_engl"):
         subject = "english"
+    if not subject and (sid.startswith("olimpiada_ru_math_school")
+                        or sid.startswith("vosh_2024_math_school")):
+        subject = "mathematics"
+    if not subject and (sid.startswith("olimpiada_ru_inf_school")
+                        or sid.startswith("vosh_2024_inf_school")):
+        subject = "informatics"
 
     yr = re.search(r"(?<!\d)(20\d{2})[-/](20\d{2})(?!\d)", url)
     season = int(yr.group(1)) if yr else None
     if season is None:
-        yr = re.search(r"(?<!\d)(\d{2})-(\d{2})(?!\d)", name)
-        if yr and int(yr.group(2)) == (int(yr.group(1))+1) % 100:
-            season = 2000 + int(yr.group(1))
-    if season is None:
+        # Paths like /tasks/73/2024/ are unambiguous. Prefer them over
+        # grade bands like iikt-10-11 which otherwise look like year 2010/11.
         yr = re.search(r"/(20\d{2})/", url)
         season = int(yr.group(1)) if yr else None
+    if season is None:
+        # When the URL has no explicit four-digit year, a trailing two-digit
+        # season may be inferred only after all grade-band tokens.
+        years = []
+        for match in re.finditer(r"(?<!\d)(\d{2})-(\d{2})(?!\d)", name):
+            if int(match.group(2)) != (int(match.group(1)) + 1) % 100:
+                continue
+            preceding = name[:match.start()]
+            suffix = name[match.end():]
+            is_after_stage = bool(re.search(
+                r"(?:^|[-_])(?:sch|school|mun|reg|fin|final)[-_]", preceding))
+            is_final_suffix = bool(re.fullmatch(
+                r"(?:[-_](?:pdf|docx?|zip))?\.(?:pdf|docx?|zip)", suffix))
+            if is_after_stage or is_final_suffix:
+                years.append(2000 + int(match.group(1)))
+        if years:
+            season = years[-1]
 
     stage = None
     for pattern, value in ((r"(?:-|/)sch(?:-|/|\.|$)|school", "school"),
@@ -115,6 +155,13 @@ def identify(record: dict, registry: dict) -> dict:
         if re.search(pattern, name + " " + urlparse(url).path.lower()):
             stage = value
             break
+    # This fallback is allowed only for source IDs whose crawler adapter
+    # explicitly restricts discovery to the school-stage HTML section.
+    if stage is None and sid in {
+        "olimpiada_ru_math_school_archive", "olimpiada_ru_inf_school_archive",
+        "vosh_2024_math_school_sirius_11", "vosh_2024_inf_school_sirius_10_11",
+    }:
+        stage = "school"
 
     grades = None
     if short:
@@ -208,9 +255,12 @@ def main() -> None:
             return
         else:
             raise SystemExit("Cannot build: no checkpoint and no existing coverage snapshot")
-    records = read_jsonl_bytes(checkpoint)
+    # Include GitHub-side discoveries not yet written back to a full Dropbox.
+    records = merge_checkpoint_rows(read_jsonl(args.checkpoint), read_jsonl_bytes(checkpoint))
     if not records:
         raise SystemExit("Refusing to replace coverage with an empty checkpoint")
+    if args.checkpoint.exists() and args.checkpoint.stat().st_size:
+        origin += " + GitHub local crawler state (latest wins)"
     parsed = read_jsonl(args.parse_state)
     if args.refresh_dropbox:
         try:

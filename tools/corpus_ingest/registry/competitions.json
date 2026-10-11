@@ -107,7 +107,11 @@
       ],
       "source_ids": [
         "olimpiada_ru_engl_archive",
-        "vosh_engl_official_tasks"
+        "vosh_engl_official_tasks",
+        "olimpiada_ru_math_school_archive",
+        "olimpiada_ru_inf_school_archive",
+        "vosh_2024_math_school_sirius_11",
+        "vosh_2024_inf_school_sirius_10_11"
       ],
       "archive_links": [
         {

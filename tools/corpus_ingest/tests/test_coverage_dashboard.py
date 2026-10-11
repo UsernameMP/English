@@ -30,6 +30,44 @@ class CoverageDashboardTests(unittest.TestCase):
         self.assertEqual(m["grade_band"], "7–8")
         self.assertEqual(m["role"], "tasks")
 
+    def test_math_and_informatics_school_documents_are_classified(self):
+        cases = [
+            ("https://tasks.olimpiada.ru/upload/files/tasks/72/2024/taskssol-math-11-gr1-sch-sirius-24-25_pdf.pdf",
+             "vosh_2024_math_school_sirius_11", "mathematics", "11"),
+            ("https://tasks.olimpiada.ru/upload/files/tasks/73/2024/tasks-iikt-10-11-gr1-sch-sirius-24-25.pdf",
+             "vosh_2024_inf_school_sirius_10_11", "informatics", "10–11"),
+        ]
+        for url, source_id, subject, grade in cases:
+            with self.subTest(source_id=source_id):
+                meta = coverage.identify({"url": url, "source_id": source_id, "status": "DOWNLOADED"}, REGISTRY)
+                self.assertEqual(meta["competition_id"], "vsosh")
+                self.assertEqual(meta["subject_id"], subject)
+                self.assertEqual(meta["season"], 2024)
+                self.assertEqual(meta["stage_id"], "school")
+                self.assertEqual(meta["grade_band"], grade)
+                self.assertEqual(meta["role"], "tasks")
+
+    def test_school_adapter_source_sets_school_when_filename_omits_stage(self):
+        meta = coverage.identify({
+            "url": "https://tasks.olimpiada.ru/upload/files/tasks/72/2024/tasks-math-5-6-24-25.pdf",
+            "source_id": "olimpiada_ru_math_school_archive",
+            "status": "PENDING",
+        }, REGISTRY)
+        self.assertEqual(meta["stage_id"], "school")
+        self.assertEqual(meta["grade_band"], "5–6")
+        self.assertEqual(meta["subject_id"], "mathematics")
+
+    def test_github_only_discoveries_survive_full_dropbox(self):
+        old = {"document_id": "a", "url": "https://test.example/a.pdf",
+               "status": "PENDING", "updated_at": "2026-10-01T12:00:00Z"}
+        newer = {**old, "status": "DOWNLOADED", "updated_at": "2026-10-02T12:00:00Z"}
+        github_only = {"document_id": "b", "url": "https://test.example/b.pdf",
+                       "status": "PENDING", "updated_at": "2026-10-02T12:00:00Z"}
+        rows = coverage.merge_checkpoint_rows([newer, github_only], [old])
+        self.assertEqual(len(rows), 2)
+        self.assertEqual(next(row for row in rows if row["document_id"] == "a")["status"], "DOWNLOADED")
+        self.assertTrue(any(row["document_id"] == "b" for row in rows))
+
     def test_competition_does_not_guess_missing_metadata(self):
         m = coverage.identify({"url": "https://somehost.ru/unknown.pdf",
                                "source_id": "external", "status": "PENDING"}, REGISTRY)
