@@ -1,6 +1,6 @@
 {
-  "requested_at": "2026-10-11T15:07:41.430Z",
-  "cycle": "hourly-20261011T150741",
-  "reason": "scheduled intelligent discovery/review/audit",
-  "previous_cycle": "hourly-02"
+  "requested_at": "2026-10-11T15:28:19.585Z",
+  "cycle": "repair-20261011T152819",
+  "reason": "verify crawler parsing, migration and discovery merging after fix",
+  "previous_cycle": "hourly-20261011T150741"
 }
