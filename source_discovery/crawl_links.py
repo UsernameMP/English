@@ -85,7 +85,7 @@ class Links(HTMLParser):
             # HTMLParser's attrs are already unescaped; use raw start tag.
             raw_tag = self.get_starttag_text() or ""
             found = re.search(
-                r"""\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))""",
+                r"""(?<![-\w:])href\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))""",
                 raw_tag, flags=re.IGNORECASE
             )
             if found:
@@ -167,20 +167,20 @@ def main():
     legacy = read_jsonl(RAW)
     shard_paths = sorted(SHARDS.glob("batch_*.jsonl"))
     seen = {row.get("id") for row in legacy}
-    malformed_parents = set()
+    malformed_parents = {}
     for fp in shard_paths:
         for row in read_jsonl(fp):
             seen.add(row.get("id"))
             if "§ion" in row.get("url", "") and row.get("parent_url"):
-                malformed_parents.add(row["parent_url"])
+                malformed_parents[row["parent_url"]] = row.get("source_url") or row["parent_url"]
     # One-time re-enumeration of pages with corrupted URL parameters.
-    if not state.get("html_ampersand_repair_v1"):
-        for parent in sorted(malformed_parents):
+    if not state.get("html_ampersand_repair_v2"):
+        for parent, root in sorted(malformed_parents.items()):
             visited.discard(parent)
             if parent not in queued:
-                queue.insert(0, {"url": parent, "root": parent, "depth": 0})
+                queue.insert(0, {"url": parent, "root": root, "depth": 0})
                 queued.add(parent)
-        state["html_ampersand_repair_v1"] = True
+        state["html_ampersand_repair_v2"] = True
         state["html_ampersand_requeued"] = len(malformed_parents)
     new = []
     per_site = defaultdict(int)
