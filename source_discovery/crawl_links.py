@@ -13,6 +13,7 @@ from pathlib import Path
 from urllib.parse import urljoin, urlparse, urldefrag
 from urllib.request import Request, urlopen
 from urllib.robotparser import RobotFileParser
+from link_intelligence import hint, likely_file, resource_id
 
 ROOT = Path(__file__).resolve().parent
 STATE = ROOT / "crawl_state.json"
@@ -20,6 +21,7 @@ RAW = ROOT / "links_raw.jsonl"  # legacy staging file, migrated into readable sh
 SHARDS = ROOT / "links_shards"
 SHARD_ROWS = 100
 SOURCES = ROOT / "sources.jsonl"
+OBSERVATIONS = ROOT / "resource_observations.jsonl"
 MAX_PAGES = int(os.getenv("RIFT_PAGES_PER_RUN", "60"))
 PER_SITE = int(os.getenv("RIFT_PAGES_PER_SITE", "12"))
 MAX_DEPTH = int(os.getenv("RIFT_MAX_DEPTH", "6"))
@@ -148,6 +150,36 @@ def fetch_html(url):
     return data.decode(charset, errors="replace"), None
 
 
+def prioritize_queue(queue):
+    """Prefer archive sections without starving peripheral navigation or large sites."""
+    important, peripheral = [], []
+    for task in queue:
+        if task.get("priority", hint(task["url"])["priority"]) >= 2:
+            important.append(task)
+        else:
+            peripheral.append(task)
+    ordered = []
+    # Four likely archive pages, one exploratory page. All pages stay queued.
+    while important or peripheral:
+        ordered.extend(important[:4])
+        del important[:4]
+        if peripheral:
+            ordered.append(peripheral.pop(0))
+    return ordered
+
+
+def observe_mime(observations, url, mime, source_url="", parent_url=""):
+    """Record MIME evidence with no binary body download."""
+    rid = resource_id(url)
+    if not rid or (rid, mime) in {(v["resource_id"], v["mime"]) for v in observations}:
+        return
+    observations.append({
+        "resource_id": rid, "url": url, "mime": mime,
+        "source_url": source_url, "parent_url": parent_url,
+        "file_candidate": likely_file(url, mime), "observed_at": now()
+    })
+
+
 def main():
     sources = [s for s in read_jsonl(SOURCES) if normalize(s.get("url", ""))]
     if STATE.exists():
@@ -159,7 +191,7 @@ def main():
     for source in sources:
         u = normalize(source["url"])
         if u not in visited and u not in queued:
-            queue.append({"url": u, "root": u, "depth": 0})
+            queue.append({"url": u, "root": u, "depth": 0, "priority": 2})
             queued.add(u)
 
     # Migrate any older large single-file ledger into small connector-readable shards.
@@ -182,11 +214,28 @@ def main():
                 queued.add(parent)
         state["html_ampersand_repair_v2"] = True
         state["html_ampersand_requeued"] = len(malformed_parents)
+    observations = read_jsonl(OBSERVATIONS)
+    errors = state.setdefault("errors", {})
+    # Backfill earlier PDF/images incorrectly counted as crawl errors.
+    # They were only MIME discoveries, not parsing failures.
+    for seen_url, old_error in list(errors.items()):
+        if isinstance(old_error, str) and old_error.startswith("non-html:"):
+            observe_mime(observations, seen_url, old_error[9:])
+            del errors[seen_url]
+    # Repair legacy malformed IMC URLs left in state, without deleting
+    # original evidence or permanently suppressing their corrected targets.
+    for broken in list(errors):
+        if "imc-math.org.uk" in broken and "§ion" in broken:
+            repaired = broken.replace("§ion", "&section")
+            if repaired not in visited and repaired not in queued:
+                queue.insert(0, {"url": repaired, "root": "https://www.imc-math.org.uk/?item=problems",
+                                 "depth": 1, "priority": 2})
+                queued.add(repaired)
+    queue = prioritize_queue(queue)
     new = []
     per_site = defaultdict(int)
     robots = {}
     processed = 0
-    errors = state.setdefault("errors", {})
     stopped = []
 
     # Avoid dropping a slow or blocked site from the persistent frontier.
@@ -222,7 +271,12 @@ def main():
         visited.add(url)
         processed += 1
         if err is not None:
-            errors[url] = err
+            if err.startswith("non-html:"):
+                observe_mime(observations, url, err[len("non-html:"):],
+                             source_url=root, parent_url=task.get("parent_url", ""))
+                errors.pop(url, None)
+            else:
+                errors[url] = err
             continue
         parser = Links()
         parser.feed(html)
@@ -233,21 +287,29 @@ def main():
             source_text = " ".join((anchor["text"], anchor["title"],
                                     anchor["heading"], target)).lower()
             score = sum(1 for kw in KEYWORDS if kw in source_text)
-            file_link = urlparse(target).path.lower().endswith(FILE_EXTS)
+            signal = hint(target, anchor["text"], anchor["title"], anchor["heading"])
+            file_link = signal["file_candidate"]
+            # URLs ending in /PDF/ often redirect to a binary file; they must
+            # still be HEAD/GET-header inspected rather than HTML-crawled.
+            ends_in_known_extension = urlparse(target).path.lower().endswith(FILE_EXTS)
             link_id = hashlib.sha256((root + "\n" + url + "\n" + target).encode()).hexdigest()[:24]
             if link_id not in seen:
                 new.append({"id": link_id, "url": target, "parent_url": url,
                             "source_url": root, "anchor_text": anchor["text"],
                             "title": anchor["title"], "heading": anchor["heading"],
-                            "file_candidate": file_link, "heuristic_score": score,
+                            "resource_id": resource_id(target),
+                            "file_candidate": file_link, "type_hint": signal["type_hint"],
+                            "hint_evidence": signal["hint_evidence"],
+                            "heuristic_score": score,
                             "classification": "unreviewed",
                             "found_at": now()})
                 seen.add(link_id)
             thost = urlparse(target).hostname or ""
             same_site = thost == host or thost.endswith("." + host)
-            if same_site and not file_link and task["depth"] < MAX_DEPTH:
+            if same_site and not ends_in_known_extension and task["depth"] < MAX_DEPTH:
                 if target not in visited and target not in queued:
                     queue.append({"url": target, "root": root,
+                                  "parent_url": url, "priority": signal["priority"],
                                   "depth": task["depth"] + 1})
                     queued.add(target)
         time.sleep(0.25)
@@ -274,6 +336,9 @@ def main():
             last_count += take
         # Legacy file is emptied only after all records have been copied.
         RAW.write_text("", encoding="utf-8")
+    OBSERVATIONS.write_text(
+        "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in observations),
+        encoding="utf-8")
     state["queue"] = queue
     state["visited"] = sorted(visited)
     state["updated_at"] = now()
