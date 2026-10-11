@@ -12,6 +12,8 @@ on:
       - "tools/corpus_ingest/coverage_dashboard.py"
       - "tools/corpus_ingest/registry/competitions.json"
       - "tools/corpus_ingest/tests/test_coverage_dashboard.py"
+      - "tools/corpus_ingest/discovery_network.py"
+      - "tools/corpus_ingest/tests/test_discovery_network.py"
       - "tools/document_triage/corpus/**"
   workflow_dispatch:
 
@@ -51,6 +53,18 @@ jobs:
         run: |
           python -m unittest discover -s tools/corpus_ingest/tests -p test_coverage_dashboard.py -v
           python tools/corpus_ingest/coverage_dashboard.py --refresh-dropbox
+          python -m unittest discover -s tools/corpus_ingest/tests -p test_discovery_network.py -v
+          python tools/corpus_ingest/discovery_network.py --refresh-dropbox
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("tools/document_triage/corpus/ru/network.json")
+          d = json.loads(p.read_text(encoding="utf-8"))
+          assert d["schema_version"] == "discovery.network.v1"
+          assert d["segment"]["id"] == "RU"
+          assert d["summary"]["url_observations"] == len(d["observations"])
+          print("RU network:",len(d["observations"]),"URL observations")
+          PY
           cp tools/corpus_ingest/registry/competitions.json tools/document_triage/corpus/registry.json
           python - <<'PY'
           import json
