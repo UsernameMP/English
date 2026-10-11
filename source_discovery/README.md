@@ -30,3 +30,11 @@ This is a persistent staging registry. It does NOT download Olympiad task docume
 - GitHub file-content connectors can return empty text for very large files. Never assume an empty read of the legacy link ledger means it contains zero records. Use small files in `links_shards/` instead.
 - Review outstanding shard IDs gradually; keep a durable label ledger keyed by raw link ID. Heuristic priority can order review but cannot delete or silently reject candidates.
 - Current enumeration crawls HTML anchors. JS-only links, pagination hidden in APIs, archive contents, historical snapshots and URL patterns with no direct anchors require targeted follow-up and remain coverage gaps.
+
+
+## Integrity fixes (2026-10-11)
+- HTML href attributes are recovered from raw start tags to preserve query parameters such as \`&section\`; \`data-href\` is not mistaken for \`href\`.
+- Previously malformed query links remain in the raw evidence ledger; their parent pages are requeued with original \`source_url\` provenance.
+- \`merge_sources.py\` consolidates \`runs/discovery_*.jsonl\` and \`runs/new_kg_source.jsonl\` into \`sources.jsonl\` without dropping existing rows. The crawler workflow runs the merger before enumeration.
+- Regression tests run before the crawler and must pass before updated results are committed.
+- Historical corruption, blocked pages and unclassified documents remain open audit findings, not presumed successfully processed.
