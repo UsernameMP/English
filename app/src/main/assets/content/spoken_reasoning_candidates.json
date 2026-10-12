@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "description": "Explicitly selected voice-suitable pilot questions. Evidence is student-origin only.",
+  "rules": "Tasks must be verbalizable without drawing, diagrams or multi-tap matching. A voice suitability candidate is not auto-verified reasoning.",
+  "candidates": [
+    {
+      "question_id": "math_ratio_001",
+      "grade_min": 5,
+      "grade_max": 7,
+      "selection": "verified_arithmetic_pilot",
+      "locale": [
+        "ru",
+        "en"
+      ],
+      "rubric_version": "ratio-pilot-v1",
+      "accepted_paths": [
+        {
+          "id": "parts",
+          "steps": [
+            "15/3=5",
+            "5*2=10"
+          ]
+        },
+        {
+          "id": "direct",
+          "steps": [
+            "15*2/3=10"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "math_count_001",
+      "grade_min": 5,
+      "grade_max": 7,
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Two independent verbal counting choices, no image or drawing"
+    },
+    {
+      "question_id": "math_mix_001",
+      "grade_min": 5,
+      "grade_max": 7,
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Inclusion/exclusion steps can be explained orally without gestures"
+    }
+  ]
+}

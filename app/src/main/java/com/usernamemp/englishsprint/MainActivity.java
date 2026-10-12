@@ -1,6 +1,7 @@
 package com.usernamemp.englishsprint;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.graphics.Color;
@@ -384,6 +385,14 @@ public class MainActivity extends Activity {
         context.setContentDescription(getString(R.string.change_course));
         context.setOnClickListener(v->showCourseStorefront()); root.addView(context,matchWrap()); root.addView(space(14));
         Button auto=primaryButton(getString(R.string.auto_training)); auto.setOnClickListener(v->startSession(getString(R.string.quick_training),quickSession())); root.addView(auto,matchWrap());
+        if ("mathematics.olympiad.5-7.global.2026".equals(QuestionBank.currentPack().id)) {
+            Button explain = secondaryButton("◉ " + ("ru".equals(Locale.getDefault().getLanguage())
+                    ? "Рассказать решение" : "Explain aloud"));
+            explain.setOnClickListener(v -> startActivity(
+                    new Intent(this, SpokenReasoningActivity.class)));
+            root.addView(explain, matchWrap());
+            root.addView(space(10));
+        }
         root.addView(space(14)); root.addView(text(getString(R.string.choose_topic),18,INK,Typeface.BOLD)); root.addView(space(10));
         if("english".equals(QuestionBank.currentPack().subject)) addTopicGrid(root,new String[]{"A+","⌕","▶","✦"},new int[]{R.string.grammar_title,R.string.reading_title,R.string.listening_title,R.string.story_title},new Question.Type[]{Question.Type.GRAMMAR,Question.Type.READING,Question.Type.LISTENING,Question.Type.STORY});
         else addKnowledgeTopicGrid(root);
@@ -702,6 +711,18 @@ public class MainActivity extends Activity {
             listeningAction = play;
         }
         root.addView(space(18));
+        if ("math_ratio_001".equals(q.id) || "math_count_001".equals(q.id)
+                || "math_mix_001".equals(q.id)) {
+            Button explain = secondaryButton("ru".equals(Locale.getDefault().getLanguage())
+                    ? "Рассказать решение (до ответа)" : "Explain aloud (before answer)");
+            explain.setOnClickListener(v -> {
+                Intent intent = new Intent(this, SpokenReasoningActivity.class);
+                intent.putExtra("question_id", q.id);
+                startActivity(intent);
+            });
+            root.addView(explain, matchWrap());
+            root.addView(space(10));
+        }
 
         List<Button> answerButtons = new ArrayList<>();
         if ("numeric".equals(q.interaction) || "free_response".equals(q.interaction)) {

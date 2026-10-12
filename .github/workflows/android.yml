@@ -62,6 +62,12 @@ jobs:
       - name: Validate 30 original fifth-grade mathematics/informatics tasks
         run: python3 scripts/validate_grade5_new15.py
 
+      - name: Validate offline spoken reasoning pilot
+        run: |
+          python3 scripts/validate_spoken_reasoning.py
+          mkdir -p /tmp/rift-rubric-tests
+          javac -d /tmp/rift-rubric-tests app/src/main/java/com/usernamemp/englishsprint/SpokenReasoningRubric.java scripts/SpokenReasoningRubricTest.java
+          java -cp /tmp/rift-rubric-tests com.usernamemp.englishsprint.SpokenReasoningRubricTest
       - name: Validate Russian STEM task localization
         run: python3 scripts/validate_stem_locale.py
 
