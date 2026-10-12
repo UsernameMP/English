@@ -36,6 +36,9 @@ public final class SpokenReasoningActivity extends Activity {
     private boolean processing=false, saved=false;
     private final Map<String,String> selection = new HashMap<>();
     private boolean ru() { return "ru".equals(Locale.getDefault().getLanguage()); }
+    private String spokenLocale() {
+        return question != null && "math_ratio_001".equals(question.id) && !ru() ? "en" : "ru";
+    }
     private String t(String russian,String english) { return ru() ? russian : english; }
 
     @Override public void onCreate(Bundle state) {
@@ -121,7 +124,7 @@ public final class SpokenReasoningActivity extends Activity {
         add(q.prompt,22);
         add(t("Сначала объясните ход решения. Правильный ответ отдельно. Эталон не показывается.",
               "Explain your reasoning first, enter your final answer separately. The key stays hidden."),14);
-        final String locale = ru() ? "ru" : "en";
+        final String locale = spokenLocale();
         boolean model = OfflineVoskEngine.hasModel(this,locale);
         if (!model) add(t("Офлайн-модель "+locale+" не установлена. Введите объяснение текстом. Микрофон без модели не активируется.",
                  "Offline "+locale+" ASR model missing. Type your explanation; microphone is disabled."),14);
@@ -179,7 +182,7 @@ public final class SpokenReasoningActivity extends Activity {
             return;
         if(status==null) return;
         status.setText(t("Импорт модели в локальное хранилище…","Importing offline ASR model…"));
-        final String locale=ru()?"ru":"en";
+        final String locale=spokenLocale();
         final android.net.Uri uri=data.getData();
         record.setEnabled(false); submit.setEnabled(false);
         new Thread(()->{
@@ -213,7 +216,7 @@ public final class SpokenReasoningActivity extends Activity {
         }
         processing=true;
         status.setText(t("Офлайн-распознавание…","Offline transcription…"));
-        final String locale=ru()?"ru":"en";
+        final String locale=spokenLocale();
         new Thread(()->{
             OfflineVoskEngine.Transcription result=null; String failure=null;
             try { result=OfflineVoskEngine.recognize(getApplicationContext(),locale,wav); }
@@ -250,7 +253,7 @@ public final class SpokenReasoningActivity extends Activity {
             JSONObject data=new JSONObject();
             data.put("question_id",question.id);
             data.put("pack_id",QuestionBank.currentPack().id);
-            data.put("locale",ru()?"ru":"en");
+            data.put("locale",spokenLocale());
             data.put("capture_mode",captureMode);
             data.put("raw_asr_transcript",rawTranscript);
             data.put("edited_transcript",studentText);

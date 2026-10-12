@@ -385,7 +385,7 @@ public class MainActivity extends Activity {
         context.setContentDescription(getString(R.string.change_course));
         context.setOnClickListener(v->showCourseStorefront()); root.addView(context,matchWrap()); root.addView(space(14));
         Button auto=primaryButton(getString(R.string.auto_training)); auto.setOnClickListener(v->startSession(getString(R.string.quick_training),quickSession())); root.addView(auto,matchWrap());
-        if ("mathematics.olympiad.5-7.global.2026".equals(QuestionBank.currentPack().id)) {
+        if (SpokenReasoningCatalog.hasCandidates(this, QuestionBank.all())) {
             Button explain = secondaryButton("◉ " + ("ru".equals(Locale.getDefault().getLanguage())
                     ? "Рассказать решение" : "Explain aloud"));
             explain.setOnClickListener(v -> startActivity(
@@ -711,8 +711,7 @@ public class MainActivity extends Activity {
             listeningAction = play;
         }
         root.addView(space(18));
-        if ("math_ratio_001".equals(q.id) || "math_count_001".equals(q.id)
-                || "math_mix_001".equals(q.id)) {
+        if (SpokenReasoningCatalog.isEligible(this, q.id)) {
             Button explain = secondaryButton("ru".equals(Locale.getDefault().getLanguage())
                     ? "Рассказать решение (до ответа)" : "Explain aloud (before answer)");
             explain.setOnClickListener(v -> {
