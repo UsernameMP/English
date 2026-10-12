@@ -1,0 +1,26 @@
+{
+  "cycle": "hourly-20261012T160355478Z",
+  "resource_shard": "resource_000240.jsonl",
+  "row_range": "0-83",
+  "unique_resources_reviewed": 84,
+  "labels_checkpointed": 84,
+  "canonical_merged": 21,
+  "pending": 63,
+  "checkpoint_files": [
+    "labels_checkpoint_20261012_1604_resource240_1.jsonl",
+    "labels_checkpoint_20261012_1604_resource240_2.jsonl",
+    "labels_checkpoint_20261012_1604_resource240_3.jsonl",
+    "labels_checkpoint_20261012_1604_resource240_4.jsonl"
+  ],
+  "pending_files": [
+    "labels_checkpoint_20261012_1604_resource240_2.jsonl",
+    "labels_checkpoint_20261012_1604_resource240_3.jsonl",
+    "labels_checkpoint_20261012_1604_resource240_4.jsonl"
+  ],
+  "sequential_cursor_advanced": false,
+  "occurrences_reconciliation": "first occurrence ID and parent available; other raw occurrences not exhaustively audited",
+  "source_count_checkpointed": 8,
+  "audit_count_checkpointed": 9,
+  "audit_count_local": 2,
+  "run_trigger_update": "blocked"
+}
