@@ -1,5 +1,7 @@
 from crawler import (
     DropboxClient,
+    Crawler,
+    Source,
     build_quota_report,
     allowed_by_patterns,
     guess_extension,
@@ -159,3 +161,33 @@ def test_grade5_school_math_informatics_official_pdf_seeds():
         assert source.is_enabled
     assert all("2026-27" not in by_id[s.source_id].url for s in sources
                if s.source_id.startswith("vosh_math5_") or s.source_id.startswith("vosh_inf5_"))
+
+
+def test_disabled_source_pending_records_are_not_downloaded():
+    """Disabling a source must also disable its already discovered backlog."""
+    class DB:
+        def get_space_usage(self):
+            return {"used": 0, "allocated": 2 * 1024 * 1024 * 1024}
+
+    sources = [
+        Source("olimpiada_ru_engl_archive", "Old English", "https://example.org", enabled="false"),
+        Source("math5", "Math", "https://example.org/math.pdf", enabled="true"),
+    ]
+    state = {
+        "english": {"source_id": "olimpiada_ru_engl_archive", "status": "PENDING", "attempts": 0},
+        "math": {"source_id": "math5", "status": "PENDING", "attempts": 0},
+    }
+    crawler = Crawler(sources, state, DB(), 1000000)
+    downloaded = []
+    crawler.process_one = lambda rec: downloaded.append(rec["source_id"])
+    assert crawler.process_batch(5) == 1
+    assert downloaded == ["math5"]
+
+
+def test_old_english_archive_disabled_only():
+    from pathlib import Path
+    sources = read_sources(Path(__file__).resolve().parents[1] / "registry" / "sources.csv")
+    by_id = {s.source_id: s for s in sources}
+    assert not by_id["olimpiada_ru_engl_archive"].is_enabled
+    assert by_id["olimpiada_ru_math_school_archive"].is_enabled
+    assert by_id["olimpiada_ru_inf_school_archive"].is_enabled

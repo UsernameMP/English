@@ -738,7 +738,8 @@ class Crawler:
 
         eligible = [
             r for r in self.state.values()
-            if r.get("status") in {"PENDING", "FAILED_RETRYABLE", "CLAIMED", "DOWNLOADING"}
+            if r.get("source_id") in self.source_by_id
+            and r.get("status") in {"PENDING", "FAILED_RETRYABLE", "CLAIMED", "DOWNLOADING"}
             and int(r.get("attempts", 0)) < 5
         ]
         eligible.sort(key=lambda r: (
@@ -826,8 +827,10 @@ def main() -> None:
         "warning": crawler.quota_warning or None,
     }
     remaining = sum(
-        count for status, count in summary["status"].items()
-        if status in {"PENDING", "FAILED_RETRYABLE", "CLAIMED", "DOWNLOADING"}
+        1 for rec in state.values()
+        if rec.get("source_id") in crawler.source_by_id
+        and rec.get("status") in {"PENDING", "FAILED_RETRYABLE", "CLAIMED", "DOWNLOADING"}
+        and int(rec.get("attempts", 0)) < 5
     )
     summary["remaining"] = remaining
     summary["should_continue"] = bool(
