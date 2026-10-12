@@ -1,5 +1,8 @@
 from crawler import (
     DropboxClient,
+    Crawler,
+    Source,
+    apply_pruned_raw_manifest,
     build_quota_report,
     allowed_by_patterns,
     guess_extension,
@@ -159,3 +162,54 @@ def test_grade5_school_math_informatics_official_pdf_seeds():
         assert source.is_enabled
     assert all("2026-27" not in by_id[s.source_id].url for s in sources
                if s.source_id.startswith("vosh_math5_") or s.source_id.startswith("vosh_inf5_"))
+
+
+def test_disabled_source_legacy_pending_not_redownloaded():
+    class DB:
+        def get_space_usage(self):
+            return {"used": 0, "allocated": 2 * 1024 * 1024 * 1024}
+
+    sources = [
+        Source("olimpiada_ru_engl_archive", "English archive", "https://example.org", enabled="false"),
+        Source("math5", "Math", "https://example.org/task.pdf", enabled="true"),
+    ]
+    state = {
+        "eng": {"source_id": "olimpiada_ru_engl_archive", "status": "PENDING", "attempts": 0},
+        "math": {"source_id": "math5", "status": "PENDING", "attempts": 0},
+    }
+    crawler = Crawler(sources, state, DB(), 1000000)
+    seen = []
+    crawler.process_one = lambda rec: seen.append(rec["source_id"])
+    assert crawler.process_batch(10) == 1
+    assert seen == ["math5"]
+
+
+def test_explicit_audio_pruning_preserves_provenance_and_is_idempotent():
+    manifest = {"source_id": "olimpiada_ru_engl_archive", "reason": "old_english_audio_cleanup",
+                "sha256": ["a" * 64]}
+    state = {
+        "audio": {"source_id": "olimpiada_ru_engl_archive", "sha256": "a" * 64,
+                  "dropbox_path": "/OlympiadCorpus/raw/aa/" + "a" * 64 + ".mp3",
+                  "status": "DOWNLOADED", "url": "https://example.org/audio.mp3"},
+        "pdf": {"source_id": "olimpiada_ru_engl_archive", "sha256": "b" * 64,
+                "dropbox_path": "/OlympiadCorpus/raw/bb/" + "b" * 64 + ".pdf",
+                "status": "DOWNLOADED"},
+        "math": {"source_id": "math5", "sha256": "a" * 64,
+                 "dropbox_path": "/OlympiadCorpus/raw/aa/" + "a" * 64 + ".mp3",
+                 "status": "DOWNLOADED"},
+    }
+    assert apply_pruned_raw_manifest(state, manifest) == 1
+    assert state["audio"]["status"] == "RAW_PRUNED"
+    assert state["audio"]["url"] == "https://example.org/audio.mp3"
+    assert state["pdf"]["status"] == "DOWNLOADED"
+    assert state["math"]["status"] == "DOWNLOADED"
+    assert apply_pruned_raw_manifest(state, manifest) == 0
+
+
+def test_old_english_archive_disabled_in_registry():
+    from pathlib import Path
+    sources = read_sources(Path(__file__).resolve().parents[1] / "registry" / "sources.csv")
+    by_id = {s.source_id: s for s in sources}
+    assert by_id["olimpiada_ru_engl_archive"].is_enabled is False
+    assert by_id["olimpiada_ru_math_school_archive"].is_enabled is True
+    assert by_id["olimpiada_ru_inf_school_archive"].is_enabled is True

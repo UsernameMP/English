@@ -297,6 +297,28 @@ def merge_states(a: dict[str, dict], b: dict[str, dict]) -> dict[str, dict]:
     return merged
 
 
+
+def apply_pruned_raw_manifest(state: dict[str, dict], manifest: dict) -> int:
+    """Reconcile deliberately removed RAW bytes without erasing their discovery provenance."""
+    source_id = manifest["source_id"]
+    pruned = set(manifest["sha256"])
+    count = 0
+    timestamp = utc_now()
+    for rec in state.values():
+        if rec.get("source_id") != source_id or rec.get("sha256") not in pruned:
+            continue
+        if not str(rec.get("dropbox_path", "")).lower().endswith((".mp3", ".m4a")):
+            continue
+        if rec.get("status") not in {"DOWNLOADED", "DUPLICATE"}:
+            continue
+        rec["status"] = "RAW_PRUNED"
+        rec["raw_pruned_reason"] = manifest["reason"]
+        rec["raw_pruned_at"] = timestamp
+        rec["updated_at"] = timestamp
+        count += 1
+    return count
+
+
 def normalize_refresh_token(value: str) -> str:
     """Accept the raw refresh token plus common copy/paste wrappers."""
     raw = value.strip()
@@ -738,7 +760,8 @@ class Crawler:
 
         eligible = [
             r for r in self.state.values()
-            if r.get("status") in {"PENDING", "FAILED_RETRYABLE", "CLAIMED", "DOWNLOADING"}
+            if r.get("source_id") in self.source_by_id
+            and r.get("status") in {"PENDING", "FAILED_RETRYABLE", "CLAIMED", "DOWNLOADING"}
             and int(r.get("attempts", 0)) < 5
         ]
         eligible.sort(key=lambda r: (
@@ -794,6 +817,13 @@ def main() -> None:
     github_state = load_state(args.state)
     dropbox_state = dbx.load_checkpoint()
     state = merge_states(github_state, dropbox_state)
+    manifest_path = Path("state/pruned_raw_sha256.json")
+    if manifest_path.exists():
+        pruned = apply_pruned_raw_manifest(
+            state, json.loads(manifest_path.read_text(encoding="utf-8"))
+        )
+        if pruned:
+            print(f"Reconciled {pruned} deliberately pruned RAW records")
 
     crawler = Crawler(
         read_sources(args.sources),
@@ -826,8 +856,10 @@ def main() -> None:
         "warning": crawler.quota_warning or None,
     }
     remaining = sum(
-        count for status, count in summary["status"].items()
-        if status in {"PENDING", "FAILED_RETRYABLE", "CLAIMED", "DOWNLOADING"}
+        1 for rec in state.values()
+        if rec.get("source_id") in crawler.source_by_id
+        and rec.get("status") in {"PENDING", "FAILED_RETRYABLE", "CLAIMED", "DOWNLOADING"}
+        and int(rec.get("attempts", 0)) < 5
     )
     summary["remaining"] = remaining
     summary["should_continue"] = bool(
