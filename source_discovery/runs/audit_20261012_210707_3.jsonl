@@ -1,0 +1,1 @@
+{"scope":"RIFT","kind":"checkpoint_merge","topic":"Canonical label ledger and review cursor lag behind checkpointed resource labels; deduplicate by resource_id while retaining raw occurrence IDs.","status":"pending","origin":"source_discovery/review_state.json","found_at":"2026-10-12"}
