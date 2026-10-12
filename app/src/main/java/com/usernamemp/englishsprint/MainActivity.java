@@ -71,6 +71,7 @@ public class MainActivity extends Activity {
     private WorkshopStore workshop;
     private MetaGameStore metaGame;
     private LearningEventStore learningEvents;
+    private SpokenReasoningWidget voiceWidget;
     private MiniGameHost miniGames;
     private UpdateManager updater;
     private boolean homeVisible = false;
@@ -127,11 +128,25 @@ public class MainActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+        if (voiceWidget != null) voiceWidget.onResume();
         if (updater != null) updater.tryInstallPendingUpdate();
     }
 
     @Override
+    protected void onPause() {
+        if (voiceWidget != null) voiceWidget.onPause();
+        super.onPause();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (voiceWidget != null) voiceWidget.onPermissionResult(requestCode, grantResults);
+    }
+
+    @Override
     protected void onDestroy() {
+        if (voiceWidget != null) { voiceWidget.dispose(); voiceWidget = null; }
         audio.shutdown();
         rewards.shutdown();
         super.onDestroy();
@@ -196,6 +211,7 @@ public class MainActivity extends Activity {
     }
 
     private void showHome() {
+        if (voiceWidget != null) { voiceWidget.dispose(); voiceWidget = null; }
         homeVisible = true;
         hideSystemNavigation();
         audio.stop();
@@ -385,14 +401,6 @@ public class MainActivity extends Activity {
         context.setContentDescription(getString(R.string.change_course));
         context.setOnClickListener(v->showCourseStorefront()); root.addView(context,matchWrap()); root.addView(space(14));
         Button auto=primaryButton(getString(R.string.auto_training)); auto.setOnClickListener(v->startSession(getString(R.string.quick_training),quickSession())); root.addView(auto,matchWrap());
-        if (SpokenReasoningCatalog.hasCandidates(this, QuestionBank.all())) {
-            Button explain = secondaryButton("◉ " + ("ru".equals(Locale.getDefault().getLanguage())
-                    ? "Рассказать решение" : "Explain aloud"));
-            explain.setOnClickListener(v -> startActivity(
-                    new Intent(this, SpokenReasoningActivity.class)));
-            root.addView(explain, matchWrap());
-            root.addView(space(10));
-        }
         root.addView(space(14)); root.addView(text(getString(R.string.choose_topic),18,INK,Typeface.BOLD)); root.addView(space(10));
         if("english".equals(QuestionBank.currentPack().subject)) addTopicGrid(root,new String[]{"A+","⌕","▶","✦"},new int[]{R.string.grammar_title,R.string.reading_title,R.string.listening_title,R.string.story_title},new Question.Type[]{Question.Type.GRAMMAR,Question.Type.READING,Question.Type.LISTENING,Question.Type.STORY});
         else addKnowledgeTopicGrid(root);
@@ -634,6 +642,7 @@ public class MainActivity extends Activity {
     }
 
     private void showQuestion() {
+        if (voiceWidget != null) { voiceWidget.dispose(); voiceWidget = null; }
         questionShownAtMs = System.currentTimeMillis();
         audio.stop();
         if (questionIndex >= session.size()) {
@@ -711,20 +720,13 @@ public class MainActivity extends Activity {
             listeningAction = play;
         }
         root.addView(space(18));
-        if (SpokenReasoningCatalog.isEligible(this, q.id)) {
-            Button explain = secondaryButton("ru".equals(Locale.getDefault().getLanguage())
-                    ? "Рассказать решение (до ответа)" : "Explain aloud (before answer)");
-            explain.setOnClickListener(v -> {
-                Intent intent = new Intent(this, SpokenReasoningActivity.class);
-                intent.putExtra("question_id", q.id);
-                startActivity(intent);
-            });
-            root.addView(explain, matchWrap());
-            root.addView(space(10));
-        }
-
         List<Button> answerButtons = new ArrayList<>();
-        if ("numeric".equals(q.interaction) || "free_response".equals(q.interaction)) {
+        if ("spoken_reasoning".equals(q.interaction)) {
+            voiceWidget = new SpokenReasoningWidget(this, q, QuestionBank.currentPack().id,
+                    correct -> handleAnswerResult(root, q, correct, -1,
+                            Collections.emptyList(), contextForAnswer));
+            voiceWidget.attach(root);
+        } else if ("numeric".equals(q.interaction) || "free_response".equals(q.interaction)) {
             EditText input = new EditText(this);
             input.setHint(getString("numeric".equals(q.interaction) ? R.string.numeric_answer_hint : R.string.short_answer_hint));
             input.setTextSize(22);

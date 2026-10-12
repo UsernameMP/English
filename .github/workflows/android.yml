@@ -94,6 +94,13 @@ jobs:
       - name: Generate offline neural listening WAVs
         run: bash scripts/generate_audio.sh
 
+      - name: Bundle pinned offline Russian Vosk model
+        run: |
+          mkdir -p app/src/main/assets/models
+          curl --fail --location --retry 4 --retry-delay 5 --max-time 240 \
+            'https://huggingface.co/rhasspy/vosk-models/resolve/e7ac2109d134b5f2404ba95389b2fb51916d4cab/ru/vosk-model-small-ru-0.22.zip?download=true' \
+            --output app/src/main/assets/models/vosk-model-small-ru-0.22.zip
+          echo '961d5ff98a17f4aa6de69864d0aa71fa5bac682301d2b5d17a3f24c5c99a46d4  app/src/main/assets/models/vosk-model-small-ru-0.22.zip' | sha256sum -c -
       - name: Read app version
         run: |
           VERSION_NAME="$(sed -n 's/.*versionName "\([^"]*\)".*/\1/p' app/build.gradle | head -n1)"
@@ -105,6 +112,9 @@ jobs:
       - name: Build unsigned release APK
         run: gradle :app:assembleRelease --stacktrace
 
+      - name: Verify bundled ASR archive really entered APK
+        run: |
+          unzip -l app/build/outputs/apk/release/app-release-unsigned.apk | grep -F 'assets/models/vosk-model-small-ru-0.22.zip'
       - name: Fetch public AOSP pilot signing key
         run: |
           mkdir -p "$RUNNER_TEMP/aosp-testkey"

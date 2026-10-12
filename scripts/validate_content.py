@@ -181,6 +181,14 @@ for i, q in enumerate(questions):
             fail(f"{qid}: multi_choice must reference at least two options")
         if q.get("interaction") == "sequence" and len(answers) != len(options):
             fail(f"{qid}: sequence answer must order every option")
+    elif q.get("interaction") == "spoken_reasoning":
+        policy = q.get("answer_policy") or {}
+        if policy.get("final_answer_type") not in {"numeric", "short_text", "none"}:
+            fail(f"{qid}: voice final_answer_type missing/invalid")
+        if q.get("reasoning_rubric") not in {"none", "ratio-pilot-v1"}:
+            fail(f"{qid}: unsupported reasoning rubric")
+        if any(not isinstance(answer,str) or not answer.strip() for answer in answers):
+            fail(f"{qid}: invalid voice accepted answer")
     elif q.get("interaction") == "numeric":
         if any(not isinstance(answer, str) or not answer.strip() for answer in answers):
             fail(f"{qid}: numeric accepted answers must be non-empty strings")
@@ -498,6 +506,12 @@ for catalog_pack in catalog_pack_list:
         if interaction == "free_response":
             if any(not str(answer).strip() for answer in answers):
                 fail(f"{qid}: empty free-response answer")
+        if interaction == "spoken_reasoning":
+            policy = question.get("answer_policy") or {}
+            if policy.get("final_answer_type") not in {"numeric","short_text","none"}:
+                fail(f"{qid}: invalid spoken final answer type")
+            if question.get("reasoning_rubric") not in {"none","ratio-pilot-v1"}:
+                fail(f"{qid}: unknown reasoning rubric")
         if interaction == "numeric":
             if any(not str(answer).strip() for answer in answers):
                 fail(f"{qid}: empty numeric answer")

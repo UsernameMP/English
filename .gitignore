@@ -5,3 +5,6 @@ local.properties
 *.iml
 app/src/main/assets/audio/
 !app/src/main/assets/.gitkeep
+
+# Pinned offline ASR model downloaded and verified in CI
+app/src/main/assets/models/*.zip

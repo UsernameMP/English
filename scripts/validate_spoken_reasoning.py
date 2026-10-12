@@ -1,30 +1,28 @@
 #!/usr/bin/env python3
+"""Voice is a first-class interaction inside existing packs; no separate sidecar."""
+import hashlib
 import json
 from pathlib import Path
-from collections import Counter
 base=Path("app/src/main/assets/content")
-meta=json.loads((base/"spoken_reasoning_candidates.json").read_text())
-banks=["math_g5_7_pilot.json","math_g5_new15_2026.json",
-       "informatics_g5_7_pilot.json","informatics_g5_new15_2026.json"]
-index={}
-for bank_file in banks:
-    bank=json.loads((base/bank_file).read_text())
-    for q in bank["questions"]:
-        assert q["id"] not in index
-        index[q["id"]]=q
-ids=[c["question_id"] for c in meta["candidates"]]
-assert len(ids)==len(set(ids)) and len(ids)>=20
-assert Counter(c["selection"] for c in meta["candidates"])["verified_arithmetic_pilot"]==1
-for c in meta["candidates"]:
-    q=index[c["question_id"]]
-    assert q["subject"] in ("mathematics","informatics")
-    assert q["interaction"]=="numeric" and q["answer"]
-    assert q["source"].get("original") is True
-    if c["selection"]=="collect_only":
-        assert c.get("rubric_version") is None and c.get("reason")
-    else:
-        assert c["question_id"]=="math_ratio_001"
-        assert c["rubric_version"]=="ratio-pilot-v1"
-        assert len(c["accepted_paths"])>=2
-assert index["math_ratio_001"]["answer"]==["10"]
-print("Curated voice candidates:",len(ids))
+cat=json.loads((base/"catalog.json").read_text())
+ids={"math_ratio_001","math_count_001","math_mix_001","cs_numeric_001","cs_numeric_002"}
+observed=set()
+for entry in cat["packs"]:
+    bank_path=Path("app/src/main/assets")/entry["asset"]
+    data=bank_path.read_bytes()
+    assert hashlib.sha256(data).hexdigest()==entry["sha256"],entry["id"]
+    pack=json.loads(data)
+    for q in pack["questions"]:
+        if q["interaction"]!="spoken_reasoning": continue
+        observed.add(q["id"])
+        assert q["id"] in ids,q["id"]
+        assert q["answer_policy"]["final_answer_type"] in ("numeric","short_text","none")
+        assert q["reasoning_rubric"] in ("none","ratio-pilot-v1")
+        assert q["source"]["original"] is True
+        assert q["answer"]
+assert observed==ids,(observed,ids)
+assert not (base/"spoken_reasoning_candidates.json").exists()
+src=Path("app/src/main/java/com/usernamemp/englishsprint/MainActivity.java").read_text()
+assert 'if ("spoken_reasoning".equals(q.interaction))' in src
+assert "new SpokenReasoningActivity" not in src
+print("Voice modality integrated in normal task banks: ",len(observed))

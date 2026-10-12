@@ -46,6 +46,8 @@ public final class Question {
     public final String sourceRegion;
     public final String sourceYear;
     public final boolean verified;
+    public final String spokenAnswerKind;
+    public final String reasoningRubric;
 
     public Question(
             String id,
@@ -107,6 +109,8 @@ public final class Question {
         this.sourceRegion = sourceRegion == null ? "" : sourceRegion;
         this.sourceYear = sourceYear == null ? "" : sourceYear;
         this.verified = verified;
+        this.spokenAnswerKind = "none";
+        this.reasoningRubric = "none";
     }
 
     public Question(
@@ -142,7 +146,9 @@ public final class Question {
             String sourceCompetition,
             String sourceRegion,
             String sourceYear,
-            boolean verified
+            boolean verified,
+            String spokenAnswerKind,
+            String reasoningRubric
     ) {
         this.id = id;
         this.subject = subject;
@@ -178,6 +184,8 @@ public final class Question {
         this.sourceRegion = sourceRegion == null ? "" : sourceRegion;
         this.sourceYear = sourceYear == null ? "" : sourceYear;
         this.verified = verified;
+        this.spokenAnswerKind = spokenAnswerKind == null ? "none" : spokenAnswerKind;
+        this.reasoningRubric = reasoningRubric == null ? "none" : reasoningRubric;
     }
 
     public String primaryKnowledgeId() {
@@ -202,7 +210,7 @@ public final class Question {
 
     public boolean acceptsText(String raw) {
         if (raw == null) return false;
-        if ("numeric".equals(interaction)) {
+        if ("numeric".equals(interaction) || ("spoken_reasoning".equals(interaction) && "numeric".equals(spokenAnswerKind))) {
             Double value = parseNumeric(raw);
             if (value == null) return false;
             if (numericMin != null && value < numericMin) return false;
