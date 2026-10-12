@@ -1,0 +1,34 @@
+{
+  "cycle": "hourly-20261012T131756000Z",
+  "observed_at": "2026-10-12T13:17:56Z",
+  "trigger_status": "update_file_blocked",
+  "trigger_sha": "a80f35eb26517349b8e77c765e80d4a75f6eae74",
+  "action_run_status": "not_confirmed_for_this_cycle",
+  "review": {
+    "resource_shard": "resource_000211.jsonl",
+    "row_range": "0-21",
+    "unique_resources": 22,
+    "raw_occurrences_verified_in": [
+      "batch_000579.jsonl"
+    ],
+    "labels_checkpoint": "runs/labels_checkpoint_20261012_1317_resource211.jsonl",
+    "canonical_labels_merged": 0,
+    "sequential_cursor_advanced": false
+  },
+  "discovery": {
+    "new_verified_sources": 6,
+    "checkpoint": "runs/discovery_20261012_1317.jsonl",
+    "canonical_sources_merged": 0
+  },
+  "audit": {
+    "new_issues": 8,
+    "checkpoint": "runs/audit_20261012_1317.jsonl",
+    "canonical_backlog_merged": 0
+  },
+  "blockers": [
+    "update_file for existing canonical JSONL rejected by connector",
+    "crawl_state.json returns empty content for large file",
+    "workflow merge_labels.py not verified to run"
+  ],
+  "next_action": "Merge checkpoints by fresh SHA and resource_id, then resume from canonical review cursor without repeating resource_000211 rows 0-21."
+}
