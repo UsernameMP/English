@@ -1,0 +1,1 @@
+{"date":"2026-10-12","resource_shards":["resource_000158.jsonl","resource_000159.jsonl"],"considered":108,"checkpointed":69,"uncommitted":39,"canonical_merged":0,"cursor_unchanged":true,"checkpoint_prefix":"labels_checkpoint_20261012_0402_jpho_","note":"See runs directory; noncontiguous reviewed rows are not to be treated as sequential cursor advancement."}
