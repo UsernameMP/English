@@ -1,0 +1,17 @@
+{
+  "cycle": "hourly-20261012T072443Z-a11",
+  "reviewed_at": "2026-10-12T07:24:43Z",
+  "resource_shard": "resource_000164.jsonl",
+  "row_range": "0-55",
+  "unique_resources": 56,
+  "archive": 32,
+  "unrelated": 24,
+  "checkpoint_files": [
+    "labels_checkpoint_20261012_0724_serbia_1.jsonl",
+    "labels_checkpoint_20261012_0724_serbia_2.jsonl",
+    "labels_checkpoint_20261012_0724_serbia_3.jsonl"
+  ],
+  "canonical_merged": false,
+  "sequential_cursor_unchanged": true,
+  "known_partial": "Third checkpoint has all 20 labels but reason missing; first 36 include reason and raw occurrence provenance."
+}
