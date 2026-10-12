@@ -1,1 +1,1 @@
-{"resource_shard":"resource_000159.jsonl","additional_checkpointed":4,"checkpoint_file":"labels_checkpoint_20261012_0402_misc_1.jsonl","total_checkpointed_this_cycle":73,"not_checkpointed":35,"canonical_merged":0}
+{"resource_shard":"resource_000159.jsonl","additional_checkpointed":8,"total_checkpointed_this_cycle":77,"not_checkpointed":31,"canonical_merged":0,"checkpoint_files":["labels_checkpoint_20261012_0402_misc_1.jsonl","labels_checkpoint_20261012_0402_misc_retry_1.jsonl","labels_checkpoint_20261012_0402_misc_retry_2.jsonl"]}
