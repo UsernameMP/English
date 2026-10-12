@@ -1,0 +1,27 @@
+{
+  "cycle": "hourly-20261012T090233063Z",
+  "reviewed_at": "2026-10-12T09:02:55.199Z",
+  "resource_shard": "resource_000172.jsonl",
+  "row_start": 19,
+  "row_end": 58,
+  "unique_resource_ids": 40,
+  "raw_occurrence_shard": "batch_000525.jsonl",
+  "label_checkpoints": [
+    "labels_checkpoint_20261012_0900_bdOI_03.jsonl",
+    "labels_checkpoint_20261012_0900_bdOI_04.jsonl",
+    "labels_checkpoint_20261012_0900_bdOI_05.jsonl",
+    "labels_checkpoint_20261012_0900_bdOI_06.jsonl",
+    "labels_checkpoint_20261012_0900_bdOI_07.jsonl",
+    "labels_checkpoint_20261012_0900_retry_01.jsonl",
+    "labels_checkpoint_20261012_0900_retry_02.jsonl",
+    "labels_checkpoint_20261012_0900_retry_03.jsonl",
+    "labels_checkpoint_20261012_0900_retry_04.jsonl",
+    "labels_checkpoint_20261012_0900_retry_05.jsonl",
+    "labels_checkpoint_20261012_0900_retry_06.jsonl",
+    "labels_checkpoint_20261012_0900_retry_07.jsonl",
+    "labels_checkpoint_20261012_0900_retry_08.jsonl"
+  ],
+  "canonical_label_merge": "pending",
+  "sequential_cursor": "unchanged",
+  "raw_ledger": "unchanged"
+}
