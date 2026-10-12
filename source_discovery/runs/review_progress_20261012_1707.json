@@ -17,7 +17,6 @@
     "labels_checkpoint_20261012_1707_resource242_01.jsonl",
     "labels_checkpoint_20261012_1707_resource242_02.jsonl",
     "labels_checkpoint_20261012_1707_resource242_03.jsonl",
-    "labels_checkpoint_20261012_1707_resource242_04a.jsonl",
     "labels_checkpoint_20261012_1707_resource242_04b.jsonl",
     "labels_checkpoint_20261012_1707_resource242_04_15.jsonl",
     "labels_checkpoint_20261012_1707_resource242_04_16.jsonl",
@@ -30,5 +29,10 @@
   "audit_checkpointed": 8,
   "canonical_labels_update": "blocked",
   "canonical_backlog_update": "blocked",
-  "note": "All 35 first occurrence IDs matched in batches 720-721; other occurrences elsewhere not exhaustively scanned. PDF bodies not downloaded."
+  "note": "All 35 first occurrence IDs matched in batches 720-721; other occurrences elsewhere not exhaustively scanned. PDF bodies not downloaded.",
+  "occurrence_audit": "35 first occurrence IDs matched across batches 720-721; no repeated URLs in those batches; other raw shards not exhaustively scanned",
+  "trigger_run_id": 38282178607,
+  "trigger_run_status": "failure_persist_rebase_conflict_sources_jsonl",
+  "source_push_run_id": 38282255590,
+  "source_push_run_status_at_review": "in_progress"
 }
