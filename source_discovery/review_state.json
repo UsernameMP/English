@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-12T01:05:29.514Z",
+  "updated_at": "2026-10-12T01:09:07.530Z",
   "deferred_shards": [
     1,
     2,
@@ -35,7 +35,12 @@
     "labels_checkpoint_20261012_0102_apho03single_3.jsonl",
     "labels_checkpoint_20261012_0102_apho03single_4.jsonl",
     "labels_checkpoint_20261012_0102_apho03single_5.jsonl",
-    "labels_checkpoint_20261012_0102_apho03single_6.jsonl"
+    "labels_checkpoint_20261012_0102_apho03single_6.jsonl",
+    "labels_checkpoint_20261012_0102_recovered09_1.jsonl",
+    "labels_checkpoint_20261012_0102_recovered09_2.jsonl",
+    "labels_checkpoint_20261012_0102_recovered09_3.jsonl",
+    "labels_checkpoint_20261012_0102_recovered09_4.jsonl",
+    "labels_checkpoint_20261012_0102_recovered09_6.jsonl"
   ],
   "pending_labels_count": 78,
   "canonical_merge_status": "pending_checkpoints_canonical_update_blocked",
@@ -55,5 +60,7 @@
       "reviewed_at": "2026-10-12"
     }
   ],
-  "pending_labels_count_at_least": 113
+  "pending_labels_count_at_least": 118,
+  "recovered_cycle09_labels_checkpointed": 5,
+  "recovered_cycle09_labels_still_local": 1
 }
