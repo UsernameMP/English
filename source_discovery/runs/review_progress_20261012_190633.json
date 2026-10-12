@@ -1,0 +1,31 @@
+{
+  "cycle": "hourly-20261012T190633000Z",
+  "resource_shard": "resource_000339.jsonl",
+  "reviewed_rows": "0-34",
+  "unique_resource_ids": 35,
+  "raw_occurrence_shards": [
+    "batch_000871.jsonl",
+    "batch_000872.jsonl"
+  ],
+  "labels_saved_in_checkpoints": 35,
+  "checkpoint_files": [
+    "review_20261012_190633_joig_01.jsonl",
+    "review_20261012_190633_joig_02a.jsonl",
+    "review_20261012_190633_joig_02b.jsonl",
+    "review_20261012_190633_joig_03.jsonl",
+    "review_20261012_190633_joig_04.jsonl",
+    "review_20261012_190633_joig_05a.jsonl",
+    "review_20261012_190633_joig_05b.jsonl"
+  ],
+  "canonical_link_labels_updated": false,
+  "review_state_updated": false,
+  "sequential_cursor_advanced": false,
+  "types": {
+    "task": 8,
+    "solution": 21,
+    "archive": 4,
+    "unrelated": 1,
+    "review": 1
+  },
+  "note": "Canonical updates rejected by connector safety checks; checkpoint labels preserved and verified. No binary documents downloaded."
+}
