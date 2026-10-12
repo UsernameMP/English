@@ -1,0 +1,15 @@
+{
+  "reviewed_at": "2026-10-12T03:08:35Z",
+  "resource_shard": "resource_000156.jsonl",
+  "row_range": "0-12",
+  "new_unique_labels": 13,
+  "checkpoint_files": [
+    "labels_checkpoint_20261012_0305_fma1.jsonl",
+    "labels_checkpoint_20261012_0305_fma2.jsonl",
+    "labels_checkpoint_20261012_0305_fma3.jsonl",
+    "labels_checkpoint_20261012_0305_fma4.jsonl"
+  ],
+  "canonical_merged": false,
+  "sequential_cursor_unchanged": true,
+  "reason": "noncontiguous review pending canonical merge"
+}
