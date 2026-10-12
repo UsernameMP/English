@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-12T01:09:07.530Z",
+  "updated_at": "2026-10-12T22:10:59.026Z",
   "deferred_shards": [
     1,
     2,
@@ -46,9 +46,11 @@
   "canonical_merge_status": "pending_checkpoints_canonical_update_blocked",
   "canonical_merged_in_cycle": 1,
   "noncontiguous_review": {
-    "resource_shard": "resource_000120.jsonl",
-    "reviewed_row_range": "0-19",
-    "checkpointed_count": 20
+    "resource_shard": "resource_000342.jsonl",
+    "reviewed_row_range": "0-34",
+    "checkpointed_count": 35,
+    "canonical_merged": 35,
+    "raw_shard": "batch_000875.jsonl"
   },
   "noncontiguous_review_history": [
     {
@@ -58,6 +60,15 @@
       "canonical_merged": 0,
       "source_parent_url": "https://physicswithstefan.com/apho-papers/",
       "reviewed_at": "2026-10-12"
+    },
+    {
+      "resource_shard": "resource_000342.jsonl",
+      "row_range": "0-34",
+      "labels_checkpointed": 35,
+      "canonical_merged": 35,
+      "raw_shard": "batch_000875.jsonl",
+      "reviewed_at": "2026-10-12",
+      "cycle": "hourly-20261012T220434000Z-r13"
     }
   ],
   "pending_labels_count_at_least": 118,
