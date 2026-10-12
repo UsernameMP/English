@@ -1,0 +1,34 @@
+{
+  "cycle": "hourly-20261012T170727Z",
+  "resource_shard": "resource_000242.jsonl",
+  "row_range": "0-34",
+  "unique_resources_reviewed": 35,
+  "raw_occurrences_verified": 35,
+  "raw_shards": [
+    "batch_000720.jsonl",
+    "batch_000721.jsonl"
+  ],
+  "classifications": {
+    "unrelated": 35
+  },
+  "labels_checkpointed": 35,
+  "canonical_merged": 0,
+  "checkpoint_files": [
+    "labels_checkpoint_20261012_1707_resource242_01.jsonl",
+    "labels_checkpoint_20261012_1707_resource242_02.jsonl",
+    "labels_checkpoint_20261012_1707_resource242_03.jsonl",
+    "labels_checkpoint_20261012_1707_resource242_04a.jsonl",
+    "labels_checkpoint_20261012_1707_resource242_04b.jsonl",
+    "labels_checkpoint_20261012_1707_resource242_04_15.jsonl",
+    "labels_checkpoint_20261012_1707_resource242_04_16.jsonl",
+    "labels_checkpoint_20261012_1707_resource242_05.jsonl",
+    "labels_checkpoint_20261012_1707_resource242_06.jsonl",
+    "labels_checkpoint_20261012_1707_resource242_07.jsonl"
+  ],
+  "sequential_cursor_advanced": false,
+  "source_added_to_canonical": 11,
+  "audit_checkpointed": 8,
+  "canonical_labels_update": "blocked",
+  "canonical_backlog_update": "blocked",
+  "note": "All 35 first occurrence IDs matched in batches 720-721; other occurrences elsewhere not exhaustively scanned. PDF bodies not downloaded."
+}
