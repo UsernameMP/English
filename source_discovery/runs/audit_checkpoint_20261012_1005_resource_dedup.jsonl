@@ -1,0 +1,1 @@
+{"scope":"RIFT label index","kind":"resource_dedup_gap","topic":"merge_labels.py deduplicates by URL rather than resource_id. Equivalent URLs may be labelled more than once.","status":"pending","origin":"source_discovery/merge_labels.py","found_at":"2026-10-12"}
