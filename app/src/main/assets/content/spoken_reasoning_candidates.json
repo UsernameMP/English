@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "description": "Explicitly selected voice-suitable pilot questions. Evidence is student-origin only.",
+  "rules": "Tasks must be verbalizable without drawing, diagrams or multi-tap matching. A voice suitability candidate is not auto-verified reasoning.",
+  "candidates": [
+    {
+      "question_id": "math_ratio_001",
+      "grade_min": 5,
+      "grade_max": 7,
+      "selection": "verified_arithmetic_pilot",
+      "locale": [
+        "ru",
+        "en"
+      ],
+      "rubric_version": "ratio-pilot-v1",
+      "accepted_paths": [
+        {
+          "id": "parts",
+          "steps": [
+            "15/3=5",
+            "5*2=10"
+          ]
+        },
+        {
+          "id": "direct",
+          "steps": [
+            "15*2/3=10"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "math_count_001",
+      "grade_min": 5,
+      "grade_max": 7,
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Two independent verbal counting choices, no image or drawing"
+    },
+    {
+      "question_id": "math_mix_001",
+      "grade_min": 5,
+      "grade_max": 7,
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Inclusion/exclusion steps can be explained orally without gestures"
+    },
+    {
+      "question_id": "math_div_002",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Oral divisibility"
+    },
+    {
+      "question_id": "math_area_001",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Verbal area arithmetic"
+    },
+    {
+      "question_id": "math5_new26_02",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Multiples with exclusion"
+    },
+    {
+      "question_id": "math5_new26_03",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "One-variable arithmetic"
+    },
+    {
+      "question_id": "math5_new26_04",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Shelf-count arithmetic"
+    },
+    {
+      "question_id": "math5_new26_05",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Counting permutations"
+    },
+    {
+      "question_id": "math5_new26_06",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Verbal seating count"
+    },
+    {
+      "question_id": "math5_new26_07",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Perimeter to area"
+    },
+    {
+      "question_id": "math5_new26_08",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Subtracting areas without construction"
+    },
+    {
+      "question_id": "math5_new26_09",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Sum invariant"
+    },
+    {
+      "question_id": "math5_new26_11",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Ending digits and divisibility"
+    },
+    {
+      "question_id": "math5_new26_13",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Staircase recurrence"
+    },
+    {
+      "question_id": "math5_new26_14",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Handshake counting"
+    },
+    {
+      "question_id": "cs_numeric_001",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Loop tracing"
+    },
+    {
+      "question_id": "cs_numeric_002",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Binary positional expansion"
+    },
+    {
+      "question_id": "cs5_new26_01",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Command trace"
+    },
+    {
+      "question_id": "cs5_new26_03",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Iterative update"
+    },
+    {
+      "question_id": "cs5_new26_04",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Conditional accumulation"
+    },
+    {
+      "question_id": "cs5_new26_05",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Binary to decimal"
+    },
+    {
+      "question_id": "cs5_new26_08",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Product rule"
+    },
+    {
+      "question_id": "cs5_new26_12",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Adjacent swaps"
+    },
+    {
+      "question_id": "cs5_new26_14",
+      "selection": "collect_only",
+      "locale": [
+        "ru"
+      ],
+      "rubric_version": null,
+      "reason": "Bit count"
+    }
+  ]
+}
