@@ -3,7 +3,7 @@
   "bank_id": "informatics-olympiad-5-7-pilot",
   "title": "Олимпиадная информатика — пилот",
   "locale": "ru",
-  "content_version": "0.2.1",
+  "content_version": "0.2.2",
   "pack": {
     "id": "informatics.olympiad.5-7.global.2026",
     "subject": "informatics",
@@ -523,7 +523,7 @@
       "subject": "informatics",
       "grade_min": 5,
       "grade_max": 7,
-      "interaction": "numeric",
+      "interaction": "spoken_reasoning",
       "mode": "practice",
       "skills": [
         "tracing"
@@ -566,14 +566,18 @@
           "weight": 1
         }
       ],
-      "prerequisites": []
+      "prerequisites": [],
+      "answer_policy": {
+        "final_answer_type": "numeric"
+      },
+      "reasoning_rubric": "none"
     },
     {
       "id": "cs_numeric_002",
       "subject": "informatics",
       "grade_min": 5,
       "grade_max": 7,
-      "interaction": "numeric",
+      "interaction": "spoken_reasoning",
       "mode": "practice",
       "skills": [
         "binary"
@@ -594,7 +598,8 @@
         "15.0"
       ],
       "answer_policy": {
-        "tolerance": 0
+        "tolerance": 0,
+        "final_answer_type": "numeric"
       },
       "feedback": {
         "short": {
@@ -619,7 +624,8 @@
           "weight": 1
         }
       ],
-      "prerequisites": []
+      "prerequisites": [],
+      "reasoning_rubric": "none"
     },
     {
       "id": "cs_multi_001",

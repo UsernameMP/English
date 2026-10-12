@@ -10,12 +10,49 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 
 /**
- * Vosk model pack is deliberately not shipped. Each privately installed model must
- * have manifest.json with locale, version, sha256 and model_file (e.g. am/final.mdl).
+ * Offline Russian model is shipped inside APK assets; extracted privately on first use.
+ * Each model has manifest.json with locale, version, sha256 and model_file.
  * No online speech recognizer fallback: offline is a hard guarantee.
  */
 public final class OfflineVoskEngine {
     private OfflineVoskEngine() { }
+    private static final Object BUNDLE_LOCK = new Object();
+    public static final String RU_ARCHIVE_SHA256 =
+            "961d5ff98a17f4aa6de69864d0aa71fa5bac682301d2b5d17a3f24c5c99a46d4";
+    public static void ensureBundled(Context ctx, String locale) throws Exception {
+        if (!"ru".equals(locale)) throw new IllegalStateException("Only bundled Russian ASR is enabled");
+        synchronized (BUNDLE_LOCK) {
+            File manifest = new File(directory(ctx, locale), "manifest.json");
+            if (manifest.isFile()) {
+                try (FileInputStream in = new FileInputStream(manifest)) {
+                    byte[] meta = new byte[(int) manifest.length()];
+                    int offset = 0, n;
+                    while (offset < meta.length && (n = in.read(meta,offset,meta.length-offset)) > 0)
+                        offset += n;
+                    if (offset == meta.length && RU_ARCHIVE_SHA256.equals(
+                            new JSONObject(new String(meta,StandardCharsets.UTF_8))
+                                .optString("archive_sha256","")))
+                        return;
+                } catch (Exception ignored) { /* Reinstall validated bundled model. */ }
+            }
+            try (java.io.InputStream asset = ctx.getAssets().open(
+                    "models/vosk-model-small-ru-0.22.zip")) {
+                importZip(ctx,locale,asset);
+            }
+            File installed = new File(directory(ctx,locale), "manifest.json");
+            JSONObject verified;
+            try (FileInputStream in = new FileInputStream(installed)) {
+                java.io.ByteArrayOutputStream bytes = new java.io.ByteArrayOutputStream();
+                byte[] buffer = new byte[4096]; int n;
+                while ((n = in.read(buffer)) != -1) bytes.write(buffer,0,n);
+                verified = new JSONObject(bytes.toString("UTF-8"));
+            }
+            if (!RU_ARCHIVE_SHA256.equals(verified.optString("archive_sha256",""))) {
+                deleteRecursive(directory(ctx,locale));
+                throw new SecurityException("APK offline ASR model SHA-256 mismatch");
+            }
+        }
+    }
     public static File directory(Context ctx, String locale) {
         return new File(new File(ctx.getNoBackupFilesDir(), "vosk_models"),
                 "en".equals(locale) ? "en" : "ru");
@@ -64,8 +101,8 @@ public final class OfflineVoskEngine {
         return new Transcription(text,m.getString("version"),pinned);
     }
 
-    /** Explicit offline model import from a user-chosen ZIP. No network traffic. */
-    public static String importZip(Context ctx, String locale, java.io.InputStream input) throws Exception {
+    /** Internal bundled ZIP unpacker; this is not a user-visible import flow. */
+    private static String importZip(Context ctx, String locale, java.io.InputStream input) throws Exception {
         if (!"ru".equals(locale) && !"en".equals(locale))
             throw new IllegalArgumentException("Unsupported locale");
         File models = new File(ctx.getNoBackupFilesDir(), "vosk_models");

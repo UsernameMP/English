@@ -265,7 +265,12 @@ public final class QuestionBank {
                         source == null ? "" : source.optString("competition", ""),
                         source == null ? "" : source.optString("region", ""),
                         source == null ? "" : source.optString("year", ""),
-                        review != null && "verified".equals(review.optString("status", ""))
+                        review != null && "verified".equals(review.optString("status", "")),
+                        "spoken_reasoning".equals(interaction)
+                            ? (answerPolicy == null ? "none" : answerPolicy.optString("final_answer_type", "none"))
+                            : "none",
+                        "spoken_reasoning".equals(interaction)
+                            ? o.optString("reasoning_rubric", "none") : "none"
                 ));
             }
 

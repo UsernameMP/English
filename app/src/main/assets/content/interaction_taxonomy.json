@@ -33,6 +33,11 @@
       "response_model": "pair_set"
     },
     {
+      "id": "spoken_reasoning",
+      "runtime_status": "supported",
+      "response_model": "audio_reasoning_attempts_and_optional_short_answer"
+    },
+    {
       "id": "range",
       "runtime_status": "planned",
       "response_model": "bounded_interval"

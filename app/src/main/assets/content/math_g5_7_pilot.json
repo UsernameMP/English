@@ -3,7 +3,7 @@
   "bank_id": "math-olympiad-5-7-pilot",
   "title": "Олимпиадная математика — пилот",
   "locale": "ru",
-  "content_version": "0.1.1",
+  "content_version": "0.1.2",
   "pack": {
     "id": "mathematics.olympiad.5-7.global.2026",
     "subject": "mathematics",
@@ -138,7 +138,7 @@
       "subject": "mathematics",
       "grade_min": 5,
       "grade_max": 7,
-      "interaction": "numeric",
+      "interaction": "spoken_reasoning",
       "mode": "practice",
       "skills": [
         "ratios"
@@ -158,7 +158,8 @@
         "10"
       ],
       "answer_policy": {
-        "tolerance": 0
+        "tolerance": 0,
+        "final_answer_type": "numeric"
       },
       "feedback": {
         "short": {
@@ -185,7 +186,8 @@
       ],
       "prerequisites": [
         "MATH.NUMBER.DIVISIBILITY"
-      ]
+      ],
+      "reasoning_rubric": "ratio-pilot-v1"
     },
     {
       "id": "math_ratio_002",
@@ -255,7 +257,7 @@
       "subject": "mathematics",
       "grade_min": 5,
       "grade_max": 7,
-      "interaction": "numeric",
+      "interaction": "spoken_reasoning",
       "mode": "practice",
       "skills": [
         "counting"
@@ -273,7 +275,8 @@
         "6"
       ],
       "answer_policy": {
-        "tolerance": 0
+        "tolerance": 0,
+        "final_answer_type": "numeric"
       },
       "feedback": {
         "short": {
@@ -298,7 +301,8 @@
           "weight": 1
         }
       ],
-      "prerequisites": []
+      "prerequisites": [],
+      "reasoning_rubric": "none"
     },
     {
       "id": "math_count_002",
@@ -685,7 +689,7 @@
       "subject": "mathematics",
       "grade_min": 5,
       "grade_max": 7,
-      "interaction": "numeric",
+      "interaction": "spoken_reasoning",
       "mode": "practice",
       "skills": [
         "counting",
@@ -704,7 +708,8 @@
         "9"
       ],
       "answer_policy": {
-        "tolerance": 0
+        "tolerance": 0,
+        "final_answer_type": "numeric"
       },
       "feedback": {
         "short": {
@@ -733,7 +738,8 @@
           "weight": 0.5
         }
       ],
-      "prerequisites": []
+      "prerequisites": [],
+      "reasoning_rubric": "none"
     }
   ]
 }
