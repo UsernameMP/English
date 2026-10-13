@@ -1,0 +1,66 @@
+{
+  "cycle": "hourly-20261013T110205000Z-r26",
+  "date": "2026-10-13",
+  "trigger_commit": "6e5f8af975c6e2d573ab0ed32ae18421498e39a2",
+  "crawler": {
+    "publication_confirmed": true,
+    "actions_conclusion": "not independently verified",
+    "state_updated_at": "2026-10-13T11:04:09+00:00",
+    "html_pages": 60,
+    "new_links_reported": 4467,
+    "unique_resources": 51698,
+    "raw_occurrences": 156555,
+    "pending_html_pages": 24879,
+    "visited_html_pages": 3051,
+    "blocked_or_failed": 198,
+    "mime_observations": 416,
+    "pdf_mime": 311,
+    "pdf_without_extension": 205
+  },
+  "canonical": {
+    "sources": 334,
+    "labels": 121,
+    "backlog": 69
+  },
+  "discovery": {
+    "verified_new_sources": 12,
+    "canonical_merged": 0,
+    "checkpoints": [
+      "discovery_20261013_110205_r26_0101.jsonl",
+      "discovery_20261013_110205_r26_0102.jsonl",
+      "discovery_20261013_110205_r26_02.jsonl",
+      "discovery_20261013_110205_r26_03.jsonl"
+    ]
+  },
+  "review": {
+    "resource_shard": "resource_000499.jsonl",
+    "row_ranges": [
+      "0-17",
+      "34-43"
+    ],
+    "unique_reviewed": 28,
+    "counts": {
+      "task": 15,
+      "solution": 7,
+      "review": 3,
+      "source": 2,
+      "unrelated": 1
+    },
+    "canonical_merged": 0,
+    "full_labels_checkpointed": 12,
+    "compact_pending": 16,
+    "raw_crosscheck": "pending",
+    "cursor_moved": false
+  },
+  "audit": {
+    "canonical_added": 12
+  },
+  "unresolved": [
+    "sources checkpoints awaiting merge_sources.py in next scheduled crawl",
+    "full labels not merged due connector safety checks",
+    "review_state update rejected; sequential cursor unchanged",
+    "full raw occurrence crosscheck pending",
+    "workflow conclusion unavailable through current GitHub connector"
+  ],
+  "safeguards": "HTML and URL metadata only; no binary document downloads; Dropbox unchanged; no additional workflow dispatch"
+}
