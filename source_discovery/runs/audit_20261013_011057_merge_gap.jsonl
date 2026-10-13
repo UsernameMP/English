@@ -1,0 +1,1 @@
+{"scope":"RIFT labels","kind":"merge_gap","topic":"merge_labels.py requires id/url/type and is not invoked by RIFT workflow. Current checkpoints use raw_occurrence_id; two compact records require URL reconstruction from resource index.","origin":"source_discovery/merge_labels.py","status":"pending","found_at":"2026-10-13","cycle":"hourly-20261013T011057964Z-r16"}
