@@ -1,0 +1,1 @@
+{"scope":"RIFT IMC legacy URLs","kind":"legacy_corruption_audit","topic":"34 cumulative UnicodeEncodeError entries include historical malformed ?year=2026§ion=... links. Verify repaired &section variants were requeued; retain raw historical errors without counting as new failures.","status":"pending","origin":"crawl_state.json errors audit 2026-10-13","found_at":"2026-10-13"}
