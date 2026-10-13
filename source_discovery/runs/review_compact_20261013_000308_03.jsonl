@@ -1,0 +1,10 @@
+{"id":"09994bcc61bdde78a01b85ab","resource_id":"6b1b3eec65efc3c0ea3b6c8e","type":"solution","row":0,"shard":"resource_000410.jsonl","batch":"batch_001111.jsonl","reason_code":"weekly_solution"}
+{"id":"666a8bb7ba24b24d296a2ab5","resource_id":"4e3cdfe2f50c5058a4e4d264","type":"task","row":1,"shard":"resource_000410.jsonl","batch":"batch_001111.jsonl","reason_code":"weekly_practice_task"}
+{"id":"acf2dae63d16b1a0fd5d12c0","resource_id":"7c1b5a852fc79bcc7e3e044d","type":"task","row":2,"shard":"resource_000410.jsonl","batch":"batch_001111.jsonl","reason_code":"weekly_practice_task"}
+{"id":"5ac54929257715a56c849d11","resource_id":"c2f71685588153bcf66d4717","type":"solution","row":3,"shard":"resource_000410.jsonl","batch":"batch_001111.jsonl","reason_code":"weekly_solution"}
+{"id":"d14cbe3cad494652e206cd74","resource_id":"2c79b65e23b97ce9ea6f45f7","type":"task","row":4,"shard":"resource_000410.jsonl","batch":"batch_001111.jsonl","reason_code":"weekly_practice_task"}
+{"id":"045cb59ab0adbc58c9f0839e","resource_id":"721f4bf744ab258ad5586a1d","type":"solution","row":5,"shard":"resource_000410.jsonl","batch":"batch_001111.jsonl","reason_code":"weekly_solution"}
+{"id":"609d0fa010d0f8f18a16c611","resource_id":"5e34fb744300f3be7f6b98ff","type":"archive","row":6,"shard":"resource_000410.jsonl","batch":"batch_001112.jsonl","reason_code":"pagination"}
+{"id":"b0a4f560acc94527f9796754","resource_id":"8984617d43eacc71f9c8ac0f","type":"archive","row":7,"shard":"resource_000410.jsonl","batch":"batch_001112.jsonl","reason_code":"pagination"}
+{"id":"60ac0d11342c76468ebae9cc","resource_id":"b117ac89fa6a2bb2c12a5a05","type":"archive","row":8,"shard":"resource_000410.jsonl","batch":"batch_001112.jsonl","reason_code":"pagination"}
+{"id":"2807a34d4cd9d729819a6d16","resource_id":"c4b68e8e476a366ebc69e0e5","type":"solution","row":9,"shard":"resource_000410.jsonl","batch":"batch_001112.jsonl","reason_code":"weekly_solution"}
