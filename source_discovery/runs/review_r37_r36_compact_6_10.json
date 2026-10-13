@@ -1,0 +1,56 @@
+{
+  "cycle": "r37",
+  "status": "compact_pending_full_label_merge",
+  "entries": [
+    {
+      "id": "f10b8a7e2b37873f6802b3cf",
+      "resource_id": "90f55362c30fc7efd2c5b3df",
+      "url": "https://www.jpho.jp/challenge/media-download/792/a6ca8b68287fbbb7/PDF/",
+      "type": "task",
+      "year": 2020,
+      "round": "first_challenge",
+      "reason": "Official JPhO First Challenge theory problem (理論問題), link text 問題 in year table",
+      "full_record_source": "r36 local labels checkpoint"
+    },
+    {
+      "id": "58fb2845b6025c30f35df5b8",
+      "resource_id": "67cb7a70dcaf04c505cdb5dc",
+      "url": "https://www.jpho.jp/challenge/challenge2019/",
+      "type": "archive",
+      "year": 2019,
+      "round": "first_challenge",
+      "reason": "Official JPhO First Challenge yearly page, linked under これまでの出題内容",
+      "full_record_source": "r36 local labels checkpoint"
+    },
+    {
+      "id": "60750d7b718da5a86155987e",
+      "resource_id": "d233c106cca58982c3fb278e",
+      "url": "https://www.jpho.jp/challenge/media-download/878/944a973e6cf5edd7/PDF/",
+      "type": "task",
+      "year": 2019,
+      "round": "first_challenge",
+      "reason": "Official JPhO First Challenge experimental report assignment (実験課題レポート) indexed by year",
+      "full_record_source": "r36 local labels checkpoint"
+    },
+    {
+      "id": "676ac1b7d5739c8b5a7e876a",
+      "resource_id": "130d5b7d74b007abe27e89da",
+      "url": "https://www.jpho.jp/challenge/media-download/796/61cc9ad4a92bd0d7/PDF/",
+      "type": "task",
+      "year": 2019,
+      "round": "first_challenge",
+      "reason": "Official JPhO First Challenge theory problem (理論問題), link text 問題 in year table",
+      "full_record_source": "r36 local labels checkpoint"
+    },
+    {
+      "id": "74c8f927f2cc901579f813a0",
+      "resource_id": "a593961fbfdfbad21461fb70",
+      "url": "https://www.jpho.jp/challenge/challenge2018/",
+      "type": "archive",
+      "year": 2018,
+      "round": "first_challenge",
+      "reason": "Official JPhO First Challenge yearly page, linked under これまでの出題内容",
+      "full_record_source": "r36 local labels checkpoint"
+    }
+  ]
+}
