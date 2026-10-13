@@ -1,0 +1,1 @@
+{"cycle":"hourly-20261013T080500Z-r23","resource_shard":"resource_000435.jsonl","rows":[25,26,27,28,29],"classes":{"unrelated":[25,26,27,29],"review":[28]},"raw_shards":["batch_001233.jsonl","batch_001234.jsonl"],"reason":"JPhO official HTML identifies press releases, award navigation, and an experimental report commentary needing manual review. No binaries inspected."}
