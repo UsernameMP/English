@@ -1,0 +1,87 @@
+{
+  "cycle": "hourly-20261013T110205000Z-r26",
+  "resource_shard": "resource_000499.jsonl",
+  "rows": [
+    {
+      "row": 4,
+      "type": "solution",
+      "year": 2021
+    },
+    {
+      "row": 5,
+      "type": "review",
+      "year": 2021,
+      "reason": "errata"
+    },
+    {
+      "row": 6,
+      "type": "task",
+      "year": 2020
+    },
+    {
+      "row": 7,
+      "type": "solution",
+      "year": 2020
+    },
+    {
+      "row": 8,
+      "type": "task",
+      "year": 2019
+    },
+    {
+      "row": 9,
+      "type": "solution",
+      "year": 2019
+    },
+    {
+      "row": 10,
+      "type": "review",
+      "year": 2019,
+      "reason": "errata"
+    },
+    {
+      "row": 11,
+      "type": "task",
+      "year": 2018
+    },
+    {
+      "row": 16,
+      "type": "unrelated"
+    },
+    {
+      "row": 17,
+      "type": "source"
+    },
+    {
+      "row": 34,
+      "type": "task",
+      "round": "practice"
+    },
+    {
+      "row": 35,
+      "type": "task",
+      "round": "practice"
+    },
+    {
+      "row": 36,
+      "type": "task",
+      "round": "practice"
+    },
+    {
+      "row": 37,
+      "type": "task",
+      "round": "practice"
+    },
+    {
+      "row": 38,
+      "type": "task",
+      "round": "practice"
+    },
+    {
+      "row": 39,
+      "type": "task",
+      "round": "practice"
+    }
+  ],
+  "note": "Canonical label update blocked; expand from resource shard first_occurrence_id and official parent; full raw occurrence crosscheck pending"
+}
