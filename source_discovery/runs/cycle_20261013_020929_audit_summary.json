@@ -1,0 +1,100 @@
+{
+  "cycle": "hourly-20261013T020929342Z-r17",
+  "discovery": {
+    "verified_new_source_candidates": 10,
+    "canonical_merged": 0,
+    "checkpoint_blocked": true,
+    "subjects": [
+      "economics",
+      "mathematics",
+      "astronomy",
+      "physics",
+      "science-and-art",
+      "psychology"
+    ],
+    "geographies": [
+      "Brazil",
+      "Belarus",
+      "Russia",
+      "international"
+    ],
+    "source_names": [
+      "Economics World Cup",
+      "Pernambuco Mathematics Olympiad",
+      "Sao Paulo OMASP",
+      "BelAstro IOAA",
+      "Brazil OBFEP",
+      "Brazil OBA",
+      "GEPEMA",
+      "CECIERJ OCA II",
+      "CECIERJ OCA III",
+      "HSE psychology"
+    ]
+  },
+  "review": {
+    "resource_shard": "resource_000415.jsonl",
+    "raw_shard": "batch_001135.jsonl",
+    "rows": "12-55",
+    "unique_resources": 44,
+    "archive": 24,
+    "task": 19,
+    "unrelated": 1,
+    "canonical_merged": 0,
+    "full_labels_checkpoint_blocked": true,
+    "classification_basis": "NHSEB official case library and original raw occurrences",
+    "cursor_advanced": false
+  },
+  "audit": [
+    {
+      "scope": "NHSEB",
+      "kind": "pagination",
+      "detail": "Older Posts uses offset parameter; category sets 2012-13 through 2023-24 do not prove later years absent"
+    },
+    {
+      "scope": "NHSEB",
+      "kind": "rights",
+      "detail": "Case library refers to CC BY-NC-ND 4.0; prior source rights field is underspecified. Preserve link metadata only"
+    },
+    {
+      "scope": "OPEMAT",
+      "kind": "year_round_gap",
+      "detail": "2020 missing from visible list, stage 1 absent from visible 2015-2019 rows"
+    },
+    {
+      "scope": "Economics World Cup",
+      "kind": "publication_pending",
+      "detail": "2026 finals case is marked awaiting release, do not infer a case URL"
+    },
+    {
+      "scope": "OMASP",
+      "kind": "year_round_gap",
+      "detail": "Only 2024 and 2025 visible, phase II and III; municipal ranking sections under construction"
+    },
+    {
+      "scope": "BelAstro IOAA",
+      "kind": "historical_mirror",
+      "detail": "Separate translated, alternative, observation and original round versions; 2007-2021 mirror needs provenance audit"
+    },
+    {
+      "scope": "OCA",
+      "kind": "document_classification",
+      "detail": "Official 2025 mixed science-art paper and key metadata, distinguish stage and edition"
+    },
+    {
+      "scope": "IPsyO",
+      "kind": "migration",
+      "detail": "Psychology preparation resources redirect to external learning portal, public sample paper requires follow-up"
+    },
+    {
+      "scope": "UKLO",
+      "kind": "version",
+      "detail": "2025 Advanced mark scheme explicitly corrected; preserve version in downstream metadata"
+    }
+  ],
+  "blocked": [
+    "Direct writes of new source JSONL to canonical and checkpoints rejected by connector safety checks",
+    "Full and compact label checkpoints rejected; minimal review progress recorded"
+  ],
+  "binary_downloads": 0,
+  "dropbox_mutations": 0
+}
