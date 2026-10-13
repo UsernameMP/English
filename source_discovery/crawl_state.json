@@ -1,468 +1,6 @@
 {
   "queue": [
     {
-      "url": "https://olympia.uz/uz/archive/download?file=3uKjj8Bc5KHabuLI1C1qH06Ncni3SRC7.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/download?file=KHer3tOZNXBVCsAIgEaCIjUlcwuWwZ5M.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/download?file=BHzshVMBHbeztn1MhhniUsf9opv8jvbc.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/download?file=GBcPeAH3GieVPQQ-pT_wtSkQYqmx62R-.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/science-olympiad-2025-2026/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 1
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/download?file=CT0_VGVOZ7EOxH7SQVLybF-y6XN8suAf.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/download?file=kXkJqbTSCy-n7fitr5e74BdSa8KB4HYD.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/download?file=MkdTGf3gN7fFx2eH67iJJM4ljy2O-qDK.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/index?sort=title_ru",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/ru/archive/index?sort=title_ru",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/olympiads-2026-2027/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 1
-    },
-    {
-      "url": "https://olympia.uz/ru/archive/index?sort=-title_ru",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/ru/archive/index?sort=title_ru",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/ru/archive/index?sort=-category_id",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/ru/archive/index?sort=category_id",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/ru/archive/index?sort=-date",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/ru/archive/index?sort=date",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://maths.ac-amiens.fr/444-le-probleme-du-mois-de-mai-2017.html",
-      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
-      "parent_url": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/mathematical-olympiad-2026-2027/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 1
-    },
-    {
-      "url": "https://maths.ac-amiens.fr/428-le-probleme-du-mois-d-avril-2017.html",
-      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
-      "parent_url": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://maths.ac-amiens.fr/426-le-probleme-du-mois-de-fevrier-mars-2017.html",
-      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
-      "parent_url": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://maths.ac-amiens.fr/419-le-probleme-du-mois-de-janvier-2017.html",
-      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
-      "parent_url": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://maths.ac-amiens.fr/655-les-sujets-des-olympiades-de-mathematiques-1gt-2024.html",
-      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
-      "parent_url": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/science-olympiad-2026-2027/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 1
-    },
-    {
-      "url": "https://maths.ac-amiens.fr/125-archives.html",
-      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
-      "parent_url": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://maths.ac-amiens.fr/275-sujets-des-olympiades-de-cycle-3-2016-2015-2014-et-2013.html",
-      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
-      "parent_url": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/300/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/301/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/how-to-participate/eligibility/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/302/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/303/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/304/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/295/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/how-to-participate/enrollment/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/296/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/297/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/298/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/299/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/syllabus/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/306/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/308/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/307/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/310/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/olympiad-books/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/293/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/294/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/mo/examination/page/2/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/mo/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/mo/examination/page/3/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/mo/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/for-teachers/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 1
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/pho/examination/page/2/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/pho/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/pho/examination/page/3/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/pho/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/pho/examination/page/4/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/pho/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/cho/examination/page/2/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/cho/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/faq/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 1
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/cho/examination/page/3/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/cho/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/cho/examination/page/4/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/cho/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/bo/examination/page/2/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/bo/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/bo/examination/page/3/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/bo/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/answer-key-to-prmo-2018/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 1
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/oi/examination/page/2/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/oi/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/oi/examination/page/3/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/oi/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/geo/examination/page/2/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/geo/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/eso/examination/page/2/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/eso/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympiads.hbcse.tifr.res.in/key-for-prmo-2017/",
-      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
-      "depth": 1
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/ao/examination/page/2/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/ao/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/ao/examination/page/3/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/ao/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/ijso/examination/page/2/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/ijso/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/ijso/examination/page/3/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/ijso/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/oldal?r1=Points+contest",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
-      "url": "https://olymp.hse.ru/mirror/pubs/share/1112073105",
-      "root": "https://olymp.hse.ru/mmo/tasks-phil",
-      "parent_url": "https://olymp.hse.ru/mmo/criteria",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olymp.hse.ru/mirror/pubs/share/1147188776",
-      "root": "https://olymp.hse.ru/mmo/tasks-phil",
-      "parent_url": "https://olymp.hse.ru/mmo/criteria",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olymp.hse.ru/mirror/pubs/share/1000333607",
-      "root": "https://olymp.hse.ru/mmo/tasks-phil",
-      "parent_url": "https://olymp.hse.ru/mmo/criteria",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
-      "root": "https://noic.com.br/obo/linguistica/",
-      "parent_url": "https://noic.com.br/problemas-da-semana/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/oldal?lap=contestrules2026",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "depth": 1
-    },
-    {
       "url": "https://noic.com.br/problemas-da-semana/?query-16-page=3",
       "root": "https://noic.com.br/obo/linguistica/",
       "parent_url": "https://noic.com.br/problemas-da-semana/",
@@ -20509,9 +20047,58 @@
       "depth": 2
     },
     {
+      "url": "https://www.jpho.jp/challenge/challenge2018/media-download/886/a122e2e0cd66d8f1/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "parent_url": "https://www.jpho.jp/challenge/challenge2018/",
+      "priority": 3,
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2017/media-download/1011/6ceeac0eec7751f2/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "parent_url": "https://www.jpho.jp/challenge/challenge2017/",
+      "priority": 3,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/?year=60",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200810&t=mat&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/160/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/161/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/162/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/163/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
     },
     {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200810&t=inf&l=en",
@@ -20519,9 +20106,65 @@
       "depth": 1
     },
     {
+      "url": "https://www.mmo.mn/olympiads/problems/168/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/169/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/170/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/171/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200810&t=fiz&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/172/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/173/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/177/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/178/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
     },
     {
       "url": "https://www.komal.hu/lap/2008-09/tart.e.shtml",
@@ -20529,9 +20172,65 @@
       "depth": 1
     },
     {
+      "url": "https://www.mmo.mn/olympiads/problems/179/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/180/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/181/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/182/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200809&t=mat&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/183/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/184/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/185/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/176/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
     },
     {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200809&t=inf&l=en",
@@ -20539,9 +20238,65 @@
       "depth": 1
     },
     {
+      "url": "https://www.mmo.mn/olympiads/problems/187/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/189/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/188/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/277/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200809&t=fiz&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/273/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/274/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/275/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/276/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
     },
     {
       "url": "https://www.komal.hu/lap/2008-05/tart.e.shtml",
@@ -20549,9 +20304,65 @@
       "depth": 1
     },
     {
+      "url": "https://www.mmo.mn/olympiads/problems/174/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/175/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/186/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/190/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
+      "priority": 2,
+      "depth": 3
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200805&t=mat&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2016/media-download/889/f1ca46d32b42570a/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "parent_url": "https://www.jpho.jp/challenge/challenge2016/",
+      "priority": 3,
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2015/media-download/893/26441e73168a33a8/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "parent_url": "https://www.jpho.jp/challenge/challenge2015/",
+      "priority": 3,
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2014/media-download/897/bb25cd2ae4485118/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "parent_url": "https://www.jpho.jp/challenge/challenge2014/",
+      "priority": 3,
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2013/media-download/899/b5affd804ee858be/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "parent_url": "https://www.jpho.jp/challenge/challenge2013/",
+      "priority": 3,
+      "depth": 2
     },
     {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200805&t=inf&l=en",
@@ -20559,9 +20370,65 @@
       "depth": 1
     },
     {
+      "url": "https://www.jpho.jp/challenge/challenge2012/media-download/905/b109bb29aa7d8433/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "parent_url": "https://www.jpho.jp/challenge/challenge2012/",
+      "priority": 3,
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2011/media-download/912/df19df66d64c1908/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "parent_url": "https://www.jpho.jp/challenge/challenge2011/",
+      "priority": 3,
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2010/media-download/913/c5a9d0e9f134a038/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "parent_url": "https://www.jpho.jp/challenge/challenge2010/",
+      "priority": 3,
+      "depth": 2
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2009/media-download/917/535dc817b4b059e9/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "parent_url": "https://www.jpho.jp/challenge/challenge2009/",
+      "priority": 3,
+      "depth": 2
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200805&t=fiz&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://www.posn.or.th/examination-centers/page/2/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination-centers/",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.posn.or.th/examination-centers/page/3/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination-centers/",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.posn.or.th/examination-centers/page/16/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination-centers/",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.posn.or.th/examination/page/4/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/page/2/",
+      "priority": 2,
+      "depth": 3
     },
     {
       "url": "https://www.komal.hu/lap/2008-04/tart.e.shtml",
@@ -20569,9 +20436,65 @@
       "depth": 1
     },
     {
+      "url": "https://www.posn.or.th/examination/page/5/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/page/3/",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/challenge2008/media-download/831/7873c482ed157135/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "parent_url": "https://www.jpho.jp/challenge/challenge2008/",
+      "priority": 3,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/examination/page/22/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/page/23/",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.posn.or.th/examination/page/21/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/page/23/",
+      "priority": 2,
+      "depth": 3
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200804&t=mat&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/212/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/213/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/214/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/215/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
     },
     {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200804&t=inf&l=en",
@@ -20579,9 +20502,65 @@
       "depth": 1
     },
     {
+      "url": "https://www.mmo.mn/olympiads/problems/216/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/207/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/208/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/209/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200804&t=fiz&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/210/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/211/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/218/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/220/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
     },
     {
       "url": "https://www.komal.hu/lap/2008-03/tart.e.shtml",
@@ -20589,9 +20568,65 @@
       "depth": 1
     },
     {
+      "url": "https://www.mmo.mn/olympiads/problems/219/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/278/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/195/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/196/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200803&t=mat&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/197/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/198/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/205/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/206/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
+      "priority": 2,
+      "depth": 2
     },
     {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200803&t=inf&l=en",
@@ -20599,9 +20634,65 @@
       "depth": 1
     },
     {
+      "url": "https://www.mmo.mn/olympiads/problems/?year=65",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=64",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/projects/academic-olympiad/mo/examination/?exam_category=90",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/projects/academic-olympiad/pho/examination/?exam_category=94",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/projects/academic-olympiad/cho/examination/?exam_category=96",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200803&t=fiz&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://www.posn.or.th/projects/academic-olympiad/bo/examination/?exam_category=92",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/projects/academic-olympiad/oi/examination/?exam_category=91",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/projects/academic-olympiad/eso/examination/?exam_category=97",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/projects/academic-olympiad/ao/examination/?exam_category=93",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/",
+      "priority": 2,
+      "depth": 2
     },
     {
       "url": "https://www.komal.hu/lap/2008-02/tart.e.shtml",
@@ -20609,9 +20700,65 @@
       "depth": 1
     },
     {
+      "url": "https://www.posn.or.th/projects/academic-olympiad/geo/examination/?exam_category=95",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/projects/academic-olympiad/eso/examination/?exam_category=79",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/projects/academic-olympiad/geo/examination/?exam_category=79",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/projects/academic-olympiad/ijso/examination/?exam_category=81",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/examination/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200802&t=mat&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://www.posn.or.th/en/examination-centers/page/2/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/en/examination-centers/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/en/examination-centers/page/3/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/en/examination-centers/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/en/examination-centers/page/16/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/en/examination-centers/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/en/examination/page/4/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/en/examination/page/2/",
+      "priority": 2,
+      "depth": 2
     },
     {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200802&t=inf&l=en",
@@ -20619,9 +20766,65 @@
       "depth": 1
     },
     {
+      "url": "https://www.posn.or.th/en/examination/page/5/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/en/examination/page/3/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/en/examination/page/22/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/en/examination/page/23/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.posn.or.th/en/examination/page/21/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/en/examination/page/23/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=f-F59ycMJMaCU3nkkszt4FhOowYH8MIO.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200802&t=fiz&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=U5kNbK4nEaktzVtoW8YYI8H4rGj1Rf4t.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=ToiAQZ5XF4zz9U-LAMEpueIt5gOHlwQt.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=z3W2l9qleOWimqk_4GrsefMqnwN8FdCW.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=TRyuF7IG5Bkaq6HTm-u0vXabb-8QASnS.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
     },
     {
       "url": "https://www.komal.hu/lap/2008-01/tart.e.shtml",
@@ -20629,9 +20832,65 @@
       "depth": 1
     },
     {
+      "url": "https://olympia.uz/uz/archive/download?file=4dx5o3isxAQnKgRS3r9LyTXVgc4huKaE.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=zU9BVvLN2iSrt0EI_Lf2ycwLtkYgexze.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=hwzLfzbu0_wIEE4sNg5tyr3FBhr--zl8.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=FSuxDh5xuKe9EkIevoBXyYGyotgTpzT6.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200801&t=mat&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=7IMDqZEY8o2lZqwmX3OrXPJqdEypDV-r.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=GXKVh7AAcp7uvmlOl3XbFxTdhwioisLn.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=a73hn2xiiAgLbs1--hlQtiPFxLKOfqny.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=iFpUcjPz4l-2p7pYnSiTPzFZEL9-GNdW.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
     },
     {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200801&t=inf&l=en",
@@ -20639,9 +20898,65 @@
       "depth": 1
     },
     {
+      "url": "https://olympia.uz/uz/archive/download?file=eZvAdaiKIIdCER7g4DGFV9mev6v4Roit.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=Ky9xK3eUW1XqixpqogSZfgEGe7rZsp2i.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=NOMgS7Q8y6D-8vDtn79sZ8o5oESMmBsv.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=VgHYG4gI3zg3I5EkhBNtUrD13Vdu6gdD.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200801&t=fiz&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=Inw2h9M5u7L39z1fzqbwydOlz0aLk2NY.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=ZM8Ige45U9onYpMbLm3wP6BTEezVKda2.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=iuZyCY6mTJukamceuQ9f4okAUp4kLjp2.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=IK1ujewiQA5tQHiFCI6u18BylYq87buQ.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
     },
     {
       "url": "https://www.komal.hu/lap/2007-12/tart.e.shtml",
@@ -20649,9 +20964,61 @@
       "depth": 1
     },
     {
+      "url": "https://olympia.uz/uz/archive/download?file=sy5FAa3irHHTxuTXpRKpzzR93XlWfJ_9.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=uJbO1tZENyuIjzgTL_BApA3Pf4wb8dUA.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=8aKW2Wa3gsefrDCeM3fjZjRqLsake9oE.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://olympia.uz/uz/archive/download?file=LRppFqDeAkkROnxrMa-6_B7EJbVeGYRY.pdf",
+      "root": "https://olympia.uz/ru/archive/index",
+      "parent_url": "https://olympia.uz/uz/archive/index",
+      "priority": 2,
+      "depth": 2
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200712&t=mat&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://na.icpc.global/naq/",
+      "root": "https://na.icpc.global/naq/",
+      "depth": 0,
+      "priority": 2
+    },
+    {
+      "url": "https://ma.na.icpc.global/archive/",
+      "root": "https://ma.na.icpc.global/archive/",
+      "depth": 0,
+      "priority": 2
+    },
+    {
+      "url": "https://ec.na.icpc.global/archive/",
+      "root": "https://ec.na.icpc.global/archive/",
+      "depth": 0,
+      "priority": 2
+    },
+    {
+      "url": "https://aapt.org/physicsteam/PT-exams.cfm",
+      "root": "https://aapt.org/physicsteam/PT-exams.cfm",
+      "depth": 0,
+      "priority": 2
     },
     {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200712&t=inf&l=en",
@@ -20659,9 +21026,39 @@
       "depth": 1
     },
     {
+      "url": "https://brainbee.ca/local-bees/edmonton/",
+      "root": "https://brainbee.ca/local-bees/edmonton/",
+      "depth": 0,
+      "priority": 2
+    },
+    {
+      "url": "https://icpc.global/community/history-icpc-2023",
+      "root": "https://icpc.global/community/history-icpc-2023",
+      "depth": 0,
+      "priority": 2
+    },
+    {
+      "url": "https://ling.olimpiada.ru/problems",
+      "root": "https://ling.olimpiada.ru/problems",
+      "depth": 0,
+      "priority": 2
+    },
+    {
+      "url": "https://obgeografia.org/",
+      "root": "https://obgeografia.org/",
+      "depth": 0,
+      "priority": 2
+    },
+    {
       "url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=200712&t=fiz&l=en",
       "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
       "depth": 1
+    },
+    {
+      "url": "https://20a.obmep.org.br/provas.htm",
+      "root": "https://20a.obmep.org.br/provas.htm",
+      "depth": 0,
+      "priority": 2
     },
     {
       "url": "https://www.komal.hu/lap/2007-11/tart.e.shtml",
@@ -142378,13 +142775,6 @@
       "depth": 2
     },
     {
-      "url": "https://www.jpho.jp/challenge/challenge2018/media-download/886/a122e2e0cd66d8f1/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "parent_url": "https://www.jpho.jp/challenge/challenge2018/",
-      "priority": 3,
-      "depth": 2
-    },
-    {
       "url": "https://www.jpho.jp/challenge/challenge2018/prize.html",
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "parent_url": "https://www.jpho.jp/challenge/challenge2018/",
@@ -142420,13 +142810,6 @@
       "depth": 2
     },
     {
-      "url": "https://www.jpho.jp/challenge/challenge2017/media-download/1011/6ceeac0eec7751f2/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "parent_url": "https://www.jpho.jp/challenge/challenge2017/",
-      "priority": 3,
-      "depth": 2
-    },
-    {
       "url": "https://www.jpho.jp/challenge/challenge2017/prize.html",
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "parent_url": "https://www.jpho.jp/challenge/challenge2017/",
@@ -142439,237 +142822,6 @@
       "parent_url": "https://www.jpho.jp/challenge/challenge2017/",
       "priority": 0,
       "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/?year=60",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/160/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/161/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/162/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/163/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/168/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/169/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/170/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/171/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/172/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/173/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/177/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/178/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/179/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/180/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/181/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/182/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/183/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/184/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/185/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/176/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/187/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/189/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/188/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/277/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/273/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/274/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/275/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/276/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/174/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/175/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/186/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/190/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=61",
-      "priority": 2,
-      "depth": 3
     },
     {
       "url": "https://www.mmo.mn/olympiads/stats/1189/",
@@ -142823,13 +142975,6 @@
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "parent_url": "https://www.jpho.jp/challenge/challenge2016/",
       "priority": 1,
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2016/media-download/889/f1ca46d32b42570a/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "parent_url": "https://www.jpho.jp/challenge/challenge2016/",
-      "priority": 3,
       "depth": 2
     },
     {
@@ -143085,13 +143230,6 @@
       "depth": 2
     },
     {
-      "url": "https://www.jpho.jp/challenge/challenge2015/media-download/893/26441e73168a33a8/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "parent_url": "https://www.jpho.jp/challenge/challenge2015/",
-      "priority": 3,
-      "depth": 2
-    },
-    {
       "url": "https://www.jpho.jp/challenge/challenge2015/prize.html",
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "parent_url": "https://www.jpho.jp/challenge/challenge2015/",
@@ -143274,13 +143412,6 @@
       "depth": 2
     },
     {
-      "url": "https://www.jpho.jp/challenge/challenge2014/media-download/897/bb25cd2ae4485118/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "parent_url": "https://www.jpho.jp/challenge/challenge2014/",
-      "priority": 3,
-      "depth": 2
-    },
-    {
       "url": "https://www.jpho.jp/challenge/challenge2014/prize.html",
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "parent_url": "https://www.jpho.jp/challenge/challenge2014/",
@@ -143306,13 +143437,6 @@
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "parent_url": "https://www.jpho.jp/challenge/challenge2013/",
       "priority": 1,
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2013/media-download/899/b5affd804ee858be/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "parent_url": "https://www.jpho.jp/challenge/challenge2013/",
-      "priority": 3,
       "depth": 2
     },
     {
@@ -143344,13 +143468,6 @@
       "depth": 2
     },
     {
-      "url": "https://www.jpho.jp/challenge/challenge2012/media-download/905/b109bb29aa7d8433/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "parent_url": "https://www.jpho.jp/challenge/challenge2012/",
-      "priority": 3,
-      "depth": 2
-    },
-    {
       "url": "https://www.jpho.jp/challenge/challenge2012/prize.html",
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "parent_url": "https://www.jpho.jp/challenge/challenge2012/",
@@ -143376,13 +143493,6 @@
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "parent_url": "https://www.jpho.jp/challenge/challenge2011/",
       "priority": 1,
-      "depth": 2
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/challenge2011/media-download/912/df19df66d64c1908/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "parent_url": "https://www.jpho.jp/challenge/challenge2011/",
-      "priority": 3,
       "depth": 2
     },
     {
@@ -143414,13 +143524,6 @@
       "depth": 2
     },
     {
-      "url": "https://www.jpho.jp/challenge/challenge2010/media-download/913/c5a9d0e9f134a038/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "parent_url": "https://www.jpho.jp/challenge/challenge2010/",
-      "priority": 3,
-      "depth": 2
-    },
-    {
       "url": "https://www.jpho.jp/challenge/challenge2010/prize.html",
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "parent_url": "https://www.jpho.jp/challenge/challenge2010/",
@@ -143449,13 +143552,6 @@
       "depth": 2
     },
     {
-      "url": "https://www.jpho.jp/challenge/challenge2009/media-download/917/535dc817b4b059e9/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "parent_url": "https://www.jpho.jp/challenge/challenge2009/",
-      "priority": 3,
-      "depth": 2
-    },
-    {
       "url": "https://www.jpho.jp/challenge/challenge2009/prize.html",
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "parent_url": "https://www.jpho.jp/challenge/challenge2009/",
@@ -143468,41 +143564,6 @@
       "parent_url": "https://www.jpho.jp/challenge/challenge2009/",
       "priority": 0,
       "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/examination-centers/page/2/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination-centers/",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.posn.or.th/examination-centers/page/3/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination-centers/",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.posn.or.th/examination-centers/page/16/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination-centers/",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.posn.or.th/examination/page/4/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/page/2/",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.posn.or.th/examination/page/5/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/page/3/",
-      "priority": 2,
-      "depth": 3
     },
     {
       "url": "https://www.jpho.jp/challenge/challenge2008/record.html",
@@ -143519,13 +143580,6 @@
       "depth": 2
     },
     {
-      "url": "https://www.jpho.jp/challenge/challenge2008/media-download/831/7873c482ed157135/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "parent_url": "https://www.jpho.jp/challenge/challenge2008/",
-      "priority": 3,
-      "depth": 2
-    },
-    {
       "url": "https://www.jpho.jp/challenge/challenge2008/prize.html",
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "parent_url": "https://www.jpho.jp/challenge/challenge2008/",
@@ -143538,20 +143592,6 @@
       "parent_url": "https://www.jpho.jp/challenge/challenge2008/",
       "priority": 0,
       "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/examination/page/22/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/page/23/",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.posn.or.th/examination/page/21/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/page/23/",
-      "priority": 2,
-      "depth": 3
     },
     {
       "url": "https://www.jpho.jp/challenge/challenge2007/record.html",
@@ -143596,177 +143636,9 @@
       "depth": 2
     },
     {
-      "url": "https://www.mmo.mn/olympiads/problems/212/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/213/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/214/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/215/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/216/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/207/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/208/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/209/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/210/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/211/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/218/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/220/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/219/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/278/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/195/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/196/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/197/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/198/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/205/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/206/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=62",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/problems/?year=65",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/?year=64",
-      "priority": 2,
-      "depth": 2
-    },
-    {
       "url": "https://www.jpho.jp/challenge/challenge2006/",
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "depth": 1
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/mo/examination/?exam_category=90",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/pho/examination/?exam_category=94",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/cho/examination/?exam_category=96",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/",
-      "priority": 2,
-      "depth": 2
     },
     {
       "url": "https://www.jpho.jp/challenge/challenge2005/",
@@ -143774,65 +143646,9 @@
       "depth": 1
     },
     {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/bo/examination/?exam_category=92",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/oi/examination/?exam_category=91",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/eso/examination/?exam_category=97",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/ao/examination/?exam_category=93",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
       "url": "https://www.jpho.jp/outreach/resource.html",
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "depth": 1
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/geo/examination/?exam_category=95",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/eso/examination/?exam_category=79",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/geo/examination/?exam_category=79",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/projects/academic-olympiad/ijso/examination/?exam_category=81",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/examination/",
-      "priority": 2,
-      "depth": 2
     },
     {
       "url": "https://www.jpho.jp/challenge/c-flow.html",
@@ -143840,58 +143656,9 @@
       "depth": 1
     },
     {
-      "url": "https://www.posn.or.th/en/examination-centers/page/2/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/en/examination-centers/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/en/examination-centers/page/3/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/en/examination-centers/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/en/examination-centers/page/16/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/en/examination-centers/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/en/examination/page/4/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/en/examination/page/2/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
       "url": "https://www.jpho.jp/challenge/c-participants.html",
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "depth": 1
-    },
-    {
-      "url": "https://www.posn.or.th/en/examination/page/5/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/en/examination/page/3/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/en/examination/page/22/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/en/examination/page/23/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.posn.or.th/en/examination/page/21/",
-      "root": "https://www.posn.or.th/en/examination/",
-      "parent_url": "https://www.posn.or.th/en/examination/page/23/",
-      "priority": 2,
-      "depth": 2
     },
     {
       "url": "https://www.jpho.jp/challenge/c-prize.html",
@@ -143909,44 +143676,9 @@
       "depth": 1
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=f-F59ycMJMaCU3nkkszt4FhOowYH8MIO.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
       "url": "https://www.jpho.jp/challenge/c-mezase.html",
       "root": "https://www.jpho.jp/challenge/c-exam.html",
       "depth": 1
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/download?file=U5kNbK4nEaktzVtoW8YYI8H4rGj1Rf4t.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/download?file=ToiAQZ5XF4zz9U-LAMEpueIt5gOHlwQt.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/download?file=z3W2l9qleOWimqk_4GrsefMqnwN8FdCW.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/download?file=TRyuF7IG5Bkaq6HTm-u0vXabb-8QASnS.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
     },
     {
       "url": "https://www.jpho.jp/challenge/news.html",
@@ -143954,142 +143686,331 @@
       "depth": 1
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=4dx5o3isxAQnKgRS3r9LyTXVgc4huKaE.pdf",
+      "url": "https://olympia.uz/uz/archive/index?sort=-title_ru",
       "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "parent_url": "https://olympia.uz/ru/archive/index?sort=-title_ru",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://maths.ac-amiens.fr/444-le-probleme-du-mois-de-mai-2017.html?page=imprimir_articulo&id_article=444",
+      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
+      "parent_url": "https://maths.ac-amiens.fr/444-le-probleme-du-mois-de-mai-2017.html",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=zU9BVvLN2iSrt0EI_Lf2ycwLtkYgexze.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://maths.ac-amiens.fr/IMG/py/pesees.py",
+      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
+      "parent_url": "https://maths.ac-amiens.fr/444-le-probleme-du-mois-de-mai-2017.html",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://maths.ac-amiens.fr/IMG/sb2/pesees1.sb2",
+      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
+      "parent_url": "https://maths.ac-amiens.fr/444-le-probleme-du-mois-de-mai-2017.html",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2026/06/IOQM-2026.jpeg",
+      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "parent_url": "https://olympiads.hbcse.tifr.res.in/mathematical-olympiad-2026-2027/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://maths.ac-amiens.fr/428-le-probleme-du-mois-d-avril-2017.html?page=imprimir_articulo&id_article=428",
+      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
+      "parent_url": "https://maths.ac-amiens.fr/428-le-probleme-du-mois-d-avril-2017.html",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=hwzLfzbu0_wIEE4sNg5tyr3FBhr--zl8.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://maths.ac-amiens.fr/IMG/sb2/solution1.sb2",
+      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
+      "parent_url": "https://maths.ac-amiens.fr/428-le-probleme-du-mois-d-avril-2017.html",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=FSuxDh5xuKe9EkIevoBXyYGyotgTpzT6.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://maths.ac-amiens.fr/IMG/sb2/solution2.sb2",
+      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
+      "parent_url": "https://maths.ac-amiens.fr/428-le-probleme-du-mois-d-avril-2017.html",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=7IMDqZEY8o2lZqwmX3OrXPJqdEypDV-r.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://maths.ac-amiens.fr/IMG/sb2/solution3.sb2",
+      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
+      "parent_url": "https://maths.ac-amiens.fr/428-le-probleme-du-mois-d-avril-2017.html",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=GXKVh7AAcp7uvmlOl3XbFxTdhwioisLn.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://maths.ac-amiens.fr/IMG/py/pb_du_mois_d_avril.py",
+      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
+      "parent_url": "https://maths.ac-amiens.fr/428-le-probleme-du-mois-d-avril-2017.html",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=a73hn2xiiAgLbs1--hlQtiPFxLKOfqny.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://maths.ac-amiens.fr/426-le-probleme-du-mois-de-fevrier-mars-2017.html?page=imprimir_articulo&id_article=426",
+      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
+      "parent_url": "https://maths.ac-amiens.fr/426-le-probleme-du-mois-de-fevrier-mars-2017.html",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=iFpUcjPz4l-2p7pYnSiTPzFZEL9-GNdW.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://maths.ac-amiens.fr/419-le-probleme-du-mois-de-janvier-2017.html?page=imprimir_articulo&id_article=419",
+      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
+      "parent_url": "https://maths.ac-amiens.fr/419-le-probleme-du-mois-de-janvier-2017.html",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=eZvAdaiKIIdCER7g4DGFV9mev6v4Roit.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://maths.ac-amiens.fr/655-les-sujets-des-olympiades-de-mathematiques-1gt-2024.html?page=imprimir_articulo&id_article=655",
+      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
+      "parent_url": "https://maths.ac-amiens.fr/655-les-sujets-des-olympiades-de-mathematiques-1gt-2024.html",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=Ky9xK3eUW1XqixpqogSZfgEGe7rZsp2i.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://maths.ac-amiens.fr/275-sujets-des-olympiades-de-cycle-3-2016-2015-2014-et-2013.html?page=imprimir_articulo&id_article=275",
+      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
+      "parent_url": "https://maths.ac-amiens.fr/275-sujets-des-olympiades-de-cycle-3-2016-2015-2014-et-2013.html",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=NOMgS7Q8y6D-8vDtn79sZ8o5oESMmBsv.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://maths.ac-amiens.fr/026-irem.html",
+      "root": "https://maths.ac-amiens.fr/052-olympiades-de-cycle-3.html",
+      "parent_url": "https://maths.ac-amiens.fr/275-sujets-des-olympiades-de-cycle-3-2016-2015-2014-et-2013.html",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://olympiads.hbcse.tifr.res.in/how-to-participate/eligibility/science-olympiad/",
+      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "parent_url": "https://olympiads.hbcse.tifr.res.in/how-to-participate/eligibility/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://olympiads.hbcse.tifr.res.in/how-to-participate/enrollment/science-olympiad/",
+      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "parent_url": "https://olympiads.hbcse.tifr.res.in/how-to-participate/enrollment/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/olympiad-books/attachment/inpho-2006-09/",
+      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "parent_url": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/olympiad-books/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://olympiads.hbcse.tifr.res.in/bio-theory-2005-2007/",
+      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "parent_url": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/olympiad-books/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://olympiads.hbcse.tifr.res.in/how-to-participate/eligibility/mathematical-olympiad/",
+      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "parent_url": "https://olympiads.hbcse.tifr.res.in/faq/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://olympiads.hbcse.tifr.res.in",
+      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "parent_url": "https://olympiads.hbcse.tifr.res.in/faq/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://olympiads.hbcse.tifr.res.in/mathematical-olympiad-2023-2024/",
+      "root": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "parent_url": "https://olympiads.hbcse.tifr.res.in/faq/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://noic.com.br/problemas-da-semana/?query-16-page=1",
+      "root": "https://noic.com.br/obo/linguistica/",
+      "parent_url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://noic.com.br/problemas-da-semana/?cst",
+      "root": "https://noic.com.br/obo/linguistica/",
+      "parent_url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://noic.com.br/problemas-da-semana/?query-16-page=3&cst",
+      "root": "https://noic.com.br/obo/linguistica/",
+      "parent_url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://noic.com.br/problemas-da-semana/?query-16-page=4&cst",
+      "root": "https://noic.com.br/obo/linguistica/",
+      "parent_url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://noic.com.br/problemas-da-semana/?query-16-page=175&cst",
+      "root": "https://noic.com.br/obo/linguistica/",
+      "parent_url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://noic.com.br/problemas-da-semana/solucoes-quimica-207/",
+      "root": "https://noic.com.br/obo/linguistica/",
+      "parent_url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://noic.com.br/problemas-da-semana/quimica-semana-207/",
+      "root": "https://noic.com.br/obo/linguistica/",
+      "parent_url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://noic.com.br/problemas-da-semana/solucoes-quimica-206/",
+      "root": "https://noic.com.br/obo/linguistica/",
+      "parent_url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://noic.com.br/problemas-da-semana/quimica-semana-206/",
+      "root": "https://noic.com.br/obo/linguistica/",
+      "parent_url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://noic.com.br/problemas-da-semana/solucoes-quimica-205/",
+      "root": "https://noic.com.br/obo/linguistica/",
+      "parent_url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://noic.com.br/problemas-da-semana/quimica-semana-205/",
+      "root": "https://noic.com.br/obo/linguistica/",
+      "parent_url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://noic.com.br/problemas-da-semana/solucoes-quimica-204/",
+      "root": "https://noic.com.br/obo/linguistica/",
+      "parent_url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://noic.com.br/problemas-da-semana/quimica-semana-204/",
+      "root": "https://noic.com.br/obo/linguistica/",
+      "parent_url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://noic.com.br/problemas-da-semana/solucoes-quimica-202-2/",
+      "root": "https://noic.com.br/obo/linguistica/",
+      "parent_url": "https://noic.com.br/problemas-da-semana/?query-16-page=2",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.komal.hu/mf?a=tk",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/oldal?lap=contestrules2026",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/307/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/310/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/293/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/problems/294/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.posn.or.th/projects/academic-olympiad/geo/examination/page/2/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/geo/examination/",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=VgHYG4gI3zg3I5EkhBNtUrD13Vdu6gdD.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://www.posn.or.th/projects/academic-olympiad/eso/examination/page/2/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/eso/examination/",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=Inw2h9M5u7L39z1fzqbwydOlz0aLk2NY.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://www.posn.or.th/projects/academic-olympiad/ao/examination/page/2/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/ao/examination/",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=ZM8Ige45U9onYpMbLm3wP6BTEezVKda2.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://www.posn.or.th/projects/academic-olympiad/ao/examination/page/3/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/ao/examination/",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=iuZyCY6mTJukamceuQ9f4okAUp4kLjp2.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://www.posn.or.th/projects/academic-olympiad/ijso/examination/page/2/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/ijso/examination/",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://olympia.uz/uz/archive/download?file=IK1ujewiQA5tQHiFCI6u18BylYq87buQ.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/download?file=sy5FAa3irHHTxuTXpRKpzzR93XlWfJ_9.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/download?file=uJbO1tZENyuIjzgTL_BApA3Pf4wb8dUA.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/download?file=8aKW2Wa3gsefrDCeM3fjZjRqLsake9oE.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://olympia.uz/uz/archive/download?file=LRppFqDeAkkROnxrMa-6_B7EJbVeGYRY.pdf",
-      "root": "https://olympia.uz/ru/archive/index",
-      "parent_url": "https://olympia.uz/uz/archive/index",
+      "url": "https://www.posn.or.th/projects/academic-olympiad/ijso/examination/page/3/",
+      "root": "https://www.posn.or.th/en/examination/",
+      "parent_url": "https://www.posn.or.th/projects/academic-olympiad/ijso/examination/",
       "priority": 2,
       "depth": 2
     }
@@ -144831,11 +144752,17 @@
     "https://maths.ac-amiens.fr/111-archives.html",
     "https://maths.ac-amiens.fr/112-examens.html",
     "https://maths.ac-amiens.fr/114-archives.html",
+    "https://maths.ac-amiens.fr/125-archives.html",
     "https://maths.ac-amiens.fr/173-archives.html",
     "https://maths.ac-amiens.fr/243-evaluation-des-copies.html",
     "https://maths.ac-amiens.fr/259-sujets-des-epreuves-sur-dossier-du-capes.html",
     "https://maths.ac-amiens.fr/259-sujets-des-epreuves-sur-dossier-du-capes.html?page=imprimir_articulo&id_article=259",
     "https://maths.ac-amiens.fr/267-seminaire-evaluation-au-college-le-11-octobre-2012.html",
+    "https://maths.ac-amiens.fr/275-sujets-des-olympiades-de-cycle-3-2016-2015-2014-et-2013.html",
+    "https://maths.ac-amiens.fr/419-le-probleme-du-mois-de-janvier-2017.html",
+    "https://maths.ac-amiens.fr/426-le-probleme-du-mois-de-fevrier-mars-2017.html",
+    "https://maths.ac-amiens.fr/428-le-probleme-du-mois-d-avril-2017.html",
+    "https://maths.ac-amiens.fr/444-le-probleme-du-mois-de-mai-2017.html",
     "https://maths.ac-amiens.fr/466-le-probleme-du-mois-de-fevrier-2018.html",
     "https://maths.ac-amiens.fr/466-le-probleme-du-mois-de-fevrier-2018.html?page=imprimir_articulo&id_article=466",
     "https://maths.ac-amiens.fr/561-bac-general-et-technologique-2020-2021.html",
@@ -144846,6 +144773,7 @@
     "https://maths.ac-amiens.fr/588-projet-d-evaluation-lycee.html",
     "https://maths.ac-amiens.fr/643-calendrier-examens-session-2024.html",
     "https://maths.ac-amiens.fr/643-calendrier-examens-session-2024.html?page=imprimir_articulo&id_article=643",
+    "https://maths.ac-amiens.fr/655-les-sujets-des-olympiades-de-mathematiques-1gt-2024.html",
     "https://mk.bioturnir.ru/openbase/tasks",
     "https://mos-law.olimpiada.ru/tasks",
     "https://mygeo-olympiad.my/past-year-questions",
@@ -144911,6 +144839,7 @@
     "https://noic.com.br/obo/linguistica/",
     "https://noic.com.br/olimpiadas/astronomia/provas-anteriores/",
     "https://noic.com.br/problemas-da-semana/",
+    "https://noic.com.br/problemas-da-semana/?query-16-page=2",
     "https://noic.com.br/problemas-da-semana/astronomia/",
     "https://noic.com.br/problemas-da-semana/biologia/",
     "https://noic.com.br/problemas-da-semana/calculo",
@@ -144973,6 +144902,9 @@
     "https://olimpiadascientificas.org/olimpiadas/quimica/obqjr/",
     "https://olimpiados.lt/straipsniai/50-osios-lietuvos-mokiniu-biologijos-olimpiados-ii-etapo-uzduotys-ir-atsakymai",
     "https://olymp.hse.ru/ma/second/prevtasks",
+    "https://olymp.hse.ru/mirror/pubs/share/1000333607",
+    "https://olymp.hse.ru/mirror/pubs/share/1112073105",
+    "https://olymp.hse.ru/mirror/pubs/share/1147188776",
     "https://olymp.hse.ru/mirror/pubs/share/1148299457",
     "https://olymp.hse.ru/mirror/pubs/share/1148302398",
     "https://olymp.hse.ru/mirror/pubs/share/1148346258",
@@ -145034,6 +144966,9 @@
     "https://olympia.uz/ru/archive/download?file=y0pdri9lcsKKLtAgXedHUpPr5Ab5DISF.pdf",
     "https://olympia.uz/ru/archive/download?file=zIY9PdiBU5KdzfaLgt1aYZrAAwGCOcSC.pdf",
     "https://olympia.uz/ru/archive/index",
+    "https://olympia.uz/ru/archive/index?sort=-category_id",
+    "https://olympia.uz/ru/archive/index?sort=-date",
+    "https://olympia.uz/ru/archive/index?sort=-title_ru",
     "https://olympia.uz/ru/archive/index?sort=-title_uz",
     "https://olympia.uz/ru/archive/index?sort=category_id",
     "https://olympia.uz/ru/archive/index?sort=date",
@@ -145043,17 +144978,23 @@
     "https://olympia.uz/uz/archive/download?file=0tnGKeAA8bPYF3yHCXdsBVqRx03ZFyCG.pdf",
     "https://olympia.uz/uz/archive/download?file=2cJkfmnow42jkFt6KQZ2IUkJt0X72D4X.pdf",
     "https://olympia.uz/uz/archive/download?file=2gLQ4wIB-wJ8QL5q3jPxMF6Aa6UmBK0r.pdf",
+    "https://olympia.uz/uz/archive/download?file=3uKjj8Bc5KHabuLI1C1qH06Ncni3SRC7.pdf",
     "https://olympia.uz/uz/archive/download?file=549bGMWwG-QK4GD-yHmvRJh33f3Aug-A.pdf",
     "https://olympia.uz/uz/archive/download?file=5xFqlRkG4HxGPWk0uNZysTDEjE5QVU-o.pdf",
     "https://olympia.uz/uz/archive/download?file=6kBy2zHlh1mjLrRFbYg_28u49feY5PVP.pdf",
     "https://olympia.uz/uz/archive/download?file=8Hsgi79y6ujAV8xtVjKhZQMPpzpLIzVC.pdf",
     "https://olympia.uz/uz/archive/download?file=9Zn9EXKG-M119_sbNW9nPhTHDIN0-5yW.pdf",
+    "https://olympia.uz/uz/archive/download?file=BHzshVMBHbeztn1MhhniUsf9opv8jvbc.pdf",
     "https://olympia.uz/uz/archive/download?file=CJobGERwv30kAe4-bevzKa5wcDtav9e7.pdf",
+    "https://olympia.uz/uz/archive/download?file=CT0_VGVOZ7EOxH7SQVLybF-y6XN8suAf.pdf",
     "https://olympia.uz/uz/archive/download?file=CZNq77MDAp2h3Hc38ClV9o7MQ52WkQnO.pdf",
     "https://olympia.uz/uz/archive/download?file=EbN8AXg9PWCesjf3LsRw8q_ANhoj8lBr.pdf",
+    "https://olympia.uz/uz/archive/download?file=GBcPeAH3GieVPQQ-pT_wtSkQYqmx62R-.pdf",
     "https://olympia.uz/uz/archive/download?file=HbYQunkOa8ONPzEizF8vlLblUxXu1QsC.pdf",
     "https://olympia.uz/uz/archive/download?file=Jcpu-AXqyUQF3Ip7MIa35m1bZuYmUadz.pdf",
+    "https://olympia.uz/uz/archive/download?file=KHer3tOZNXBVCsAIgEaCIjUlcwuWwZ5M.pdf",
     "https://olympia.uz/uz/archive/download?file=LVRhA0pc-1GP0fbwKkCmPV5l9ZMHwxlo.pdf",
+    "https://olympia.uz/uz/archive/download?file=MkdTGf3gN7fFx2eH67iJJM4ljy2O-qDK.pdf",
     "https://olympia.uz/uz/archive/download?file=N-yRYsLHiuBTS-ov_pNL_BvA-x1jy6zI.pdf",
     "https://olympia.uz/uz/archive/download?file=OrEppTEdZ6CgR5amjdWTlka9s0b9kJ8g.pdf",
     "https://olympia.uz/uz/archive/download?file=Pc8djsrQK_pUdlb1-WXPQ-K4C0sejCnG.pdf",
@@ -145069,6 +145010,7 @@
     "https://olympia.uz/uz/archive/download?file=dd1GWO_FEydlKky_ZYg3JCVb0Q8DBZ0Q.pdf",
     "https://olympia.uz/uz/archive/download?file=ftldTaysne6xRltckXaUqs90eYigtaae.pdf",
     "https://olympia.uz/uz/archive/download?file=hCC9j7T9WBf73gtuqZcoShyftIAjk3FM.pdf",
+    "https://olympia.uz/uz/archive/download?file=kXkJqbTSCy-n7fitr5e74BdSa8KB4HYD.pdf",
     "https://olympia.uz/uz/archive/download?file=mdzD2p83Yz1gzddcoeAveMy4xEs034Qb.pdf",
     "https://olympia.uz/uz/archive/download?file=nJECR42QPQc6w3Ou9uC6IIgSaHMpUcM9.pdf",
     "https://olympia.uz/uz/archive/download?file=pLUmwQnb3luR12p7gS4DE9L1TBBc_hqG.pdf",
@@ -145087,6 +145029,7 @@
     "https://olympia.uz/uz/archive/index?sort=-title_uz",
     "https://olympia.uz/uz/archive/index?sort=category_id",
     "https://olympia.uz/uz/archive/index?sort=date",
+    "https://olympia.uz/uz/archive/index?sort=title_ru",
     "https://olympia.uz/uz/archive/index?sort=title_uz",
     "https://olympiad.lk/home/seamo-past-papers/",
     "https://olympiad.org.bd/resource.html",
@@ -145146,20 +145089,32 @@
     "https://olympiads.hbcse.tifr.res.in/announcements/list-of-selected-participants-for-astronomy-and-physics-olympiad-exposure-camps-2026/",
     "https://olympiads.hbcse.tifr.res.in/announcements/list-of-selected-participants-for-chemistry-olympiad-exposure-camp-2025/",
     "https://olympiads.hbcse.tifr.res.in/announcements/olympiad-exposure-camps-in-astronomy-and-physics-2026/",
+    "https://olympiads.hbcse.tifr.res.in/answer-key-to-prmo-2018/",
     "https://olympiads.hbcse.tifr.res.in/author/admin/",
     "https://olympiads.hbcse.tifr.res.in/author/hb_oly/",
     "https://olympiads.hbcse.tifr.res.in/category/announcements/",
     "https://olympiads.hbcse.tifr.res.in/category/front-page-announcement/",
+    "https://olympiads.hbcse.tifr.res.in/faq/",
+    "https://olympiads.hbcse.tifr.res.in/for-teachers/",
     "https://olympiads.hbcse.tifr.res.in/former-contributors/",
+    "https://olympiads.hbcse.tifr.res.in/how-to-participate/eligibility/",
+    "https://olympiads.hbcse.tifr.res.in/how-to-participate/enrollment/",
+    "https://olympiads.hbcse.tifr.res.in/how-to-prepare/olympiad-books/",
     "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+    "https://olympiads.hbcse.tifr.res.in/how-to-prepare/syllabus/",
     "https://olympiads.hbcse.tifr.res.in/information-brochures/",
     "https://olympiads.hbcse.tifr.res.in/inmo2025-result/",
+    "https://olympiads.hbcse.tifr.res.in/key-for-prmo-2017/",
     "https://olympiads.hbcse.tifr.res.in/mathematical-olympiad-2024-2025/",
     "https://olympiads.hbcse.tifr.res.in/mathematical-olympiad-2025-2026/",
+    "https://olympiads.hbcse.tifr.res.in/mathematical-olympiad-2026-2027/",
     "https://olympiads.hbcse.tifr.res.in/ocsc-2026-list/",
     "https://olympiads.hbcse.tifr.res.in/olympiads-2025-2026/",
+    "https://olympiads.hbcse.tifr.res.in/olympiads-2026-2027/",
     "https://olympiads.hbcse.tifr.res.in/regional-coordinators-mathematical-olympiad/",
     "https://olympiads.hbcse.tifr.res.in/rmo-2024-results/",
+    "https://olympiads.hbcse.tifr.res.in/science-olympiad-2025-2026/",
+    "https://olympiads.hbcse.tifr.res.in/science-olympiad-2026-2027/",
     "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IBO2024.jpeg",
     "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IChO2023.jpg",
     "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/10/IMO2024.jpg",
@@ -146258,6 +146213,7 @@
     "https://www.komal.hu/oldal?lap=TaitTeteleEsA3regularisGrafok2",
     "https://www.komal.hu/oldal?lap=TalalasiJavaslatok",
     "https://www.komal.hu/oldal?lap=contestregulations2026",
+    "https://www.komal.hu/oldal?lap=contestrules2026",
     "https://www.komal.hu/oldal?lap=kincsek-2025nov",
     "https://www.komal.hu/oldal?lap=miazakomal",
     "https://www.komal.hu/oldal?lap=whatiskomal",
@@ -146268,6 +146224,7 @@
     "https://www.komal.hu/oldal?r1=Felh%C3%ADv%C3%A1s&r2=IMO+szakk%C3%B6r",
     "https://www.komal.hu/oldal?r1=Felh%C3%ADv%C3%A1s&r2=T%C3%A1bor",
     "https://www.komal.hu/oldal?r1=Matfund&r2=Felh%C3%ADv%C3%A1s",
+    "https://www.komal.hu/oldal?r1=Points+contest",
     "https://www.komal.hu/oldal?r1=The+Magazine",
     "https://www.komal.hu/oldal?r1=The+Magazine&r2=History",
     "https://www.komal.hu/oldal?r1=The+Magazine&r2=Latest+Issue",
@@ -146473,6 +146430,18 @@
     "https://www.mmo.mn/olympiads/problems/290/",
     "https://www.mmo.mn/olympiads/problems/291/",
     "https://www.mmo.mn/olympiads/problems/292/",
+    "https://www.mmo.mn/olympiads/problems/295/",
+    "https://www.mmo.mn/olympiads/problems/296/",
+    "https://www.mmo.mn/olympiads/problems/297/",
+    "https://www.mmo.mn/olympiads/problems/298/",
+    "https://www.mmo.mn/olympiads/problems/299/",
+    "https://www.mmo.mn/olympiads/problems/300/",
+    "https://www.mmo.mn/olympiads/problems/301/",
+    "https://www.mmo.mn/olympiads/problems/302/",
+    "https://www.mmo.mn/olympiads/problems/303/",
+    "https://www.mmo.mn/olympiads/problems/304/",
+    "https://www.mmo.mn/olympiads/problems/306/",
+    "https://www.mmo.mn/olympiads/problems/308/",
     "https://www.mmo.mn/olympiads/problems/?year=61",
     "https://www.mmo.mn/olympiads/problems/?year=62",
     "https://www.mmo.mn/olympiads/problems/?year=63",
@@ -146593,20 +146562,32 @@
     "https://www.posn.or.th/projects/academic-olympiad/ao/examination/?exam_category=230",
     "https://www.posn.or.th/projects/academic-olympiad/bo/examination/",
     "https://www.posn.or.th/projects/academic-olympiad/bo/examination/?exam_category=83",
+    "https://www.posn.or.th/projects/academic-olympiad/bo/examination/page/2/",
+    "https://www.posn.or.th/projects/academic-olympiad/bo/examination/page/3/",
     "https://www.posn.or.th/projects/academic-olympiad/cho/examination/",
     "https://www.posn.or.th/projects/academic-olympiad/cho/examination/?exam_category=88",
+    "https://www.posn.or.th/projects/academic-olympiad/cho/examination/page/2/",
+    "https://www.posn.or.th/projects/academic-olympiad/cho/examination/page/3/",
+    "https://www.posn.or.th/projects/academic-olympiad/cho/examination/page/4/",
     "https://www.posn.or.th/projects/academic-olympiad/eso/examination/",
     "https://www.posn.or.th/projects/academic-olympiad/geo/examination/",
     "https://www.posn.or.th/projects/academic-olympiad/geo/examination/?exam_category=98",
     "https://www.posn.or.th/projects/academic-olympiad/ijso/examination/",
     "https://www.posn.or.th/projects/academic-olympiad/mo/examination/",
     "https://www.posn.or.th/projects/academic-olympiad/mo/examination/?exam_category=83",
+    "https://www.posn.or.th/projects/academic-olympiad/mo/examination/page/2/",
+    "https://www.posn.or.th/projects/academic-olympiad/mo/examination/page/3/",
     "https://www.posn.or.th/projects/academic-olympiad/oi/examination/",
     "https://www.posn.or.th/projects/academic-olympiad/oi/examination/?exam_category=84",
+    "https://www.posn.or.th/projects/academic-olympiad/oi/examination/page/2/",
+    "https://www.posn.or.th/projects/academic-olympiad/oi/examination/page/3/",
     "https://www.posn.or.th/projects/academic-olympiad/ol/examination/",
     "https://www.posn.or.th/projects/academic-olympiad/ol/examination/?exam_category=87",
     "https://www.posn.or.th/projects/academic-olympiad/pho/examination/",
     "https://www.posn.or.th/projects/academic-olympiad/pho/examination/?exam_category=86",
+    "https://www.posn.or.th/projects/academic-olympiad/pho/examination/page/2/",
+    "https://www.posn.or.th/projects/academic-olympiad/pho/examination/page/3/",
+    "https://www.posn.or.th/projects/academic-olympiad/pho/examination/page/4/",
     "https://www.rsme.es/olimpiada-matematica-espanola/problemas-propuestos-y-resultados/",
     "https://www.saasta.ac.za/astroquiz/",
     "https://www.samf.ac.za/EN/tertiary-olympiad",
@@ -147139,11 +147120,11 @@
     }
   },
   "version": 1,
-  "updated_at": "2026-10-13T04:03:25+00:00",
+  "updated_at": "2026-10-13T05:06:01+00:00",
   "last_run": {
     "html_pages": 60,
-    "new_links": 2558,
-    "pending_pages": 21865,
+    "new_links": 3882,
+    "pending_pages": 21851,
     "blocked_or_failed": 188
   },
   "html_ampersand_repair_v1": true,
