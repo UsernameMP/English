@@ -1,0 +1,22 @@
+{
+  "cycle": "hourly-20261013T110205000Z-r26",
+  "resource_shard": "resource_000499.jsonl",
+  "reviewed_ranges": [
+    "0-17",
+    "34-43"
+  ],
+  "counts": {
+    "task": 15,
+    "solution": 7,
+    "review": 3,
+    "source": 2,
+    "unrelated": 1
+  },
+  "canonical_merge": "blocked_by_connector_safety",
+  "raw_crosscheck": "first_occurrence_from_resource_index_only",
+  "source_evidence": [
+    "https://krlo.kr/problems/",
+    "https://oelo.univie.ac.at/aufgaben"
+  ],
+  "notes": "KLO filename year may denote season end; corrections are review; OELO example problems are practice."
+}
