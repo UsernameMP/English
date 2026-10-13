@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-13T01:10:57Z",
+  "updated_at": "2026-10-13T01:16:00Z",
   "deferred_shards": [
     1,
     2,
@@ -40,7 +40,20 @@
     "labels_checkpoint_20261012_0102_recovered09_2.jsonl",
     "labels_checkpoint_20261012_0102_recovered09_3.jsonl",
     "labels_checkpoint_20261012_0102_recovered09_4.jsonl",
-    "labels_checkpoint_20261012_0102_recovered09_6.jsonl"
+    "labels_checkpoint_20261012_0102_recovered09_6.jsonl",
+    "labels_checkpoint_20261013_011057_r413_00.jsonl",
+    "labels_checkpoint_20261013_011057_r413_05.jsonl",
+    "labels_checkpoint_20261013_011057_r413_10.jsonl",
+    "labels_checkpoint_20261013_011057_r413_20.jsonl",
+    "labels_checkpoint_20261013_011057_r413_30.jsonl",
+    "labels_checkpoint_20261013_011057_r413_compact_19_35.jsonl",
+    "labels_checkpoint_20261013_011057_r413_retry_15_16.jsonl",
+    "labels_checkpoint_20261013_011057_r413_retry_17_18.jsonl",
+    "labels_checkpoint_20261013_011057_r413_retry_26_27.jsonl",
+    "labels_checkpoint_20261013_011057_r413_single_25.jsonl",
+    "labels_checkpoint_20261013_011057_r413_single_28.jsonl",
+    "labels_checkpoint_20261013_011057_r413_single_29.jsonl",
+    "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 78,
   "canonical_merge_status": "pending_checkpoints_canonical_update_blocked",
@@ -89,7 +102,7 @@
       "compact_labels_require_expansion": 2
     }
   ],
-  "pending_labels_count_at_least": 118,
+  "pending_labels_count_at_least": 155,
   "recovered_cycle09_labels_checkpointed": 5,
   "recovered_cycle09_labels_still_local": 1
 }
