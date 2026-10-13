@@ -1,0 +1,40 @@
+{
+  "cycle": "hourly-20261013T200923241Z-r35",
+  "actions_run": 38460575208,
+  "actions_conclusion": "success",
+  "trigger_commit": "b3b718f8a581ffc7b03b721939991832aa988971",
+  "crawl_commit": "e72a865",
+  "html_pages": 60,
+  "new_raw_occurrences": 2491,
+  "unique_resource_urls": 59315,
+  "raw_occurrences_estimated_from_shards": 182083,
+  "pending_html_pages": 28726,
+  "blocked_or_failed": 241,
+  "canonical_sources": 398,
+  "new_sources_merged": 4,
+  "canonical_labels": 203,
+  "new_reviewed_unique": 46,
+  "review_classes": {
+    "task": 23,
+    "unrelated": 16,
+    "source": 1,
+    "archive": 5,
+    "review": 1
+  },
+  "review_labels_checkpointed": 46,
+  "review_labels_canonical_merged": 0,
+  "canonical_backlog": 76,
+  "new_audit_gaps_checkpointed": 7,
+  "review_cursor": "batch_000006:24",
+  "proposed_review_cursor": "batch_000006:70",
+  "mime_observations": 507,
+  "pdf_mime": 370,
+  "pdf_without_pdf_extension": 240,
+  "unresolved": [
+    "canonical labels update blocked",
+    "review_state update blocked",
+    "canonical backlog update blocked",
+    "global raw occurrence sweep not complete"
+  ],
+  "notes": "No PDF/DOC/ZIP/image bodies downloaded. Dropbox and automation schedule unchanged."
+}
