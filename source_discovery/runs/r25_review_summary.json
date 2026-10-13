@@ -1,0 +1,1 @@
+{"cycle":"hourly-20261013T100257000Z-r25","resource_shard":"resource_000495.jsonl","rows":"0-23 except 15","labels":23,"types":{"task":9,"solution":6,"criteria":1,"source":5,"review":2},"checkpoint_prefix":"labels_checkpoint_20261013_100257_r495_","canonical_merged":0,"cursor_unchanged":true,"raw_shard_crosscheck_pending":true}
