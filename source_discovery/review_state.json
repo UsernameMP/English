@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-12T22:10:59.026Z",
+  "updated_at": "2026-10-13T01:10:57Z",
   "deferred_shards": [
     1,
     2,
@@ -46,11 +46,15 @@
   "canonical_merge_status": "pending_checkpoints_canonical_update_blocked",
   "canonical_merged_in_cycle": 1,
   "noncontiguous_review": {
-    "resource_shard": "resource_000342.jsonl",
-    "reviewed_row_range": "0-34",
-    "checkpointed_count": 35,
-    "canonical_merged": 35,
-    "raw_shard": "batch_000875.jsonl"
+    "resource_shard": "resource_000413.jsonl",
+    "reviewed_row_range": "0-36",
+    "checkpointed_count": 37,
+    "canonical_merged": 0,
+    "raw_shards": [
+      "batch_001127.jsonl",
+      "batch_001128.jsonl",
+      "batch_001130.jsonl"
+    ]
   },
   "noncontiguous_review_history": [
     {
@@ -69,6 +73,20 @@
       "raw_shard": "batch_000875.jsonl",
       "reviewed_at": "2026-10-12",
       "cycle": "hourly-20261012T220434000Z-r13"
+    },
+    {
+      "resource_shard": "resource_000413.jsonl",
+      "row_range": "0-36",
+      "labels_checkpointed": 37,
+      "canonical_merged": 0,
+      "raw_shards": [
+        "batch_001127.jsonl",
+        "batch_001128.jsonl",
+        "batch_001130.jsonl"
+      ],
+      "reviewed_at": "2026-10-13",
+      "cycle": "hourly-20261013T011057964Z-r16",
+      "compact_labels_require_expansion": 2
     }
   ],
   "pending_labels_count_at_least": 118,
