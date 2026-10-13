@@ -1,0 +1,62 @@
+{
+  "cycle": "hourly-20261013T150618337Z-r30",
+  "observed_at": "2026-10-13T15:12:51Z",
+  "trigger_commit": "5e4941a908d545d0593b3eb9da84df7dbdb36785",
+  "crawler_publication_verified": true,
+  "github_actions_final_conclusion": "not_available_via_connector",
+  "crawler_last_run": {
+    "html_pages": 60,
+    "new_links": 2251,
+    "pending_pages": 26947,
+    "blocked_or_failed": 219
+  },
+  "unique_resources": 55273,
+  "raw_occurrences": 170757,
+  "canonical_sources": 351,
+  "canonical_labels": 121,
+  "canonical_backlog": 76,
+  "resource_observations": 470,
+  "pdf_mime": 346,
+  "pdf_without_pdf_extension": 228,
+  "discovery": {
+    "verified_source_checkpoint_rows": 20,
+    "already_canonical_merged": 2,
+    "pending_unique_sources": 18,
+    "checkpoint": "runs/discovery_20261013_150618_r30_sources.jsonl"
+  },
+  "review": {
+    "new_unique_resources": 41,
+    "types": {
+      "task": 30,
+      "archive": 2,
+      "unrelated": 9
+    },
+    "raw_shards": [
+      "batch_001667.jsonl",
+      "batch_001668.jsonl"
+    ],
+    "checkpoint_pattern": "runs/r30_nuedc_label*.jsonl",
+    "prior_cycle_recovered": 16,
+    "prior_cycle_compact": 1,
+    "canonical_merged": 0,
+    "sequential_cursor": "batch_000006:24",
+    "review_state_checkpoint": "runs/r30_review_state_checkpoint.json"
+  },
+  "audit": {
+    "new_findings_checkpointed": 18,
+    "canonical_merged": 0,
+    "previous_cycle_local_audit_unmerged": 10
+  },
+  "known_errors": {
+    "robots_denied_or_unavailable": 144,
+    "UnicodeEncodeError": 34,
+    "HTTPError": 33,
+    "InvalidURL": 6,
+    "html_page_too_large": 2
+  },
+  "constraints": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "schedule_modified": false
+  }
+}
