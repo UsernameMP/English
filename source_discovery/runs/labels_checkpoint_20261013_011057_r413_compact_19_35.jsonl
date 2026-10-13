@@ -1,0 +1,2 @@
+{"raw_occurrence_id":"d3f1fa0cfe1f2315b7080115","resource_id":"b61a9459722e3938035ba9eb","type":"unrelated","resource_shard":"resource_000413.jsonl","resource_row":19,"raw_shard":"batch_001128.jsonl","reason":"JOI application method, not task","confidence":0.95}
+{"raw_occurrence_id":"d81b46c01c54f67e4cd5eb05","resource_id":"c1a509f445877bf4e081ed88","type":"task","resource_shard":"resource_000413.jsonl","resource_row":35,"raw_shard":"batch_001130.jsonl","reason":"KöMaL October 2004 IPhO theoretical problem HTML","confidence":0.96}
