@@ -1,0 +1,33 @@
+{
+  "resource_shard": "resource_000540.jsonl",
+  "reviewed_rows": "20-60",
+  "unique_resource_ids": 41,
+  "raw_occurrences": 41,
+  "raw_shards": [
+    "batch_001667.jsonl",
+    "batch_001668.jsonl"
+  ],
+  "labels": {
+    "task": 30,
+    "archive": 2,
+    "unrelated": 9
+  },
+  "canonical_merged": false,
+  "checkpoint_files": [
+    "r30_nuedc_labels_20_24.jsonl",
+    "r30_nuedc_labels_25_29.jsonl",
+    "r30_nuedc_labels_35_39.jsonl",
+    "r30_nuedc_labels_40_44.jsonl",
+    "r30_nuedc_labels_45_49.jsonl",
+    "r30_nuedc_labels_50_54.jsonl",
+    "r30_nuedc_labels_55_59.jsonl",
+    "r30_nuedc_labels_60_60.jsonl",
+    "r30_nuedc_label_30.jsonl",
+    "r30_nuedc_label_31.jsonl",
+    "r30_nuedc_label_32.jsonl",
+    "r30_nuedc_label_33.jsonl",
+    "r30_nuedc_label_34.jsonl"
+  ],
+  "reviewed_at": "2026-10-13T15:06:18Z",
+  "sequential_cursor_advanced": false
+}
