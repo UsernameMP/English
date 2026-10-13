@@ -1,0 +1,216 @@
+{
+  "cycle": "hourly-20261013T120636000Z-r27",
+  "resource_shard": "resource_000501.jsonl",
+  "row_indices": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "raw_shards": [
+    "batch_001455.jsonl",
+    "batch_001456.jsonl",
+    "batch_001457.jsonl",
+    "batch_001458.jsonl",
+    "batch_001459.jsonl",
+    "batch_001460.jsonl"
+  ],
+  "state": "reviewed_compact_pending_full_labels",
+  "basis": "DMS-hosted PDF URLs, Serbian HTML anchors Zadaci=task; Tačni odgovori=answer-key solution; no binary body accessed",
+  "labels": [
+    {
+      "resource_id": "77833bd05797e36ef1c72c70",
+      "raw_occurrence_id": "5d6fefc57f85acd5fc48715b",
+      "url": "https://dms.rs/wp-content/uploads/2017/05/ecolier2017.pdf",
+      "type": "task",
+      "year": 2017,
+      "round": "national_round",
+      "anchor_text": "Zadaci 2017.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "3c23a357bcb69ffeb2a9caf4",
+      "raw_occurrence_id": "0da8165340ee509b5e737687",
+      "url": "https://dms.rs/wp-content/uploads/2018/03/TacniOdgovori2017.pdf",
+      "type": "solution",
+      "year": 2017,
+      "round": "national_round",
+      "anchor_text": "Tačni odgovori 2017.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "c03b3b7498613f2aed9fc718",
+      "raw_occurrence_id": "0b4dfbc3ecac2bc7a93978af",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/ecolier2016.pdf",
+      "type": "task",
+      "year": 2016,
+      "round": "national_round",
+      "anchor_text": "Zadaci 2016.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "ba48eb2dba5a7987c11b5d1e",
+      "raw_occurrence_id": "a50c79429c3edd18beb90d04",
+      "url": "https://dms.rs/wp-content/uploads/2017/03/TacniOdgovori2016.pdf",
+      "type": "solution",
+      "year": 2016,
+      "round": "national_round",
+      "anchor_text": "Tačni odgovori 2016.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "cc14a96e3687c1a47b4d7663",
+      "raw_occurrence_id": "0bc15fad4fb819932e62ac0e",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/ecolier2015.pdf",
+      "type": "task",
+      "year": 2015,
+      "round": "national_round",
+      "anchor_text": "Zadaci 2015.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "f736886a50bf9ec2ea07a43a",
+      "raw_occurrence_id": "653c38498d25ec893f7d7c26",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/TacniOdgovori2015.pdf",
+      "type": "solution",
+      "year": 2015,
+      "round": "national_round",
+      "anchor_text": "Tačni odgovori 2015.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "bdb262d06ce1cab3080964dd",
+      "raw_occurrence_id": "20058d1dbf843f2ab8ff62a2",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/TacniOdgovori2013.pdf",
+      "type": "solution",
+      "year": 2013,
+      "round": "national_round",
+      "anchor_text": "Tačni odgovori 2013.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "d80f57af9ce39ec214b5b784",
+      "raw_occurrence_id": "b4591acf1f2c5e795970de59",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/ecolier2012.pdf",
+      "type": "task",
+      "year": 2012,
+      "round": "national_round",
+      "anchor_text": "Zadaci 2012.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "2666113ad682254fc669b148",
+      "raw_occurrence_id": "f2c2cf5195ecbf7c0fd00bca",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/TacniOdgovori2012.pdf",
+      "type": "solution",
+      "year": 2012,
+      "round": "national_round",
+      "anchor_text": "Tačni odgovori 2012.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "fed233f8894cb8556e0dd392",
+      "raw_occurrence_id": "3cac4ca666de9979f9ff0c0a",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/ecolier2011.pdf",
+      "type": "task",
+      "year": 2011,
+      "round": "national_round",
+      "anchor_text": "Zadaci 2011.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "4a88f7388ee8cd0e52769a8e",
+      "raw_occurrence_id": "e0e56e5397d05f6a59594cad",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/TacniOdgovori2011.pdf",
+      "type": "solution",
+      "year": 2011,
+      "round": "national_round",
+      "anchor_text": "Tačni odgovori 2011.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "aacf4aeb0083ad949b33f42a",
+      "raw_occurrence_id": "b6dc726c3d24ce21d8622a01",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/ecolier2010.pdf",
+      "type": "task",
+      "year": 2010,
+      "round": "national_round",
+      "anchor_text": "Zadaci 2010.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "13caad846ad9d9e69429cf78",
+      "raw_occurrence_id": "56f945ed1c52d0bc58490a3b",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/TacniOdgovori2010.pdf",
+      "type": "solution",
+      "year": 2010,
+      "round": "national_round",
+      "anchor_text": "Tačni odgovori 2010.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "dccbab89f6105402da032be4",
+      "raw_occurrence_id": "8a23e2edb144d40593bcd4f2",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/ecolier2009.pdf",
+      "type": "task",
+      "year": 2009,
+      "round": "national_round",
+      "anchor_text": "Zadaci 2009.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "98837552a1273fac377b0239",
+      "raw_occurrence_id": "9c6260d0ac9868ba33b75c60",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/TacniOdgovori2009.pdf",
+      "type": "solution",
+      "year": 2009,
+      "round": "national_round",
+      "anchor_text": "Tačni odgovori 2009.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "0452eb001c279221907a5f98",
+      "raw_occurrence_id": "8728eb0b170bb1127e8075e7",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/ecolier08.pdf",
+      "type": "task",
+      "year": 2008,
+      "round": "national_round",
+      "anchor_text": "Zadaci 2008.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "f075bdef1b2bd62b491c529c",
+      "raw_occurrence_id": "43ac16273f15b51d72f87d5a",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/TacniOdgovori2008.pdf",
+      "type": "solution",
+      "year": 2008,
+      "round": "national_round",
+      "anchor_text": "Tačni odgovori 2008.",
+      "confidence": 0.96
+    },
+    {
+      "resource_id": "d3b58b555860008f0bbf999d",
+      "raw_occurrence_id": "98a94baa9ff380a0a67f5419",
+      "url": "https://dms.rs/wp-content/uploads/2016/12/ecolier06s.pdf",
+      "type": "task",
+      "year": 2006,
+      "round": "national_round",
+      "anchor_text": "Zadaci 2006.",
+      "confidence": 0.96
+    }
+  ]
+}
