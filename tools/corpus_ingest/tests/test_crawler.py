@@ -159,3 +159,29 @@ def test_grade5_school_math_informatics_official_pdf_seeds():
         assert source.is_enabled
     assert all("2026-27" not in by_id[s.source_id].url for s in sources
                if s.source_id.startswith("vosh_math5_") or s.source_id.startswith("vosh_inf5_"))
+
+
+def test_link_only_mode_disables_automatic_dropbox_jobs_and_requires_explicit_opt_in():
+    from pathlib import Path
+    root = Path(__file__).resolve().parents[3]
+    workflows = [
+        root / ".github/workflows/corpus-crawler.yml",
+        root / ".github/workflows/corpus-parser.yml",
+    ]
+    for workflow in workflows:
+        body = workflow.read_text(encoding="utf-8")
+        assert "schedule:" not in body, workflow
+        assert "gh workflow run" not in body, workflow
+        assert "  push:" not in body, workflow
+        assert "enable_raw_pipeline == true" in body, workflow
+        assert "vars.RIFT_ENABLE_RAW_PIPELINE == 'true'" in body, workflow
+        assert 'RIFT_ALLOW_RAW_INGEST: "true"' in body, workflow
+    for py in (root / "tools/corpus_ingest/crawler.py",
+               root / "tools/corpus_ingest/parser.py"):
+        code = py.read_text(encoding="utf-8")
+        assert 'os.getenv("RIFT_ALLOW_RAW_INGEST", "")' in code
+        assert code.index('os.getenv("RIFT_ALLOW_RAW_INGEST", "")', code.index("def main()")) < code.index(
+            "dbx = DropboxClient(", code.index("def main()")
+        ), py
+    links = (root / ".github/workflows/rift-link-enumeration.yml").read_text(encoding="utf-8")
+    assert 'schedule:' in links and 'source_discovery/crawl_links.py' in links

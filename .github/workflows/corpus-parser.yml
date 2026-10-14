@@ -1,32 +1,19 @@
 name: Olympiad corpus parser
 
+# LINK-ONLY MODE: no scheduled or push-triggered Dropbox RAW ingestion.
+# A manual run requires BOTH explicit checkbox and a repository variable.
 on:
   workflow_dispatch:
     inputs:
+      enable_raw_pipeline:
+        description: "Explicit opt-in required; RAW writes are otherwise disabled"
+        required: true
+        type: boolean
+        default: false
       max_documents:
-        description: Maximum RAW documents to parse in this run
+        description: Maximum documents in an explicitly enabled run
         required: false
         default: "20"
-  schedule:
-    - cron: "7,37 * * * *"
-  push:
-    paths:
-      - ".github/workflows/corpus-parser.yml"
-      - "tools/corpus_ingest/parser.py"
-      - "tools/corpus_ingest/layout.py"
-      - "tools/corpus_ingest/layout_pipeline.py"
-      - "tools/corpus_ingest/task_structure.py"
-      - "tools/corpus_ingest/calibration_eval.py"
-      - "tools/corpus_ingest/corpus_graph.py"
-      - "tools/corpus_ingest/parser_requirements.txt"
-      - "tools/corpus_ingest/tests/test_parser.py"
-      - "tools/corpus_ingest/tests/test_layout.py"
-      - "tools/corpus_ingest/tests/test_task_structure.py"
-      - "tools/corpus_ingest/tests/test_calibration_eval.py"
-      - "tools/corpus_ingest/tests/test_corpus_graph.py"
-      - "tools/document_triage/arm-pass2.js"
-      - "tools/document_triage/arm-viewer.js"
-      - "tools/document_triage/arm-core.js"
 
 permissions:
   contents: read
@@ -38,12 +25,14 @@ concurrency:
 
 jobs:
   parse:
+    if: ${{ inputs.enable_raw_pipeline == true && vars.RIFT_ENABLE_RAW_PIPELINE == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 75
     defaults:
       run:
         working-directory: tools/corpus_ingest
     env:
+      RIFT_ALLOW_RAW_INGEST: "true"
       DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
       DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
       DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
@@ -73,25 +62,3 @@ jobs:
       - name: Parse Dropbox RAW into canonical layout
         if: github.event_name != 'push'
         run: python parser.py --max-documents "$PARSER_MAX_DOCUMENTS"
-
-      - name: Continue next parser batch
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          p = Path("parser_run_summary.json")
-          if not p.exists():
-              raise SystemExit(0)
-          s = json.loads(p.read_text(encoding="utf-8"))
-          print(json.dumps(s, ensure_ascii=False))
-          if s.get("should_continue"):
-              Path("/tmp/continue_parser").write_text("1")
-          PY
-          if [ -f /tmp/continue_parser ]; then
-            gh workflow run corpus-parser.yml --ref main -f max_documents=20
-            echo "Queued next parser batch"
-          else
-            echo "Parser chain stopped cleanly"
-          fi

@@ -1,22 +1,19 @@
 name: Olympiad corpus crawler
 
+# LINK-ONLY MODE: no scheduled or push-triggered Dropbox RAW ingestion.
+# A manual run requires BOTH explicit checkbox and a repository variable.
 on:
   workflow_dispatch:
     inputs:
+      enable_raw_pipeline:
+        description: "Explicit opt-in required; RAW writes are otherwise disabled"
+        required: true
+        type: boolean
+        default: false
       max_documents:
-        description: Maximum documents to download in this run
+        description: Maximum documents in an explicitly enabled run
         required: false
         default: "50"
-  schedule:
-    - cron: "17,47 * * * *"
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/corpus-crawler.yml"
-      - "tools/corpus_ingest/crawler.py"
-      - "tools/corpus_ingest/crawler_requirements.txt"
-      - "tools/corpus_ingest/registry/**"
-      - "tools/corpus_ingest/tests/test_crawler.py"
 
 permissions:
   contents: write
@@ -28,12 +25,14 @@ concurrency:
 
 jobs:
   crawl:
+    if: ${{ inputs.enable_raw_pipeline == true && vars.RIFT_ENABLE_RAW_PIPELINE == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 75
     defaults:
       run:
         working-directory: tools/corpus_ingest
     env:
+      RIFT_ALLOW_RAW_INGEST: "true"
       DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
       DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
       DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
@@ -104,32 +103,3 @@ jobs:
 
           echo "::error::Could not publish crawler state after 4 attempts"
           exit 1
-
-      - name: Continue next batch
-        if: env.DROPBOX_APP_KEY != '' && env.DROPBOX_APP_SECRET != '' && env.DROPBOX_REFRESH_TOKEN != ''
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          p = Path("run_summary.json")
-          if not p.exists():
-              print("No run summary; not chaining")
-              raise SystemExit(0)
-          s = json.loads(p.read_text(encoding="utf-8"))
-          print(json.dumps({
-              "processed": s.get("processed"),
-              "remaining": s.get("remaining"),
-              "warning": s.get("warning"),
-              "should_continue": s.get("should_continue"),
-          }, ensure_ascii=False))
-          if s.get("should_continue"):
-              Path("/tmp/continue_crawler").write_text("1")
-          PY
-          if [ -f /tmp/continue_crawler ]; then
-            gh workflow run corpus-crawler.yml --ref main -f max_documents=50
-            echo "Queued next crawler batch"
-          else
-            echo "Crawler chain stopped cleanly"
-          fi
