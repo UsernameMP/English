@@ -1,0 +1,70 @@
+{
+  "cycle": "hourly-20261014T020610000Z-r41",
+  "run_at": "2026-10-14T02:06:10Z",
+  "trigger_commit": "4b815cdc6b452796feeb2ef22ddc2d1771b5e188",
+  "actions": {
+    "run_id": 38499287668,
+    "status": "success",
+    "crawl_commit": "3390295"
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_occurrences": 2196,
+    "unique_urls": 62960,
+    "pending_html": 30628,
+    "blocked_or_failed": 273
+  },
+  "canonical": {
+    "sources": 434,
+    "labels": 303,
+    "backlog": 76,
+    "cursor": "batch_000006.jsonl:24"
+  },
+  "mime": {
+    "observations": 562,
+    "pdf": 395,
+    "extensionless_pdf": 252
+  },
+  "discovery": {
+    "new_verified": 9,
+    "checkpoints": [
+      "discovery_20261014_020610_r41_sources_01.jsonl",
+      "discovery_20261014_020610_r41_sources_02.jsonl"
+    ],
+    "canonical_merge_pending": 9
+  },
+  "review": {
+    "resource_shard": "resource_000010.jsonl",
+    "raw_shard": "batch_000010.jsonl",
+    "range": "0-99",
+    "unique": 100,
+    "counts": {
+      "task": 51,
+      "solution": 40,
+      "review": 8,
+      "unrelated": 1
+    },
+    "canonical_merged": 100,
+    "commit": "f60f30a050c458a5b31d98526ff90b4b8342740b",
+    "next_resource_shard": "resource_000011.jsonl",
+    "cursor_unchanged": true
+  },
+  "audit": {
+    "notes_checkpointed": 13,
+    "checkpoint_prefix": "audit_20261014_020610_r41",
+    "canonical_backlog_unchanged": true,
+    "additional_pending_note": "Pace ICC Moot archive since 2005: selected winning briefs in separate library index; years and accessibility remain unresolved."
+  },
+  "limitations": [
+    "Nine source rows in discovery checkpoints pending next scheduled merger",
+    "Prior-cycle labels/checkpoints still require reconciliation",
+    "review_state.json canonical cursor update rejected; compact pointer saved",
+    "One audit note included in this summary rather than separate checkpoint"
+  ],
+  "restrictions": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "additional_workflows_started": false
+  }
+}
