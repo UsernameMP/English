@@ -1,0 +1,40 @@
+{
+  "cycle": "hourly-20261014T200729199Z-r59",
+  "trigger_commit": "79a29c2bb267c02d6d3b5d37d2f85b443126264f",
+  "trigger_updated": true,
+  "crawler_results_published": true,
+  "action_final_status": "not_verified",
+  "unique_resource_urls": 78466,
+  "previous_unique_resource_urls": 76832,
+  "new_unique_urls": 1634,
+  "canonical_sources": 536,
+  "source_checkpoint_count": 4,
+  "canonical_labels": 903,
+  "canonical_labels_added": 100,
+  "review_shard": "resource_000028.jsonl",
+  "review_rows": "0-99",
+  "review_counts": {
+    "task": 18,
+    "review": 3,
+    "archive": 10,
+    "source": 15,
+    "unrelated": 54
+  },
+  "next_shard": "resource_000029.jsonl",
+  "sequential_cursor": "batch_000006.jsonl:24",
+  "review_state_updated": false,
+  "backlog_count": 88,
+  "backlog_updated": false,
+  "audit_count": 10,
+  "mime_observations": 678,
+  "mime_pdf": 443,
+  "mime_pdf_extensionless": 290,
+  "pending_prior_reviews": [
+    "r55",
+    "r56",
+    "r58"
+  ],
+  "binary_downloads": 0,
+  "dropbox_modified": false,
+  "schedule_modified": false
+}
