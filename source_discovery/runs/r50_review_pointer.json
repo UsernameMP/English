@@ -1,0 +1,15 @@
+{
+  "cycle": "hourly-20261014T110433000Z-r50",
+  "resource_shard": "resource_000019.jsonl",
+  "raw_shard": "batch_000019.jsonl",
+  "reviewed_rows": "0-99",
+  "unique": 100,
+  "task": 75,
+  "archive": 25,
+  "checkpointed": 100,
+  "canonical_merged": 0,
+  "next": "resource_000020.jsonl",
+  "sequential_cursor": "batch_000006:24",
+  "canonical_review_state_update": "blocked",
+  "checkpoint_prefix": "labels_checkpoint_20261014_110433_r50_r019_"
+}
