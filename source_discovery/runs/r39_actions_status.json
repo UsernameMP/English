@@ -1,0 +1,1 @@
+{"cycle":"r39","run_id":38487917302,"trigger_commit":"4c3525fbd4da82cd69f1357ad9b6752efa573a3c","status":"failure","failed_step":"Persist results","reason":"git push rejected: fetch first","published":false,"processed_html":60,"raw_links_unpublished":1910,"unique_url_count_unpublished":61332,"follow_up":"Next scheduled run; avoid concurrent writes during crawl"}
