@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 base=Path("app/src/main/assets/content")
 cat=json.loads((base/"catalog.json").read_text())
-ids={"math_ratio_001","math_count_001","math_mix_001","cs_numeric_001","cs_numeric_002"}
+ids={"math_ratio_001","math_count_001","math_mix_001"}
 observed=set()
 for entry in cat["packs"]:
     bank_path=Path("app/src/main/assets")/entry["asset"]
@@ -25,4 +25,4 @@ assert not (base/"spoken_reasoning_candidates.json").exists()
 src=Path("app/src/main/java/com/usernamemp/englishsprint/MainActivity.java").read_text()
 assert 'if ("spoken_reasoning".equals(q.interaction))' in src
 assert "new SpokenReasoningActivity" not in src
-print("Voice modality integrated in normal task banks: ",len(observed))
+print("Voice only in mathematics pilot; grade-5 informatics is mic-free: ",len(observed))
