@@ -10,10 +10,12 @@
     "source": 2,
     "review": 1
   },
-  "canonical_merged": 0,
+  "canonical_merged": 100,
   "checkpointed": 100,
   "next_resource_shard": "resource_000024.jsonl",
   "canonical_cursor": "batch_000006.jsonl:24",
   "r53_local_unmerged": 100,
-  "notes": "All 100 resource IDs matched first raw occurrence IDs and URLs in batch 000023; additional occurrences outside this batch not exhaustively checked."
+  "notes": "All 100 resource IDs matched first raw occurrence IDs and URLs in batch 000023; additional occurrences outside this batch not exhaustively checked.",
+  "canonical_merge_commit": "3fc6847c37db7265e0da3d77be021e1a7c3824ff",
+  "canonical_labels_after_merge": 603
 }
