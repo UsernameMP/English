@@ -8,9 +8,9 @@
   "previous_unique_resource_urls": 76832,
   "new_unique_urls": 1634,
   "canonical_sources": 536,
-  "source_checkpoint_count": 4,
-  "canonical_labels": 903,
-  "canonical_labels_added": 100,
+  "source_checkpoint_count": 18,
+  "canonical_labels": 1003,
+  "canonical_labels_added": 200,
   "review_shard": "resource_000028.jsonl",
   "review_rows": "0-99",
   "review_counts": {
@@ -30,11 +30,12 @@
   "mime_pdf": 443,
   "mime_pdf_extensionless": 290,
   "pending_prior_reviews": [
-    "r55",
     "r56",
     "r58"
   ],
   "binary_downloads": 0,
   "dropbox_modified": false,
-  "schedule_modified": false
+  "schedule_modified": false,
+  "recovered_r55_labels": 100,
+  "recovered_prior_sources_checkpointed": 14
 }
