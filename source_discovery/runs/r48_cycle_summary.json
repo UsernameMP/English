@@ -1,0 +1,49 @@
+{
+  "cycle": "hourly-20261014T090212222Z-r48",
+  "date": "2026-10-14",
+  "trigger_commit": "a80c321195aa6a7ff1c2659747d5bac40e1f8b40",
+  "action_run": 38539415827,
+  "action_status": "success",
+  "crawl_commit": "6e485cb",
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_occurrences": 6491,
+    "pending_html_pages": 32504,
+    "blocked_or_failed": 290,
+    "unique_urls": 70546
+  },
+  "discovery": {
+    "verified_sources": 10,
+    "canonical_merged": 0,
+    "checkpoint": "discovery_20261014_090212_r48_sources.jsonl",
+    "canonical_sources": 484
+  },
+  "review": {
+    "unique_resource_ids": 100,
+    "task": 75,
+    "archive": 25,
+    "resource_shard": "resource_000017.jsonl",
+    "raw_shard": "batch_000017.jsonl",
+    "canonical_merged": 100,
+    "canonical_labels": 503,
+    "commit": "0e050d3cec31f58c244054d8d5b7c2181cd48ec7",
+    "next": "resource_000018.jsonl",
+    "review_state_update_blocked": true,
+    "canonical_cursor": "batch_000006:24",
+    "occurrences_exhaustive": false
+  },
+  "audit": {
+    "findings": 10,
+    "checkpoint": "audit_20261014_090212_r48.jsonl",
+    "canonical_merged": 0,
+    "backlog": 86
+  },
+  "mime": {
+    "observations": 605,
+    "pdf": 417,
+    "pdf_without_extension": 264
+  },
+  "binary_documents_downloaded": false,
+  "dropbox_changed": false,
+  "schedule_changed": false
+}
