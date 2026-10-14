@@ -395,6 +395,11 @@ def main() -> None:
     p.add_argument("--max-documents", type=int, default=int(os.getenv("PARSER_MAX_DOCUMENTS", "20")))
     args = p.parse_args()
 
+    # Default to link-only: no Dropbox authentication, download, upload or checkpoint writes.
+    if os.getenv("RIFT_ALLOW_RAW_INGEST", "").strip().lower() != "true":
+        print("RIFT link-only mode: Dropbox RAW ingestion is disabled; no files were written.")
+        return
+
     dbx = DropboxClient(
         require_env("DROPBOX_APP_KEY"),
         require_env("DROPBOX_APP_SECRET"),

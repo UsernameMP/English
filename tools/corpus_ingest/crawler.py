@@ -782,6 +782,11 @@ def main() -> None:
     p.add_argument("--quota-bytes", type=int, default=int(os.getenv("DROPBOX_QUOTA_BYTES", str(DEFAULT_DROPBOX_QUOTA_BYTES))))
     p.add_argument("--quota-stop-ratio", type=float, default=float(os.getenv("DROPBOX_STOP_AT_RATIO", str(DEFAULT_QUOTA_STOP_RATIO))))
     args = p.parse_args()
+    # Default to link-only: no Dropbox authentication, download, upload or checkpoint writes.
+    if os.getenv("RIFT_ALLOW_RAW_INGEST", "").strip().lower() != "true":
+        print("RIFT link-only mode: Dropbox RAW ingestion is disabled; no files were written.")
+        return
+
     if not 0 < args.quota_stop_ratio < 1:
         raise SystemExit("--quota-stop-ratio must be between 0 and 1")
 
