@@ -1,0 +1,6 @@
+{"kind":"anchor_mismatch","scope":"NL","detail":"Problem collection anchor points to annual-report path","url":"https://wiskundeolympiade.nl/publicaties/overig/jaarverslagen","cycle":"r57"}
+{"kind":"year_gap","scope":"CZ","detail":"English index lacks 2017, 2020-2021, 2024-2026","url":"https://www.matematickaolympiada.cz/en","cycle":"r57"}
+{"kind":"oral_round","scope":"RO","detail":"Minority language olympiad oral actual tasks unverified","url":"https://www.bartok.ro/ro/ollr-2025-timisoara/subiecte/","cycle":"r57"}
+{"kind":"mixed_archive","scope":"BR","detail":"Chemistry archive mixes exam papers with results and administration","url":"https://obquimica.org/arquivos","cycle":"r57"}
+{"kind":"metadata_only","scope":"ID","detail":"OSN 2025 volume 2 indexed bibliographically but page timed out","url":"https://repositori.kemendikdasmen.go.id/35697/","cycle":"r57"}
+{"kind":"canonical_gap","scope":"global","detail":"r55-r56 and r57 pending merges; canonical cursor not advanced","url":"source_discovery/review_state.json","cycle":"r57"}
