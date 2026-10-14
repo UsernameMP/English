@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-13T12:10:51.757Z",
+  "updated_at": "2026-10-14T04:07:10.554Z",
   "deferred_shards": [
     1,
     2,
@@ -132,5 +132,27 @@
     ],
     "compact_file": "review_r27_r501_pending18.json",
     "sequential_cursor_moved": false
+  },
+  "latest_noncontiguous_review": {
+    "cycle": "hourly-20261014T040020630Z-r43",
+    "resource_shard": "resource_000012.jsonl",
+    "row_range": "0-99",
+    "raw_shard": "batch_000012.jsonl",
+    "unique_resources": 100,
+    "types": {
+      "task": 75,
+      "archive": 25
+    },
+    "canonical_merged": 0,
+    "checkpointed": 100,
+    "full_labels_checkpointed": 89,
+    "compact_labels_require_expansion": 11,
+    "next_resource_shard": "resource_000013.jsonl",
+    "cursor_unchanged": true,
+    "checkpoint_prefixes": [
+      "labels_checkpoint_20261014_040020_r43_km_",
+      "r43_km_compact_",
+      "r43_km_label_row_"
+    ]
   }
 }
