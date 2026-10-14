@@ -1335,6 +1335,9 @@ public class MainActivity extends Activity {
     }
 
     private List<Question> quickSession() {
+        if ("informatics.olympiad.5.ru.2026".equals(QuestionBank.currentPack().id)) {
+            return balancedInformaticsSession();
+        }
         long seed = System.nanoTime();
         android.content.SharedPreferences prefs = getSharedPreferences("english_sprint_session_history", MODE_PRIVATE);
         java.util.Set<String> recent = new java.util.HashSet<>(prefs.getStringSet("recent_question_ids", java.util.Collections.emptySet()));
@@ -1364,6 +1367,41 @@ public class MainActivity extends Activity {
         }
         prefs.edit().putStringSet("recent_question_ids", recent).apply();
         return mixed;
+    }
+
+    /** Balanced 15-task sessions: three per supported interaction, no repeats before a cycle ends. */
+    private List<Question> balancedInformaticsSession() {
+        android.content.SharedPreferences prefs =
+                getSharedPreferences("rift_informatics_cycle_v1", MODE_PRIVATE);
+        String packId = QuestionBank.currentPack().id;
+        String[] interactions = {"numeric", "single_choice", "multi_choice", "matching", "sequence"};
+        List<Question> result = new ArrayList<>();
+        long seed = System.nanoTime();
+        for (String interaction : interactions) {
+            String key = packId + ":" + interaction;
+            java.util.Set<String> seen = new java.util.HashSet<>(
+                    prefs.getStringSet(key, java.util.Collections.emptySet()));
+            List<Question> pool = new ArrayList<>();
+            for (Question q : QuestionBank.all()) {
+                if (interaction.equals(q.interaction)) pool.add(q);
+            }
+            Collections.shuffle(pool, new Random(seed ^ interaction.hashCode()));
+            List<Question> unseen = new ArrayList<>();
+            for (Question q : pool) if (!seen.contains(q.id)) unseen.add(q);
+            int take = Math.min(3, pool.size());
+            if (unseen.size() < take) {
+                seen.clear();
+                unseen = pool;
+            }
+            for (int i = 0; i < take; i++) {
+                Question q = unseen.get(i);
+                result.add(q);
+                seen.add(q.id);
+            }
+            prefs.edit().putStringSet(key, seen).apply();
+        }
+        Collections.shuffle(result, new Random(seed + 131));
+        return result;
     }
 
     private void enableDictionaryLinks(TextView view, String source) {

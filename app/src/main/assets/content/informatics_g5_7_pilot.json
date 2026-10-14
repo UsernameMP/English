@@ -3,7 +3,7 @@
   "bank_id": "informatics-olympiad-5-7-pilot",
   "title": "Олимпиадная информатика — пилот",
   "locale": "ru",
-  "content_version": "0.2.2",
+  "content_version": "0.2.3",
   "pack": {
     "id": "informatics.olympiad.5-7.global.2026",
     "subject": "informatics",
@@ -17,8 +17,8 @@
       "en": "Информатика · олимпиадный тренажёр"
     },
     "subtitle": {
-      "en": "Олимпиадный пилот · 5–7 класс",
-      "ru": "Олимпиадный пилот · 5–7 класс"
+      "en": "Olympiad pilot · grades 5–7 · no spoken input",
+      "ru": "Олимпиадный пилот · 5–7 класс · без голосового ввода"
     }
   },
   "questions": [
@@ -523,7 +523,7 @@
       "subject": "informatics",
       "grade_min": 5,
       "grade_max": 7,
-      "interaction": "spoken_reasoning",
+      "interaction": "numeric",
       "mode": "practice",
       "skills": [
         "tracing"
@@ -566,18 +566,14 @@
           "weight": 1
         }
       ],
-      "prerequisites": [],
-      "answer_policy": {
-        "final_answer_type": "numeric"
-      },
-      "reasoning_rubric": "none"
+      "prerequisites": []
     },
     {
       "id": "cs_numeric_002",
       "subject": "informatics",
       "grade_min": 5,
       "grade_max": 7,
-      "interaction": "spoken_reasoning",
+      "interaction": "numeric",
       "mode": "practice",
       "skills": [
         "binary"
@@ -598,8 +594,7 @@
         "15.0"
       ],
       "answer_policy": {
-        "tolerance": 0,
-        "final_answer_type": "numeric"
+        "tolerance": 0
       },
       "feedback": {
         "short": {
@@ -624,8 +619,7 @@
           "weight": 1
         }
       ],
-      "prerequisites": [],
-      "reasoning_rubric": "none"
+      "prerequisites": []
     },
     {
       "id": "cs_multi_001",
