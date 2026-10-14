@@ -1,0 +1,44 @@
+{
+  "cycle": "hourly-20261014T120732Z-r51",
+  "trigger_commit": "e8e827ef7e6cbb0c6028ea22e07ca101a1eddcac",
+  "action_run": 38561537987,
+  "action_conclusion": "success",
+  "crawler_commit": "c855612",
+  "unique_resources": 72937,
+  "delta_unique_resources": 1065,
+  "new_raw_occurrences": 5402,
+  "html_pages": 60,
+  "html_queue": 33587,
+  "blocked_or_failed_cumulative": 296,
+  "canonical_sources": 503,
+  "canonical_labels": 503,
+  "canonical_backlog": 88,
+  "verified_new_source_indexes": 4,
+  "already_registered_ofra": 1,
+  "review": {
+    "shard": "resource_000020.jsonl",
+    "unique": 100,
+    "task": 57,
+    "archive": 15,
+    "solution": 28,
+    "merged": 0,
+    "checkpoint": "labels_checkpoint_20261014_120732_r51_r020_corrected.jsonl",
+    "next": "resource_000021.jsonl"
+  },
+  "audit_checkpoint": "r51_audit_compact.jsonl",
+  "mime_observations": 617,
+  "pdf_observations": 429,
+  "extensionless_pdf": 276,
+  "canonical_writes_blocked": [
+    "sources.jsonl",
+    "link_labels.jsonl",
+    "backlog.jsonl",
+    "review_state.json"
+  ],
+  "source_checkpoints": [
+    "discovery_20261014_120732_r51_sources_part1.jsonl",
+    "discovery_20261014_120732_r51_bdc_project.jsonl",
+    "discovery_20261014_120732_r51_cods.jsonl"
+  ],
+  "notes": "OFRA index already in canonical sources; original r51 labels checkpoint superseded by _corrected. No binary downloads."
+}
