@@ -1,0 +1,21 @@
+{
+  "cycle": "hourly-20261014T130639Z-r52",
+  "reviewed": "resource_000021.jsonl:0-99",
+  "unique_resources": 100,
+  "task": 53,
+  "solution": 47,
+  "full_labels_checkpointed": 60,
+  "compact_labels_checkpointed": 40,
+  "canonical_labels_merged": 0,
+  "raw_shard": "batch_000021.jsonl",
+  "next": "resource_000022.jsonl",
+  "sequential_cursor_preserved": "batch_000006.jsonl:24",
+  "checkpoints": [
+    "labels_checkpoint_20261014_130639_r52_r021_02.jsonl",
+    "labels_checkpoint_20261014_130639_r52_r021_03.jsonl",
+    "labels_checkpoint_20261014_130639_r52_r021_04.jsonl",
+    "r52_r021_pending40_compact.jsonl"
+  ],
+  "canonical_merge_blocker": "GitHub connector safety rejection of full link_labels.jsonl update",
+  "other_occurrences_outside_first_raw_shard": "not_exhaustively_checked"
+}
