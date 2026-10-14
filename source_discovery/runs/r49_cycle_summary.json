@@ -1,0 +1,58 @@
+{
+  "cycle": "hourly-20261014T100119306Z-r49",
+  "date": "2026-10-14",
+  "trigger_commit": "a740d41ca1b6a5de9d7fef2ffd56e131b5e96b4d",
+  "trigger_action": {
+    "id": 38546618204,
+    "conclusion": "failure"
+  },
+  "subsequent_action": {
+    "id": 38546756334,
+    "conclusion": "success",
+    "crawl_commit": "4252d9dc0e7d0be38cacc6f75e32ee9c06b610e1"
+  },
+  "crawler": {
+    "new_raw_occurrences": 2775,
+    "unique_resource_urls": 71041,
+    "delta_unique_from_r48": 495,
+    "html_frontier_count": "unverified_large_state"
+  },
+  "discovery": {
+    "verified_new": 5,
+    "canonical_merged": 3,
+    "canonical_sources": 497,
+    "blocked_sources": [
+      "https://www.saasta.ac.za/natural-science-olympiad/",
+      "https://riviste.unimi.it/index.php/promoitals/it/article/view/1926"
+    ]
+  },
+  "review": {
+    "resource_shard": "resource_000018.jsonl",
+    "raw_shard": "batch_000018.jsonl",
+    "unique": 100,
+    "task": 75,
+    "archive": 25,
+    "checkpointed": 100,
+    "checkpoint_files": 15,
+    "canonical_merged": 0,
+    "canonical_labels": 503,
+    "next": "resource_000019.jsonl",
+    "sequential_cursor": "batch_000006:24",
+    "review_state_update_blocked": true,
+    "other_occurrences_exhaustive": false
+  },
+  "audit": {
+    "findings": 6,
+    "checkpointed": 6,
+    "canonical_backlog_added": 2,
+    "canonical_backlog": 88
+  },
+  "mime": {
+    "observations": 617,
+    "pdf": 429,
+    "pdf_urls_without_dotpdf": 276
+  },
+  "binary_downloads": false,
+  "dropbox_changed": false,
+  "schedule_changed": false
+}
