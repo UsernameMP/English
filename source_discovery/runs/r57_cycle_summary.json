@@ -1,0 +1,38 @@
+{
+  "cycle": "r57",
+  "trigger_commit": "51991d435bba2e27177183a5d366a7a216b2cedd",
+  "action_run_id": 38612068660,
+  "action_status": "success",
+  "crawler_commit": "80fbafe",
+  "html_pages": 60,
+  "new_raw_links": 4894,
+  "pending_html_pages": 35628,
+  "unique_resource_urls": 76832,
+  "canonical_sources": 536,
+  "canonical_labels": 803,
+  "canonical_backlog": 88,
+  "review_shard": "resource_000026.jsonl",
+  "reviewed_unique": 100,
+  "review_counts": {
+    "task": 2,
+    "solution": 1,
+    "archive": 5,
+    "source": 18,
+    "review": 20,
+    "unrelated": 54
+  },
+  "next_shard": "resource_000027.jsonl",
+  "canonical_cursor": "batch_000006.jsonl:24",
+  "audit_checkpoints": 10,
+  "mime_observations": 645,
+  "mime_pdf": 443,
+  "mime_pdf_without_pdf_extension": 290,
+  "blockers": [
+    "review_state update blocked",
+    "backlog update blocked",
+    "r55-r56 local labels not merged"
+  ],
+  "binary_downloads": 0,
+  "dropbox_modified": false,
+  "schedule_modified": false
+}
