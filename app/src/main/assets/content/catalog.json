@@ -21,11 +21,11 @@
       "subject": "informatics",
       "grade_min": 5,
       "grade_max": 5,
-      "competition": "Олимпиадный практикум · 5 класс",
+      "competition": "ВсОШ · школьный этап · информатика",
       "season": "2026-2027",
       "license_id": "project.original.v1",
-      "content_version": "1.0.0",
-      "sha256": "15d76b155c75a0cc839696782a190ed3e9551f970119bc26c01a1258ae7d0e1a",
+      "content_version": "2.0.0",
+      "sha256": "d36c0e1ea23be452a0ac3c25f242c4dda5d9a1b32cff30beda90eeff182e5297",
       "enabled": true
     },
     {
