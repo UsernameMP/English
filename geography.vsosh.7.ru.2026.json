@@ -1,0 +1,1312 @@
+{
+  "schema_version": "1.0",
+  "bank_id": "geography-vsosh-7-ru-2026",
+  "title": "География · ВСОШ",
+  "locale": "ru",
+  "content_version": "0.1.0",
+  "pack": {
+    "id": "geography.vsosh.7.ru.2026",
+    "subject": "geography",
+    "grade_min": 7,
+    "grade_max": 7,
+    "competition": "VSOSh",
+    "region": "RU",
+    "season": "2026-2027",
+    "title": {
+      "ru": "География · ВСОШ",
+      "en": "География · ВСОШ"
+    },
+    "subtitle": {
+      "ru": "Оригинальные задания по механикам школьного этапа · 7 класс",
+      "en": "Оригинальные задания по механикам школьного этапа · 7 класс"
+    }
+  },
+  "questions": [
+    {
+      "id": "geo_weather_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "geo_climate_interpretation"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Как называется наука, изучающая физические процессы в атмосфере, определяющие погоду?",
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Синоптика занимается анализом и прогнозом погоды."
+        },
+        "full": {
+          "ru": "Синоптика занимается анализом и прогнозом погоды."
+        },
+        "rule": {
+          "ru": "Термин определяется по объекту исследования."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.CLIMATE.INTERPRETATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Гидрология"
+        },
+        {
+          "id": "b",
+          "text": "Синоптика"
+        },
+        {
+          "id": "c",
+          "text": "Лимнология"
+        },
+        {
+          "id": "d",
+          "text": "Геоморфология"
+        }
+      ]
+    },
+    {
+      "id": "geo_azimuth_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "geo_map_location"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какому азимуту соответствует направление восток-юго-восток?",
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "ВЮВ лежит между востоком 90° и юго-востоком 135°: 112,5°."
+        },
+        "full": {
+          "ru": "ВЮВ лежит между востоком 90° и юго-востоком 135°: 112,5°."
+        },
+        "rule": {
+          "ru": "Азимут отсчитывают по часовой стрелке от севера."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.MAP.LOCATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "67,5°"
+        },
+        {
+          "id": "b",
+          "text": "112,5°"
+        },
+        {
+          "id": "c",
+          "text": "157,5°"
+        },
+        {
+          "id": "d",
+          "text": "202,5°"
+        }
+      ]
+    },
+    {
+      "id": "geo_climate_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "geo_climate_interpretation"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какие факторы непосредственно влияют на климат территории?",
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Широта, рельеф и течения меняют приход тепла и перенос влаги."
+        },
+        "full": {
+          "ru": "Широта, рельеф и течения меняют приход тепла и перенос влаги."
+        },
+        "rule": {
+          "ru": "Ищи физические факторы, а не административные признаки."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.CLIMATE.INTERPRETATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Географическая широта"
+        },
+        {
+          "id": "b",
+          "text": "Высота над уровнем моря"
+        },
+        {
+          "id": "c",
+          "text": "Морские течения"
+        },
+        {
+          "id": "d",
+          "text": "Название административного района"
+        }
+      ]
+    },
+    {
+      "id": "geo_scale_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "geo_map_scales"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите численный масштаб и словесную запись.",
+      "answer": [
+        "l1:r3",
+        "l2:r2",
+        "l3:r1"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Нужно перевести сантиметры карты в реальные сантиметры и затем в метры или километры."
+        },
+        "full": {
+          "ru": "Нужно перевести сантиметры карты в реальные сантиметры и затем в метры или километры."
+        },
+        "rule": {
+          "ru": "Масштаб 1:N означает, что 1 см на карте соответствует N см на местности."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.MAP.SCALES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "1:10 000"
+        },
+        {
+          "id": "l2",
+          "text": "1:100 000"
+        },
+        {
+          "id": "l3",
+          "text": "1:1 000 000"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "В 1 см — 10 км"
+        },
+        {
+          "id": "r2",
+          "text": "В 1 см — 1 км"
+        },
+        {
+          "id": "r3",
+          "text": "В 1 см — 100 м"
+        }
+      ]
+    },
+    {
+      "id": "geo_scale_002",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "geo_map_scales"
+      ],
+      "difficulty": 1,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "На карте масштаба 1:100 000 расстояние между пунктами равно 4 см. Сколько это километров на местности?",
+      "answer": [
+        "4"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "1 см соответствует 1 км, значит 4 см — 4 км."
+        },
+        "full": {
+          "ru": "1 см соответствует 1 км, значит 4 см — 4 км."
+        },
+        "rule": {
+          "ru": "Сначала переведи масштаб в удобную словесную форму."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.MAP.SCALES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "answer_policy": {
+        "tolerance": 0
+      }
+    },
+    {
+      "id": "geo_basic_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "free_response",
+      "mode": "practice",
+      "skills": [
+        "geo_map_location"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Как называется параллель 0° широты?",
+      "answer": [
+        "экватор"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Это экватор."
+        },
+        "full": {
+          "ru": "Это экватор."
+        },
+        "rule": {
+          "ru": "Широта отсчитывается от экватора."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.MAP.LOCATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "geo_plate_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "geo_physical_regions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Почему на Камчатке много действующих вулканов?",
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Камчатка расположена в зоне активного взаимодействия литосферных плит."
+        },
+        "full": {
+          "ru": "Камчатка расположена в зоне активного взаимодействия литосферных плит."
+        },
+        "rule": {
+          "ru": "Вулканизм часто связан с границами плит."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.PHYSICAL.REGIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Она расположена в центре древней платформы"
+        },
+        {
+          "id": "b",
+          "text": "Она находится у границы литосферных плит"
+        },
+        {
+          "id": "c",
+          "text": "Там очень холодный климат"
+        },
+        {
+          "id": "d",
+          "text": "Она лежит точно на экваторе"
+        }
+      ]
+    },
+    {
+      "id": "geo_climate_002",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "geo_climate_interpretation"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите климатический признак и наиболее подходящий тип климата.",
+      "answer": [
+        "l1:r2",
+        "l2:r3",
+        "l3:r1",
+        "l4:r4"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Климат определяют по сочетанию температур и осадков."
+        },
+        "full": {
+          "ru": "Климат определяют по сочетанию температур и осадков."
+        },
+        "rule": {
+          "ru": "Один показатель редко достаточен: сопоставляй весь набор признаков."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.CLIMATE.INTERPRETATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Мягкая влажная зима и прохладное лето"
+        },
+        {
+          "id": "l2",
+          "text": "Очень холодная зима и короткое тёплое лето"
+        },
+        {
+          "id": "l3",
+          "text": "Жарко и влажно круглый год"
+        },
+        {
+          "id": "l4",
+          "text": "Большая суточная амплитуда и почти нет осадков"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Экваториальный"
+        },
+        {
+          "id": "r2",
+          "text": "Умеренный морской"
+        },
+        {
+          "id": "r3",
+          "text": "Арктический/субарктический"
+        },
+        {
+          "id": "r4",
+          "text": "Тропический пустынный"
+        }
+      ]
+    },
+    {
+      "id": "geo_water_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "geo_systems_causality"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Расположите этапы малого круговорота воды над океаном.",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Вода испаряется, конденсируется, образует облака и возвращается осадками."
+        },
+        "full": {
+          "ru": "Вода испаряется, конденсируется, образует облака и возвращается осадками."
+        },
+        "rule": {
+          "ru": "Последовательность строится по причинной связи процессов."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.SYSTEMS.CAUSALITY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Испарение"
+        },
+        {
+          "id": "b",
+          "text": "Конденсация водяного пара"
+        },
+        {
+          "id": "c",
+          "text": "Образование облаков"
+        },
+        {
+          "id": "d",
+          "text": "Выпадение осадков в океан"
+        }
+      ]
+    },
+    {
+      "id": "geo_demo_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "geo_human_demography"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "В районе площадью 12 000 км² живёт 480 000 человек. Найдите среднюю плотность населения, чел./км².",
+      "answer": [
+        "40"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "480 000 ÷ 12 000 = 40."
+        },
+        "full": {
+          "ru": "480 000 ÷ 12 000 = 40."
+        },
+        "rule": {
+          "ru": "Плотность населения = численность / площадь."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.HUMAN.DEMOGRAPHY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "answer_policy": {
+        "tolerance": 0
+      }
+    },
+    {
+      "id": "geo_resource_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "geo_economic_resources"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите ресурс или отрасль и известный район России.",
+      "answer": [
+        "l1:r3",
+        "l2:r2",
+        "l3:r1",
+        "l4:r4"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Ресурсы пространственно приурочены к крупным бассейнам и районам."
+        },
+        "full": {
+          "ru": "Ресурсы пространственно приурочены к крупным бассейнам и районам."
+        },
+        "rule": {
+          "ru": "Экономико-географическое соответствие связывает ресурс с территорией."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.ECONOMIC.RESOURCES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Нефть и газ"
+        },
+        {
+          "id": "l2",
+          "text": "Каменный уголь"
+        },
+        {
+          "id": "l3",
+          "text": "Железная руда"
+        },
+        {
+          "id": "l4",
+          "text": "Гидроэнергетика крупных рек"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "КМА"
+        },
+        {
+          "id": "r2",
+          "text": "Кузбасс"
+        },
+        {
+          "id": "r3",
+          "text": "Западная Сибирь"
+        },
+        {
+          "id": "r4",
+          "text": "Енисей и Ангара"
+        }
+      ]
+    },
+    {
+      "id": "geo_time_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "geo_map_location"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Два пункта отличаются по долготе на 30°. Какова приблизительная разница местного солнечного времени?",
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Земля поворачивается на 15° за час, значит 30° соответствуют примерно 2 часам."
+        },
+        "full": {
+          "ru": "Земля поворачивается на 15° за час, значит 30° соответствуют примерно 2 часам."
+        },
+        "rule": {
+          "ru": "15° долготы ≈ 1 час местного времени."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.MAP.LOCATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "30 минут"
+        },
+        {
+          "id": "b",
+          "text": "1 час"
+        },
+        {
+          "id": "c",
+          "text": "2 часа"
+        },
+        {
+          "id": "d",
+          "text": "4 часа"
+        }
+      ]
+    },
+    {
+      "id": "geo_region_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "free_response",
+      "mode": "practice",
+      "skills": [
+        "geo_physical_regions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Назовите полуостров России, где расположена Ключевская Сопка.",
+      "answer": [
+        "камчатка"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Ключевская Сопка находится на Камчатке."
+        },
+        "full": {
+          "ru": "Ключевская Сопка находится на Камчатке."
+        },
+        "rule": {
+          "ru": "Привязывай физический объект к крупной территории."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.PHYSICAL.REGIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "geo_current_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "geo_climate_interpretation"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какие последствия может иметь тёплое океаническое течение у побережья?",
+      "answer": [
+        "a",
+        "b",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Тёплое течение согревает воздух и часто повышает его влажность."
+        },
+        "full": {
+          "ru": "Тёплое течение согревает воздух и часто повышает его влажность."
+        },
+        "rule": {
+          "ru": "Морские течения меняют тепло- и влагообмен побережья."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.CLIMATE.INTERPRETATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Повышение зимних температур"
+        },
+        {
+          "id": "b",
+          "text": "Увеличение влажности воздуха"
+        },
+        {
+          "id": "c",
+          "text": "Обязательное образование пустыни"
+        },
+        {
+          "id": "d",
+          "text": "Смягчение сезонных температурных контрастов"
+        }
+      ]
+    },
+    {
+      "id": "geo_instr_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "geo_data_scales"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите прибор и измеряемую величину.",
+      "answer": [
+        "l1:r3",
+        "l2:r2",
+        "l3:r4",
+        "l4:r1"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Каждый метеорологический прибор связан с конкретной величиной."
+        },
+        "full": {
+          "ru": "Каждый метеорологический прибор связан с конкретной величиной."
+        },
+        "rule": {
+          "ru": "Знание прибора — это связь «инструмент → измерение»."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.DATA.SCALES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Барометр"
+        },
+        {
+          "id": "l2",
+          "text": "Термометр"
+        },
+        {
+          "id": "l3",
+          "text": "Гигрометр"
+        },
+        {
+          "id": "l4",
+          "text": "Флюгер"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Направление ветра"
+        },
+        {
+          "id": "r2",
+          "text": "Температура"
+        },
+        {
+          "id": "r3",
+          "text": "Атмосферное давление"
+        },
+        {
+          "id": "r4",
+          "text": "Влажность воздуха"
+        }
+      ]
+    },
+    {
+      "id": "geo_river_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "geo_physical_regions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Расположите участки реки от начала к концу.",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Река начинается у истока и заканчивается устьем."
+        },
+        "full": {
+          "ru": "Река начинается у истока и заканчивается устьем."
+        },
+        "rule": {
+          "ru": "Положение участка определяется направлением течения."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.PHYSICAL.REGIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Исток"
+        },
+        {
+          "id": "b",
+          "text": "Верхнее течение"
+        },
+        {
+          "id": "c",
+          "text": "Среднее течение"
+        },
+        {
+          "id": "d",
+          "text": "Нижнее течение"
+        },
+        {
+          "id": "e",
+          "text": "Устье"
+        }
+      ]
+    },
+    {
+      "id": "geo_contour_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "geo_data_estimation"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "На топографической карте горизонтали расположены очень близко друг к другу. Что это обычно означает?",
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Чем быстрее меняется высота на малом расстоянии, тем ближе горизонтали."
+        },
+        "full": {
+          "ru": "Чем быстрее меняется высота на малом расстоянии, тем ближе горизонтали."
+        },
+        "rule": {
+          "ru": "Густота горизонталей отражает крутизну склона."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.DATA.ESTIMATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Пологий склон"
+        },
+        {
+          "id": "b",
+          "text": "Крутой склон"
+        },
+        {
+          "id": "c",
+          "text": "Ровную горизонтальную поверхность"
+        },
+        {
+          "id": "d",
+          "text": "Обязательно речную долину"
+        }
+      ]
+    },
+    {
+      "id": "geo_demo_002",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "geo_human_demography"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какие показатели непосредственно используются при расчёте естественного прироста населения?",
+      "answer": [
+        "a",
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Естественный прирост — разность рождаемости и смертности."
+        },
+        "full": {
+          "ru": "Естественный прирост — разность рождаемости и смертности."
+        },
+        "rule": {
+          "ru": "Не смешивай естественное и механическое движение населения."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.HUMAN.DEMOGRAPHY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Рождаемость"
+        },
+        {
+          "id": "b",
+          "text": "Смертность"
+        },
+        {
+          "id": "c",
+          "text": "Миграционный приток"
+        },
+        {
+          "id": "d",
+          "text": "Миграционный отток"
+        }
+      ]
+    },
+    {
+      "id": "geo_data_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "geo_data_estimation"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Средняя температура января −18 °C, июля +22 °C. Какова годовая амплитуда температур?",
+      "answer": [
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "22 − (−18) = 40 °C."
+        },
+        "full": {
+          "ru": "22 − (−18) = 40 °C."
+        },
+        "rule": {
+          "ru": "Амплитуда — разность максимального и минимального значений."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.DATA.ESTIMATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "4 °C"
+        },
+        {
+          "id": "b",
+          "text": "18 °C"
+        },
+        {
+          "id": "c",
+          "text": "22 °C"
+        },
+        {
+          "id": "d",
+          "text": "40 °C"
+        }
+      ]
+    },
+    {
+      "id": "geo_cause_001",
+      "subject": "geography",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "geo_systems_causality"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите процесс и наиболее вероятное следствие.",
+      "answer": [
+        "l1:r2",
+        "l2:r1",
+        "l3:r3",
+        "l4:r4"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Географические системы связывают действие и пространственное следствие."
+        },
+        "full": {
+          "ru": "Географические системы связывают действие и пространственное следствие."
+        },
+        "rule": {
+          "ru": "Ищи прямую причинную связь."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "GEO.SYSTEMS.CAUSALITY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Вырубка леса на склоне"
+        },
+        {
+          "id": "l2",
+          "text": "Строительство плотины"
+        },
+        {
+          "id": "l3",
+          "text": "Рост города"
+        },
+        {
+          "id": "l4",
+          "text": "Орошение засушливой территории"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Изменение стока реки"
+        },
+        {
+          "id": "r2",
+          "text": "Рост риска эрозии"
+        },
+        {
+          "id": "r3",
+          "text": "Увеличение антропогенной нагрузки"
+        },
+        {
+          "id": "r4",
+          "text": "Повышение доступности воды для сельского хозяйства"
+        }
+      ]
+    }
+  ]
+}

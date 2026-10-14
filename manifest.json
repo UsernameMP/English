@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "channel": "public-pilot",
+  "warning": "No secrets. Production paid content must use authenticated backend.",
+  "packs": {
+    "english.vsosh.5-6.ru.2026": {
+      "version": "0.4.0",
+      "sha256": "def173bac2466df42e3255cd50fbb7574d76644bfa0c40f98bf0e25bf46b0965",
+      "url": "https://raw.githubusercontent.com/UsernameMP/English/content-pilot/english.vsosh.5-6.ru.2026.json"
+    },
+    "informatics.olympiad.5.ru.2026": {
+      "version": "2.0.0",
+      "sha256": "9292c2aea962855d9f59222568ea23b19570eb8ac9ba2bdbf86bd0cacd004d94",
+      "url": "https://raw.githubusercontent.com/UsernameMP/English/content-pilot/informatics.olympiad.5.ru.2026.json"
+    },
+    "informatics.olympiad.5.new15.ru.2026": {
+      "version": "1.0.0",
+      "sha256": "dfcae48bcae5d3a434cc29862b49547991b6ae71bff05b1f656d08454502204f",
+      "url": "https://raw.githubusercontent.com/UsernameMP/English/content-pilot/informatics.olympiad.5.new15.ru.2026.json"
+    },
+    "informatics.olympiad.5-7.global.2026": {
+      "version": "0.2.3",
+      "sha256": "efd81a683e2cbc12e0ff3e8c0dda7dfa9186828694f041fb5791fff0f13986d3",
+      "url": "https://raw.githubusercontent.com/UsernameMP/English/content-pilot/informatics.olympiad.5-7.global.2026.json"
+    },
+    "english.olympiad.6-7.global.2026": {
+      "version": "0.1.0",
+      "sha256": "64ee36852419750acb62cbadd950f424e8825f1d7590665483ac5c05bfff84ed",
+      "url": "https://raw.githubusercontent.com/UsernameMP/English/content-pilot/english.olympiad.6-7.global.2026.json"
+    },
+    "mathematics.olympiad.5-7.global.2026": {
+      "version": "0.1.2",
+      "sha256": "bc20f4b8d8c881d94e976fb94155cb6c6ec610a22e6de35faf25ce8e9da78de0",
+      "url": "https://raw.githubusercontent.com/UsernameMP/English/content-pilot/mathematics.olympiad.5-7.global.2026.json"
+    },
+    "mathematics.olympiad.5.new15.ru.2026": {
+      "version": "1.0.0",
+      "sha256": "c858abac02f178206da58d2e97af89048d8d0ff7c860211eb2b160d887832be7",
+      "url": "https://raw.githubusercontent.com/UsernameMP/English/content-pilot/mathematics.olympiad.5.new15.ru.2026.json"
+    },
+    "biology.vsosh.7.ru.2026": {
+      "version": "0.1.0",
+      "sha256": "8225a68a6cb1c8944ad432a5dea5c80eda73d9be55c188c5657b0afbb552a5e1",
+      "url": "https://raw.githubusercontent.com/UsernameMP/English/content-pilot/biology.vsosh.7.ru.2026.json"
+    },
+    "history.vsosh.7.ru.2026": {
+      "version": "0.1.0",
+      "sha256": "3ca607104327c153764c521b59dfc1b426898ca5e391597a17e4e9528b3a8890",
+      "url": "https://raw.githubusercontent.com/UsernameMP/English/content-pilot/history.vsosh.7.ru.2026.json"
+    },
+    "geography.vsosh.7.ru.2026": {
+      "version": "0.1.0",
+      "sha256": "de4f8f366b061228fa07abdde44816f556d26b361de7cd9471e5fd944f8a0686",
+      "url": "https://raw.githubusercontent.com/UsernameMP/English/content-pilot/geography.vsosh.7.ru.2026.json"
+    },
+    "social_science.vsosh.7.ru.2026": {
+      "version": "0.1.0",
+      "sha256": "ec5d9839e91c65493a260b855cc1e93529b0e2b6ba951844674cc0dad8b64835",
+      "url": "https://raw.githubusercontent.com/UsernameMP/English/content-pilot/social_science.vsosh.7.ru.2026.json"
+    },
+    "ecology.vsosh.7-8.ru.2026": {
+      "version": "0.1.0",
+      "sha256": "e159f1e5e073206811f735c66cd6ecfe0f88096632bb117a578f12afbebf95bc",
+      "url": "https://raw.githubusercontent.com/UsernameMP/English/content-pilot/ecology.vsosh.7-8.ru.2026.json"
+    }
+  }
+}
