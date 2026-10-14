@@ -1,0 +1,4 @@
+{"kind":"coverage","scope":"NL","detail":"Round archives require per-year enumeration","url":"https://wiskundeolympiade.nl/wedstrijdarchief","cycle":"r57"}
+{"kind":"mixed_document","scope":"CZ","detail":"Most English MO PDFs combine tasks and solutions; 2022 does not","url":"https://www.matematickaolympiada.cz/en","cycle":"r57"}
+{"kind":"language_gap","scope":"LK","detail":"SLJSO 2016 answers and 2020-2021 missing from inspected index","url":"https://sljso.lk/paper-bank/","cycle":"r57"}
+{"kind":"criteria_gap","scope":"RO","detail":"2026 informatics test ZIP files are only links, contents not inspected","url":"https://isjmm.ro/sites/2026-onigim/subiecte.html","cycle":"r57"}
