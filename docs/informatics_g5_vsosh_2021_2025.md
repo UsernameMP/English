@@ -11,7 +11,7 @@ Official material:
 
 Five available mobile interactions appear **50 times each**: numeric, single choice, multi choice, matching and sequence. No voice capture is used by either informatics course.
 
-Quick practice cycles through the full core bank in 15-question sessions with three tasks of every interaction type. Each type maintains an independent already-seen set and starts a new cycle when fewer than three unseen tasks remain. This is distinct from the adaptive reinforcement and per-topic quick sessions.
+Quick practice cycles through the full core bank in 15-question sessions with three tasks of every interaction type. Each type maintains an independent already-seen set and completes remaining unseen questions first (including the final 1–2), then begins a new cycle to fill the session without immediate duplicates. This is distinct from the adaptive reinforcement and per-topic quick sessions.
 
 2026/27 school-stage informatics takes place from **October 19 to October 23, 2026**, on different dates per region and profile. See https://siriusolymp.ru/school2026/about. The 19th is a window start, not an assertion of the user's individual competition date.
 

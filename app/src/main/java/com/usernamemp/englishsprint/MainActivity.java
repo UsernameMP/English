@@ -1389,15 +1389,24 @@ public class MainActivity extends Activity {
             List<Question> unseen = new ArrayList<>();
             for (Question q : pool) if (!seen.contains(q.id)) unseen.add(q);
             int take = Math.min(3, pool.size());
-            if (unseen.size() < take) {
-                seen.clear();
-                unseen = pool;
-            }
-            for (int i = 0; i < take; i++) {
-                Question q = unseen.get(i);
-                result.add(q);
+            List<Question> chosen = new ArrayList<>();
+            // Finish the old cycle first, even when only 1-2 unseen tasks remain.
+            for (Question q : unseen) {
+                if (chosen.size() >= take) break;
+                chosen.add(q);
                 seen.add(q.id);
             }
+            if (chosen.size() < take) {
+                // A new cycle starts only after every previous task was seen.
+                seen.clear();
+                for (Question q : pool) {
+                    if (chosen.size() >= take) break;
+                    if (chosen.contains(q)) continue; // never repeat within a session
+                    chosen.add(q);
+                    seen.add(q.id);
+                }
+            }
+            result.addAll(chosen);
             prefs.edit().putStringSet(key, seen).apply();
         }
         Collections.shuffle(result, new Random(seed + 131));
