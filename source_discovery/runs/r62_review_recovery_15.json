@@ -1,0 +1,56 @@
+{
+  "cycle": "hourly-20261014T225912000Z-r62",
+  "resource_shard": "resource_000031.jsonl",
+  "resource_sha": "c85e126220e97bd442d15fe180fb16b45acf330c",
+  "raw_shards": [
+    {
+      "name": "batch_000031.jsonl",
+      "sha": "df739d3e4c156fb3b770207be7e5d357750e021b"
+    },
+    {
+      "name": "batch_000032.jsonl",
+      "sha": "b73ee3baf255c3b6515b2deb43b55cc6dd570b60"
+    }
+  ],
+  "pending_full_label_rows": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "rules": [
+    {
+      "rows": "0-23",
+      "type_rule": "type=solutions -> solution, otherwise task",
+      "competition": "NZMO",
+      "country": "NZ",
+      "subject": "mathematics",
+      "year_rule": "URL year",
+      "stage_rule": "URL round",
+      "confidence": 0.97
+    },
+    {
+      "row": 24,
+      "type": "source",
+      "country": "INT",
+      "subject": "mathematics",
+      "reason": "International Maths Olympiad Foundation linked from NZMO resources"
+    }
+  ],
+  "raw_occurrence_id_rule": "resource.first_occurrence_id",
+  "url_rule": "resource.url",
+  "parent_anchor_rule": "raw occurrence from matching id",
+  "binary_downloads": 0,
+  "canonical_merged": 0
+}
