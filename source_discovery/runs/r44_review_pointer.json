@@ -1,0 +1,13 @@
+{
+  "cycle": "r44",
+  "reviewed_resource_shard": "resource_000013.jsonl",
+  "reviewed_rows": "0-99",
+  "checkpoint": "labels_checkpoint_20261014_050431_r44_km.jsonl",
+  "next_resource_shard": "resource_000014.jsonl",
+  "canonical_cursor": "batch_000006.jsonl:24",
+  "canonical_merge_pending": 100,
+  "audit_checkpoint": "audit_20261014_050431_r44.jsonl",
+  "sources_canonical_added": 8,
+  "actions_run_id": 38514700804,
+  "unique_urls": 64153
+}
