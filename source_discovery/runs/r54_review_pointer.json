@@ -1,0 +1,19 @@
+{
+  "cycle": "hourly-20261014T145946Z-r54",
+  "reviewed_resource_shard": "resource_000023.jsonl",
+  "reviewed_rows": "0-99",
+  "raw_shard": "batch_000023.jsonl",
+  "unique_resources": 100,
+  "types": {
+    "task": 49,
+    "solution": 48,
+    "source": 2,
+    "review": 1
+  },
+  "canonical_merged": 0,
+  "checkpointed": 100,
+  "next_resource_shard": "resource_000024.jsonl",
+  "canonical_cursor": "batch_000006.jsonl:24",
+  "r53_local_unmerged": 100,
+  "notes": "All 100 resource IDs matched first raw occurrence IDs and URLs in batch 000023; additional occurrences outside this batch not exhaustively checked."
+}
