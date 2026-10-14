@@ -1,0 +1,20 @@
+{
+  "cycle": "hourly-20261014T200729199Z-r59",
+  "resource_shard": "resource_000028.jsonl",
+  "resource_sha": "365399eff5a5f4171a63bbdc4c9efe9754958e1f",
+  "raw_shard": "batch_000028.jsonl",
+  "raw_sha": "d743e9e5bb59f3c1748ad33430d64f1b4839b842",
+  "rows": "50-74",
+  "type": "unrelated",
+  "country": "CA",
+  "competition": "Canadian Mathematical Olympiad / CMS",
+  "subject": "mathematics",
+  "level": "secondary",
+  "year": null,
+  "round": null,
+  "reason": "CMS institutional, society, committee, governance and membership navigation, not olympiad tasks; classification based on exact anchor, parent and URL of each indexed occurrence",
+  "confidence": 0.97,
+  "expansion": "For each row in 50..74 join resource row.first_occurrence_id to batch raw.id, preserve URL and parent_url/anchor_text/heading/source_url, and use resource_id as unique key. Do not delete raw records.",
+  "reviewed_at": "2026-10-14",
+  "binary_downloads": 0
+}
