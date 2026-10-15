@@ -1,0 +1,45 @@
+{
+  "cycle": "r78",
+  "audit_pending": [
+    {
+      "scope": "OM",
+      "kind": "stage_gap",
+      "note": "71st edition third-stage pair unverified"
+    },
+    {
+      "scope": "OM",
+      "kind": "historical_gap",
+      "note": "Editions before 47 in external archive"
+    },
+    {
+      "scope": "OM camps",
+      "kind": "year_gap",
+      "note": "1992 and 2020 not listed"
+    },
+    {
+      "scope": "MEMO",
+      "kind": "historical_mirror",
+      "note": "2012-2018 Wayback references"
+    },
+    {
+      "scope": "IOAI",
+      "kind": "translation_rights",
+      "note": "reviewed and machine translations differ; CC BY 4.0"
+    },
+    {
+      "scope": "APIO",
+      "kind": "year_gap",
+      "note": "2014-2026 index, earlier editions unknown"
+    },
+    {
+      "scope": "Polish AI",
+      "kind": "stage_gap",
+      "note": "2026 tasks not verified"
+    },
+    {
+      "scope": "AIIO",
+      "kind": "coverage_gap",
+      "note": "organizer says only some past tasks"
+    }
+  ]
+}
