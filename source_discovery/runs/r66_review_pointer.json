@@ -1,0 +1,83 @@
+{
+  "cycle": "hourly-20261015T030056000Z-r66",
+  "resource_shard": "resource_000035.jsonl",
+  "resource_sha": "21bce6c4e5be269c77ad41789293cf40b3e8e7ba",
+  "raw_shards": {
+    "batch_000035.jsonl": "e45a31c3a2d96fd889c755e50b207bd55ee073dc",
+    "batch_000036.jsonl": "1c7eb13f4c08f37228d122d12121d147fa70f736"
+  },
+  "rows": "0-99",
+  "verified": {
+    "resource_ids": 100,
+    "urls": 100,
+    "raw_occurrence_ids": 100,
+    "labels": 100,
+    "task": 50,
+    "solution": 50
+  },
+  "full_label_checkpoints": [
+    {
+      "file": "r66_labels_000_002_retry.jsonl",
+      "sha": "7b530392ae989d119529be84242a57678bdd73f0",
+      "count": 3
+    },
+    {
+      "file": "r66_labels_003_004_retry.jsonl",
+      "sha": "c63ab6d430722dae8dd4e002e03714ddc93cd547",
+      "count": 2
+    },
+    {
+      "file": "r66_labels_005_009_retry.jsonl",
+      "sha": "999a347557af35f1c179c6b1d6d035a0a7faae02",
+      "count": 5
+    },
+    {
+      "file": "r66_labels_010_019.jsonl",
+      "sha": "cadc3492328448d90e6daf2e96ae67559ef87596",
+      "count": 10
+    },
+    {
+      "file": "r66_labels_020_029.jsonl",
+      "sha": "eab4b0c7f0f877ea5c96373922248fdd547cddb5",
+      "count": 10
+    },
+    {
+      "file": "r66_labels_030_039_retry.jsonl",
+      "sha": "e2d0b290b086ababc9d82b8b6ab80cff2d33a604",
+      "count": 10
+    },
+    {
+      "file": "r66_labels_040_049.jsonl",
+      "sha": "f1bc507e2f6217b2f3317bfedc20579b87db4c33",
+      "count": 10
+    },
+    {
+      "file": "r66_labels_050_059_retry.jsonl",
+      "sha": "ad5c575c0a4d1074f72afd15262244bd490913c6",
+      "count": 10
+    },
+    {
+      "file": "r66_labels_060_069_retry.jsonl",
+      "sha": "4e6716276dc72170f16046839e72b45d8cef7989",
+      "count": 10
+    },
+    {
+      "file": "r66_labels_070_079_retry.jsonl",
+      "sha": "0e38ad839264babf8a7159d5d54323ceff7fe745",
+      "count": 10
+    },
+    {
+      "file": "r66_labels_080_089.jsonl",
+      "sha": "f0783dccec07e804b7c6fdeab237c40654c286c8",
+      "count": 10
+    },
+    {
+      "file": "r66_labels_090_099.jsonl",
+      "sha": "ba6b3fb7bce0a34a49757e1787caf66740feec9c",
+      "count": 10
+    }
+  ],
+  "canonical_merge": "pending",
+  "next_resource_shard": "resource_000036.jsonl",
+  "sequential_cursor_unchanged": "batch_000006:24"
+}
