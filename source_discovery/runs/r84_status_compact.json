@@ -1,0 +1,31 @@
+{
+  "cycle": "r84",
+  "last_successful_actions_run": 38800220318,
+  "actions_success_at": "2026-10-15T20:16:11Z",
+  "r84_trigger": "blocked",
+  "unique_urls": 94642,
+  "resource_shards": 951,
+  "html_pending": 44798,
+  "discovery_new": 6,
+  "review_shard": "resource_000053.jsonl",
+  "review_unique": 100,
+  "review_counts": {
+    "task": 14,
+    "solution": 6,
+    "source": 18,
+    "unrelated": 58,
+    "review": 4
+  },
+  "review_saved_full": 25,
+  "review_saved_compact": 55,
+  "review_saved_pointer": 20,
+  "audit_new": 10,
+  "canonical_sources": 707,
+  "canonical_labels": 1103,
+  "canonical_backlog": 116,
+  "canonical_merges": false,
+  "next_review": "resource_000054.jsonl",
+  "mime_pdf": 524,
+  "mime_pdf_no_extension": 356,
+  "binary_downloads": 0
+}
