@@ -1,0 +1,30 @@
+{
+  "cycle": 71,
+  "resource_shard": "resource_000040.jsonl",
+  "row_range": [
+    0,
+    99
+  ],
+  "raw_shards": [
+    "batch_000040.jsonl",
+    "batch_000041.jsonl"
+  ],
+  "codebook": {
+    "T": "task",
+    "S": "solution",
+    "A": "archive",
+    "O": "source",
+    "U": "unrelated"
+  },
+  "labels_by_row": "TTATATTTTTTATTATTTTSTSTSTSTSTSTSTSTSTSTSTSTSTSTSTSTSTSTSOOOOUUUOUUUUUUUOUUUUUOOUAOUUUUOOOOOOOOOOOOOO",
+  "counts": {
+    "T": 33,
+    "A": 5,
+    "S": 19,
+    "O": 23,
+    "U": 20
+  },
+  "stage_notes": "NACLO named HTML practice tasks and sample PDF task-solution pairs; ITYM historical results pages source, site navigation unrelated; individual NACLO round unverified; ITYM team solutions and written reviews not part of this shard",
+  "review_status": "compact_checkpoint_only_full_labels_write_blocked",
+  "reviewed_at": "2026-10-15T08:02:05Z"
+}
