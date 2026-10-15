@@ -1,0 +1,19 @@
+{
+  "cycle": "r74",
+  "run": "38724913480",
+  "run_status": "success",
+  "unique_urls": 89855,
+  "source_count": 639,
+  "verified_new_sources": 7,
+  "reviewed_resource43": 100,
+  "review_types": {
+    "task": 3,
+    "source": 20,
+    "unrelated": 77
+  },
+  "review_canonical_merged": 0,
+  "labels_canonical": 1103,
+  "mime_observations": 835,
+  "pdf_mime": 507,
+  "notes": "Sources and labels pending canonical merge; checkpoints in runs; no binary downloads"
+}
