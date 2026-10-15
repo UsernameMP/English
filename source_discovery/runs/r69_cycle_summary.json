@@ -1,0 +1,55 @@
+{
+  "cycle": "hourly-20261015T060820000Z-r69",
+  "trigger_commit": "b3f6ac02b1aac8681d4bda60003e0d4b55d875df",
+  "crawler_state_updated_at": "2026-10-15T06:10:50+00:00",
+  "crawler_state_sha": "3aa3762d364466751a302b6169bfd4fa22c3c7de",
+  "crawler_execution_evidence": "crawl_state and new raw/resource shards changed after trigger; final GitHub Actions conclusion not separately confirmed",
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_links": 3050,
+    "html_queue": 40758,
+    "blocked_or_failed": 380,
+    "unique_resource_urls": 86055
+  },
+  "discovery": {
+    "new_verified_indexes": 10,
+    "checkpoint": "discovery_20261015_060820_r69.jsonl",
+    "includes_r68_recovery": 4,
+    "canonical_sources": 604,
+    "canonical_merge": "blocked"
+  },
+  "review": {
+    "resource_shard": "resource_000038.jsonl",
+    "rows": "0-99",
+    "unique_resources": 100,
+    "task": 50,
+    "solution": 50,
+    "compact_checkpoints": [
+      "r69_review_recovery_000.json",
+      "r69_labels_compact_020.jsonl",
+      "r69_labels_compact_040.jsonl",
+      "r69_review_recovery_060.json",
+      "r69_review_recovery_080.json"
+    ],
+    "manifest": "r69_review_manifest.json",
+    "canonical_labels": 1103,
+    "canonical_merge": "blocked",
+    "next_resource_shard": "resource_000039.jsonl",
+    "sequential_cursor": "batch_000006:24",
+    "review_state_update": "blocked"
+  },
+  "mime": {
+    "observations": 775,
+    "application_pdf": 495,
+    "pdf_without_pdf_extension": 337
+  },
+  "audit": {
+    "pending_gaps_in_pointer": 9,
+    "pointer": "r69_audit_pointer.json",
+    "backlog_canonical": 116,
+    "canonical_update": "blocked"
+  },
+  "binary_downloads": 0,
+  "dropbox_modified": false,
+  "schedule_modified": false
+}
