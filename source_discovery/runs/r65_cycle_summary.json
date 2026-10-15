@@ -1,0 +1,70 @@
+{
+  "cycle": "hourly-20261015T020139000Z-r65",
+  "date": "2026-10-15",
+  "branch": "rift-source-index",
+  "trigger": {
+    "attempted": true,
+    "updated": false,
+    "blocker": "GitHub update_file rejected by connector safety checks",
+    "current_cycle": "hourly-20261015T010826000Z-r64",
+    "new_action_run_confirmed": false
+  },
+  "discovery": {
+    "new_verified_source_pages": 8,
+    "checkpoint_files": [
+      "discovery_20261015_020139_r65_02.jsonl",
+      "discovery_20261015_020139_r65_03.jsonl",
+      "discovery_20261015_020139_r65_05.jsonl",
+      "discovery_20261015_020139_r65_06.jsonl"
+    ],
+    "canonical_merged": 0
+  },
+  "review": {
+    "resource_shard": "resource_000034.jsonl",
+    "rows": "0-99",
+    "unique_resource_ids": 100,
+    "raw_id_url_matches": 100,
+    "classification": {
+      "task": 50,
+      "solution": 50
+    },
+    "full_labels_in_checkpoints": 98,
+    "compact_labels": 2,
+    "pointer": "r65_review_pointer.json",
+    "canonical_merged": 0,
+    "next_resource_shard": "resource_000035.jsonl"
+  },
+  "audit": {
+    "findings": 8,
+    "checkpoint_files": [
+      "audit_20261015_020139_r65_04.jsonl",
+      "audit_20261015_020139_r65_06.jsonl",
+      "audit_20261015_020139_r65_07.jsonl",
+      "audit_20261015_020139_r65_09.jsonl",
+      "audit_20261015_020139_r65_010.jsonl",
+      "r65_audit_iynt2016.json"
+    ],
+    "canonical_merged": 0
+  },
+  "canonical_state": {
+    "sources": 572,
+    "labels": 1003,
+    "backlog": 113,
+    "resource_shards_last": "resource_000834.jsonl",
+    "last_shard_rows": 63,
+    "resource_url_count_inferred": 83363,
+    "html_queue": "not directly readable",
+    "sequential_review_cursor": "batch_000006:24"
+  },
+  "blockers": [
+    "run_trigger update blocked; crawler not launched",
+    "sources/backlog/labels canonical update blocked; checkpoints preserved",
+    "review_state update blocked; pointer preserved",
+    "crawl_state range fetch returns empty; cannot confirm current queue"
+  ],
+  "constraints": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "schedule_modified": false
+  }
+}
