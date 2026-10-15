@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-15T09:13:00Z",
+  "updated_at": "2026-10-15T23:01:13.196Z",
   "deferred_shards": [
     1,
     2,
@@ -134,35 +134,41 @@
     "sequential_cursor_moved": false
   },
   "latest_noncontiguous_review": {
-    "cycle": "hourly-20261015T090820000Z-r72",
-    "resource_shard": "resource_000041.jsonl",
+    "cycle": "hourly-20261015T230113196Z-r86",
+    "resource_shard": "resource_000055.jsonl",
     "row_range": "0-99",
     "unique_resources": 100,
     "raw_shards": [
-      "batch_000040.jsonl",
-      "batch_000041.jsonl",
-      "batch_000042.jsonl",
-      "batch_000043.jsonl",
-      "batch_000044.jsonl"
+      "batch_000096.jsonl",
+      "batch_000097.jsonl",
+      "batch_000098.jsonl"
     ],
     "counts": {
-      "source": 5,
-      "task": 18,
-      "archive": 25,
-      "participant_work": 18,
-      "unrelated": 33,
-      "review": 1
+      "task": 13,
+      "solution": 3,
+      "archive": 1,
+      "source": 20,
+      "unrelated": 56,
+      "review": 7
     },
     "canonical_merged": 0,
-    "full_labels_checkpointed": 90,
-    "compact_labels_checkpointed": 10,
-    "next_resource_shard": "resource_000042.jsonl",
+    "full_labels_checkpointed": 75,
+    "compact_labels_checkpointed": 25,
+    "metadata_correction": "runs/r86_label_country_correction.json",
+    "pending_pointer": "runs/r86_pending_r055_compact.json",
     "raw_cursor_unchanged": true
   },
   "resource_review_cursor": {
-    "next_resource_shard": "resource_000042.jsonl",
-    "last_completed_shard": "resource_000041.jsonl",
-    "last_completed_cycle": "hourly-20261015T090820000Z-r72",
-    "note": "Noncontiguous resource cursor; raw sequential cursor retained"
+    "next_resource_shard": "resource_000056.jsonl",
+    "last_completed_shard": "resource_000055.jsonl",
+    "last_completed_cycle": "hourly-20261015T230113196Z-r86",
+    "note": "All 100 resources semantically classified; 75 full labels checkpointed, 25 compact require expansion before canonical merge; earlier r85 also pending."
+  },
+  "r86_pending": {
+    "resource_shard": "resource_000055.jsonl",
+    "full_labels_checkpointed": 75,
+    "compact_pending": 25,
+    "canonical_merged": 0,
+    "correction_file": "runs/r86_label_country_correction.json"
   }
 }
