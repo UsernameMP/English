@@ -1,0 +1,33 @@
+{
+  "cycle": 72,
+  "trigger_commit": "8a0ced57ee76bbcad7a2f8a3705ce07181864ebb",
+  "actions_run": 38710769707,
+  "actions_conclusion": "success",
+  "unique_resources": 87871,
+  "html_pages": 60,
+  "new_links": 2276,
+  "pending_pages": 41596,
+  "canonical_sources": 633,
+  "source_additions": 12,
+  "review_resource_shard": "resource_000041.jsonl",
+  "reviewed": 100,
+  "full_labels": 90,
+  "compact_labels": 10,
+  "canonical_labels": 1103,
+  "canonical_backlog": 116,
+  "audit_checkpoint_items": 12,
+  "canonical_review_merge": "pending",
+  "canonical_audit_merge": "pending",
+  "next_resource_shard": "resource_000042.jsonl",
+  "checkpoints": [
+    "r72_labels_00.jsonl",
+    "r72_labels_02.jsonl",
+    "r72_labels_04.jsonl",
+    "r72_labels_30_39.jsonl",
+    "r72_labels_60_69.jsonl",
+    "r72_labels_70_79.jsonl",
+    "r72_labels_20_29_compact.jsonl",
+    "r72_audit.jsonl",
+    "discovery_20261015_090820_r72.jsonl"
+  ]
+}
