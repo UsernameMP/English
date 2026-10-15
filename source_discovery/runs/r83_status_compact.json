@@ -1,0 +1,61 @@
+{
+  "cycle": "r83",
+  "date": "2026-10-15",
+  "trigger_commit": "eab830208940ed68aac8708b9542a8be666a9972",
+  "actions_run": 38799410874,
+  "actions_status": "success",
+  "crawl": {
+    "html_pages": 60,
+    "new_links": 2361,
+    "pending_pages": 44510,
+    "unique_urls": 94098,
+    "last_shard": "resource_000941.jsonl",
+    "last_shard_rows": 98
+  },
+  "sources": {
+    "canonical": 707,
+    "new_merged": 9,
+    "commit": "379525004038cd295e414afa9cfd30ca0257ed19"
+  },
+  "review": {
+    "shard": "resource_000052.jsonl",
+    "rows": "0-99",
+    "unique": 100,
+    "raw_shards": [
+      "batch_000093.jsonl",
+      "batch_000094.jsonl"
+    ],
+    "counts": {
+      "task": 15,
+      "solution": 3,
+      "source": 26,
+      "unrelated": 52,
+      "review": 4
+    },
+    "full_labels_in_checkpoints": 100,
+    "canonical_labels": 1103,
+    "canonical_merge": false,
+    "next_new_shard": "resource_000053.jsonl",
+    "canonical_cursor": "resource_000042.jsonl"
+  },
+  "audit": {
+    "new_findings": 10,
+    "backlog_checkpoint": "backlog_checkpoint_20261015_200705_r83.jsonl",
+    "canonical_backlog": 116
+  },
+  "mime": {
+    "observations": 938,
+    "pdf": 511,
+    "extensionless_pdf": 353
+  },
+  "blockers": [
+    "canonical link_labels.jsonl update blocked",
+    "review_state.json update blocked",
+    "backlog.jsonl update blocked"
+  ],
+  "checkpoint_naming": "labels_checkpoint_20261015_200705_r83_r052_*.jsonl",
+  "discovery_naming": "discovery_20261015_200705_r83*.jsonl",
+  "no_binary_download": true,
+  "dropbox_unchanged": true,
+  "schedule_unchanged": true
+}
