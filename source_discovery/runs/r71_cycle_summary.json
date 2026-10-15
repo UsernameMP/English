@@ -7,5 +7,32 @@
   "labels_status": "blocked",
   "audit_status": "blocked",
   "next_resource_shard": "resource_000041.jsonl",
-  "notes": "100 labels prepared but canonical and checkpoint writes were rejected; 5 audit items prepared but backlog write rejected."
+  "notes": "100 labels prepared but canonical and checkpoint writes were rejected; 5 audit items prepared but backlog write rejected.",
+  "postcrawl_verified_at": "2026-10-15T08:04:22.268Z",
+  "crawl_state_sha_before": "5da9817c41e5315be3a6ca8d1978a19baf181591",
+  "crawl_state_sha_after": "726779760efb77d6ebb7a5ea9460d44e2e55c3c1",
+  "crawler_progress_evidence": "crawl_state SHA changed and new resource_000865.jsonl shard appeared after r71 trigger; final Actions conclusion not independently confirmed",
+  "resource_shard_latest": "resource_000865.jsonl",
+  "latest_shard_rows": 83,
+  "estimated_unique_resources": 86583,
+  "prior_estimate": 86453,
+  "resource_growth": 130,
+  "sources_canonical": 621,
+  "labels_canonical": 1103,
+  "review_checkpoint": "source_discovery/runs/r71_review_pointer.json",
+  "review_counts": {
+    "task": 33,
+    "solution": 19,
+    "archive": 5,
+    "source": 23,
+    "unrelated": 20
+  },
+  "audit_checkpoint": "source_discovery/runs/r71_audit_pointer.json",
+  "audit_count": 5,
+  "observations_count": 804,
+  "observed_pdf_mime": 495,
+  "observed_pdf_without_extension": 337,
+  "backlog_canonical": 116,
+  "review_state_updated": false,
+  "remaining": "100 full labels not merged; compact classifications saved; 5 audit items checkpointed but not merged; review_state raw cursor batch_000006:24 unchanged; earlier pending merges remain"
 }
