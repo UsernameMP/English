@@ -1,0 +1,11 @@
+{
+  "cycle": 71,
+  "trigger_commit": "7b498835b4e97b5cab852206092b1113a45b3ced",
+  "discovery_commit": "60abbf6f647c7aa7f1fee47c161c6df5af472541",
+  "review_shard": "resource_000040.jsonl",
+  "review_count": 100,
+  "labels_status": "blocked",
+  "audit_status": "blocked",
+  "next_resource_shard": "resource_000041.jsonl",
+  "notes": "100 labels prepared but canonical and checkpoint writes were rejected; 5 audit items prepared but backlog write rejected."
+}
