@@ -1,0 +1,43 @@
+{
+  "cycle": "hourly-20261015T120023000Z-r75",
+  "reviewed_resource_shard": "resource_000044.jsonl",
+  "rows": "0-99",
+  "unique_resources": 100,
+  "raw_occurrences": 115,
+  "raw_shards": [
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+  ],
+  "types": {
+    "unrelated": 93,
+    "source": 5,
+    "review": 2
+  },
+  "label_checkpoint_parts": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06_50",
+    "06_55",
+    "07",
+    "08_70",
+    "08_75",
+    "09",
+    "10"
+  ],
+  "labels_checkpointed": 100,
+  "canonical_merged": 0,
+  "canonical_cursor_unchanged": "resource_000042.jsonl",
+  "next_new_shard": "resource_000045.jsonl",
+  "raw_cursor": "batch_000006.jsonl:24",
+  "discovery_mergeable_checkpoints": 4,
+  "audit_checkpoints": 5,
+  "notes": "r73 unresolved; MIME is not document-type proof; no binary downloads"
+}
