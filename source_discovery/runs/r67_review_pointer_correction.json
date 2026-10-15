@@ -1,0 +1,1 @@
+{"cycle":"r67","pointer":"r67_review_pointer.json","correction":{"replace":"labels_checkpoint_20261015_040809_r67_naclo_row58.jsonl","with":["labels_checkpoint_20261015_040809_r67_naclo_single58.jsonl","labels_checkpoint_20261015_040809_r67_naclo_single59.jsonl"]},"verified_label_rows":100,"verified_checkpoint_files":29,"canonical_merge":"pending"}
