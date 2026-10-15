@@ -1,0 +1,23 @@
+{
+  "cycle": "hourly-20261015T020139000Z-r65",
+  "resource_shard": "resource_000034.jsonl",
+  "resource_sha": "26bc941c61c3082af97b3a2e1ef3b25d593f7cc5",
+  "raw_shard": "batch_000034.jsonl",
+  "raw_sha": "c6e14d2cac52736a04f9955871748c83cd5db83c",
+  "rows": [
+    {
+      "row": 15,
+      "type": "task",
+      "reason": "NACLO 2022 official index named problem",
+      "confidence": 0.98
+    },
+    {
+      "row": 16,
+      "type": "solution",
+      "reason": "NACLO 2022 official index Solution anchor",
+      "confidence": 0.98
+    }
+  ],
+  "required_action": "expand using resource rows and matching raw occurrence ID; do not download PDFs",
+  "status": "compact_checkpoint_requires_expansion"
+}
