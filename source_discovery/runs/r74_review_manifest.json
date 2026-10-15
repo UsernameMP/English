@@ -1,0 +1,18 @@
+{
+  "cycle": "hourly-20261015T110536000Z-r74",
+  "resource_shard": "resource_000043.jsonl",
+  "rows": "0-99",
+  "reviewed_unique": 100,
+  "counts": {
+    "task": 3,
+    "source": 20,
+    "unrelated": 77
+  },
+  "raw_shards": "batch_000053.jsonl to batch_000059.jsonl",
+  "checkpointed": 100,
+  "canonical_merged": 0,
+  "raw_cursor": "batch_000006:24",
+  "resource42_pending": true,
+  "next_unreviewed_resource_shard": "resource_000044.jsonl",
+  "note": "Review state update blocked; checkpoints r74_resource43_review_* and r74_resource43_task*; r73 resource42 still not canonically merged"
+}
