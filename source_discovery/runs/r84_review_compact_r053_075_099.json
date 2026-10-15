@@ -1,0 +1,481 @@
+{
+ "cycle": "r84",
+ "count": 25,
+ "labels": [
+  {
+   "row": 75,
+   "resource_id": "890a34410b387b90c840106e",
+   "raw_occurrence_id": "ba9c04cdf94796c754765159",
+   "url": "https://bmos.ukmt.org.uk/news/20160229-01-rmmresults.shtml",
+   "type": "unrelated",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "Romanian Master of Mathematics results",
+   "heading": "IMO squad selected (4 April 2016)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 76,
+   "resource_id": "ea2e3118fd3844bb0673ab17",
+   "raw_occurrence_id": "504fd0bb3e3650292d8b0c96",
+   "url": "https://bmos.ukmt.org.uk/news/20160229-00-rmmday2.shtml",
+   "type": "source",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "Romanian Master of Mathematics Day 2",
+   "heading": "Romanian Master of Mathematics results (29 February 2016)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 77,
+   "resource_id": "c138912a784334c23429e92a",
+   "raw_occurrence_id": "83701aab09445def6c88e730",
+   "url": "https://bmos.ukmt.org.uk/home/rmm-2016-day2.pdf",
+   "type": "task",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "problems",
+   "heading": "Romanian Master of Mathematics Day 2 (29 February 2016)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 78,
+   "resource_id": "b7a2dff688e17c81d59712e9",
+   "raw_occurrence_id": "766bc9ad698781db4ebbc437",
+   "url": "https://bmos.ukmt.org.uk/news/20160227-00-rmmday1.shtml",
+   "type": "source",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "Romanian Master of Mathematics Day 1",
+   "heading": "Romanian Master of Mathematics Day 2 (29 February 2016)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 79,
+   "resource_id": "f21a12cd41080c3d2c44a5f1",
+   "raw_occurrence_id": "7669611d0ea9936aa7205c96",
+   "url": "https://bmos.ukmt.org.uk/home/rmm-2016-day1.pdf",
+   "type": "task",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "problems",
+   "heading": "Romanian Master of Mathematics Day 1 (27 February 2016)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 80,
+   "resource_id": "aea60fd16a3397b0e6056073",
+   "raw_occurrence_id": "687cffe39449da575be819f7",
+   "url": "https://bmos.ukmt.org.uk/news/20160215-00-bradleyprize.shtml",
+   "type": "unrelated",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "Christopher Bradley elegance prize",
+   "heading": "Romanian Master of Mathematics Day 1 (27 February 2016)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 81,
+   "resource_id": "c510f01592acd44368ebcb3c",
+   "raw_occurrence_id": "744cbbe3266c0c196b7f0e5a",
+   "url": "https://bmos.ukmt.org.uk/news/20160212-00-egmoteam.shtml",
+   "type": "unrelated",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "EGMO 2016 team",
+   "heading": "Christopher Bradley elegance prize (15 February 2016)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 82,
+   "resource_id": "e2b6011f703810082fdfa2db",
+   "raw_occurrence_id": "4673eaaf42c13e3de6353ace",
+   "url": "https://bmos.ukmt.org.uk/news/20160207-00-bmo2marked.shtml",
+   "type": "unrelated",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "BMO Round 2 marked",
+   "heading": "EGMO 2016 team (12 February 2016)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 83,
+   "resource_id": "76ae0abbbb96deb4dcb68821",
+   "raw_occurrence_id": "94f4b1059795a86e93b8c24d",
+   "url": "https://bmos.ukmt.org.uk/news/20160129-00-bmo2.shtml",
+   "type": "source",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "BMO Round 2",
+   "heading": "BMO Round 2 marked (7 February 2016, New Zealand results added 12 February 2016)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 84,
+   "resource_id": "6f206f00500cd84f089a5da7",
+   "raw_occurrence_id": "c38264026e3ff7df25e566aa",
+   "url": "https://bmos.ukmt.org.uk/news/20160108-00-rmmteam.shtml",
+   "type": "unrelated",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "Romanian Master of Mathematics 2016 team",
+   "heading": "BMO Round 2 (29 January 2016)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 85,
+   "resource_id": "c7108c62d872d05c6992a8e4",
+   "raw_occurrence_id": "21c4063d59328be4df35120d",
+   "url": "https://bmos.ukmt.org.uk/news/20151217-00-bmo1marked.shtml",
+   "type": "unrelated",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "BMO Round 1 marked",
+   "heading": "Romanian Master of Mathematics 2016 team (8 January 2016)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 86,
+   "resource_id": "33dc02520e3dcb93847dd218",
+   "raw_occurrence_id": "e0e3ebddeea2846db1945811",
+   "url": "https://bmos.ukmt.org.uk/news/20151128-00-bmo1.shtml",
+   "type": "source",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "BMO Round 1",
+   "heading": "BMO Round 1 marked (17 December 2015)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 87,
+   "resource_id": "2fdc3845e0c58ec38ec55f97",
+   "raw_occurrence_id": "a255f19717d369ca466d0eda",
+   "url": "https://bmos.ukmt.org.uk/solutions/bmo1-2016/",
+   "type": "solution",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "video solutions",
+   "heading": "BMO Round 1 (28 November 2015)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 88,
+   "resource_id": "83ff7acc356658c900685019",
+   "raw_occurrence_id": "eef1f01a22af83e6ad7016b5",
+   "url": "https://bmos.ukmt.org.uk/news/20151021-00-ukmogreport.shtml",
+   "type": "review",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "UK Mathematical Olympiad for Girls markers’ report",
+   "heading": "BMO Round 1 (28 November 2015)",
+   "confidence": 0.5,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 89,
+   "resource_id": "38fd07663a33b3217600f568",
+   "raw_occurrence_id": "80846ccc2694c7a106bd3328",
+   "url": "https://bmos.ukmt.org.uk/home/ukmog-2015-report.pdf",
+   "type": "review",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "markers’ report",
+   "heading": "UK Mathematical Olympiad for Girls markers’ report (21 October 2015)",
+   "confidence": 0.5,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 90,
+   "resource_id": "a3a45af0941e4424daa6dc4f",
+   "raw_occurrence_id": "c8f624c57c44a9e48d6f302d",
+   "url": "https://bmos.ukmt.org.uk/news/20151019-00-ukmogmarked.shtml",
+   "type": "unrelated",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "UK MOG marked",
+   "heading": "UK Mathematical Olympiad for Girls markers’ report (21 October 2015)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 91,
+   "resource_id": "169ab857fae1e66318a46c39",
+   "raw_occurrence_id": "317eb27dad6f931506ff3e22",
+   "url": "https://bmos.ukmt.org.uk/news/20150930-00-ukmog.shtml",
+   "type": "source",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "UK Mathematical Olympiad for Girls",
+   "heading": "UK MOG marked (19 October 2015)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 92,
+   "resource_id": "a84516e1d2b36db4666f5823",
+   "raw_occurrence_id": "f3c03741bffb6c2e153c4d0b",
+   "url": "https://bmos.ukmt.org.uk/home/ukmog-2015.pdf",
+   "type": "task",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "UK Mathematical Olympiad for Girls (UK MOG)",
+   "heading": "UK Mathematical Olympiad for Girls (30 September 2015)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 93,
+   "resource_id": "2af028ac1b69089b15265175",
+   "raw_occurrence_id": "6788e24d2720d51585dd3c2e",
+   "url": "https://bmos.ukmt.org.uk/home/ukmog-2015-solutions.pdf",
+   "type": "solution",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "Solutions",
+   "heading": "UK Mathematical Olympiad for Girls (30 September 2015)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 94,
+   "resource_id": "079feef0bb5a2ae4d38fef4d",
+   "raw_occurrence_id": "ea061944a014c32c2ac9899b",
+   "url": "https://bmos.ukmt.org.uk/news/20150902-00-balkanreport.shtml",
+   "type": "unrelated",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "Balkan Mathematical Olympiad report available",
+   "heading": "UK Mathematical Olympiad for Girls (30 September 2015)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 95,
+   "resource_id": "885aad9dc4a8b5f0ef9928c9",
+   "raw_occurrence_id": "374bb9c39611b131a930d3f4",
+   "url": "https://bmos.ukmt.org.uk/news/20150807-00-imostudentreport.shtml",
+   "type": "unrelated",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "IMO 2015 student report by Lawrence Hollom available",
+   "heading": "Balkan Mathematical Olympiad report available (2 September 2015)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 96,
+   "resource_id": "82f89a344967f098a92d66ec",
+   "raw_occurrence_id": "7f9c0a286fdc320dd955ff91",
+   "url": "https://www.imo-register.org.uk/2015-report-lawrence.pdf",
+   "type": "unrelated",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "unofficial report on IMO 2015 from the student perspective",
+   "heading": "IMO 2015 student report by Lawrence Hollom available (7 August 2015)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 97,
+   "resource_id": "30aa5950f230b565a99c9847",
+   "raw_occurrence_id": "f0c29cabfea0e063dd802121",
+   "url": "https://bmos.ukmt.org.uk/news/20150729-00-imoreport.shtml",
+   "type": "unrelated",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "IMO 2015 report available",
+   "heading": "IMO 2015 student report by Lawrence Hollom available (7 August 2015)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 98,
+   "resource_id": "4e2f62756c8b0ae74a1f3eaa",
+   "raw_occurrence_id": "10df310dc409cb884a6cd9f6",
+   "url": "https://bmos.ukmt.org.uk/news/20150726-00-imodeputyreport.shtml",
+   "type": "unrelated",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "IMO 2015 Deputy Leader’s report by Dominic Yeo available",
+   "heading": "IMO 2015 report available (29 July 2015)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  },
+  {
+   "row": 99,
+   "resource_id": "f239bceca2a507a174c68eb4",
+   "raw_occurrence_id": "88b1416d9fc71d6aa93091c7",
+   "url": "https://www.imo-register.org.uk/2015-report-dominic.pdf",
+   "type": "unrelated",
+   "parent_url": "https://bmos.ukmt.org.uk/home/news.shtml",
+   "source_url": "https://bmos.ukmt.org.uk/home/bmo",
+   "anchor_text": "report on IMO 2015 by Deputy Leader Dominic Yeo",
+   "heading": "IMO 2015 Deputy Leader’s report by Dominic Yeo available (26 July 2015)",
+   "confidence": 0.85,
+   "cycle": "r84",
+   "resource_shard": "resource_000053.jsonl",
+   "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+   ],
+   "context": "raw occurrence plus organizer link labels; no binary download"
+  }
+ ]
+}
