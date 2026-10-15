@@ -1,0 +1,10 @@
+{"row":35,"id":"3dbf15f3344768c85fa724e6","resource_id":"83abb0216bc019a0376f987d","type":"unrelated","reason":"Not a task, solution, or grading criterion","raw_shard":"resource_000042.jsonl","confidence":0.95}
+{"row":36,"id":"0b38c5b366043ad9aaac7b5e","resource_id":"a15bc6f5271891878a9d2183","type":"review","reason":"Uninspected ZIP archive","raw_shard":"resource_000042.jsonl","confidence":0.72}
+{"row":37,"id":"3f545b72fb85961e27b95867","resource_id":"24f7346637cdaee50a7fa1e4","type":"source","reason":"Organizer or competition navigation","raw_shard":"resource_000042.jsonl","confidence":0.95}
+{"row":38,"id":"68325c441ee938b02af6b0a9","resource_id":"78ea839575e1249b7ea7cb3b","type":"source","reason":"Organizer or competition navigation","raw_shard":"resource_000042.jsonl","confidence":0.95}
+{"row":39,"id":"ebb717b05cd482ad11487c93","resource_id":"da3f6c5a5098abe4f5bea40c","type":"source","reason":"Organizer or competition navigation","raw_shard":"resource_000042.jsonl","confidence":0.95}
+{"row":40,"id":"68d6005e7fec4f288b33b530","resource_id":"566a143c30a8507009bc185b","type":"source","reason":"Organizer or competition navigation","raw_shard":"resource_000042.jsonl","confidence":0.95}
+{"row":41,"id":"e0bb6e5f233397e81533cc19","resource_id":"e7cf82c0a2fddbdbc802a5fa","type":"unrelated","reason":"Not a task, solution, or grading criterion","raw_shard":"resource_000042.jsonl","confidence":0.95}
+{"row":42,"id":"be8ce802672195a1ec7af9bd","resource_id":"4716c38448d28f40f84958d6","type":"unrelated","reason":"Subject syllabus, not exam paper","raw_shard":"resource_000042.jsonl","confidence":0.95}
+{"row":43,"id":"5da10feabb61d6adc0d4221c","resource_id":"f3a35882aba001dc6f90f54d","type":"unrelated","reason":"Subject syllabus, not exam paper","raw_shard":"resource_000042.jsonl","confidence":0.95}
+{"row":44,"id":"d9c4a171a0916384c5ceb606","resource_id":"eb3530a3e5b04521bd3f077d","type":"unrelated","reason":"Subject syllabus, not exam paper","raw_shard":"resource_000042.jsonl","confidence":0.95}
