@@ -1,0 +1,83 @@
+{
+  "cycle": "hourly-20261015T000029000Z-r63",
+  "trigger": {
+    "updated": true,
+    "commit_sha": "b2e1b64e5afed7546ea89f92326f49dc52c8ae24",
+    "blob_sha": "70cc45a50be4604c07296e50cc462f6121e61c55",
+    "action_run_confirmed": false,
+    "crawl_state_sha_after_trigger": "4f9a7e4902e008ff200ed76bffc9df54d999c35a",
+    "last_confirmed_run_id": 38645390069
+  },
+  "discovery": {
+    "new_index_pages": 7,
+    "checkpoint": "discovery_20261015_000029_r63.jsonl",
+    "canonical_merged": 0,
+    "fully_html_verified": 5,
+    "indexed_only": 2
+  },
+  "review": {
+    "cycle": "hourly-20261015T000029000Z-r63",
+    "resource_shard": "resource_000032.jsonl",
+    "resource_sha": "19fc33a24145a4d4ec632040469022807e76dea4",
+    "rows": "0-99",
+    "unique_resources": 100,
+    "raw_shards": [
+      {
+        "name": "batch_000032.jsonl",
+        "sha": "b73ee3baf255c3b6515b2deb43b55cc6dd570b60"
+      },
+      {
+        "name": "batch_000033.jsonl",
+        "sha": "2c5b74ba7e015602195d2276a7386897d2cfcccc"
+      }
+    ],
+    "classification": {
+      "source": 19,
+      "task": 13,
+      "solution": 11,
+      "unrelated": 47,
+      "criteria": 2,
+      "review": 1,
+      "archive": 7
+    },
+    "full_checkpoint_files": [
+      "r63_labels_000_009.jsonl",
+      "r63_labels_010_019.jsonl",
+      "r63_labels_020_029.jsonl",
+      "r63_labels_030_039.jsonl",
+      "r63_labels_050_059.jsonl",
+      "r63_labels_060_069.jsonl"
+    ],
+    "compact_checkpoint_files": [
+      "r63_labels_compact_40_49.jsonl",
+      "r63_labels_compact_70_79.jsonl",
+      "r63_labels_compact_80_89.jsonl",
+      "r63_labels_compact_90_99.jsonl"
+    ],
+    "canonical_merged": 0,
+    "unprocessed_raw_deleted": false,
+    "needs": "Expand 40 compact rows using resource shard and raw occurrences, then merge all 100 into link_labels.jsonl with current SHA. Check cross-shard occurrences when available."
+  },
+  "audit": {
+    "new_backlog_rows": 10,
+    "canonical_merged": 10,
+    "commit_sha": "6df0bf0212ee7ecf0a24db8c7dade7c79d91563e"
+  },
+  "canonical_counts": {
+    "sources": 560,
+    "labels": 1003,
+    "backlog": 106,
+    "unique_urls_last_confirmed": 80630,
+    "html_queue_last_confirmed": 38438
+  },
+  "blockers": [
+    "sources.jsonl update_file safety check; checkpoint created for merger",
+    "link_labels.jsonl update_file safety check; 60 full and 40 compact records checkpointed",
+    "review_state.json update_file safety check; sequential cursor batch_000006:24 unchanged",
+    "New GitHub Actions run not independently confirmed; crawl_state SHA unchanged at verification"
+  ],
+  "next_resource_shard": "resource_000033.jsonl",
+  "binary_downloads": 0,
+  "dropbox_modified": false,
+  "schedule_modified": false
+}
