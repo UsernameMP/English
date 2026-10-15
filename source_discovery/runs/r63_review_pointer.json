@@ -1,0 +1,43 @@
+{
+  "cycle": "hourly-20261015T000029000Z-r63",
+  "resource_shard": "resource_000032.jsonl",
+  "resource_sha": "19fc33a24145a4d4ec632040469022807e76dea4",
+  "rows": "0-99",
+  "unique_resources": 100,
+  "raw_shards": [
+    {
+      "name": "batch_000032.jsonl",
+      "sha": "b73ee3baf255c3b6515b2deb43b55cc6dd570b60"
+    },
+    {
+      "name": "batch_000033.jsonl",
+      "sha": "2c5b74ba7e015602195d2276a7386897d2cfcccc"
+    }
+  ],
+  "classification": {
+    "source": 19,
+    "task": 13,
+    "solution": 11,
+    "unrelated": 47,
+    "criteria": 2,
+    "review": 1,
+    "archive": 7
+  },
+  "full_checkpoint_files": [
+    "r63_labels_000_009.jsonl",
+    "r63_labels_010_019.jsonl",
+    "r63_labels_020_029.jsonl",
+    "r63_labels_030_039.jsonl",
+    "r63_labels_050_059.jsonl",
+    "r63_labels_060_069.jsonl"
+  ],
+  "compact_checkpoint_files": [
+    "r63_labels_compact_40_49.jsonl",
+    "r63_labels_compact_70_79.jsonl",
+    "r63_labels_compact_80_89.jsonl",
+    "r63_labels_compact_90_99.jsonl"
+  ],
+  "canonical_merged": 0,
+  "unprocessed_raw_deleted": false,
+  "needs": "Expand 40 compact rows using resource shard and raw occurrences, then merge all 100 into link_labels.jsonl with current SHA. Check cross-shard occurrences when available."
+}
