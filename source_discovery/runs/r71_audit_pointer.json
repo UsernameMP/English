@@ -1,0 +1,37 @@
+{
+  "cycle": 71,
+  "found_at": "2026-10-15",
+  "source_discovery_audit": [
+    {
+      "scope": "O2",
+      "kind": "2024_task_publication_gap",
+      "evidence": "Official 2024 index marks problem papers EM BREVE; answer keys visible",
+      "origin": "https://olimpiada.maredeciencia.eco.br/edicoes/o2-2024/"
+    },
+    {
+      "scope": "O2",
+      "kind": "cross_year_level_mapping",
+      "evidence": "2021 Fundamental I/II and Médio; 2022-25 Prova 1-5 plus adapted categories; verify equivalence and 2026 release",
+      "origin": "https://olimpiada.maredeciencia.eco.br/edicoes/"
+    },
+    {
+      "scope": "ITYM",
+      "kind": "participant_work_vs_official_solution",
+      "evidence": "2009-2025 PROBLEMS, SOLUTIONS OF THE TEAMS, WRITTEN REVIEWS are distinct sections with Drive links; check rights",
+      "origin": "https://www.itym.org/archive"
+    },
+    {
+      "scope": "ITYM",
+      "kind": "redirect_navigation",
+      "evidence": "Google Sites fragment redirects and archive year results not to be treated as tasks",
+      "origin": "https://www.itym.org/archive"
+    },
+    {
+      "scope": "French Engineering Olympiad",
+      "kind": "research_project_rubrics",
+      "evidence": "2023/24 project presentations visible; no confirmed rubric or task corpus",
+      "origin": "https://www.sciences-ingenieur-f1.fr/olympiades/"
+    }
+  ],
+  "status": "checkpoint_only_backlog_write_blocked"
+}
