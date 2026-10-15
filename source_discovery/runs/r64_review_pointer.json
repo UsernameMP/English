@@ -1,0 +1,44 @@
+{
+  "cycle": "hourly-20261015T010826000Z-r64",
+  "resource_shard": "resource_000033.jsonl",
+  "resource_sha": "7233a8706eb42cf1179b41d8c0efff512b2da6ae",
+  "resource_rows": "0-99",
+  "raw_shards": {
+    "batch_000033": "2c5b74ba7e015602195d2276a7386897d2cfcccc",
+    "batch_000034": "c6e14d2cac52736a04f9955871748c83cd5db83c"
+  },
+  "verified_unique_resources": 100,
+  "labels_checkpointed": 100,
+  "classification": {
+    "task": 51,
+    "solution": 49
+  },
+  "checkpoint_files": [
+    "r64_labels_000_009.jsonl",
+    "r64_labels_010_019.jsonl",
+    "r64_labels_020_024.jsonl",
+    "r64_labels_025_029.jsonl",
+    "r64_labels_030_034.jsonl",
+    "r64_labels_035_039.jsonl",
+    "r64_labels_040_044.jsonl",
+    "r64_labels_045_049.jsonl",
+    "r64_labels_050_054.jsonl",
+    "r64_labels_055_059.jsonl",
+    "r64_labels_060_069.jsonl",
+    "r64_labels_070_074.jsonl",
+    "r64_labels_075_079.jsonl",
+    "r64_labels_080_084.jsonl",
+    "r64_labels_085_089.jsonl",
+    "r64_labels_095_099.jsonl",
+    "r64_labels_090.jsonl",
+    "r64_labels_091.jsonl",
+    "r64_labels_092.jsonl",
+    "r64_labels_093.jsonl",
+    "r64_labels_094.jsonl"
+  ],
+  "canonical_merged": 0,
+  "canonical_update_blocker": "connector safety check on large link_labels.jsonl update",
+  "next_resource_shard": "resource_000034.jsonl",
+  "sequential_cursor_unchanged": "batch_000006:24",
+  "binary_downloads": 0
+}
