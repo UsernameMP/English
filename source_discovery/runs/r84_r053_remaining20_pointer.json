@@ -1,0 +1,52 @@
+{
+  "cycle": "r84",
+  "resource_shard": "resource_000053.jsonl",
+  "raw_shards": [
+    "batch_000094.jsonl",
+    "batch_000095.jsonl"
+  ],
+  "ranges": [
+    {
+      "rows": "5-9",
+      "types": [
+        "unrelated",
+        "unrelated",
+        "source",
+        "solution",
+        "unrelated"
+      ]
+    },
+    {
+      "rows": "15-19",
+      "types": [
+        "unrelated",
+        "unrelated",
+        "unrelated",
+        "unrelated",
+        "source"
+      ]
+    },
+    {
+      "rows": "55-59",
+      "types": [
+        "unrelated",
+        "unrelated",
+        "unrelated",
+        "unrelated",
+        "unrelated"
+      ]
+    },
+    {
+      "rows": "65-69",
+      "types": [
+        "unrelated",
+        "unrelated",
+        "unrelated",
+        "unrelated",
+        "source"
+      ]
+    }
+  ],
+  "resolution": "Row index references resource_id, URL and first raw occurrence; all raw records retained. Expand before canonical merge.",
+  "method": "organizer HTML headings and source/raw context; no PDF/DOC contents downloaded"
+}
