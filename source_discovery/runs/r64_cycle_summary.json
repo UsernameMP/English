@@ -1,0 +1,75 @@
+{
+  "cycle": "hourly-20261015T010826000Z-r64",
+  "date": "2026-10-15",
+  "trigger": {
+    "updated": true,
+    "commit_sha": "144dc212cc12f75a236cfc864c9a8affb8eb6a74",
+    "new_blob_sha": "a85fe0ef4bc0a76d61b6366e33e1b2cbb5068c15",
+    "crawler_execution_evidence": "crawl_state blob changed after trigger and new links/resources shards committed",
+    "action_run_status": "not_independently_confirmed"
+  },
+  "discovery": {
+    "new_verified_archive_pages": 8,
+    "checkpoints": [
+      "discovery_20261015_010826_r64_01.jsonl",
+      "discovery_20261015_010826_r64_02.jsonl",
+      "discovery_20261015_010826_r64_03.jsonl",
+      "discovery_20261015_010826_r64_04.jsonl"
+    ],
+    "canonical_merged": 0,
+    "canonical_blocker": "update_file safety check; next merge_sources.py run may ingest discovery_*.jsonl"
+  },
+  "review": {
+    "resource_shard": "resource_000033.jsonl",
+    "resource_sha": "7233a8706eb42cf1179b41d8c0efff512b2da6ae",
+    "rows": "0-99",
+    "unique_resource_ids": 100,
+    "raw_shards": [
+      "batch_000033.jsonl",
+      "batch_000034.jsonl"
+    ],
+    "raw_id_url_matches": 100,
+    "duplicate_canonical_urls": 0,
+    "classification": {
+      "task": 51,
+      "solution": 49
+    },
+    "full_labels_in_checkpoints": 100,
+    "checkpoint_files": 21,
+    "pointer": "r64_review_pointer.json",
+    "canonical_merged": 0,
+    "canonical_blocker": "update_file safety check",
+    "next_resource_shard": "resource_000034.jsonl",
+    "cursor_unchanged": "batch_000006:24"
+  },
+  "audit": {
+    "new_backlog_rows": 7,
+    "canonical_merged": 7,
+    "commit_sha": "ae2cbe3d5ffaa1aa8b245c9341f314345f7e5b4f",
+    "key_finding": "NACLO 2024 Round 2 solutions and individual problems explicitly marked unavailable on official archive page"
+  },
+  "canonical_state": {
+    "sources": 572,
+    "labels": 1003,
+    "backlog": 113,
+    "resource_shards_last": "resource_000834.jsonl",
+    "last_resource_shard_rows": 63,
+    "unique_url_count_inferred_from_contiguous_100_row_shards": 83363,
+    "html_queue": "not directly readable; last earlier confirmed 38438",
+    "mime_observations": 691,
+    "pdf_mime": 443,
+    "pdf_without_pdf_extension": 290
+  },
+  "constraints": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "extra_automation_instances": 0
+  },
+  "blockers": [
+    "sources.jsonl update_file blocked; 8 records in discovery checkpoints",
+    "link_labels.jsonl update_file blocked; 100 full labels in 21 checkpoints",
+    "review_state.json update_file blocked; noncontiguous review pointer saved",
+    "workflow final status unavailable via connected commit-run lookup"
+  ]
+}
