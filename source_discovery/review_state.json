@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-14T04:07:10.554Z",
+  "updated_at": "2026-10-15T09:13:00Z",
   "deferred_shards": [
     1,
     2,
@@ -134,25 +134,35 @@
     "sequential_cursor_moved": false
   },
   "latest_noncontiguous_review": {
-    "cycle": "hourly-20261014T040020630Z-r43",
-    "resource_shard": "resource_000012.jsonl",
+    "cycle": "hourly-20261015T090820000Z-r72",
+    "resource_shard": "resource_000041.jsonl",
     "row_range": "0-99",
-    "raw_shard": "batch_000012.jsonl",
     "unique_resources": 100,
-    "types": {
-      "task": 75,
-      "archive": 25
+    "raw_shards": [
+      "batch_000040.jsonl",
+      "batch_000041.jsonl",
+      "batch_000042.jsonl",
+      "batch_000043.jsonl",
+      "batch_000044.jsonl"
+    ],
+    "counts": {
+      "source": 5,
+      "task": 18,
+      "archive": 25,
+      "participant_work": 18,
+      "unrelated": 33,
+      "review": 1
     },
     "canonical_merged": 0,
-    "checkpointed": 100,
-    "full_labels_checkpointed": 89,
-    "compact_labels_require_expansion": 11,
-    "next_resource_shard": "resource_000013.jsonl",
-    "cursor_unchanged": true,
-    "checkpoint_prefixes": [
-      "labels_checkpoint_20261014_040020_r43_km_",
-      "r43_km_compact_",
-      "r43_km_label_row_"
-    ]
+    "full_labels_checkpointed": 90,
+    "compact_labels_checkpointed": 10,
+    "next_resource_shard": "resource_000042.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "resource_review_cursor": {
+    "next_resource_shard": "resource_000042.jsonl",
+    "last_completed_shard": "resource_000041.jsonl",
+    "last_completed_cycle": "hourly-20261015T090820000Z-r72",
+    "note": "Noncontiguous resource cursor; raw sequential cursor retained"
   }
 }
