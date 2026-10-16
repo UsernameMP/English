@@ -67,5 +67,23 @@
   "audit_backlog_added": 10,
   "raw_records_deleted": 0,
   "binary_downloads": 0,
-  "dropbox_changes": 0
+  "dropbox_changes": 0,
+  "actions_completed_at": "2026-10-16T13:04:04Z",
+  "last_resource_shard": "resource_001010.jsonl",
+  "last_resource_shard_rows": 65,
+  "unique_indexed_urls": 100965,
+  "canonical_sources_at_last_read": 782,
+  "canonical_labels_at_last_read": 1203,
+  "canonical_backlog_updated_commit": "8451a3b63ae169078cf47d37d1d0bf569c35bbe1",
+  "merge_labels_fix_commit": "680830e0c7b720204a2b3634a90888060a3f763f",
+  "review_state_update": "blocked",
+  "crawler_last_run": {
+    "html_pages": 60,
+    "new_links": 2037,
+    "pending_pages": 47399,
+    "blocked_or_failed": 570
+  },
+  "mime_observations": 1156,
+  "pdf_mime_observations": 614,
+  "pdf_without_literal_dot_pdf": 442
 }
