@@ -1,0 +1,15 @@
+{
+  "cycle": "r101",
+  "audit": {
+    "daryn": "Plans are not tasks",
+    "jpho": "Commentary not verified as rubric",
+    "tubitak": "Online quiz not historical exam",
+    "venezuela": "Grade/year/round gaps",
+    "salamanca": "Scoring criteria not verified",
+    "cuco": "2020-2025 papers not verified",
+    "omapa": "Post-2015 book format",
+    "tcho22": "Preparatory materials only",
+    "ufrn": "Live HTML returned 502"
+  },
+  "next": "resource_000071.jsonl"
+}
