@@ -1,0 +1,17 @@
+{
+  "cycle": "hourly-20261016T005958000Z-r88",
+  "canonical_review_state_update": "blocked_by_connector_safety",
+  "resource_review_cursor": {
+    "last_completed_shard": "resource_000057.jsonl",
+    "next_resource_shard": "resource_000058.jsonl",
+    "unique_reviewed": 100,
+    "canonical_merged": 0,
+    "checkpoint": "runs/r88_labels_resource_000057.jsonl"
+  },
+  "r87_already_canonical_merged": {
+    "resource_shard": "resource_000056.jsonl",
+    "count": 100
+  },
+  "raw_cursor_unchanged": "batch_000006.jsonl:24",
+  "older_r85_r86_pending": true
+}
