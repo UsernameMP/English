@@ -1,0 +1,14 @@
+{
+  "resource_shard": "resource_000075.jsonl",
+  "row_ranges": [
+    "10-19",
+    "85-94"
+  ],
+  "labels": [
+    "unrelated",
+    "unrelated"
+  ],
+  "source": "Daryn preparatory and pedagogical materials",
+  "raw_occurrence_ids": "Use first_occurrence_id from resource shard; original raw context batch_000182 through batch_000185",
+  "state": "full labels not published; retain for later expansion"
+}
