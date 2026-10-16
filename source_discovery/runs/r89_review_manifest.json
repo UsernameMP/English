@@ -1,0 +1,70 @@
+{
+  "cycle": "hourly-20261016T020408000Z-r89",
+  "reviewed_at": "2026-10-16",
+  "resource_shard": "source_discovery/resources_shards/resource_000058.jsonl",
+  "rows": "0-99",
+  "unique_resources": 100,
+  "first_occurrences_verified": 100,
+  "raw_shards": [
+    "batch_000100.jsonl",
+    "batch_000101.jsonl",
+    "batch_000102.jsonl",
+    "batch_000104.jsonl",
+    "batch_000106.jsonl",
+    "batch_000107.jsonl",
+    "batch_000108.jsonl"
+  ],
+  "type_ranges": {
+    "unrelated": [
+      "0-7",
+      "9-17",
+      "19-21",
+      "26-32",
+      "35-41",
+      "66",
+      "69-77",
+      "86-87",
+      "93-94"
+    ],
+    "source": [
+      "8",
+      "18",
+      "42-65",
+      "67-68",
+      "78-85",
+      "88-92",
+      "95-96",
+      "98-99"
+    ],
+    "solution": [
+      "22-25"
+    ],
+    "task": [
+      "33-34"
+    ],
+    "archive": [
+      "97"
+    ]
+  },
+  "counts": {
+    "unrelated": 48,
+    "source": 45,
+    "solution": 4,
+    "task": 2,
+    "archive": 1
+  },
+  "verified_html_context": [
+    "https://bmos.ukmt.org.uk/news/20040713-00-imo.shtml",
+    "https://bmos.ukmt.org.uk/news/20040711-00-imopapers.shtml",
+    "https://bmos.ukmt.org.uk/solutions/bmo1-2006/",
+    "https://www.matematickaolympiada.cz/mo-pro-zs/rocnik",
+    "https://wiskundeolympiade.nl/leerlingen/finaletraining"
+  ],
+  "label_files_saved": [
+    "runs/r89_labels_r058_00_04.jsonl",
+    "runs/r89_labels_r058_05_12.jsonl",
+    "runs/r89_review_r058_compact_35_56.json"
+  ],
+  "pending": "Expand all non-full labels using resource_id and raw occurrence provenance before canonical merge; do not advance raw cursor",
+  "next_resource_shard": "resource_000059.jsonl"
+}
