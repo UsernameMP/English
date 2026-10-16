@@ -1,0 +1,74 @@
+{
+  "cycle": "hourly-20261016T220324000Z-r109",
+  "date": "2026-10-17",
+  "branch": "rift-source-index",
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "645901cee1c2c22e234dbb9a85ec3a163ad066b6",
+    "actions_run": 38973426725,
+    "conclusion": "success",
+    "completed_at": "2026-10-16T22:05:57Z"
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_links": 3141,
+    "unique_resource_urls": 107907,
+    "pending_pages": 49957,
+    "blocked_or_failed_aggregate": 600,
+    "source_registry_after_workflow": 816,
+    "source_merge_added_in_workflow": 2,
+    "source_merge_note": "r109 discovery checkpoint created after workflow checkout; four genuinely new URLs remain pending canonical merge"
+  },
+  "discovery": {
+    "verified_index_urls_in_checkpoint": 5,
+    "already_canonical_duplicate": 1,
+    "duplicate_url": "https://www.iacompetitions.com/resources-national-history-bowl/",
+    "genuinely_new_urls": 4,
+    "checkpoint": "runs/discovery_20261017_010324_r109.jsonl",
+    "canonical_merge": "blocked; checkpoint will be deduplicated by merge_sources.py on next run",
+    "canonical_sources_update_error": "safety_checks_blocked"
+  },
+  "review": {
+    "resource_shard": "resource_000078.jsonl",
+    "row_range": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences_in_examined_shards": 115,
+    "raw_shards": [
+      "batch_000194.jsonl",
+      "batch_000195.jsonl",
+      "batch_000197.jsonl",
+      "batch_000198.jsonl"
+    ],
+    "counts_unique": {
+      "unrelated": 33,
+      "archive": 61,
+      "source": 3,
+      "solution": 1,
+      "task": 1,
+      "review": 1
+    },
+    "full_labels_published": 115,
+    "checkpoint_files": 12,
+    "checkpoint_pattern": "runs/labels_checkpoint_20261017_010324_r109_r078_part*.jsonl",
+    "canonical_merged": 0,
+    "global_occurrence_exhaustiveness": "not asserted"
+  },
+  "audit": {
+    "new_findings": 9,
+    "checkpoint": "runs/r109_audit_backlog_patch.jsonl",
+    "canonical_backlog_update": "blocked"
+  },
+  "queue": {
+    "next_operational_shard": "resource_000079.jsonl",
+    "canonical_resource_cursor": "resource_000056.jsonl",
+    "review_state_update": "blocked",
+    "legacy_raw_cursor": "batch_000006.jsonl:24",
+    "pending_prior_checkpoints": "not reconciled"
+  },
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_writes": 0,
+    "schedule_changes": 0,
+    "raw_occurrences_deleted": 0
+  }
+}
