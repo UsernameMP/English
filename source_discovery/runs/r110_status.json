@@ -1,0 +1,23 @@
+{
+  "cycle": "hourly-20261016T230741423Z-r110",
+  "reviewed_resource_shard": "resource_000079.jsonl",
+  "rows": "0-99",
+  "unique_resources": 100,
+  "raw_occurrences": 100,
+  "raw_shards": [
+    "batch_000198.jsonl",
+    "batch_000199.jsonl"
+  ],
+  "labels": {
+    "task": 69,
+    "archive": 31
+  },
+  "canonical_labels_merged": 100,
+  "operational_next_shard": "resource_000080.jsonl",
+  "canonical_review_state_cursor": "resource_000056.jsonl",
+  "review_state_update": "blocked_by_connector_safety_checks",
+  "sources_canonical_added": 3,
+  "backlog_canonical_added": 6,
+  "workflow_trigger_commit": "750050793ed297515522a249c8788c960cd904c8",
+  "binary_downloads": 0
+}
