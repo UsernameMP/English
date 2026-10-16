@@ -15,7 +15,8 @@
   "raw_occurrences": 101,
   "source_rows": [
     16,
-    18
+    18,
+    "55-99"
   ],
   "review_rows": [
     1,
@@ -42,7 +43,23 @@
     52,
     53
   ],
-  "unrelated_rows": "all remaining indices 0-99",
+  "unrelated_rows": "remaining rows in 0-54",
   "binary_documents": "rows 55-99 are regulations linked under Pravila i polozhenie, not contest papers",
-  "note": "Classifications based on raw anchor and parent, selected official HTML verification. Full labels require expansion with resource_id and raw occurrence IDs. No binaries fetched."
+  "note": "Classifications based on raw anchor and parent, selected official HTML verification. Full labels require expansion with resource_id and raw occurrence IDs. No binaries fetched.",
+  "counts": {
+    "source": 47,
+    "review": 23,
+    "unrelated": 30
+  },
+  "full_labels_published": 70,
+  "raw_occurrences_full_published": 70,
+  "pending_full_label_rows": [
+    "10-14",
+    "65-79",
+    "85-89",
+    "95-99"
+  ],
+  "pending_full_label_occurrences": 31,
+  "source_document_note": "Regulation PDFs from Daryn rules index are source (auxiliary metadata), not task or criteria; no body downloaded",
+  "canonical_merged": false
 }
