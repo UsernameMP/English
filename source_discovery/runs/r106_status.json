@@ -1,0 +1,29 @@
+{
+  "cycle": "r106",
+  "resource_shard": "resource_000075.jsonl",
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 98,
+      "archive": 1,
+      "review": 1
+    },
+    "full_labels_checkpointed": 80,
+    "compact_pending": 20,
+    "pending_rows": "10-19,85-94"
+  },
+  "discovery": {
+    "verified_new_sources": 3,
+    "canonical_updated": true
+  },
+  "audit_topics": [
+    "Bastau 2026 folder not individually verified",
+    "Bastau protocol URL malformed",
+    "OPMAT 2022-2026 incomplete round pairs",
+    "Al-Khwarizmi archive subject/year and provenance gaps",
+    "Thai historical mirror solutions and rights unknown",
+    "Vietnam school archive direct access 403"
+  ],
+  "binary_downloads": 0
+}
