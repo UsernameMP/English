@@ -1,0 +1,67 @@
+{
+  "cycle": "hourly-20261016T000810000Z-r87",
+  "timestamp": "2026-10-16T00:08:10Z",
+  "branch": "rift-source-index",
+  "pr188_merged": true,
+  "trigger_commit": "5c930529181f5cad76ecc673c6ba291660fa8bf5",
+  "requested_workflow": {
+    "run_id": 38827760613,
+    "conclusion": "success",
+    "html_pages": 60,
+    "new_raw_links": 3758,
+    "unique_resource_urls": 96382,
+    "html_frontier": 45500
+  },
+  "extra_workflow": {
+    "run_id": 38828124229,
+    "conclusion": "success",
+    "reason": "sources.jsonl update matched workflow push path; not explicitly requested",
+    "html_pages": 60,
+    "new_raw_links": 815,
+    "unique_resource_urls": 96913,
+    "html_frontier": 45789
+  },
+  "discovery": {
+    "new_verified_sources": 7,
+    "canonical_sources": 732,
+    "canonical_commit": "21129089f100261c1d029c33070a79a5c6a016d7",
+    "checkpoint": "runs/discovery_20261016_000810_r87.jsonl"
+  },
+  "review": {
+    "resource_shard": "resource_000056.jsonl",
+    "rows": "0-99",
+    "unique_resources": 100,
+    "raw_shards": [
+      "batch_000097.jsonl",
+      "batch_000098.jsonl",
+      "batch_000099.jsonl"
+    ],
+    "counts": {
+      "task": 11,
+      "solution": 2,
+      "source": 22,
+      "unrelated": 61,
+      "review": 4
+    },
+    "canonical_labels": 1203,
+    "canonical_added": 100,
+    "canonical_commit": "e61321ced24f5e09240c84a248ad03dbcd486a38",
+    "next_resource_shard": "resource_000057.jsonl",
+    "canonical_review_state_update": "blocked",
+    "patch_checkpoint": "runs/r87_review_state_patch.json"
+  },
+  "audit": {
+    "new_findings": 8,
+    "canonical_backlog_update": "blocked",
+    "checkpoint_manifest": "runs/r87_backlog_manifest.json"
+  },
+  "mime": {
+    "observations": 1037,
+    "pdf": 572,
+    "pdf_without_dotpdf": 400
+  },
+  "raw_cursor": "batch_000006.jsonl:24",
+  "binary_downloads": 0,
+  "dropbox_modified": false,
+  "schedule_modified": false
+}
