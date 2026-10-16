@@ -1,0 +1,264 @@
+{
+  "cycle": "hourly-20261016T200450000Z-r107",
+  "resource_shard": "resource_000076.jsonl",
+  "raw_shards": [
+    "batch_000185.jsonl",
+    "batch_000186.jsonl",
+    "batch_000187.jsonl",
+    "batch_000188.jsonl",
+    "batch_000189.jsonl",
+    "batch_000190.jsonl",
+    "batch_000192.jsonl"
+  ],
+  "full_labels_published": 75,
+  "compact_pending": 35,
+  "occurrences": [
+    {
+      "id": "7bd6227075ff7c061d0b5b01",
+      "resource_id": "8d17e01c7bc73482a2c5ba35",
+      "row": 20,
+      "shard": "batch_000186.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "c1948c8769db1827f26a865d",
+      "resource_id": "833f850b017f100929775b70",
+      "row": 21,
+      "shard": "batch_000186.jsonl",
+      "type": "archive"
+    },
+    {
+      "id": "7fbd9634c78312b22eff61e6",
+      "resource_id": "6894e909567a02ad8c7840bc",
+      "row": 22,
+      "shard": "batch_000186.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "d54cf07f5e498b2a461fa0a2",
+      "resource_id": "d75befa7efc9771d61b87947",
+      "row": 23,
+      "shard": "batch_000186.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "f4791e0e31ee5d297b87a216",
+      "resource_id": "5880d3c8ee0d73cdcc9e7930",
+      "row": 24,
+      "shard": "batch_000186.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "9bfad87826bda35eba5dad32",
+      "resource_id": "e1b1bd8d0e303f07b236dca6",
+      "row": 25,
+      "shard": "batch_000186.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "cc5e31d4e9a628063e42a179",
+      "resource_id": "6a05b7560bf62913221a0825",
+      "row": 26,
+      "shard": "batch_000186.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "edf078c15c811d9f7fdb4b71",
+      "resource_id": "bc893513f13a44796abde1ce",
+      "row": 27,
+      "shard": "batch_000186.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "daad3561dd72869962a154c6",
+      "resource_id": "41149765d1b7a5ed47d8f0a5",
+      "row": 28,
+      "shard": "batch_000186.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "2c407b9156e22fd402a26ad3",
+      "resource_id": "a298b6caff3eeb28b1f4facd",
+      "row": 29,
+      "shard": "batch_000186.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "36de299565d921fb852472a3",
+      "resource_id": "61634336a06aec9d478eebcf",
+      "row": 55,
+      "shard": "batch_000186.jsonl",
+      "type": "task"
+    },
+    {
+      "id": "739d48d2cef70ca441db6b03",
+      "resource_id": "7a19660ce6274c19d99c676d",
+      "row": 56,
+      "shard": "batch_000186.jsonl",
+      "type": "task"
+    },
+    {
+      "id": "3c18c7ddd40d9a351d8b9c60",
+      "resource_id": "15df5df24148598230a65a07",
+      "row": 57,
+      "shard": "batch_000186.jsonl",
+      "type": "task"
+    },
+    {
+      "id": "11257f554b0c2b17bfeaca8c",
+      "resource_id": "e2ea5ee231a6ee303fd28afe",
+      "row": 58,
+      "shard": "batch_000186.jsonl",
+      "type": "task"
+    },
+    {
+      "id": "5773388204d916016279eb6a",
+      "resource_id": "834e7b18e274233937952621",
+      "row": 59,
+      "shard": "batch_000186.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "3fa0a8b1cb89a54da0826831",
+      "resource_id": "d4d4129d43f29dab28169392",
+      "row": 60,
+      "shard": "batch_000186.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "04d3c5cb8cadbaedd31c1794",
+      "resource_id": "c6074a93ad4231d197b947be",
+      "row": 61,
+      "shard": "batch_000186.jsonl",
+      "type": "archive"
+    },
+    {
+      "id": "405519b45b55faa4bf58b80e",
+      "resource_id": "d7505f09e3f1abb348175b0f",
+      "row": 62,
+      "shard": "batch_000186.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "64b32d259a1d6dd8f76c3505",
+      "resource_id": "31880471026ec2ef94d18421",
+      "row": 63,
+      "shard": "batch_000186.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "1413814c3a5aad0d51c07094",
+      "resource_id": "517338c80cd18a07361fb399",
+      "row": 64,
+      "shard": "batch_000186.jsonl",
+      "type": "source"
+    },
+    {
+      "id": "5d3cd7cbed2c29f2ab6acc2b",
+      "resource_id": "e9b40e4f39fedf4b184268b5",
+      "row": 65,
+      "shard": "batch_000187.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "59296fed6358c1d3cfaf18b2",
+      "resource_id": "4d2b9466583cb4700b8ef8fd",
+      "row": 66,
+      "shard": "batch_000187.jsonl",
+      "type": "source"
+    },
+    {
+      "id": "155611d88363fdde1c6f0a5e",
+      "resource_id": "06aa6cd619b4d3f57a2e6562",
+      "row": 67,
+      "shard": "batch_000187.jsonl",
+      "type": "solution"
+    },
+    {
+      "id": "ea10555b9b3b484577586d81",
+      "resource_id": "40dd7f3f6fa44cb720f5bf1d",
+      "row": 68,
+      "shard": "batch_000187.jsonl",
+      "type": "solution"
+    },
+    {
+      "id": "ceab763084a43df9d3bb223a",
+      "resource_id": "573dd4aa414d1765aae81de7",
+      "row": 69,
+      "shard": "batch_000187.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "e543d106486f8a542a2cfe28",
+      "resource_id": "7fca997ba7f307702ef835fa",
+      "row": 86,
+      "shard": "batch_000188.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "95967c77be52b9b59213450e",
+      "resource_id": "d53ea97806e806753d47647a",
+      "row": 85,
+      "shard": "batch_000189.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "849465971fd71fa538af10fb",
+      "resource_id": "1884b0e19ab0b0b707d1f2ec",
+      "row": 84,
+      "shard": "batch_000189.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "cfbe9aa75fd7f90d92c038b8",
+      "resource_id": "58ba8e9cfd8ee1fff1083b24",
+      "row": 87,
+      "shard": "batch_000189.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "03f7b54dcb4267d63c7b7894",
+      "resource_id": "d53ea97806e806753d47647a",
+      "row": 85,
+      "shard": "batch_000189.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "685706b93923c532698a5165",
+      "resource_id": "1884b0e19ab0b0b707d1f2ec",
+      "row": 84,
+      "shard": "batch_000189.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "922301000d510594e161b8c4",
+      "resource_id": "6e06c18733ba53efd2c63104",
+      "row": 88,
+      "shard": "batch_000189.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "b416f54e704c70ddb97633a1",
+      "resource_id": "f561f733acfb6e1ff97bdf9a",
+      "row": 89,
+      "shard": "batch_000189.jsonl",
+      "type": "source"
+    },
+    {
+      "id": "cd9bf7d616b9e6fe7a1bd90b",
+      "resource_id": "d53ea97806e806753d47647a",
+      "row": 85,
+      "shard": "batch_000189.jsonl",
+      "type": "unrelated"
+    },
+    {
+      "id": "4396b57cfaa9ea21106a6955",
+      "resource_id": "1884b0e19ab0b0b707d1f2ec",
+      "row": 84,
+      "shard": "batch_000189.jsonl",
+      "type": "unrelated"
+    }
+  ],
+  "restore": "Join each raw id with raw shard; resource row with resource_shard; add full provenance, metadata, rationale, confidence; avoid duplicate raw id; no binary downloads",
+  "note": "CBSE source row 96 correction published separately; r076 100 unique resources / 110 raw occurrences"
+}
