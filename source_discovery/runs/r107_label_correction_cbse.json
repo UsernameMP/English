@@ -1,0 +1,8 @@
+{
+  "raw_occurrence_id": "28a6d917e47272bf11f8f339",
+  "resource_id": "6d9c0c5712525799936bce6f",
+  "correct_type": "unrelated",
+  "reason": "CBSE board homepage linked as administrative partner; not an Olympiad task or archive",
+  "supersedes": "runs/labels_checkpoint_20261016_2005_r107_r076_part06.jsonl",
+  "cycle": "hourly-20261016T200450000Z-r107"
+}
