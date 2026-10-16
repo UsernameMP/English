@@ -1,0 +1,20 @@
+{
+  "cycle": "r104",
+  "review_shard": "resource_000073.jsonl",
+  "unique_urls": 100,
+  "occurrences": 100,
+  "labels_full": 95,
+  "labels_compact": 5,
+  "remaining_rows": [
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "next_shard": "resource_000074.jsonl",
+  "discovery_checkpoint": "discovery_20261016_1704_r104.jsonl",
+  "backlog_checkpoint": "r104_backlog_patch.jsonl",
+  "run_trigger_update": "rejected",
+  "action_run_new": false
+}
