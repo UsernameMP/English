@@ -1,0 +1,25 @@
+{
+  "cycle": "r98",
+  "date": "2026-10-16",
+  "trigger_update": "blocked",
+  "last_confirmed_actions_run": 38878291556,
+  "discovery_verified": 5,
+  "discovery_checkpoint": "discovery_20261016_110132_r98.jsonl",
+  "review_resource_shard": "resource_000067.jsonl",
+  "reviewed_unique": 100,
+  "raw_occurrences": 101,
+  "classification": {
+    "task": 52,
+    "archive": 1,
+    "unrelated": 47
+  },
+  "full_labels_saved": 50,
+  "full_labels_blocked": 50,
+  "review_rows_saved": "50-99",
+  "review_rows_pending": "0-49",
+  "audit_notes_pending": 10,
+  "canonical_merge": "pending",
+  "next_shard": "resource_000068.jsonl",
+  "binary_downloads": 0,
+  "dropbox_changes": 0
+}
