@@ -1,0 +1,1 @@
+{"cycle":"r87","status":"canonical_review_state_update_blocked","resource_review_cursor":{"last_completed_shard":"resource_000056.jsonl","next_resource_shard":"resource_000057.jsonl","canonical_labels_merged":100},"raw_cursor_unchanged":"batch_000006.jsonl:24","counts":{"task":11,"solution":2,"source":22,"unrelated":61,"review":4},"older_r85_r86_debt_still_pending":true}
