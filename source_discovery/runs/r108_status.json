@@ -1,0 +1,58 @@
+{
+  "cycle": "hourly-20261016T210031000Z-r108",
+  "date": "2026-10-16",
+  "trigger": {
+    "commit": "f0fd968e9fa296e43d70c912bdf66fcb5c7c2f1b",
+    "actions_run": 38966364283,
+    "conclusion": "success"
+  },
+  "discovery": {
+    "verified_new_sources": 2,
+    "github_checkpoints": [
+      "runs/discovery_20261016_210031_r108_azoo.jsonl",
+      "runs/discovery_20261016_210031_r108_ua.jsonl"
+    ],
+    "canonical_merge": "pending next merge_sources.py execution; workflow checkout predated checkpoint commits"
+  },
+  "review": {
+    "resource_shard": "resource_000077.jsonl",
+    "rows": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000192.jsonl",
+      "batch_000193.jsonl",
+      "batch_000194.jsonl"
+    ],
+    "counts": {
+      "solution": 35,
+      "archive": 8,
+      "source": 8,
+      "review": 11,
+      "unrelated": 38
+    },
+    "full_labels_published": 100,
+    "canonical_merged": 0,
+    "checkpoint_pattern": "runs/labels_checkpoint_20261016_210031_r108_r077_*.jsonl"
+  },
+  "audit": {
+    "issues": 7,
+    "checkpoints": [
+      "runs/r108_audit_patch_1.jsonl",
+      "runs/r108_audit_patch_2.jsonl",
+      "runs/r108_audit_patch_3.jsonl",
+      "runs/r108_audit_patch_4.jsonl"
+    ],
+    "canonical_backlog_update": "blocked"
+  },
+  "queue": {
+    "next_operational_shard": "resource_000078.jsonl",
+    "canonical_resource_cursor": "resource_000056.jsonl",
+    "canonical_review_state_update": "blocked"
+  },
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_writes": 0,
+    "schedule_changes": 0
+  }
+}
