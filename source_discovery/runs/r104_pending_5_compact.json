@@ -1,0 +1,43 @@
+{
+  "cycle": "r104",
+  "resource_shard": "resource_000073.jsonl",
+  "row_indices": [
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "type": "unrelated",
+  "country": "KZ",
+  "subject": "physics",
+  "evidence": "Daryn Olympiad Reserve School preparation lesson section",
+  "labels": [
+    {
+      "id": "7ce1134f08728decc652fce8",
+      "resource_id": "29ae53a8b863a52679965b18",
+      "raw_shard": "batch_000180.jsonl"
+    },
+    {
+      "id": "5775946c6f1adba50dc8a810",
+      "resource_id": "a44697c9d89bba5b4b93611f",
+      "raw_shard": "batch_000180.jsonl"
+    },
+    {
+      "id": "84ef296a8c852bf1fdb9ee52",
+      "resource_id": "ab3906a11a057fa838348ef5",
+      "raw_shard": "batch_000180.jsonl"
+    },
+    {
+      "id": "9949a89af9b99112ad2cb900",
+      "resource_id": "aa61028c33fa285890e35915",
+      "raw_shard": "batch_000180.jsonl"
+    },
+    {
+      "id": "625df0d13c8e3b7609d72b3d",
+      "resource_id": "6573c6d07717ab4d4f3e1b35",
+      "raw_shard": "batch_000180.jsonl"
+    }
+  ],
+  "requires_full_label_expansion": true
+}
