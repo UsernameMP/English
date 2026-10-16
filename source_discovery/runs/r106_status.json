@@ -11,11 +11,13 @@
     },
     "full_labels_checkpointed": 80,
     "compact_pending": 20,
-    "pending_rows": "10-19,85-94"
+    "pending_rows": "10-19,85-94",
+    "canonical_merged": 80
   },
   "discovery": {
     "verified_new_sources": 3,
-    "canonical_updated": true
+    "canonical_updated": true,
+    "canonical_added": 3
   },
   "audit_topics": [
     "Bastau 2026 folder not individually verified",
@@ -25,5 +27,16 @@
     "Thai historical mirror solutions and rights unknown",
     "Vietnam school archive direct access 403"
   ],
-  "binary_downloads": 0
+  "binary_downloads": 0,
+  "action": {
+    "run_id": 38952261747,
+    "trigger": "sources.jsonl update",
+    "status_at_check": "in_progress",
+    "run_url": "https://github.com/UsernameMP/English/actions/runs/38952261747"
+  },
+  "git_changes": {
+    "sources_commit": "da4f4f69edc79c31c7392e5a0cfcb11f4082c9bc",
+    "labels_commit": "ff0bc6b4ab30353f22cf31bf89dacceb006d1da0",
+    "audit_checkpoint": "d94718344f66a10f77f538581dde3ab999e19a44"
+  }
 }
