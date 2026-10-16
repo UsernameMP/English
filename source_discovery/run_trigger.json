@@ -1,1 +1,6 @@
-{"requested_at":"2026-10-16T00:59:58.000Z","cycle":"hourly-20261016T005958000Z-r88","cycle_number":88,"previous_cycle":"hourly-20261016T000810000Z-r87"}
+{
+  "requested_at": "2026-10-16T04:02:15.000Z",
+  "cycle": "hourly-20261016T040215000Z-r91",
+  "cycle_number": 91,
+  "previous_cycle": "hourly-20261016T005958000Z-r88"
+}
