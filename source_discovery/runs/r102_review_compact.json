@@ -1,0 +1,48 @@
+{
+  "cycle": "r102",
+  "resource_shard": "resource_000071.jsonl",
+  "row_range": [
+    0,
+    99
+  ],
+  "raw_shards": [
+    "batch_000176.jsonl",
+    "batch_000177.jsonl",
+    "batch_000178.jsonl",
+    "batch_000185.jsonl"
+  ],
+  "unique_resources": 100,
+  "raw_occurrences": 101,
+  "source_rows": [
+    16,
+    18
+  ],
+  "review_rows": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    15,
+    17,
+    30,
+    31,
+    33,
+    34,
+    39,
+    40,
+    41,
+    42,
+    44,
+    46,
+    47,
+    49,
+    50,
+    51,
+    52,
+    53
+  ],
+  "unrelated_rows": "all remaining indices 0-99",
+  "binary_documents": "rows 55-99 are regulations linked under Pravila i polozhenie, not contest papers",
+  "note": "Classifications based on raw anchor and parent, selected official HTML verification. Full labels require expansion with resource_id and raw occurrence IDs. No binaries fetched."
+}
