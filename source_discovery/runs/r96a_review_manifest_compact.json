@@ -1,1 +1,67 @@
-{"cycle":"r96a","resource_shard":"resource_000065.jsonl","rows":"0-99","resources":100,"occurrences":123,"raw_shards":"batch_000145..batch_000154","task":"74-86,88","solution":"1,87,89","criteria":"90,91","archive":"2,51","source":"48,70,72","review":"0,73,95-99","unrelated":"all other row indices","full_parts_saved":[2,4,6],"full_parts_pending":[1,3,5,7],"canonical_merged":0,"next_unreviewed":"resource_000066.jsonl","audit":["opaque ITYM Drive ID; rights and MIME unknown","rules link has misleading solutions anchor","results Drive links not task files","IMC 1994-95 malformed duplicated query","ICPC foundation archive scope unverified","http/https document alias not verified"],"note":"No binary bodies downloaded. r96 crawler already succeeded this hour; no second trigger."}
+{
+  "cycle": "r96a",
+  "resource_shard": "resource_000065.jsonl",
+  "rows": "0-99",
+  "resources": 100,
+  "occurrences": 123,
+  "raw_shards": "batch_000145..batch_000154",
+  "task": "74-86,88",
+  "solution": "1,87,89",
+  "criteria": "90,91",
+  "archive": "2,51",
+  "source": "48,70,72",
+  "review": "0,73,95-99",
+  "unrelated": "all other row indices",
+  "full_parts_saved": [
+    2,
+    4,
+    6
+  ],
+  "full_parts_pending": [
+    1,
+    3,
+    5,
+    7
+  ],
+  "canonical_merged": 0,
+  "next_unreviewed": "resource_000066.jsonl",
+  "audit": [
+    "opaque ITYM Drive ID; rights and MIME unknown",
+    "rules link has misleading solutions anchor",
+    "results Drive links not task files",
+    "IMC 1994-95 malformed duplicated query",
+    "ICPC foundation archive scope unverified",
+    "http/https document alias not verified"
+  ],
+  "note": "123 raw occurrences semantically classified for 100 unique URLs; 117 full label records saved, 6 require expansion; canonical merge pending; no duplicate crawler trigger",
+  "full_labels_confirmed": 117,
+  "compact_labels_pending": 6,
+  "pending_flat_occurrence_indices": [
+    15,
+    16,
+    17,
+    87,
+    88,
+    89
+  ],
+  "full_label_checkpoints": [
+    "r96a_labels_resource_000065_part02.jsonl",
+    "r96a_labels_resource_000065_part04.jsonl",
+    "r96a_labels_resource_000065_part06.jsonl",
+    "r96a_labels_r065_recovery_01.jsonl",
+    "r96a_labels_r065_recovery_05.jsonl",
+    "r96a_labels_r065_recovery_06.jsonl",
+    "r96a_labels_r065_recovery_08.jsonl",
+    "r96a_labels_r065_imc_tail_1.jsonl",
+    "r96a_labels_r065_imc_tail_2.jsonl",
+    "r96a_labels_r065_imc_tail_3.jsonl",
+    "r96a_labels_r065_recovery_small_01.jsonl",
+    "r96a_labels_r065_recovery_small_02.jsonl",
+    "r96a_labels_r065_recovery_small_03.jsonl",
+    "r96a_labels_r065_recovery_small_05.jsonl",
+    "r96a_labels_r065_recovery_small_06.jsonl",
+    "r96a_labels_r065_recovery_small_07.jsonl",
+    "r96a_labels_r065_recovery_small_08.jsonl",
+    "r96a_labels_r065_recovery_small_09.jsonl"
+  ]
+}
