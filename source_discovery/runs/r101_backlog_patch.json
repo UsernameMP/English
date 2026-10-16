@@ -1,0 +1,36 @@
+{
+  "cycle": "r101",
+  "status": "pending_canonical_backlog_merge",
+  "items": [
+    {
+      "scope": "Daryn",
+      "kind": "task_index_gap",
+      "topic": "Monthly plans 2023-2026 are administrative, not exam tasks",
+      "origin": "https://daryn.kz/plan-raboty/"
+    },
+    {
+      "scope": "JPhO",
+      "kind": "rubric_ambiguity",
+      "topic": "Prize-winning experimental report commentary not verified as official marking criteria",
+      "origin": "https://www.jpho.jp/updated.html"
+    },
+    {
+      "scope": "TUBITAK",
+      "kind": "type_hint_false_positive",
+      "topic": "Online quiz and announcements contain exam words but no confirmed historical tasks",
+      "origin": "http://bilimolimpiyatlari.tubitak.gov.tr/en"
+    },
+    {
+      "scope": "UFRN",
+      "kind": "transient_http_502",
+      "topic": "Past-paper index visible in search but live HTML 502; retry later",
+      "origin": "https://olimpiada.mat.ufrn.br/?page_id=27"
+    },
+    {
+      "scope": "Venezuela ORM",
+      "kind": "year_round_coverage",
+      "topic": "Grade and round year gaps; some targets repeated",
+      "origin": "https://ormve.org/matematica/"
+    }
+  ]
+}
