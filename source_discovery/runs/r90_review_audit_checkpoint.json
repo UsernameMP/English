@@ -1,0 +1,120 @@
+{
+  "cycle": "hourly-20261016T030444000Z-r90",
+  "timestamp": "2026-10-16T03:04:44Z",
+  "resource_shard": "source_discovery/resources_shards/resource_000059.jsonl",
+  "reviewed_rows": "0-99",
+  "unique_resources": 100,
+  "raw_occurrences_verified": 102,
+  "raw_shards": [
+    "batch_000108.jsonl",
+    "batch_000109.jsonl",
+    "batch_000111.jsonl",
+    "batch_000112.jsonl",
+    "batch_000114.jsonl",
+    "batch_000116.jsonl",
+    "batch_000117.jsonl",
+    "batch_000118.jsonl",
+    "batch_000119.jsonl",
+    "batch_000120.jsonl",
+    "batch_000121.jsonl",
+    "batch_000122.jsonl"
+  ],
+  "type_rows": {
+    "archive": [
+      0
+    ],
+    "source": [
+      1,
+      2,
+      75
+    ],
+    "review": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "unrelated": "all other row indices 0-99"
+  },
+  "counts": {
+    "archive": 1,
+    "source": 3,
+    "review": 4,
+    "unrelated": 92
+  },
+  "important_corrections": [
+    {
+      "row": 4,
+      "classification": "unrelated",
+      "reason": "Czech guide on improving problem-solving, not solutions despite weak hint"
+    },
+    {
+      "row": 97,
+      "classification": "unrelated",
+      "reason": "Canadian Mathematical Society 2027 AIP conference news, not task despite weak hint"
+    },
+    {
+      "row": 75,
+      "classification": "source",
+      "reason": "RSME Comisión de Olimpiadas organization entry point; not a paper"
+    }
+  ],
+  "duplicate_occurrences": [
+    {
+      "row": 20,
+      "parents": [
+        "https://www.matematickaolympiada.cz/",
+        "https://www.matematickaolympiada.cz/en/system/web-admin"
+      ]
+    },
+    {
+      "row": 22,
+      "parents": [
+        "https://www.matematickaolympiada.cz/",
+        "https://www.matematickaolympiada.cz/en/system/your-browser-is-outdated"
+      ]
+    }
+  ],
+  "metadata_note": "For every row, resource_id, URL, first_occurrence_id, first_parent_url, first_source_url, anchor_text and heading are preserved in the immutable resource shard. Full label expansion and canonical merge pending. No binary bodies read.",
+  "audit": [
+    {
+      "scope": "Klassieke Olympiaden NL",
+      "kind": "round_gap",
+      "note": "School archive lists rounds 1/2; third final round papers and marking models not confirmed. Adult translation contest discontinued 2026/27."
+    },
+    {
+      "scope": "COPTIOSH PL",
+      "kind": "stage_and_year_gap",
+      "note": "Five contest indexes linked; organizer's claim of complete tests unverified per-year/per-stage; inspect alternate archive paths."
+    },
+    {
+      "scope": "KLO KR",
+      "kind": "provenance_and_year_gap",
+      "note": "Secondary archive links papers/keys 2018/19-2025/26; older 2009-2016 entries private; organizer provenance requires independent check."
+    },
+    {
+      "scope": "Warsaw legal history PL",
+      "kind": "access_restriction",
+      "note": "Case studies referenced on university HTML and login-restricted Kampus; metadata only, no access bypass."
+    },
+    {
+      "scope": "Czech MO",
+      "kind": "false_positive_hints",
+      "note": "Row 4 guide mistaken for solution; source pages contain administrative PDFs, not contest documents."
+    },
+    {
+      "scope": "Canadian CMS",
+      "kind": "false_positive_hints",
+      "note": "Row 97 conference news mistaken for task; weak type_hint must not be used as ground truth."
+    },
+    {
+      "scope": "canonical",
+      "kind": "publication_gap",
+      "note": "Trigger update_file blocked by connector safety; canonical sources, labels, backlog, review_state not merged. r85-r89 checkpoints also require reconciliation."
+    }
+  ],
+  "next_resource_shard": "resource_000060.jsonl",
+  "canonical_cursor_unchanged": true,
+  "trigger_status": "update_file safety blocked; run_trigger remains r88",
+  "discovery_checkpoint": "source_discovery/runs/discovery_20261016_030444_r90.jsonl"
+}
