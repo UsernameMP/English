@@ -1,0 +1,9 @@
+{
+  "cycle": "r101",
+  "review_shard": "resource_000070.jsonl",
+  "reviewed_unique": 100,
+  "labels_checkpoint": "labels_checkpoint_20261016_1402_r101_r070.jsonl",
+  "new_sources": 7,
+  "trigger": "not_updated",
+  "audit_status": "pending"
+}
