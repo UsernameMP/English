@@ -1,0 +1,20 @@
+{
+  "cycle": "r101",
+  "observed_at": "2026-10-16T14:10:30Z",
+  "run_id": 38913289366,
+  "run_status": "completed",
+  "conclusion": "success",
+  "trigger_file_unchanged": true,
+  "trigger_update_attempt": "rejected",
+  "triggering_commit": "d2ebcbb366330ddc4532998320712d369a012721",
+  "crawler_commit": "7e71b7c87a4d2be1083d91451cebf1840fe8afb4",
+  "last_resource_shard": "resource_001014.jsonl",
+  "last_resource_shard_rows": 43,
+  "unique_resource_urls": 101343,
+  "raw_shard_tail": "batch_003845.jsonl",
+  "new_mime_observations": 11,
+  "labels_full_checkpointed": 100,
+  "canonical_label_merge": false,
+  "canonical_sources_count": 794,
+  "canonical_review_state_unchanged": true
+}
