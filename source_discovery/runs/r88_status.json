@@ -1,0 +1,58 @@
+{
+  "cycle": "hourly-20261016T005958000Z-r88",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "909064265cf9015601361e98d2b2a72ad2a89251",
+    "updated": true
+  },
+  "crawl": {
+    "state_blob_changed": true,
+    "unique_resource_urls": 97225,
+    "previous_unique_resource_urls": 96913,
+    "delta": 312,
+    "latest_shard": "resource_000972.jsonl",
+    "workflow_conclusion": "not_independently_confirmed"
+  },
+  "discovery": {
+    "verified_new_index_urls": 3,
+    "checkpoint": "runs/discovery_20261016_005958_r88.jsonl",
+    "checkpoint_commit": "d7b15319a0b30ce9dbd80ed1b9f17fe78c5fa49c",
+    "canonical_sources": 732,
+    "canonical_merge": "deferred_to_crawler_merger_to_avoid_second_push_workflow"
+  },
+  "review": {
+    "resource_shard": "resource_000057.jsonl",
+    "rows": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "task": 6,
+      "source": 14,
+      "archive": 1,
+      "unrelated": 76,
+      "review": 3
+    },
+    "checkpoint": "runs/r88_labels_resource_000057.jsonl",
+    "checkpoint_commit": "1d4e7d3be43bd458ef9e5e03256b57891b3cbd28",
+    "canonical_labels": 1203,
+    "canonical_merge": "blocked_by_connector_safety",
+    "review_state_update": "blocked_by_connector_safety",
+    "cursor_patch": "runs/r88_review_state_patch.json",
+    "next_shard": "resource_000058.jsonl",
+    "raw_cursor": "batch_000006.jsonl:24"
+  },
+  "audit": {
+    "findings": 8,
+    "checkpoint": "runs/r88_audit_compact.json",
+    "canonical_backlog_update": "blocked_by_connector_safety",
+    "canonical_backlog": 116
+  },
+  "mime": {
+    "observations": 1067,
+    "pdf": 578,
+    "pdf_without_dotpdf": 406
+  },
+  "binary_downloads": 0,
+  "dropbox_modified": false,
+  "schedule_modified": false
+}
