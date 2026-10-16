@@ -1,0 +1,1 @@
+{"scope":"RIFT","kind":"canonical_merge_gap","topic":"100 full labels in r108 checkpoints; merge_labels.py not called by crawler workflow; canonical cursor stale","origin":"source_discovery/merge_labels.py","status":"pending","found_at":"2026-10-16","cycle":"r108"}
