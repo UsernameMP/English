@@ -1,0 +1,6 @@
+{"scope":"Bastau","kind":"opaque_archive","origin":"https://daryn.kz/bastau-ru/","topic":"2026 task-solution folder lacks document-level verification","status":"pending"}
+{"scope":"Bastau","kind":"malformed_url","origin":"resource_000075.jsonl:97","topic":"Protocol link has non-URL suffix; repair from source HTML","status":"pending"}
+{"scope":"OPMAT","kind":"coverage_gap","origin":"https://opmat.fcpn.edu.bo/","topic":"Audit category, stage, year task/solution pairs and older archive","status":"pending"}
+{"scope":"Al-Khwarizmi","kind":"coverage_gap","origin":"https://idum.uz/ru/archives/18553","topic":"Verify 2023-2025 subject/grade/stage and source provenance","status":"pending"}
+{"scope":"Thailand TMO/TST","kind":"historical_rights_gap","origin":"https://www.infinitydots.org/archive.html","topic":"Audit official originals, missing solutions, translation and reuse rights","status":"pending"}
+{"scope":"Vietnam Ha Long","kind":"access_restriction","origin":"2025 school olympiad search result","topic":"School page returned 403; no bypass","status":"pending"}
