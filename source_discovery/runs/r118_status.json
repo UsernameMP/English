@@ -1,0 +1,47 @@
+{
+  "cycle": "r118",
+  "requested_at": "2026-10-17T07:08:22.042Z",
+  "branch": "rift-source-index",
+  "trigger_commit": "807861f0bb3f1d857260abf0c915114b8232ea65",
+  "action_run_id": 39012515409,
+  "action_status": "completed",
+  "action_conclusion": "failure",
+  "action_failure_step": "Persist results",
+  "action_failure_reason": "git push rejected because branch advanced concurrently during checkpoint commits",
+  "crawler_tests": "success",
+  "crawler_enumeration": "success",
+  "crawler_resource_index_build": "success",
+  "crawler_persisted": false,
+  "sources_added_canonical": 9,
+  "sources_commit": "ed370ce122d71cd8f89a8b27e95baf31aa1602c3",
+  "sources_total_after": 856,
+  "review": {
+    "shard": "resource_000087.jsonl",
+    "rows": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences_verified": 100,
+    "raw_shards": [
+      "batch_000206.jsonl",
+      "batch_000207.jsonl"
+    ],
+    "labels": {
+      "solution": 56,
+      "task": 24,
+      "archive": 11,
+      "review": 9
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_labels_merged": 0,
+    "canonical_review_cursor": "resource_000056.jsonl",
+    "next_operational_shard": "resource_000088.jsonl"
+  },
+  "audit": {
+    "published_checkpoints": 3,
+    "canonical_backlog_updated": false,
+    "unpublished": "workflow push conflict and Moldova 2014 provenance audit"
+  },
+  "rights": "unknown",
+  "binary_downloads": 0,
+  "dropbox_changed": false,
+  "schedule_changed": false
+}
