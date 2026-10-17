@@ -1,0 +1,61 @@
+{
+  "cycle": "r116",
+  "timestamp": "2026-10-17T05:09:31.573Z",
+  "repo": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "5bfe9d1f7e410e5d9d8bcbe0286e9c1855e12139",
+    "cycle": "hourly-r116-20261017050258387",
+    "workflow_run_id": null,
+    "workflow_conclusion": "not_independently_confirmed"
+  },
+  "crawler": {
+    "crawl_state_updated_at": "2026-10-17T05:04:39+00:00",
+    "html_pages": 60,
+    "new_raw_links": 3029,
+    "pending_pages": 51573,
+    "visited_pages": 8631,
+    "blocked_or_failed_composite": 613,
+    "crawl_state_blob_sha": "bc93cdc1ac4e2b54d37df4a5edff9f944b1c959e"
+  },
+  "discovery": {
+    "new_verified_index_urls": 4,
+    "checkpoint_prefix": "runs/discovery_20261017_0504_r116_part",
+    "canonical_sources_now": 843,
+    "canonical_merge": "pending_next_workflow"
+  },
+  "review": {
+    "resource_shard": "resource_000085.jsonl",
+    "rows": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000204.jsonl",
+      "batch_000205.jsonl"
+    ],
+    "types": {
+      "task": 58,
+      "solution": 23,
+      "archive": 19
+    },
+    "full_labels_checkpointed": 99,
+    "compact_labels_checkpointed": 1,
+    "compact_row": 85,
+    "canonical_merge": "blocked",
+    "operational_next": "resource_000086.jsonl",
+    "canonical_cursor": "resource_000056.jsonl"
+  },
+  "audit": {
+    "findings": 7,
+    "published": 6,
+    "unpublished": [
+      "DEA-PERU historical-year coverage gap"
+    ],
+    "canonical_backlog_merge": "blocked"
+  },
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_writes": 0,
+    "schedule_changed": false
+  }
+}
