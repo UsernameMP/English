@@ -1,0 +1,22 @@
+{
+  "cycle": "r114",
+  "resource_shard": "resource_000083.jsonl",
+  "row_start": 0,
+  "row_end": 99,
+  "raw_shards": [
+    "batch_000202.jsonl",
+    "batch_000203.jsonl"
+  ],
+  "codes": "TTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTATTTAT",
+  "code_legend": {
+    "T": "task (monthly contest problem set)",
+    "A": "archive (journal contents index)",
+    "R": "review"
+  },
+  "country": "HU",
+  "competition": "KöMaL",
+  "reviewed_at": "2026-10-17",
+  "classification_basis": "Hungarian anchor_text and heading with corroboration from official HTML issue and task pages",
+  "canonical_merge": "pending",
+  "notes": "Each row's first_occurrence_id and resource_id are retained in resource shard; raw context in batch shards. This compact map is not full link_labels.jsonl rows."
+}
