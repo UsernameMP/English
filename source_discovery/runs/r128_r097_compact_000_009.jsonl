@@ -1,0 +1,10 @@
+{"row":0,"resource_id":"d3b4f97ea31b02b52404ca5b","raw_occurrence_id":"752a443d89d24a8af97b2f2c","type":"review","year":2024,"stage":"second_round","lang":"nl","confidence":0.4}
+{"row":1,"resource_id":"51918552e4dc529b1940e670","raw_occurrence_id":"7ea40662aaaf27f7171e8a0e","type":"task","year":2023,"stage":"second_round","lang":"nl","confidence":0.98}
+{"row":2,"resource_id":"b753e5695af1d3116d2c1d18","raw_occurrence_id":"fb30daaa00a4a1613087dcd5","type":"task","year":2023,"stage":"second_round","lang":"en","confidence":0.98}
+{"row":3,"resource_id":"c62b6b08502eab69c616b950","raw_occurrence_id":"5675ea0e6e63fa37d9b02072","type":"solution","year":2023,"stage":"second_round","lang":"nl","confidence":0.98}
+{"row":4,"resource_id":"8ec77a1dd68975e838ef96cf","raw_occurrence_id":"81b0fb4016d72fdb6b8c3377","type":"solution","year":2023,"stage":"second_round","lang":"en","confidence":0.98}
+{"row":5,"resource_id":"34e0ea93baff6284acec2e70","raw_occurrence_id":"fe835108b53e4787be5b14d5","type":"review","year":2023,"stage":"second_round","lang":"nl","confidence":0.4}
+{"row":6,"resource_id":"3ac5aeae6b59c2fd48a6c4ef","raw_occurrence_id":"081bc261963858331558aaeb","type":"task","year":2022,"stage":"second_round","lang":"nl","confidence":0.98}
+{"row":7,"resource_id":"b9bd61059ade8c01ed1dd588","raw_occurrence_id":"440450caac7be9e91f5b5a0d","type":"task","year":2022,"stage":"second_round","lang":"en","confidence":0.98}
+{"row":8,"resource_id":"8a1ecde82194ff39d32d42de","raw_occurrence_id":"afb22f9c5406dfbfc4e7039f","type":"solution","year":2022,"stage":"second_round","lang":"nl","confidence":0.98}
+{"row":9,"resource_id":"5b4ccf6f2ffd628dc89a1c72","raw_occurrence_id":"bb587b4c6fb4035c5ff9e36b","type":"solution","year":2022,"stage":"second_round","lang":"en","confidence":0.98}
