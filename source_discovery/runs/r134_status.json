@@ -1,0 +1,40 @@
+{
+  "cycle": "hourly-r134-20261017230351000",
+  "trigger_commit": "59626c245d9878ec53f55cbd6fce80d8c6a04264",
+  "actions_run_id": 39077573482,
+  "actions_result": "success",
+  "crawler": {
+    "html_pages": 60,
+    "new_links": 4141,
+    "pending_pages": 57239,
+    "unique_resource_urls": 123996
+  },
+  "discovery": {
+    "verified": 5,
+    "github_checkpoints": 4,
+    "local_pending": 1,
+    "canonical_merged": 0
+  },
+  "review": {
+    "resource_shard": "resource_000103.jsonl",
+    "classified": 100,
+    "unrelated": 96,
+    "source": 3,
+    "review": 1,
+    "canonical_merged": 0,
+    "manifest": "runs/r134_r103_compact_manifest.json",
+    "next_operational": "resource_000104.jsonl",
+    "canonical_cursor": "resource_000056.jsonl"
+  },
+  "audit": {
+    "findings": 9,
+    "github_checkpoints": 2,
+    "local_pending": true
+  },
+  "mime": {
+    "observations": 1511,
+    "pdf": 737,
+    "pdf_without_extension": 579
+  },
+  "binary_downloads": 0
+}
