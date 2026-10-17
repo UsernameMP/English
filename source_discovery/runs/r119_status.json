@@ -1,0 +1,53 @@
+{
+  "cycle": "r119",
+  "date": "2026-10-17",
+  "trigger_commit": "45d579825a93d3db4f503215faf4ade0bce1385f",
+  "action_run_id": 39016188626,
+  "action_status": "completed",
+  "action_conclusion": "success",
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_links": 2002,
+    "pending_pages": 52786,
+    "blocked_or_failed_counter": 617,
+    "unique_resource_urls": 114629
+  },
+  "discovery": {
+    "verified_new_sources": 4,
+    "canonical_sources_after": 860,
+    "checkpoint": "discovery_20261017_0806_r119.jsonl",
+    "canonical_merged": true
+  },
+  "review": {
+    "resource_shard": "resource_000088.jsonl",
+    "rows": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000207.jsonl",
+      "batch_000208.jsonl",
+      "batch_000209.jsonl"
+    ],
+    "labels": {
+      "task": 59,
+      "solution": 5,
+      "archive": 30,
+      "unrelated": 4,
+      "review": 2
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoint_files": 10,
+    "canonical_labels_merged": 0,
+    "canonical_cursor": "resource_000056.jsonl",
+    "next_operational_shard": "resource_000089.jsonl"
+  },
+  "audit": {
+    "findings": 6,
+    "checkpoints": 6,
+    "canonical_backlog_updated": false
+  },
+  "mime": "No MIME inference for resource_000088; binary files not fetched",
+  "rights": "unknown",
+  "dropbox_changed": false,
+  "schedule_changed": false
+}
