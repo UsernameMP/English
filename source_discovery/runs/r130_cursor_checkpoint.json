@@ -1,0 +1,9 @@
+{
+  "cycle": "r130",
+  "last_completed": "resource_000099.jsonl",
+  "next_operational": "resource_000100.jsonl",
+  "canonical_cursor": "resource_000056.jsonl",
+  "review_checkpoint": "runs/r130_review_compact.json",
+  "canonical_merged": false,
+  "reason": "Direct review_state.json update blocked by connector safety; no full labels merged"
+}
