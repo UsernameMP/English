@@ -1,0 +1,14 @@
+{
+  "cycle": "r128",
+  "resource_shard": "resource_000097.jsonl",
+  "completed_rows": "0-99",
+  "next_operational_shard": "resource_000098.jsonl",
+  "canonical_resource_cursor": "resource_000056.jsonl",
+  "canonical_advanced": false,
+  "raw_cursor_unchanged": true,
+  "labels_published_compact": 100,
+  "labels_published_full": 20,
+  "canonical_labels_merged": 0,
+  "manifest": "runs/r128_review_manifest.json",
+  "updated_at": "2026-10-17T17:06:20Z"
+}
