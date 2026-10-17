@@ -170,5 +170,35 @@
     "compact_pending": 25,
     "canonical_merged": 0,
     "correction_file": "runs/r86_label_country_correction.json"
+  },
+  "r120_pending": {
+    "cycle": "hourly-r120-20261017090818000",
+    "resource_shard": "resource_000089.jsonl",
+    "reviewed_row_range": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000209.jsonl",
+      "batch_000214.jsonl",
+      "batch_000215.jsonl"
+    ],
+    "counts": {
+      "task": 13,
+      "archive": 8,
+      "source": 1,
+      "unrelated": 78
+    },
+    "full_labels_checkpointed": 30,
+    "compact_labels_checkpointed": 100,
+    "canonical_merged": 0,
+    "full_labels_remaining": 70,
+    "compact_checkpoint_prefix": "runs/r120_r089_compact_",
+    "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
+  },
+  "operational_review_cursor": {
+    "next_resource_shard": "resource_000090.jsonl",
+    "last_completed_shard": "resource_000089.jsonl",
+    "cycle": "r120",
+    "canonical_cursor_unchanged": true
   }
 }
