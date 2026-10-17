@@ -1,6 +1,6 @@
 {
   "cycle": "r116",
-  "timestamp": "2026-10-17T05:09:31.573Z",
+  "timestamp": "2026-10-17T05:10:41.125Z",
   "repo": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
@@ -22,7 +22,7 @@
     "new_verified_index_urls": 4,
     "checkpoint_prefix": "runs/discovery_20261017_0504_r116_part",
     "canonical_sources_now": 843,
-    "canonical_merge": "pending_next_workflow"
+    "canonical_merge": "blocked; four verified metadata checkpoints available for merge_sources.py"
   },
   "review": {
     "resource_shard": "resource_000085.jsonl",
@@ -43,15 +43,16 @@
     "compact_row": 85,
     "canonical_merge": "blocked",
     "operational_next": "resource_000086.jsonl",
-    "canonical_cursor": "resource_000056.jsonl"
+    "canonical_cursor": "resource_000056.jsonl",
+    "checkpoint_verified": true
   },
   "audit": {
     "findings": 7,
-    "published": 6,
-    "unpublished": [
-      "DEA-PERU historical-year coverage gap"
-    ],
-    "canonical_backlog_merge": "blocked"
+    "published": 7,
+    "unpublished": [],
+    "canonical_backlog_merge": "success",
+    "canonical_backlog_commit": "8a375f3274dfabbaeac4b4c12b0530ed76f3b5f2",
+    "canonical_backlog_rows": 139
   },
   "safeguards": {
     "binary_downloads": 0,
