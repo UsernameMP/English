@@ -1,0 +1,20 @@
+{
+  "cycle": "r124",
+  "resource_shard": "resource_000093.jsonl",
+  "raw_shards": [
+    "batch_000227.jsonl",
+    "batch_000228.jsonl",
+    "batch_000229.jsonl"
+  ],
+  "unique_reviewed": 100,
+  "counts": {
+    "source": 62,
+    "review": 22,
+    "task": 13,
+    "unrelated": 3
+  },
+  "canonical_merged": false,
+  "next_operational_shard": "resource_000094.jsonl",
+  "canonical_cursor_unchanged": true,
+  "method": "resource_id dedup; first and all available raw occurrences cross-referenced; binary bodies not fetched"
+}
