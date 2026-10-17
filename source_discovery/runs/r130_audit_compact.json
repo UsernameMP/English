@@ -1,0 +1,35 @@
+{
+  "cycle": "r130",
+  "audit": [
+    [
+      "NL_JWO_2020",
+      "year_gap",
+      "2020 not visible between 2019 and 2021; cancellation or mirror unknown"
+    ],
+    [
+      "NL_JWO_2026",
+      "language_gap",
+      "Dutch problem links not present in reviewed slice; inspect adjacent shards"
+    ],
+    [
+      "NL_FINALE_REPORTS",
+      "document_type_gap",
+      "Nine 2002-2010 Verslag documents retained review; binary contents unknown"
+    ],
+    [
+      "NL_FINALE_OLDER",
+      "historical_gap",
+      "Older than 2001 and English translation coverage not established"
+    ],
+    [
+      "BR_OBHO_2025",
+      "solution_gap",
+      "Organizer says 2025 phase 2 key unavailable"
+    ],
+    [
+      "RIFT_CANONICAL",
+      "merge_debt",
+      "r129 full labels local; r130 full labels GitHub blocked; compact checkpoint saved"
+    ]
+  ]
+}
