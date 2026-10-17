@@ -1,0 +1,13 @@
+{
+  "cycle": "r114",
+  "resource_shard": "resource_000083.jsonl",
+  "classified": 100,
+  "task": 75,
+  "archive": 25,
+  "raw_shards": [
+    "batch_000202.jsonl",
+    "batch_000203.jsonl"
+  ],
+  "canonical_merge": "blocked",
+  "reason": "connector rejected detailed checkpoint writes"
+}
