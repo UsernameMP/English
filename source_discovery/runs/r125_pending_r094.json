@@ -1,0 +1,29 @@
+{
+  "cycle": "r125",
+  "resource_shard": "resource_000094.jsonl",
+  "reviewed_unique": 100,
+  "full_published": 50,
+  "full_pending": 50,
+  "full_published_ranges": [
+    "0-24",
+    "50-74"
+  ],
+  "pending_ranges": [
+    "25-49",
+    "75-99"
+  ],
+  "classification_ranges": {
+    "42": "review",
+    "99": "archive",
+    "25-41": "unrelated",
+    "43-49": "unrelated",
+    "75-84": "unrelated",
+    "85-92": "source",
+    "93-98": "unrelated"
+  },
+  "raw_batches": "batch_000229..batch_000240",
+  "next_operational_shard": "resource_000095.jsonl",
+  "canonical_cursor_advanced": false,
+  "source": "manual semantic review from raw anchor and heading context",
+  "reason": "Connector blocked publication of full labels for pending ranges"
+}
