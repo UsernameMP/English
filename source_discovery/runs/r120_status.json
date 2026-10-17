@@ -1,0 +1,85 @@
+{
+  "cycle": "r120",
+  "cycle_id": "hourly-r120-20261017090818000",
+  "date": "2026-10-17",
+  "repo": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "path": "source_discovery/",
+  "trigger_commit": "2067a7cceed418fba4d4bae00efc156884feca2d",
+  "workflow_run_id": 39019999411,
+  "workflow_url": "https://github.com/UsernameMP/English/actions/runs/39019999411",
+  "workflow_status": "completed",
+  "workflow_conclusion": "success",
+  "crawler_commit": "c6b0314dda5c872222cac9449a1715ab82773558",
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_links": 2219,
+    "pending_pages": 52853,
+    "blocked_or_failed_reported": 618,
+    "unique_resource_urls": 114795,
+    "resource_shards_changed": 3
+  },
+  "discovery": {
+    "verified_new_source_urls": 2,
+    "checkpoint": "runs/discovery_20261017_090818_r120.jsonl",
+    "canonical_sources_count": 860,
+    "canonical_merged": 0,
+    "canonical_write_blocker": "update_file safety checks; merger ran before discovery checkpoint was created"
+  },
+  "review": {
+    "resource_shard": "resource_000089.jsonl",
+    "rows": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000209.jsonl",
+      "batch_000214.jsonl",
+      "batch_000215.jsonl"
+    ],
+    "counts": {
+      "task": 13,
+      "archive": 8,
+      "source": 1,
+      "unrelated": 78
+    },
+    "full_labels_published": 30,
+    "compact_labels_published": 100,
+    "canonical_labels_merged": 0,
+    "full_labels_pending": 70,
+    "canonical_cursor": "resource_000056.jsonl",
+    "next_operational_shard": "resource_000090.jsonl",
+    "full_checkpoint_paths": [
+      "runs/labels_checkpoint_20261017_090818_r120_r089_01.jsonl",
+      "runs/labels_checkpoint_20261017_090818_r120_r089_03.jsonl",
+      "runs/r120_r089_full_10_14.jsonl",
+      "runs/r120_r089_full_95_99.jsonl"
+    ],
+    "compact_checkpoint_paths": [
+      "runs/r120_r089_compact_01.jsonl",
+      "runs/r120_r089_compact_02.jsonl",
+      "runs/r120_r089_compact_03.jsonl",
+      "runs/r120_r089_compact_04.jsonl",
+      "runs/r120_r089_compact_05.jsonl",
+      "runs/r120_r089_compact_06.jsonl",
+      "runs/r120_r089_compact_60_64.jsonl",
+      "runs/r120_r089_compact_65_69.jsonl",
+      "runs/r120_r089_compact_08.jsonl",
+      "runs/r120_r089_compact_09.jsonl",
+      "runs/r120_r089_compact_10.jsonl"
+    ]
+  },
+  "audit": {
+    "findings": 4,
+    "checkpoint": "runs/r120_audit_backlog_patch.jsonl",
+    "canonical_backlog_merged": 0,
+    "blocker": "update_file safety checks"
+  },
+  "review_state_updated": true,
+  "review_state_commit": "834cb8d834cbf529ea7f3aeab8fa8acacaaa7074",
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_mutations": 0,
+    "schedule_changes": 0,
+    "extra_runs": 0
+  }
+}
