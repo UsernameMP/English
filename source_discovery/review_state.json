@@ -196,9 +196,23 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000090.jsonl",
-    "last_completed_shard": "resource_000089.jsonl",
-    "cycle": "r120",
+    "next_resource_shard": "resource_000094.jsonl",
+    "last_completed_shard": "resource_000093.jsonl",
+    "cycle": "r124",
     "canonical_cursor_unchanged": true
+  },
+  "r124_pending": {
+    "resource_shard": "resource_000093.jsonl",
+    "unique_resources": 100,
+    "full_labels_checkpointed": 96,
+    "full_labels_unpublished": 4,
+    "unpublished_rows": [
+      50,
+      51,
+      52,
+      97
+    ],
+    "canonical_merged": 0,
+    "manifest": "runs/r124_review_manifest.json"
   }
 }
