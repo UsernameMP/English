@@ -1,0 +1,9 @@
+{
+  "scope": "IMC",
+  "kind": "legacy_url_error",
+  "topic": "crawl_state errors still include IMC query URLs with §ion instead of &section; 2026 legacy rows remain and must not be treated as valid links or source exhaustion",
+  "evidence": "source_discovery/crawl_state.json updated 2026-10-17T17:08:45Z",
+  "cycle": "r128",
+  "status": "pending",
+  "safeguard": "retain raw history and repair only via verified original parent links"
+}
