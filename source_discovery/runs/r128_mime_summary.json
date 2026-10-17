@@ -1,0 +1,1 @@
+{"cycle":"r128","scope":"global","kind":"mime_audit","pdf_mime":723,"extensionless_pdf":565,"observations":1483,"rule":"MIME alone does not confirm an Olympiad task; no binary bodies fetched","source":"source_discovery/resource_observations.jsonl"}
