@@ -1,0 +1,1 @@
+{"scope":"RIFT canonical state","kind":"merge_debt","topic":"Canonical resource cursor 000056 lags operational 000085; reconcile checkpoints by resource_id and raw ID before advancing","origin":"https://github.com/UsernameMP/English/tree/rift-source-index/source_discovery/runs","cycle":"r116","status":"pending"}
