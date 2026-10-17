@@ -9,5 +9,10 @@
     "batch_000203.jsonl"
   ],
   "canonical_merge": "blocked",
-  "reason": "connector rejected detailed checkpoint writes"
+  "reason": "Canonical link_labels.jsonl update blocked; all 100 labels in separate labels_checkpoint files.",
+  "full_labels_checkpointed": 100,
+  "compact_only": 0,
+  "next_operational_shard": "resource_000084.jsonl",
+  "canonical_merged": 0,
+  "classmap": "r114_r083_classmap.json"
 }
