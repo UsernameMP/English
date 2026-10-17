@@ -1,0 +1,66 @@
+{
+  "cycle": "r115",
+  "timestamp": "2026-10-17T04:05:31.400Z",
+  "repo": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188_merged": true,
+  "trigger": {
+    "commit": "7b9f19261f84f1d308aeea3d6f68addf1b572a08",
+    "workflow_run_id": 39000990372,
+    "workflow_conclusion": "success",
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/39000990372"
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_links": 1895,
+    "unique_resource_urls": 111742,
+    "pending_pages": 51432,
+    "blocked_or_failed_composite": 609,
+    "commit": "fc23c9b"
+  },
+  "discovery": {
+    "verified_new_urls": 6,
+    "checkpoint": "runs/discovery_20261017_0401_r115.jsonl",
+    "canonical_sources_before": 837,
+    "canonical_merge": "blocked; workflow ran before discovery checkpoint was published",
+    "next_merge_expected_via_merge_sources": true
+  },
+  "review": {
+    "resource_shard": "resource_000084.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000203.jsonl",
+      "batch_000204.jsonl"
+    ],
+    "labels": {
+      "task": 76,
+      "archive": 24
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoint_file_count": 19,
+    "canonical_merge": "blocked",
+    "canonical_cursor": "resource_000056.jsonl",
+    "operational_next": "resource_000085.jsonl"
+  },
+  "audit": {
+    "findings": 8,
+    "published_checkpoints": 6,
+    "remaining_unpublished": [
+      "KöMaL collection-vs-individual granularity",
+      "canonical label/checkpoint merge debt"
+    ],
+    "canonical_backlog_update": "blocked"
+  },
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_writes": 0,
+    "automation_schedule_changed": false
+  },
+  "notes": [
+    "All 100 review labels persisted as GitHub checkpoints with raw IDs and resource IDs.",
+    "Large canonical sources and backlog writes blocked; no destructive rewrite.",
+    "review_state.json update blocked; operational pointer in this manifest.",
+    "Unpublished audit findings are included here."
+  ]
+}
