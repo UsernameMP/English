@@ -1,0 +1,41 @@
+{
+  "cycle": "r125",
+  "date": "2026-10-17",
+  "actions": {
+    "run_id": 39039262521,
+    "conclusion": "success",
+    "completed_at": "2026-10-17T14:08:15Z",
+    "crawler_commit": "82e952664517efcf1806ed73b0395c30b2ba38db"
+  },
+  "discovery": {
+    "verified": 4,
+    "merged": 2,
+    "pending_merge": 2,
+    "canonical_sources": 873
+  },
+  "review": {
+    "resource_shard": "resource_000094.jsonl",
+    "unique": 100,
+    "types": {
+      "task": 17,
+      "solution": 1,
+      "archive": 1,
+      "source": 14,
+      "unrelated": 66,
+      "review": 1
+    },
+    "full_labels_published": 50,
+    "pending": 50,
+    "pending_manifest": "runs/r125_pending_r094.json",
+    "next_operational_shard": "resource_000095.jsonl",
+    "canonical_cursor_advanced": false
+  },
+  "audit": {
+    "findings": 6,
+    "github_published": false,
+    "local_checkpoint": "rift_r125_audit_pending.jsonl"
+  },
+  "binary_downloads": 0,
+  "dropbox_unchanged": true,
+  "schedule_unchanged": true
+}
