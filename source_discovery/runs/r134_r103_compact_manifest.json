@@ -1,0 +1,32 @@
+{
+  "cycle": "hourly-r134-20261017230351000",
+  "resource_shard": "resource_000103.jsonl",
+  "resource_shard_sha": "5ab7eb6305a89d3f4c45777b2bc79a6bcd42fc9d",
+  "row_range": "0-99",
+  "raw_shards": [
+    "batch_000294.jsonl",
+    "batch_000295.jsonl",
+    "batch_000296.jsonl"
+  ],
+  "labels_by_row": {
+    "source": [
+      6,
+      18,
+      69
+    ],
+    "review": [
+      68
+    ],
+    "unrelated": "all remaining rows 0-99"
+  },
+  "counts": {
+    "source": 3,
+    "review": 1,
+    "unrelated": 96
+  },
+  "basis": "HTML anchor and heading context: RSME site category/tag navigation; unrelated except OME news tags; Olimpiadas generic tag uncertain",
+  "canonical_merged": 0,
+  "operational_next": "resource_000104.jsonl",
+  "rights": "unknown",
+  "binary_downloads": 0
+}
