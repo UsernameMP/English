@@ -1,0 +1,35 @@
+[
+  {
+    "url": "https://ls-bd.org/",
+    "country": "BD",
+    "subject": "linguistics",
+    "status": "verified_organizer_no_papers",
+    "evidence": "Linguistics Society of Bangladesh lists 12th Bangladesh Linguistics Olympiad 2025; no past papers located in HTML page.",
+    "next_action": "search official past papers and 2024/2025 rounds",
+    "cycle": "r151",
+    "checked_at": "2026-10-18",
+    "binary_downloads": 0
+  },
+  {
+    "url": "https://imli.gov.bd/",
+    "country": "BD",
+    "subject": "linguistics",
+    "status": "verified_organizer_no_papers",
+    "evidence": "International Mother Language Institute 2027 linguistics olympiad notice; no archived competition papers confirmed.",
+    "next_action": "inspect public notices, not binary content",
+    "cycle": "r151",
+    "checked_at": "2026-10-18",
+    "binary_downloads": 0
+  },
+  {
+    "url": "https://gnol.ge/en/",
+    "country": "GE",
+    "subject": "linguistics",
+    "status": "future_competition_no_archive",
+    "evidence": "Georgian National Olympiad in Linguistics first edition planned 2026-27; explicitly says own archive will follow.",
+    "next_action": "revisit after inaugural competition",
+    "cycle": "r151",
+    "checked_at": "2026-10-18",
+    "binary_downloads": 0
+  }
+]
