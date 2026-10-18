@@ -1,0 +1,85 @@
+{
+  "cycle": "r142",
+  "date": "2026-10-18",
+  "trigger": {
+    "cycle": "hourly-r142-20261018065845000",
+    "commit": "aebf3a10a2c853ded4abf60b84648149134e6137",
+    "run_id": 39105965984,
+    "conclusion": "success",
+    "completed_at": "2026-10-18T07:01:34Z"
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_links": 2471,
+    "unique_resource_urls": 127857,
+    "pending_pages": 58769,
+    "blocked_or_failed": 669,
+    "source_registry_count": 923,
+    "source_registry_added_from_previous_checkpoints": 3
+  },
+  "discovery": {
+    "new_verified_indexes": 4,
+    "checkpoint": "runs/r142_discovery_records.json",
+    "canonical_merged": 0
+  },
+  "review": {
+    "resource_shard": "resource_000111.jsonl",
+    "rows": "0-99",
+    "unique_resource_ids": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000321.jsonl",
+      "batch_000322.jsonl"
+    ],
+    "counts": {
+      "task": 34,
+      "solution": 10,
+      "archive": 7,
+      "source": 7,
+      "unrelated": 42
+    },
+    "checkpoints": [
+      "r142_r111_labels_00_24.json",
+      "r142_r111_compact_25_49.json",
+      "r142_r111_compact_50_57.json",
+      "r142_r111_compact_58_65.json",
+      "r142_r111_compact_66_74.json",
+      "r142_r111_compact_75_99.json"
+    ],
+    "canonical_merged": 0,
+    "next_operational_shard": "resource_000112.jsonl",
+    "canonical_cursor": "resource_000056.jsonl"
+  },
+  "mime": {
+    "observations": 1573,
+    "pdf_observations": 793,
+    "pdf_url_without_literal_pdf": 621,
+    "binary_downloads": 0
+  },
+  "audit": {
+    "findings": 8,
+    "checkpoints": [
+      "r142_audit_manifest.json",
+      "r142_audit_by_stages.json",
+      "r142_audit_by_resources.json"
+    ]
+  },
+  "backlog": {
+    "pending_items": 8,
+    "checkpoints": [
+      "r142_backlog_manifest.json",
+      "r142_backlog_1.json",
+      "r142_backlog_2.json"
+    ],
+    "canonical_merged": 0
+  },
+  "canonical_update_failures": [
+    "sources.jsonl not directly updated; discovery checkpoint JSON not yet recognized by JSONL merger",
+    "backlog.jsonl update rejected by connector safety",
+    "review_state.json update rejected by connector safety",
+    "link_labels.jsonl not updated due large-file safety"
+  ],
+  "dropbox_changed": false,
+  "schedule_changed": false,
+  "extra_workflows_launched": false
+}
