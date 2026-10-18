@@ -1,0 +1,41 @@
+{
+  "cycle": "r142",
+  "records": [
+    {
+      "url": "https://belastro.org/school.html",
+      "country": "BY",
+      "subject": "astronomy",
+      "stage": "school",
+      "years": "2008-2022",
+      "status": "verified",
+      "provenance": "official organizer HTML index"
+    },
+    {
+      "url": "https://belastro.org/district.html",
+      "country": "BY",
+      "subject": "astronomy",
+      "stage": "district",
+      "years": "2004-2023",
+      "status": "verified",
+      "provenance": "official organizer HTML index"
+    },
+    {
+      "url": "https://belastro.org/regional.html",
+      "country": "BY",
+      "subject": "astronomy",
+      "stage": "regional",
+      "years": "2004-2025",
+      "status": "verified",
+      "provenance": "official organizer HTML index"
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/canguro/index.php",
+      "country": "MX",
+      "subject": "mathematics",
+      "stage": "school",
+      "years": "2001-2024",
+      "status": "verified",
+      "provenance": "official organizer HTML index"
+    }
+  ]
+}
