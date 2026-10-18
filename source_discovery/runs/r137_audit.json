@@ -1,0 +1,42 @@
+{
+  "cycle": "r137",
+  "checked_at": "2026-10-18",
+  "findings": [
+    {
+      "scope": "ES Zaragoza OAF",
+      "kind": "year_round_solution_gap",
+      "finding": "Organizer archive indexes 2007-2025; 2026 absent from visible archive. Per-year theory/experimental and solution coverage unverified.",
+      "origin": "https://fisicaaplicada.unizar.es/olimpiada-de-fisica/ediciones-anteriores-de-la-oaf"
+    },
+    {
+      "scope": "ES Biology",
+      "kind": "year_access_gap",
+      "finding": "National editions 2006-2024 indexed, no 2025/2026 listed; Materials section password protected, do not bypass. Edition links not confirmed exam papers.",
+      "origin": "https://olimpiadadebiologia.edu.es/la-competicion/fase-nacional/antiguas-ediciones/"
+    },
+    {
+      "scope": "IT Neuroscience",
+      "kind": "historical_access_gap",
+      "finding": "Historical editions endpoint returned HTTP 500. Organizer training anatomy/MCQ documents are not confirmed past competition exams.",
+      "origin": "https://olimpiadi.sins.it/"
+    },
+    {
+      "scope": "CMS news",
+      "kind": "review_noise",
+      "finding": "resource_000106 rows 0-99 are CMS press/news pages, not exam PDFs or official task indexes. One news title contains 'solutions' but is not a solutions document.",
+      "origin": "https://cms.math.ca/about-the-cms/news/"
+    },
+    {
+      "scope": "Austria OeMO",
+      "kind": "mime_context_gap",
+      "finding": "12 newly observed application/pdf URLs without .pdf extension (/aufgaben/ and /loesungen/); MIME is confirmed but competition year/round and content not inspected.",
+      "origin": "source_discovery/resource_observations.jsonl"
+    },
+    {
+      "scope": "Canonical ledgers",
+      "kind": "checkpoint_merge_debt",
+      "finding": "Review cursor still resource_000056 while operational review has advanced to 000106; existing checkpoints not fully merged, and direct canonical updates are unsafe without complete current contents.",
+      "origin": "source_discovery/review_state.json"
+    }
+  ]
+}
