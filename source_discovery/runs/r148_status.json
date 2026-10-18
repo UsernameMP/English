@@ -16,7 +16,7 @@
     "compact": 15,
     "minimal": 10
   },
-  "raw_shards": "327-330,333-336",
+  "raw_shards": "batch_000327–batch_000336",
   "canonical_merged": 0,
   "next_operational_shard": "resource_000118.jsonl",
   "discovery_checkpoint": "discovery_20261018_1308_r148.jsonl",
@@ -38,5 +38,7 @@
     "pdf_without_extension": 633
   },
   "notes": "Canonical label/backlog and operational review_state writes blocked; checkpoints preserved. No binary downloads.",
-  "cycle_timestamp": "2026-10-18T13:08:30Z"
+  "cycle_timestamp": "2026-10-18T13:08:30Z",
+  "first_occurrence_ids_matched": 100,
+  "raw_context_scope": "All 100 first occurrence IDs located in 10 raw shards; additional occurrences may exist elsewhere"
 }
