@@ -1,0 +1,42 @@
+{
+  "cycle": "r148",
+  "resource_shard": "resource_000117.jsonl",
+  "rows": "0-99",
+  "classified": 100,
+  "labels": {
+    "task": 32,
+    "solution": 19,
+    "archive": 4,
+    "source": 2,
+    "unrelated": 42,
+    "review": 1
+  },
+  "checkpointed": {
+    "full": 75,
+    "compact": 15,
+    "minimal": 10
+  },
+  "raw_shards": "327-330,333-336",
+  "canonical_merged": 0,
+  "next_operational_shard": "resource_000118.jsonl",
+  "discovery_checkpoint": "discovery_20261018_1308_r148.jsonl",
+  "new_verified_sources": 7,
+  "audit_items": 10,
+  "backlog_items": 9,
+  "workflow_run": 39130264551,
+  "workflow_result": "success",
+  "crawler": {
+    "pages": 60,
+    "new_links": 2529,
+    "unique_urls": 129461,
+    "queue": 59030,
+    "errors_or_blocked": 683
+  },
+  "mime": {
+    "observations": 1615,
+    "pdf": 805,
+    "pdf_without_extension": 633
+  },
+  "notes": "Canonical label/backlog and operational review_state writes blocked; checkpoints preserved. No binary downloads.",
+  "cycle_timestamp": "2026-10-18T13:08:30Z"
+}
