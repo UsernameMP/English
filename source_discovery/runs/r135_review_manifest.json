@@ -1,0 +1,39 @@
+{
+  "cycle": "hourly-r135-20261018000007131",
+  "reviewed_at": "2026-10-18T00:06:16.789Z",
+  "resource_shard": "resource_000104.jsonl",
+  "resource_shard_sha": "ff1620c6a1cd63c6496fcb98f065457ceb1fc864",
+  "row_range": "0-99",
+  "unique_resources": 100,
+  "counts": {
+    "unrelated": 100
+  },
+  "raw_shards": [
+    "batch_000296.jsonl",
+    "batch_000297.jsonl",
+    "batch_000298.jsonl",
+    "batch_000299.jsonl",
+    "batch_000300.jsonl",
+    "batch_000301.jsonl",
+    "batch_000302.jsonl",
+    "batch_000303.jsonl"
+  ],
+  "first_occurrences_verified": 100,
+  "full_labels_checkpointed": 100,
+  "checkpoint_files": [
+    "labels_checkpoint_20261018_r135_r104_01.jsonl",
+    "labels_checkpoint_20261018_r135_r104_02.jsonl",
+    "labels_checkpoint_20261018_r135_r104_04.jsonl",
+    "labels_checkpoint_20261018_r135_r104_06.jsonl",
+    "labels_checkpoint_20261018_r135_r104_07.jsonl",
+    "labels_checkpoint_20261018_r135_r104_08.jsonl",
+    "labels_checkpoint_20261018_r135_r104_recovery_1.jsonl",
+    "labels_checkpoint_20261018_r135_r104_recovery_2.jsonl",
+    "labels_checkpoint_20261018_r135_r104_recovery_3.jsonl",
+    "labels_checkpoint_20261018_r135_r104_recovery_4.jsonl"
+  ],
+  "canonical_merged": 0,
+  "canonical_cursor": "resource_000056.jsonl",
+  "next_operational_shard": "resource_000105.jsonl",
+  "notes": "No competition tasks in RSME professional congress/schools and Canadian Mathematical Society administrative links; all labels based on raw parent and anchor context. Full link ledger unchanged."
+}
