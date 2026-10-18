@@ -1,0 +1,54 @@
+{
+  "cycle": "r145",
+  "reviewed_at": "2026-10-18T10:04:11Z",
+  "resource_shard": "resource_000114.jsonl",
+  "rows": "0-99",
+  "unique_resources_reviewed": 100,
+  "raw_shards": [
+    "batch_000324.jsonl",
+    "batch_000325.jsonl"
+  ],
+  "raw_first_occurrences_matched": 100,
+  "counts": {
+    "unrelated": 37,
+    "source": 9,
+    "review": 12,
+    "task": 8,
+    "archive": 31,
+    "solution": 3
+  },
+  "full_labels_checkpointed": 99,
+  "blocked_rows": [
+    56
+  ],
+  "blocked_row": {
+    "row": 56,
+    "raw_occurrence_id": "c4903bf08cd251df01e51ff4",
+    "resource_id": "75ad330f8db05028b646e599",
+    "type": "source",
+    "reason": "Organizer IChO section, not individual task",
+    "confidence": 0.82
+  },
+  "checkpoints": [
+    "r145_r114_labels_00_09.jsonl",
+    "r145_r114_labels_10_19.jsonl",
+    "r145_r114_labels_20_29.jsonl",
+    "r145_r114_labels_30_39.jsonl",
+    "r145_r114_labels_40_49.jsonl",
+    "r145_r114_labels_50_54.jsonl",
+    "r145_r114_label_55.jsonl",
+    "r145_r114_label_57.jsonl",
+    "r145_r114_label_58.jsonl",
+    "r145_r114_label_59.jsonl",
+    "r145_r114_labels_60_79.jsonl",
+    "r145_r114_labels_80_99.jsonl"
+  ],
+  "canonical_merged": 0,
+  "next_operational_shard": "resource_000115.jsonl",
+  "canonical_cursor": "resource_000056.jsonl",
+  "notes": [
+    "Classification from source/parent/anchor/heading and URL only; binary bodies not downloaded",
+    "One resource row 56 could not be published as an individual checkpoint; exact raw and resource IDs retained",
+    "Year-index gaps not treated as source exhaustion"
+  ]
+}
