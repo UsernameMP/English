@@ -1,0 +1,64 @@
+{
+  "cycle": "r147",
+  "reviewed_at": "2026-10-18T12:00:00Z",
+  "resource_shard": "resource_000116.jsonl",
+  "row_range": "0-99",
+  "unique_resources": 100,
+  "raw_shards": [
+    "batch_000326.jsonl",
+    "batch_000327.jsonl"
+  ],
+  "labels": {
+    "task": 44,
+    "solution": 35,
+    "archive": 13,
+    "source": 1,
+    "unrelated": 7,
+    "review": 0
+  },
+  "full_labels_checkpointed": 82,
+  "compact_labels_pending_expansion": 18,
+  "full_files": [
+    "r147_review_r116_00.jsonl",
+    "r147_review_r116_01.jsonl",
+    "r147_review_r116_03.jsonl",
+    "r147_review_r116_05.jsonl",
+    "r147_review_r116_06.jsonl",
+    "r147_review_r116_07.jsonl",
+    "r147_review_r116_09.jsonl",
+    "r147_review_r116_retry_4_1.jsonl",
+    "r147_review_r116_retry_8_0.jsonl",
+    "r147_review_r116_single_22.jsonl",
+    "r147_review_r116_single_25.jsonl"
+  ],
+  "compact_files": [
+    "r147_review_r116_compact_pending_0.jsonl",
+    "r147_review_r116_compact_pending_1.jsonl",
+    "r147_review_pending_single_44.jsonl",
+    "r147_review_pending_single_85.jsonl",
+    "r147_review_pending_single_86.jsonl",
+    "r147_review_pending_single_87.jsonl",
+    "r147_review_pending_single_88.jsonl",
+    "r147_review_pending_89.json"
+  ],
+  "next_operational_shard": "resource_000117.jsonl",
+  "canonical_cursor_unchanged": "resource_000056.jsonl",
+  "canonical_labels_merged": 0,
+  "source_discovery_merged": 12,
+  "backlog_canonical_added": 7,
+  "workflow_run_id": 39125467658,
+  "workflow_attempt": 2,
+  "workflow_conclusion": "success",
+  "workflow_metrics": {
+    "html_pages": 60,
+    "new_raw_links": 9475,
+    "unique_resource_urls": 129413,
+    "pending_pages": 59084,
+    "blocked_or_failed": 675
+  },
+  "notes": [
+    "All classifications based on URL and anchor context; binary content not downloaded",
+    "Compact labels must be expanded before canonical merge",
+    "Large link_labels.jsonl connector read returns empty; no overwrite attempted"
+  ]
+}
