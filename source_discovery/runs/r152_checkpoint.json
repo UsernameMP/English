@@ -1,1 +1,25 @@
-{"cycle":"r152","status":"in_progress","trigger_commit":"31a6f36386d73f645651e0b9b8ea6aafb183ff3b","review_shard":"resource_000121.jsonl","binary_downloads_saved":0}
+{
+  "cycle": "r152",
+  "status": "review_checkpointed",
+  "trigger_commit": "31a6f36386d73f645651e0b9b8ea6aafb183ff3b",
+  "review_shard": "resource_000121.jsonl",
+  "review_unique": 100,
+  "review_counts": {
+    "task": 1,
+    "solution": 45,
+    "archive": 5,
+    "unrelated": 47,
+    "review": 2
+  },
+  "labels_checkpointed": 100,
+  "full": 20,
+  "compact": 40,
+  "minimal": 40,
+  "canonical_labels_merged": 0,
+  "discovery_checkpointed": 7,
+  "backlog_canonical_added": 8,
+  "source_canonical_added": 0,
+  "binary_pdf_opened_via_web": 1,
+  "local_binary_saved": 0,
+  "next_operational_shard": "resource_000122.jsonl"
+}
