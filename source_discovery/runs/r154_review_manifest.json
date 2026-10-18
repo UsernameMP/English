@@ -1,0 +1,62 @@
+{
+  "cycle": "r154",
+  "date_utc": "2026-10-18",
+  "resource_shard": "resource_000123.jsonl",
+  "row_range": "0-99",
+  "unique_resources": 100,
+  "raw_occurrences": 100,
+  "raw_shards": [
+    "batch_000362.jsonl",
+    "batch_000363.jsonl",
+    "batch_000364.jsonl",
+    "batch_000365.jsonl",
+    "batch_000366.jsonl",
+    "batch_000367.jsonl"
+  ],
+  "counts": {
+    "unrelated": 89,
+    "archive": 6,
+    "review": 2,
+    "source": 1,
+    "task": 1,
+    "solution": 1
+  },
+  "checkpoint_files": [
+    "runs/r154_r123_labels_00.jsonl",
+    "runs/r154_r123_labels_01.jsonl",
+    "runs/r154_r123_labels_02.jsonl",
+    "runs/r154_r123_labels_03.jsonl",
+    "runs/r154_r123_labels_04.jsonl",
+    "runs/r154_r123_labels_05.jsonl",
+    "runs/r154_r123_labels_06.jsonl",
+    "runs/r154_r123_labels_07.jsonl",
+    "runs/r154_r123_labels_08.jsonl",
+    "runs/r154_r123_labels_09.jsonl"
+  ],
+  "full_labels": 40,
+  "compact_labels": 60,
+  "canonical_merged": 0,
+  "operational_next": "resource_000124.jsonl",
+  "canonical_cursor": "resource_000056.jsonl",
+  "source_checkpoint": "runs/discovery_20261018_1910_r154.jsonl",
+  "source_count": 5,
+  "audit_saved": 10,
+  "backlog_saved": 6,
+  "trigger_update": "blocked",
+  "new_workflow_run_confirmed": false,
+  "last_confirmed_run_id": 39152689832,
+  "last_confirmed_run_time_utc": "2026-10-18T18:07:10Z",
+  "last_confirmed_crawl": {
+    "html_pages": 60,
+    "new_links": 2422,
+    "pending_pages": 59436,
+    "blocked_or_failed": 713,
+    "unique_resource_urls": 131071
+  },
+  "mime": {
+    "observations": 1642,
+    "pdf": 811,
+    "pdf_no_extension": 639
+  },
+  "note": "All checkpoints read back. No binary files opened. Canonical sources/link_labels/backlog/review_state not updated; blocked GitHub update_file. Source discovery checkpoint eligible for next merge."
+}
