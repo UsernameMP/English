@@ -1,0 +1,40 @@
+{
+  "cycle": "r144",
+  "resource_shard": "resource_000113.jsonl",
+  "rows": "0-99",
+  "resource_count": 100,
+  "raw_occurrence_count": 100,
+  "raw_shards": [
+    "batch_000323.jsonl",
+    "batch_000324.jsonl"
+  ],
+  "full_label_count": 60,
+  "compact_label_count": 40,
+  "counts": {
+    "task": 35,
+    "solution": 27,
+    "review": 13,
+    "archive": 3,
+    "source": 4,
+    "unrelated": 18
+  },
+  "checkpoints": [
+    "r144_r113_labels_00_19.jsonl",
+    "r144_r113_labels_20_39.jsonl",
+    "r144_r113_labels_40_59.jsonl",
+    "r144_r113_compact_60_69.jsonl",
+    "r144_r113_compact_70_74.jsonl",
+    "r144_r113_compact_75_79.jsonl",
+    "r144_r113_compact_80_84.jsonl",
+    "r144_r113_compact_85_89.jsonl",
+    "r144_r113_compact_90_99.jsonl"
+  ],
+  "canonical_merge": "pending",
+  "next_operational_shard": "resource_000114.jsonl",
+  "canonical_cursor": "resource_000056.jsonl",
+  "notes": [
+    "Full checkpoint rows 0-59 contain occurrence contexts; compact rows 60-99 retain raw IDs, URL, parent, anchor, heading, type and confidence.",
+    "File bodies were not inspected; review labels based on archive URL and bilingual anchor/heading context.",
+    "Compact checkpoint labels require expansion before canonical merge."
+  ]
+}
