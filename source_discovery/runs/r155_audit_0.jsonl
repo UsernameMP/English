@@ -1,0 +1,4 @@
+{"kind":"false_positive","scope":"NL news","detail":"Dutch Nieuwsarchief pages and news articles in resource_000124 were incorrectly hinted archive; actual labels unrelated.","url":"https://wiskundeolympiade.nl/voorpagina/nieuwsarchief","cycle":"r155","date":"2026-10-18"}
+{"kind":"review","scope":"Daryn Kazakhstan","detail":"Two protocol folders resource rows 73,91 remain review; broadcasts, rankings and regulations unrelated.","url":"https://daryn.kz/kk/rknp-kz/","cycle":"r155","date":"2026-10-18"}
+{"kind":"pagination","scope":"UKLO","detail":"Sortable paginated HTML problem table since 2010; crawler may miss hidden pages.","url":"https://archives.uklo.org/past-problems","cycle":"r155","date":"2026-10-18"}
+{"kind":"years","scope":"UNAM 2023","detail":"Eight subjects with exam links; 2011-2023 archive index excludes 2020; solutions not verified.","url":"https://www.olimpiadas.unam.mx/anteriores/2023/","cycle":"r155","date":"2026-10-18"}
