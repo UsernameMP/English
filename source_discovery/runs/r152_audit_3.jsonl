@@ -1,0 +1,2 @@
+{"kind":"historical_mirror","scope":"USAMTS","finding":"Legacy archive overlaps current USAMTS archive; resource identity across different URL hosts not established without document comparison","evidence":"https://old.usamts.org/Problems/U_ProblemsPast.php","cycle":"r152"}
+{"kind":"year_gap","scope":"SIL KGL Stage II","finding":"Official archive lists 2014-2023, 2024-2026 and solutions remain unknown","evidence":"https://sil.kangaroo.org.pk/past_papers/3231","cycle":"r152"}
