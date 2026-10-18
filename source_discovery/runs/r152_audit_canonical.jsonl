@@ -1,0 +1,1 @@
+{"scope":"RIFT r152","finding":"Canonical sources update blocked and large label ledger unreadable; use checkpoints for review resource 000121","evidence":"source_discovery/resources_shards/resource_000121.jsonl","cycle":"r152","status":"open"}
