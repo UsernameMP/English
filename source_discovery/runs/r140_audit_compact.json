@@ -1,0 +1,53 @@
+{
+  "cycle": "r140",
+  "date": "2026-10-18",
+  "findings": [
+    [
+      "RSEQ",
+      "2020 not indexed; 2001 blank; 2019/2023 exam links not directly exposed",
+      "https://rseq.org/olimpiadas-de-quimica/olimpiada-iberoamericana-de-quimica-historico/"
+    ],
+    [
+      "Vietnam 2026",
+      "Official organizer refers to JS-rendered HNUE portal; exam links not visible in HTML",
+      "https://vce.edu.vn/danh-muc_Olympic-Hoa-hoc_254.html"
+    ],
+    [
+      "Vietnam 2024",
+      "Organizer uses unresolved tinyurl references for chemistry/natural science exam and answers",
+      "https://www.vce.edu.vn/649_De-thi-va-dap-an-ky-thi-Olympic-Khoa-hoc-tu-nhien-va-Hoa-hoc-cho-hoc-sinh-pho-thong-Lan-thu-nhat--Nam-2024.html"
+    ],
+    [
+      "VNU 2024-25",
+      "Five linked sample tests are not released contest papers",
+      "https://uet-test.uet.edu.vn/de-thi-tham-khao-ky-thi-olympic-bac-thpt-cua-dhqghn-nam-hoc-2024-2025/"
+    ],
+    [
+      "Romania ONM 2026",
+      "Grades IX-XII solutions and criteria combined; separate question sheets not on inspected index",
+      "https://www.concurs.imclain.ro/probleme.php"
+    ],
+    [
+      "Uzbekistan Kangaroo",
+      "2023 visible answer-only, 2021 English not visible, 2025-26 not indexed; alternate languages and pagination unknown",
+      "https://olympia.uz/ru/archive/index"
+    ],
+    [
+      "Uzbekistan Kangaroo",
+      "Download endpoint and uploads URL share opaque basename but binary identity not established",
+      "https://olympia.uz/ru/archive/index"
+    ],
+    [
+      "LMT 2010-12",
+      "2012 page separates Individual, Theme, Team, Guts rounds; older stages need audit",
+      "https://www.lhsmath.org/LMT/2012_Problems_and_Solutions"
+    ],
+    [
+      "RIFT",
+      "run_trigger and canonical sources write blocked; 50 full and 50 compact review labels checkpointed; canonical cursor unchanged",
+      "https://github.com/UsernameMP/English/tree/rift-source-index/source_discovery"
+    ]
+  ],
+  "rights": "unknown",
+  "binary_downloads": 0
+}
