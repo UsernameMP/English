@@ -1,0 +1,55 @@
+{
+  "cycle": "r140",
+  "date": "2026-10-18",
+  "trigger": "blocked_safety_checks",
+  "actions_new_run": false,
+  "last_actions_run": 39092741410,
+  "last_actions_status": "success",
+  "last_actions_utc": "2026-10-18T03:14:31Z",
+  "last_crawl": {
+    "html": 60,
+    "new_raw": 2071,
+    "unique_urls": 126537,
+    "pending": 58036,
+    "blocked_failed": 668
+  },
+  "discovery": {
+    "verified": 4,
+    "checkpoint": "runs/discovery_20261018_0506_r140.jsonl",
+    "canonical_merged": 0
+  },
+  "review": {
+    "shard": "resource_000109.jsonl",
+    "rows": "0-99",
+    "unique": 100,
+    "counts": {
+      "task": 61,
+      "solution": 6,
+      "criteria": 4,
+      "archive": 8,
+      "source": 3,
+      "unrelated": 18
+    },
+    "full_checkpointed": 50,
+    "compact_checkpointed": 50,
+    "canonical_merged": 0,
+    "full_files": [
+      "runs/labels_r140_r109_30_39.jsonl",
+      "runs/labels_r140_r109_50_59.jsonl",
+      "runs/labels_r140_r109_70_79.jsonl",
+      "runs/labels_r140_r109_80_99.jsonl"
+    ],
+    "compact_file": "runs/r140_r109_compact_pending_50.jsonl",
+    "next": "resource_000110.jsonl",
+    "canonical_cursor": "resource_000056.jsonl"
+  },
+  "mime": {
+    "observations": 1550,
+    "pdf": 773,
+    "pdf_url_no_literal_suffix": 615
+  },
+  "audit": "runs/r140_audit_compact.json",
+  "backlog": "runs/r140_backlog_compact.json",
+  "canonical_updates": 0,
+  "binary_downloads": 0
+}
