@@ -1,0 +1,16 @@
+{
+  "cycle": "r142",
+  "date": "2026-10-18",
+  "review": "resource_000111.jsonl",
+  "audit_findings": 8,
+  "backlog_topics": 8,
+  "issues": [
+    "BelAstro school/district/regional year gaps",
+    "2022 scanned JPG/PDF overlap unknown",
+    "Kyrgyzstan Google Drive task/solution pairing",
+    "Romanian task and marking index not individual files",
+    "Mexico Canguro public historical resources",
+    "Canonical merge and cursor remain pending"
+  ],
+  "status": "pending_canonical_merge"
+}
