@@ -1,0 +1,19 @@
+{
+  "cycle": "r140",
+  "status": "pending",
+  "topics": [
+    "RSEQ: 2020/2001/2019/2023 exam links and theoretical/experimental pairs",
+    "Vietnam 2026: HNUE dynamic portal exam URLs, grade 6-12",
+    "Vietnam 2024: organizer shortlinks destination provenance",
+    "VNU 2024-25: actual papers vs samples",
+    "Uzbekistan Kangaroo: 2023 tasks, 2025-26, 2021 English, aliases/pagination",
+    "Romania ONM 2026: independent national-stage task sheets",
+    "RIFT r140: merge 50 full + 50 compact labels; reconcile cursor"
+  ],
+  "sources": [
+    "https://rseq.org/olimpiadas-de-quimica/olimpiada-iberoamericana-de-quimica-historico/",
+    "https://vce.edu.vn/danh-muc_Olympic-Hoa-hoc_254.html",
+    "https://olympia.uz/ru/archive/index",
+    "https://www.concurs.imclain.ro/probleme.php"
+  ]
+}
