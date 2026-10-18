@@ -1,0 +1,16 @@
+{
+  "cycle": "r135",
+  "observation_sha": "80a5c6ba5695ecb0e254df3d3d05a1903cd41983",
+  "observations": 1511,
+  "pdf": 737,
+  "pdf_without_extension": 579,
+  "non_html_not_error": true,
+  "blocked_or_failed": 661,
+  "errors_breakdown": {
+    "robots_denied_or_unavailable": 342,
+    "http_error": 203,
+    "timeout": 1,
+    "other": 115
+  },
+  "note": "MIME evidence only. No binary response bodies fetched. robots restrictions not bypassed."
+}
