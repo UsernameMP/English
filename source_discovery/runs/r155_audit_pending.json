@@ -1,0 +1,22 @@
+{
+  "cycle": "r155",
+  "date": "2026-10-18",
+  "unpublished_audit": [
+    {
+      "scope": "Alicante geology",
+      "gap": "Exam years 2020,2021,2023+ and solutions not verified"
+    },
+    {
+      "scope": "TOBI biology",
+      "gap": "2020 duplicated title, 2021-2022 partial, external folder unknown"
+    },
+    {
+      "scope": "MIME",
+      "gap": "1650 observations, 816 PDF, 644 without .pdf in URL; MIME not task label"
+    },
+    {
+      "scope": "Review merge",
+      "gap": "40 label rows blocked; resource_000124 sha c58860549182e6e4a62ad0bb81b6872a9f4f7e4f"
+    }
+  ]
+}
