@@ -1,0 +1,72 @@
+{
+  "cycle": "r156",
+  "reviewed_at": "2026-10-18T21:03:03Z",
+  "resource_shard": "source_discovery/resources_shards/resource_000125.jsonl",
+  "row_range": [
+    0,
+    99
+  ],
+  "resource_count": 100,
+  "raw_occurrence_shards": [
+    "source_discovery/links_shards/batch_000374.jsonl",
+    "source_discovery/links_shards/batch_000375.jsonl"
+  ],
+  "raw_occurrence_count": 100,
+  "raw_matches_verified": true,
+  "all_parent_url": "https://daryn.kz/kk/rknp-kz/",
+  "default_type": "unrelated",
+  "default_basis": "Organizer context identifies live streams, ceremonies, participant lists, results, protocols, programmes, regulations, or administrative pages, not tasks or solutions",
+  "exceptions": [
+    {
+      "row": 12,
+      "type": "review",
+      "basis": "Google spreadsheet described as live stream; inconsistent context"
+    },
+    {
+      "row": 13,
+      "type": "task",
+      "basis": "2022-2023 ZIP described as sample tasks for testing preparation, contents not accessed"
+    },
+    {
+      "row": 55,
+      "type": "review",
+      "basis": "Google spreadsheet described as live stream; inconsistent context"
+    },
+    {
+      "row": 61,
+      "type": "task",
+      "basis": "2023-2024 ZIP described as sample tasks for testing preparation, contents not accessed"
+    },
+    {
+      "row": 83,
+      "type": "review",
+      "basis": "Google spreadsheet described as live stream; inconsistent context"
+    }
+  ],
+  "counts": {
+    "unrelated": 95,
+    "task": 2,
+    "review": 3
+  },
+  "confidence_policy": {
+    "unrelated": 0.96,
+    "task": 0.94,
+    "review": 0.35
+  },
+  "full_checkpoint": "source_discovery/runs/r156_review_r125_025_049.jsonl",
+  "full_checkpoint_rows": [
+    25,
+    49
+  ],
+  "unpublished_full_rows": [
+    [
+      0,
+      24
+    ],
+    [
+      50,
+      99
+    ]
+  ],
+  "note": "Resource_id, URL, first raw occurrence ID and original anchor/heading/parent are present per row in resource shard; raw occurrence details in batch 374-375. This is a reconstructible checkpoint, not canonical link_labels.jsonl."
+}
