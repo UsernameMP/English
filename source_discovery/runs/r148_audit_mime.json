@@ -1,0 +1,12 @@
+{
+  "cycle": "r148",
+  "scope": "JPhO international i-exam",
+  "kind": "extensionless_pdf_review",
+  "status": "open",
+  "observation_rows": "1604-1615",
+  "count": 12,
+  "mime": "application/pdf",
+  "url_pattern": "https://www.jpho.jp/international/media-download/{id}/{hash}/PDF/",
+  "parent_url": "https://www.jpho.jp/international/i-exam.html",
+  "finding": "Twelve newly observed extensionless PDF URLs. MIME confirms document format, not task/solution suitability. Resolve parent anchor text and competition context using raw shards; do not download PDF bodies."
+}
