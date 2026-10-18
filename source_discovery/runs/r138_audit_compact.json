@@ -1,0 +1,37 @@
+{
+  "cycle": "r138",
+  "findings": [
+    [
+      "IChO",
+      "2015 practical not linked; 2020 remote exam differs"
+    ],
+    [
+      "AILO",
+      "2018-2022 and newer year links not yet enumerated"
+    ],
+    [
+      "IPT",
+      "2026 page carries 2024 release date"
+    ],
+    [
+      "CESO",
+      "2018 and 2023 sample pages share question passages; historical year unverified"
+    ],
+    [
+      "NZ",
+      "Science OlympiaNZ is a directory, not task archive"
+    ],
+    [
+      "CMS",
+      "Gray Jay URL redirects to CJMC; name changed in 2022"
+    ],
+    [
+      "Review",
+      "100 classified; 98 full and 2 compact checkpoints, canonical merge pending"
+    ],
+    [
+      "Crawler",
+      "60 HTML, 1339 new raw, 663 blocked/failed; JS/robots coverage unresolved"
+    ]
+  ]
+}
