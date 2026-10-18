@@ -1,0 +1,25 @@
+{
+  "cycle": "r155",
+  "resource_shard": "resource_000124.jsonl",
+  "resource_sha": "c58860549182e6e4a62ad0bb81b6872a9f4f7e4f",
+  "rows": "0-99",
+  "unique": 100,
+  "raw_occurrences": 106,
+  "raw_shards": "batch_000367..000374",
+  "counts": {
+    "unrelated": 98,
+    "review": 2
+  },
+  "review_rows": [
+    73,
+    91
+  ],
+  "full_label_rows": "0-19,60-79",
+  "compact_label_rows": "30-39,50-59",
+  "unpublished_label_rows": "20-29,40-49,80-99",
+  "unpublished_label_recovery": "Read frozen resource shard by row; all unpublished labels unrelated. Copy first_occurrence_id and URL, join raw shards for context.",
+  "canonical_labels_merged": 0,
+  "operational_next": "resource_000125.jsonl",
+  "canonical_cursor": "resource_000056.jsonl",
+  "date": "2026-10-18"
+}
