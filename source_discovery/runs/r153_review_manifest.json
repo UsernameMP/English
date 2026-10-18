@@ -1,0 +1,52 @@
+{
+  "cycle": "r153",
+  "review_shard": "resource_000122.jsonl",
+  "rows": "0-99",
+  "unique_resources": 100,
+  "raw_occurrences": 100,
+  "raw_shards": [
+    "batch_000360.jsonl",
+    "batch_000361.jsonl",
+    "batch_000362.jsonl"
+  ],
+  "counts": {
+    "unrelated": 77,
+    "solution": 18,
+    "archive": 2,
+    "review": 3
+  },
+  "full_labels": 40,
+  "compact_labels": 50,
+  "minimal_labels": 10,
+  "files": [
+    "runs/r153_review_r122_000_019.jsonl",
+    "runs/r153_review_r122_020_029.jsonl",
+    "runs/r153_review_r122_030_039_compact.json",
+    "runs/r153_review_r122_040_059.jsonl",
+    "runs/r153_review_r122_060_064_compact.json",
+    "runs/r153_review_r122_65_69_compact.json",
+    "runs/r153_review_r122_70_72_minimal.json",
+    "runs/r153_review_r122_73_74_minimal.json",
+    "runs/r153_review_r122_75_79_compact.json",
+    "runs/r153_review_r122_80_84_compact.json",
+    "runs/r153_review_r122_85_89_compact.json",
+    "runs/r153_review_r122_90_94_compact.json",
+    "runs/r153_review_r122_95_99_minimal.json"
+  ],
+  "all_files_verified": true,
+  "canonical_labels_merged": 0,
+  "canonical_review_cursor": "resource_000056.jsonl",
+  "next_operational_shard": "resource_000123.jsonl",
+  "discovery_checkpoint": "runs/discovery_20261018_180115_r153.jsonl",
+  "verified_new_sources": 3,
+  "canonical_sources_merged": 0,
+  "trigger_update": "blocked_by_connector_safety_checks",
+  "workflow_r153": "not_confirmed",
+  "audit_checkpoint": "runs/r153_audit.jsonl",
+  "backlog_checkpoints": [
+    "runs/r153_backlog_0.jsonl"
+  ],
+  "binary_downloads": 0,
+  "dropbox_mutations": 0,
+  "schedule_mutations": 0
+}
