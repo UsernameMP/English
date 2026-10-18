@@ -1,0 +1,49 @@
+{
+  "cycle": "r146",
+  "reviewed_at": "2026-10-18T11:01:04Z",
+  "resource_shard": "resource_000115.jsonl",
+  "row_range": "0-99",
+  "unique_resources_reviewed": 100,
+  "raw_first_occurrences_matched": 100,
+  "raw_shards": [
+    "batch_000325.jsonl",
+    "batch_000326.jsonl",
+    "batch_000327.jsonl"
+  ],
+  "counts": {
+    "task": 5,
+    "solution": 1,
+    "archive": 28,
+    "source": 4,
+    "unrelated": 61,
+    "review": 1
+  },
+  "full_labels_checkpointed": 100,
+  "checkpoint_files": [
+    "r146_r115_labels_00_09.jsonl",
+    "r146_r115_labels_10_19.jsonl",
+    "r146_r115_labels_20_29.jsonl",
+    "r146_r115_labels_30_39.jsonl",
+    "r146_r115_labels_40_49.jsonl",
+    "r146_r115_labels_50_59.jsonl",
+    "r146_r115_labels_60_64.jsonl",
+    "r146_r115_label_65.jsonl",
+    "r146_r115_label_66.jsonl",
+    "r146_r115_label_67.jsonl",
+    "r146_r115_label_68.jsonl",
+    "r146_r115_label_69.jsonl",
+    "r146_r115_labels_70_74.jsonl",
+    "r146_r115_labels_75_79.jsonl",
+    "r146_r115_labels_80_84.jsonl",
+    "r146_r115_labels_85_89.jsonl",
+    "r146_r115_labels_90_99.jsonl"
+  ],
+  "canonical_merged": 0,
+  "next_operational_shard": "resource_000116.jsonl",
+  "canonical_cursor": "resource_000056.jsonl",
+  "notes": [
+    "Only link metadata inspected; binary bodies not downloaded",
+    "Google Drive folder titles do not verify individual files",
+    "Year edition landing pages classified archive, not task"
+  ]
+}
