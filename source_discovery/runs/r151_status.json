@@ -1,0 +1,75 @@
+{
+  "cycle": "r151",
+  "date_utc": "2026-10-18",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "1fde4b36c6153324c83466decfba7e1d252ab290",
+    "workflow_run": 39143620501,
+    "status": "success"
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_links": 3451,
+    "unique_resources": 130601,
+    "pending_pages": 59343,
+    "blocked_or_failed": 705
+  },
+  "sources": {
+    "verified_new": 4,
+    "canonical_count": 966,
+    "canonical_merged": 4,
+    "discovery_checkpoint": "runs/discovery_20261018_1603_r151.jsonl"
+  },
+  "review": {
+    "shard": "resource_000120.jsonl",
+    "unique_resources": 100,
+    "matched_raw_occurrences": 100,
+    "raw_shards": [
+      352,
+      353,
+      357
+    ],
+    "counts": {
+      "task": 46,
+      "solution": 25,
+      "unrelated": 22,
+      "review": 3,
+      "source": 1,
+      "participant_work": 1,
+      "archive": 2
+    },
+    "full_labels_checkpointed": 70,
+    "compact_labels_checkpointed": 30,
+    "canonical_merged": 0,
+    "canonical_cursor": "resource_000056.jsonl",
+    "next_operational_shard": "resource_000121.jsonl",
+    "operational_cursor_update": "blocked",
+    "compact_checkpoint": "runs/r151_review_r120_pending30_compact.json"
+  },
+  "mime": {
+    "observations": 1620,
+    "pdf": 805,
+    "pdf_without_extension_last_confirmed": 633
+  },
+  "audit": {
+    "checkpointed": 9,
+    "files": [
+      "runs/r151_audit_0.jsonl",
+      "runs/r151_audit_1.jsonl",
+      "runs/r151_audit_2.jsonl"
+    ]
+  },
+  "backlog": {
+    "checkpointed": 4,
+    "organizer_leads": 3
+  },
+  "pending": [
+    "Canonical link_labels.jsonl not updated",
+    "review_state.json update rejected by connector safety checks",
+    "3 additional backlog items could not be checkpointed",
+    "HTML index not equivalent to verified PDF content"
+  ],
+  "binary_downloads": 0,
+  "dropbox_mutations": 0,
+  "schedule_mutations": 0
+}
