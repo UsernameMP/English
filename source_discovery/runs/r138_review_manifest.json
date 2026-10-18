@@ -1,0 +1,60 @@
+{
+  "cycle": "r138",
+  "trigger_commit": "b40b99a3a26489f532f4adca531176251f745642",
+  "workflow_run": 39092453370,
+  "workflow_status": "success",
+  "resource_shard": "resource_000107.jsonl",
+  "reviewed_rows": "0-99",
+  "unique_resources": 100,
+  "first_raw_occurrences_verified": 100,
+  "raw_shards": [
+    "batch_000306.jsonl",
+    "batch_000307.jsonl",
+    "batch_000308.jsonl",
+    "batch_000309.jsonl",
+    "batch_000310.jsonl",
+    "batch_000311.jsonl",
+    "batch_000312.jsonl",
+    "batch_000313.jsonl",
+    "batch_000314.jsonl",
+    "batch_000315.jsonl",
+    "batch_000316.jsonl",
+    "batch_000317.jsonl",
+    "batch_000318.jsonl"
+  ],
+  "counts": {
+    "unrelated": 98,
+    "source": 2
+  },
+  "full_labels_saved": 98,
+  "compact_labels_saved": 2,
+  "canonical_labels_merged": 0,
+  "full_files": [
+    "runs/labels_r138_r107_01.jsonl",
+    "runs/labels_r138_r107_02.jsonl",
+    "runs/labels_r138_r107_03.jsonl",
+    "runs/labels_r138_r107_04.jsonl",
+    "runs/labels_r138_r107_05.jsonl",
+    "runs/labels_r138_r107_06.jsonl",
+    "runs/labels_r138_r107_07.jsonl",
+    "runs/labels_r138_r107_08.jsonl",
+    "runs/labels_r138_r107_80_84.jsonl",
+    "runs/labels_r138_r107_95_99.jsonl",
+    "runs/label_r138_r107_85.jsonl",
+    "runs/label_r138_r107_86.jsonl",
+    "runs/label_r138_r107_87.jsonl",
+    "runs/label_r138_r107_88.jsonl",
+    "runs/label_r138_r107_90.jsonl",
+    "runs/label_r138_r107_91.jsonl",
+    "runs/label_r138_r107_93.jsonl",
+    "runs/label_r138_r107_94.jsonl"
+  ],
+  "compact_file": "runs/r138_r107_compact_rows_89_92.jsonl",
+  "compact_rows": [
+    89,
+    92
+  ],
+  "next_operational_shard": "resource_000108.jsonl",
+  "canonical_resource_cursor_unchanged": "resource_000056.jsonl",
+  "notes": "No binary documents downloaded. Sources in discovery checkpoint and canonical merge attempted separately; reviewed labels not canonicalized."
+}
