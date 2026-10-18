@@ -1,0 +1,37 @@
+{
+  "cycle": "r146",
+  "trigger_commit": "8a1d394cd575ad37e9cf4215ac0c5caa9f902226",
+  "action_run": 39121538017,
+  "action_conclusion": "success",
+  "crawl": {
+    "html_pages": 60,
+    "new_links": 1601,
+    "pending": 58797,
+    "blocked_or_failed": 669,
+    "unique_urls": 128226
+  },
+  "sources": {
+    "canonical": 934,
+    "verified_checkpointed": 5,
+    "merged": 0
+  },
+  "review": {
+    "shard": "resource_000115.jsonl",
+    "reviewed": 100,
+    "labels_checkpointed": 100,
+    "canonical_labels_merged": 0,
+    "next": "resource_000116.jsonl"
+  },
+  "mime": {
+    "observations": 1591,
+    "pdf": 793,
+    "extensionless_pdf": 621
+  },
+  "audit_checkpointed": 8,
+  "backlog_checkpointed": 7,
+  "review_state_updated": true,
+  "canonical_backlog_updated": false,
+  "binary_downloads": 0,
+  "dropbox_writes": 0,
+  "schedule_changes": 0
+}
