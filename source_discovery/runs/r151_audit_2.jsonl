@@ -1,0 +1,3 @@
+{"scope":"RIFT canonical","kind":"merge_debt","detail":"70 full labels and 30 compact resource_000120 labels saved in checkpoints; canonical label ledger and cursor not advanced.","cycle":"r151","status":"open"}
+{"scope":"MIME","kind":"evidence_limit","detail":"Extensionless /PDF/ URLs observed with application/pdf; no task suitability without page context; no binary downloaded.","cycle":"r151","status":"open"}
+{"scope":"GitHub Actions","kind":"trigger","detail":"r151 run 39143620501 completed success; 60 HTML pages; 3451 raw links; 130601 unique resource URLs; pending frontier 59343.","cycle":"r151","status":"open"}
