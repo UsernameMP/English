@@ -1,0 +1,29 @@
+{
+  "cycle": "r158",
+  "resource_shard": "resource_000127.jsonl",
+  "rows": "0-99",
+  "unique_resources": 100,
+  "raw_matched": 100,
+  "raw_shards": [
+    "batch_000376.jsonl",
+    "batch_000377.jsonl",
+    "batch_000378.jsonl"
+  ],
+  "counts": {
+    "task": 33,
+    "solution": 1,
+    "archive": 14,
+    "review": 1,
+    "unrelated": 51
+  },
+  "checkpointed": 99,
+  "missing_individual_rows": [
+    17
+  ],
+  "row17_type": "task",
+  "next_operational_shard": "resource_000128.jsonl",
+  "canonical_cursor": "resource_000056.jsonl",
+  "canonical_labels_merged": 0,
+  "checkpoints_prefix": "r158_labels_r127_",
+  "source_of_truth": "resources_shards/resource_000127.jsonl"
+}
