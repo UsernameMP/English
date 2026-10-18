@@ -1,0 +1,78 @@
+{
+  "cycle": "r153",
+  "date_utc": "2026-10-18",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "attempted": true,
+    "updated": false,
+    "reason": "GitHub update_file blocked by connector safety checks with current SHA bfdb280502d5775b90838bf4a2b53df92a193ef2",
+    "latest_cycle": "hourly-r152-20261018170556747",
+    "workflow_run_r153": "not_confirmed"
+  },
+  "discovery": {
+    "verified_new": 3,
+    "canonical_sources_before": 966,
+    "canonical_added": 0,
+    "checkpoint": "runs/discovery_20261018_180115_r153.jsonl"
+  },
+  "review": {
+    "resource_shard": "resource_000122.jsonl",
+    "unique": 100,
+    "matched_occurrences": 100,
+    "raw_shards": [
+      "batch_000360.jsonl",
+      "batch_000361.jsonl",
+      "batch_000362.jsonl"
+    ],
+    "counts": {
+      "solution": 18,
+      "archive": 2,
+      "review": 3,
+      "unrelated": 77
+    },
+    "full_labels": 40,
+    "compact_labels": 50,
+    "minimal_labels": 10,
+    "all_checkpointed_and_verified": true,
+    "manifest": "runs/r153_review_manifest.json",
+    "canonical_labels_added": 0,
+    "next_operational_shard": "resource_000123.jsonl",
+    "canonical_cursor": "resource_000056.jsonl",
+    "review_state_update": "blocked"
+  },
+  "mime": {
+    "last_observation_count": 1622,
+    "latest_observed_at": "2026-10-18T17:08:12+00:00",
+    "pdf_last_confirmed": 805,
+    "pdf_without_extension_last_confirmed": 633
+  },
+  "crawler": {
+    "latest_confirmed_unique_resources": 130601,
+    "latest_confirmed_pending_pages": 59343,
+    "metrics_from_cycle": "r151",
+    "r153_run": "not_confirmed"
+  },
+  "audit": {
+    "checkpointed": 7,
+    "file": "runs/r153_audit.jsonl"
+  },
+  "backlog": {
+    "checkpointed": 4,
+    "files": [
+      "runs/r153_backlog_0.jsonl",
+      "runs/r153_backlog_2.jsonl"
+    ],
+    "canonical_added": 0
+  },
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_mutations": 0,
+    "schedule_mutations": 0
+  },
+  "unresolved": [
+    "run_trigger update blocked",
+    "canonical sources/link_labels/backlog/review_state not merged",
+    "compact/minimal review labels require expansion before canonical merge"
+  ]
+}
