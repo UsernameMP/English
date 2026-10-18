@@ -1,0 +1,2 @@
+{"kind":"provenance_gap","scope":"INT astronomy","finding":"Fizmat secondary archive and IOAA LaTeX compilation need original-paper mapping and license checks","evidence_url":"https://fizmat.space/international/","status":"open","cycle":"r145","found_at":"2026-10-18"}
+{"kind":"mime_ambiguity","scope":"RIFT observations","finding":"1573 MIME observations, 793 PDF, 621 PDF without literal .pdf in URL; MIME does not establish task relevance","evidence_url":"source_discovery/resource_observations.jsonl","status":"open","cycle":"r145","found_at":"2026-10-18"}
