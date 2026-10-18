@@ -1,0 +1,76 @@
+{
+  "cycle": "r144",
+  "date": "2026-10-18",
+  "trigger": {
+    "commit": "f0e35e77b4e396e507cef621b85025529c3e239a",
+    "cycle": "hourly-r144-20261018090328000",
+    "updated": true,
+    "formal_actions_status": "unavailable",
+    "crawl_state_sha_before": "2403a9d58cc87109a6377b2dc741b6d812d87da2",
+    "crawl_state_sha_after": "d370d40f8951840bf0b133dbc419e4baa0d0eedb"
+  },
+  "discovery": {
+    "verified_new_urls": 5,
+    "canonical_merged": 0,
+    "checkpoints": [
+      "discovery_20261018_0903_r144_2.jsonl",
+      "discovery_20261018_0903_r144_3.jsonl",
+      "discovery_20261018_0903_r144_5.jsonl",
+      "discovery_20261018_0903_r144_retry_1.jsonl",
+      "discovery_20261018_0903_r144_retry_2.jsonl"
+    ]
+  },
+  "review": {
+    "shard": "resource_000113.jsonl",
+    "rows": "0-99",
+    "unique_resources": 100,
+    "raw_shards": [
+      "batch_000323.jsonl",
+      "batch_000324.jsonl"
+    ],
+    "raw_occurrences_matched": 100,
+    "counts": {
+      "task": 35,
+      "solution": 27,
+      "review": 13,
+      "source": 4,
+      "archive": 3,
+      "unrelated": 18
+    },
+    "full_labels_checkpointed": 60,
+    "compact_labels_checkpointed": 40,
+    "canonical_merged": 0,
+    "next_operational_shard": "resource_000114.jsonl",
+    "canonical_cursor": "resource_000056.jsonl"
+  },
+  "audit": {
+    "findings": 10,
+    "checkpoints": [
+      "r144_audit_small_0_1.jsonl",
+      "r144_audit_retry_2.jsonl",
+      "r144_audit_retry_3.jsonl",
+      "r144_audit_small_4_5.jsonl",
+      "r144_audit_small_6_7.jsonl",
+      "r144_audit_small_8_9.jsonl"
+    ]
+  },
+  "backlog": {
+    "items": 7,
+    "checkpoints": [
+      "r144_backlog_0_4.jsonl",
+      "r144_backlog_retry_6.jsonl",
+      "r144_backlog_retry_cn.jsonl"
+    ],
+    "canonical_merged": 0
+  },
+  "mime": {
+    "observation_sha_at_read": "94405685363d65421fcc1629e6fcc0d01e141982",
+    "no_binary_downloads": true
+  },
+  "limitations": [
+    "No formal Actions conclusion available; crawl_state SHA change confirms published crawler state but not job success",
+    "Canonical source/label/backlog/cursor files not merged",
+    "2026-10-18 opened an HTML page containing past philosophy prompts; no task text retained or redistributed",
+    "No Dropbox writes, no schedule changes, no additional workflow trigger"
+  ]
+}
