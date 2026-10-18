@@ -1,0 +1,86 @@
+{
+  "cycle": "r153",
+  "shard": "resource_000122.jsonl",
+  "rows": [
+    {
+      "row": 30,
+      "resource_id": "196cbdba71718a0275ec2c09",
+      "raw_occurrence_id": "52bb54288d63564281f23df5",
+      "type": "unrelated",
+      "reason": "Event livestream; not an olympiad problem or solution",
+      "confidence": 0.98
+    },
+    {
+      "row": 31,
+      "resource_id": "44e9fddc5bff61b8aa6cccd6",
+      "raw_occurrence_id": "a76c44a21ba199ce36c005d2",
+      "type": "unrelated",
+      "reason": "Event livestream; not an olympiad problem or solution",
+      "confidence": 0.98
+    },
+    {
+      "row": 32,
+      "resource_id": "29c88b8fcaaef38452e5e491",
+      "raw_occurrence_id": "7e1d3e54c0bd0a5436439bfe",
+      "type": "unrelated",
+      "reason": "Event livestream; not an olympiad problem or solution",
+      "confidence": 0.98
+    },
+    {
+      "row": 33,
+      "resource_id": "83a878bbf06380c16ed93194",
+      "raw_occurrence_id": "732869d73283d8649a6c3a4f",
+      "type": "unrelated",
+      "reason": "Event livestream; not an olympiad problem or solution",
+      "confidence": 0.98
+    },
+    {
+      "row": 34,
+      "resource_id": "1a5d054b54f81f391b7d7a96",
+      "raw_occurrence_id": "eb404827ae0ea45cad8782ca",
+      "type": "unrelated",
+      "reason": "Event livestream; not an olympiad problem or solution",
+      "confidence": 0.98
+    },
+    {
+      "row": 35,
+      "resource_id": "7906cace989b720ef444feb2",
+      "raw_occurrence_id": "b419d9fe896f463f960a6762",
+      "type": "unrelated",
+      "reason": "Event livestream; not an olympiad problem or solution",
+      "confidence": 0.98
+    },
+    {
+      "row": 36,
+      "resource_id": "949317d22cb25d2ccca5d69e",
+      "raw_occurrence_id": "3f042006951198fc9a4b8559",
+      "type": "unrelated",
+      "reason": "Event livestream; not an olympiad problem or solution",
+      "confidence": 0.98
+    },
+    {
+      "row": 37,
+      "resource_id": "adcb5cb22261cf58ae062938",
+      "raw_occurrence_id": "8eb5e9688617547d94366aed",
+      "type": "unrelated",
+      "reason": "Event livestream; not an olympiad problem or solution",
+      "confidence": 0.98
+    },
+    {
+      "row": 38,
+      "resource_id": "e92949d19653eec661c9cb24",
+      "raw_occurrence_id": "5fa085ca0bc09bc0bc1ed2c5",
+      "type": "unrelated",
+      "reason": "Event livestream; not an olympiad problem or solution",
+      "confidence": 0.98
+    },
+    {
+      "row": 39,
+      "resource_id": "c9af211272065813b31ffcca",
+      "raw_occurrence_id": "cc555b1bf477ebc785bbd246",
+      "type": "unrelated",
+      "reason": "Event livestream; not an olympiad problem or solution",
+      "confidence": 0.98
+    }
+  ]
+}
