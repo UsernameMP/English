@@ -1,0 +1,45 @@
+{
+  "cycle": "hourly-r135-20261018000007131",
+  "date": "2026-10-18",
+  "trigger_commit": "1417b3a1de055b8c23eac82fade5a992e8d90c29",
+  "trigger_updated": true,
+  "actions_formal_conclusion": "not_independently_retrieved",
+  "crawler": {
+    "state_sha": "3f52cf38c868255e2a9873fd8cc14cdfe8b956a5",
+    "updated_at": "2026-10-18T00:01:58+00:00",
+    "html_pages": 60,
+    "new_raw_links": 4305,
+    "visited_total": 9895,
+    "pending_pages": 57532,
+    "unique_resource_urls": 124726
+  },
+  "discovery": {
+    "verified_new": 5,
+    "github_checkpoint": "runs/discovery_20261018_0000_r135.jsonl",
+    "canonical_merged": 0,
+    "canonical_source_count": 902
+  },
+  "review": {
+    "resource_shard": "resource_000104.jsonl",
+    "classified_unique": 100,
+    "unrelated": 100,
+    "full_labels_checkpoints": 100,
+    "checkpoint_manifest": "runs/r135_review_manifest.json",
+    "canonical_merged": 0,
+    "next_operational": "resource_000105.jsonl",
+    "canonical_cursor": "resource_000056.jsonl"
+  },
+  "audit": {
+    "findings": 8,
+    "checkpoint": "runs/r135_audit_compact.json",
+    "backlog_items": 7,
+    "backlog_checkpoints_saved": 6,
+    "backlog_checkpoint_blocked": 1
+  },
+  "limitations": [
+    "Direct canonical sources, link_labels, backlog and review_state writes blocked by connector safety checks",
+    "GitHub Actions formal conclusion unavailable from connector; crawl state and shards prove enumeration ran",
+    "No task binaries downloaded or inspected",
+    "Rights and archive completeness remain unknown"
+  ]
+}
