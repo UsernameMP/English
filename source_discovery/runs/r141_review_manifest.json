@@ -1,0 +1,44 @@
+{
+  "cycle": "r141",
+  "reviewed_at": "2026-10-18T06:10:16.612Z",
+  "resource_shard": "resource_000110.jsonl",
+  "row_range": "0-99",
+  "unique_resource_ids": 100,
+  "first_raw_occurrences_matched": 100,
+  "raw_shards": [
+    "batch_000320.jsonl",
+    "batch_000321.jsonl"
+  ],
+  "counts": {
+    "task": 73,
+    "solution": 16,
+    "unrelated": 10,
+    "source": 1
+  },
+  "full_labels_checkpointed": 75,
+  "compact_labels_checkpointed": 25,
+  "full_files": [
+    "labels_r141_r110_00_09.jsonl",
+    "labels_r141_r110_10_19.jsonl",
+    "labels_r141_r110_40_49.jsonl",
+    "labels_r141_r110_80_89.jsonl",
+    "labels_r141_r110_recovery_20_24.jsonl",
+    "labels_r141_r110_recovery_25_29.jsonl",
+    "labels_r141_r110_recovery_30_34.jsonl",
+    "labels_r141_r110_recovery_35_39.jsonl",
+    "labels_r141_r110_recovery_55_59.jsonl",
+    "labels_r141_r110_recovery_65_69.jsonl",
+    "labels_r141_r110_recovery_95_99.jsonl"
+  ],
+  "compact_files": [
+    "r141_r110_compact_50_54.jsonl",
+    "r141_r110_compact_60_64.jsonl",
+    "r141_r110_compact_70_74.jsonl",
+    "r141_r110_compact_75_79.jsonl",
+    "r141_r110_compact_90_94.jsonl"
+  ],
+  "canonical_merged": 0,
+  "canonical_review_cursor": "resource_000056.jsonl",
+  "next_operational_shard": "resource_000111.jsonl",
+  "duplicate_content_not_verified": true
+}
