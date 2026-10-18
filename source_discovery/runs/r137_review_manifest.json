@@ -1,0 +1,39 @@
+{
+  "cycle": "r137",
+  "resource_shard": "resource_000106.jsonl",
+  "reviewed_rows": "0-99",
+  "unique_resources": 100,
+  "raw_shards": [
+    "batch_000305.jsonl",
+    "batch_000306.jsonl"
+  ],
+  "raw_ids_verified": 100,
+  "counts": {
+    "unrelated": 100
+  },
+  "full_labels_saved": 30,
+  "compact_labels_saved": 70,
+  "canonical_merged": 0,
+  "next_operational": "resource_000107.jsonl",
+  "canonical_cursor_unchanged": "resource_000056.jsonl",
+  "full_checkpoints": [
+    "runs/labels_r137_r106_001.jsonl",
+    "runs/labels_r137_r106_002_010.jsonl",
+    "runs/labels_r137_r106_011_020.jsonl",
+    "runs/labels_r137_r106_081_090.jsonl"
+  ],
+  "compact_checkpoints": [
+    "runs/r137_r106_compact_31_40.jsonl",
+    "runs/r137_r106_compact_41_50.jsonl",
+    "runs/r137_r106_compact_51_60.jsonl",
+    "runs/r137_compact_26_30.jsonl",
+    "runs/r137_compact_61_65.jsonl",
+    "runs/r137_compact_71_75.jsonl",
+    "runs/r137_compact_76_80.jsonl",
+    "runs/r137_compact_91_95.jsonl",
+    "runs/r137_label_021.jsonl through runs/r137_label_025.jsonl",
+    "runs/r137_label_066.jsonl through runs/r137_label_070.jsonl",
+    "runs/r137_label_096.jsonl through runs/r137_label_100.jsonl"
+  ],
+  "note": "No binary task files inspected. Year in news heading is publication year, not task year; all classified unrelated and raw ledger preserved."
+}
