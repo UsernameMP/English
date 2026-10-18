@@ -1,0 +1,12 @@
+{
+  "cycle": "r142",
+  "date": "2026-10-18",
+  "verified_indexes": [
+    "https://belastro.org/school.html",
+    "https://belastro.org/district.html",
+    "https://belastro.org/regional.html",
+    "https://shi.matmor.unam.mx/canguro/index.php"
+  ],
+  "provenance": "organizer HTML indexes",
+  "status": "pending_canonical_merge"
+}
