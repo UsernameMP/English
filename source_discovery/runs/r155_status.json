@@ -1,0 +1,83 @@
+{
+  "cycle": "r155",
+  "date_utc": "2026-10-18",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "updated": true,
+    "commit": "932ff767109c01d63234a8fb6c659e08aad779ac",
+    "cycle": "hourly-r155-20261018200314000",
+    "crawler_execution_evidence": "crawl_state SHA changed from 2995555dec20a01ef81a3b71009ca3951a6bf2fa to d0d2a8cf8f91e02fd07dc91186abad42b08eeae5; MIME observed 2026-10-18T20:04:49Z",
+    "formal_workflow_completion": "not_verified"
+  },
+  "sources": {
+    "canonical_count": 980,
+    "prior_count": 975,
+    "r154_sources_merged": 5,
+    "r155_new_verified": 4,
+    "r155_canonical_added": 0,
+    "checkpoint": "runs/discovery_20261018_200314_r155.jsonl",
+    "canonical_update": "blocked_by_connector"
+  },
+  "review": {
+    "resource_shard": "resource_000124.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 106,
+    "raw_shards": "batch_000367..000374",
+    "counts": {
+      "unrelated": 98,
+      "review": 2
+    },
+    "individual_full_labels": 40,
+    "individual_compact_labels": 20,
+    "remaining_recoverable_from_resource_index": 40,
+    "checkpoint": "runs/r155_review_status.json",
+    "canonical_merged": 0,
+    "operational_next": "resource_000125.jsonl",
+    "canonical_cursor": "resource_000056.jsonl",
+    "review_state_update": "blocked_by_connector"
+  },
+  "mime": {
+    "observations": 1650,
+    "pdf": 816,
+    "pdf_without_pdf_extension": 644,
+    "latest_observed_at": "2026-10-18T20:04:49Z"
+  },
+  "audit": {
+    "findings": 8,
+    "full_checkpointed": 4,
+    "compact_checkpointed": 4,
+    "files": [
+      "runs/r155_audit_0.jsonl",
+      "runs/r155_audit_pending.json"
+    ]
+  },
+  "backlog": {
+    "directions": 5,
+    "full_checkpointed": 3,
+    "compact_checkpointed": 2,
+    "files": [
+      "runs/r155_backlog_0.jsonl",
+      "runs/r155_backlog_2.jsonl",
+      "runs/r155_backlog_pending.json"
+    ],
+    "canonical_merged": 0
+  },
+  "crawl_queue": {
+    "last_confirmed_unique_urls": 131071,
+    "last_confirmed_pending_pages": 59436,
+    "source_cycle": "r154",
+    "current_queue": "unavailable_crawl_state_large_single_line"
+  },
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_mutations": 0,
+    "schedule_mutations": 0
+  },
+  "unresolved": [
+    "Formal GitHub Actions completion status unavailable",
+    "Canonical sources/backlog/labels/review_state writes blocked",
+    "40 review labels need full expansion before canonical merge",
+    "Current crawler queue unavailable from oversized crawl_state"
+  ]
+}
