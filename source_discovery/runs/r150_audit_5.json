@@ -1,0 +1,1 @@
+{"cycle":"r150","scope":"RIFT pipeline","kind":"publication_block","finding":"run_trigger update blocked; full labels written for 30/100, compact index for all 100, canonical labels and cursor unchanged; source checkpoints partially published.","status":"open","source":"https://github.com/UsernameMP/English/tree/rift-source-index/source_discovery/runs"}
