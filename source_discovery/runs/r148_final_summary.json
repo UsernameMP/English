@@ -1,0 +1,42 @@
+{
+  "cycle": "r148",
+  "timestamp_utc": "2026-10-18T13:08:30Z",
+  "workflow_run_id": 39130264551,
+  "workflow_status": "success",
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_links": 2529,
+    "unique_urls": 129461,
+    "pending_pages": 59030,
+    "blocked_or_failed": 683
+  },
+  "sources": {
+    "canonical": 951,
+    "new_verified_in_checkpoint": 7,
+    "canonical_merged_this_cycle": 0
+  },
+  "review": {
+    "shard": "resource_000117.jsonl",
+    "unique_resources": 100,
+    "full_checkpointed": 75,
+    "compact_checkpointed": 15,
+    "minimal_checkpointed": 10,
+    "canonical_merged": 0,
+    "next_operational": "resource_000118.jsonl"
+  },
+  "audit_findings_checkpointed": 11,
+  "backlog_items_checkpointed": 9,
+  "mime": {
+    "observations": 1615,
+    "pdf": 805,
+    "pdf_without_extension": 633
+  },
+  "canonical_updates": {
+    "run_trigger": true,
+    "sources": false,
+    "link_labels": false,
+    "backlog": false,
+    "review_state": false
+  },
+  "notes": "First raw occurrence IDs 100/100 matched in batch_000327–000336. Binary bodies not downloaded."
+}
