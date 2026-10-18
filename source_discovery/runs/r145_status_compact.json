@@ -1,0 +1,35 @@
+{
+  "cycle": "r145",
+  "date": "2026-10-18",
+  "trigger": "blocked; r144 remains",
+  "discovery": {
+    "verified": 6,
+    "checkpoint": "discovery_20261018_1004_r145.jsonl"
+  },
+  "review": {
+    "shard": "resource_000114.jsonl",
+    "reviewed": 100,
+    "labels_saved": 99,
+    "missing_row": 56,
+    "manifest": "r145_review_manifest.json",
+    "next": "resource_000115.jsonl"
+  },
+  "audit": {
+    "found": 12,
+    "saved": 10
+  },
+  "backlog": {
+    "found": 8,
+    "saved": 6
+  },
+  "canonical_merged": 0,
+  "mime": {
+    "observations": 1573,
+    "pdf": 793,
+    "pdf_without_dot_pdf": 621
+  },
+  "crawler_queue": "unavailable; crawl_state large-file read empty",
+  "binary_downloads": 0,
+  "dropbox_writes": 0,
+  "schedule_changes": 0
+}
