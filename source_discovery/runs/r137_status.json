@@ -1,0 +1,61 @@
+{
+  "cycle": "r137",
+  "requested_at": "2026-10-18T02:05:17Z",
+  "trigger_commit": "f231d90883997435ae8b0759304bce7b7c5c8929",
+  "actions": {
+    "run_id": 39088838900,
+    "conclusion": "success",
+    "completed_at": "2026-10-18T02:07:49Z"
+  },
+  "crawler": {
+    "commit": "ed8fe78",
+    "html_pages": 60,
+    "new_raw_links": 2364,
+    "pending_pages": 57785,
+    "blocked_or_failed": 662,
+    "unique_resources": 125550
+  },
+  "mime": {
+    "observations": 1525,
+    "pdf": 749,
+    "pdf_without_extension": 591,
+    "new_pdf_without_extension": 12
+  },
+  "discovery": {
+    "new_verified_indexes": 3,
+    "github_discovery_checkpointed": 2,
+    "github_discovery_blocked": 1,
+    "canonical_source_count": 910,
+    "canonical_merged_this_cycle": 0
+  },
+  "review": {
+    "shard": "resource_000106.jsonl",
+    "unique": 100,
+    "unrelated": 100,
+    "full_labels_checkpointed": 30,
+    "compact_labels_checkpointed": 70,
+    "canonical_merged": 0,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000305.jsonl",
+      "batch_000306.jsonl"
+    ],
+    "manifest": "runs/r137_review_manifest.json",
+    "next_operational": "resource_000107.jsonl",
+    "canonical_cursor": "resource_000056.jsonl"
+  },
+  "audit": {
+    "findings": 6,
+    "checkpoint": "runs/r137_audit.json",
+    "backlog_entries_new": 4,
+    "backlog_checkpointed": 1,
+    "canonical_backlog_merged": 0
+  },
+  "limits": [
+    "No task PDF/DOC/ZIP/image bodies downloaded",
+    "Direct canonical ledger writes blocked or unsafe without full current content",
+    "Italian neuroscience source GitHub publication blocked",
+    "Other 3 backlog notes present in audit but not in backlog ledger",
+    "No Dropbox or schedule modifications"
+  ]
+}
