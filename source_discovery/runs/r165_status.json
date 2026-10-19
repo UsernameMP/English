@@ -1,0 +1,81 @@
+{
+  "cycle": "r165",
+  "checked_at": "2026-10-19T06:06:06.978Z",
+  "branch": "rift-source-index",
+  "canonical_dir": "source_discovery/",
+  "run_trigger": {
+    "attempted": true,
+    "updated": false,
+    "blocked": "GitHub update_file safety checks",
+    "sha": "011402a005d802c7e5aa2a3fb053e1de92f46d82",
+    "new_workflow_run_confirmed": false
+  },
+  "last_confirmed_workflow": {
+    "run_id": 39202294438,
+    "conclusion": "success",
+    "created_at": "2026-10-19T05:00:18Z",
+    "html_pages": 60,
+    "new_raw_links": 2343,
+    "unique_resource_urls": 138117,
+    "pending_pages": 63029,
+    "blocked_or_failed": 780,
+    "mime_observations": 1717,
+    "pdf_observations": 870,
+    "pdf_without_extension": 698
+  },
+  "sources": {
+    "canonical_count": 1038,
+    "canonical_sha": "6a581d91210e85b2471443b588d3f1aa5d7ed620",
+    "new_verified_sources": 4,
+    "checkpoint": "runs/discovery_20261019_r165.jsonl",
+    "canonical_merged_in_cycle": 0,
+    "previous_r164_sources_pending": 10
+  },
+  "review": {
+    "resource_shard": "resource_000134.jsonl",
+    "resource_blob_sha": "d2613d4b7f26572d1b524a866772269e7248eb9c",
+    "rows": "0-99",
+    "unique_resource_ids": 100,
+    "matched_raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000385.jsonl",
+      "batch_000386.jsonl"
+    ],
+    "classification_counts": {
+      "unrelated": 100
+    },
+    "full_individual_labels_published": 100,
+    "full_label_checkpoints": [
+      "r165_r134_labels_00_19.jsonl",
+      "r165_r134_labels_20_39.jsonl",
+      "r165_r134_labels_40_59.jsonl",
+      "r165_r134_labels_60_79.jsonl",
+      "r165_r134_labels_80_89.jsonl",
+      "r165_r134_labels_90_99.jsonl"
+    ],
+    "checkpoint_integrity_verified": true,
+    "canonical_link_labels_merged": 0,
+    "operational_next": "resource_000135.jsonl",
+    "canonical_resource_cursor": "resource_000056.jsonl",
+    "canonical_raw_cursor": "batch_000006.jsonl next_row_index 24",
+    "review_state_updated": false
+  },
+  "audit": {
+    "items": 13,
+    "checkpoint": "runs/r165_audit_backlog.jsonl",
+    "canonical_backlog_updated": false
+  },
+  "restrictions": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "extra_workflow_runs_manually_started": 0
+  },
+  "unresolved": [
+    "run_trigger update blocked; r165 enumeration not confirmed",
+    "canonical sources.jsonl not yet merged with r164/r165 checkpoints",
+    "canonical link_labels.jsonl, review_state.json, backlog.jsonl unchanged; update_file blocked",
+    "prior r164 60 individual labels pending and older canonical merge debt",
+    "large crawl_state.json and link_labels.jsonl cannot be read as complete text by connector; rely on shards and job logs"
+  ]
+}
