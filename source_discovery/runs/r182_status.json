@@ -1,0 +1,54 @@
+{
+  "cycle": "r182",
+  "at": "2026-10-19T23:15:00Z",
+  "trigger": {
+    "attempted": 2,
+    "updated": false,
+    "error": "GitHub update_file blocked by safety checks"
+  },
+  "crawler": {
+    "new_run_confirmed": false,
+    "last_confirmed_run": 39325197665,
+    "last_conclusion": "success",
+    "last_confirmed_at": "2026-10-19T21:11:42Z",
+    "last_unique_urls": 144591,
+    "last_queue": 64948
+  },
+  "discovery": {
+    "verified_new_unique_sources": 1,
+    "new_source_url": "https://www.ihbbeurope.com/ceesaquestions/",
+    "checkpoint": "runs/discovery_20261019_2301_r182.jsonl",
+    "checkpoint_includes_preexisting_reunion_url": true,
+    "canonical_sources_updated": false,
+    "r181_recovered_sources_checkpointed": 1,
+    "r181_still_local": 2
+  },
+  "review": {
+    "shard": "resource_000151.jsonl",
+    "unique": 100,
+    "raw_occurrences": 100,
+    "types": {
+      "task": 51,
+      "solution": 49
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 0,
+    "next_shard": "resource_000152.jsonl",
+    "review_state_updated": false,
+    "manifest": "runs/r182_review_status.json"
+  },
+  "audit": {
+    "new_canonical_backlog_items": 7,
+    "backlog_commit": "c1a4a8e697d38a00c7dcd29501097612ab0a0538",
+    "canonical_backlog_total": 216
+  },
+  "binary_downloads": 0,
+  "dropbox_modified": false,
+  "schedule_modified": false,
+  "blockers": [
+    "run_trigger update blocked",
+    "sources.jsonl update blocked; merger requires next workflow",
+    "review_state update blocked",
+    "canonical link_labels cannot be read through fetch_file and workflow does not invoke merge_labels.py"
+  ]
+}
