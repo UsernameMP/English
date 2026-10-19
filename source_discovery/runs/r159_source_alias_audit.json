@@ -1,0 +1,16 @@
+{
+  "cycle": "r159",
+  "canonical_rows": 1003,
+  "normalized_unique_urls": 1001,
+  "duplicate_groups": [
+    [
+      "https://iynt.org/",
+      "https://www.iynt.org/"
+    ],
+    [
+      "https://philolympia.org/index.php?page=archivio",
+      "https://www.philolympia.org/index.php?page=archivio"
+    ]
+  ],
+  "action": "preserve provenance and reconcile aliases; no deletion performed"
+}
