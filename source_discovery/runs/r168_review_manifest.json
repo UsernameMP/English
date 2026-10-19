@@ -1,0 +1,35 @@
+{
+  "cycle": "r168",
+  "resource_shard": "resource_000137.jsonl",
+  "resource_sha": "4fe40f06bb36ae525b4ba3445a5991a1d9ba05a9",
+  "rows": "0-99",
+  "unique_resource_ids": 100,
+  "matched_raw_occurrences": 100,
+  "raw_shards": [
+    "batch_000388.jsonl",
+    "batch_000389.jsonl"
+  ],
+  "classification": {
+    "unrelated": 100
+  },
+  "published_full_labels": 100,
+  "label_files": [
+    "r168_r137_labels_00_24.jsonl",
+    "r168_r137_labels_25_49.jsonl",
+    "r168_r137_labels_50_74.jsonl",
+    "r168_r137_labels_75_79.jsonl",
+    "r168_r137_labels_80_84.jsonl",
+    "r168_r137_labels_85_94.jsonl",
+    "r168_r137_labels_95_99.jsonl"
+  ],
+  "special_metadata": [
+    "row32: bulletin 100 bis, not duplicate",
+    "row71: special ICM 2006, not Olympiad"
+  ],
+  "canonical_link_labels_merged": 0,
+  "review_state_updated": false,
+  "next_operational_shard": "resource_000138.jsonl",
+  "canonical_resource_cursor": "resource_000056.jsonl",
+  "canonical_raw_cursor": "batch_000006.jsonl next_row_index 24",
+  "prior_r167_labels_local_only": true
+}
