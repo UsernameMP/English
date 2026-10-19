@@ -1,0 +1,74 @@
+{
+  "cycle": "r175",
+  "at": "2026-10-19T16:11:15.867Z",
+  "branch": "rift-source-index",
+  "resource_shard": "source_discovery/resources_shards/resource_000144.jsonl",
+  "resource_blob_sha": "9851f1a6f43f06428799171563f02b4f011015b0",
+  "reviewed_rows": [
+    0,
+    99
+  ],
+  "unique_resources": 100,
+  "counts": {
+    "task": 67,
+    "solution": 1,
+    "review": 28,
+    "unrelated": 3,
+    "source": 1
+  },
+  "classifications": {
+    "solution": [
+      37
+    ],
+    "unrelated": [
+      46,
+      63,
+      64
+    ],
+    "source": [
+      65
+    ],
+    "review": [
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62
+    ],
+    "task": "all other row indices 0..99"
+  },
+  "raw_shards_checked": [
+    "batch_000413.jsonl",
+    "batch_000414.jsonl",
+    "batch_000415.jsonl",
+    "batch_000416.jsonl"
+  ],
+  "raw_occurrences_matched_in_checked_shards": 100,
+  "review_reason": "16 Belarusian jury blanks may be marking forms; do not classify as criteria without context. 12 IMC links have malformed duplicated ?year query.",
+  "next_operational_shard": "resource_000145.jsonl",
+  "canonical_cursor_unchanged": true,
+  "binary_downloads": 0
+}
