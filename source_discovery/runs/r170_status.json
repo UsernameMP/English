@@ -1,0 +1,83 @@
+{
+  "cycle": "r170",
+  "checked_at": "2026-10-19T11:12:56.182Z",
+  "branch": "rift-source-index",
+  "canonical_path": "source_discovery/",
+  "trigger": {
+    "attempted": true,
+    "updated": false,
+    "attempted_cycle": "hourly-r170-20261019T110543926Z",
+    "current_sha": "b210e54d6b535f106969ee73751e2add967a6bc5",
+    "reason": "GitHub update_file safety block",
+    "new_workflow_run_confirmed": false
+  },
+  "last_confirmed_workflow": {
+    "id": 39216177457,
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-19T07:34:26Z"
+  },
+  "last_confirmed_crawler": {
+    "unique_urls": 140249,
+    "frontier": 63769,
+    "mime_observations": 1741,
+    "pdf_observations": 882,
+    "pdf_without_extension": 724,
+    "source_cycle": "r166"
+  },
+  "discovery": {
+    "new_unique_public_index_urls_verified": 13,
+    "checkpointed_in_github": 12,
+    "checkpoint_blocked": 1,
+    "canonical_sources_before": 1052,
+    "canonical_sources_merged": 0,
+    "checkpoint_files": 6
+  },
+  "review": {
+    "resource_shard": "resource_000139.jsonl",
+    "resource_sha": "ef34107656c642a18e8289c02d607295551bbab1",
+    "unique_resources": 100,
+    "raw_occurrences": 107,
+    "raw_shards": [
+      "batch_000392.jsonl",
+      "batch_000393.jsonl",
+      "batch_000394.jsonl"
+    ],
+    "counts": {
+      "unrelated": 91,
+      "review": 6,
+      "archive": 1,
+      "task": 2
+    },
+    "labels_checkpointed": 100,
+    "label_files": 22,
+    "canonical_labels_merged": 0,
+    "review_state_updated": false,
+    "manifest": "runs/r170_review_manifest.json",
+    "next_operational_shard": "resource_000140.jsonl",
+    "canonical_cursor": "batch_000006.jsonl row 24"
+  },
+  "audit": {
+    "identified": 13,
+    "checkpointed": 8,
+    "canonical_backlog_merged": 0,
+    "canonical_backlog_count": 169
+  },
+  "github": {
+    "new_files_expected": 34,
+    "canonical_sources_update": "blocked",
+    "canonical_backlog_update": "blocked",
+    "canonical_review_state_update": "blocked",
+    "canonical_link_labels_update": "not_attempted_large_file_unreadable",
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "schedule_modified": false
+  },
+  "blockers": [
+    "trigger update blocked; no r170 crawler run",
+    "one verified discovery URL not checkpointed (Lomonosov Social Studies 2025/26)",
+    "five audit items remain uncheckpointed",
+    "canonical merge of sources/labels/backlog/review_state pending",
+    "crawl_state and link_labels too large for connector text range; rely on last confirmed run and sharded ledgers"
+  ]
+}
