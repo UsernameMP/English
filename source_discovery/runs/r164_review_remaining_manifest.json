@@ -1,0 +1,19 @@
+{
+  "cycle": "r164",
+  "resource_shard": "source_discovery/resources_shards/resource_000133.jsonl",
+  "resource_sha": "5128205920e37e33da65477222373880a5a6ca39",
+  "raw_shards": [
+    "batch_000384.jsonl",
+    "batch_000385.jsonl"
+  ],
+  "reviewed_rows": [
+    40,
+    99
+  ],
+  "unique_resources": 60,
+  "type": "unrelated",
+  "reason": "General RSME society electronic newsletters, not Olympiad tasks",
+  "raw_occurrence_ids": "first_occurrence_id in resource shard",
+  "status": "not_individually_published",
+  "requires_expansion": true
+}
