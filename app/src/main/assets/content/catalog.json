@@ -157,6 +157,19 @@
       "content_version": "0.1.0",
       "sha256": "e159f1e5e073206811f735c66cd6ecfe0f88096632bb117a578f12afbebf95bc",
       "enabled": true
+    },
+    {
+      "id": "law.vsosh.school.5-6.ru.2026",
+      "asset": "content/law_g5_6_vsosh.json",
+      "subject": "law",
+      "grade_min": 5,
+      "grade_max": 6,
+      "competition": "ВсОШ · Право · школьный этап",
+      "season": "2026-2027",
+      "license_id": "project.original.v1",
+      "content_version": "0.1.0",
+      "sha256": "802d955dd5a2251e29afa5ff32bfaecb05115a309edb2be07316cffe40db8cb0",
+      "enabled": true
     }
   ]
 }

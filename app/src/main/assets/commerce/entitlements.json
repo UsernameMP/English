@@ -168,6 +168,20 @@
         "informatics.olympiad.5.new15.ru.2026"
       ],
       "device_policy": "local_pilot"
+    },
+    {
+      "id": "pilot.law.vsosh.g5g6",
+      "source": "pilot",
+      "active": true,
+      "subject": "law",
+      "grade_min": 5,
+      "grade_max": 6,
+      "competition": "ВсОШ · Право · школьный этап",
+      "season": "2026-2027",
+      "pack_ids": [
+        "law.vsosh.school.5-6.ru.2026"
+      ],
+      "device_policy": "local_pilot"
     }
   ]
 }

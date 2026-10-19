@@ -211,6 +211,31 @@
       "from": "CS.OPTIMIZATION.SORTING",
       "type": "requires",
       "to": "CS.ALGORITHMS.TRACING"
+    },
+    {
+      "from": "LAW.FAMILY.CHILD",
+      "type": "uses",
+      "to": "LAW.CONSTITUTION.RIGHTS"
+    },
+    {
+      "from": "LAW.CIVIL.TRANSACTIONS",
+      "type": "uses",
+      "to": "LAW.FAMILY.CHILD"
+    },
+    {
+      "from": "LAW.RESPONSIBILITY",
+      "type": "uses",
+      "to": "LAW.CONSTITUTION.RIGHTS"
+    },
+    {
+      "from": "LAW.INSTITUTIONS.PROFESSIONS",
+      "type": "uses",
+      "to": "LAW.RESPONSIBILITY"
+    },
+    {
+      "from": "LAW.TERMS.CITIZENSHIP",
+      "type": "uses",
+      "to": "LAW.CONSTITUTION.RIGHTS"
     }
   ]
 }
