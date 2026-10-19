@@ -13,12 +13,14 @@
   "classifications": {
     "task": 100
   },
-  "full_labels_in_checkpoints": 98,
-  "compact_labels_in_checkpoint": 2,
+  "full_labels_in_checkpoints": 100,
+  "compact_labels_in_checkpoint": 0,
   "compact_pointer": "runs/r176_pending_two.jsonl",
   "canonical_labels_merged": 0,
   "canonical_raw_cursor_unchanged": true,
   "next_operational_shard": "resource_000146.jsonl",
   "review_state_update": "blocked_by_safety_checks",
-  "binary_downloads": 0
+  "binary_downloads": 0,
+  "final_two_labels": "runs/labels_checkpoint_20261019_r176_r145_85_87.jsonl",
+  "updated_at": "2026-10-19T17:13:49.836Z"
 }
