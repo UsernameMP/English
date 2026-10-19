@@ -1,0 +1,13 @@
+{
+  "cycle": "r170",
+  "verified_at": "2026-10-19T11:13:40.110Z",
+  "status_amendment": "r170_status.json audit checkpoint count corrected",
+  "audit_identified": 13,
+  "audit_checkpointed": 13,
+  "review_labels_checkpointed": 100,
+  "discovery_sources_checkpointed": 12,
+  "discovery_sources_blocked": 1,
+  "canonical_updates": 0,
+  "workflow_trigger_updated": false,
+  "review_next": "resource_000140.jsonl"
+}
