@@ -1,0 +1,93 @@
+{
+  "cycle": "r169",
+  "checked_at": "2026-10-19T10:10:47.972Z",
+  "branch": "rift-source-index",
+  "canonical_path": "source_discovery/",
+  "pr_188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "attempted": true,
+    "updated": false,
+    "attempted_cycle": "hourly-r169-20261019T100241335Z",
+    "old_blob_sha": "b210e54d6b535f106969ee73751e2add967a6bc5",
+    "blocker": "GitHub update_file blocked by safety checks",
+    "new_workflow_run_confirmed": false
+  },
+  "last_confirmed_workflow": {
+    "id": 39216177457,
+    "created_at": "2026-10-19T07:28:11Z",
+    "completed_at": "2026-10-19T07:34:26Z",
+    "conclusion": "success"
+  },
+  "last_confirmed_crawler": {
+    "unique_urls": 140249,
+    "frontier": 63769,
+    "mime_observations": 1741,
+    "pdf_observations": 882,
+    "pdf_without_extension": 724,
+    "source_cycle": "r166"
+  },
+  "discovery": {
+    "r169_new_html_sources_checkpointed": 13,
+    "r169_competition_indexes_without_confirmed_task_links": 2,
+    "recovered_r167_checkpointed": 8,
+    "r168_prior_checkpointed": 8,
+    "new_unique_pending_merge_across_r167_r168_r169": 29,
+    "canonical_sources_count": 1052,
+    "canonical_sources_updated": false,
+    "canonical_sources_update_blocker": "GitHub update_file blocked by safety checks",
+    "files": [
+      "runs/discovery_20261019_r169_part1.jsonl",
+      "runs/discovery_20261019_r169_part2.jsonl",
+      "runs/r169_recovered_r167_sources.jsonl",
+      "runs/discovery_20261019_0900_r168.jsonl"
+    ]
+  },
+  "review": {
+    "resource_shard": "resource_000138.jsonl",
+    "rows": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000389.jsonl",
+      "batch_000390.jsonl",
+      "batch_000391.jsonl",
+      "batch_000392.jsonl"
+    ],
+    "counts": {
+      "unrelated": 83,
+      "review": 12,
+      "source": 4,
+      "task": 1
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_link_labels_merged": 0,
+    "review_state_updated": true,
+    "review_state_commit": "48aceb6b8eb182398e26cacbae5cfc534a06523f",
+    "operational_next": "resource_000139.jsonl",
+    "canonical_next": "resource_000056.jsonl",
+    "timestamp_correction_file": "runs/r169_review_timestamp_correction.json"
+  },
+  "audit": {
+    "new_backlog_items": 15,
+    "canonical_backlog_updated": true,
+    "commit": "e5faa5772ba762952bf72b52a4d3e6856a338bf2",
+    "canonical_backlog_total": 169
+  },
+  "restrictions": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "extra_automation_instances": 0
+  },
+  "outstanding": [
+    "run_trigger update blocked; no r169 crawler run",
+    "canonical sources update blocked; discovery checkpoints await merge",
+    "canonical link_labels.jsonl too large for safe fetch and append; labels in 8 checkpoints",
+    "previous cycles' review checkpoint merge debt remains",
+    "r167 Stellenbosch indexed page had live timeout, not promoted to verified canonical source",
+    "MIME application/pdf evidence is not semantic task verification"
+  ]
+}
