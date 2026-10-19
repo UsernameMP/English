@@ -1,0 +1,64 @@
+{
+  "cycle": "r175",
+  "timestamp": "2026-10-19T16:15:35.456Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "attempted": true,
+    "updated": false,
+    "reason": "connector safety checks rejected update_file",
+    "new_workflow_confirmed": false
+  },
+  "last_confirmed_workflow": {
+    "id": 39274679970,
+    "conclusion": "success",
+    "completed_at": "2026-10-19T15:09:34Z"
+  },
+  "crawl": {
+    "unique_urls": 141849,
+    "frontier": 64297,
+    "mime_observations": 1765,
+    "as_of": "r174"
+  },
+  "discovery": {
+    "verified_new": 8,
+    "checkpointed": 7,
+    "unpublished": [
+      "https://www.statscompetition.eu/index.html"
+    ],
+    "canonical_sources_count": 1094,
+    "canonical_merged": 0
+  },
+  "review": {
+    "shard": "resource_000144.jsonl",
+    "unique": 100,
+    "raw_matched_in_four_shards": 100,
+    "counts": {
+      "task": 67,
+      "solution": 1,
+      "review": 28,
+      "unrelated": 3,
+      "source": 1
+    },
+    "full_individual_labels_checkpointed": 95,
+    "compact_only_rows": [
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "manifest": "runs/r175_review_manifest.json",
+    "canonical_merged": 0,
+    "next_shard": "resource_000145.jsonl"
+  },
+  "audit": {
+    "findings": 9,
+    "checkpoints": 9,
+    "canonical_backlog_updated": false
+  },
+  "canonical_cursor": "batch_000006.jsonl:24",
+  "binary_downloads": 0,
+  "dropbox_writes": 0,
+  "schedule_changed": false
+}
