@@ -1,0 +1,43 @@
+{
+  "cycle": "r164",
+  "status": "pending",
+  "findings": [
+    {
+      "scope": "RSME",
+      "kind": "false_positive",
+      "rows": "resource_000133:0-99",
+      "count": 100
+    },
+    {
+      "scope": "SOČ",
+      "kind": "historical_missing_work",
+      "period": "1978-2004"
+    },
+    {
+      "scope": "SOČ",
+      "kind": "participant_work_rights_unknown"
+    },
+    {
+      "scope": "Albany",
+      "kind": "sharepoint_access_unverified"
+    },
+    {
+      "scope": "UCSD",
+      "kind": "download_href_ambiguous"
+    },
+    {
+      "scope": "AILO",
+      "kind": "selective_translation_rights_unknown"
+    },
+    {
+      "scope": "Philolympics",
+      "kind": "essays_and_stage_coverage_rights_unknown"
+    },
+    {
+      "scope": "RIFT",
+      "kind": "canonical_labels_not_merged",
+      "published": 40,
+      "pending": 60
+    }
+  ]
+}
