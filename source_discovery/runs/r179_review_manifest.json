@@ -1,0 +1,29 @@
+{
+  "cycle": "r179",
+  "resource_shard": "resource_000148.jsonl",
+  "resource_blob_sha": "08641d76ff81eed14f740a4296eb9a2d3d48e91c",
+  "row_range": "0-99",
+  "unique_resource_urls": 100,
+  "raw_shards": [
+    "batch_000423.jsonl",
+    "batch_000424.jsonl"
+  ],
+  "raw_occurrences_matched": 100,
+  "reviewed_type_counts": {
+    "task": 50,
+    "solution": 50
+  },
+  "competition": "IPhO",
+  "years": "2003-2014",
+  "subject": "physics",
+  "country": "INT",
+  "classification_rule": "Filename IPhO_YYYY_Qn = task; IPhO_YYYY_Sn = solution; n 1-3 theory, 4-5 experimental. Confirm with anchor text Problem/Solution and parent HTML heading. PDF content not read.",
+  "source_parent": "physicswithstefan.com/ipho-papers",
+  "uncertain_note": "Secondary index only. Some years contain fewer than five linked problems. This batch ends at 2003 Q3; absence of further rows is not absence of further archive materials.",
+  "canonical_merged": 0,
+  "individual_labels_published": 0,
+  "individual_label_publish_blocker": "GitHub safety checks rejected both 10-row and 1-row label checkpoints",
+  "next_operational_shard": "resource_000149.jsonl",
+  "canonical_raw_cursor_unchanged": true,
+  "binary_downloads": 0
+}
