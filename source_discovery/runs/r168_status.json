@@ -1,0 +1,59 @@
+{
+  "cycle": "r168",
+  "date": "2026-10-19",
+  "branch": "rift-source-index",
+  "trigger": {
+    "attempted": true,
+    "updated": false,
+    "reason": "GitHub update_file blocked by safety checks; no r168 enumeration run confirmed"
+  },
+  "last_confirmed_workflow": {
+    "id": 39216177457,
+    "conclusion": "success",
+    "completed_at": "2026-10-19T07:34:26Z"
+  },
+  "last_confirmed_crawler": {
+    "unique_urls": 140249,
+    "frontier": 63769,
+    "mime_observations": 1741,
+    "pdf_observations": 882,
+    "source_cycle": "r166"
+  },
+  "sources": {
+    "canonical_count": 1052,
+    "new_verified": 8,
+    "checkpoint": "runs/discovery_20261019_0900_r168.jsonl",
+    "canonical_merged": 0,
+    "canonical_update_blocked": true
+  },
+  "review": {
+    "resource_shard": "resource_000137.jsonl",
+    "unique_reviewed": 100,
+    "raw_occurrences_matched": 100,
+    "unrelated": 100,
+    "full_labels_published": 100,
+    "canonical_merged": 0,
+    "manifest": "runs/r168_review_manifest.json",
+    "next_operational": "resource_000138.jsonl",
+    "canonical_resource_cursor": "resource_000056.jsonl",
+    "review_state_update_blocked": true
+  },
+  "audit": {
+    "items": 8,
+    "checkpoint": "runs/r168_audit_summary.json",
+    "canonical_backlog_updated": false
+  },
+  "restrictions": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "extra_automation_instances": 0
+  },
+  "unresolved": [
+    "trigger and canonical sources/backlog/review_state/link_labels updates blocked",
+    "r167 local-only review r136 not published",
+    "older review checkpoint merge debt remains",
+    "crawl_state and link_labels too large to read through connector",
+    "resource content not downloaded, MIME only"
+  ]
+}
