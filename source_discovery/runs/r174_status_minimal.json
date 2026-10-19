@@ -1,0 +1,13 @@
+{
+  "cycle": "r174",
+  "workflow_run": 39274679970,
+  "status": "success",
+  "unique_urls": 141849,
+  "frontier": 64297,
+  "reviewed": 100,
+  "full_labels": 80,
+  "compact_labels": 20,
+  "discovery_checkpoints": 7,
+  "canonical_source_merge_pending": 7,
+  "next_shard": "resource_000144.jsonl"
+}
