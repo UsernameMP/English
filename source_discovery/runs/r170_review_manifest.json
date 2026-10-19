@@ -1,0 +1,50 @@
+{
+  "cycle": "r170",
+  "reviewed_at": "2026-10-19T11:12:15.515Z",
+  "resource_shard": "resource_000139.jsonl",
+  "resource_sha": "ef34107656c642a18e8289c02d607295551bbab1",
+  "row_range": "0-99",
+  "unique_resource_ids": 100,
+  "raw_occurrences_matched": 107,
+  "raw_shards": [
+    "batch_000392.jsonl",
+    "batch_000393.jsonl",
+    "batch_000394.jsonl"
+  ],
+  "counts": {
+    "unrelated": 91,
+    "review": 6,
+    "archive": 1,
+    "task": 2
+  },
+  "label_files": [
+    "r170_labels_00_04.jsonl",
+    "r170_labels_05_09.jsonl",
+    "r170_labels_10_14.jsonl",
+    "r170_labels_15_19.jsonl",
+    "r170_labels_20_24.jsonl",
+    "r170_labels_25_29.jsonl",
+    "r170_labels_30_34.jsonl",
+    "r170_labels_35_39.jsonl",
+    "r170_labels_40_44.jsonl",
+    "r170_labels_45_49.jsonl",
+    "r170_labels_50_54.jsonl",
+    "r170_labels_55_59.jsonl",
+    "r170_labels_60_64.jsonl",
+    "r170_labels_65_69.jsonl",
+    "r170_labels_70_74.jsonl",
+    "r170_labels_75_79.jsonl",
+    "r170_labels_80_82.jsonl",
+    "r170_labels_83_84.jsonl",
+    "r170_labels_85_89.jsonl",
+    "r170_labels_90_94.jsonl",
+    "r170_labels_95_96.jsonl",
+    "r170_labels_97_99.jsonl"
+  ],
+  "canonical_link_labels_merged": 0,
+  "review_state_update_blocked": true,
+  "next_operational": "resource_000140.jsonl",
+  "canonical_cursor": "batch_000006.jsonl row 24",
+  "raw_evidence_preserved": true,
+  "binary_downloads": 0
+}
