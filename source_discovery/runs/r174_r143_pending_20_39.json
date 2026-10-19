@@ -1,0 +1,42 @@
+{
+  "cycle": "r174",
+  "resource_shard": "source_discovery/resources_shards/resource_000143.jsonl",
+  "resource_blob_sha": "6e4cd3571831dc8265011f2e3258cd12918833ab",
+  "rows_zero_based": [
+    20,
+    39
+  ],
+  "types_by_row": {
+    "20": "task",
+    "21": "unrelated",
+    "22": "task",
+    "23": "task",
+    "24": "task",
+    "25": "task",
+    "26": "task",
+    "27": "unrelated",
+    "28": "task",
+    "29": "task",
+    "30": "task",
+    "31": "task",
+    "32": "archive",
+    "33": "task",
+    "34": "task",
+    "35": "task",
+    "36": "task",
+    "37": "task",
+    "38": "task",
+    "39": "task"
+  },
+  "context": "Rows 20-31: IChO official preparatory chemistry year sets (prefaces 21,27 excluded); row 32: IChO archive sheets (metadata, not tasks); rows 33-39: Belarus math 2025 selection and final round task PDFs.",
+  "raw_shards": [
+    "batch_000410.jsonl",
+    "batch_000412.jsonl",
+    "batch_000413.jsonl"
+  ],
+  "raw_occurrences_scanned": 20,
+  "canonical_merged": 0,
+  "full_individual_labels_blocked": 20,
+  "reason": "GitHub create_file safety checks rejected both 10-record and 5-record label checkpoint attempts.",
+  "next_action": "Reconstruct full labels from pinned resource shard and raw shards without downloading binaries"
+}
