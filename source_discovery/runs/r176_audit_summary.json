@@ -1,0 +1,30 @@
+{
+  "cycle": "r176",
+  "date": "2026-10-19",
+  "source": "https://www.olchem.edu.pl/kategoria_zadan/olimpiady-krajowe/",
+  "findings": [
+    "67th edition has undifferentiated stage III",
+    "66th edition lacks III in visible HTML",
+    "52nd edition Stage I has no href in HTML",
+    "73rd edition stages I-III have no href in HTML",
+    "Archive covers editions 45-73; r145 only 50-67",
+    "Do not infer calendar years, solutions or marking criteria from filename",
+    "BdPhO direct fetch limited despite indexed round labels",
+    "AUB 2024 site requires permission for redistribution",
+    "IPO essay links require rights review",
+    "r176 trigger blocked; canonical labels pending"
+  ],
+  "review": {
+    "resource_shard": "resource_000145.jsonl",
+    "unique_resources": 100,
+    "full_label_checkpoints": 98,
+    "pending_rows": [
+      85,
+      87
+    ]
+  },
+  "sources": {
+    "verified": 4,
+    "checkpoint": "discovery_20261019_r176.jsonl"
+  }
+}
