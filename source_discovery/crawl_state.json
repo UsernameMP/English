@@ -1,531 +1,6 @@
 {
   "queue": [
     {
-      "url": "https://physics.naboj.org/sk/en/archive/17/results/category/junior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/17/results/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://physics.naboj.org/sk/en/archive/16/results/category/senior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/16/results/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://physics.naboj.org/sk/en/archive/16/results/category/junior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/16/results/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://physics.naboj.org/sk/en/archive/15/results/category/senior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/15/results/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/feladat?a=honap&h=201912&t=fiz&l=hu",
-      "priority": 1,
-      "depth": 4
-    },
-    {
-      "url": "https://physics.naboj.org/sk/en/archive/15/results/category/junior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/15/results/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://physics.naboj.org/sk/en/archive/14/results/category/senior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/14/results/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://physics.naboj.org/sk/en/archive/14/results/category/junior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/14/results/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://physics.naboj.org/sk/en/archive/13/results/category/senior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/13/results/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=P5177&l=hu",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/feladat?a=honap&h=201912&t=fiz&l=hu",
-      "priority": 1,
-      "depth": 4
-    },
-    {
-      "url": "https://physics.naboj.org/sk/en/archive/13/results/category/junior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/13/results/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://physics.naboj.org/sk/en/archive/12/results/category/senior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/12/results/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://physics.naboj.org/sk/en/archive/12/results/category/junior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/12/results/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://physics.naboj.org/sk/en/archive/11/results/category/senior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/11/results/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=P5178&l=hu",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/feladat?a=honap&h=201912&t=fiz&l=hu",
-      "priority": 1,
-      "depth": 4
-    },
-    {
-      "url": "https://physics.naboj.org/sk/en/archive/11/results/category/junior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/11/results/",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://pedagogie.ac-montpellier.fr/le-grand-oral",
-      "root": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
-      "parent_url": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://pedagogie.ac-montpellier.fr/sites/default/files/math_2020_olympiade_sujet_national2019.odt",
-      "root": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
-      "parent_url": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://pedagogie.ac-montpellier.fr/sites/default/files/math_2020_olympiade_sujet_academique2019.odt",
-      "root": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
-      "parent_url": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=P5179&l=hu",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/feladat?a=honap&h=201912&t=fiz&l=hu",
-      "priority": 1,
-      "depth": 4
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/sujet_epreuve",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16809/16809-cg1-si-2023.jpg",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16809/16809-cg2-si-2023.jpg",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=P5180&l=hu",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/feladat?a=honap&h=201912&t=fiz&l=hu",
-      "priority": 1,
-      "depth": 4
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16809/16809-cg3-si-2023.jpg",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16809/16809-cg4-si-2023jpg.jpg",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16809/16809-cg5-si-2023.jpg",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16809/16809-cg6-si-2023.jpg",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=P5181&l=hu",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/feladat?a=honap&h=201912&t=fiz&l=hu",
-      "priority": 1,
-      "depth": 4
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuves-bac-et-concours-general-specialite-sciences-de-lingenieur-2023",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-anti",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-horticole",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=P5182&l=hu",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/feladat?a=honap&h=201912&t=fiz&l=hu",
-      "priority": 1,
-      "depth": 4
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2023-reunion-jour-1-robot-tondeur",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2023-reunion-jour-2-trottinette",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2023-centres-etrangers-jour-1-velo",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2023-centres-etrangers-jour-2",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=P5183&l=hu",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/feladat?a=honap&h=201912&t=fiz&l=hu",
-      "priority": 1,
-      "depth": 4
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2023-nouvelle-caledonie-jour-1-0",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2023-polynesie-jour-1-containwatt",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16808/16808-cg-nsi-2023.jpg",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuves-bac-et-concours-general-specialite-nsi-2023",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=P5184&l=hu",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/feladat?a=honap&h=201912&t=fiz&l=hu",
-      "priority": 1,
-      "depth": 4
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-nsi-numerique-et-sciences-informatiques-metropole-session",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-pratique-bac-general-specialite-numerique-et-sciences-informatiques-0",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-nsi-numerique-et-sciences-informatiques-centres-etrangers",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-nsi-numerique-et-sciences-informatiques-polynesie-session",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=P5185&l=hu",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/feladat?a=honap&h=201912&t=fiz&l=hu",
-      "priority": 1,
-      "depth": 4
-    },
-    {
-      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-nsi-numerique-et-sciences-informatiques-reunion-session-2023",
-      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
-      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://petrumusat.ro/examene/",
-      "root": "https://petrumusat.ro/olimpiada-de-stiinte-socio-umane-etapa-locala-subiecte-si-bareme/",
-      "parent_url": "https://petrumusat.ro/olimpiada-de-stiinte-socio-umane-etapa-locala-subiecte-si-bareme/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://petrumusat.ro/examene/admitere/",
-      "root": "https://petrumusat.ro/olimpiada-de-stiinte-socio-umane-etapa-locala-subiecte-si-bareme/",
-      "parent_url": "https://petrumusat.ro/olimpiada-de-stiinte-socio-umane-etapa-locala-subiecte-si-bareme/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://petrumusat.ro/examene/bacalaureat/",
-      "root": "https://petrumusat.ro/olimpiada-de-stiinte-socio-umane-etapa-locala-subiecte-si-bareme/",
-      "parent_url": "https://petrumusat.ro/olimpiada-de-stiinte-socio-umane-etapa-locala-subiecte-si-bareme/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://nosb.org/",
-      "root": "https://nosb.org/sample-questions-and-study-resources/",
-      "parent_url": "https://nosb.org/sample-questions-and-study-resources/",
-      "priority": 1,
-      "depth": 1
-    },
-    {
-      "url": "https://petrumusat.ro/examene/certificare-competente/",
-      "root": "https://petrumusat.ro/olimpiada-de-stiinte-socio-umane-etapa-locala-subiecte-si-bareme/",
-      "parent_url": "https://petrumusat.ro/olimpiada-de-stiinte-socio-umane-etapa-locala-subiecte-si-bareme/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://isjcta.ro/examene-nationale-2/",
-      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
-      "parent_url": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://sites.google.com/site/fizisjph/evenimente/ojf-2014/subiectebaremerezultate",
-      "root": "https://sites.google.com/site/fizisjph",
-      "parent_url": "https://sites.google.com/site/fizisjph",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://isj.vs.edu.ro/sectiune/examene/",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://nosb.org/theme-resources/",
-      "root": "https://nosb.org/sample-questions-and-study-resources/",
-      "parent_url": "https://nosb.org/sample-questions-and-study-resources/",
-      "priority": 1,
-      "depth": 1
-    },
-    {
-      "url": "https://isj.vs.edu.ro/uncategorized/simulari-examene-nationale-2027/",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://isj.vs.edu.ro/uncategorized/simulari-examene-nationale-2026/",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://isj.vs.edu.ro/uncategorized/simulari-examene-nationale-2025/",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://isj.vs.edu.ro/uncategorized/simulari-examene-nationale-2024/",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://nosb.org/education-and-career-resources/",
-      "root": "https://nosb.org/sample-questions-and-study-resources/",
-      "parent_url": "https://nosb.org/sample-questions-and-study-resources/",
-      "priority": 1,
-      "depth": 1
-    },
-    {
-      "url": "https://isj.vs.edu.ro/examene/simulari-examene-nationale-2023/",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://isj.vs.edu.ro/examene/admitere-2022/",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://isj.vs.edu.ro/examene/bacalaureat-2022/",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://isj.vs.edu.ro/examene/simulari-examene-nationale-2022/",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://nosb.org/finals-competition/",
-      "root": "https://nosb.org/sample-questions-and-study-resources/",
-      "parent_url": "https://nosb.org/sample-questions-and-study-resources/",
-      "priority": 1,
-      "depth": 1
-    },
-    {
-      "url": "https://isj.vs.edu.ro/examene/evaluare-nationala-2022/",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://isj.vs.edu.ro/examene/admitere-2021/",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://isj.vs.edu.ro/examene/bacalaureat-2021/",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://isj.vs.edu.ro/examene/simulari-examene-nationale-2021/",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://nosb.org/2025-finals/",
-      "root": "https://nosb.org/sample-questions-and-study-resources/",
-      "parent_url": "https://nosb.org/sample-questions-and-study-resources/",
-      "priority": 1,
-      "depth": 1
-    },
-    {
       "url": "https://isj.vs.edu.ro/examene/evaluare-nationala-2021/",
       "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
       "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
@@ -64886,10 +64361,66 @@
       "depth": 1
     },
     {
+      "url": "https://www.shd.org.rs/takmicenja/srednje-skole/arhiva/",
+      "root": "https://www.shd.org.rs/takmicenja/srednje-skole/testovi-sa-prethodnih-takmicenja/",
+      "parent_url": "https://www.shd.org.rs/takmicenja/srednje-skole/testovi-sa-prethodnih-takmicenja/",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.shd.org.rs/takmicenja/osnovne-skole/arhiva/",
+      "root": "https://www.shd.org.rs/takmicenja/osnovne-skole/testovi-sa-prethodnih-takmicenja/",
+      "parent_url": "https://www.shd.org.rs/takmicenja/osnovne-skole/testovi-sa-prethodnih-takmicenja/",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.shd.org.rs/aktivnosti/arhiva-dogadjaja/",
+      "root": "https://www.shd.org.rs/izborno-takmicenje-za-57-medjunarodnu-hemijsku-olimpijadu/",
+      "parent_url": "https://www.shd.org.rs/izborno-takmicenje-za-57-medjunarodnu-hemijsku-olimpijadu/",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2013/ipho-2013-1",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho/2013",
+      "priority": 2,
+      "depth": 2
+    },
+    {
       "url": "https://ibecc.net/",
       "root": "https://ibecc.net/previous-competitions/",
       "parent_url": "https://ibecc.net/previous-competitions/",
       "priority": 1,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2013/ipho-2013-2",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho/2013",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2013/ipho-2013-3",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho/2013",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.ipho-new.org/download/483/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/485/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
       "depth": 1
     },
     {
@@ -64900,10 +64431,66 @@
       "depth": 1
     },
     {
+      "url": "https://www.ipho-new.org/download/488/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/492/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/495/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/498/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
       "url": "https://ibecc.net/testimonials/",
       "root": "https://ibecc.net/previous-competitions/",
       "parent_url": "https://ibecc.net/previous-competitions/",
       "priority": 1,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/502/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/504/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/507/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/510/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
       "depth": 1
     },
     {
@@ -64914,10 +64501,66 @@
       "depth": 1
     },
     {
+      "url": "https://www.ipho-new.org/download/513/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/516/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/519/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/522/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
       "url": "https://ibecc.net/ibecc/faq-2/",
       "root": "https://ibecc.net/previous-competitions/",
       "parent_url": "https://ibecc.net/previous-competitions/",
       "priority": 1,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/525/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/528/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/531/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/534/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
       "depth": 1
     },
     {
@@ -64928,10 +64571,66 @@
       "depth": 1
     },
     {
+      "url": "https://www.ipho-new.org/download/537/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/540/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/543/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/546/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
       "url": "https://ibecc.net/results-5/",
       "root": "https://ibecc.net/previous-competitions/",
       "parent_url": "https://ibecc.net/previous-competitions/",
       "priority": 1,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/549/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/552/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/555/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/558/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
       "depth": 1
     },
     {
@@ -64942,10 +64641,66 @@
       "depth": 1
     },
     {
+      "url": "https://www.ipho-new.org/download/561/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/564/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/567/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/570/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
       "url": "https://ibecc.net/competitors/",
       "root": "https://ibecc.net/previous-competitions/",
       "parent_url": "https://ibecc.net/previous-competitions/",
       "priority": 1,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/573/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/576/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/668/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/671/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
       "depth": 1
     },
     {
@@ -64956,10 +64711,66 @@
       "depth": 1
     },
     {
+      "url": "https://www.ipho-new.org/download/674/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/678/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://www.ipho-new.org/download/1314/",
+      "root": "https://www.ipho-new.org/documentations/",
+      "parent_url": "https://www.ipho-new.org/documentations/",
+      "priority": 3,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2012",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
       "url": "https://ibecc.net/links-to-watch-presentations/",
       "root": "https://ibecc.net/previous-competitions/",
       "parent_url": "https://ibecc.net/previous-competitions/",
       "priority": 1,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2011",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2010",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2009",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2008",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
       "depth": 1
     },
     {
@@ -64970,10 +64781,66 @@
       "depth": 1
     },
     {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2007",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2006",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2005",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2004",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
       "url": "https://ibecc.net/biathlon-scoring-2024/",
       "root": "https://ibecc.net/previous-competitions/",
       "parent_url": "https://ibecc.net/previous-competitions/",
       "priority": 1,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2003",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2002",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2001",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/2000",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
       "depth": 1
     },
     {
@@ -64984,10 +64851,66 @@
       "depth": 1
     },
     {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1999",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1998",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1997",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1996",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
       "url": "https://ibecc.net/february-22/",
       "root": "https://ibecc.net/previous-competitions/",
       "parent_url": "https://ibecc.net/previous-competitions/",
       "priority": 1,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1995",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1994",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1993",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1992",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
       "depth": 1
     },
     {
@@ -64998,10 +64921,66 @@
       "depth": 1
     },
     {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1991",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1990",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1989",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1988",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
       "url": "https://ibecc.net/march-10/",
       "root": "https://ibecc.net/previous-competitions/",
       "parent_url": "https://ibecc.net/previous-competitions/",
       "priority": 1,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1987",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1986",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1985",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1984",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
       "depth": 1
     },
     {
@@ -65012,10 +64991,66 @@
       "depth": 1
     },
     {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1983",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1982",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1981",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1979",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
       "url": "https://ibecc.net/march-14/",
       "root": "https://ibecc.net/previous-competitions/",
       "parent_url": "https://ibecc.net/previous-competitions/",
       "priority": 1,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1977",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1976",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1975",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1974",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
       "depth": 1
     },
     {
@@ -65026,11 +65061,67 @@
       "depth": 1
     },
     {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1972",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1971",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1970",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1969",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
       "url": "https://ibecc.net/march-21-2/",
       "root": "https://ibecc.net/previous-competitions/",
       "parent_url": "https://ibecc.net/previous-competitions/",
       "priority": 1,
       "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1968",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/competitions/ipho/1967",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physic.maclabs.studio/en/labs/bai-toan-kepler",
+      "root": "https://physic.maclabs.studio/en/competitions/ipho",
+      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://physics.naboj.org/sk/en/archive/21/albums/Moscow2018/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/21/albums/",
+      "priority": 2,
+      "depth": 2
     },
     {
       "url": "https://ibecc.net/april-5/",
@@ -65040,11 +65131,67 @@
       "depth": 1
     },
     {
+      "url": "https://physics.naboj.org/sk/en/archive/21/albums/bratislava2018/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/21/albums/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://physics.naboj.org/sk/en/archive/20/results/category/senior/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/20/results/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://physics.naboj.org/sk/en/archive/20/results/category/junior/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/20/results/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://physics.naboj.org/sk/en/archive/20/albums/budapest2017/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/20/albums/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
       "url": "https://ibecc.net/seeking-additional-partners/",
       "root": "https://ibecc.net/previous-competitions/",
       "parent_url": "https://ibecc.net/previous-competitions/",
       "priority": 1,
       "depth": 1
+    },
+    {
+      "url": "https://physics.naboj.org/sk/en/archive/20/albums/bratislava2017/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/20/albums/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://physics.naboj.org/sk/en/archive/20/albums/kosice2017/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/20/albums/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://physics.naboj.org/sk/en/archive/19/results/category/senior/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/19/results/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://physics.naboj.org/sk/en/archive/19/results/category/junior/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/19/results/",
+      "priority": 2,
+      "depth": 2
     },
     {
       "url": "https://ibecc.net/the-benefits-of-corporate-partnership/",
@@ -65054,6 +65201,34 @@
       "depth": 1
     },
     {
+      "url": "https://physics.naboj.org/sk/en/archive/19/albums/budapest2016/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/19/albums/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://physics.naboj.org/sk/en/archive/18/results/category/senior/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/18/results/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://physics.naboj.org/sk/en/archive/18/results/category/junior/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/18/results/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://physics.naboj.org/sk/en/archive/18/albums/bratislava2015/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/18/albums/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
       "url": "https://ibecc.net/partners-for-2025/",
       "root": "https://ibecc.net/previous-competitions/",
       "parent_url": "https://ibecc.net/previous-competitions/",
@@ -65061,11 +65236,42 @@
       "depth": 1
     },
     {
+      "url": "https://physics.naboj.org/sk/en/archive/17/results/category/senior/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/17/results/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://scienceolympiadsbd.blogspot.com/p/past-results.html",
+      "root": "https://scienceolympiadsbd.blogspot.com/p/past-results.html",
+      "depth": 0,
+      "priority": 2
+    },
+    {
+      "url": "https://2018.ieo-official.org/tasks-of-ieo-2018/",
+      "root": "https://2018.ieo-official.org/tasks-of-ieo-2018/",
+      "depth": 0,
+      "priority": 2
+    },
+    {
+      "url": "https://kotohazi.netlify.app/problems/contests/",
+      "root": "https://kotohazi.netlify.app/problems/contests/",
+      "depth": 0,
+      "priority": 2
+    },
+    {
       "url": "https://ibecc.net/partners-for-2023/",
       "root": "https://ibecc.net/previous-competitions/",
       "parent_url": "https://ibecc.net/previous-competitions/",
       "priority": 1,
       "depth": 1
+    },
+    {
+      "url": "https://cros.ec.europa.eu/european-statistics-awards",
+      "root": "https://cros.ec.europa.eu/european-statistics-awards",
+      "depth": 0,
+      "priority": 2
     },
     {
       "url": "https://ibecc.net/resources/",
@@ -445632,13 +445838,6 @@
       "depth": 1
     },
     {
-      "url": "https://www.shd.org.rs/takmicenja/srednje-skole/arhiva/",
-      "root": "https://www.shd.org.rs/takmicenja/srednje-skole/testovi-sa-prethodnih-takmicenja/",
-      "parent_url": "https://www.shd.org.rs/takmicenja/srednje-skole/testovi-sa-prethodnih-takmicenja/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
       "url": "https://www.shd.org.rs/takmicenja/srednje-skole/galerija/",
       "root": "https://www.shd.org.rs/takmicenja/srednje-skole/testovi-sa-prethodnih-takmicenja/",
       "parent_url": "https://www.shd.org.rs/takmicenja/srednje-skole/testovi-sa-prethodnih-takmicenja/",
@@ -445723,13 +445922,6 @@
       "depth": 1
     },
     {
-      "url": "https://www.shd.org.rs/takmicenja/osnovne-skole/arhiva/",
-      "root": "https://www.shd.org.rs/takmicenja/osnovne-skole/testovi-sa-prethodnih-takmicenja/",
-      "parent_url": "https://www.shd.org.rs/takmicenja/osnovne-skole/testovi-sa-prethodnih-takmicenja/",
-      "priority": 2,
-      "depth": 1
-    },
-    {
       "url": "https://www.shd.org.rs/takmicenja/osnovne-skole/galerija/",
       "root": "https://www.shd.org.rs/takmicenja/osnovne-skole/testovi-sa-prethodnih-takmicenja/",
       "parent_url": "https://www.shd.org.rs/takmicenja/osnovne-skole/testovi-sa-prethodnih-takmicenja/",
@@ -445797,13 +445989,6 @@
       "root": "https://www.shd.org.rs/izborno-takmicenje-za-57-medjunarodnu-hemijsku-olimpijadu/",
       "parent_url": "https://www.shd.org.rs/izborno-takmicenje-za-57-medjunarodnu-hemijsku-olimpijadu/",
       "priority": 1,
-      "depth": 1
-    },
-    {
-      "url": "https://www.shd.org.rs/aktivnosti/arhiva-dogadjaja/",
-      "root": "https://www.shd.org.rs/izborno-takmicenje-za-57-medjunarodnu-hemijsku-olimpijadu/",
-      "parent_url": "https://www.shd.org.rs/izborno-takmicenje-za-57-medjunarodnu-hemijsku-olimpijadu/",
-      "priority": 2,
       "depth": 1
     },
     {
@@ -446045,234 +446230,10 @@
       "depth": 5
     },
     {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2013/ipho-2013-1",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho/2013",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2013/ipho-2013-2",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho/2013",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2013/ipho-2013-3",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho/2013",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.ipho-new.org/download/483/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/485/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/488/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/492/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/495/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/498/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/502/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/504/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/507/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/510/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/513/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/516/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/519/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/522/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/525/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/528/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/531/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/534/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/537/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/540/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/543/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/546/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/549/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/552/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/555/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
       "url": "https://olymp.hse.ru/mirror/pubs/share/610629508",
       "root": "https://olymp.hse.ru/ma/second/prevtasks",
       "parent_url": "https://olymp.hse.ru/ma/second/prevtasks",
       "priority": 1,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/558/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/561/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/564/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/567/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
       "depth": 1
     },
     {
@@ -446283,66 +446244,10 @@
       "depth": 1
     },
     {
-      "url": "https://www.ipho-new.org/download/570/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/573/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/576/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/668/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
       "url": "https://olymp.hse.ru/mirror/pubs/share/610629490",
       "root": "https://olymp.hse.ru/ma/second/prevtasks",
       "parent_url": "https://olymp.hse.ru/ma/second/prevtasks",
       "priority": 1,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/671/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/674/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/678/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.ipho-new.org/download/1314/",
-      "root": "https://www.ipho-new.org/documentations/",
-      "parent_url": "https://www.ipho-new.org/documentations/",
-      "priority": 3,
       "depth": 1
     },
     {
@@ -446353,66 +446258,10 @@
       "depth": 1
     },
     {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2012",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2011",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2010",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2009",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
       "url": "https://olymp.hse.ru/mirror/pubs/share/610629398",
       "root": "https://olymp.hse.ru/ma/second/prevtasks",
       "parent_url": "https://olymp.hse.ru/ma/second/prevtasks",
       "priority": 1,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2008",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2007",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2006",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2005",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
       "depth": 1
     },
     {
@@ -446423,66 +446272,10 @@
       "depth": 1
     },
     {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2004",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2003",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2002",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2001",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
       "url": "https://olymp.hse.ru/mirror/pubs/share/610629389",
       "root": "https://olymp.hse.ru/ma/second/prevtasks",
       "parent_url": "https://olymp.hse.ru/ma/second/prevtasks",
       "priority": 1,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/2000",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1999",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1998",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1997",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
       "depth": 1
     },
     {
@@ -446493,66 +446286,10 @@
       "depth": 1
     },
     {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1996",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1995",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1994",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1993",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
       "url": "https://olymp.hse.ru/mirror/pubs/share/610629382",
       "root": "https://olymp.hse.ru/ma/second/prevtasks",
       "parent_url": "https://olymp.hse.ru/ma/second/prevtasks",
       "priority": 1,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1992",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1991",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1990",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1989",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
       "depth": 1
     },
     {
@@ -446563,66 +446300,10 @@
       "depth": 1
     },
     {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1988",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1987",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1986",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1985",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
       "url": "https://olymp.hse.ru/mirror/pubs/share/610629372",
       "root": "https://olymp.hse.ru/ma/second/prevtasks",
       "parent_url": "https://olymp.hse.ru/ma/second/prevtasks",
       "priority": 1,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1984",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1983",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1982",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1981",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
       "depth": 1
     },
     {
@@ -446633,34 +446314,6 @@
       "depth": 1
     },
     {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1979",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1977",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1976",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1975",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
       "url": "https://olymp.hse.ru/mirror/pubs/share/610629358",
       "root": "https://olymp.hse.ru/ma/second/prevtasks",
       "parent_url": "https://olymp.hse.ru/ma/second/prevtasks",
@@ -446668,66 +446321,10 @@
       "depth": 1
     },
     {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1974",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1972",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1971",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1970",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
       "url": "https://olymp.hse.ru/mirror/pubs/share/610629349",
       "root": "https://olymp.hse.ru/ma/second/prevtasks",
       "parent_url": "https://olymp.hse.ru/ma/second/prevtasks",
       "priority": 1,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1969",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1968",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/competitions/ipho/1967",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://physic.maclabs.studio/en/labs/bai-toan-kepler",
-      "root": "https://physic.maclabs.studio/en/competitions/ipho",
-      "parent_url": "https://physic.maclabs.studio/en/competitions/ipho",
-      "priority": 2,
       "depth": 1
     },
     {
@@ -446752,102 +446349,1341 @@
       "depth": 1
     },
     {
-      "url": "https://physics.naboj.org/sk/en/archive/21/albums/Moscow2018/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/21/albums/",
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v25970",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v25496",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v23694",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v23479",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v22789",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v23007",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v24404",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v22422",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v23571",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v25545",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v23166",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v25149",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v24266",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v25459",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v22961",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v22996",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v24035",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v23821",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v24612",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v23937",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v22799",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5177&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v25559",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5177&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v22791",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5178&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v23085",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5178&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v24538",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5178&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v23653",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5178&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v24803",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5178&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://pedagogie.ac-montpellier.fr/ressources/search?q=",
+      "root": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
+      "parent_url": "https://pedagogie.ac-montpellier.fr/le-grand-oral",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://pedagogie.ac-montpellier.fr/near-nicking-enzyme-amplification-reaction",
+      "root": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
+      "parent_url": "https://pedagogie.ac-montpellier.fr/le-grand-oral",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://pedagogie.ac-montpellier.fr/le-trinome-academique",
+      "root": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
+      "parent_url": "https://pedagogie.ac-montpellier.fr/le-grand-oral",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://pedagogie.ac-montpellier.fr/egalite-filles-garcons",
+      "root": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
+      "parent_url": "https://pedagogie.ac-montpellier.fr/le-grand-oral",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://pedagogie.ac-montpellier.fr/la-pcr-digitale-ou-dpcr",
+      "root": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
+      "parent_url": "https://pedagogie.ac-montpellier.fr/le-grand-oral",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://pedagogie.ac-montpellier.fr/sybr-green-ou-sonde-taqman-comprendre-la-pcr-en-temps-reel-qpcr",
+      "root": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
+      "parent_url": "https://pedagogie.ac-montpellier.fr/le-grand-oral",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://pedagogie.ac-montpellier.fr/pcr-en-temps-reel-grace-aux-sondes-taqman",
+      "root": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
+      "parent_url": "https://pedagogie.ac-montpellier.fr/le-grand-oral",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://pedagogie.ac-montpellier.fr/serval-des-morts-pour-la-france-temoins-de-la-violence-dun-conflit-asymetrique",
+      "root": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
+      "parent_url": "https://pedagogie.ac-montpellier.fr/le-grand-oral",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://pedagogie.ac-montpellier.fr/tableau-des-concours-2026-2027",
+      "root": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
+      "parent_url": "https://pedagogie.ac-montpellier.fr/le-grand-oral",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://pedagogie.ac-montpellier.fr/base-de-donnees-discours-du-11-novembre-par-fabienne-sala",
+      "root": "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
+      "parent_url": "https://pedagogie.ac-montpellier.fr/le-grand-oral",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v22939",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5179&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v24931",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5179&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v25684",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5179&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/taxonomy/term/{{ formation[0].tid }}",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/formulaire?url=node/8677&source=le contenu&role=publicateur du contenu&titre=Sujets de concours et examens par formations&nom=&mail=",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/print/8677",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/search",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/search/node",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/actualites/epreuve-pratique-de-lenseignement-de-specialite-sciences-de-lingenieur-compter-de-la",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/utilisateurs/olivier-tourvieille",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/actualites/partie-pratique-de-lepreuve-de-lenseignement-de-specialite-numerique-et-sciences",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/actualites/extrait-bo-ndeg46-du-4-decembre-2025",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/ressources_techniques/guide-daccompagnement-du-codap-didactique",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/utilisateurs/jean-christophe-duchateau",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/articles/tchernobyl-100-ans-sous-cloche",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/utilisateurs/thomas-briere",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/articles/bim-en-afrique-du-sud",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/utilisateurs/jose-pautrel",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/seminaires/journee-bim-education-nationale",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/utilisateurs/philippe-young",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/actes-du-seminaire-ia-ipr-sti-novembre-2011-paris",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/utilisateurs/cnr-cmao",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/contact",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/sujet_epreuve",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v23817",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5181&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v25516",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5181&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-bac-specialite-sciences-de-lingenieur-2026-jour-1-polynesie-arbre",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://physics.naboj.org/sk/en/archive/21/albums/bratislava2018/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/21/albums/",
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-bac-specialite-sciences-de-lingenieur-2026-jour-2-centres-etrangers",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://physics.naboj.org/sk/en/archive/20/results/category/senior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/20/results/",
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-bac-specialite-sciences-de-lingenieur-2026-jour-1-centres-etrangers",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://physics.naboj.org/sk/en/archive/20/results/category/junior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/20/results/",
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-bac-specialite-sciences-de-lingenieur-2026-jour-2-metropole-reunion",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://physics.naboj.org/sk/en/archive/20/albums/budapest2017/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/20/albums/",
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-bac-specialite-sciences-de-lingenieur-2026-jour-1-metropole-reunion",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://physics.naboj.org/sk/en/archive/20/albums/bratislava2017/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/20/albums/",
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2025-jour-2-nouvelle-caledonie",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://physics.naboj.org/sk/en/archive/20/albums/kosice2017/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/20/albums/",
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-de-remplacement-specialite-sciences-de-lingenieur-2025-metropole",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://physics.naboj.org/sk/en/archive/19/results/category/senior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/19/results/",
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2025-jour-2-polynesie-robot-reachy",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://physics.naboj.org/sk/en/archive/19/results/category/junior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/19/results/",
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2025-centres-etrangers-jour-2",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://physics.naboj.org/sk/en/archive/19/albums/budapest2016/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/19/albums/",
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2025-centres-etrangers-jour-1",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://physics.naboj.org/sk/en/archive/18/results/category/senior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/18/results/",
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2025-jour-2-metropole-mayotte",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://physics.naboj.org/sk/en/archive/18/results/category/junior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/18/results/",
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2025-jour-1-metropole-mayotte",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://physics.naboj.org/sk/en/archive/18/albums/bratislava2015/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/18/albums/",
+      "url": "https://sti.eduscol.education.fr/concours_examens/concours-general-2025-specialite-sciences-de-lingenieur-les-cobots-lautomatisation",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
       "priority": 2,
       "depth": 2
     },
     {
-      "url": "https://physics.naboj.org/sk/en/archive/17/results/category/senior/",
-      "root": "https://physics.naboj.org/sk/en/archive/",
-      "parent_url": "https://physics.naboj.org/sk/en/archive/17/results/",
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-de-remplacement-specialite-sciences-de-lingenieur-2024-metropole",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
       "priority": 2,
       "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2024-jour-2-polynesie-robot",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2024-jour-2-metropole-mayotte",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2024-jour-1-metropole-mayotte",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2024-centres-etrangers-gr-1-jour-2",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2024-centres-etrangers-gr-1-jour-1",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/concours-general-2024-sciences-de-lingenieur-aeronde",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer?page=1",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/taxonomy/term/62333/feed",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/utilisateurs/francois-pescheux?node=16724",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuves-bac-et-concours-general-specialite-sciences-de-lingenieur-2023",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16724/16724-13857-logo-si-2019.png",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuves-bac-et-concours-general-specialite-sciences-de-lingenieur-2023",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/formulaire?url=node/16724&source=le contenu&role=publicateur du contenu&titre=Epreuves bac et concours général spécialité Sciences de l'Ingénieur 2023&nom=François PESCHEUX&mail=alexandre.hanot+1@portail-sti.fr",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuves-bac-et-concours-general-specialite-sciences-de-lingenieur-2023",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/print/16724",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuves-bac-et-concours-general-specialite-sciences-de-lingenieur-2023",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/utilisateurs/francois-pescheux?node=15878",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-anti",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16735/16735-robot-incendie-1.JPG",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-anti",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16735/16735-robot-incendie-0.JPG",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-anti",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16735/16735-robot-incendie-cin.JPG",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-anti",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16735/16735-robot-incendie-diagblock.JPG",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-anti",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16735/16735-robot-incendie-multiphy.JPG",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-anti",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16735/16735-robot-incendie-pui.JPG",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-anti",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/formulaire?url=node/15878&source=le contenu&role=publicateur du contenu&titre=Épreuve de Spécialité sciences de l'ingénieur - mars 2023  - Métropole Robot anti-incendie  avec formulaire&nom=François PESCHEUX&mail=alexandre.hanot+1@portail-sti.fr",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-anti",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/print/15878",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-anti",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/utilisateurs/francois-pescheux?node=15879",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-horticole",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/15879/15879-robot-horticole-0.JPG",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-horticole",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/15879/15879-robot-horticole-1.JPG",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-horticole",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/15879/15879-robot-horticole-2.JPG",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-horticole",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/15879/15879-robot-horticole-3.JPG",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-horticole",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/15879/15879-robot-horticole-4.JPG",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-horticole",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/formulaire?url=node/15879&source=le contenu&role=publicateur du contenu&titre=Épreuve de Spécialité sciences de l'ingénieur - mars 2023  - Métropole Robot horticole  avec formulaire&nom=François PESCHEUX&mail=alexandre.hanot+1@portail-sti.fr",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-horticole",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/print/15879",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-horticole",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v25898",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5182&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v23892",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5182&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v23677",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5182&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v25502",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5182&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v23718",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5182&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.komal.hu/eredmeny?a=pont&ev=2019&versenyzo=v22953",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/feladat?a=feladat&f=P5185&l=hu",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://petrumusat.ro/wp-content/uploads/2020/06/bacalaureat.png",
+      "root": "https://petrumusat.ro/olimpiada-de-stiinte-socio-umane-etapa-locala-subiecte-si-bareme/",
+      "parent_url": "https://petrumusat.ro/examene/bacalaureat/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://petrumusat.ro/graficul-orelor-suplimentare-de-pregatire-pentru-examenul-de-bacalaureat/",
+      "root": "https://petrumusat.ro/olimpiada-de-stiinte-socio-umane-etapa-locala-subiecte-si-bareme/",
+      "parent_url": "https://petrumusat.ro/examene/bacalaureat/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/alumni-spotlights/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/author/npalma/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/tessa-rock/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/2026-annual-review/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/2026-scholars/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/2027-question-writers-needed/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/page/2/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://petrumusat.ro/rezultatele-examenului-pentru-certificarea-calificarii-profesionale-a-absolventilor-invatamantului-profesional-cu-durata-de-trei-ani-nivelul-3/",
+      "root": "https://petrumusat.ro/olimpiada-de-stiinte-socio-umane-etapa-locala-subiecte-si-bareme/",
+      "parent_url": "https://petrumusat.ro/examene/certificare-competente/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/wp-login.php?redirect_to=https%3A%2F%2Fisjcta.ro%2Fexamene-nationale-2%2F",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/evaluare-viii/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/bacalaureat/examenul-national-de-bacalaureat/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/simulare/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/admiterea-in-invatamantul-liceal-si-profesional/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/examenul-national-de-definitivare-in-invatamant/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/concurs-pentru-ocuparea-posturilor-2022/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/admitere-ix-2-2/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/admitere-ix-2018/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/admitere-ix-2019/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/admitere-2023/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/admiterea-in-invatamantul-liceal-si-profesional/admitere-in-clasa-a-ix-a-2022/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/bacalaureat/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/bacalaureat-sesiunea-iunie-iulie-2021/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/concurs-pentru-ocuparea-posturilor-2022-2/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/concurs-pentru-ocuparea-posturilor-2023/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/definitivat-2022/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/definitivat-2023/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/definitivat-2024/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/evaluare-nationala-clasa-a-viii-a/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isjcta.ro/examene-nationale-2/evaluare-ii-iv-vi/",
+      "root": "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
+      "parent_url": "https://isjcta.ro/examene-nationale-2/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://isj.vs.edu.ro/sectiune/examene/page/2/",
+      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
+      "parent_url": "https://isj.vs.edu.ro/sectiune/examene/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/portfolio-items/marine-debris/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/wp-content/uploads/2026/09/2027-Marine-Debris-Theme-Imagery-3.png",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/portfolio-items/ocean-conservation/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/wp-content/uploads/2025/10/Ocean-Conservation-Theme-Imagery-Icon-2.png",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/portfolio-items/ocean-acoustics/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/wp-content/uploads/2024/10/Ocean-Acoustics-Theme-Page-Icon-Final.png",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/portfolio-items/our-polar-seas/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/wp-content/uploads/2021/12/OurPolarSeasSquare800.jpg",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/portfolio-items/gulf-of-mexico/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/wp-content/uploads/2021/12/GulfofMexicoSquare800.jpg",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/portfolio-items/ocean-observing/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/wp-content/uploads/2021/12/OceanObservingSquare800.jpg",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/portfolio-items/oceans-shaping-weather/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/wp-content/uploads/2021/12/OceansShapingWeatherSquare800.jpg",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/portfolio-items/blue-energy/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/wp-content/uploads/2021/12/BlueEnergySquare800.jpg",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/portfolio-items/coastal-communities/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/wp-content/uploads/2021/12/CoastalSquare800.jpg",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/portfolio-items/ocean-acidification/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/wp-content/uploads/2021/12/OceanAcidificationSquare800.jpg",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/portfolio-items/climate-change-ocean-science-and-solutions/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/wp-content/uploads/2021/11/ClimateChangeSquare800.jpg",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/portfolio-items/great-lakes/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/wp-content/uploads/2025/06/Great-Lakes-Theme-Page-Icon.png",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/theme-resources/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/compete/competitions/finals-competition/2019-nosb-finals/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/finals-competition/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/2013/2013-nosb-finals-award-ceremony-video-slideshow/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/finals-competition/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/2012/2012-nosb-finals-award-ceremony-video-slideshow/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/finals-competition/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/2025-regional-bowl-winners/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/2025-finals/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/2025-finals-competition-results/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/2025-finals/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/wp-content/uploads/2025/05/2025-Finals-Competition-Results-1.png",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/2025-finals/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/category/headline/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/2025-finals/",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/category/news/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/2025-finals/",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://nosb.org/current-sponsors/",
+      "root": "https://nosb.org/sample-questions-and-study-resources/",
+      "parent_url": "https://nosb.org/2025-finals/",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://physics.naboj.org/sk/en/archive/11/results/category/junior/",
+      "root": "https://physics.naboj.org/sk/en/archive/",
+      "parent_url": "https://physics.naboj.org/sk/en/archive/11/results/",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2023-reunion-jour-1-robot-tondeur",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2023-reunion-jour-2-trottinette",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2023-centres-etrangers-jour-1-velo",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2023-centres-etrangers-jour-2",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2023-nouvelle-caledonie-jour-1-0",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-ecrite-specialite-sciences-de-lingenieur-2023-polynesie-jour-1-containwatt",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/system/files/images/concours-examens/16808/16808-cg-nsi-2023.jpg",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuves-bac-et-concours-general-specialite-nsi-2023",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-nsi-numerique-et-sciences-informatiques-metropole-session",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-pratique-bac-general-specialite-numerique-et-sciences-informatiques-0",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-nsi-numerique-et-sciences-informatiques-centres-etrangers",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-nsi-numerique-et-sciences-informatiques-polynesie-session",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-nsi-numerique-et-sciences-informatiques-reunion-session-2023",
+      "root": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
+      "parent_url": "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://isj.vs.edu.ro/examene/simulari-examene-nationale-2021/",
+      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
+      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
+      "priority": 2,
+      "depth": 1
     }
   ],
   "visited": [
@@ -448725,7 +449561,20 @@
     "https://isj.sv.edu.ro/domenii/discipline-de-invatamant",
     "https://isj.vs.edu.ro/curriculum-si-inspectie/fizicachimie/",
     "https://isj.vs.edu.ro/curriculum-si-inspectie/istoriesocio-umane/",
+    "https://isj.vs.edu.ro/examene/admitere-2021/",
+    "https://isj.vs.edu.ro/examene/admitere-2022/",
+    "https://isj.vs.edu.ro/examene/bacalaureat-2021/",
+    "https://isj.vs.edu.ro/examene/bacalaureat-2022/",
+    "https://isj.vs.edu.ro/examene/evaluare-nationala-2022/",
+    "https://isj.vs.edu.ro/examene/simulari-examene-nationale-2022/",
+    "https://isj.vs.edu.ro/examene/simulari-examene-nationale-2023/",
+    "https://isj.vs.edu.ro/sectiune/examene/",
+    "https://isj.vs.edu.ro/uncategorized/simulari-examene-nationale-2024/",
+    "https://isj.vs.edu.ro/uncategorized/simulari-examene-nationale-2025/",
+    "https://isj.vs.edu.ro/uncategorized/simulari-examene-nationale-2026/",
+    "https://isj.vs.edu.ro/uncategorized/simulari-examene-nationale-2027/",
     "https://isjbotosani.ro/curriculum/geografie/olimpiada-de-geografie-2025.html",
+    "https://isjcta.ro/examene-nationale-2/",
     "https://isjcta.ro/olimpiada-nationale-de-stiinte-socio-umane/",
     "https://isjmm.ro/sites/2026-onigim/subiecte.html",
     "https://issc.kangaroo.org.pk/past_papers/3203",
@@ -450751,7 +451600,12 @@
     "https://noic.com.br/problemas-da-semana/solucoes-semana-40/",
     "https://noic.com.br/problemas-da-semana/solucoes-semana-96/",
     "https://noic.com.br/robotica/problemas-da-semana-26-10/",
+    "https://nosb.org/",
+    "https://nosb.org/2025-finals/",
+    "https://nosb.org/education-and-career-resources/",
+    "https://nosb.org/finals-competition/",
     "https://nosb.org/sample-questions-and-study-resources/",
+    "https://nosb.org/theme-resources/",
     "https://novo.oba.org.br/",
     "https://novo.oba.org.br/arquivos",
     "https://novo.oba.org.br/bibliografia",
@@ -451993,10 +452847,17 @@
     "https://pamoofficial.org/",
     "https://paninilingoly.github.io/https://drive.google.com/open?id=1ao9o1bpj2B0S9Ts7ZgrVaVSySfTabkOG",
     "https://paninilingoly.github.io/resources.html",
+    "https://pedagogie.ac-montpellier.fr/le-grand-oral",
     "https://pedagogie.ac-montpellier.fr/olympiades-de-mathematiques-archives",
+    "https://pedagogie.ac-montpellier.fr/sites/default/files/math_2020_olympiade_sujet_academique2019.odt",
+    "https://pedagogie.ac-montpellier.fr/sites/default/files/math_2020_olympiade_sujet_national2019.odt",
     "https://pedagogie.ac-nantes.fr/les-disciplines-du-second-degre/mathematiques/des-maths/olympiades/les-sujets-des-olympiades",
     "https://pedagogie.ac-reunion.fr/svt/examens-concours/concours-eleves/olympiades-geosciences.html",
     "https://pedagogie.ac-toulouse.fr/mathematiques/node/373",
+    "https://petrumusat.ro/examene/",
+    "https://petrumusat.ro/examene/admitere/",
+    "https://petrumusat.ro/examene/bacalaureat/",
+    "https://petrumusat.ro/examene/certificare-competente/",
     "https://petrumusat.ro/olimpiada-de-stiinte-socio-umane-etapa-locala-subiecte-si-bareme/",
     "https://phil-essay.de/",
     "https://phil-essay.de/bewertungskriterien/",
@@ -452096,12 +452957,24 @@
     "https://physics.naboj.org/gb/en/archive/22/problems/",
     "https://physics.naboj.org/sk/en/archive/",
     "https://physics.naboj.org/sk/en/archive/11/results/",
+    "https://physics.naboj.org/sk/en/archive/11/results/category/senior/",
     "https://physics.naboj.org/sk/en/archive/12/results/",
+    "https://physics.naboj.org/sk/en/archive/12/results/category/junior/",
+    "https://physics.naboj.org/sk/en/archive/12/results/category/senior/",
     "https://physics.naboj.org/sk/en/archive/13/results/",
+    "https://physics.naboj.org/sk/en/archive/13/results/category/junior/",
+    "https://physics.naboj.org/sk/en/archive/13/results/category/senior/",
     "https://physics.naboj.org/sk/en/archive/14/results/",
+    "https://physics.naboj.org/sk/en/archive/14/results/category/junior/",
+    "https://physics.naboj.org/sk/en/archive/14/results/category/senior/",
     "https://physics.naboj.org/sk/en/archive/15/results/",
+    "https://physics.naboj.org/sk/en/archive/15/results/category/junior/",
+    "https://physics.naboj.org/sk/en/archive/15/results/category/senior/",
     "https://physics.naboj.org/sk/en/archive/16/results/",
+    "https://physics.naboj.org/sk/en/archive/16/results/category/junior/",
+    "https://physics.naboj.org/sk/en/archive/16/results/category/senior/",
     "https://physics.naboj.org/sk/en/archive/17/results/",
+    "https://physics.naboj.org/sk/en/archive/17/results/category/junior/",
     "https://physics.naboj.org/sk/en/archive/18/albums/",
     "https://physics.naboj.org/sk/en/archive/18/results/",
     "https://physics.naboj.org/sk/en/archive/19/albums/",
@@ -452730,6 +453603,7 @@
     "https://sites.google.com/madrasah.kemenag.go.id/media-pembelajaran-kimia/virtual-lab",
     "https://sites.google.com/site/asociacionolimpiadaeconomia/olimpiada-nacional/pruebas",
     "https://sites.google.com/site/fizisjph",
+    "https://sites.google.com/site/fizisjph/evenimente/ojf-2014/subiectebaremerezultate",
     "https://sites.google.com/site/oma2eso/ediciones-anteriores",
     "https://sites.google.com/view/obhonline/provas-anteriores",
     "https://sites.google.com/view/oistorie2025/comisia-central%C4%83/subiecte",
@@ -452778,8 +453652,20 @@
     "https://ssh.maths.usyd.edu.au/u/SUMSCOMP/",
     "https://ssmr.ro/onm2023",
     "https://stem.pieas.edu.pk/",
+    "https://sti.eduscol.education.fr/concours_examens",
     "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-numerique-et-sciences-informatiques-session-2023",
     "https://sti.eduscol.education.fr/concours_examens/concours-general-des-lycees-sciences-de-lingenieur-session-2023",
+    "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-anti",
+    "https://sti.eduscol.education.fr/concours_examens/epreuve-de-specialite-sciences-de-lingenieur-mars-2023-metropole-robot-horticole",
+    "https://sti.eduscol.education.fr/concours_examens/epreuves-bac-et-concours-general-specialite-sciences-de-lingenieur-2023",
+    "https://sti.eduscol.education.fr/referentiels-par-competences-bac-scientifique-specialite-si-sciences-de-lingenieur-c5-communiquer",
+    "https://sti.eduscol.education.fr/sujet_epreuve",
+    "https://sti.eduscol.education.fr/system/files/images/concours-examens/16809/16809-cg1-si-2023.jpg",
+    "https://sti.eduscol.education.fr/system/files/images/concours-examens/16809/16809-cg2-si-2023.jpg",
+    "https://sti.eduscol.education.fr/system/files/images/concours-examens/16809/16809-cg3-si-2023.jpg",
+    "https://sti.eduscol.education.fr/system/files/images/concours-examens/16809/16809-cg4-si-2023jpg.jpg",
+    "https://sti.eduscol.education.fr/system/files/images/concours-examens/16809/16809-cg5-si-2023.jpg",
+    "https://sti.eduscol.education.fr/system/files/images/concours-examens/16809/16809-cg6-si-2023.jpg",
     "https://stoner.phys.uaic.ro/phi/editii-phi.html",
     "https://stoner.phys.uaic.ro/projects/national-projects/archive.html",
     "https://stoner.phys.uaic.ro/projects/national-projects/archive.html?start=10",
@@ -456298,6 +457184,16 @@
     "https://www.komal.hu/feladat?a=feladat&f=P5120&l=en",
     "https://www.komal.hu/feladat?a=feladat&f=P5121&l=en",
     "https://www.komal.hu/feladat?a=feladat&f=P5175&l=hu",
+    "https://www.komal.hu/feladat?a=feladat&f=P5176&l=hu",
+    "https://www.komal.hu/feladat?a=feladat&f=P5177&l=hu",
+    "https://www.komal.hu/feladat?a=feladat&f=P5178&l=hu",
+    "https://www.komal.hu/feladat?a=feladat&f=P5179&l=hu",
+    "https://www.komal.hu/feladat?a=feladat&f=P5180&l=hu",
+    "https://www.komal.hu/feladat?a=feladat&f=P5181&l=hu",
+    "https://www.komal.hu/feladat?a=feladat&f=P5182&l=hu",
+    "https://www.komal.hu/feladat?a=feladat&f=P5183&l=hu",
+    "https://www.komal.hu/feladat?a=feladat&f=P5184&l=hu",
+    "https://www.komal.hu/feladat?a=feladat&f=P5185&l=hu",
     "https://www.komal.hu/feladat?a=feladat&f=P5294&l=hu",
     "https://www.komal.hu/feladat?a=feladat&f=P5295&l=hu",
     "https://www.komal.hu/feladat?a=feladat&f=P5296&l=hu",
@@ -461350,11 +462246,11 @@
     }
   },
   "version": 1,
-  "updated_at": "2026-10-19T19:59:21+00:00",
+  "updated_at": "2026-10-19T21:07:49+00:00",
   "last_run": {
     "html_pages": 60,
-    "new_links": 1980,
-    "pending_pages": 64828,
+    "new_links": 3709,
+    "pending_pages": 64948,
     "blocked_or_failed": 854
   },
   "html_ampersand_repair_v1": true,
