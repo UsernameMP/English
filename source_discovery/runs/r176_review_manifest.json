@@ -1,0 +1,24 @@
+{
+  "cycle": "r176",
+  "reviewed_at": "2026-10-19T17:13:24.588Z",
+  "resource_shard": "source_discovery/resources_shards/resource_000145.jsonl",
+  "resource_blob_sha": "04d4ec7ace912862a71bf56aec1400bf7184a4e4",
+  "reviewed_rows": "0-99",
+  "unique_resource_ids": 100,
+  "raw_occurrences": 100,
+  "raw_shards": [
+    "batch_000416.jsonl",
+    "batch_000417.jsonl"
+  ],
+  "classifications": {
+    "task": 100
+  },
+  "full_labels_in_checkpoints": 98,
+  "compact_labels_in_checkpoint": 2,
+  "compact_pointer": "runs/r176_pending_two.jsonl",
+  "canonical_labels_merged": 0,
+  "canonical_raw_cursor_unchanged": true,
+  "next_operational_shard": "resource_000146.jsonl",
+  "review_state_update": "blocked_by_safety_checks",
+  "binary_downloads": 0
+}
