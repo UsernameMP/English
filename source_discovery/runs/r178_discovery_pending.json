@@ -1,0 +1,20 @@
+{
+  "cycle": "r178",
+  "canonical_merged": 0,
+  "pending": [
+    {
+      "url": "https://ioai.openintelligence.dev/",
+      "name": "Independent IOAI archive",
+      "status": "verified_secondary_HTML_index",
+      "coverage": "2024-2026, eight rounds advertised",
+      "rights": "unknown"
+    },
+    {
+      "url": "https://www.icho2026.uz/previous-icho",
+      "name": "IChO 2026 historical edition navigation",
+      "status": "verified_official_HTML_index",
+      "coverage": "2018-2025 editions; direct task files not verified",
+      "rights": "unknown"
+    }
+  ]
+}
