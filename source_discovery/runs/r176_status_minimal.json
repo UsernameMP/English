@@ -1,0 +1,19 @@
+{
+  "cycle": "r176",
+  "workflow": 39292240001,
+  "result": "success",
+  "unique_urls": 142303,
+  "frontier": 64506,
+  "html_pages": 60,
+  "new_raw_links": 3670,
+  "sources": 1112,
+  "merged_sources": 18,
+  "review_shard": "resource_000145.jsonl",
+  "reviewed": 100,
+  "full_label_checkpoints": 100,
+  "canonical_labels_merged": 0,
+  "next_shard": "resource_000146.jsonl",
+  "backlog": 187,
+  "review_state_updated": false,
+  "binary_downloads": 0
+}
