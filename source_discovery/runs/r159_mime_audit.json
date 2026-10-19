@@ -1,0 +1,15 @@
+{
+  "cycle": "r159",
+  "observations": 1676,
+  "pdf_mime": 834,
+  "pdf_url_without_dotpdf_anywhere": 662,
+  "observed_new_since_2026_10_19": 8,
+  "new_mime_breakdown": {
+    "application/octet-stream": 6,
+    "application/pdf": 1,
+    "image/jpeg": 1
+  },
+  "example_extensionless_pdf": "https://www.jpho.jp/challenge/challenge2026/media-download/958/26e2e215a209f1c9/PDF/",
+  "interpretation": "MIME confirms file type, not task relevance. Do not download binary bodies.",
+  "rights": "unknown"
+}
