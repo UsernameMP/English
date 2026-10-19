@@ -1,6 +1,7 @@
 {
-  "requested_at": "2026-10-19T07:27:58.654Z",
-  "cycle": "hourly-r165-20261019T072758654Z",
-  "cycle_number": 165,
-  "previous_cycle": "hourly-r164-20261019T050014963Z"
+  "requested_at": "2026-10-19T07:28:07.091Z",
+  "cycle": "hourly-r166-20261019T072807091Z",
+  "cycle_number": 166,
+  "previous_cycle": "hourly-r165-20261019T072758654Z",
+  "correction_of": "hourly-r165-20261019T072758654Z"
 }
