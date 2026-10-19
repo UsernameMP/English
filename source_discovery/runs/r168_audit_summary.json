@@ -1,0 +1,47 @@
+{
+  "cycle": "r168",
+  "date": "2026-10-19",
+  "items": [
+    [
+      "JP Science Koshien",
+      "2019 9th edition cancelled; only practical 3 published",
+      "https://koushien.jst.go.jp/koushien/pastexam/2019/index.html"
+    ],
+    [
+      "JP Science Koshien Jr",
+      "2020 national cancelled; exhibition papers are separate",
+      "https://koushien.jst.go.jp/koushien-Jr/pastexam/2020ex/index.html"
+    ],
+    [
+      "JP SuperCon",
+      "1995-2026 year index; audit tasks vs team reports and rights",
+      "https://www.supercon.cii.isct.ac.jp/attwiki/"
+    ],
+    [
+      "DE BUW",
+      "press summaries not full student projects",
+      "https://www.scienceolympiaden.de/buw/mappen"
+    ],
+    [
+      "DE IPhO",
+      "selection rounds and marking criteria not uniformly indexed",
+      "https://www2.scienceolympiaden.de/ipho/internationale-physik-olympiade-material-download/aufgaben"
+    ],
+    [
+      "ES RSME",
+      "r137 100 society bulletins unrelated; raw preserved",
+      "source_discovery/resources_shards/resource_000137.jsonl"
+    ],
+    [
+      "ES RSME",
+      "bulletin 100bis and special ICM 2006, not olympiad",
+      "source_discovery/resources_shards/resource_000137.jsonl"
+    ],
+    [
+      "PT OPM",
+      "2024/25 HTML mislabels XLII; directory XLIII; 2025/26 XLIV",
+      "https://olimpiadas.spm.pt/Downloads/Ficheiros/Provas/"
+    ]
+  ],
+  "canonical_backlog_merged": false
+}
