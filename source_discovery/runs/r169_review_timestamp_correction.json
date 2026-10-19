@@ -1,0 +1,25 @@
+{
+  "cycle": "r169",
+  "reason": "Three review checkpoints were written with future placeholder reviewed_at 2026-10-19T10:30:00Z. Their correct completion timestamps are the corresponding GitHub commit times. Override reviewed_at on import; original classification data unchanged.",
+  "corrections": [
+    {
+      "file": "r169_review_r138_40_44.jsonl",
+      "rows": "40-44",
+      "correct_reviewed_at": "2026-10-19T10:07:41Z",
+      "commit": "740db0ad33a6f19c978ab7cc3a0f0f5c30329e91"
+    },
+    {
+      "file": "r169_review_r138_45_49.jsonl",
+      "rows": "45-49",
+      "correct_reviewed_at": "2026-10-19T10:07:43Z",
+      "commit": "c59ff3a4ab6d3bf6c881fdb761a8ff0f8454a5bc"
+    },
+    {
+      "file": "r169_review_r138_50_54.jsonl",
+      "rows": "50-54",
+      "correct_reviewed_at": "2026-10-19T10:07:46Z",
+      "commit": "6410e9dbea69d2703b73498c9585c353f8c3da73"
+    }
+  ],
+  "fourth_checkpoint": "r169_review_r138_55_59.jsonl corrected directly in commit 229a1b915b81ee2a3d7b107730b51ad7f38f1008"
+}
