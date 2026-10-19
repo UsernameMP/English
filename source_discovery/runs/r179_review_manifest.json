@@ -25,5 +25,15 @@
   "individual_label_publish_blocker": "GitHub safety checks rejected both 10-row and 1-row label checkpoints",
   "next_operational_shard": "resource_000149.jsonl",
   "canonical_raw_cursor_unchanged": true,
-  "binary_downloads": 0
+  "binary_downloads": 0,
+  "compact_label_checkpoints": [
+    "runs/r179_r148_compact_00_19.jsonl",
+    "runs/r179_r148_compact_20_39.jsonl",
+    "runs/r179_r148_compact_40_59.jsonl",
+    "runs/r179_r148_compact_60_79.jsonl",
+    "runs/r179_r148_compact_80_99.jsonl"
+  ],
+  "compact_labels_published": 100,
+  "full_individual_labels_published": 0,
+  "full_labels_pending": 100
 }
