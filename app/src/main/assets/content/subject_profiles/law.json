@@ -11,7 +11,9 @@
         "single_choice",
         "multi_choice"
       ],
-      "prerequisites": [],
+      "prerequisites": [
+        "LAW.CONSTITUTION.RIGHTS"
+      ],
       "assessed_knowledge": [
         "LAW.CONSTITUTION.RIGHTS",
         "LAW.FAMILY.CHILD",
@@ -25,7 +27,9 @@
         "matching",
         "free_response"
       ],
-      "prerequisites": [],
+      "prerequisites": [
+        "LAW.TERMS.CITIZENSHIP"
+      ],
       "assessed_knowledge": [
         "LAW.RESPONSIBILITY",
         "LAW.INSTITUTIONS.PROFESSIONS",
@@ -38,7 +42,9 @@
         "numeric",
         "sequence"
       ],
-      "prerequisites": [],
+      "prerequisites": [
+        "LAW.FAMILY.CHILD"
+      ],
       "assessed_knowledge": [
         "LAW.FAMILY.CHILD",
         "LAW.CIVIL.TRANSACTIONS"
