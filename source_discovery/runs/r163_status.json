@@ -1,0 +1,80 @@
+{
+  "cycle": "r163",
+  "finished_at": "2026-10-19T04:11:14.980Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "updated": true,
+    "cycle": "hourly-r163-20261019T040639064Z",
+    "commit": "73dfb843f2b95dd0ed16e15790aa8c1710bd7382"
+  },
+  "workflow": {
+    "run_id": 39197841572,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-10-19T04:06:42Z",
+    "completed_at": "2026-10-19T04:09:16Z",
+    "url": "https://github.com/UsernameMP/English/actions/runs/39197841572"
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_links": 2518,
+    "unique_resource_urls": 137789,
+    "pending_pages": 62995,
+    "blocked_or_failed": 776
+  },
+  "mime": {
+    "observations": 1715,
+    "application_pdf": 870,
+    "pdf_without_dot_pdf_url": 698,
+    "other_non_html": 845
+  },
+  "sources": {
+    "canonical_count_after_workflow": 1032,
+    "merged_from_previous_cycles": 10,
+    "new_verified_checkpoint_count": 6,
+    "new_checkpoint": "runs/discovery_20261019_0413_r163.jsonl",
+    "canonical_new_sources_merged": 0
+  },
+  "review": {
+    "resource_shard": "resource_000132.jsonl",
+    "range": "0-99",
+    "unique_resources": 100,
+    "matched_occurrences": 100,
+    "types": {
+      "unrelated": 100
+    },
+    "full_labels_checkpointed": 100,
+    "full_labels_readback_verified": 100,
+    "canonical_labels_merged": 0,
+    "checkpoint_prefix": "runs/labels_checkpoint_20261019_r163_r132_",
+    "next_operational_shard": "resource_000133.jsonl",
+    "canonical_resource_cursor": "resource_000056.jsonl",
+    "canonical_raw_cursor": "batch_000006.jsonl row 24",
+    "canonical_review_state_updated": false
+  },
+  "audit": {
+    "checkpoint_count": 9,
+    "checkpoint": "runs/r163_audit_backlog.jsonl",
+    "canonical_backlog_updated": false
+  },
+  "writes": {
+    "trigger": true,
+    "labels_checkpoint_files": 6,
+    "discovery_checkpoint": true,
+    "audit_checkpoint": true,
+    "canonical_sources_from_r163": false,
+    "canonical_labels": false,
+    "canonical_backlog": false,
+    "review_state": false
+  },
+  "blockers": [
+    "GitHub connector rejected direct append to backlog.jsonl with current SHA (54 KB payload)",
+    "GitHub connector rejected review_state.json replacement with current SHA",
+    "GitHub connector rejected 100-label single checkpoint (105 KB), then all 100 published in six smaller files",
+    "Canonical link_labels.jsonl too large to safely fetch through connector; merge_labels.py is not invoked by crawler workflow",
+    "New source checkpoint merges only on a subsequent routine workflow run; do not trigger a second crawler instance"
+  ],
+  "binary_downloads": 0,
+  "dropbox_modified": false,
+  "schedule_modified": false
+}
