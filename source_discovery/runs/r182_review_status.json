@@ -1,0 +1,19 @@
+{
+  "cycle": "r182",
+  "shard": "resource_000151.jsonl",
+  "resource_sha": "9eb94b7b64fa056e553d16ccd4ac17b0b99215b2",
+  "rows": "0-99",
+  "unique_resources": 100,
+  "raw_occurrences": 100,
+  "raw_shards": "batch_000426..000429",
+  "labels": {
+    "task": 51,
+    "solution": 49
+  },
+  "labels_checkpointed": 100,
+  "checkpoint_files": 18,
+  "canonical_merged": 0,
+  "next_shard": "resource_000152.jsonl",
+  "raw_cursor_unchanged": true,
+  "binary_downloads": 0
+}
