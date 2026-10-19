@@ -1,0 +1,35 @@
+{
+  "cycle": "r178",
+  "reviewed_shard": "resource_000147.jsonl",
+  "reviewed_rows": "0-99",
+  "unique_resources": 100,
+  "labels": {
+    "task": 50,
+    "solution": 50,
+    "full_published": 80,
+    "compact_pending_55_74": 20,
+    "canonical_merged": 0
+  },
+  "discovery": {
+    "verified": 9,
+    "checkpointed": 7,
+    "unpublished": 2
+  },
+  "audit": {
+    "new": 7,
+    "checkpointed": 7,
+    "canonical_merged": 0
+  },
+  "trigger": "blocked_by_safety_checks",
+  "new_crawler_run": false,
+  "last_successful_run_id": 39299750285,
+  "unique_urls_last_run": 142896,
+  "pending_pages_last_run": 64572,
+  "mime_observations": 1782,
+  "pdf_mime": 896,
+  "pdf_without_extension": 738,
+  "next_operational_shard": "resource_000148.jsonl",
+  "canonical_raw_cursor": "batch_000006:24",
+  "canonical_review_state_updated": false,
+  "local_binaries_downloaded": 0
+}
