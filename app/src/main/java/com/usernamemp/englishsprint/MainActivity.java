@@ -295,13 +295,16 @@ public class MainActivity extends Activity {
             for(int j=i;j<Math.min(i+2,subjects.size());j++){
                 final String subject=subjects.get(j);
                 boolean unlocked=subjectUnlocked(subject,catalog,entitlements);
-                String icon="english".equals(subject)?"Aa":
-                        ("mathematics".equals(subject)?"∑":
-                        ("biology".equals(subject)?"🧬":
-                        ("geography".equals(subject)?"◎":
-                        ("history".equals(subject)?"⌛":
-                        ("social_science".equals(subject)?"§":
-                        ("ecology".equals(subject)?"♻":"</>"))))));
+                String icon;
+                if ("english".equals(subject)) icon="Aa";
+                else if ("mathematics".equals(subject)) icon="∑";
+                else if ("biology".equals(subject)) icon="🧬";
+                else if ("geography".equals(subject)) icon="◎";
+                else if ("history".equals(subject)) icon="⌛";
+                else if ("social_science".equals(subject)) icon="§";
+                else if ("law".equals(subject)) icon="⚖";
+                else if ("ecology".equals(subject)) icon="♻";
+                else icon="</>";
                 Button tile=secondaryButton(icon+"\n"+subjectLabel(subject)+(unlocked?"":"\n🔒"));
                 tile.setTextSize(17); tile.setMinHeight(dp(100));
                 tile.setOnClickListener(v->{ if(unlocked) showGradePicker(subject); else showSubscriptionOffer(subject,products); });
@@ -326,6 +329,7 @@ public class MainActivity extends Activity {
         if("biology".equals(subject)) return getString(R.string.subject_biology);
         if("history".equals(subject)) return getString(R.string.subject_history);
         if("social_science".equals(subject)) return getString(R.string.subject_social_science);
+        if("law".equals(subject)) return getString(R.string.subject_law);
         if("ecology".equals(subject)) return getString(R.string.subject_ecology);
         return subject;
     }
@@ -470,6 +474,7 @@ public class MainActivity extends Activity {
         else if("biology".equals(pack.subject)) subject=ru?"Биология":"Biology";
         else if("history".equals(pack.subject)) subject=ru?"История":"History";
         else if("social_science".equals(pack.subject)) subject=ru?"Обществознание":"Social Studies";
+        else if("law".equals(pack.subject)) subject=ru?"Право":"Law";
         else if("ecology".equals(pack.subject)) subject=ru?"Экология":"Ecology";
         else subject=pack.subject;
         String grades=pack.gradeMin==pack.gradeMax?String.valueOf(pack.gradeMin):(pack.gradeMin+"–"+pack.gradeMax);

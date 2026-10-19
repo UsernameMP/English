@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "subject": "law",
+  "scope": "vsosh_school_5_6",
+  "grade_binding": null,
+  "competition_binding": null,
+  "archetypes": [
+    {
+      "id": "legal_case",
+      "primitives": [
+        "single_choice",
+        "multi_choice"
+      ],
+      "prerequisites": [],
+      "assessed_knowledge": [
+        "LAW.CONSTITUTION.RIGHTS",
+        "LAW.FAMILY.CHILD",
+        "LAW.CIVIL.TRANSACTIONS",
+        "LAW.RESPONSIBILITY"
+      ]
+    },
+    {
+      "id": "roles_terminology",
+      "primitives": [
+        "matching",
+        "free_response"
+      ],
+      "prerequisites": [],
+      "assessed_knowledge": [
+        "LAW.RESPONSIBILITY",
+        "LAW.INSTITUTIONS.PROFESSIONS",
+        "LAW.TERMS.CITIZENSHIP"
+      ]
+    },
+    {
+      "id": "age_and_chronology",
+      "primitives": [
+        "numeric",
+        "sequence"
+      ],
+      "prerequisites": [],
+      "assessed_knowledge": [
+        "LAW.FAMILY.CHILD",
+        "LAW.CIVIL.TRANSACTIONS"
+      ]
+    }
+  ]
+}
