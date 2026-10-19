@@ -356,6 +356,35 @@
           "weight": 0.2
         }
       ]
+    },
+    {
+      "pack_id": "law.vsosh.school.5-6.ru.2026",
+      "coverage": [
+        {
+          "knowledge_id": "LAW.CONSTITUTION.RIGHTS",
+          "weight": 0.17
+        },
+        {
+          "knowledge_id": "LAW.FAMILY.CHILD",
+          "weight": 0.17
+        },
+        {
+          "knowledge_id": "LAW.CIVIL.TRANSACTIONS",
+          "weight": 0.17
+        },
+        {
+          "knowledge_id": "LAW.RESPONSIBILITY",
+          "weight": 0.17
+        },
+        {
+          "knowledge_id": "LAW.INSTITUTIONS.PROFESSIONS",
+          "weight": 0.16
+        },
+        {
+          "knowledge_id": "LAW.TERMS.CITIZENSHIP",
+          "weight": 0.16
+        }
+      ]
     }
   ]
 }

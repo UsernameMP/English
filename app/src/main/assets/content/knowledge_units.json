@@ -639,6 +639,66 @@
         "ru": "Сортировка и перестановки",
         "en": "Sorting and swaps"
       }
+    },
+    {
+      "id": "LAW.CONSTITUTION.RIGHTS",
+      "kind": "concept",
+      "legacy_skill": "law_constitution",
+      "labels": {
+        "ru": "Конституционные права",
+        "en": "Конституционные права"
+      },
+      "relations": []
+    },
+    {
+      "id": "LAW.FAMILY.CHILD",
+      "kind": "concept",
+      "legacy_skill": "law_family",
+      "labels": {
+        "ru": "Ребёнок и семья",
+        "en": "Ребёнок и семья"
+      },
+      "relations": []
+    },
+    {
+      "id": "LAW.CIVIL.TRANSACTIONS",
+      "kind": "concept",
+      "legacy_skill": "law_civil",
+      "labels": {
+        "ru": "Имущество и сделки",
+        "en": "Имущество и сделки"
+      },
+      "relations": []
+    },
+    {
+      "id": "LAW.RESPONSIBILITY",
+      "kind": "concept",
+      "legacy_skill": "law_responsibility",
+      "labels": {
+        "ru": "Ответственность",
+        "en": "Ответственность"
+      },
+      "relations": []
+    },
+    {
+      "id": "LAW.INSTITUTIONS.PROFESSIONS",
+      "kind": "concept",
+      "legacy_skill": "law_professions",
+      "labels": {
+        "ru": "Суд и юридические профессии",
+        "en": "Суд и юридические профессии"
+      },
+      "relations": []
+    },
+    {
+      "id": "LAW.TERMS.CITIZENSHIP",
+      "kind": "concept",
+      "legacy_skill": "law_terms",
+      "labels": {
+        "ru": "Правовые понятия и государство",
+        "en": "Правовые понятия и государство"
+      },
+      "relations": []
     }
   ]
 }

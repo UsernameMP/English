@@ -120,6 +120,16 @@
       "season": "2026-2027",
       "target_date": "2027-03-01",
       "mode": "competition"
+    },
+    {
+      "pack_id": "law.vsosh.school.5-6.ru.2026",
+      "subject": "law",
+      "grade": 5,
+      "competition": "ВсОШ · Право · школьный этап",
+      "region": "RU",
+      "season": "2026-2027",
+      "target_date": "2026-11-01",
+      "mode": "competition"
     }
   ]
 }
