@@ -1,0 +1,16 @@
+{
+  "cycle": "r177",
+  "reviewed_shard": "resource_000146.jsonl",
+  "reviewed_rows": "0-99",
+  "full_labels_checkpointed": 100,
+  "raw_occurrences": 132,
+  "next_operational_shard": "resource_000147.jsonl",
+  "canonical_labels_merged": 0,
+  "canonical_cursor_unchanged": true,
+  "trigger_commit": "a9f47a4c70d5fed06e818215b83ebf026ca8c408",
+  "crawl_state_updated_at": "2026-10-19T18:08:20Z",
+  "unique_urls": 142896,
+  "pending_pages": 64572,
+  "discovery_checkpoint": "discovery_20261019_1806_r177.jsonl",
+  "audit_backlog": 197
+}
