@@ -1,0 +1,2 @@
+{"scope":"RIFT","kind":"merge_debt","topic":"Full r162 labels saved as runs/r162_review_r131_labels.jsonl; not merged to canonical link_labels. r159 and older labels remain pending.","status":"pending","cycle":"r162","found_at":"2026-10-19T03:11:09.318Z"}
+{"scope":"RIFT","kind":"source_duplicates","topic":"1022 canonical source rows but 1019 distinct under scheme/www/trailing-slash normalization; three duplicate variants require audit.","status":"pending","cycle":"r162","found_at":"2026-10-19T03:11:09.318Z"}
