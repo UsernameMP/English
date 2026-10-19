@@ -1,0 +1,35 @@
+{
+  "cycle": "r159",
+  "workflow_run_id": 39178920961,
+  "workflow_conclusion": "success",
+  "workflow_completed_at": "2026-10-19T00:07:20Z",
+  "trigger_commit": "0af9b45e56a2bc60427e6966c75bf18593ec1b3c",
+  "crawler_commit": "c3d56f8",
+  "html_pages": 60,
+  "new_links": 4695,
+  "unique_resource_urls": 135897,
+  "pending_pages": 62071,
+  "blocked_or_failed": 746,
+  "sources_canonical": 1007,
+  "sources_added": 4,
+  "review_shard": "resource_000128.jsonl",
+  "reviewed": 100,
+  "review_counts": {
+    "unrelated": 98,
+    "source": 1,
+    "review": 1
+  },
+  "review_labels_checkpointed": 70,
+  "review_labels_unpublished": 30,
+  "review_canonical_merged": 0,
+  "review_unpublished_row_ranges": [
+    "60-69",
+    "80-99"
+  ],
+  "audit_records": 7,
+  "source_alias_pairs": 2,
+  "mime_observations": 1676,
+  "pdf_mime": 834,
+  "unresolved": "Canonical link_labels/backlog/review_state not merged; 30 review labels remain unpublished",
+  "binary_downloads": 0
+}
