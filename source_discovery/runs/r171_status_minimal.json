@@ -1,0 +1,16 @@
+{
+  "cycle": "r171",
+  "workflow_run": 39249877042,
+  "workflow_status": "success",
+  "source_registry": 1091,
+  "resource_urls": 140696,
+  "frontier": 63850,
+  "raw_links_added": 5731,
+  "review_shard": "resource_000140.jsonl",
+  "reviewed_unique": 100,
+  "labels_checkpointed": 80,
+  "labels_pending_manifest": 20,
+  "backlog_total": 181,
+  "next_shard": "resource_000141.jsonl",
+  "canonical_labels_merged": 0
+}
