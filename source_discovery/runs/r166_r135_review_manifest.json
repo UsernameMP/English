@@ -1,0 +1,27 @@
+{
+  "cycle": "r166",
+  "resource_shard": "resource_000135.jsonl",
+  "resource_sha": "f153b327c53adb5a01d40015b79cb6537717db53",
+  "rows": "0-99",
+  "unique_resource_ids": 100,
+  "raw_shards": [
+    "batch_000386.jsonl",
+    "batch_000387.jsonl"
+  ],
+  "matched_raw_ids": 100,
+  "classification": {
+    "unrelated": 100
+  },
+  "reason": "RSME electronic society bulletins 2010-2012; not olympiad task documents",
+  "published_full_labels": [
+    "r166_r135_labels_60_79.jsonl"
+  ],
+  "published_count": 20,
+  "unpublished_ranges": [
+    "0-59",
+    "80-99"
+  ],
+  "canonical_merged": 0,
+  "next_resource_shard": "resource_000136.jsonl",
+  "canonical_cursor_unchanged": true
+}
