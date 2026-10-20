@@ -1,0 +1,14 @@
+{
+  "cycle": "r183",
+  "verified_html_indexes": 3,
+  "new_unique": 2,
+  "new_urls": [
+    "https://biozoom.ir/brainbee-competition/",
+    "https://brainbee.org.cn/bszy"
+  ],
+  "preexisting_url": "https://olimpiadascientificas.org/olimpiadas/abandonadas/viagem/",
+  "preexisting_first_seen": "2026-10-12",
+  "source_checkpoint": "runs/discovery_20261020_0007_r183.jsonl",
+  "canonical_sources_updated": false,
+  "canonical_merge_required": true
+}
