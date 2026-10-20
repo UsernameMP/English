@@ -1,0 +1,51 @@
+{
+  "cycle": "r186",
+  "review_shard": "resource_000155.jsonl",
+  "rows": "0-99",
+  "unique_resources": 100,
+  "raw_occurrences": 100,
+  "raw_shards": [
+    "batch_000431.jsonl",
+    "batch_000432.jsonl",
+    "batch_000433.jsonl"
+  ],
+  "counts": {
+    "task": 60,
+    "solution": 40
+  },
+  "checkpoint_files": [
+    "labels_checkpoint_20261020_r186_r155_test0.jsonl",
+    "labels_checkpoint_20261020_r186_r155_001_005.jsonl",
+    "labels_checkpoint_20261020_r186_r155_006_015.jsonl",
+    "labels_checkpoint_20261020_r186_r155_016_025.jsonl",
+    "labels_checkpoint_20261020_r186_r155_026_035.jsonl",
+    "labels_checkpoint_20261020_r186_r155_041_045.jsonl",
+    "labels_checkpoint_20261020_r186_r155_046_050.jsonl",
+    "labels_checkpoint_20261020_r186_r155_056_060.jsonl",
+    "labels_checkpoint_20261020_r186_r155_061_065.jsonl",
+    "labels_checkpoint_20261020_r186_r155_066_075.jsonl",
+    "labels_checkpoint_20261020_r186_r155_076_085.jsonl",
+    "labels_checkpoint_20261020_r186_r155_086_095.jsonl",
+    "labels_checkpoint_20261020_r186_r155_096_099.jsonl",
+    "labels_checkpoint_20261020_r186_r155_single_036.jsonl",
+    "labels_checkpoint_20261020_r186_r155_single_037.jsonl",
+    "labels_checkpoint_20261020_r186_r155_single_038.jsonl",
+    "labels_checkpoint_20261020_r186_r155_single_039.jsonl",
+    "labels_checkpoint_20261020_r186_r155_single_040.jsonl",
+    "labels_checkpoint_20261020_r186_r155_single_051.jsonl",
+    "labels_checkpoint_20261020_r186_r155_single_052.jsonl",
+    "labels_checkpoint_20261020_r186_r155_single_053.jsonl",
+    "labels_checkpoint_20261020_r186_r155_single_054.jsonl",
+    "labels_checkpoint_20261020_r186_r155_single_055.jsonl"
+  ],
+  "checkpoint_file_count": 23,
+  "checkpointed_full_labels": 100,
+  "all_have_url_and_raw_occurrence_id": true,
+  "canonical_link_labels_updated": false,
+  "canonical_merge_status": "pending; update_file blocked by safety checks; merge_labels.py not invoked by current workflow",
+  "operational_next_resource_shard": "resource_000156.jsonl",
+  "binary_downloads": 0,
+  "raw_occurrences_preserved": true,
+  "provenance_caveat": "source_url in raw links points to USAPhO while parent_url identifies BPhO or F=ma; both retained in raw ledger",
+  "date": "2026-10-20"
+}
