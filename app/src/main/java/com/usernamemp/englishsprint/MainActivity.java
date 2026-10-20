@@ -1384,7 +1384,7 @@ public class MainActivity extends Activity {
      */
     private List<Question> balancedInformaticsSession() {
         android.content.SharedPreferences prefs =
-                getSharedPreferences("rift_informatics_cycle_v2", MODE_PRIVATE);
+                getSharedPreferences("rift_informatics_cycle_v3", MODE_PRIVATE);
         String packId = QuestionBank.currentPack().id;
         String[] kinds = {"numeric", "single_choice", "multi_choice", "matching", "sequence"};
         int rotation = prefs.getInt(packId + ":ai_rotation", 0);
@@ -1397,7 +1397,7 @@ public class MainActivity extends Activity {
             for (Question q : QuestionBank.all()) {
                 if (!kind.equals(q.interaction)) continue;
                 if (q.id.startsWith("ai5_")) ai.add(q);
-                else classic.add(q);
+                else if (introductoryClassicInformatics(q)) classic.add(q);
             }
             boolean includeAi = !ai.isEmpty() && (
                     i == rotation % kinds.length ||
@@ -1412,6 +1412,24 @@ public class MainActivity extends Activity {
         prefs.edit().putInt(packId + ":ai_rotation", (rotation + 1) % kinds.length).apply();
         Collections.shuffle(result, new Random(seed ^ 0x51AA));
         return result;
+    }
+
+    /** Keep advanced combinatorics in the topic bank, not in automatic grade-5 sessions. */
+    private boolean introductoryClassicInformatics(Question q) {
+        if (q.difficulty > 2) return false;
+        switch (q.skill) {
+            case "sorting":
+            case "subsets":
+            case "coloring":
+            case "garden":
+            case "digits":
+            case "counting":
+            case "constraints":
+            case "invariants":
+                return false;
+            default:
+                return true;
+        }
     }
 
     private void takeCycledInformatics(android.content.SharedPreferences prefs, String key,

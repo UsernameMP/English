@@ -13,7 +13,7 @@ expected={k:60 for k in ("numeric","single_choice","multi_choice","matching","se
 assert len(qs)==300
 assert Counter(q["interaction"] for q in qs)==expected
 assert len({q["id"] for q in qs})==len(qs)
-assert bank["content_version"]=="2.1.0"
+assert bank["content_version"]=="2.2.0"
 assert bank["editorial"]["official_task_copy"] is False
 assert len(bank["editorial"]["references"])==5
 catalog=json.loads((ROOT/"app/src/main/assets/content/catalog.json").read_text(encoding="utf-8"))
@@ -46,49 +46,64 @@ for q in qs:
 assert all(q["interaction"]!="spoken_reasoning" for q in qs)
 pilot=json.loads((ROOT/"app/src/main/assets/content/informatics_g5_7_pilot.json").read_text(encoding="utf-8"))
 assert all(q["interaction"]!="spoken_reasoning" for q in pilot["questions"])
-# Independently verify all 50 AI problems against mathematical reference calculations.
+# Independent answer-key fixtures for all 50 introductory AI tasks.
+# The fixture uses displayed option *text*, not JSON answer IDs or source order.
 ai_questions = [q for q in qs if q["id"].startswith("ai5_")]
 assert len(ai_questions) == 50
+assert all(q["id"].startswith("ai5_v2_") for q in ai_questions)
 assert Counter(q["interaction"] for q in ai_questions) == {k: 10 for k in expected}
-assert Counter(q["ai_archetype"] for q in ai_questions) == {
-    name: 5 for name in ("states","bias","scores","schedule","alarms",
-                        "routes","impute","majority","accuracy","gears")}
+assert all(q["difficulty"] <= 2 for q in ai_questions)
 assert all(q["knowledge"][0]["id"] == "CS.AI.OLYMPIAD.5" for q in ai_questions)
-ai_truth = {
-    "states": ([2,4,8,15],15),
-    "bias": ([6,10,15,21],36),
-    "scores": ([9,7,5,3],6),
-    "schedule": ([12,72,480,3600],72),
-    "alarms": ([10,8,6,5],12),
-    "routes": ([6,10,20,35],8),
-    "impute": ([6,5,8,10],11),
-    "majority": ([1,2,3,4],4),
-    "accuracy": ([60,70,80,90],85),
-    "gears": ([1,4,9,16],150),
+ai_fixtures = {
+    "labels": (3, ["Кот","Кот и собака","Кот, собака и хомяк","Кот, собака, хомяк и мышь"], [1,2,3,4]),
+    "rules": (3, ["Товар А: 2 звезды","Товар Б: 5 звёзд","Товар В: 3 звезды","Товар Г: 4 звезды"], [2,5,3,4]),
+    "tables": (3, ["Модель А: 2 верных","Модель Б: 5 верных","Модель В: 3 верных","Модель Г: 4 верных"], [2,5,3,4]),
+    "votes": (3, ["ДДН; ННН","ДДН; НДД; ДДД","ННН; ДДН; ДНД; НДН","ДДН; ДНД; ДДД; НДД"], [1,3,2,4]),
+    "errors": (2, ["Модель А: 3 ошибки","Модель Б: 1 ошибка","Модель В: 4 ошибки","Модель Г: 2 ошибки"], [3,1,4,2]),
+    "accuracy": (80, ["Модель А: 4 из 10","Модель Б: 6 из 10","Модель В: 8 из 10","Модель Г: 9 из 10"], [40,60,80,90]),
+    "missing": (4, ["1, 1, 2, ?","2, 2, 3, ?","3, 3, 1, ?","4, 4, 2, ?"], [1,2,3,4]),
+    "recommend": (3, ["Книга А: 2 балла","Книга Б: 4 балла","Книга В: 1 балл","Книга Г: 3 балла"], [2,4,1,3]),
+    "reminders": (4, ["Понедельник","Понедельник, среда","Понедельник, среда, пятница","Понедельник, среда, пятница, воскресенье"], [1,2,3,4]),
+    "budget": (3, ["Проверка А: 3 жетона","Проверка Б: 1 жетон","Проверка В: 4 жетона","Проверка Г: 2 жетона"], [3,1,4,2]),
 }
+assert Counter(q["ai_archetype"] for q in ai_questions) == {k: 5 for k in ai_fixtures}
+import re
 for q in ai_questions:
-    values, num = ai_truth[q["ai_archetype"]]
+    num, labels, values = ai_fixtures[q["ai_archetype"]]
+    score = dict(zip(labels, values))
     typ = q["interaction"]
     if typ == "numeric":
         assert q["answer"] == [str(num)], q["id"]
     elif typ == "matching":
         left = {x["id"]: x["text"] for x in q["matching_left"]}
         right = {x["id"]: int(x["text"]) for x in q["matching_right"]}
-        canonical = {f"l{i}":values[i] for i in range(4)}
+        assert set(left.values()) == set(labels), q["id"]
         assert len(q["answer"]) == 4, q["id"]
         for pair in q["answer"]:
-            a, b = pair.split(":")
-            assert canonical[a] == right[b], q["id"]
+            li, ri = pair.split(":")
+            assert score[left[li]] == right[ri], q["id"]
     else:
-        value_by_id = {f"abcd"[i]: values[i] for i in range(4)}
+        opts = q["options"]
+        assert {x["text"] for x in opts} == set(labels), q["id"]
+        actual = {o["id"]: score[o["text"]] for o in opts}
         if typ == "single_choice":
-            assert q["answer"] == [max(value_by_id, key=value_by_id.get)], q["id"]
+            expected_answer = {max(actual, key=actual.get)}
+            assert set(q["answer"]) == expected_answer, q["id"]
         elif typ == "multi_choice":
-            threshold = sorted(values)[1]
-            assert set(q["answer"]) == {
-                key for key, value in value_by_id.items() if value >= threshold}, q["id"]
+            threshold = int(re.search(r"не меньше (\\d+)", q["prompt"]).group(1))
+            expected_answer = {id for id, value in actual.items() if value >= threshold}
+            assert set(q["answer"]) == expected_answer, q["id"]
         elif typ == "sequence":
-            assert q["answer"] == sorted(value_by_id, key=value_by_id.get), q["id"]
+            expected_answer = sorted(actual, key=actual.get)
+            assert q["answer"] == expected_answer, q["id"]
+        else:
+            raise AssertionError((q["id"], typ))
+    assert "факториал" not in (q["prompt"] + q["stimulus"]["text"]).lower()
+# The default 15-question training must retain enough accessible classics per type.
+hard_classic = {"sorting","subsets","coloring","garden","digits","counting","constraints","invariants"}
+easy_classic = [q for q in qs if not q["id"].startswith("ai5_")
+                and q["difficulty"] <= 2 and q["skills"][0] not in hard_classic]
+assert all(sum(q["interaction"] == typ for q in easy_classic) >= 12 for typ in expected)
 
 # Full generated mechanics verification: independently recompute each new answer.
 def value_for(q, item):
@@ -151,4 +166,4 @@ signatures = {
     for q in qs
 }
 assert len(signatures) == len(qs), "Repeated task stem and options"
-print("OK: 300 5th-grade informatics problems, 50 per supported mechanic; no microphone.")
+print("OK: 300 grade-5 informatics tasks, including 50 easy AI tasks with independent text-based answer checks.")
