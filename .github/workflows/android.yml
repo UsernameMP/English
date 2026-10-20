@@ -138,7 +138,13 @@ jobs:
           APK=app/build/outputs/apk/release/app-release-unsigned.apk
           unzip -Z1 "$APK" | grep -Fx 'assets/models/t-one-71m/model.onnx'
           unzip -Z1 "$APK" | grep -Fx 'assets/models/t-one-71m/tokens.txt'
-          unzip -Z1 "$APK" | grep -E '^lib/arm64-v8a/libsherpa-onnx-jni[.]so
+          unzip -Z1 "$APK" | grep -F 'lib/arm64-v8a/libsherpa-onnx-jni.so'
+          if unzip -Z1 "$APK" | grep -Fi vosk; then
+            echo 'Unexpected Vosk artifact in T-One APK'
+            exit 1
+          fi
+          unzip -l "$APK" | grep -F 't-one-71m'
+
       - name: Fetch public AOSP pilot signing key
         run: |
           mkdir -p "$RUNNER_TEMP/aosp-testkey"
