@@ -1,0 +1,2 @@
+{"cycle":"r199","kind":"task_index_verification","scope":"PK:ISSC","finding":"Past Papers section exists, but year/round/subject availability remains unknown.","provenance_url":"https://issc.kangaroo.org.pk/","status":"pending"}
+{"cycle":"r199","kind":"canonical_merge_blocker","scope":"RIFT","finding":"Canonical link_labels.jsonl still not merged by workflow. r198 pending labels partially recovered; r168 photo gallery classifications partly published. Canonical review_state cursor lags operational cursor.","status":"pending"}
