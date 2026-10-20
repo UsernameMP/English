@@ -1,0 +1,64 @@
+{
+  "cycle": "r196",
+  "date": "2026-10-20",
+  "trigger_commit": "f185da95401414712f7887eadc883bb74b79d315",
+  "workflow": {
+    "run_id": 39427284654,
+    "conclusion": "success",
+    "crawler_commit": "bbe188f",
+    "html_pages": 60,
+    "new_raw_links": 2588,
+    "unique_resource_urls": 153910,
+    "pending_pages": 71591,
+    "blocked_or_failed": 898,
+    "canonical_sources": 1206
+  },
+  "discovery": {
+    "new_verified_urls": 6,
+    "prior_cycle_sources_recovered": 3,
+    "checkpointed_urls": 9,
+    "canonical_merge_pending": 9
+  },
+  "review": {
+    "resource_shard": "resource_000165.jsonl",
+    "reviewed_unique_resources": 100,
+    "raw_occurrences": 106,
+    "counts_unique": {
+      "task": 22,
+      "solution": 21,
+      "archive": 3,
+      "unrelated": 54
+    },
+    "counts_occurrences": {
+      "task": 22,
+      "solution": 21,
+      "archive": 9,
+      "unrelated": 54
+    },
+    "labels_checkpointed": 106,
+    "canonical_labels_merged": 0,
+    "prior_cycle_occurrences_recovered": 31,
+    "next_resource_shard": "resource_000166.jsonl"
+  },
+  "audit": {
+    "new_findings": 10,
+    "prior_cycle_findings_recovered": 2,
+    "checkpointed": 12
+  },
+  "canonical_updates": {
+    "run_trigger": true,
+    "backlog": true,
+    "backlog_total": 222,
+    "sources": false,
+    "link_labels": false,
+    "review_state": false
+  },
+  "pending": {
+    "source_merge": 9,
+    "label_merge": 137,
+    "operational_cursor": "source_discovery/runs/r196_cursor.json"
+  },
+  "binary_downloads": 0,
+  "dropbox_writes": 0,
+  "schedule_changes": 0
+}
