@@ -1,0 +1,73 @@
+{
+  "cycle": "r186",
+  "date": "2026-10-20",
+  "trigger": {
+    "commit": "41becb283a821d67ddd20b1a3ebd9461fe2a1dc7",
+    "workflow_run_id": 39362864166,
+    "conclusion": "success",
+    "completed_at": "2026-10-20T03:12:50Z"
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_links": 2773,
+    "unique_resource_urls": 146042,
+    "pending_pages": 65688,
+    "blocked_or_failed": 861,
+    "persisted": true,
+    "canonical_sources_after_merge": 1152
+  },
+  "mime": {
+    "resource_observations": 1830,
+    "application_pdf": 917,
+    "application_pdf_without_pdf_extension": 917,
+    "binary_downloads": 0
+  },
+  "discovery": {
+    "new_verified_or_historical_html_indexes": 4,
+    "recovered_prior_sources_checkpointed": 2,
+    "unpublished_recovery_sources": 1,
+    "checkpoints": [
+      "discovery_20261020_0316_r186.jsonl",
+      "discovery_20261020_0317_r186_recovered_1.jsonl",
+      "discovery_20261020_0317_r186_recovered_3.jsonl"
+    ],
+    "canonical_sources_merged_this_cycle_from_r186": 0,
+    "canonical_sources_total": 1152
+  },
+  "review": {
+    "shard": "resource_000155.jsonl",
+    "rows": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "task": 60,
+      "solution": 40
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoint_files": 23,
+    "manifest": "r186_review_manifest.json",
+    "canonical_link_labels_merged": 0,
+    "review_state_updated": true,
+    "next_shard": "resource_000156.jsonl"
+  },
+  "audit": {
+    "new_findings_checkpointed": 10,
+    "prior_pending_findings_recovered": 8,
+    "prior_r185_findings_already_checkpointed": 10,
+    "canonical_backlog_updated": false,
+    "canonical_backlog_total": 216,
+    "checkpoints": [
+      "r186_audit.jsonl",
+      "r186_recovered_audit_r183_r184.jsonl"
+    ]
+  },
+  "blockers": [
+    "Direct canonical link_labels.jsonl update blocked by safety checks; workflow omits merge_labels.py",
+    "Direct canonical backlog.jsonl update blocked by safety checks",
+    "Direct OBMEP Banco de Questões recovered-source checkpoint blocked; source still in local r181 discovery file",
+    "New r186 discovery sources pending next workflow merge"
+  ],
+  "dropbox_mutations": 0,
+  "schedule_changes": 0,
+  "additional_automation_instances": 0
+}
