@@ -1,0 +1,32 @@
+{
+  "cycle": "r184",
+  "trigger_commit": "f5725c616d2affbddf2f0c88e35d44b9f1c6ce7f",
+  "workflow_run_id": 39351886721,
+  "workflow_status_at_checkpoint": "in_progress",
+  "new_verified_source_checkpoints": [
+    "discovery_20261020_0110_r184.jsonl",
+    "discovery_20261020_0112_r184.jsonl"
+  ],
+  "new_source_count": 4,
+  "additional_source_pending": "CNAO archive index publication blocked",
+  "review_shard": "resource_000153.jsonl",
+  "review_rows": "0-99",
+  "unique_resources_reviewed": 100,
+  "review_counts": {
+    "task": 48,
+    "solution": 47,
+    "unrelated": 3,
+    "review": 2
+  },
+  "review_manifest": "r184_review_manifest.json",
+  "compact_labels_checkpointed": 100,
+  "full_labels_with_url_canonical_merged": 0,
+  "next_review_shard": "resource_000154.jsonl",
+  "audit_checkpoints_saved": 7,
+  "backlog_canonical_updated": false,
+  "source_canonical_merge_pending": true,
+  "review_state_canonical_updated": false,
+  "raw_cursor_unchanged": true,
+  "binary_downloads": 0,
+  "dropbox_mutations": 0
+}
