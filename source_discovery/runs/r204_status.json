@@ -1,0 +1,66 @@
+{
+  "cycle": "r204-20261020T210805273Z",
+  "checked_at": "2026-10-20T21:12:39.507Z",
+  "repo": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "run_trigger_update_attempted": true,
+    "update_file_blocked_by_safety_checks": true,
+    "unchanged_blob_sha": "a5894e67e5758eabad358b1a1185c3a6c2293106",
+    "alternative_automatic_push_trigger_from_sources_commit": "d90664e76093a4cbcbfd24e59c170ead67e285a9",
+    "workflow_run_id": 39498395160,
+    "workflow_conclusion": "failure",
+    "failed_step": "Enumerate publicly accessible HTML links",
+    "crawler_fix_unapplied": true
+  },
+  "discovery": {
+    "new_verified_sources": 3,
+    "canonical_sources_total": 1230,
+    "canonical_commit": "d90664e76093a4cbcbfd24e59c170ead67e285a9",
+    "checkpoint": "runs/discovery_20261020_2110_r204.jsonl",
+    "rights": "unknown"
+  },
+  "review": {
+    "resource_shard": "resource_000173.jsonl",
+    "resource_rows": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000526.jsonl",
+      "batch_000527.jsonl"
+    ],
+    "counts": {
+      "task": 65,
+      "solution": 16,
+      "archive": 16,
+      "source": 1,
+      "unrelated": 2
+    },
+    "canonical_labels_added": 100,
+    "canonical_labels_total": 201,
+    "canonical_labels_commit": "46baf68edb423b23be433508d776d2cdf6fe2c2b",
+    "checkpoint": "runs/labels_checkpoint_20261020_2108_r204_r173.jsonl",
+    "review_state_update_blocked": true,
+    "next_resource_shard": "resource_000174.jsonl",
+    "next_resource_shard_exists": true
+  },
+  "audit": {
+    "findings_saved": 7,
+    "checkpoint": "runs/r204_audit.jsonl",
+    "backlog_canonical_update_blocked": true,
+    "canonical_backlog_rows": 227
+  },
+  "crawl": {
+    "state_sha": "80b63b7874fc1d226594a087867a247326b154f6",
+    "new_results_persisted": false,
+    "last_confirmed_unique_urls": 155414,
+    "last_confirmed_queue": 72089,
+    "last_confirmed_as_of": "2026-10-20T19:03:33Z"
+  },
+  "restrictions": {
+    "binary_files_downloaded": 0,
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false
+  }
+}
