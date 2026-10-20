@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-20T00:10:44.830Z",
+  "updated_at": "2026-10-20T03:16:27.594Z",
   "deferred_shards": [
     1,
     2,
@@ -196,17 +196,23 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000153.jsonl",
-    "last_completed_shard": "resource_000152.jsonl",
-    "cycle": "r183",
-    "new_rows_reviewed": "0,36-99",
-    "already_reviewed_rows": "1-35 (r12)",
-    "new_full_labels_checkpointed": 65,
-    "canonical_merged": 0,
+    "next_resource_shard": "resource_000156.jsonl",
+    "last_completed_shard": "resource_000155.jsonl",
+    "cycle": "r186",
+    "reviewed_rows": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
     "raw_shards": [
-      "batch_000427.jsonl",
-      "batch_000428.jsonl"
+      "batch_000431.jsonl",
+      "batch_000432.jsonl",
+      "batch_000433.jsonl"
     ],
+    "counts": {
+      "task": 60,
+      "solution": 40
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 0,
     "canonical_raw_cursor_unchanged": true
   },
   "r124_pending": {
@@ -311,5 +317,14 @@
     "canonical_merged": 0,
     "pending_manifest": "runs/r174_r143_pending_20_39.json",
     "canonical_cursor_moved": false
+  },
+  "r186_pending": {
+    "resource_shard": "resource_000155.jsonl",
+    "unique_resources": 100,
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 0,
+    "review_date": "2026-10-20",
+    "next_resource_shard": "resource_000156.jsonl",
+    "note": "Canonical merge_labels.py not invoked by workflow; label checkpoints use raw_occurrence_id and URL."
   }
 }
