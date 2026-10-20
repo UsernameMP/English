@@ -1,0 +1,21 @@
+{
+  "cycle": "r183",
+  "trigger": "blocked",
+  "last_workflow_run": 39343340410,
+  "workflow_event": "schedule",
+  "new_sources": 2,
+  "source_checkpoint": "discovery_20261020_0007_r183.jsonl",
+  "source_dedup": "r183_discovery_dedup.json",
+  "review_shard": "resource_000152.jsonl",
+  "new_rows": "0,36-99",
+  "previous_rows": "1-35",
+  "new_labels": 65,
+  "labels_checkpointed": 65,
+  "labels_canonical_merged": 0,
+  "review_state_updated": true,
+  "next_shard": "resource_000153.jsonl",
+  "backlog_canonical_updated": false,
+  "latest_known_queue": 64948,
+  "latest_known_unique_urls": 144591,
+  "binary_downloads": 0
+}
