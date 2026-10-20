@@ -699,6 +699,15 @@
         "en": "Правовые понятия и государство"
       },
       "relations": []
+    },
+    {
+      "id": "CS.AI.OLYMPIAD.5",
+      "kind": "method",
+      "legacy_skill": "ai_olympiad",
+      "labels": {
+        "ru": "Искусственный интеллект",
+        "en": "Artificial Intelligence"
+      }
     }
   ]
 }

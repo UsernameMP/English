@@ -430,7 +430,9 @@ public class MainActivity extends Activity {
     }
 
     private void addKnowledgeTopicGrid(LinearLayout root) {
-        List<String> ids=QuestionBank.knowledgeIds();
+        List<String> ids=new ArrayList<>(QuestionBank.knowledgeIds());
+        // AI is a dedicated preparation topic even when the course has many other skills.
+        if (ids.remove("CS.AI.OLYMPIAD.5")) ids.add(0, "CS.AI.OLYMPIAD.5");
         int count=Math.min(8,ids.size());
         for(int start=0;start<count;start+=2) {
             LinearLayout line=row();
@@ -1375,47 +1377,69 @@ public class MainActivity extends Activity {
     }
 
     /** Balanced 15-task sessions: three per supported interaction, no repeats before a cycle ends. */
+    /**
+     * Exactly 15 questions per quick session: 3 per interaction, including
+     * 3 AI-profile questions (a rotating selection of 3 out of 5 interactions).
+     * AI and classical pools have independent persistent no-repeat cycles.
+     */
     private List<Question> balancedInformaticsSession() {
         android.content.SharedPreferences prefs =
-                getSharedPreferences("rift_informatics_cycle_v1", MODE_PRIVATE);
+                getSharedPreferences("rift_informatics_cycle_v2", MODE_PRIVATE);
         String packId = QuestionBank.currentPack().id;
-        String[] interactions = {"numeric", "single_choice", "multi_choice", "matching", "sequence"};
+        String[] kinds = {"numeric", "single_choice", "multi_choice", "matching", "sequence"};
+        int rotation = prefs.getInt(packId + ":ai_rotation", 0);
         List<Question> result = new ArrayList<>();
         long seed = System.nanoTime();
-        for (String interaction : interactions) {
-            String key = packId + ":" + interaction;
-            java.util.Set<String> seen = new java.util.HashSet<>(
-                    prefs.getStringSet(key, java.util.Collections.emptySet()));
-            List<Question> pool = new ArrayList<>();
+        for (int i = 0; i < kinds.length; i++) {
+            String kind = kinds[i];
+            List<Question> classic = new ArrayList<>();
+            List<Question> ai = new ArrayList<>();
             for (Question q : QuestionBank.all()) {
-                if (interaction.equals(q.interaction)) pool.add(q);
+                if (!kind.equals(q.interaction)) continue;
+                if (q.id.startsWith("ai5_")) ai.add(q);
+                else classic.add(q);
             }
-            Collections.shuffle(pool, new Random(seed ^ interaction.hashCode()));
-            List<Question> unseen = new ArrayList<>();
-            for (Question q : pool) if (!seen.contains(q.id)) unseen.add(q);
-            int take = Math.min(3, pool.size());
-            List<Question> chosen = new ArrayList<>();
-            // Finish the old cycle first, even when only 1-2 unseen tasks remain.
-            for (Question q : unseen) {
-                if (chosen.size() >= take) break;
-                chosen.add(q);
+            boolean includeAi = !ai.isEmpty() && (
+                    i == rotation % kinds.length ||
+                    i == (rotation + 1) % kinds.length ||
+                    i == (rotation + 2) % kinds.length);
+            if (includeAi) {
+                takeCycledInformatics(prefs, packId + ":" + kind + ":ai", ai, 1, seed + i, result);
+            }
+            takeCycledInformatics(prefs, packId + ":" + kind + ":classic",
+                    classic, includeAi ? 2 : 3, seed + 10 + i, result);
+        }
+        prefs.edit().putInt(packId + ":ai_rotation", (rotation + 1) % kinds.length).apply();
+        Collections.shuffle(result, new Random(seed ^ 0x51AA));
+        return result;
+    }
+
+    private void takeCycledInformatics(android.content.SharedPreferences prefs, String key,
+            List<Question> pool, int target, long seed, List<Question> out) {
+        int take = Math.min(target, pool.size());
+        if (take == 0) return;
+        java.util.Set<String> seen = new java.util.HashSet<>(
+                prefs.getStringSet(key, java.util.Collections.emptySet()));
+        Collections.shuffle(pool, new Random(seed));
+        List<Question> picked = new ArrayList<>();
+        for (Question q : pool) {
+            if (!seen.contains(q.id) && picked.size() < take) {
+                picked.add(q);
                 seen.add(q.id);
             }
-            if (chosen.size() < take) {
-                // A new cycle starts only after every previous task was seen.
-                seen.clear();
-                for (Question q : pool) {
-                    if (chosen.size() >= take) break;
-                    if (chosen.contains(q)) continue; // never repeat within a session
-                    chosen.add(q);
-                    seen.add(q.id);
-                }
-            }
-            result.addAll(chosen);
-            prefs.edit().putStringSet(key, seen).apply();
         }
-        Collections.shuffle(result, new Random(seed + 131));
-        return result;
+        if (picked.size() < take) {
+            // Finish the previous cycle before starting a new one.
+            seen.clear();
+            for (Question q : pool) {
+                if (picked.size() >= take) break;
+                if (picked.contains(q)) continue;
+                picked.add(q);
+                seen.add(q.id);
+            }
+        }
+        out.addAll(picked);
+        prefs.edit().putStringSet(key, seen).apply();
     }
 
     private void enableDictionaryLinks(TextView view, String source) {

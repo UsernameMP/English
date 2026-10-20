@@ -236,6 +236,26 @@
       "from": "LAW.TERMS.CITIZENSHIP",
       "type": "uses",
       "to": "LAW.CONSTITUTION.RIGHTS"
+    },
+    {
+      "from": "CS.AI.OLYMPIAD.5",
+      "type": "uses",
+      "to": "CS.ALGORITHMS.TRACING"
+    },
+    {
+      "from": "CS.AI.OLYMPIAD.5",
+      "type": "uses",
+      "to": "CS.COMBINATORICS.COUNTING"
+    },
+    {
+      "from": "CS.AI.OLYMPIAD.5",
+      "type": "uses",
+      "to": "CS.DATA.TABLES"
+    },
+    {
+      "from": "CS.AI.OLYMPIAD.5",
+      "type": "uses",
+      "to": "CS.GRAPHS.ROUTES"
     }
   ]
 }
