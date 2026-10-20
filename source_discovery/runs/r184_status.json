@@ -37,5 +37,8 @@
     "pending_pages": 65496,
     "blocked_or_failed": 861,
     "canonical_sources": 1143
-  }
+  },
+  "raw_occurrences_scanned": 102,
+  "crosslinked_resource_ids": 2,
+  "occurrence_count_correction": "runs/r184_occurrence_count.json"
 }
