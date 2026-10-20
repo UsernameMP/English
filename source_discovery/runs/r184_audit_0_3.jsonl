@@ -1,0 +1,4 @@
+{"scope":"APhO 2000","kind":"resource_index_gap","topic":"Raw batch_000429 contains Q1 and S1 but neither URL appears in adjacent resource shards 000152-000154; audit global index","status":"pending","origin":"RIFT r184","found_at":"2026-10-20"}
+{"scope":"IPC 2024","kind":"link_ambiguity","topic":"Intermediate Physics Challenge 2024 page uses same Q link for Problems and Solutions; do not infer separate solution","status":"pending","origin":"RIFT r184","found_at":"2026-10-20"}
+{"scope":"IPC","kind":"year_gap","topic":"Intermediate Physics Challenge archive jumps from 2020 to 2022; check 2021 and historical mirrors","status":"pending","origin":"RIFT r184","found_at":"2026-10-20"}
+{"scope":"IMC 2003","kind":"url_repair","topic":"Five links from 2003 page contain repeated ?year=2003; preserve raw occurrences and verify correct targets","status":"pending","origin":"RIFT r184","found_at":"2026-10-20"}
