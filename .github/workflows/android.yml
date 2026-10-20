@@ -130,7 +130,7 @@ jobs:
           echo "APK_NAME=rift-v${VERSION_NAME}-pilot.apk" >> "$GITHUB_ENV"
 
       - name: Build unsigned release APK
-        run: gradle :app:assembleRelease --stacktrace
+        run: gradle :app:assembleRelease --stacktrace --max-workers=2 -Dorg.gradle.jvmargs='-Xmx4096m -XX:MaxMetaspaceSize=1024m'
 
       - name: Verify T-One and ARM64 native libraries actually entered APK
         run: |
