@@ -1,0 +1,45 @@
+{
+  "cycle": "r205",
+  "rows": [
+    {
+      "resource_shard": "resource_000174.jsonl",
+      "row_index": 50,
+      "resource_id": "85a726681fd31b61defd3f1c",
+      "raw_occurrence_id": "9e1c0383fbf510761012c7df",
+      "raw_shard": "batch_000527.jsonl",
+      "classification": "task",
+      "publication": "full_label_blocked",
+      "requires": "reconstruct from resource index and raw batch; no binary inspection"
+    },
+    {
+      "resource_shard": "resource_000174.jsonl",
+      "row_index": 60,
+      "resource_id": "c80b08a3b1015516e4bf42e0",
+      "raw_occurrence_id": "b173e679ff60ea6d0295fb53",
+      "raw_shard": "batch_000527.jsonl",
+      "classification": "task",
+      "publication": "full_label_blocked",
+      "requires": "reconstruct from resource index and raw batch; no binary inspection"
+    },
+    {
+      "resource_shard": "resource_000174.jsonl",
+      "row_index": 62,
+      "resource_id": "fc3b6ae5600cadbe10f2f61d",
+      "raw_occurrence_id": "c1d2cc6378bccf6ff15b150e",
+      "raw_shard": "batch_000527.jsonl",
+      "classification": "task",
+      "publication": "full_label_blocked",
+      "requires": "reconstruct from resource index and raw batch; no binary inspection"
+    },
+    {
+      "resource_shard": "resource_000174.jsonl",
+      "row_index": 64,
+      "resource_id": "f322d5d1796d1bd6bc83a5b6",
+      "raw_occurrence_id": "b046f0bc24b099a25ed6e0a8",
+      "raw_shard": "batch_000527.jsonl",
+      "classification": "archive",
+      "publication": "full_label_blocked",
+      "requires": "reconstruct from resource index and raw batch; no binary inspection"
+    }
+  ]
+}
