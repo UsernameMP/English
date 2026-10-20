@@ -1,0 +1,46 @@
+{
+  "cycle": "r195",
+  "date": "2026-10-20",
+  "trigger_commit": "02040a8d55f6c587bcbda291d01571ae1c9f13ae",
+  "workflow_run": 39419853383,
+  "workflow_conclusion": "success",
+  "crawler_commit_prefix": "e5993a4",
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_links": 2230,
+    "unique_resource_urls": 153235,
+    "pending_pages": 71463,
+    "blocked_or_failed": 885,
+    "canonical_sources": 1198
+  },
+  "discovery": {
+    "verified_new_urls": 11,
+    "checkpointed": 8,
+    "unpublished": 3,
+    "canonical_merged": 0
+  },
+  "review": {
+    "shard": "resource_000164.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 134,
+    "raw_batches": "batch_000490..000505",
+    "labels_checkpointed": 103,
+    "labels_unpublished": 31,
+    "canonical_merged": 0,
+    "next_shard": "resource_000165.jsonl"
+  },
+  "audit": {
+    "findings": 12,
+    "checkpointed": 10,
+    "unpublished": 2
+  },
+  "canonical_updates": {
+    "sources": false,
+    "backlog": false,
+    "review_state": false,
+    "link_labels": false
+  },
+  "binary_downloads": 0,
+  "dropbox_writes": 0,
+  "schedule_changes": 0
+}
