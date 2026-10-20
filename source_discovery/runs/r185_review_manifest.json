@@ -1,0 +1,56 @@
+{
+  "cycle": "r185",
+  "started_at": "2026-10-20T02:07:15.704Z",
+  "trigger_commit": "1bdd86337533ff3b9a951422b28402bbfae793d5",
+  "workflow_run_id": 39357187889,
+  "workflow_status": "failure",
+  "workflow_failed_step": "Persist results",
+  "workflow_failure_reason": "git push rejected: branch advanced from b2d3aad to 9ae4f369 during job; local crawler commit was not pushed",
+  "crawl_executed_in_runner": true,
+  "crawl_results_persisted": false,
+  "unpersisted_runner_metrics": {
+    "html_pages": 60,
+    "new_raw_links": 2773,
+    "unique_resource_urls": 146042,
+    "pending_pages": 65683,
+    "blocked_or_failed": 861,
+    "source_count_after_merge": 1147
+  },
+  "canonical_metrics_remain_previous": true,
+  "discovery_checkpoint": "discovery_20261020_0207_r185.jsonl",
+  "discovery_verified_count": 5,
+  "discovery_canonical_merged": false,
+  "review_shard": "resource_000154.jsonl",
+  "review_rows": "0-99",
+  "review_unique_resources": 100,
+  "raw_occurrences": 100,
+  "raw_shards": [
+    "batch_000430.jsonl",
+    "batch_000431.jsonl"
+  ],
+  "review_counts": {
+    "task": 53,
+    "solution": 45,
+    "review": 2
+  },
+  "review_checkpoints": [
+    "r185_review_compact_000_009.jsonl",
+    "r185_review_compact_010_024.jsonl",
+    "r185_review_compact_025_039.jsonl",
+    "r185_review_compact_040_054.jsonl",
+    "r185_review_compact_055_069.jsonl",
+    "r185_review_compact_070_084.jsonl",
+    "r185_review_compact_085_099.jsonl"
+  ],
+  "full_labels_with_urls_published": 0,
+  "compact_labels_published": 100,
+  "canonical_labels_merged": 0,
+  "reason_full_labels_unpublished": "GitHub create_file with URL-bearing labels blocked by safety checks",
+  "audit_checkpoint": "r185_audit.jsonl",
+  "audit_count": 10,
+  "backlog_canonical_updated": false,
+  "next_review_shard": "resource_000155.jsonl",
+  "raw_cursor_unchanged": true,
+  "binary_downloads": 0,
+  "dropbox_mutations": 0
+}
