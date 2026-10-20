@@ -1,0 +1,2 @@
+{"scope":"RIFT labels","kind":"canonical_merge_gap","cycle":"r197","status":"open","evidence":"100 labels checkpointed; canonical link_labels.jsonl empty; workflow does not run merge_labels.py"}
+{"scope":"aoXiv","kind":"unverified_dynamic_index","cycle":"r197","status":"pending","evidence":"Search reports 13 olympiads; direct HTML empty; existing backlog r177"}
