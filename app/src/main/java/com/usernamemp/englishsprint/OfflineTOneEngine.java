@@ -122,27 +122,31 @@ public final class OfflineTOneEngine {
         float[] samples = Pcm16To8kResampler.convert(pcm);
         if (samples.length < 800) throw new IOException("Speech segment too short");
 
-        OnlineToneCtcModelConfig tOne = OnlineToneCtcModelConfig.builder()
-                .setModel(model.getAbsolutePath()).build();
-        OnlineModelConfig modelConfig = OnlineModelConfig.builder()
-                .setToneCtc(tOne)
-                .setTokens(tokens.getAbsolutePath())
-                .setNumThreads(2)
-                .setProvider("cpu")
-                .setDebug(false)
-                .build();
-        OnlineRecognizerConfig cfg = OnlineRecognizerConfig.builder()
-                .setOnlineModelConfig(modelConfig)
-                .setFeatureConfig(FeatureConfig.builder().setSampleRate(8000)
-                        .setFeatureDim(80).setDither(0f).build())
-                .setEnableEndpoint(false)
-                .setDecodingMethod("greedy_search")
-                .build();
+        // Published Android AAR exposes Kotlin data classes, not the JVM Builder API.
+        OnlineToneCtcModelConfig tOne = new OnlineToneCtcModelConfig();
+        tOne.setModel(model.getAbsolutePath());
+        OnlineModelConfig modelConfig = new OnlineModelConfig();
+        modelConfig.setToneCtc(tOne);
+        modelConfig.setTokens(tokens.getAbsolutePath());
+        modelConfig.setNumThreads(2);
+        modelConfig.setProvider("cpu");
+        modelConfig.setDebug(false);
 
-        OnlineRecognizer recognizer = new OnlineRecognizer(cfg);
+        FeatureConfig features = new FeatureConfig();
+        features.setSampleRate(8000);
+        features.setFeatureDim(80);
+        features.setDither(0f);
+
+        OnlineRecognizerConfig cfg = new OnlineRecognizerConfig();
+        cfg.setModelConfig(modelConfig);
+        cfg.setFeatConfig(features);
+        cfg.setEnableEndpoint(false);
+        cfg.setDecodingMethod("greedy_search");
+
+        OnlineRecognizer recognizer = new OnlineRecognizer(null, cfg);
         OnlineStream stream = null;
         try {
-            stream = recognizer.createStream();
+            stream = recognizer.createStream("");
             // Upstream T-One example pads 0.3 seconds before and 0.6 after speech.
             stream.acceptWaveform(new float[2400], 8000);
             for (int offset = 0; offset < samples.length; offset += 2400) {
