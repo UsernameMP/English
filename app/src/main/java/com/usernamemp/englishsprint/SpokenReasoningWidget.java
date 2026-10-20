@@ -171,7 +171,7 @@ public final class SpokenReasoningWidget {
             String fail = null;
             try { decoded = OfflineTOneEngine.recognize(
                     activity.getApplicationContext(),speechLocale(),captured); }
-            catch (Exception e) { fail = e.getMessage(); }
+            catch (Exception | LinkageError e) { fail = e.getMessage(); }
             finally { captured.delete(); }
             final OfflineTOneEngine.Transcription success = decoded;
             final String error = fail;
