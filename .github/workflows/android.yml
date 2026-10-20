@@ -13,7 +13,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 45
 
     steps:
       - name: Checkout
@@ -97,13 +97,30 @@ jobs:
       - name: Generate offline neural listening WAVs
         run: bash scripts/generate_audio.sh
 
-      - name: Bundle pinned offline Russian Vosk model
+      - name: Validate T-One DSP converter
         run: |
-          mkdir -p app/src/main/assets/models
-          curl --fail --location --retry 4 --retry-delay 5 --max-time 240 \
-            'https://huggingface.co/rhasspy/vosk-models/resolve/e7ac2109d134b5f2404ba95389b2fb51916d4cab/ru/vosk-model-small-ru-0.22.zip?download=true' \
-            --output app/src/main/assets/models/vosk-model-small-ru-0.22.zip
-          echo '961d5ff98a17f4aa6de69864d0aa71fa5bac682301d2b5d17a3f24c5c99a46d4  app/src/main/assets/models/vosk-model-small-ru-0.22.zip' | sha256sum -c -
+          mkdir -p /tmp/tone-resampler
+          javac -d /tmp/tone-resampler \
+            app/src/main/java/com/usernamemp/englishsprint/Pcm16To8kResampler.java \
+            scripts/TOneResamplerTest.java
+          java -cp /tmp/tone-resampler com.usernamemp.englishsprint.TOneResamplerTest
+
+      - name: Bundle pinned Russian T-One 71M ONNX assets
+        run: |
+          set -euo pipefail
+          MODEL_DIR="app/src/main/assets/models/t-one-71m"
+          mkdir -p "$MODEL_DIR"
+          REV="9d63341e0f2d8a8b2edaa825aa1fcfe3c5283b47"
+          BASE="https://huggingface.co/csukuangfj/sherpa-onnx-streaming-t-one-russian-2025-09-08/resolve/$REV"
+          curl --fail --location --retry 4 --retry-delay 5 --max-time 600 \
+            "$BASE/model.onnx?download=true" -o "$MODEL_DIR/model.onnx"
+          curl --fail --location --retry 4 --retry-delay 5 --max-time 90 \
+            "$BASE/tokens.txt?download=true" -o "$MODEL_DIR/tokens.txt"
+          echo '5ded080e2a6c86ecc11bcb0902d77524eb3e8b0844cb0c0754347f5aafb4dabc  app/src/main/assets/models/t-one-71m/model.onnx' | sha256sum -c -
+          test "$(stat -c%s "$MODEL_DIR/model.onnx")" -eq 144193702
+          grep -Fxq '<blk> 34' "$MODEL_DIR/tokens.txt"
+          test ! -f app/src/main/assets/models/vosk-model-small-ru-0.22.zip
+          printf 'Model pinned and verified, 144193702 bytes.\n'
       - name: Read app version
         run: |
           VERSION_NAME="$(sed -n 's/.*versionName "\([^"]*\)".*/\1/p' app/build.gradle | head -n1)"
@@ -115,9 +132,111 @@ jobs:
       - name: Build unsigned release APK
         run: gradle :app:assembleRelease --stacktrace
 
-      - name: Verify bundled ASR archive really entered APK
+      - name: Verify T-One and ARM64 native libraries actually entered APK
         run: |
-          unzip -l app/build/outputs/apk/release/app-release-unsigned.apk | grep -F 'assets/models/vosk-model-small-ru-0.22.zip'
+          set -euo pipefail
+          APK=app/build/outputs/apk/release/app-release-unsigned.apk
+          unzip -Z1 "$APK" | grep -Fx 'assets/models/t-one-71m/model.onnx'
+          unzip -Z1 "$APK" | grep -Fx 'assets/models/t-one-71m/tokens.txt'
+          unzip -Z1 "$APK" | grep -E '^lib/arm64-v8a/libsherpa-onnx-jni[.]so
+      - name: Fetch public AOSP pilot signing key
+        run: |
+          mkdir -p "$RUNNER_TEMP/aosp-testkey"
+          curl -L --fail --retry 3 \
+            "https://android.googlesource.com/platform/build/+/refs/heads/main/target/product/security/testkey.pk8?format=TEXT" \
+            | base64 -d > "$RUNNER_TEMP/aosp-testkey/testkey.pk8"
+          curl -L --fail --retry 3 \
+            "https://android.googlesource.com/platform/build/+/refs/heads/main/target/product/security/testkey.x509.pem?format=TEXT" \
+            | base64 -d > "$RUNNER_TEMP/aosp-testkey/testkey.x509.pem"
+
+      - name: Sign stable pilot APK
+        run: |
+          BUILD_TOOLS="$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n1)"
+          UNSIGNED="app/build/outputs/apk/release/app-release-unsigned.apk"
+          ALIGNED="$RUNNER_TEMP/rift-aligned.apk"
+          APK="$APK_NAME"
+
+          "$BUILD_TOOLS/zipalign" -f -p 4 "$UNSIGNED" "$ALIGNED"
+          "$BUILD_TOOLS/apksigner" sign \
+            --key "$RUNNER_TEMP/aosp-testkey/testkey.pk8" \
+            --cert "$RUNNER_TEMP/aosp-testkey/testkey.x509.pem" \
+            --out "$APK" \
+            "$ALIGNED"
+
+          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs "$APK"
+
+      - name: Upload CI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rift-v${{ env.VERSION_NAME }}-pilot
+          path: ${{ env.APK_NAME }}
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Publish public pilot content channel
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/publish_github_content.py
+          rm -rf "$RUNNER_TEMP/content-pilot-repo"
+          mkdir -p "$RUNNER_TEMP/content-pilot-repo"
+          cp -R build/content-pilot/. "$RUNNER_TEMP/content-pilot-repo/"
+          cd "$RUNNER_TEMP/content-pilot-repo"
+          git init
+          git config user.name "Rift CI"
+          git config user.email "actions@users.noreply.github.com"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git checkout --orphan content-pilot-publish
+          git add .
+          git commit -m "Publish pilot content"
+          git push origin HEAD:content-pilot --force
+
+      - name: Publish GitHub Release APK
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="v${VERSION_NAME}"
+          RELEASE_APK="rift-v${VERSION_NAME}-pilot.apk"
+          git tag -f "$TAG" "$GITHUB_SHA"
+          git push origin "refs/tags/$TAG" --force
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$APK_NAME#$RELEASE_APK" --clobber
+          else
+            gh release create "$TAG" "$APK_NAME#$RELEASE_APK" \
+              --title "Rift ${VERSION_NAME}" \
+              --notes "Rift pilot Android build ${VERSION_NAME}. Download the APK asset below."
+          fi
+
+      - name: Publish updater manifest
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          APK="$APK_NAME"
+          SIZE="$(stat -c%s "$APK")"
+          RELEASE_APK="rift-v${VERSION_NAME}-pilot.apk"
+          mkdir -p /tmp/english-sprint-dist
+          cat > /tmp/english-sprint-dist/latest.json <<EOF
+          {
+            "versionName": "${VERSION_NAME}",
+            "versionCode": ${VERSION_CODE},
+            "apkUrl": "https://github.com/${GITHUB_REPOSITORY}/releases/download/v${VERSION_NAME}/${RELEASE_APK}",
+            "sizeBytes": ${SIZE},
+            "commit": "${GITHUB_SHA}"
+          }
+          EOF
+          git config user.name "Rift CI"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout --orphan apk-dist-publish
+          git rm -rf . || true
+          git clean -fdx
+          cp /tmp/english-sprint-dist/latest.json .
+          git add latest.json
+          git commit -m "Publish Rift v${VERSION_NAME} updater manifest"
+          git push origin HEAD:apk-dist --force
+
+          ! unzip -Z1 "$APK" | grep -qi vosk
+          unzip -l "$APK" | grep -E 't-one-71m|sherpa-onnx-jni'
       - name: Fetch public AOSP pilot signing key
         run: |
           mkdir -p "$RUNNER_TEMP/aosp-testkey"

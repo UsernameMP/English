@@ -2,7 +2,7 @@ plugins { id 'com.android.application' }
 android {
  namespace 'com.usernamemp.englishsprint'
  compileSdk 35
- defaultConfig { applicationId "com.usernamemp.englishsprint"; minSdk 24; targetSdk 35; versionCode 44; versionName "0.6.37" }
+ defaultConfig { ndk { abiFilters 'arm64-v8a' }; applicationId "com.usernamemp.englishsprint"; minSdk 24; targetSdk 35; versionCode 44; versionName "0.6.37" }
  buildFeatures { buildConfig true }
  buildTypes { release { minifyEnabled false } }
  compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
@@ -10,23 +10,30 @@ android {
 dependencies {
  implementation 'androidx.core:core:1.15.0'
  implementation 'androidx.webkit:webkit:1.12.1'
- implementation 'com.alphacephei:vosk-android:0.3.75'
+ implementation 'com.github.k2-fsa.sherpa-onnx:sherpa-onnx:v1.13.8'
 }
 
-/** A release without the promised bundled offline model must fail at build time. */
+/** Fail closed if the exact upstream T-One 71M ONNX model is absent or altered. */
 tasks.register('verifyBundledRussianModel') {
     doLast {
-        def archive = file('src/main/assets/models/vosk-model-small-ru-0.22.zip')
-        def expected = '961d5ff98a17f4aa6de69864d0aa71fa5bac682301d2b5d17a3f24c5c99a46d4'
-        if (!archive.isFile()) throw new GradleException('RIFT offline RU ASR model is missing from APK assets')
+        def folder = file('src/main/assets/models/t-one-71m')
+        def model = new File(folder, 'model.onnx')
+        def tokens = new File(folder, 'tokens.txt')
+        if (!model.isFile() || !tokens.isFile())
+            throw new GradleException('Required bundled T-One model and vocabulary missing')
+        if (model.length() != 144193702L)
+            throw new GradleException('T-One ONNX size mismatch')
         def md = java.security.MessageDigest.getInstance('SHA-256')
-        archive.withInputStream { ins ->
+        model.withInputStream { ins ->
             byte[] buffer = new byte[65536]
             int n
             while ((n = ins.read(buffer)) != -1) if (n > 0) md.update(buffer, 0, n)
         }
         def actual = md.digest().collect { String.format('%02x', it & 255) }.join('')
-        if (actual != expected) throw new GradleException('Offline RU model checksum mismatch')
+        if (actual != '5ded080e2a6c86ecc11bcb0902d77524eb3e8b0844cb0c0754347f5aafb4dabc')
+            throw new GradleException('Bundled T-One model SHA-256 mismatch')
+        if (!tokens.getText('UTF-8').contains('<blk> 34'))
+            throw new GradleException('T-One blank vocabulary symbol missing')
     }
 }
 tasks.named('preBuild').configure { dependsOn tasks.named('verifyBundledRussianModel') }

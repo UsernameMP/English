@@ -103,7 +103,7 @@ public final class SpokenReasoningWidget {
         setActions();
         new Thread(() -> {
             String error = null;
-            try { OfflineVoskEngine.ensureBundled(activity.getApplicationContext(),speechLocale()); }
+            try { OfflineTOneEngine.ensureBundled(activity.getApplicationContext(),speechLocale()); }
             catch (Exception e) { error = e.getMessage(); }
             final String result = error;
             activity.runOnUiThread(() -> {
@@ -167,13 +167,13 @@ public final class SpokenReasoningWidget {
         status.setText(t("Попытка ", "Attempt ") + number
                        + t(": локальное распознавание…", ": offline transcription…"));
         new Thread(() -> {
-            OfflineVoskEngine.Transcription decoded = null;
+            OfflineTOneEngine.Transcription decoded = null;
             String fail = null;
-            try { decoded = OfflineVoskEngine.recognize(
+            try { decoded = OfflineTOneEngine.recognize(
                     activity.getApplicationContext(),speechLocale(),captured); }
             catch (Exception e) { fail = e.getMessage(); }
             finally { captured.delete(); }
-            final OfflineVoskEngine.Transcription success = decoded;
+            final OfflineTOneEngine.Transcription success = decoded;
             final String error = fail;
             activity.runOnUiThread(() -> {
                 if (disposed) return;
@@ -251,7 +251,7 @@ public final class SpokenReasoningWidget {
                 entry.put("raw_asr_transcript",attempt.original);
                 entry.put("edited_transcript",edit);
                 entry.put("student_edited",!attempt.original.equals(edit));
-                entry.put("asr_provider",attempt.modelVersion.isEmpty()?"none":"vosk");
+                entry.put("asr_provider",attempt.modelVersion.isEmpty()?"none":"t-one-71m");
                 entry.put("asr_model_version",attempt.modelVersion);
                 entry.put("asr_model_sha256",attempt.modelSha);
                 entry.put("answer",submitted);
