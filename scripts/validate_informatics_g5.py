@@ -55,7 +55,7 @@ assert Counter(q["ai_archetype"] for q in ai_questions) == {
                         "routes","impute","majority","accuracy","gears")}
 assert all(q["knowledge"][0]["id"] == "CS.AI.OLYMPIAD.5" for q in ai_questions)
 ai_truth = {
-    "states": ([2,3,4,8],15),
+    "states": ([2,4,8,15],15),
     "bias": ([6,10,15,21],36),
     "scores": ([9,7,5,3],6),
     "schedule": ([12,72,480,3600],72),
