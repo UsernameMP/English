@@ -1,22 +1,34 @@
-# ВсОШ, профиль «Искусственный интеллект» · 5 класс (RIFT)
+# RIFT 0.6.37 — Искусственный интеллект, 5 класс: доступный базовый уровень
 
-## Evidence
-- School 2025/26, official Moscow 5–6 class detailed solutions:
-  https://vos.olimpiada.ru/upload/files/Arhive_tasks/2025-26/school/ai/sol-ai-5-6-sch-msk-25-26.pdf
-- Invitation 2026/27, official Moscow archive for 4–5 and 6–7:
-  https://xn--b1ayi3a.xn--l1afu.xn--p1ai/2026/invite/tasks
-- Current Sirius profile requirements and dates:
-  https://siriusolymp.ru/school2026/ai
+## С чем сопоставляли темы
+- Школьный этап ВсОШ 2025/26, 5–6 класс, решения: https://vos.olimpiada.ru/upload/files/Arhive_tasks/2025-26/school/ai/sol-ai-5-6-sch-msk-25-26.pdf
+- Профиль ИИ 2026/27: https://siriusolymp.ru/school2026/ai
 
-## Why these questions
-The seven school-stage 2025/26 cases cover model error, reachability, tournament tally, constrained schedules, recurring alarms, blocked grid routes, and missing-value imputation. The 2026 invitation adds majority voting, classification accuracy, and constrained accuracy/budget optimization. RIFT includes **50 original, non-verbatim task analogues** in ten families × five mobile mechanics. No voice, network requirement, external LLM or unimplemented custom widget.
+**Важно:** вопросы ниже — авторские подготовительные аналоги по мотивам тем соревнований, а не копии официальных олимпиадных задач.
 
-## Access and random sessions
-The *Informatics, grade 5* course now contains 300 questions: 250 prior programming-style drills plus 50 AI. Knowledge unit `CS.AI.OLYMPIAD.5` is pinned as the first topic tile. Choosing it exercises only AI.
+## Изменение подхода
+Ранее блок ИИ содержал вычисления с факториалами, подсчёт перестановок, многовариантные кратчайшие маршруты и сложную оптимизацию. Для пятого класса такие примеры слишком требовательны для обычной случайной тренировки. В версии 0.6.37 весь предыдущий блок ИИ заменён на 50 упражнений начального уровня: числа и списки до нескольких элементов, сравнение, простые условия, распознавание ошибок, голосование моделей.
 
-A 15-question automatic training session has 3 of each primitive, and exactly 3 AI questions in three rotating primitives, plus 12 classic informatics tasks. Independent persistent seen sets for every (interaction, AI/classic) pool prevent repeats until those pools are exhausted. Existing classic progress remains in ProgressStore.
+| Раздел | Вопросов | Что тренирует |
+|---|---:|---|
+| Примеры и подписи | 5 | Подготовка размеченных примеров |
+| Правила классификации | 5 | Простое правило «если — то» |
+| Таблицы и правильные ответы | 5 | Поиск максимума, фильтрация |
+| Голосование моделей | 5 | Большинство из трёх голосов |
+| Поиск ошибок | 5 | Сверка ответа модели с эталоном |
+| Качество распознавания | 5 | Доли и простые проценты |
+| Пропущенные данные | 5 | Самое частое значение, простое среднее |
+| Рекомендации | 5 | Ранжирование по баллам |
+| Помощник и расписания | 5 | Даты и повторы событий |
+| Ресурсы на обучение | 5 | Простые ограничения бюджета |
+| **Всего** | **50** | 10 каждого типа ответа |
 
-## Caveats
-The 2026/27 actual school competition content is not claimed available in full here: regions have different session days and some were still ahead as of October 20. RIFT uses the 2025/26 school and the 2026 invitation archetypes, not unseen 2026/27 school tasks. Some real items have multi-field answers; here they are split into supported numeric, choice, matching or ordering interactions. Our artificial intelligence problems are *math/programming for AI*, not a quiz of LLM brands.
+Текущий банк курса: 250 прежних программно-алгоритмических вопросов + 50 новых ИИ, всего 300. На экране тем ИИ закреплён как отдельная тема.
 
-School 2026/27 5–6 class AI on Sirius: 90 minutes, 72 points. School 2025/26: 90 minutes, 84 points. No cybersecurity or robotics included.
+### Как работает случайная тренировка
+Случайная сессия содержит 15 заданий: 3 простых ИИ + 12 классических. В ней сохранены три каждого способа ответа и циклы показа без повтора до исчерпания пула. Для классики дополнительно применяется фильтр `difficulty <= 2` и исключение старших комбинаторных семейств (перестановки, подмножества, раскраска, ограничения и т. д.). Сложные задачи остаются в исходном тематическом банке, но в обычную случайную сессию не попадают.
+
+Уровень — это адаптация к среднему пятикласснику, а не гарантия соответствия сложности реального школьного этапа, где встречаются существенно более сложные задачи. Вопросы не требуют речи, интернета, LLM и новых интерфейсных примитивов.
+
+### Контроль
+Независимые эталонные значения в `scripts/validate_informatics_g5.py` проверяют 50 ключей, причём по фактическим текстам вариантов ответов и правым парам при сопоставлении. Это предотвращает прошлую ошибку, когда переставленные варианты сравнивались с исходными индексами. Все темы имеют 5 задач; максимальная сложность ИИ равна 2.
