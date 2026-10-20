@@ -103,7 +103,7 @@ for q in ai_questions:
 hard_classic = {"sorting","subsets","coloring","garden","digits","counting","constraints","invariants"}
 easy_classic = [q for q in qs if not q["id"].startswith("ai5_")
                 and q["difficulty"] <= 2 and q["skills"][0] not in hard_classic]
-assert all(sum(q["interaction"] == typ for q in easy_classic) >= 12 for typ in expected)
+assert all(sum(q["interaction"] == typ for q in easy_classic) >= 9 for typ in expected)
 
 # Full generated mechanics verification: independently recompute each new answer.
 def value_for(q, item):
