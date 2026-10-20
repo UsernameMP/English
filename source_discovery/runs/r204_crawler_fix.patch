@@ -1,0 +1,19 @@
+--- a/source_discovery/crawl_links.py
++++ b/source_discovery/crawl_links.py
+@@
+-            self.anchor = {"href": attrs["href"], "title": attrs.get("title", ""),
++            self.anchor = {"href": attrs["href"], "title": attrs.get("title") or "",
+                            "text_parts": [], "heading": self.heading}
+--- a/source_discovery/test_link_intelligence.py
++++ b/source_discovery/test_link_intelligence.py
+@@
+-from crawl_links import observe_mime, prioritize_queue
++from crawl_links import Links, observe_mime, prioritize_queue
+@@
+ class MultilingualLinkTests(unittest.TestCase):
++    def test_valueless_anchor_title_does_not_break_crawl(self):
++        parser = Links()
++        parser.feed('<h2>Archive</h2><a href="/paper.pdf" title>Paper</a>')
++        self.assertEqual(parser.links[0]["title"], "")
++        self.assertEqual(parser.links[0]["text"], "Paper")
++
