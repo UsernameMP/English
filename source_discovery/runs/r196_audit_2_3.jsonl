@@ -1,0 +1,2 @@
+{"kind":"pagination","scope":"ES:RSME","issue":"Archive pagination pages 6, 7, 8 are separate archive resources; other pages/years not checked; no exhaustion claim.","evidence":"resource_000165 rows 7,18,29","cycle":"r196","observed_at":"2026-10-20T13:03:36Z","status":"open"}
+{"kind":"false_positive","scope":"INT:Naboj","issue":"54 unique WEBP URLs are Zurich photo gallery images, not olympiad tasks; 6 repeated occurrences remain in raw ledger.","evidence":"resource_000165 rows 46-99, batch_000509-000510","cycle":"r196","observed_at":"2026-10-20T13:03:36Z","status":"open"}
