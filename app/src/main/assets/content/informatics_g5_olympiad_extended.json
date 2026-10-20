@@ -3,7 +3,7 @@
   "bank_id": "cs5-school-2021-2025-balanced",
   "title": "Информатика · 5 класс · олимпиада",
   "locale": "ru",
-  "content_version": "2.0.0",
+  "content_version": "2.1.0",
   "pack": {
     "id": "informatics.olympiad.5.ru.2026",
     "subject": "informatics",
@@ -17,8 +17,8 @@
       "en": "Информатика · 5 класс"
     },
     "subtitle": {
-      "ru": "250 задач по механикам школьного этапа 2021–2025 · без микрофона",
-      "en": "250 задач по механикам школьного этапа 2021–2025 · без микрофона"
+      "ru": "300 заданий: программирование и отдельная тема «Искусственный интеллект»",
+      "en": "300 заданий: программирование и отдельная тема «Искусственный интеллект»"
     }
   },
   "editorial": {
@@ -48,11 +48,29 @@
       "multi_choice"
     ],
     "distribution": {
-      "numeric": 50,
-      "matching": 50,
-      "single_choice": 50,
-      "sequence": 50,
-      "multi_choice": 50
+      "numeric": 60,
+      "single_choice": 60,
+      "multi_choice": 60,
+      "matching": 60,
+      "sequence": 60
+    },
+    "ai_profile": {
+      "questions_added": 50,
+      "topic": "CS.AI.OLYMPIAD.5",
+      "original": true,
+      "source_seasons": [
+        "2025/26 school",
+        "2026 invitation"
+      ],
+      "references": [
+        "https://vos.olimpiada.ru/upload/files/Arhive_tasks/2025-26/school/ai/sol-ai-5-6-sch-msk-25-26.pdf",
+        "https://xn--b1ayi3a.xn--l1afu.xn--p1ai/2026/invite/tasks",
+        "https://siriusolymp.ru/school2026/ai"
+      ],
+      "excluded_profiles": [
+        "robotics",
+        "security"
+      ]
     }
   },
   "questions": [
@@ -19983,6 +20001,4036 @@
         {
           "id": "c",
           "text": "УАУ"
+        }
+      ]
+    },
+    {
+      "id": "ai5_states_numeric",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "ai_states"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Модель выполняет n команд: +1 или ×2, стартуя с 1."
+      },
+      "prompt": "Сколько разных результатов после ровно пяти команд?",
+      "answer": [
+        "15"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        },
+        "full": {
+          "ru": "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15. На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15. На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        },
+        "rule": {
+          "ru": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "states"
+    },
+    {
+      "id": "ai5_states_single_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_states"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Модель выполняет n команд: +1 или ×2, стартуя с 1."
+      },
+      "prompt": "В каком случае НАИБОЛЬШЕЕ значение показателя «число разных конечных состояний»?",
+      "answer": [
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        },
+        "full": {
+          "ru": "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15. На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15. На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        },
+        "rule": {
+          "ru": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "states",
+      "options": [
+        {
+          "id": "b",
+          "text": "3 команды"
+        },
+        {
+          "id": "d",
+          "text": "5 команд"
+        },
+        {
+          "id": "a",
+          "text": "2 команды"
+        },
+        {
+          "id": "c",
+          "text": "4 команды"
+        }
+      ]
+    },
+    {
+      "id": "ai5_states_multi_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_states"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Модель выполняет n команд: +1 или ×2, стартуя с 1."
+      },
+      "prompt": "Выбери ВСЕ случаи, где показатель «число разных конечных состояний» не меньше 4.",
+      "answer": [
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        },
+        "full": {
+          "ru": "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15. На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15. На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        },
+        "rule": {
+          "ru": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "states",
+      "options": [
+        {
+          "id": "b",
+          "text": "3 команды"
+        },
+        {
+          "id": "d",
+          "text": "5 команд"
+        },
+        {
+          "id": "a",
+          "text": "2 команды"
+        },
+        {
+          "id": "c",
+          "text": "4 команды"
+        }
+      ]
+    },
+    {
+      "id": "ai5_states_matching",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "ai_states"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Модель выполняет n команд: +1 или ×2, стартуя с 1."
+      },
+      "prompt": "Соедини вариант и значение показателя «число разных конечных состояний».",
+      "answer": [
+        "l0:r0",
+        "l1:r1",
+        "l2:r2",
+        "l3:r3"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        },
+        "full": {
+          "ru": "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15. На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15. На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        },
+        "rule": {
+          "ru": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "states",
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "3 команды"
+        },
+        {
+          "id": "l3",
+          "text": "5 команд"
+        },
+        {
+          "id": "l0",
+          "text": "2 команды"
+        },
+        {
+          "id": "l2",
+          "text": "4 команды"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r2",
+          "text": "8"
+        },
+        {
+          "id": "r0",
+          "text": "2"
+        },
+        {
+          "id": "r3",
+          "text": "15"
+        },
+        {
+          "id": "r1",
+          "text": "4"
+        }
+      ]
+    },
+    {
+      "id": "ai5_states_sequence",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "ai_states"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Модель выполняет n команд: +1 или ×2, стартуя с 1."
+      },
+      "prompt": "Упорядочи случаи по ВОЗРАСТАНИЮ показателя «число разных конечных состояний».",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        },
+        "full": {
+          "ru": "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15. На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15. На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        },
+        "rule": {
+          "ru": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "en": "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "На каждом шаге берём множество достижимых результатов; одинаковые не дублируем.",
+          "2 команды = 2; 3 команды = 4; 4 команды = 8; 5 команд = 15"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "states",
+      "options": [
+        {
+          "id": "b",
+          "text": "3 команды"
+        },
+        {
+          "id": "d",
+          "text": "5 команд"
+        },
+        {
+          "id": "a",
+          "text": "2 команды"
+        },
+        {
+          "id": "c",
+          "text": "4 команды"
+        }
+      ]
+    },
+    {
+      "id": "ai5_bias_numeric",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "ai_bias"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ ошибочно считает сумму чисел от 1 до n равной n², а правильная формула n(n+1)/2."
+      },
+      "prompt": "Какова ошибка при n=9?",
+      "answer": [
+        "36"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Ошибка модели n(n−1)/2.",
+          "en": "Ошибка модели n(n−1)/2."
+        },
+        "full": {
+          "ru": "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21. Ошибка модели n(n−1)/2.",
+          "en": "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21. Ошибка модели n(n−1)/2."
+        },
+        "rule": {
+          "ru": "Ошибка модели n(n−1)/2.",
+          "en": "Ошибка модели n(n−1)/2."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Ошибка модели n(n−1)/2.",
+          "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "bias"
+    },
+    {
+      "id": "ai5_bias_single_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_bias"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ ошибочно считает сумму чисел от 1 до n равной n², а правильная формула n(n+1)/2."
+      },
+      "prompt": "В каком случае НАИБОЛЬШЕЕ значение показателя «абсолютная ошибка»?",
+      "answer": [
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Ошибка модели n(n−1)/2.",
+          "en": "Ошибка модели n(n−1)/2."
+        },
+        "full": {
+          "ru": "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21. Ошибка модели n(n−1)/2.",
+          "en": "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21. Ошибка модели n(n−1)/2."
+        },
+        "rule": {
+          "ru": "Ошибка модели n(n−1)/2.",
+          "en": "Ошибка модели n(n−1)/2."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Ошибка модели n(n−1)/2.",
+          "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "bias",
+      "options": [
+        {
+          "id": "c",
+          "text": "n=6"
+        },
+        {
+          "id": "a",
+          "text": "n=4"
+        },
+        {
+          "id": "b",
+          "text": "n=5"
+        },
+        {
+          "id": "d",
+          "text": "n=7"
+        }
+      ]
+    },
+    {
+      "id": "ai5_bias_multi_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_bias"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ ошибочно считает сумму чисел от 1 до n равной n², а правильная формула n(n+1)/2."
+      },
+      "prompt": "Выбери ВСЕ случаи, где показатель «абсолютная ошибка» не меньше 10.",
+      "answer": [
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Ошибка модели n(n−1)/2.",
+          "en": "Ошибка модели n(n−1)/2."
+        },
+        "full": {
+          "ru": "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21. Ошибка модели n(n−1)/2.",
+          "en": "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21. Ошибка модели n(n−1)/2."
+        },
+        "rule": {
+          "ru": "Ошибка модели n(n−1)/2.",
+          "en": "Ошибка модели n(n−1)/2."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Ошибка модели n(n−1)/2.",
+          "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "bias",
+      "options": [
+        {
+          "id": "c",
+          "text": "n=6"
+        },
+        {
+          "id": "a",
+          "text": "n=4"
+        },
+        {
+          "id": "b",
+          "text": "n=5"
+        },
+        {
+          "id": "d",
+          "text": "n=7"
+        }
+      ]
+    },
+    {
+      "id": "ai5_bias_matching",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "ai_bias"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ ошибочно считает сумму чисел от 1 до n равной n², а правильная формула n(n+1)/2."
+      },
+      "prompt": "Соедини вариант и значение показателя «абсолютная ошибка».",
+      "answer": [
+        "l0:r0",
+        "l1:r1",
+        "l2:r2",
+        "l3:r3"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Ошибка модели n(n−1)/2.",
+          "en": "Ошибка модели n(n−1)/2."
+        },
+        "full": {
+          "ru": "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21. Ошибка модели n(n−1)/2.",
+          "en": "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21. Ошибка модели n(n−1)/2."
+        },
+        "rule": {
+          "ru": "Ошибка модели n(n−1)/2.",
+          "en": "Ошибка модели n(n−1)/2."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Ошибка модели n(n−1)/2.",
+          "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "bias",
+      "matching_left": [
+        {
+          "id": "l2",
+          "text": "n=6"
+        },
+        {
+          "id": "l0",
+          "text": "n=4"
+        },
+        {
+          "id": "l1",
+          "text": "n=5"
+        },
+        {
+          "id": "l3",
+          "text": "n=7"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r3",
+          "text": "21"
+        },
+        {
+          "id": "r1",
+          "text": "10"
+        },
+        {
+          "id": "r0",
+          "text": "6"
+        },
+        {
+          "id": "r2",
+          "text": "15"
+        }
+      ]
+    },
+    {
+      "id": "ai5_bias_sequence",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "ai_bias"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ ошибочно считает сумму чисел от 1 до n равной n², а правильная формула n(n+1)/2."
+      },
+      "prompt": "Упорядочи случаи по ВОЗРАСТАНИЮ показателя «абсолютная ошибка».",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Ошибка модели n(n−1)/2.",
+          "en": "Ошибка модели n(n−1)/2."
+        },
+        "full": {
+          "ru": "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21. Ошибка модели n(n−1)/2.",
+          "en": "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21. Ошибка модели n(n−1)/2."
+        },
+        "rule": {
+          "ru": "Ошибка модели n(n−1)/2.",
+          "en": "Ошибка модели n(n−1)/2."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Ошибка модели n(n−1)/2.",
+          "n=4 = 6; n=5 = 10; n=6 = 15; n=7 = 21"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "bias",
+      "options": [
+        {
+          "id": "c",
+          "text": "n=6"
+        },
+        {
+          "id": "a",
+          "text": "n=4"
+        },
+        {
+          "id": "b",
+          "text": "n=5"
+        },
+        {
+          "id": "d",
+          "text": "n=7"
+        }
+      ]
+    },
+    {
+      "id": "ai5_scores_numeric",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "ai_scores"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "В турнире пяти моделей 10 матчей. За победу нужно 2 очка, а программа ошибочно начисляет 3; за ничью начисляет по 1 обоим."
+      },
+      "prompt": "Если программа насчитала 24 очка, сколько было ничьих?",
+      "answer": [
+        "6"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Правильная сумма 20; избыток равен числу матчей с победителем."
+        },
+        "full": {
+          "ru": "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3. Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3. Правильная сумма 20; избыток равен числу матчей с победителем."
+        },
+        "rule": {
+          "ru": "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Правильная сумма 20; избыток равен числу матчей с победителем."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "scores"
+    },
+    {
+      "id": "ai5_scores_single_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_scores"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "В турнире пяти моделей 10 матчей. За победу нужно 2 очка, а программа ошибочно начисляет 3; за ничью начисляет по 1 обоим."
+      },
+      "prompt": "В каком случае НАИБОЛЬШЕЕ значение показателя «число ничьих»?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Правильная сумма 20; избыток равен числу матчей с победителем."
+        },
+        "full": {
+          "ru": "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3. Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3. Правильная сумма 20; избыток равен числу матчей с победителем."
+        },
+        "rule": {
+          "ru": "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Правильная сумма 20; избыток равен числу матчей с победителем."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "scores",
+      "options": [
+        {
+          "id": "d",
+          "text": "Ошибочно 27 очков"
+        },
+        {
+          "id": "b",
+          "text": "Ошибочно 23 очка"
+        },
+        {
+          "id": "c",
+          "text": "Ошибочно 25 очков"
+        },
+        {
+          "id": "a",
+          "text": "Ошибочно 21 очко"
+        }
+      ]
+    },
+    {
+      "id": "ai5_scores_multi_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_scores"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "В турнире пяти моделей 10 матчей. За победу нужно 2 очка, а программа ошибочно начисляет 3; за ничью начисляет по 1 обоим."
+      },
+      "prompt": "Выбери ВСЕ случаи, где показатель «число ничьих» не меньше 5.",
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Правильная сумма 20; избыток равен числу матчей с победителем."
+        },
+        "full": {
+          "ru": "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3. Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3. Правильная сумма 20; избыток равен числу матчей с победителем."
+        },
+        "rule": {
+          "ru": "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Правильная сумма 20; избыток равен числу матчей с победителем."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "scores",
+      "options": [
+        {
+          "id": "d",
+          "text": "Ошибочно 27 очков"
+        },
+        {
+          "id": "b",
+          "text": "Ошибочно 23 очка"
+        },
+        {
+          "id": "c",
+          "text": "Ошибочно 25 очков"
+        },
+        {
+          "id": "a",
+          "text": "Ошибочно 21 очко"
+        }
+      ]
+    },
+    {
+      "id": "ai5_scores_matching",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "ai_scores"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "В турнире пяти моделей 10 матчей. За победу нужно 2 очка, а программа ошибочно начисляет 3; за ничью начисляет по 1 обоим."
+      },
+      "prompt": "Соедини вариант и значение показателя «число ничьих».",
+      "answer": [
+        "l0:r0",
+        "l1:r1",
+        "l2:r2",
+        "l3:r3"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Правильная сумма 20; избыток равен числу матчей с победителем."
+        },
+        "full": {
+          "ru": "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3. Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3. Правильная сумма 20; избыток равен числу матчей с победителем."
+        },
+        "rule": {
+          "ru": "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Правильная сумма 20; избыток равен числу матчей с победителем."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "scores",
+      "matching_left": [
+        {
+          "id": "l3",
+          "text": "Ошибочно 27 очков"
+        },
+        {
+          "id": "l1",
+          "text": "Ошибочно 23 очка"
+        },
+        {
+          "id": "l2",
+          "text": "Ошибочно 25 очков"
+        },
+        {
+          "id": "l0",
+          "text": "Ошибочно 21 очко"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r0",
+          "text": "9"
+        },
+        {
+          "id": "r2",
+          "text": "5"
+        },
+        {
+          "id": "r1",
+          "text": "7"
+        },
+        {
+          "id": "r3",
+          "text": "3"
+        }
+      ]
+    },
+    {
+      "id": "ai5_scores_sequence",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "ai_scores"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "В турнире пяти моделей 10 матчей. За победу нужно 2 очка, а программа ошибочно начисляет 3; за ничью начисляет по 1 обоим."
+      },
+      "prompt": "Упорядочи случаи по ВОЗРАСТАНИЮ показателя «число ничьих».",
+      "answer": [
+        "d",
+        "c",
+        "b",
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Правильная сумма 20; избыток равен числу матчей с победителем."
+        },
+        "full": {
+          "ru": "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3. Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3. Правильная сумма 20; избыток равен числу матчей с победителем."
+        },
+        "rule": {
+          "ru": "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "en": "Правильная сумма 20; избыток равен числу матчей с победителем."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Правильная сумма 20; избыток равен числу матчей с победителем.",
+          "Ошибочно 21 очко = 9; Ошибочно 23 очка = 7; Ошибочно 25 очков = 5; Ошибочно 27 очков = 3"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "scores",
+      "options": [
+        {
+          "id": "d",
+          "text": "Ошибочно 27 очков"
+        },
+        {
+          "id": "b",
+          "text": "Ошибочно 23 очка"
+        },
+        {
+          "id": "c",
+          "text": "Ошибочно 25 очков"
+        },
+        {
+          "id": "a",
+          "text": "Ошибочно 21 очко"
+        }
+      ]
+    },
+    {
+      "id": "ai5_schedule_numeric",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "ai_schedule"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Планировщик размещает n разных задач, в том числе две сложные. Сложные не могут идти подряд."
+      },
+      "prompt": "Сколько способов расположить 5 задач?",
+      "answer": [
+        "72"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        },
+        "full": {
+          "ru": "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600. Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600. Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        },
+        "rule": {
+          "ru": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "schedule"
+    },
+    {
+      "id": "ai5_schedule_single_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_schedule"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Планировщик размещает n разных задач, в том числе две сложные. Сложные не могут идти подряд."
+      },
+      "prompt": "В каком случае НАИБОЛЬШЕЕ значение показателя «число допустимых расписаний»?",
+      "answer": [
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        },
+        "full": {
+          "ru": "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600. Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600. Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        },
+        "rule": {
+          "ru": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "schedule",
+      "options": [
+        {
+          "id": "a",
+          "text": "4 задачи"
+        },
+        {
+          "id": "c",
+          "text": "6 задач"
+        },
+        {
+          "id": "d",
+          "text": "7 задач"
+        },
+        {
+          "id": "b",
+          "text": "5 задач"
+        }
+      ]
+    },
+    {
+      "id": "ai5_schedule_multi_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_schedule"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Планировщик размещает n разных задач, в том числе две сложные. Сложные не могут идти подряд."
+      },
+      "prompt": "Выбери ВСЕ случаи, где показатель «число допустимых расписаний» не меньше 72.",
+      "answer": [
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        },
+        "full": {
+          "ru": "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600. Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600. Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        },
+        "rule": {
+          "ru": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "schedule",
+      "options": [
+        {
+          "id": "a",
+          "text": "4 задачи"
+        },
+        {
+          "id": "c",
+          "text": "6 задач"
+        },
+        {
+          "id": "d",
+          "text": "7 задач"
+        },
+        {
+          "id": "b",
+          "text": "5 задач"
+        }
+      ]
+    },
+    {
+      "id": "ai5_schedule_matching",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "ai_schedule"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Планировщик размещает n разных задач, в том числе две сложные. Сложные не могут идти подряд."
+      },
+      "prompt": "Соедини вариант и значение показателя «число допустимых расписаний».",
+      "answer": [
+        "l0:r0",
+        "l1:r1",
+        "l2:r2",
+        "l3:r3"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        },
+        "full": {
+          "ru": "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600. Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600. Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        },
+        "rule": {
+          "ru": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "schedule",
+      "matching_left": [
+        {
+          "id": "l0",
+          "text": "4 задачи"
+        },
+        {
+          "id": "l2",
+          "text": "6 задач"
+        },
+        {
+          "id": "l3",
+          "text": "7 задач"
+        },
+        {
+          "id": "l1",
+          "text": "5 задач"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "72"
+        },
+        {
+          "id": "r3",
+          "text": "3600"
+        },
+        {
+          "id": "r2",
+          "text": "480"
+        },
+        {
+          "id": "r0",
+          "text": "12"
+        }
+      ]
+    },
+    {
+      "id": "ai5_schedule_sequence",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "ai_schedule"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Планировщик размещает n разных задач, в том числе две сложные. Сложные не могут идти подряд."
+      },
+      "prompt": "Упорядочи случаи по ВОЗРАСТАНИЮ показателя «число допустимых расписаний».",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        },
+        "full": {
+          "ru": "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600. Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600. Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        },
+        "rule": {
+          "ru": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "en": "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Из n! размещений исключаем 2·(n−1)! с соседними сложными задачами.",
+          "4 задачи = 12; 5 задач = 72; 6 задач = 480; 7 задач = 3600"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "schedule",
+      "options": [
+        {
+          "id": "a",
+          "text": "4 задачи"
+        },
+        {
+          "id": "c",
+          "text": "6 задач"
+        },
+        {
+          "id": "d",
+          "text": "7 задач"
+        },
+        {
+          "id": "b",
+          "text": "5 задач"
+        }
+      ]
+    },
+    {
+      "id": "ai5_alarms_numeric",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "ai_alarms"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-помощник назначает сигнал на 1-е число, затем повторяет каждые k суток. В месяце ровно 30 дней."
+      },
+      "prompt": "Если первый сигнал идёт каждые 3 дня с 1-го, второй каждые 5 со 2-го, сколько дней с ровно ОДНИМ сигналом?",
+      "answer": [
+        "12"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Для ровно одного события исключи дни пересечения двух расписаний."
+        },
+        "full": {
+          "ru": "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5. Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5. Для ровно одного события исключи дни пересечения двух расписаний."
+        },
+        "rule": {
+          "ru": "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Для ровно одного события исключи дни пересечения двух расписаний."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "alarms"
+    },
+    {
+      "id": "ai5_alarms_single_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_alarms"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-помощник назначает сигнал на 1-е число, затем повторяет каждые k суток. В месяце ровно 30 дней."
+      },
+      "prompt": "В каком случае НАИБОЛЬШЕЕ значение показателя «число сигналов за месяц»?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Для ровно одного события исключи дни пересечения двух расписаний."
+        },
+        "full": {
+          "ru": "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5. Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5. Для ровно одного события исключи дни пересечения двух расписаний."
+        },
+        "rule": {
+          "ru": "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Для ровно одного события исключи дни пересечения двух расписаний."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "alarms",
+      "options": [
+        {
+          "id": "b",
+          "text": "Каждые 4 дня"
+        },
+        {
+          "id": "d",
+          "text": "Каждые 7 дней"
+        },
+        {
+          "id": "a",
+          "text": "Каждые 3 дня"
+        },
+        {
+          "id": "c",
+          "text": "Каждые 5 дней"
+        }
+      ]
+    },
+    {
+      "id": "ai5_alarms_multi_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_alarms"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-помощник назначает сигнал на 1-е число, затем повторяет каждые k суток. В месяце ровно 30 дней."
+      },
+      "prompt": "Выбери ВСЕ случаи, где показатель «число сигналов за месяц» не меньше 6.",
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Для ровно одного события исключи дни пересечения двух расписаний."
+        },
+        "full": {
+          "ru": "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5. Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5. Для ровно одного события исключи дни пересечения двух расписаний."
+        },
+        "rule": {
+          "ru": "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Для ровно одного события исключи дни пересечения двух расписаний."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "alarms",
+      "options": [
+        {
+          "id": "b",
+          "text": "Каждые 4 дня"
+        },
+        {
+          "id": "d",
+          "text": "Каждые 7 дней"
+        },
+        {
+          "id": "a",
+          "text": "Каждые 3 дня"
+        },
+        {
+          "id": "c",
+          "text": "Каждые 5 дней"
+        }
+      ]
+    },
+    {
+      "id": "ai5_alarms_matching",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "ai_alarms"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-помощник назначает сигнал на 1-е число, затем повторяет каждые k суток. В месяце ровно 30 дней."
+      },
+      "prompt": "Соедини вариант и значение показателя «число сигналов за месяц».",
+      "answer": [
+        "l0:r0",
+        "l1:r1",
+        "l2:r2",
+        "l3:r3"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Для ровно одного события исключи дни пересечения двух расписаний."
+        },
+        "full": {
+          "ru": "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5. Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5. Для ровно одного события исключи дни пересечения двух расписаний."
+        },
+        "rule": {
+          "ru": "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Для ровно одного события исключи дни пересечения двух расписаний."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "alarms",
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Каждые 4 дня"
+        },
+        {
+          "id": "l3",
+          "text": "Каждые 7 дней"
+        },
+        {
+          "id": "l0",
+          "text": "Каждые 3 дня"
+        },
+        {
+          "id": "l2",
+          "text": "Каждые 5 дней"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r2",
+          "text": "6"
+        },
+        {
+          "id": "r0",
+          "text": "10"
+        },
+        {
+          "id": "r3",
+          "text": "5"
+        },
+        {
+          "id": "r1",
+          "text": "8"
+        }
+      ]
+    },
+    {
+      "id": "ai5_alarms_sequence",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "ai_alarms"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-помощник назначает сигнал на 1-е число, затем повторяет каждые k суток. В месяце ровно 30 дней."
+      },
+      "prompt": "Упорядочи случаи по ВОЗРАСТАНИЮ показателя «число сигналов за месяц».",
+      "answer": [
+        "d",
+        "c",
+        "b",
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Для ровно одного события исключи дни пересечения двух расписаний."
+        },
+        "full": {
+          "ru": "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5. Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5. Для ровно одного события исключи дни пересечения двух расписаний."
+        },
+        "rule": {
+          "ru": "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "en": "Для ровно одного события исключи дни пересечения двух расписаний."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Для ровно одного события исключи дни пересечения двух расписаний.",
+          "Каждые 3 дня = 10; Каждые 4 дня = 8; Каждые 5 дней = 6; Каждые 7 дней = 5"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "alarms",
+      "options": [
+        {
+          "id": "b",
+          "text": "Каждые 4 дня"
+        },
+        {
+          "id": "d",
+          "text": "Каждые 7 дней"
+        },
+        {
+          "id": "a",
+          "text": "Каждые 3 дня"
+        },
+        {
+          "id": "c",
+          "text": "Каждые 5 дней"
+        }
+      ]
+    },
+    {
+      "id": "ai5_routes_numeric",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "ai_routes"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-курьер едет из (0,0) только вправо и вверх, выбирая кратчайшие пути."
+      },
+      "prompt": "До (3,3) закрыт перекрёсток (2,2). Сколько путей осталось?",
+      "answer": [
+        "8"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Число путей в клетку — сумма числа путей слева и снизу."
+        },
+        "full": {
+          "ru": "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35. Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35. Число путей в клетку — сумма числа путей слева и снизу."
+        },
+        "rule": {
+          "ru": "Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Число путей в клетку — сумма числа путей слева и снизу."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Число путей в клетку — сумма числа путей слева и снизу.",
+          "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "routes"
+    },
+    {
+      "id": "ai5_routes_single_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_routes"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-курьер едет из (0,0) только вправо и вверх, выбирая кратчайшие пути."
+      },
+      "prompt": "В каком случае НАИБОЛЬШЕЕ значение показателя «число маршрутов»?",
+      "answer": [
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Число путей в клетку — сумма числа путей слева и снизу."
+        },
+        "full": {
+          "ru": "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35. Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35. Число путей в клетку — сумма числа путей слева и снизу."
+        },
+        "rule": {
+          "ru": "Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Число путей в клетку — сумма числа путей слева и снизу."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Число путей в клетку — сумма числа путей слева и снизу.",
+          "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "routes",
+      "options": [
+        {
+          "id": "c",
+          "text": "Финиш (3,3)"
+        },
+        {
+          "id": "a",
+          "text": "Финиш (2,2)"
+        },
+        {
+          "id": "b",
+          "text": "Финиш (3,2)"
+        },
+        {
+          "id": "d",
+          "text": "Финиш (3,4)"
+        }
+      ]
+    },
+    {
+      "id": "ai5_routes_multi_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_routes"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-курьер едет из (0,0) только вправо и вверх, выбирая кратчайшие пути."
+      },
+      "prompt": "Выбери ВСЕ случаи, где показатель «число маршрутов» не меньше 10.",
+      "answer": [
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Число путей в клетку — сумма числа путей слева и снизу."
+        },
+        "full": {
+          "ru": "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35. Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35. Число путей в клетку — сумма числа путей слева и снизу."
+        },
+        "rule": {
+          "ru": "Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Число путей в клетку — сумма числа путей слева и снизу."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Число путей в клетку — сумма числа путей слева и снизу.",
+          "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "routes",
+      "options": [
+        {
+          "id": "c",
+          "text": "Финиш (3,3)"
+        },
+        {
+          "id": "a",
+          "text": "Финиш (2,2)"
+        },
+        {
+          "id": "b",
+          "text": "Финиш (3,2)"
+        },
+        {
+          "id": "d",
+          "text": "Финиш (3,4)"
+        }
+      ]
+    },
+    {
+      "id": "ai5_routes_matching",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "ai_routes"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-курьер едет из (0,0) только вправо и вверх, выбирая кратчайшие пути."
+      },
+      "prompt": "Соедини вариант и значение показателя «число маршрутов».",
+      "answer": [
+        "l0:r0",
+        "l1:r1",
+        "l2:r2",
+        "l3:r3"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Число путей в клетку — сумма числа путей слева и снизу."
+        },
+        "full": {
+          "ru": "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35. Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35. Число путей в клетку — сумма числа путей слева и снизу."
+        },
+        "rule": {
+          "ru": "Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Число путей в клетку — сумма числа путей слева и снизу."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Число путей в клетку — сумма числа путей слева и снизу.",
+          "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "routes",
+      "matching_left": [
+        {
+          "id": "l2",
+          "text": "Финиш (3,3)"
+        },
+        {
+          "id": "l0",
+          "text": "Финиш (2,2)"
+        },
+        {
+          "id": "l1",
+          "text": "Финиш (3,2)"
+        },
+        {
+          "id": "l3",
+          "text": "Финиш (3,4)"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r3",
+          "text": "35"
+        },
+        {
+          "id": "r1",
+          "text": "10"
+        },
+        {
+          "id": "r0",
+          "text": "6"
+        },
+        {
+          "id": "r2",
+          "text": "20"
+        }
+      ]
+    },
+    {
+      "id": "ai5_routes_sequence",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "ai_routes"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-курьер едет из (0,0) только вправо и вверх, выбирая кратчайшие пути."
+      },
+      "prompt": "Упорядочи случаи по ВОЗРАСТАНИЮ показателя «число маршрутов».",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Число путей в клетку — сумма числа путей слева и снизу."
+        },
+        "full": {
+          "ru": "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35. Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35. Число путей в клетку — сумма числа путей слева и снизу."
+        },
+        "rule": {
+          "ru": "Число путей в клетку — сумма числа путей слева и снизу.",
+          "en": "Число путей в клетку — сумма числа путей слева и снизу."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Число путей в клетку — сумма числа путей слева и снизу.",
+          "Финиш (2,2) = 6; Финиш (3,2) = 10; Финиш (3,3) = 20; Финиш (3,4) = 35"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "routes",
+      "options": [
+        {
+          "id": "c",
+          "text": "Финиш (3,3)"
+        },
+        {
+          "id": "a",
+          "text": "Финиш (2,2)"
+        },
+        {
+          "id": "b",
+          "text": "Финиш (3,2)"
+        },
+        {
+          "id": "d",
+          "text": "Финиш (3,4)"
+        }
+      ]
+    },
+    {
+      "id": "ai5_impute_numeric",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "ai_impute"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ заполняет пропущенную числовую ячейку таблицы средним арифметическим известных значений."
+      },
+      "prompt": "Каким числом заполнить пропуск для 7,9,10,11,12,13,15?",
+      "answer": [
+        "11"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Сложи все известные числа и раздели на их количество.",
+          "en": "Сложи все известные числа и раздели на их количество."
+        },
+        "full": {
+          "ru": "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10. Сложи все известные числа и раздели на их количество.",
+          "en": "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10. Сложи все известные числа и раздели на их количество."
+        },
+        "rule": {
+          "ru": "Сложи все известные числа и раздели на их количество.",
+          "en": "Сложи все известные числа и раздели на их количество."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Сложи все известные числа и раздели на их количество.",
+          "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "impute"
+    },
+    {
+      "id": "ai5_impute_single_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_impute"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ заполняет пропущенную числовую ячейку таблицы средним арифметическим известных значений."
+      },
+      "prompt": "В каком случае НАИБОЛЬШЕЕ значение показателя «число, которым заполнится пропуск»?",
+      "answer": [
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Сложи все известные числа и раздели на их количество.",
+          "en": "Сложи все известные числа и раздели на их количество."
+        },
+        "full": {
+          "ru": "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10. Сложи все известные числа и раздели на их количество.",
+          "en": "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10. Сложи все известные числа и раздели на их количество."
+        },
+        "rule": {
+          "ru": "Сложи все известные числа и раздели на их количество.",
+          "en": "Сложи все известные числа и раздели на их количество."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Сложи все известные числа и раздели на их количество.",
+          "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "impute",
+      "options": [
+        {
+          "id": "d",
+          "text": "6,8,10,12,14"
+        },
+        {
+          "id": "b",
+          "text": "1,3,5,7,9"
+        },
+        {
+          "id": "c",
+          "text": "4,6,8,10,12"
+        },
+        {
+          "id": "a",
+          "text": "2,4,6,8,10"
+        }
+      ]
+    },
+    {
+      "id": "ai5_impute_multi_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_impute"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ заполняет пропущенную числовую ячейку таблицы средним арифметическим известных значений."
+      },
+      "prompt": "Выбери ВСЕ случаи, где показатель «число, которым заполнится пропуск» не меньше 6.",
+      "answer": [
+        "a",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Сложи все известные числа и раздели на их количество.",
+          "en": "Сложи все известные числа и раздели на их количество."
+        },
+        "full": {
+          "ru": "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10. Сложи все известные числа и раздели на их количество.",
+          "en": "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10. Сложи все известные числа и раздели на их количество."
+        },
+        "rule": {
+          "ru": "Сложи все известные числа и раздели на их количество.",
+          "en": "Сложи все известные числа и раздели на их количество."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Сложи все известные числа и раздели на их количество.",
+          "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "impute",
+      "options": [
+        {
+          "id": "d",
+          "text": "6,8,10,12,14"
+        },
+        {
+          "id": "b",
+          "text": "1,3,5,7,9"
+        },
+        {
+          "id": "c",
+          "text": "4,6,8,10,12"
+        },
+        {
+          "id": "a",
+          "text": "2,4,6,8,10"
+        }
+      ]
+    },
+    {
+      "id": "ai5_impute_matching",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "ai_impute"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ заполняет пропущенную числовую ячейку таблицы средним арифметическим известных значений."
+      },
+      "prompt": "Соедини вариант и значение показателя «число, которым заполнится пропуск».",
+      "answer": [
+        "l0:r0",
+        "l1:r1",
+        "l2:r2",
+        "l3:r3"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Сложи все известные числа и раздели на их количество.",
+          "en": "Сложи все известные числа и раздели на их количество."
+        },
+        "full": {
+          "ru": "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10. Сложи все известные числа и раздели на их количество.",
+          "en": "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10. Сложи все известные числа и раздели на их количество."
+        },
+        "rule": {
+          "ru": "Сложи все известные числа и раздели на их количество.",
+          "en": "Сложи все известные числа и раздели на их количество."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Сложи все известные числа и раздели на их количество.",
+          "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "impute",
+      "matching_left": [
+        {
+          "id": "l3",
+          "text": "6,8,10,12,14"
+        },
+        {
+          "id": "l1",
+          "text": "1,3,5,7,9"
+        },
+        {
+          "id": "l2",
+          "text": "4,6,8,10,12"
+        },
+        {
+          "id": "l0",
+          "text": "2,4,6,8,10"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r0",
+          "text": "6"
+        },
+        {
+          "id": "r2",
+          "text": "8"
+        },
+        {
+          "id": "r1",
+          "text": "5"
+        },
+        {
+          "id": "r3",
+          "text": "10"
+        }
+      ]
+    },
+    {
+      "id": "ai5_impute_sequence",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "ai_impute"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ заполняет пропущенную числовую ячейку таблицы средним арифметическим известных значений."
+      },
+      "prompt": "Упорядочи случаи по ВОЗРАСТАНИЮ показателя «число, которым заполнится пропуск».",
+      "answer": [
+        "b",
+        "a",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Сложи все известные числа и раздели на их количество.",
+          "en": "Сложи все известные числа и раздели на их количество."
+        },
+        "full": {
+          "ru": "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10. Сложи все известные числа и раздели на их количество.",
+          "en": "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10. Сложи все известные числа и раздели на их количество."
+        },
+        "rule": {
+          "ru": "Сложи все известные числа и раздели на их количество.",
+          "en": "Сложи все известные числа и раздели на их количество."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Сложи все известные числа и раздели на их количество.",
+          "2,4,6,8,10 = 6; 1,3,5,7,9 = 5; 4,6,8,10,12 = 8; 6,8,10,12,14 = 10"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "impute",
+      "options": [
+        {
+          "id": "d",
+          "text": "6,8,10,12,14"
+        },
+        {
+          "id": "b",
+          "text": "1,3,5,7,9"
+        },
+        {
+          "id": "c",
+          "text": "4,6,8,10,12"
+        },
+        {
+          "id": "a",
+          "text": "2,4,6,8,10"
+        }
+      ]
+    },
+    {
+      "id": "ai5_majority_numeric",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "ai_majority"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Три модели голосуют Д («Да») или Н («Нет»). Итоговое «Да» получается при двух или трёх голосах Д. В каждом варианте указаны голоса по отдельным вопросам."
+      },
+      "prompt": "В строках ДДН, ДНН, НДД, ННН, ДДД, НДН, ДНД, ННД сколько ответов большинства «Да»?",
+      "answer": [
+        "4"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "Большинство из трёх голосов — это минимум два одинаковых."
+        },
+        "full": {
+          "ru": "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4. Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4. Большинство из трёх голосов — это минимум два одинаковых."
+        },
+        "rule": {
+          "ru": "Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "Большинство из трёх голосов — это минимум два одинаковых."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Большинство из трёх голосов — это минимум два одинаковых.",
+          "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "majority"
+    },
+    {
+      "id": "ai5_majority_single_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_majority"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Три модели голосуют Д («Да») или Н («Нет»). Итоговое «Да» получается при двух или трёх голосах Д. В каждом варианте указаны голоса по отдельным вопросам."
+      },
+      "prompt": "В каком случае НАИБОЛЬШЕЕ значение показателя «число ответов «Да»»?",
+      "answer": [
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "Большинство из трёх голосов — это минимум два одинаковых."
+        },
+        "full": {
+          "ru": "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4. Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4. Большинство из трёх голосов — это минимум два одинаковых."
+        },
+        "rule": {
+          "ru": "Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "Большинство из трёх голосов — это минимум два одинаковых."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Большинство из трёх голосов — это минимум два одинаковых.",
+          "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "majority",
+      "options": [
+        {
+          "id": "a",
+          "text": "ДДН; ННН; НДН; ДНН"
+        },
+        {
+          "id": "c",
+          "text": "ДДД; ДДН; НДД; ННН"
+        },
+        {
+          "id": "d",
+          "text": "ДДД; ДДН; НДД; ДНД"
+        },
+        {
+          "id": "b",
+          "text": "ДДН; НДД; ННН; ННД"
+        }
+      ]
+    },
+    {
+      "id": "ai5_majority_multi_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_majority"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Три модели голосуют Д («Да») или Н («Нет»). Итоговое «Да» получается при двух или трёх голосах Д. В каждом варианте указаны голоса по отдельным вопросам."
+      },
+      "prompt": "Выбери ВСЕ случаи, где показатель «число ответов «Да»» не меньше 2.",
+      "answer": [
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "Большинство из трёх голосов — это минимум два одинаковых."
+        },
+        "full": {
+          "ru": "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4. Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4. Большинство из трёх голосов — это минимум два одинаковых."
+        },
+        "rule": {
+          "ru": "Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "Большинство из трёх голосов — это минимум два одинаковых."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Большинство из трёх голосов — это минимум два одинаковых.",
+          "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "majority",
+      "options": [
+        {
+          "id": "a",
+          "text": "ДДН; ННН; НДН; ДНН"
+        },
+        {
+          "id": "c",
+          "text": "ДДД; ДДН; НДД; ННН"
+        },
+        {
+          "id": "d",
+          "text": "ДДД; ДДН; НДД; ДНД"
+        },
+        {
+          "id": "b",
+          "text": "ДДН; НДД; ННН; ННД"
+        }
+      ]
+    },
+    {
+      "id": "ai5_majority_matching",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "ai_majority"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Три модели голосуют Д («Да») или Н («Нет»). Итоговое «Да» получается при двух или трёх голосах Д. В каждом варианте указаны голоса по отдельным вопросам."
+      },
+      "prompt": "Соедини вариант и значение показателя «число ответов «Да»».",
+      "answer": [
+        "l0:r0",
+        "l1:r1",
+        "l2:r2",
+        "l3:r3"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "Большинство из трёх голосов — это минимум два одинаковых."
+        },
+        "full": {
+          "ru": "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4. Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4. Большинство из трёх голосов — это минимум два одинаковых."
+        },
+        "rule": {
+          "ru": "Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "Большинство из трёх голосов — это минимум два одинаковых."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Большинство из трёх голосов — это минимум два одинаковых.",
+          "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "majority",
+      "matching_left": [
+        {
+          "id": "l0",
+          "text": "ДДН; ННН; НДН; ДНН"
+        },
+        {
+          "id": "l2",
+          "text": "ДДД; ДДН; НДД; ННН"
+        },
+        {
+          "id": "l3",
+          "text": "ДДД; ДДН; НДД; ДНД"
+        },
+        {
+          "id": "l1",
+          "text": "ДДН; НДД; ННН; ННД"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "2"
+        },
+        {
+          "id": "r3",
+          "text": "4"
+        },
+        {
+          "id": "r2",
+          "text": "3"
+        },
+        {
+          "id": "r0",
+          "text": "1"
+        }
+      ]
+    },
+    {
+      "id": "ai5_majority_sequence",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "ai_majority"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Три модели голосуют Д («Да») или Н («Нет»). Итоговое «Да» получается при двух или трёх голосах Д. В каждом варианте указаны голоса по отдельным вопросам."
+      },
+      "prompt": "Упорядочи случаи по ВОЗРАСТАНИЮ показателя «число ответов «Да»».",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "Большинство из трёх голосов — это минимум два одинаковых."
+        },
+        "full": {
+          "ru": "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4. Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4. Большинство из трёх голосов — это минимум два одинаковых."
+        },
+        "rule": {
+          "ru": "Большинство из трёх голосов — это минимум два одинаковых.",
+          "en": "Большинство из трёх голосов — это минимум два одинаковых."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Большинство из трёх голосов — это минимум два одинаковых.",
+          "ДДН; ННН; НДН; ДНН = 1; ДДН; НДД; ННН; ННД = 2; ДДД; ДДН; НДД; ННН = 3; ДДД; ДДН; НДД; ДНД = 4"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "majority",
+      "options": [
+        {
+          "id": "a",
+          "text": "ДДН; ННН; НДН; ДНН"
+        },
+        {
+          "id": "c",
+          "text": "ДДД; ДДН; НДД; ННН"
+        },
+        {
+          "id": "d",
+          "text": "ДДД; ДДН; НДД; ДНД"
+        },
+        {
+          "id": "b",
+          "text": "ДДН; НДД; ННН; ННД"
+        }
+      ]
+    },
+    {
+      "id": "ai5_accuracy_numeric",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "ai_accuracy"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Каждую модель проверили на 20 картинках: 10 кошек и 10 собак. В скобках число ВЕРНО распознанных кошек и собак."
+      },
+      "prompt": "Модель верно распознала 8 кошек и 9 собак. Чему равна accuracy в процентах?",
+      "answer": [
+        "85"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        },
+        "full": {
+          "ru": "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90. Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90. Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        },
+        "rule": {
+          "ru": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "accuracy"
+    },
+    {
+      "id": "ai5_accuracy_single_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_accuracy"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Каждую модель проверили на 20 картинках: 10 кошек и 10 собак. В скобках число ВЕРНО распознанных кошек и собак."
+      },
+      "prompt": "В каком случае НАИБОЛЬШЕЕ значение показателя «accuracy в процентах»?",
+      "answer": [
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        },
+        "full": {
+          "ru": "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90. Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90. Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        },
+        "rule": {
+          "ru": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "accuracy",
+      "options": [
+        {
+          "id": "b",
+          "text": "Модель Б (6+8)"
+        },
+        {
+          "id": "d",
+          "text": "Модель Г (9+9)"
+        },
+        {
+          "id": "a",
+          "text": "Модель А (5+7)"
+        },
+        {
+          "id": "c",
+          "text": "Модель В (8+8)"
+        }
+      ]
+    },
+    {
+      "id": "ai5_accuracy_multi_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_accuracy"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Каждую модель проверили на 20 картинках: 10 кошек и 10 собак. В скобках число ВЕРНО распознанных кошек и собак."
+      },
+      "prompt": "Выбери ВСЕ случаи, где показатель «accuracy в процентах» не меньше 70.",
+      "answer": [
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        },
+        "full": {
+          "ru": "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90. Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90. Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        },
+        "rule": {
+          "ru": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "accuracy",
+      "options": [
+        {
+          "id": "b",
+          "text": "Модель Б (6+8)"
+        },
+        {
+          "id": "d",
+          "text": "Модель Г (9+9)"
+        },
+        {
+          "id": "a",
+          "text": "Модель А (5+7)"
+        },
+        {
+          "id": "c",
+          "text": "Модель В (8+8)"
+        }
+      ]
+    },
+    {
+      "id": "ai5_accuracy_matching",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "ai_accuracy"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Каждую модель проверили на 20 картинках: 10 кошек и 10 собак. В скобках число ВЕРНО распознанных кошек и собак."
+      },
+      "prompt": "Соедини вариант и значение показателя «accuracy в процентах».",
+      "answer": [
+        "l0:r0",
+        "l1:r1",
+        "l2:r2",
+        "l3:r3"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        },
+        "full": {
+          "ru": "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90. Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90. Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        },
+        "rule": {
+          "ru": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "accuracy",
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Модель Б (6+8)"
+        },
+        {
+          "id": "l3",
+          "text": "Модель Г (9+9)"
+        },
+        {
+          "id": "l0",
+          "text": "Модель А (5+7)"
+        },
+        {
+          "id": "l2",
+          "text": "Модель В (8+8)"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r2",
+          "text": "80"
+        },
+        {
+          "id": "r0",
+          "text": "60"
+        },
+        {
+          "id": "r3",
+          "text": "90"
+        },
+        {
+          "id": "r1",
+          "text": "70"
+        }
+      ]
+    },
+    {
+      "id": "ai5_accuracy_sequence",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "ai_accuracy"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "Каждую модель проверили на 20 картинках: 10 кошек и 10 собак. В скобках число ВЕРНО распознанных кошек и собак."
+      },
+      "prompt": "Упорядочи случаи по ВОЗРАСТАНИЮ показателя «accuracy в процентах».",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        },
+        "full": {
+          "ru": "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90. Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90. Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        },
+        "rule": {
+          "ru": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "en": "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Accuracy — процент правильных ответов от всех 20 картинок; полнота кошек (recall) считается отдельно.",
+          "Модель А (5+7) = 60; Модель Б (6+8) = 70; Модель В (8+8) = 80; Модель Г (9+9) = 90"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "accuracy",
+      "options": [
+        {
+          "id": "b",
+          "text": "Модель Б (6+8)"
+        },
+        {
+          "id": "d",
+          "text": "Модель Г (9+9)"
+        },
+        {
+          "id": "a",
+          "text": "Модель А (5+7)"
+        },
+        {
+          "id": "c",
+          "text": "Модель В (8+8)"
+        }
+      ]
+    },
+    {
+      "id": "ai5_gears_numeric",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "numeric",
+      "mode": "practice",
+      "skills": [
+        "ai_gears"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-сканер начинает с 50% точности. Улучшения до 60,70,80,90% стоят по шагам ещё 1,3,5,7 шестерёнок."
+      },
+      "prompt": "Два сканера по 50% имеют вместе 13 шестерёнок. Какой максимальной суммы точностей они достигнут, в процентных пунктах?",
+      "answer": [
+        "150"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        },
+        "full": {
+          "ru": "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16. Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16. Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        },
+        "rule": {
+          "ru": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "gears"
+    },
+    {
+      "id": "ai5_gears_single_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_gears"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-сканер начинает с 50% точности. Улучшения до 60,70,80,90% стоят по шагам ещё 1,3,5,7 шестерёнок."
+      },
+      "prompt": "В каком случае НАИБОЛЬШЕЕ значение показателя «суммарная стоимость улучшений»?",
+      "answer": [
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        },
+        "full": {
+          "ru": "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16. Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16. Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        },
+        "rule": {
+          "ru": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "gears",
+      "options": [
+        {
+          "id": "c",
+          "text": "Достичь 80%"
+        },
+        {
+          "id": "a",
+          "text": "Достичь 60%"
+        },
+        {
+          "id": "b",
+          "text": "Достичь 70%"
+        },
+        {
+          "id": "d",
+          "text": "Достичь 90%"
+        }
+      ]
+    },
+    {
+      "id": "ai5_gears_multi_choice",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "ai_gears"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-сканер начинает с 50% точности. Улучшения до 60,70,80,90% стоят по шагам ещё 1,3,5,7 шестерёнок."
+      },
+      "prompt": "Выбери ВСЕ случаи, где показатель «суммарная стоимость улучшений» не меньше 4.",
+      "answer": [
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        },
+        "full": {
+          "ru": "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16. Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16. Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        },
+        "rule": {
+          "ru": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "gears",
+      "options": [
+        {
+          "id": "c",
+          "text": "Достичь 80%"
+        },
+        {
+          "id": "a",
+          "text": "Достичь 60%"
+        },
+        {
+          "id": "b",
+          "text": "Достичь 70%"
+        },
+        {
+          "id": "d",
+          "text": "Достичь 90%"
+        }
+      ]
+    },
+    {
+      "id": "ai5_gears_matching",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "ai_gears"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-сканер начинает с 50% точности. Улучшения до 60,70,80,90% стоят по шагам ещё 1,3,5,7 шестерёнок."
+      },
+      "prompt": "Соедини вариант и значение показателя «суммарная стоимость улучшений».",
+      "answer": [
+        "l0:r0",
+        "l1:r1",
+        "l2:r2",
+        "l3:r3"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        },
+        "full": {
+          "ru": "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16. Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16. Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        },
+        "rule": {
+          "ru": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "gears",
+      "matching_left": [
+        {
+          "id": "l2",
+          "text": "Достичь 80%"
+        },
+        {
+          "id": "l0",
+          "text": "Достичь 60%"
+        },
+        {
+          "id": "l1",
+          "text": "Достичь 70%"
+        },
+        {
+          "id": "l3",
+          "text": "Достичь 90%"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r3",
+          "text": "16"
+        },
+        {
+          "id": "r1",
+          "text": "4"
+        },
+        {
+          "id": "r0",
+          "text": "1"
+        },
+        {
+          "id": "r2",
+          "text": "9"
+        }
+      ]
+    },
+    {
+      "id": "ai5_gears_sequence",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "ai_gears"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "ВсОШ ИИ, авторская подготовка по мотивам 2025–2026",
+        "region": "RU",
+        "year": "2025–2026",
+        "original": true
+      },
+      "stimulus": {
+        "text": "ИИ-сканер начинает с 50% точности. Улучшения до 60,70,80,90% стоят по шагам ещё 1,3,5,7 шестерёнок."
+      },
+      "prompt": "Упорядочи случаи по ВОЗРАСТАНИЮ показателя «суммарная стоимость улучшений».",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        },
+        "full": {
+          "ru": "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16. Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16. Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        },
+        "rule": {
+          "ru": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "en": "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары."
+        }
+      },
+      "review": {
+        "status": "published",
+        "method": "algorithmic_reference",
+        "human_assessor": false
+      },
+      "knowledge": [
+        {
+          "id": "CS.AI.OLYMPIAD.5",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "reasoning_annotation": {
+        "source": "author_reference_solution",
+        "level": "R2",
+        "steps": [
+          "Общие затраты на уровни 60,70,80,90% равны 1,4,9,16; перебери допустимые пары.",
+          "Достичь 60% = 1; Достичь 70% = 4; Достичь 80% = 9; Достичь 90% = 16"
+        ],
+        "observed_from_learner": false
+      },
+      "ai_archetype": "gears",
+      "options": [
+        {
+          "id": "c",
+          "text": "Достичь 80%"
+        },
+        {
+          "id": "a",
+          "text": "Достичь 60%"
+        },
+        {
+          "id": "b",
+          "text": "Достичь 70%"
+        },
+        {
+          "id": "d",
+          "text": "Достичь 90%"
         }
       ]
     }
