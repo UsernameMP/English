@@ -1,0 +1,1 @@
+{"scope":"RIFT r191 recovery","kind":"checkpoint_gap","topic":"20 r191 review labels and four audit items remain local-only; do not advance canonical cursor past resource_000160 until recovered","status":"pending","cycle":"r192","found_at":"2026-10-20"}
