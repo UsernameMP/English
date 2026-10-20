@@ -9,11 +9,11 @@ ROOT = Path(__file__).resolve().parents[1]
 ASSET = ROOT/"app/src/main/assets/content/informatics_g5_olympiad_extended.json"
 bank=json.loads(ASSET.read_text(encoding="utf-8"))
 qs=bank["questions"]
-expected={k:50 for k in ("numeric","single_choice","multi_choice","matching","sequence")}
-assert len(qs)==250
+expected={k:60 for k in ("numeric","single_choice","multi_choice","matching","sequence")}
+assert len(qs)==300
 assert Counter(q["interaction"] for q in qs)==expected
 assert len({q["id"] for q in qs})==len(qs)
-assert bank["content_version"]=="2.0.0"
+assert bank["content_version"]=="2.1.0"
 assert bank["editorial"]["official_task_copy"] is False
 assert len(bank["editorial"]["references"])==5
 catalog=json.loads((ROOT/"app/src/main/assets/content/catalog.json").read_text(encoding="utf-8"))
@@ -46,6 +46,50 @@ for q in qs:
 assert all(q["interaction"]!="spoken_reasoning" for q in qs)
 pilot=json.loads((ROOT/"app/src/main/assets/content/informatics_g5_7_pilot.json").read_text(encoding="utf-8"))
 assert all(q["interaction"]!="spoken_reasoning" for q in pilot["questions"])
+# Independently verify all 50 AI problems against mathematical reference calculations.
+ai_questions = [q for q in qs if q["id"].startswith("ai5_")]
+assert len(ai_questions) == 50
+assert Counter(q["interaction"] for q in ai_questions) == {k: 10 for k in expected}
+assert Counter(q["ai_archetype"] for q in ai_questions) == {
+    name: 5 for name in ("states","bias","scores","schedule","alarms",
+                        "routes","impute","majority","accuracy","gears")}
+assert all(q["knowledge"][0]["id"] == "CS.AI.OLYMPIAD.5" for q in ai_questions)
+ai_truth = {
+    "states": ([2,4,8,15],15),
+    "bias": ([6,10,15,21],36),
+    "scores": ([9,7,5,3],6),
+    "schedule": ([12,72,480,3600],72),
+    "alarms": ([10,8,6,5],12),
+    "routes": ([6,10,20,35],8),
+    "impute": ([6,5,8,10],11),
+    "majority": ([1,2,3,4],4),
+    "accuracy": ([60,70,80,90],85),
+    "gears": ([1,4,9,16],150),
+}
+for q in ai_questions:
+    values, num = ai_truth[q["ai_archetype"]]
+    typ = q["interaction"]
+    if typ == "numeric":
+        assert q["answer"] == [str(num)], q["id"]
+    elif typ == "matching":
+        left = {x["id"]: x["text"] for x in q["matching_left"]}
+        right = {x["id"]: int(x["text"]) for x in q["matching_right"]}
+        canonical = {f"l{i}":values[i] for i in range(4)}
+        assert len(q["answer"]) == 4, q["id"]
+        for pair in q["answer"]:
+            a, b = pair.split(":")
+            assert canonical[a] == right[b], q["id"]
+    else:
+        value_by_id = {f"abcd"[i]: values[i] for i in range(4)}
+        if typ == "single_choice":
+            assert q["answer"] == [max(value_by_id, key=value_by_id.get)], q["id"]
+        elif typ == "multi_choice":
+            threshold = sorted(values)[1]
+            assert set(q["answer"]) == {
+                key for key, value in value_by_id.items() if value >= threshold}, q["id"]
+        elif typ == "sequence":
+            assert q["answer"] == sorted(value_by_id, key=value_by_id.get), q["id"]
+
 # Full generated mechanics verification: independently recompute each new answer.
 def value_for(q, item):
     text = item["text"]
@@ -107,4 +151,4 @@ signatures = {
     for q in qs
 }
 assert len(signatures) == len(qs), "Repeated task stem and options"
-print("OK: 250 5th-grade informatics problems, 50 per supported mechanic; no microphone.")
+print("OK: 300 5th-grade informatics problems, 50 per supported mechanic; no microphone.")
