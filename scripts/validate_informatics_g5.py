@@ -90,7 +90,7 @@ for q in ai_questions:
             expected_answer = {max(actual, key=actual.get)}
             assert set(q["answer"]) == expected_answer, q["id"]
         elif typ == "multi_choice":
-            threshold = int(re.search(r"не меньше (\\d+)", q["prompt"]).group(1))
+            threshold = int(re.search(r"не меньше (\d+)", q["prompt"]).group(1))
             expected_answer = {id for id, value in actual.items() if value >= threshold}
             assert set(q["answer"]) == expected_answer, q["id"]
         elif typ == "sequence":
