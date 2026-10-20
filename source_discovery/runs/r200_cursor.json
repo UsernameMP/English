@@ -1,0 +1,33 @@
+{
+  "cycle": "r200-20261020T170420000Z",
+  "reviewed_at": "2026-10-20T17:10:00Z",
+  "resource_shard": "resource_000169.jsonl",
+  "reviewed_rows": "0-99",
+  "unique_resources": 100,
+  "raw_occurrences": 107,
+  "raw_shards": [
+    "batch_000513.jsonl",
+    "batch_000514.jsonl",
+    "batch_000515.jsonl"
+  ],
+  "counts": {
+    "unrelated": 100
+  },
+  "photo_gallery_resources": 93,
+  "daryn_admissions_resources": 7,
+  "duplicated_resource_ids": 7,
+  "classification_done": true,
+  "label_checkpointed": 0,
+  "label_publication_status": "blocked_by_connector_safety_checks",
+  "canonical_merged": 0,
+  "canonical_cursor_updated": false,
+  "next_resource_shard": "resource_000170.jsonl",
+  "next_shard_exists": true,
+  "workflow_run_id": 39463221837,
+  "workflow_conclusion": "success",
+  "discovery_verified": 5,
+  "discovery_checkpointed": 5,
+  "audit_checkpoint": "runs/r200_audit.jsonl",
+  "binary_downloads": 0,
+  "notes": "Reconstruct one label per raw occurrence ID from the three raw shards and resource index; do not classify the same resource_id again. No raw records removed."
+}
