@@ -1,0 +1,54 @@
+{
+  "cycle": "r185",
+  "date": "2026-10-20",
+  "trigger": {
+    "commit": "1bdd86337533ff3b9a951422b28402bbfae793d5",
+    "workflow_run_id": 39357187889,
+    "conclusion": "failure",
+    "failed_step": "Persist results",
+    "reason": "git ref race during concurrent writes; push rejected"
+  },
+  "runner_only_not_persisted": {
+    "html_pages": 60,
+    "new_links": 2773,
+    "unique_urls": 146042,
+    "pending_pages": 65683,
+    "blocked_or_failed": 861,
+    "merged_sources_in_runner": 1147
+  },
+  "last_persisted": {
+    "unique_urls": 145550,
+    "pending_pages": 65496,
+    "canonical_sources": 1143,
+    "from_cycle": "r184"
+  },
+  "discovery": {
+    "verified_new_indexes": 5,
+    "checkpoint": "runs/discovery_20261020_0207_r185.jsonl",
+    "canonical_merged": 0
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "task": 53,
+    "solution": 45,
+    "review": 2,
+    "compact_checkpoints": 7,
+    "full_labels": 0,
+    "canonical_merged": 0,
+    "next_shard": "resource_000155.jsonl"
+  },
+  "audit": {
+    "new_findings": 10,
+    "checkpoint": "runs/r185_audit.jsonl",
+    "canonical_backlog_updated": false
+  },
+  "blockers": [
+    "URL-bearing label writes rejected by safety checks",
+    "canonical backlog update rejected by safety checks",
+    "review_state update rejected by safety checks",
+    "workflow push race; no crawler checkpoint persisted"
+  ],
+  "binary_downloads": 0,
+  "dropbox_mutations": 0
+}
