@@ -2,7 +2,7 @@
   "cycle": "r184",
   "trigger_commit": "f5725c616d2affbddf2f0c88e35d44b9f1c6ce7f",
   "workflow_run_id": 39351886721,
-  "workflow_status_at_checkpoint": "in_progress",
+  "workflow_status_at_checkpoint": "success",
   "new_verified_source_checkpoints": [
     "discovery_20261020_0110_r184.jsonl",
     "discovery_20261020_0112_r184.jsonl"
@@ -28,5 +28,14 @@
   "review_state_canonical_updated": false,
   "raw_cursor_unchanged": true,
   "binary_downloads": 0,
-  "dropbox_mutations": 0
+  "dropbox_mutations": 0,
+  "workflow_completed_at": "2026-10-20T01:13:03Z",
+  "workflow_metrics": {
+    "html_pages": 60,
+    "new_raw_links": 3408,
+    "unique_resource_urls": 145550,
+    "pending_pages": 65496,
+    "blocked_or_failed": 861,
+    "canonical_sources": 1143
+  }
 }
