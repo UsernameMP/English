@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-19T15:08:48.170Z",
+  "updated_at": "2026-10-20T00:10:44.830Z",
   "deferred_shards": [
     1,
     2,
@@ -196,12 +196,18 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000144.jsonl",
-    "last_completed_shard": "resource_000143.jsonl",
-    "cycle": "r174",
-    "canonical_cursor_unchanged": true,
-    "checkpointed_full": 80,
-    "checkpointed_compact": 20
+    "next_resource_shard": "resource_000153.jsonl",
+    "last_completed_shard": "resource_000152.jsonl",
+    "cycle": "r183",
+    "new_rows_reviewed": "0,36-99",
+    "already_reviewed_rows": "1-35 (r12)",
+    "new_full_labels_checkpointed": 65,
+    "canonical_merged": 0,
+    "raw_shards": [
+      "batch_000427.jsonl",
+      "batch_000428.jsonl"
+    ],
+    "canonical_raw_cursor_unchanged": true
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
