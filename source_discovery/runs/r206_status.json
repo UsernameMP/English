@@ -1,0 +1,26 @@
+{
+  "cycle": "r206",
+  "resource_shard": "resource_000175.jsonl",
+  "reviewed_rows": "0-99",
+  "unique_resources": 100,
+  "raw_occurrences": 100,
+  "raw_shards": [
+    "batch_000528.jsonl",
+    "batch_000529.jsonl"
+  ],
+  "full_labels_published_rows": "0-19",
+  "full_labels_checkpoint": "runs/labels_checkpoint_20261020_2302_r206_r175_00_19.jsonl",
+  "unpublished_rows": "20-99",
+  "pending_type_counts": {
+    "unrelated": 78,
+    "review": 2
+  },
+  "pending_review_rows": [
+    58,
+    62
+  ],
+  "reason": "Publication of complete labels and compact pointer ledger blocked by safety checks; source resource shard and raw shards are unchanged.",
+  "audit": "65 URL paths contain backslashes; 11 URL collisions after slash normalization; not proof of content duplicates.",
+  "next_resource_shard": "resource_000176.jsonl",
+  "canonical_review_state_updated": false
+}
