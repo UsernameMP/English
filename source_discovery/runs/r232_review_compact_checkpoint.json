@@ -1,0 +1,86 @@
+{
+  "cycle": "r232-20261021T230709251Z",
+  "reviewed_at": "2026-10-21T23:11:26.988Z",
+  "source": "GitHub unique resource index and original raw link occurrences; no binary bodies accessed",
+  "resource_shards": [
+    {
+      "path": "source_discovery/resources_shards/resource_000205.jsonl",
+      "blob_sha": "9d100fe405973313b1b022389ce1ac3b38308783",
+      "raw_shards": [
+        "batch_000573.jsonl",
+        "batch_000574.jsonl"
+      ],
+      "ranges": [
+        {
+          "rows": "0",
+          "type": "participant_work",
+          "reason": "Direct Drive file in participant works heading; rights and content unverified."
+        },
+        {
+          "rows": "1-12",
+          "type": "archive_or_review",
+          "rule": "Drive folders -> archive, direct Drive files -> review; combined tasks/solutions heading."
+        },
+        {
+          "rows": "13-50",
+          "type": "unrelated",
+          "reason": "Official appeal and round protocols."
+        },
+        {
+          "rows": "51-76",
+          "type": "review",
+          "reason": "Generic direct Drive files under combined task/solution heading, exact type unknown."
+        },
+        {
+          "rows": "77-94",
+          "type": "participant_work",
+          "reason": "Direct files under participant works heading; rights and content unverified."
+        },
+        {
+          "rows": "95-99",
+          "type": "unrelated",
+          "reason": "Live-stream links."
+        }
+      ]
+    },
+    {
+      "path": "source_discovery/resources_shards/resource_000206.jsonl",
+      "blob_sha": "5b3ceb561c66fc07436610893933508c02500b42",
+      "raw_shards": [
+        "batch_000574.jsonl",
+        "batch_000575.jsonl"
+      ],
+      "ranges": [
+        {
+          "rows": "0-36",
+          "type": "unrelated",
+          "reason": "Live video, broadcast spreadsheet, event programme."
+        },
+        {
+          "rows": "37-58",
+          "type": "review",
+          "reason": "Combined protocol/participant-work folders, contents unknown."
+        },
+        {
+          "rows": "59-99",
+          "type": "task_or_solution",
+          "rule": "For URL basename ^(sol)?(his|rk|pr|de|fr|en|kr)(9|10|11)\\.pdf$: sol prefix -> solution; otherwise task. Year 2022-2023, oblast stage; grade from basename; subjects his=history,rk=Russian,pr=law,de=German,fr=French,en=English,kr=Kazakh. Do not download PDFs."
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "participant_work": 19,
+    "archive": 7,
+    "review": 53,
+    "unrelated": 80,
+    "task": 21,
+    "solution": 20
+  },
+  "unique_resource_ids": 200,
+  "raw_occurrences": 200,
+  "canonical_labels_merged": 0,
+  "full_labels_publication": "blocked_by_safety_checks",
+  "next_shard": "resource_000207.jsonl",
+  "reconstruction": "Use immutable shard row indices to get resource_id,url,first_occurrence_id; join raw id to link_shards; preserve all original occurrences. Do not infer participant-work contents or file rights."
+}
