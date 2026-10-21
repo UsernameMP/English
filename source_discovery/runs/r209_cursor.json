@@ -1,0 +1,1 @@
+{"cycle":"r209","resource_shard":"resource_000178.jsonl","rows":"0-99","unique_resources":100,"raw_occurrences":100,"counts":{"task":50,"solution":50},"full_labels_checkpointed":80,"pointer_only":20,"canonical_labels_merged":0,"next_resource_shard":"resource_000179.jsonl","raw_shards":["batch_000531.jsonl","batch_000532.jsonl"],"canonical_review_state_updated":false}
