@@ -97,7 +97,7 @@ class Links(HTMLParser):
             self.in_heading = True
             self.heading_parts = []
         if tag == "a" and attrs.get("href"):
-            self.anchor = {"href": attrs["href"], "title": attrs.get("title", ""),
+            self.anchor = {"href": attrs["href"], "title": attrs.get("title") or "",
                            "text_parts": [], "heading": self.heading}
 
     def handle_data(self, data):
