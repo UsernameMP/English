@@ -1,0 +1,24 @@
+{
+  "cycle": "r223-20261021T160832000Z",
+  "completed_shards": [
+    "resource_000192.jsonl",
+    "resource_000193.jsonl"
+  ],
+  "unique_resources": 200,
+  "raw_occurrences": 200,
+  "raw_shards": [
+    "batch_000548.jsonl",
+    "batch_000549.jsonl",
+    "batch_000550.jsonl",
+    "batch_000551.jsonl"
+  ],
+  "counts": {
+    "unrelated": 187,
+    "archive": 12,
+    "source": 1
+  },
+  "canonical_labels_commit": "0be738f3a4fb67517c952f8a2d4a63cd229b864b",
+  "next_operational_shard": "resource_000194.jsonl",
+  "canonical_raw_cursor_unchanged": true,
+  "review_state_update_blocked": true
+}
