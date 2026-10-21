@@ -1,0 +1,20 @@
+{
+  "cycle": "r232-20261021T230709251Z",
+  "target": "source_discovery/sources.jsonl",
+  "url": "https://prixhamidoune.wixsite.com/pyoh/archives-concours",
+  "current": {
+    "country": "SN",
+    "name": "Prix Youssoupha Ousmane Hamidoune past contest papers"
+  },
+  "corrected": {
+    "country": "MR",
+    "name": "Prix Yahya Ould Hamidoune — historical contest papers",
+    "competition": "Prix Yahya Ould Hamidoune"
+  },
+  "evidence": [
+    "https://prixhamidoune.wixsite.com/pyoh",
+    "https://www.promath.net/fr/pyoh"
+  ],
+  "status": "pending_canonical_source_update",
+  "note": "Organizer explicitly identifies Mauritania and Yahya Ould Hamidoune; do not retain Senegal metadata."
+}
