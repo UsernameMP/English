@@ -1,0 +1,68 @@
+{
+  "cycle": "r230-20261021T210756887Z",
+  "date": "2026-10-22",
+  "branch": "rift-source-index",
+  "trigger_commit": "4b6f921a89d3f3d632adbfcc6f62bdcbb2ae5872",
+  "workflow_runs": [
+    {
+      "id": 39676257104,
+      "conclusion": "success",
+      "html_pages": 60,
+      "new_links": 4884,
+      "unique_resource_urls": 171509,
+      "pending_pages": 81659,
+      "blocked_or_failed": 1042
+    },
+    {
+      "id": 39677065924,
+      "conclusion": "success",
+      "html_pages": 60,
+      "new_links": 2689,
+      "unique_resource_urls": 172366,
+      "pending_pages": 81922,
+      "blocked_or_failed": 1071,
+      "triggered_by": "sources.jsonl update"
+    }
+  ],
+  "discovery": {
+    "canonical_sources_before": 1309,
+    "added": 25,
+    "canonical_sources_after": 1334,
+    "commit": "cf7e56d983aaf5fb489b0fef9f3f9ad9bf23bb88",
+    "new_this_cycle": 10,
+    "recovered_prior_pending": 15,
+    "metadata_correction_pending": "PYOH country MR not SN; details in audit checkpoint"
+  },
+  "review": {
+    "resource_shards": [
+      "resource_000201.jsonl",
+      "resource_000202.jsonl"
+    ],
+    "unique_resources": 200,
+    "raw_occurrences": 200,
+    "counts": {
+      "unrelated": 177,
+      "archive": 20,
+      "review": 2,
+      "source": 1
+    },
+    "canonical_link_labels_merged": 0,
+    "canonical_link_labels_count": 546,
+    "pending_label_checkpoint": "runs/r230_pending_label_recovery.jsonl",
+    "checkpointed_labels": 707,
+    "includes_prior_pending": 507,
+    "next_shard": "resource_000203.jsonl",
+    "cursor_checkpoint": "runs/r230_review_cursor_checkpoint.json"
+  },
+  "audit": {
+    "new_findings": 17,
+    "recovered_prior": 79,
+    "unique_pending": 94,
+    "canonical_backlog_merged": 0,
+    "canonical_backlog_count": 237,
+    "checkpoint": "runs/r230_pending_audit_recovery.jsonl"
+  },
+  "binary_downloads": 0,
+  "dropbox_writes": 0,
+  "automations_changed": false
+}
