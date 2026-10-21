@@ -1,0 +1,1 @@
+resource_000182 reviewed; next resource_000183. Full 25, compact 30, pending 45. Canonical merge 0.
