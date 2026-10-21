@@ -1,0 +1,35 @@
+{
+  "cycle": "r211",
+  "resource_shard": "resource_000180.jsonl",
+  "rows": "0-99",
+  "raw_shards": [
+    "batch_000532.jsonl",
+    "batch_000533.jsonl",
+    "batch_000534.jsonl"
+  ],
+  "reviewed_unique": 100,
+  "raw_occurrences": 100,
+  "counts": {
+    "task": 46,
+    "solution": 41,
+    "criteria": 3,
+    "source": 2,
+    "archive": 1,
+    "review": 1,
+    "unrelated": 6
+  },
+  "full_label_checkpoints": [
+    "runs/r211_r180_labels_20_39.jsonl",
+    "runs/r211_r180_labels_40_59.jsonl"
+  ],
+  "full_labels_published": 40,
+  "full_labels_blocked": 60,
+  "blocked_ranges": [
+    "0-19",
+    "60-99"
+  ],
+  "canonical_labels_merged": 0,
+  "next_resource_shard": "resource_000181.jsonl",
+  "note": "Preserve raw occurrences and restore blocked labels from source resource shard and raw ledger; PDF bodies not downloaded.",
+  "updated_at": "2026-10-21T04:04:20.906Z"
+}
