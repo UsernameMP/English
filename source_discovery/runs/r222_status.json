@@ -1,0 +1,49 @@
+{
+  "cycle": "r222-20261021T150438Z",
+  "timestamp": "2026-10-21T15:04:38Z",
+  "trigger": {
+    "attempted": true,
+    "updated": false,
+    "blocker": "GitHub safety checks"
+  },
+  "workflow_last_confirmed": {
+    "run_id": 39605035397,
+    "conclusion": "failure",
+    "reason": "non-fast-forward persist collision",
+    "saved_unique_urls": 161151,
+    "saved_pending_pages": 74405
+  },
+  "discovery": {
+    "verified": 5,
+    "canonical_added": 5,
+    "checkpoint": "runs/discovery_r222_20261021T150438Z.jsonl",
+    "canonical_total": 1286
+  },
+  "review": {
+    "shard": "resource_000191.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 102,
+    "counts": {
+      "unrelated": 97,
+      "source": 1,
+      "archive": 1,
+      "review": 1
+    },
+    "checkpoint": "runs/r222_review_r191.jsonl",
+    "canonical_added": 0,
+    "next_shard": "resource_000192.jsonl",
+    "cursor_update_blocked": true
+  },
+  "audit": {
+    "findings": 10,
+    "canonical_added": 0,
+    "publication_blocked": true
+  },
+  "mime": {
+    "observations": 2045,
+    "unique_extensionless_pdf_urls": 991
+  },
+  "binary_downloads": 0,
+  "dropbox_mutations": 0,
+  "schedule_changed": false
+}
