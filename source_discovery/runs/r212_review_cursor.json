@@ -1,0 +1,18 @@
+{
+  "resource_shard": "resource_000181.jsonl",
+  "unique_resources": 100,
+  "raw_occurrences": 103,
+  "full_labels_checkpointed": 103,
+  "canonical_merged": 0,
+  "checkpoint_files": [
+    "runs/r212_r181_labels_020_039.jsonl",
+    "runs/r212_r181_labels_040_059.jsonl",
+    "runs/r212_r181_labels_080_099.jsonl",
+    "runs/r212_r181_recovery_00_09.jsonl",
+    "runs/r212_r181_recovery_10_19.jsonl",
+    "runs/r212_r181_recovery_20_29.jsonl",
+    "runs/r212_r181_recovery_30_39.jsonl",
+    "runs/r212_r181_additional_occurrences.jsonl"
+  ],
+  "note": "Belgian malformed path question compilation URLs remain review; 3 additional IMC sponsor raw occurrences preserved."
+}
