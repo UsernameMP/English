@@ -4,14 +4,19 @@
   "trigger": {
     "attempted": true,
     "updated": false,
-    "blocker": "GitHub safety checks"
+    "blocker": "GitHub safety checks",
+    "note": "Direct run_trigger update was blocked; source registry commit triggered push workflow."
   },
   "workflow_last_confirmed": {
-    "run_id": 39605035397,
-    "conclusion": "failure",
-    "reason": "non-fast-forward persist collision",
-    "saved_unique_urls": 161151,
-    "saved_pending_pages": 74405
+    "run_id": 39622822653,
+    "conclusion": "success",
+    "completed_at": "2026-10-21T15:10:10Z",
+    "html_pages": 60,
+    "new_links": 3641,
+    "unique_urls": 162240,
+    "pending_pages": 75121,
+    "blocked_or_failed": 972,
+    "commit": "3d48d3d"
   },
   "discovery": {
     "verified": 5,
@@ -37,7 +42,8 @@
   "audit": {
     "findings": 10,
     "canonical_added": 0,
-    "publication_blocked": true
+    "publication_blocked": true,
+    "local_checkpoint": "rift_r222_pending_audit.jsonl"
   },
   "mime": {
     "observations": 2045,
