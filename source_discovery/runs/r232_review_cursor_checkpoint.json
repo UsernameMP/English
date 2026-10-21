@@ -1,0 +1,18 @@
+{
+  "cycle": "r232-20261021T230709251Z",
+  "last_classified_resource_shard": "resource_000206.jsonl",
+  "next_operational_resource_shard": "resource_000207.jsonl",
+  "r231_recovery": {
+    "full_labels_published": 140,
+    "compact_remaining": 60
+  },
+  "r232_review": {
+    "unique_resources": 200,
+    "full_labels_published": 40,
+    "compact_remaining": 160,
+    "checkpoint": "runs/r232_review_compact_checkpoint.json"
+  },
+  "canonical_review_state_updated": false,
+  "canonical_link_labels_updated": false,
+  "canonical_raw_cursor_unchanged": true
+}
