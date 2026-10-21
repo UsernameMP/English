@@ -1,0 +1,41 @@
+{
+  "cycle": "r224-20261021T170829000Z",
+  "completed_resource_shards": [
+    "resource_000194.jsonl",
+    "resource_000195.jsonl"
+  ],
+  "unique_resources": 200,
+  "raw_occurrences": 200,
+  "raw_shards": [
+    "batch_000551.jsonl",
+    "batch_000552.jsonl",
+    "batch_000553.jsonl",
+    "batch_000554.jsonl",
+    "batch_000555.jsonl",
+    "batch_000556.jsonl"
+  ],
+  "counts": {
+    "archive": 4,
+    "unrelated": 196
+  },
+  "full_labels_checkpointed": 200,
+  "canonical_merged": 0,
+  "canonical_raw_cursor_unchanged": true,
+  "next_operational_resource_shard": "resource_000196.jsonl",
+  "checkpoints": [
+    "runs/r224_review_1.jsonl",
+    "runs/r224_review_2.jsonl",
+    "runs/r224_review_r195_00.jsonl",
+    "runs/r224_review_r195_01.jsonl",
+    "runs/r224_review_r195_02.jsonl",
+    "runs/r224_review_r195_04.jsonl",
+    "runs/r224_review_r195_05.jsonl",
+    "runs/r224_review_r195_06.jsonl",
+    "runs/r224_review_r195_07.jsonl",
+    "runs/r224_review_r195_08.jsonl",
+    "runs/r224_review_r195_recovery_30.jsonl",
+    "runs/r224_review_r195_recovery_35.jsonl",
+    "runs/r224_review_r195_recovery_90.jsonl",
+    "runs/r224_review_r195_recovery_95.jsonl"
+  ]
+}
