@@ -1,0 +1,60 @@
+{
+  "cycle": "r218-20261021T110001000Z",
+  "date": "2026-10-21",
+  "trigger": {
+    "updated": true,
+    "commit": "cc420ef74b8dcaf1dcf8e6324f6b615a9f5068ad",
+    "workflow_run_confirmed": false,
+    "reason": "commit workflow-run connector filters to PR runs; crawl_state SHA unchanged; cannot assert success"
+  },
+  "discovery": {
+    "canonical_sources_before": 1262,
+    "canonical_sources_after": 1272,
+    "added": 10,
+    "r217_reconciled": 7,
+    "new_r218": 3,
+    "commit": "7709208a56f629dd7a526bd906f904896d8e4940"
+  },
+  "review": {
+    "resource_shard": "resource_000187.jsonl",
+    "raw_shards": [
+      "batch_000540.jsonl",
+      "batch_000541.jsonl",
+      "batch_000542.jsonl"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "task": 23,
+      "review": 6,
+      "archive": 3,
+      "unrelated": 58,
+      "source": 10
+    },
+    "canonical_labels_before": 301,
+    "canonical_labels_after": 346,
+    "canonical_merged_this_cycle": 45,
+    "checkpointed": 100,
+    "still_pending_canonical": 55,
+    "next_resource_shard": "resource_000188.jsonl",
+    "checkpoint_prefix": "runs/r218_review_r187_",
+    "canonical_review_state_updated": false
+  },
+  "audit": {
+    "findings": 8,
+    "checkpoint_files": [
+      "runs/r218_audit_part1.jsonl",
+      "runs/r218_audit_part2.jsonl"
+    ],
+    "canonical_backlog_updated": false
+  },
+  "last_confirmed_crawl": {
+    "unique_url_count": 159760,
+    "frontier_queue": 74056,
+    "source": "r212; crawl_state blob SHA unchanged"
+  },
+  "pending_prior_cycles": "r214-r217 local review/source/audit files not all reconciled; r217 discovery reconciled this cycle",
+  "binary_downloads": 0,
+  "dropbox_mutations": 0,
+  "schedule_changed": false
+}
