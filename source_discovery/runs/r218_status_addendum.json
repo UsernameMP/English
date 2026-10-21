@@ -1,0 +1,8 @@
+{
+  "cycle": "r218",
+  "audit_canonical_merged": 4,
+  "audit_pending_checkpoint": 4,
+  "backlog_count_after": 237,
+  "backlog_commit": "ebfbdb51487311eba1ee510b8011d7fdab4d4c3b",
+  "note": "Supersedes r218_status.json audit.canonical_backlog_updated=false; part2 merged after status creation."
+}
