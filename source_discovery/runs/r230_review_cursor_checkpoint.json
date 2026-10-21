@@ -1,0 +1,27 @@
+{
+  "cycle": "r230-20261021T210756887Z",
+  "reviewed_shards": [
+    "resource_000201.jsonl",
+    "resource_000202.jsonl"
+  ],
+  "next_operational_resource_shard": "resource_000203.jsonl",
+  "unique_resources_reviewed": 200,
+  "raw_occurrences": 200,
+  "raw_shards": [
+    "batch_000569.jsonl",
+    "batch_000570.jsonl",
+    "batch_000571.jsonl"
+  ],
+  "counts": {
+    "unrelated": 177,
+    "archive": 20,
+    "review": 2,
+    "source": 1
+  },
+  "canonical_link_labels_merged": 0,
+  "pending_labels": 707,
+  "checkpoint": "runs/r230_pending_label_recovery.jsonl",
+  "canonical_review_state_updated": false,
+  "canonical_raw_cursor_unchanged": true,
+  "reviewed_at": "2026-10-21T21:20:34.998Z"
+}
