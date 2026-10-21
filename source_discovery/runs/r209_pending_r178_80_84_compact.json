@@ -1,0 +1,1 @@
+{"cycle":"r209","resource_shard":"resource_000178.jsonl","rows":"80-84","raw_shards":["batch_000531.jsonl","batch_000532.jsonl"],"status":"classified_not_published","rule":"Chave=solution answer key; Prova=task; PT Canguru math; extract IDs, URLs, year, level and parents from raw shard","count":5}
