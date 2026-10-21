@@ -1,0 +1,19 @@
+{
+  "cycle": "r224-20261021T170829000Z",
+  "audit_findings": 14,
+  "canonical_backlog_updated": false,
+  "reason": "GitHub update_file and audit checkpoint publication blocked by safety checks",
+  "topics": [
+    "Naboj 2005-2010 problems index gap",
+    "SUMS 1964-1997 digitization unknown",
+    "UNSW 2020 and early years unverified",
+    "OMOC 2020 and 2017-2018 solutions unverified",
+    "Africa knowledge olympiad 24 editions and stage keys",
+    "IFCE paginated archive",
+    "EERI engineering design briefs",
+    "UNLV participant-work rights",
+    "OCHE and OQEP organizer portals HTTP 502",
+    "IMC 2018 poster PDF false positives"
+  ],
+  "local_checkpoint_filename": "rift_r224_pending_audit.jsonl"
+}
