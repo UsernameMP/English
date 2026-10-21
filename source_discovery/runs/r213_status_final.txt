@@ -1,0 +1,1 @@
+r213 review: 100 unique; 50 full, 30 pointer, 20 pending. Missing rows 5-9,60-69,90-94. Next shard 183. Canonical registers unchanged.
