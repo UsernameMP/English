@@ -1,0 +1,72 @@
+{
+  "cycle": "r232-20261021T230709251Z",
+  "date": "2026-10-22",
+  "trigger": {
+    "commit": "ebdde1c14a28f049c98c20e065a23192614e6fea",
+    "run_trigger_sha": "20e627f1c39f5e57ca112619404f199f76fe7eaa",
+    "updated": true
+  },
+  "workflow": {
+    "confirmed_run_id": null,
+    "conclusion": "unverified_pending",
+    "crawl_state_blob_sha_at_last_check": "83bdace557fe47af92386b90b5ca53f3f5a3d0e1",
+    "note": "No workflow-run listing connector; no new persisted crawl_state blob yet."
+  },
+  "discovery": {
+    "new_or_recovered_verified_urls": 15,
+    "published_discovery_checkpoint_urls": 14,
+    "canonical_sources_before": 1334,
+    "canonical_sources_merged": 0,
+    "files": [
+      "runs/discovery_r232_1.jsonl",
+      "runs/discovery_r232_2.jsonl",
+      "runs/discovery_r232_40.jsonl",
+      "runs/discovery_r232_41.jsonl",
+      "runs/discovery_r232_42.jsonl",
+      "runs/discovery_r232_43.jsonl"
+    ],
+    "unpublished": "2015 OLAA secondary organizer year page; canonical update blocked",
+    "metadata_correction": "runs/r232_pyoh_metadata_correction.json"
+  },
+  "review": {
+    "resource_shards": [
+      "resource_000205.jsonl",
+      "resource_000206.jsonl"
+    ],
+    "unique_resources": 200,
+    "counts": {
+      "task": 21,
+      "solution": 20,
+      "participant_work": 19,
+      "archive": 7,
+      "review": 53,
+      "unrelated": 80
+    },
+    "full_r232_labels_checkpointed": 40,
+    "compact_r232_checkpoint": "runs/r232_review_compact_checkpoint.json",
+    "r231_full_labels_recovered": 140,
+    "r231_compact_remaining": 60,
+    "canonical_link_labels_merged": 0,
+    "canonical_count": 546,
+    "next_shard": "resource_000207.jsonl",
+    "cursor_checkpoint": "runs/r232_review_cursor_checkpoint.json"
+  },
+  "audit": {
+    "r232_new_findings": 12,
+    "published_full_or_short": 10,
+    "canonical_backlog_merged": 0,
+    "canonical_backlog_count": 237,
+    "r230_pending_recovery": 94
+  },
+  "mime": {
+    "observations": 2125,
+    "application_pdf": 1031,
+    "extensionless_pdf_urls": 1031,
+    "verified_task_content": 0
+  },
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_writes": 0,
+    "automation_schedule_changes": 0
+  }
+}
