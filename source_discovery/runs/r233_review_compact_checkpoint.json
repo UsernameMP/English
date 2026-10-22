@@ -1,0 +1,78 @@
+{
+  "cycle": "r233-20261022T000826681Z",
+  "reviewed_at": "2026-10-22T00:14:30.096Z",
+  "scope": "link metadata only; no binary content downloaded",
+  "resource_shards": [
+    {
+      "path": "source_discovery/resources_shards/resource_000207.jsonl",
+      "sha": "b7413f09e4e46876f5c2560708c6b7b223495699",
+      "rows": "0-99",
+      "counts": {
+        "task": 51,
+        "solution": 49
+      }
+    },
+    {
+      "path": "source_discovery/resources_shards/resource_000208.jsonl",
+      "sha": "4978ddd49db361eebab90f35a6c4054a4befe6d5",
+      "rows": "0-99",
+      "counts": {
+        "task": 63,
+        "solution": 21,
+        "archive": 12,
+        "unrelated": 4
+      }
+    }
+  ],
+  "raw_shards": [
+    {
+      "path": "source_discovery/links_shards/batch_000575.jsonl",
+      "sha": "863313450c441f9003420bae70fa9d6dbaf31f9b"
+    },
+    {
+      "path": "source_discovery/links_shards/batch_000576.jsonl",
+      "sha": "50f9f117baf9546096e0a886887742e9c0465a89"
+    },
+    {
+      "path": "source_discovery/links_shards/batch_000577.jsonl",
+      "sha": "1bdae9201a6d9dc4a3ca8db76ccc2767d0f6d8e7"
+    }
+  ],
+  "occurrences": 200,
+  "unique_resources": 200,
+  "raw_occurrence_lookup": "Match resource_id and exact URL in the three raw shards; exactly one occurrence per resource.",
+  "classify": {
+    "resource_000207.jsonl": "All rows are Daryn 2022-2023 oblast-stage PDF files. URL basename ^(2)?(sol)?([a-z]+)(9|10|11)\\.pdf$: sol -> solution, otherwise task; preserve prefix 2 as filename variant without assuming day or stage.",
+    "resource_000208.jsonl": "Rows 0-38: same oblast PDF rule. Row 39: unrelated (frafik.pdf schedule). Rows 40-84: task (district/rayon PDFs). Row 85: unrelated (results protocol spreadsheet). Row 86: unrelated (district rules document). Rows 87-98: archive (Google Drive folders headed Работы детей районного этапа РО; not individual participant works). Row 99: unrelated (generic private /drive/my-drive URL)."
+  },
+  "subject_codes": {
+    "his": "history",
+    "rk": "russian_language_literature",
+    "rl": "russian_language_literature",
+    "kr": "kazakh_language_literature",
+    "kl": "kazakh_language_literature",
+    "pr": "law",
+    "de": "german_language",
+    "fr": "french_language",
+    "en": "english_language",
+    "ph": "physics",
+    "ch": "chemistry",
+    "mat": "mathematics",
+    "inf": "informatics",
+    "bio": "biology",
+    "geo": "geography"
+  },
+  "subject_caution": "rk/rl/kr/kl require manual differentiation; label as broad language-literature groups, not precise variant.",
+  "year": "2022-2023",
+  "grade": "9/10/11 from filename",
+  "stage": "oblast vs rayon from URL and organizer heading",
+  "full_labels_published": [
+    "source_discovery/runs/r233_review_r208_00_24.jsonl"
+  ],
+  "full_labels_published_count": 25,
+  "full_labels_unpublished_count": 175,
+  "canonical_merged": 0,
+  "raw_records_deleted": 0,
+  "confidence_rule": "0.94 for clear filename/task pairs, 0.86 for ambiguous language codes, 0.89 for Drive folders, 0.96+ for administrative unrelated.",
+  "next_shard": "resource_000209.jsonl"
+}
