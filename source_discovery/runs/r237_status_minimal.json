@@ -1,0 +1,17 @@
+{
+  "cycle": "r237",
+  "workflow_run_id": 39720577606,
+  "workflow_conclusion": "success",
+  "unique_urls": 176963,
+  "queue": 82894,
+  "raw_links_added": 1732,
+  "sources": 1383,
+  "labels": 756,
+  "backlog": 263,
+  "discovery_checkpoint": "discovery_r237.jsonl",
+  "review_checkpoint": "r237_review_compact_checkpoint.json",
+  "review_pending_full_labels": 190,
+  "review_next_resource_shard": 217,
+  "trigger_update_blocked": true,
+  "canonical_review_cursor_updated": false
+}
