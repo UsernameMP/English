@@ -1,0 +1,21 @@
+{
+  "cycle": "r236",
+  "trigger_commit": "2afa85a",
+  "workflow_run": 39714842842,
+  "workflow_result": "success",
+  "unique_urls": 176800,
+  "queue": 82808,
+  "new_links": 1218,
+  "canonical_sources": 1374,
+  "discovery_checkpoint": "discovery_r236.jsonl",
+  "new_sources_checkpointed": 3,
+  "reviewed": 200,
+  "review_labels_saved": 140,
+  "review_labels_pending": 60,
+  "canonical_labels": 746,
+  "next_resource_shard": 215,
+  "backlog": 255,
+  "mime_observations": 2215,
+  "unique_pdf": 1054,
+  "extensionless_pdf": 896
+}
