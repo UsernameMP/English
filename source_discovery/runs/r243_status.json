@@ -1,0 +1,66 @@
+{
+  "cycle": "r243-20261022T100254608Z",
+  "requested_at": "2026-10-22T10:02:54.608Z",
+  "action_run_id": 39760130292,
+  "action_result": "success",
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_links": 3442,
+    "unique_resource_urls": 179925,
+    "pending_pages": 83810,
+    "blocked_or_failed_cumulative": 1247
+  },
+  "discovery": {
+    "new_verified_urls": 6,
+    "checkpoint": "runs/discovery_r243.jsonl",
+    "canonical_merge_pending": true
+  },
+  "review": {
+    "unique_resources": 200,
+    "shards": [
+      "resource_000227.jsonl",
+      "resource_000228.jsonl"
+    ],
+    "raw_shards": [
+      "batch_000648.jsonl",
+      "batch_000649.jsonl",
+      "batch_000650.jsonl"
+    ],
+    "next_shard": "resource_000229.jsonl",
+    "full_labels_checkpointed": 50,
+    "compact_classifications_checkpointed": 200,
+    "canonical_merged": 0,
+    "full_checkpoint": "runs/r243_review_full_50_99.jsonl",
+    "compact_checkpoints": [
+      "runs/r243_review_compact_0_49.json",
+      "runs/r243_review_compact_50_99.json",
+      "runs/r243_review_compact_100_149.json",
+      "runs/r243_review_compact_150_199.json"
+    ],
+    "corrections_pending": 3
+  },
+  "audit": {
+    "findings": 8,
+    "checkpoint": "runs/r243_audit.json",
+    "canonical_backlog_merge_pending": true
+  },
+  "mime": {
+    "observations": 2270,
+    "unique_pdf_urls": 1067,
+    "extensionless_pdf_urls": 909
+  },
+  "canonical_state_at_review": {
+    "sources": 1408,
+    "labels": 756,
+    "backlog": 263
+  },
+  "pending": [
+    "merge six new sources",
+    "expand compact labels and reconcile 3 corrections",
+    "merge reviewed labels into canonical ledger",
+    "update review_state.json",
+    "merge audit backlog",
+    "reconcile prior r241-r242 local checkpoints"
+  ],
+  "rights": "metadata-only; no binary bodies downloaded"
+}
