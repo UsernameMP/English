@@ -1,0 +1,57 @@
+{
+  "cycle": "r243-20261022T100254608Z",
+  "created_at": "2026-10-22T10:07:49.756Z",
+  "canonical_backlog_merge": "blocked",
+  "findings": [
+    {
+      "scope": "BOI",
+      "kind": "missing_solution",
+      "year": 1998,
+      "evidence": "Official tasks.php 1998 row lacks solutions link; statements and testdata linked."
+    },
+    {
+      "scope": "BOI",
+      "kind": "classification_warning",
+      "evidence": "boiYYYY_tests.zip is under TESTDATA column; not a task document."
+    },
+    {
+      "scope": "IJSO",
+      "kind": "answer_sheet_ambiguity",
+      "years": [
+        2013,
+        2014,
+        2015
+      ],
+      "evidence": "Anchor and filename can conflict, content not inspected."
+    },
+    {
+      "scope": "IJSO",
+      "kind": "missing_solution",
+      "years": [
+        2007,
+        2008
+      ],
+      "evidence": "Exam links but no corresponding solutions in inspected index segment."
+    },
+    {
+      "scope": "IJSO",
+      "kind": "criteria_vs_statistics",
+      "evidence": "2015 mark-scheme files are criteria; 2013 difficulty indices are statistics."
+    },
+    {
+      "scope": "Croatia",
+      "kind": "historical_coverage",
+      "evidence": "HMOD/HMOK archived from 2020, MEDO from 2024/25; older coverage unknown."
+    },
+    {
+      "scope": "IOAA",
+      "kind": "rights",
+      "evidence": "Third-party problem-book README: no project-wide license, commercial reuse restricted."
+    },
+    {
+      "scope": "RIFT",
+      "kind": "review_merge_pending",
+      "evidence": "200 r243 labels classified; only 50 full-label checkpoint GitHub write succeeded; 3 classifications in it need correction."
+    }
+  ]
+}
