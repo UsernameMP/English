@@ -1,0 +1,8 @@
+{
+  "cycle": "r235-20261022",
+  "scope": "safeguard_audit",
+  "url": "https://www.mmo.mn/olympiads/problems/191/",
+  "observation": "During HTML navigation to verify the Mongolian archive, a public problem page returned embedded task statements. No binary files were downloaded and no task text was saved to GitHub or local artifacts.",
+  "deviation": "Task-page body was accessed despite link-and-metadata-only intent.",
+  "follow_up": "Limit subsequent checks to archive index pages and link metadata; do not open individual problem pages."
+}
