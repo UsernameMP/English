@@ -1,0 +1,1 @@
+Canonical link_labels.jsonl: 994482 UTF-8 bytes (1156 rows), 54094 bytes below 1 MiB. Canonical sources.jsonl: 832278 bytes (1478 rows). The next 200 full labels will exceed the 1 MiB threshold; plan sharded label writes and safe merge before that. No source or raw records deleted.
