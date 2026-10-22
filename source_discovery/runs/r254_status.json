@@ -1,0 +1,65 @@
+{
+  "cycle": "r254-20261022T205950877Z",
+  "date": "2026-10-22",
+  "trigger": {
+    "commit": "7bc8ad52d6ac73b06b86471567a56de61bfe5d68",
+    "workflow_run_id": 39853595968,
+    "conclusion": "success",
+    "crawler_commit": "e545aec"
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_links": 4279,
+    "unique_resource_urls": 187123,
+    "pending_pages": 87918,
+    "blocked_or_failed_cumulative": 1420,
+    "resource_shards_changed": 15
+  },
+  "canonical": {
+    "sources": 1478,
+    "link_labels": 1156,
+    "backlog": 300,
+    "mime_observations": 2352
+  },
+  "discovery": {
+    "verified_new_source_urls": 8,
+    "checkpoint": "runs/discovery_r254.jsonl",
+    "canonical_merged_this_cycle": 0,
+    "scheduled_merger_pending": true
+  },
+  "review": {
+    "resource_shards": [
+      "resource_000249.jsonl",
+      "resource_000250.jsonl"
+    ],
+    "unique_resources": 200,
+    "raw_occurrences_scanned": 212,
+    "classification": {
+      "unrelated": 158,
+      "solution": 32,
+      "archive": 3,
+      "source": 2,
+      "review": 5
+    },
+    "canonical_merged": 200,
+    "label_commit": "e2e8854",
+    "next_shard": "resource_000251.jsonl",
+    "review_state_update": "blocked",
+    "cursor_checkpoint": "runs/r254_cursor.txt"
+  },
+  "audit": {
+    "new_canonical_entries": 9,
+    "backlog_total": 300,
+    "additional_unpublished_issue": "link_labels.jsonl is near 1 MiB; future direct updates may fail"
+  },
+  "mime": {
+    "unique_pdf": 1113,
+    "pdf_no_extension": 955
+  },
+  "restrictions": {
+    "binary_downloads": 0,
+    "dropbox_mutations": 0,
+    "schedule_changes": 0,
+    "additional_workflow_instances": 0
+  }
+}
