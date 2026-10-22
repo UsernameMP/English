@@ -1,0 +1,28 @@
+{
+  "cycle": "r244-20261022T110624060Z",
+  "reviewed_shards": [
+    "resource_000229.jsonl",
+    "resource_000230.jsonl"
+  ],
+  "raw_shards": [
+    "batch_000650.jsonl",
+    "batch_000651.jsonl",
+    "batch_000652.jsonl"
+  ],
+  "unique_resources": 200,
+  "raw_occurrences": 200,
+  "canonical_labels_added": 200,
+  "canonical_label_types": {
+    "archive": 4,
+    "source": 7,
+    "unrelated": 30,
+    "task": 71,
+    "solution": 69,
+    "review": 19
+  },
+  "pending_label_corrections": 18,
+  "correction_checkpoint": "runs/r244_label_corrections_minimal.json",
+  "next_operational_shard": "resource_000231.jsonl",
+  "canonical_review_state_update": "blocked",
+  "prior_shards_not_claimed_complete": true
+}
