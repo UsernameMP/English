@@ -1,0 +1,51 @@
+{
+  "cycle": "r244-20261022T110624060Z",
+  "canonical_backlog_merge": "pending",
+  "findings": [
+    {
+      "scope": "Croatia",
+      "kind": "year",
+      "evidence": "Generic file names and reused 2016 upload folders prevent reliable year assignment for some 2018 links."
+    },
+    {
+      "scope": "Croatia",
+      "kind": "type_conflict",
+      "evidence": "2021 county zup2021_zadB-1.pdf is linked as solutions but filename resembles task."
+    },
+    {
+      "scope": "Croatia",
+      "kind": "coverage",
+      "evidence": "OS/A/B school, county and national historical matrix is not complete."
+    },
+    {
+      "scope": "Croatia",
+      "kind": "rubrics",
+      "evidence": "Standalone marking criteria not confirmed across years and rounds."
+    },
+    {
+      "scope": "RIFT",
+      "kind": "correction",
+      "evidence": "18 explicit 2026 Croatian task/solution links remain typed review in canonical; see r244_label_corrections_minimal.json."
+    },
+    {
+      "scope": "IAC Asia",
+      "kind": "access",
+      "evidence": "Past questions after 2022 are not publicly posted in the checked IAC pages."
+    },
+    {
+      "scope": "IAC Asia",
+      "kind": "empty_index",
+      "evidence": "Asian Championship Exams page says Coming Soon."
+    },
+    {
+      "scope": "Nigeria",
+      "kind": "timeout",
+      "evidence": "MAN Lagos archive search listing found but HTML direct verification timed out."
+    },
+    {
+      "scope": "Crawler",
+      "kind": "large_file",
+      "evidence": "Bounded GitHub read of crawl_state.json returned empty; queue must be read from workflow status."
+    }
+  ]
+}
