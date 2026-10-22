@@ -1,0 +1,1 @@
+resource_000241.jsonl rows 40-59: KöMaL monthly problem links, except physics h=205xx URLs need review (rows 42,45,48,51), row 52 magazine cover unrelated, and rows 56-59 Japanese venue maps unrelated. Other rows task. Canonical labels pending; raw evidence retained.
