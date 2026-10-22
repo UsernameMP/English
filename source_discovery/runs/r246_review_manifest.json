@@ -1,0 +1,68 @@
+{
+  "cycle": "r246-20261022T125929164Z",
+  "resource_shards": [
+    "resource_000233.jsonl",
+    "resource_000234.jsonl"
+  ],
+  "raw_shards": [
+    "batch_000654.jsonl",
+    "batch_000655.jsonl",
+    "batch_000656.jsonl"
+  ],
+  "unique_resources": 200,
+  "raw_occurrences": 200,
+  "classification_counts": {
+    "task": 95,
+    "criteria": 54,
+    "solution": 2,
+    "archive": 3,
+    "source": 24,
+    "unrelated": 20,
+    "review": 2
+  },
+  "full_labels_checkpointed": 199,
+  "compact_labels_checkpointed": 1,
+  "full_checkpoints": [
+    "runs/r246_labels_010_019.jsonl",
+    "runs/r246_labels_020_029.jsonl",
+    "runs/r246_labels_030_039.jsonl",
+    "runs/r246_labels_050_059.jsonl",
+    "runs/r246_labels_070_079.jsonl",
+    "runs/r246_labels_090_099.jsonl",
+    "runs/r246_labels_120_129.jsonl",
+    "runs/r246_labels_130_139.jsonl",
+    "runs/r246_labels_000_004.jsonl",
+    "runs/r246_labels_005_009.jsonl",
+    "runs/r246_labels_040_044.jsonl",
+    "runs/r246_labels_045_049.jsonl",
+    "runs/r246_labels_060_064.jsonl",
+    "runs/r246_labels_080_084.jsonl",
+    "runs/r246_labels_085_089.jsonl",
+    "runs/r246_labels_100_104.jsonl",
+    "runs/r246_labels_110_114.jsonl",
+    "runs/r246_labels_115_119.jsonl",
+    "runs/r246_labels_140_144.jsonl",
+    "runs/r246_labels_065_067.jsonl",
+    "runs/r246_labels_068_069.jsonl",
+    "runs/r246_labels_108_109.jsonl",
+    "runs/r246_label_105.jsonl",
+    "runs/r246_label_106.jsonl",
+    "runs/r246_label_145.jsonl",
+    "runs/r246_label_146.jsonl",
+    "runs/r246_label_147.jsonl",
+    "runs/r246_label_148.jsonl",
+    "runs/r246_remaining_0.json",
+    "runs/r246_labels_150_199.jsonl"
+  ],
+  "compact_checkpoint": "runs/r246_remaining_contact_metadata.json",
+  "correction": "runs/r246_review_correction.json",
+  "canonical_labels_added": 0,
+  "canonical_cursor_advanced": false,
+  "next_operational_shard": "resource_000235.jsonl",
+  "notes": [
+    "All resource IDs were checked against 956 canonical labels; no collisions.",
+    "One messaging-contact URL intentionally omitted from compact checkpoint; raw ledger retains it.",
+    "The Lithuanian medical olympiad label in full checkpoint 150-199 must be corrected to source using correction file.",
+    "Do not reclassify these resource IDs until checkpoint reconciliation."
+  ]
+}
