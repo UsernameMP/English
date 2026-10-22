@@ -1,0 +1,46 @@
+{
+  "cycle": "r238",
+  "date": "2026-10-22",
+  "audit_status": "pending_canonical_backlog_merge",
+  "resource_shards": [
+    "resource_000217.jsonl",
+    "resource_000218.jsonl"
+  ],
+  "findings": [
+    [
+      "BY",
+      "2000-2007 problem PDFs indexed; solutions/criteria per round unverified"
+    ],
+    [
+      "PL",
+      "Chemistry historical editions 2-9 mapped as archive; year/round/solutions unresolved"
+    ],
+    [
+      "NL",
+      "IJSO SLO 2023-25 national preliminary and 2018 international tests and answers; other years/stages not verified"
+    ],
+    [
+      "NL",
+      "IJSO 2018 theory marking scheme distinct from answer sheets; 2024 historical mirror redirect not dereferenced"
+    ],
+    [
+      "HR",
+      "2025/26 physics school/county/national official ZIP indexes verified; ZIP contents and historical stages unknown"
+    ],
+    [
+      "DE",
+      "IJSO 2026 task round and 2027 current tasks indexed; historical marking schemes incomplete"
+    ],
+    [
+      "RIFT",
+      "200 classifications checkpointed but full labels and canonical cursor update blocked"
+    ],
+    [
+      "RIFT",
+      "run_trigger.json write blocked; workflow trigger not confirmed"
+    ]
+  ],
+  "next_review_shard": "resource_000219.jsonl",
+  "raw_evidence_retained": true,
+  "binary_downloads": 0
+}
