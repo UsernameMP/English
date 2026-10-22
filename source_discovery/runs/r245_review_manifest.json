@@ -1,0 +1,31 @@
+{
+  "cycle": "r245",
+  "resource_shards": [
+    "resource_000231.jsonl",
+    "resource_000232.jsonl"
+  ],
+  "raw_shards": [
+    "batch_000652.jsonl",
+    "batch_000653.jsonl",
+    "batch_000654.jsonl"
+  ],
+  "full_labels": [
+    "r245_labels_231_3.jsonl",
+    "r245_labels_232.jsonl"
+  ],
+  "compact_labels": [
+    "r245_labels_231_00_09_compact.jsonl",
+    "r245_labels_231_10_19_compact.jsonl",
+    "r245_labels_231_20_29_compact.jsonl",
+    "r245_labels_231_30_39_compact.jsonl",
+    "r245_labels_231_40_49_compact.jsonl",
+    "r245_labels_231_50_59_compact.jsonl",
+    "r245_labels_231_60_69_compact.jsonl",
+    "r245_labels_231_70_74_compact.jsonl"
+  ],
+  "full_count": 125,
+  "compact_count": 75,
+  "canonical_merge": false,
+  "review_state_updated": false,
+  "next_operational_shard": "resource_000233.jsonl"
+}
