@@ -1,0 +1,20 @@
+{
+  "cycle": "r236-20261022T030424623Z",
+  "resource_shard": "resource_000213.jsonl",
+  "resource_shard_sha": "940b052d05f1982ba41b0a52c9212092ed24b5de",
+  "raw_shards": [
+    "batch_000582.jsonl",
+    "batch_000583.jsonl"
+  ],
+  "full_labels_saved_ranges": [
+    "20-39",
+    "60-79"
+  ],
+  "unpublished_ranges": [
+    "0-19",
+    "40-59",
+    "80-99"
+  ],
+  "unpublished_classification": "Video livestream URLs unrelated; Drive folder indexes archive; rules/procedures unrelated. Resolve from source metadata and raw occurrences.",
+  "note": "60 full labels blocked by connector safety checks; canonical cursor not advanced."
+}
