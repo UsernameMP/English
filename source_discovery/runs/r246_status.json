@@ -1,0 +1,90 @@
+{
+  "cycle": "r246-20261022T125929164Z",
+  "date": "2026-10-22",
+  "trigger": {
+    "commit": "d8798939d4ced15528ab40a58ee09fc600041dd0",
+    "run_id": 39782964072,
+    "status": "failure",
+    "reason": "Persist results remote ref race after concurrent GitHub writes",
+    "crawler_completed_before_push": true,
+    "computed_but_unpersisted": {
+      "html_pages": 60,
+      "new_raw_links": 5374,
+      "unique_resource_urls": 184399,
+      "pending_pages": 86141,
+      "blocked_or_failed": 1339
+    }
+  },
+  "last_persisted_crawl": {
+    "run_id": 39776429529,
+    "unique_resource_urls": 183574,
+    "pending_pages": 85753,
+    "blocked_or_failed": 1323
+  },
+  "discovery": {
+    "verified_index_urls": 17,
+    "checkpoint_files": [
+      "runs/discovery_r246_0.jsonl",
+      "runs/discovery_r246_2.jsonl",
+      "runs/discovery_r246_3.jsonl",
+      "runs/discovery_r246_11.jsonl",
+      "runs/discovery_r246_1single0.jsonl",
+      "runs/discovery_r246_1single1.jsonl",
+      "runs/discovery_r246_1single2.jsonl"
+    ],
+    "canonical_merged": 0,
+    "canonical_sources": 1428,
+    "merger_glob": "runs/discovery_*.jsonl"
+  },
+  "review": {
+    "resource_shards": [
+      "resource_000233.jsonl",
+      "resource_000234.jsonl"
+    ],
+    "unique_resources": 200,
+    "raw_occurrences": 200,
+    "types": {
+      "task": 95,
+      "criteria": 54,
+      "solution": 2,
+      "archive": 3,
+      "source": 24,
+      "unrelated": 20,
+      "review": 2
+    },
+    "full_checkpoints": 199,
+    "compact_checkpoints": 1,
+    "canonical_merged": 0,
+    "canonical_labels": 956,
+    "review_state_pending_updated": true,
+    "canonical_cursor_advanced": false,
+    "next_operational_shard": "resource_000235.jsonl",
+    "manifest": "runs/r246_review_manifest.json"
+  },
+  "audit": {
+    "findings": 10,
+    "canonical_merged": 10,
+    "canonical_backlog": 273,
+    "checkpoint": "runs/r246_audit.jsonl",
+    "workflow_race_checkpoint": "runs/r246_workflow_failure.json"
+  },
+  "mime": {
+    "observations": 2313,
+    "pdf_unique_urls": 1079,
+    "pdf_without_pdf_suffix": 1079,
+    "binary_bodies_downloaded": 0
+  },
+  "pending": [
+    "Canonical merge 17 source indexes via merge_sources.py on next successful crawler run",
+    "Canonical merge 200 review labels with one compact record and one correction",
+    "Resolve failed crawler persistence without concurrent branch writes",
+    "Reconcile r243-r245 checkpoints and r244 Croatian corrections",
+    "Audit SOF Uganda archive coverage, third-party rights and Lithuania answer sheets"
+  ],
+  "safety": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "additional_workflow_runs_manually_triggered": false,
+    "task_binaries_downloaded": false
+  }
+}
