@@ -1,0 +1,22 @@
+{
+  "cycle": "r238",
+  "date": "2026-10-22",
+  "trigger": "blocked_safety_check",
+  "new_workflow_run": false,
+  "last_successful_run": 39720577606,
+  "last_unique_urls": 176963,
+  "last_queue": 82894,
+  "canonical_sources": 1383,
+  "canonical_labels": 756,
+  "canonical_backlog": 263,
+  "new_sources_checkpointed": 7,
+  "review_unique": 200,
+  "review_full_checkpointed": 27,
+  "review_compact_remaining": 173,
+  "review_next": "resource_000219.jsonl",
+  "audit_items": 8,
+  "observations": 2245,
+  "pdf_urls": 1054,
+  "extensionless_pdf_urls": 896,
+  "pending_canonical_merge": true
+}
