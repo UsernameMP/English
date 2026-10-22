@@ -1,0 +1,18 @@
+{
+  "cycle": "r236",
+  "resource_shard": "resource_000213.jsonl",
+  "resource_sha": "940b052d05f1982ba41b0a52c9212092ed24b5de",
+  "pending": [
+    {
+      "row": 80,
+      "raw_occurrence_id": "a32ae8520d1c2a440af144dd",
+      "type": "unrelated"
+    },
+    {
+      "row": 82,
+      "raw_occurrence_id": "9bb10f2e3a9569d946f8c509",
+      "type": "unrelated"
+    }
+  ],
+  "reason": "Organizer livestream link; URL and parent metadata retained in raw shard batch_000583.jsonl."
+}
