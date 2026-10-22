@@ -1,0 +1,29 @@
+{
+  "cycle": "r244-20261022T110624060Z",
+  "resource_shard": "resource_000229.jsonl",
+  "existing_type": "review",
+  "task_rows": [
+    18,
+    20,
+    22,
+    33,
+    35,
+    37,
+    39,
+    41,
+    43
+  ],
+  "solution_rows": [
+    19,
+    21,
+    23,
+    34,
+    36,
+    38,
+    40,
+    42,
+    44
+  ],
+  "evidence": "Croatian organizer anchor starts with Zadaci (tasks) or Rješenja (solutions), followed by grade/category; no binary inspected.",
+  "canonical_update": "blocked; apply to matching resource_id from shard"
+}
