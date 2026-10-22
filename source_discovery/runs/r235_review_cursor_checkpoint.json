@@ -1,0 +1,31 @@
+{
+  "cycle": "r235-20261022",
+  "reviewed_at": "2026-10-22T02:14:33.124Z",
+  "resource_shards": [
+    "resource_000211.jsonl",
+    "resource_000212.jsonl"
+  ],
+  "raw_shards": [
+    "batch_000579.jsonl",
+    "batch_000580.jsonl",
+    "batch_000581.jsonl",
+    "batch_000582.jsonl"
+  ],
+  "unique_resources": 200,
+  "raw_occurrences": 200,
+  "counts": {
+    "task": 6,
+    "solution": 4,
+    "archive": 8,
+    "unrelated": 172,
+    "review": 10
+  },
+  "full_labels_checkpoints": [
+    "runs/r235_review_r211.jsonl",
+    "runs/r235_review_r212.jsonl"
+  ],
+  "canonical_merged": 0,
+  "next_operational_shard": "resource_000213.jsonl",
+  "legacy_raw_cursor_unchanged": true,
+  "prior_pending_checkpoints_unresolved": true
+}
