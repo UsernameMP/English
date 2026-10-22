@@ -1,0 +1,90 @@
+{
+  "cycle": "r244-20261022T110624060Z",
+  "date": "2026-10-22",
+  "trigger_commit": "5ebbe329a16804459ebfa0faed76310778b94018",
+  "actions": [
+    {
+      "id": 39768095320,
+      "result": "success",
+      "html_pages": 60,
+      "new_raw_links": 2978,
+      "unique_resource_urls": 180703,
+      "pending_pages": 84311,
+      "blocked_or_failed_cumulative": 1266
+    },
+    {
+      "id": 39768828000,
+      "result": "success",
+      "html_pages": 60,
+      "new_raw_links": 2433,
+      "unique_resource_urls": 182285,
+      "pending_pages": 85285,
+      "blocked_or_failed_cumulative": 1274,
+      "trigger": "automatic push from sources.jsonl"
+    }
+  ],
+  "discovery": {
+    "new_verified_source_urls": 4,
+    "canonical_merged": 4,
+    "canonical_sources": 1418,
+    "checkpoint": "runs/discovery_r244.jsonl",
+    "recovered_r243_sources": 6,
+    "older_recovery_checkpoints": {
+      "opho": 4,
+      "iypt": 4,
+      "neuro": 2,
+      "poland": "4 still local"
+    }
+  },
+  "review": {
+    "resource_shards": [
+      "resource_000229.jsonl",
+      "resource_000230.jsonl"
+    ],
+    "raw_shards": [
+      "batch_000650.jsonl",
+      "batch_000651.jsonl",
+      "batch_000652.jsonl"
+    ],
+    "unique_resources": 200,
+    "raw_occurrences": 200,
+    "canonical_labels_added": 200,
+    "canonical_labels_total": 956,
+    "canonical_types": {
+      "task": 71,
+      "solution": 69,
+      "archive": 4,
+      "source": 7,
+      "unrelated": 30,
+      "review": 19
+    },
+    "corrections_pending": {
+      "task": 9,
+      "solution": 9,
+      "checkpoint": "runs/r244_label_corrections_minimal.json"
+    },
+    "next_operational_shard": "resource_000231.jsonl",
+    "canonical_review_state_updated": false,
+    "operational_cursor_checkpoint": "runs/r244_review_cursor.json"
+  },
+  "audit": {
+    "new_findings": 9,
+    "checkpoint": "runs/r244_audit.json",
+    "canonical_backlog_total": 263,
+    "canonical_merge": "blocked"
+  },
+  "mime": {
+    "observations": 2295,
+    "unique_pdf_urls": 1079,
+    "extensionless_pdf_urls": 1079,
+    "body_downloads": 0
+  },
+  "pending": [
+    "apply 18 verified Croatian label corrections",
+    "update review_state.json",
+    "merge r244 audit findings into backlog.jsonl",
+    "merge 10 recovered sources from r241-r242 checkpoints; four Polish sources still only local",
+    "reconcile older compact label checkpoints"
+  ],
+  "rights": "URL and public HTML metadata only; no binary task files downloaded"
+}
