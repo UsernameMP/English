@@ -6,13 +6,22 @@
   ],
   "next_shard": 215,
   "unique_urls": 200,
-  "labels_saved": 140,
-  "labels_pending": 60,
+  "labels_saved": 198,
+  "labels_pending": 2,
   "canonical_merged": false,
   "checkpoint_files": [
     "r236_review_r214.jsonl",
     "r236_review_r213_20_39.jsonl",
-    "r236_review_r213_60_79.jsonl"
+    "r236_review_r213_60_79.jsonl",
+    "r236_review_r213_0_9.jsonl",
+    "r236_review_r213_10_19.jsonl",
+    "r236_review_r213_40_49.jsonl",
+    "r236_review_r213_50_59.jsonl",
+    "r236_review_r213_90_99.jsonl",
+    "r236_review_r213_85_89.jsonl",
+    "r236_review_r213_81.jsonl",
+    "r236_review_r213_83.jsonl",
+    "r236_review_r213_84.jsonl"
   ],
-  "pending_manifest": "r236_review_r213_pending_manifest.json"
+  "pending_manifest": "r236_pending_80_82.json"
 }
