@@ -1,0 +1,90 @@
+{
+  "cycle": "r235-20261022",
+  "observed_at": "2026-10-22T02:16:31.316Z",
+  "pull_request_188": {
+    "merged": true,
+    "base": "main"
+  },
+  "trigger": {
+    "requested_update": "r235-20261022T020452879Z",
+    "run_trigger_updated": false,
+    "blocker": "GitHub update_file rejected by safety checks; trigger remains r234",
+    "alternative_trigger": "sources.jsonl push",
+    "commit": "d39e0fe8a6e0b0855c85c2a388059f88f1210cc8",
+    "workflow_run": 39709758220,
+    "workflow_conclusion": "success"
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_links": 1824,
+    "unique_resource_urls": 176407,
+    "previous_unique_resource_urls": 175709,
+    "unique_increase": 698,
+    "queue": 82531,
+    "visited": 14911,
+    "errors_or_blocked": 1125,
+    "commit": "a06a04b278e1ace20c0dfe909abb3f38267824c4",
+    "state_updated_at": "2026-10-22T02:12:39+00:00"
+  },
+  "discovery": {
+    "canonical_sources_before": 1368,
+    "canonical_sources_after": 1373,
+    "canonical_added": 5,
+    "commit": "d39e0fe8a6e0b0855c85c2a388059f88f1210cc8",
+    "queued_for_next_merge": [
+      "runs/discovery_r235_posn.jsonl",
+      "runs/discovery_r235_mmo.jsonl"
+    ],
+    "verified_unpublished_source": {
+      "url": "https://olimpicos.net/balticway/",
+      "reason": "Source checkpoint publication rejected; public HTML index shows 1990-2025 and year-level bundles with some individual items not published"
+    },
+    "rights": "unknown"
+  },
+  "review": {
+    "resource_shards": [
+      "resource_000211.jsonl",
+      "resource_000212.jsonl"
+    ],
+    "unique_resources": 200,
+    "raw_occurrences": 200,
+    "types": {
+      "task": 6,
+      "solution": 4,
+      "archive": 8,
+      "unrelated": 172,
+      "review": 10
+    },
+    "full_label_checkpoints": [
+      "runs/r235_review_r211.jsonl",
+      "runs/r235_review_r212.jsonl"
+    ],
+    "canonical_label_count": 746,
+    "canonical_merge": "blocked_by_safety_checks",
+    "next_operational_shard": "resource_000213.jsonl",
+    "cursor_checkpoint": "runs/r235_review_cursor_checkpoint.json",
+    "canonical_review_state_update": "blocked_by_safety_checks",
+    "prior_pending_checkpoints_unresolved": true
+  },
+  "audit": {
+    "new_findings": 12,
+    "checkpoints": [
+      "runs/r235_audit_1.jsonl",
+      "runs/r235_audit_2.jsonl"
+    ],
+    "canonical_backlog_count": 255,
+    "canonical_update": "blocked_by_safety_checks"
+  },
+  "mime": {
+    "observations": 2200,
+    "unique_pdf_mime_urls": 1054,
+    "pdf_without_pdf_extension": 896,
+    "document_suitability": "unverified"
+  },
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_writes": 0,
+    "schedule_changes": 0,
+    "additional_automation_instances": 0
+  }
+}
