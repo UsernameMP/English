@@ -27,7 +27,12 @@
     "verified_new_source_urls": 8,
     "checkpoint": "runs/discovery_r254.jsonl",
     "canonical_merged_this_cycle": 0,
-    "scheduled_merger_pending": true
+    "scheduled_merger_pending": true,
+    "prior_cycle_recovery": {
+      "r253_verified_source_urls_still_local": 5,
+      "normalized_duplicate_already_canonical": 1,
+      "attempt_to_publish_recovery": "blocked_by_safety_checks"
+    }
   },
   "review": {
     "resource_shards": [
