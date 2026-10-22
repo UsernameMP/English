@@ -1,0 +1,35 @@
+{
+  "cycle": "r234-20261022T010207240Z",
+  "reviewed_at": "2026-10-22T01:07:09.764Z",
+  "resource_shards": [
+    {
+      "name": "resource_000209.jsonl",
+      "sha": "57e30b0d51c62e04ec243c8b1963bc6d12989ac0"
+    },
+    {
+      "name": "resource_000210.jsonl",
+      "sha": "f66e5ef80e3f6d29776b4411e37160cb3c113f13"
+    }
+  ],
+  "raw_shards": [
+    "batch_000577.jsonl",
+    "batch_000578.jsonl",
+    "batch_000579.jsonl"
+  ],
+  "unique_resources": 200,
+  "raw_occurrences": 200,
+  "counts": {
+    "archive": 7,
+    "unrelated": 24,
+    "task": 47,
+    "solution": 38,
+    "review": 81,
+    "criteria": 3
+  },
+  "canonical_label_commit": "5584db5e3c42651bc7deed32edb8134613c96864",
+  "canonical_merged": 200,
+  "next_operational_shard": "resource_000211.jsonl",
+  "legacy_raw_cursor_unchanged": true,
+  "prior_pending_checkpoints_unresolved": true,
+  "review_state_update": "blocked_by_safety_checks"
+}
