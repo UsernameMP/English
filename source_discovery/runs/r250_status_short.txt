@@ -1,0 +1,1 @@
+r250: crawl job success, 185460 unique URLs, queue 86643. Discovery 7 pending. Review 200 classified, 120 row-level checkpointed, 80 range-only. Backlog 291. Canonical labels 956 unchanged.
