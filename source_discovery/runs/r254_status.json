@@ -19,7 +19,9 @@
     "sources": 1478,
     "link_labels": 1156,
     "backlog": 300,
-    "mime_observations": 2352
+    "mime_observations": 2352,
+    "link_labels_bytes": 994482,
+    "sources_bytes": 832278
   },
   "discovery": {
     "verified_new_source_urls": 8,
@@ -50,7 +52,7 @@
   "audit": {
     "new_canonical_entries": 9,
     "backlog_total": 300,
-    "additional_unpublished_issue": "link_labels.jsonl is near 1 MiB; future direct updates may fail"
+    "additional_unpublished_issue": "link_labels.jsonl is 994482 UTF-8 bytes, 54094 bytes below 1 MiB; future direct GitHub Contents API reads/writes risk failure. Saved runs/r254_size_audit.txt; canonical backlog append for this warning blocked."
   },
   "mime": {
     "unique_pdf": 1113,
