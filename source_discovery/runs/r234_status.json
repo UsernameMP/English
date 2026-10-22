@@ -1,0 +1,74 @@
+{
+  "cycle": "r234-20261022T010207240Z",
+  "date": "2026-10-22",
+  "trigger": {
+    "commit": "f71342383a080b6c3db92b5891cda792ff7eef95",
+    "workflow_run": 39703301617,
+    "conclusion": "success"
+  },
+  "secondary_workflow": {
+    "run": 39703850391,
+    "conclusion": "success",
+    "triggered_by": "sources.jsonl update"
+  },
+  "latest_crawl": {
+    "html_pages": 60,
+    "new_links": 805,
+    "pending_pages": 82285,
+    "blocked_or_failed": 1113,
+    "unique_resource_urls": 174683
+  },
+  "discovery": {
+    "new_sources": 12,
+    "prior_r233_sources_merged_by_workflow": 8,
+    "canonical_total": 1368,
+    "commit": "348ec5951a28eab27a5926257b1056ec119081a3"
+  },
+  "review": {
+    "resource_shards": [
+      "resource_000209.jsonl",
+      "resource_000210.jsonl"
+    ],
+    "raw_shards": [
+      "batch_000577.jsonl",
+      "batch_000578.jsonl",
+      "batch_000579.jsonl"
+    ],
+    "unique_resources": 200,
+    "raw_occurrences": 200,
+    "types": {
+      "archive": 7,
+      "unrelated": 24,
+      "task": 47,
+      "solution": 38,
+      "review": 81,
+      "criteria": 3
+    },
+    "canonical_merged": 200,
+    "canonical_total": 746,
+    "commit": "5584db5e3c42651bc7deed32edb8134613c96864",
+    "next_operational_shard": "resource_000211.jsonl",
+    "cursor_checkpoint": "runs/r234_review_cursor_checkpoint.json",
+    "canonical_review_state_update": "blocked"
+  },
+  "audit": {
+    "new_backlog_items": 18,
+    "canonical_total": 255,
+    "commit": "86c2eb2111b07079ef9f983dc7a432341f84a4e0"
+  },
+  "mime": {
+    "observations": 2164,
+    "unique_pdf": 1042,
+    "pdf_without_extension": 884
+  },
+  "unresolved": {
+    "prior_labels_checkpoint": "runs/r230_pending_label_recovery.jsonl",
+    "prior_full_labels_not_merged": 707,
+    "prior_compact_labels": "r231-r233 require expansion",
+    "pyoh_correction": "documented in canonical backlog; source metadata edit blocked",
+    "normalized_source_url_duplicate_groups": 5
+  },
+  "binary_downloads": 0,
+  "dropbox_writes": 0,
+  "schedule_changes": 0
+}
