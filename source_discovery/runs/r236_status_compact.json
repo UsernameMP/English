@@ -10,12 +10,13 @@
   "discovery_checkpoint": "discovery_r236.jsonl",
   "new_sources_checkpointed": 3,
   "reviewed": 200,
-  "review_labels_saved": 140,
-  "review_labels_pending": 60,
+  "review_labels_saved": 198,
+  "review_labels_pending": 2,
   "canonical_labels": 746,
   "next_resource_shard": 215,
   "backlog": 255,
   "mime_observations": 2215,
   "unique_pdf": 1054,
-  "extensionless_pdf": 896
+  "extensionless_pdf": 896,
+  "pending_labels_file": "r236_pending_80_82.json"
 }
