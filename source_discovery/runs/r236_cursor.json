@@ -1,0 +1,18 @@
+{
+  "cycle": "r236",
+  "reviewed_shards": [
+    213,
+    214
+  ],
+  "next_shard": 215,
+  "unique_urls": 200,
+  "labels_saved": 140,
+  "labels_pending": 60,
+  "canonical_merged": false,
+  "checkpoint_files": [
+    "r236_review_r214.jsonl",
+    "r236_review_r213_20_39.jsonl",
+    "r236_review_r213_60_79.jsonl"
+  ],
+  "pending_manifest": "r236_review_r213_pending_manifest.json"
+}
