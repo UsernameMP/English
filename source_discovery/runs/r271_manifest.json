@@ -1,0 +1,94 @@
+{
+  "cycle": "r271-20261023T135954000Z",
+  "created_at": "2026-10-23T14:16:00Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "requested_at": "2026-10-23T13:59:54.000Z",
+    "commit": "0325b855c9c237fe8b161dff2b7b4f0b5c349e89",
+    "workflow": "RIFT Link Enumeration",
+    "workflow_conclusion": "not_independently_verified",
+    "result_persisted": true
+  },
+  "crawler": {
+    "crawl_state_blob_sha": "da11a57aa7cc9e5cc838ef26a9d15f3c0fb56411",
+    "updated_at": "2026-10-23T14:05:23+00:00",
+    "html_pages_last_run": 60,
+    "new_links_last_run": 3883,
+    "pending_pages": 97466,
+    "visited_pages": 17977,
+    "blocked_or_failed_cumulative": 1730,
+    "notes": "Latest crawl_state blob was parsed directly by SHA; state changed after trigger. GitHub workflow status API does not provide non-PR run listing through available connector."
+  },
+  "discovery": {
+    "verified_source_indexes": 6,
+    "checkpoint": "source_discovery/runs/discovery_r271.jsonl",
+    "checkpoint_commit": "cbc9fe16fd13f5d83331dc23c576b635fc26acc7",
+    "canonical_sources_before": 1557,
+    "canonical_sources_after": 1563,
+    "canonical_merge_commit": "c47b02ca2ae59462568b5bbca8a41bd09086c930",
+    "binary_downloaded": false,
+    "rights": "unknown_or_explicitly_reserved"
+  },
+  "review": {
+    "resource_shard": "resource_000276.jsonl",
+    "unique_resource_ids": 100,
+    "raw_occurrences_matched": 116,
+    "raw_shards": [
+      "batch_000777.jsonl",
+      "batch_000778.jsonl",
+      "batch_000779.jsonl",
+      "batch_000780.jsonl"
+    ],
+    "counts": {
+      "solution": 34,
+      "source": 4,
+      "unrelated": 9,
+      "archive": 3,
+      "task": 39,
+      "review": 11
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoint_files": [
+      "source_discovery/runs/r271_review_r276_000_019.jsonl",
+      "source_discovery/runs/r271_review_r276_020_039.jsonl",
+      "source_discovery/runs/r271_review_r276_040_059.jsonl",
+      "source_discovery/runs/r271_review_r276_060_079.jsonl",
+      "source_discovery/runs/r271_review_r276_080_099.jsonl"
+    ],
+    "canonical_link_labels_before": 1196,
+    "canonical_link_labels_after": 1196,
+    "canonical_merge_status": "pending_sharded_registry_and_prior_checkpoint_reconciliation",
+    "review_state_commit": "7268e55d8112ff9dadb790019bb135a961e0f160",
+    "next_operational_shard": "resource_000277.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "audit": {
+    "new_findings": 10,
+    "checkpoint": "source_discovery/runs/r271_audit.jsonl",
+    "checkpoint_commit": "930b953e8dac79bf14554f820fbec1a4d70dadd1",
+    "canonical_backlog_before": 378,
+    "canonical_backlog_after": 388,
+    "canonical_backlog_commit": "353be786503846fbe35a1f1af2af2732d9db74c7"
+  },
+  "mime": {
+    "observations": 2642,
+    "unique_application_pdf_urls": 1185,
+    "pdf_urls_without_dot_pdf_substring": 1013,
+    "resource_observations_blob_sha": "a861aa37b7ed73b9fffefa9f4e7df5301328f893",
+    "note": "MIME metadata only; PDF/ZIP/image bodies not downloaded"
+  },
+  "safeguards": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "binary_downloaded": false,
+    "robots_public_only": true
+  },
+  "open_issues": [
+    "Canonical link_labels.jsonl 1196 rows near GitHub contents size limit; 100 r271 labels in verified full checkpoints, older checkpoints also pending.",
+    "11 ambiguous Polish stage-II supplemental or variant files retained review; never inferred task/solution from weak type_hint.",
+    "New source index contains JBO copyright restriction and UMS organizer-only event without verified past-paper archive.",
+    "GitHub Actions conclusion not independently retrieved; successful result persistence and changed crawl_state are confirmed."
+  ]
+}
