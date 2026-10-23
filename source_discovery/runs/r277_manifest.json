@@ -1,0 +1,97 @@
+{
+  "cycle": "r277-20261023T195952259Z",
+  "created_at": "2026-10-23T20:06:52.463Z",
+  "branch": "rift-source-index",
+  "pr_188": {
+    "merged_into_main": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "df39103e8c1938512fd9caaf789186eb5c121dde",
+    "requested_at": "2026-10-23T19:59:52.259Z"
+  },
+  "crawler": {
+    "confirmed_run": {
+      "id": 40015770464,
+      "status": "success",
+      "html_pages": 60,
+      "new_links": 833,
+      "pending_pages": 100753,
+      "blocked_or_failed_cumulative": 1903,
+      "unique_resource_urls": 217091,
+      "crawl_state_sha": "ebec2a8f13c889c3343a27ddc246aca6070cd892"
+    },
+    "secondary_automatic_run": {
+      "id": 40016074826,
+      "status_at_last_check": "in_progress",
+      "result_included": false
+    }
+  },
+  "discovery": {
+    "new_unique_verified_source_urls": 6,
+    "checkpoint": "source_discovery/runs/discovery_r277.jsonl",
+    "canonical_sources_before": 1587,
+    "canonical_sources_after": 1593,
+    "canonical_merge_commit": "7b29933b5b1d2bc7a7e1e335774042a340a376ee",
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000282.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000792.jsonl",
+      "batch_000793.jsonl"
+    ],
+    "counts": {
+      "task": 70,
+      "solution": 30
+    },
+    "checkpoints": [
+      "source_discovery/runs/r277_review_r282_000_019.jsonl",
+      "source_discovery/runs/r277_review_r282_020_039.jsonl",
+      "source_discovery/runs/r277_review_r282_040_059.jsonl",
+      "source_discovery/runs/r277_review_r282_060_079.jsonl",
+      "source_discovery/runs/r277_review_r282_080_099.jsonl"
+    ],
+    "checkpoints_read_back": true,
+    "canonical_labels_before": 1196,
+    "canonical_labels_after": 1296,
+    "canonical_merge_commit": "c8275a536ac50b1fd0c0c9caf7181080f94d4e1a",
+    "review_state_commit": "0d4722fa897d27559cf158fafdebb99d80787c07",
+    "next_resource_shard": "resource_000283.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "audit": {
+    "new_findings": 12,
+    "checkpoints": [
+      "source_discovery/runs/r277_audit.jsonl",
+      "source_discovery/runs/r277_mime_audit.jsonl"
+    ],
+    "canonical_backlog_before": 434,
+    "canonical_backlog_after": 446,
+    "canonical_last_commit": "6a160c247bd91e361cfdb93223d1a731032d494d"
+  },
+  "mime": {
+    "observations": 2793,
+    "unique_application_pdf_urls": 1216,
+    "pdf_urls_without_dot_pdf_substring": 1044,
+    "octet_stream_observations": 90,
+    "postscript_observations": 13,
+    "binary_bodies_not_read": true
+  },
+  "safeguards": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "binary_downloaded": false,
+    "public_only": true
+  },
+  "open_issues": [
+    "Earlier cycles' label checkpoints still require careful deduplicated reconciliation; r277 100 labels are merged.",
+    "Automatic second enumeration run had not completed at last check; do not count its results.",
+    "OAQ historical 3E and national Nivel 2 answer-key gaps remain unresolved, not definitive absence.",
+    "Some Swiss TYPO3 octet-stream and British Informatics PostScript candidates need context review; no binary bodies accessed."
+  ]
+}
