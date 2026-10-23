@@ -42,12 +42,15 @@
   "discovery": {
     "verified_new_sources": 8,
     "canonical_merged": 8,
-    "path": "runs/discovery_r264.jsonl"
+    "path": "runs/discovery_r264.jsonl",
+    "unverified_leads_backlogged": 2,
+    "unverified_checkpoint": "runs/r264_unverified_leads.jsonl"
   },
   "audit": {
     "new_findings": 8,
     "canonical_merged": 8,
-    "path": "runs/r264_audit.jsonl"
+    "path": "runs/r264_audit.jsonl",
+    "backlog_total_new_items": 10
   },
   "mime": {
     "observations": 2408,
@@ -61,9 +64,16 @@
     "new_raw_links": 1404,
     "unique_resource_urls": 194120,
     "pending_pages": 92168,
-    "blocked_or_failed_cumulative": 1558
+    "blocked_or_failed_cumulative": 1558,
+    "followup_automatically_triggered_by_sources_update": {
+      "run_id": 39915587297,
+      "status": "in_progress_at_last_check",
+      "triggering_commit": "b345e69e30aa8dccd4d247afc27e1f773476d4a3",
+      "note": "GitHub workflow automatically triggered by canonical sources.jsonl write; no additional automation instance created"
+    }
   },
   "binary_downloaded": false,
   "rights_default": "unknown",
-  "timestamp_corrected_at": "2026-10-23T07:08:52.081Z"
+  "timestamp_corrected_at": "2026-10-23T07:08:52.081Z",
+  "updated_at": "2026-10-23T07:09:47.763Z"
 }
