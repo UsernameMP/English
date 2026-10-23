@@ -17,8 +17,20 @@
     "commit": "074378a",
     "second_automatic_run_from_sources_update": {
       "id": 39929318674,
-      "status": "in_progress_at_manifest_creation",
-      "reason": "workflow also triggers on sources.jsonl changes; not manually dispatched"
+      "status": "success",
+      "reason": "workflow push path includes sources.jsonl; automatically triggered by canonical source merge, not manually dispatched",
+      "html_pages": 60,
+      "new_raw_links": 2546,
+      "pending_pages": 93730,
+      "unique_resource_urls": 196630,
+      "blocked_or_failed_cumulative": 1593,
+      "commit": "f90edf1"
+    },
+    "latest_confirmed": {
+      "run_id": 39929318674,
+      "pending_pages": 93730,
+      "unique_resource_urls": 196630,
+      "blocked_or_failed_cumulative": 1593
     }
   },
   "discovery": {
@@ -78,5 +90,6 @@
   "rights": "unknown",
   "dropbox_modified": false,
   "schedule_modified": false,
-  "raw_ledger_modified": false
+  "raw_ledger_modified": false,
+  "final_verified_at": "2026-10-23T09:10:59.806Z"
 }
