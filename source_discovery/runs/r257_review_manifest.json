@@ -1,0 +1,43 @@
+{
+  "cycle": "r257-20261023T000636202Z",
+  "resource_shards": [
+    "resource_000252.jsonl",
+    "resource_000253.jsonl",
+    "resource_000254.jsonl"
+  ],
+  "raw_shards": [
+    "batch_000739.jsonl",
+    "batch_000740.jsonl",
+    "batch_000741.jsonl",
+    "batch_000742.jsonl"
+  ],
+  "unique_resource_ids": 300,
+  "raw_occurrences": 300,
+  "already_canonical": 0,
+  "full_labels_checkpointed": 300,
+  "canonical_merged": 0,
+  "classification": {
+    "unrelated": 264,
+    "source": 9,
+    "archive": 1,
+    "review": 26
+  },
+  "files": [
+    "runs/r257_review_r252.jsonl",
+    "runs/r257_review_r253_03.jsonl",
+    "runs/r257_review_r254.jsonl",
+    "runs/r257_review_r253_rows_0_9.jsonl",
+    "runs/r257_review_r253_rows_10_19.jsonl",
+    "runs/r257_review_r253_rows_20_29.jsonl",
+    "runs/r257_review_r253_rows_30_39.jsonl",
+    "runs/r257_review_r253_rows_40_49.jsonl",
+    "runs/r257_review_r253_rows_75_84.jsonl",
+    "runs/r257_review_r253_rows_85_94.jsonl",
+    "runs/r257_review_r253_rows_95_99.jsonl"
+  ],
+  "next_operational_shard": "resource_000255.jsonl",
+  "canonical_raw_cursor_unchanged": true,
+  "review_state_update": "blocked_by_connector_safety_checks",
+  "rights": "unknown",
+  "binary_downloaded": false
+}
