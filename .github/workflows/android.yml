@@ -59,6 +59,9 @@ jobs:
       - name: Validate 5th-grade informatics bank and answer keys
         run: python3 scripts/validate_informatics_g5.py
 
+      - name: Validate 2026–27 AI school-stage tasks
+        run: python3 scripts/validate_informatics_g5_school_2026_ai.py
+
       - name: Validate 5–6 grade law olympiad pilot
         run: python3 scripts/validate_law_g5_6.py
 
