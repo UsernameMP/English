@@ -1,0 +1,86 @@
+{
+  "cycle": "r269-20261023T120539438Z",
+  "created_at": "2026-10-23T12:13:08.627Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "1b6ce3a38c94ad24f48049f2fb57c58b787f0326",
+    "requested_at": "2026-10-23T12:05:39.438Z"
+  },
+  "actions": [
+    {
+      "run_id": 39950767278,
+      "status": "success",
+      "html_pages": 60,
+      "new_links": 5536,
+      "pending_pages": 95931,
+      "unique_resource_urls": 202305,
+      "blocked_or_failed_cumulative": 1624
+    },
+    {
+      "run_id": 39951250998,
+      "status": "in_progress_at_last_check",
+      "trigger": "automatic_on_sources_update"
+    }
+  ],
+  "discovery": {
+    "new_verified_index_urls": 5,
+    "checkpoint": "runs/discovery_r269.jsonl",
+    "canonical_sources_before": 1549,
+    "canonical_sources_after": 1554,
+    "canonical_merge_commit": "0b412e2ecfc69a102fc8abb8cbdd0102cdc3cac7",
+    "rights": "unknown"
+  },
+  "review": {
+    "resource_shard": "resource_000274.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_scanned": 271,
+    "raw_shards": "batch_000762..batch_000771",
+    "counts": {
+      "unrelated": 55,
+      "review": 4,
+      "task": 3,
+      "source": 1,
+      "solution": 37
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoint_files": [
+      "runs/r269_review_r274_000_019.jsonl",
+      "runs/r269_review_r274_020_039.jsonl",
+      "runs/r269_review_r274_040_059.jsonl",
+      "runs/r269_review_r274_060_079.jsonl",
+      "runs/r269_review_r274_080_099.jsonl"
+    ],
+    "canonical_labels_before": 1196,
+    "canonical_labels_after": 1196,
+    "canonical_merge_status": "pending_large_file_sharding_and_earlier_checkpoint_reconciliation",
+    "review_state_commit": "a87c81822900292aeacf034d66432101f7d5f76d",
+    "next_operational_shard": "resource_000275.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "audit": {
+    "findings_added": 6,
+    "checkpoint": "runs/r269_audit.jsonl",
+    "canonical_backlog_before": 363,
+    "canonical_backlog_after": 369,
+    "canonical_backlog_commit": "c9a96c58e607d35a7ed86df2331718fdeb695e68"
+  },
+  "mime": {
+    "observations": 2558,
+    "unique_application_pdf_urls": 1150,
+    "unique_pdf_urls_without_pdf_substring": 978,
+    "observation_sha": "ae44243492ffd7e5a3fd40a6b26342ed19410937",
+    "binary_downloaded": false
+  },
+  "safeguards": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "robots_and_public_only": true
+  },
+  "open_issues": [
+    "100 reviewed resource labels remain in 5 verified checkpoints rather than large canonical link_labels.jsonl",
+    "Older review checkpoints remain unreconciled",
+    "Four ambiguous KöMaL resources retained review",
+    "Second crawler workflow initiated automatically by source registry update; outcome not yet confirmed"
+  ]
+}
