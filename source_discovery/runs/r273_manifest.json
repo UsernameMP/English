@@ -1,0 +1,90 @@
+{
+  "cycle": "r273-20261023T160330467Z",
+  "created_at": "2026-10-23T16:09:52.522Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "4853395e0abbc0f274ea7d111af22f215641aa48",
+    "requested_at": "2026-10-23T16:03:30.467Z",
+    "workflow": "RIFT Link Enumeration",
+    "run_id": 39983570642,
+    "conclusion": "success",
+    "additional_automatic_run_id": 39984088577,
+    "additional_run_conclusion": "in_progress_at_last_check"
+  },
+  "crawler": {
+    "updated_at": "2026-10-23T16:07:45+00:00",
+    "html_pages_last_run": 60,
+    "new_links_last_run": 4489,
+    "pending_pages": 97962,
+    "visited_pages": 18242,
+    "blocked_or_failed_cumulative": 1759,
+    "notes": "Statistics from persisted crawl_state after trigger; later automatic run not included."
+  },
+  "discovery": {
+    "verified_new_sources": 5,
+    "checkpoint": "source_discovery/runs/discovery_r273.jsonl",
+    "checkpoint_commit": "ed0e5ad40fe9228ad23353d62f4b8b45b077aeba",
+    "canonical_sources_before": 1569,
+    "canonical_sources_after": 1574,
+    "canonical_merge_commit": "85df9f217e79ce5e194b6f7a1dc40239c6e339ff",
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000278.jsonl",
+    "unique_resource_ids": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000779.jsonl",
+      "batch_000780.jsonl",
+      "batch_000781.jsonl"
+    ],
+    "counts": {
+      "task": 42,
+      "solution": 41,
+      "unrelated": 17
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoint_files": [
+      "source_discovery/runs/r273_review_r278_000_019.jsonl",
+      "source_discovery/runs/r273_review_r278_020_039.jsonl",
+      "source_discovery/runs/r273_review_r278_040_059.jsonl",
+      "source_discovery/runs/r273_review_r278_060_079.jsonl",
+      "source_discovery/runs/r273_review_r278_080_099.jsonl"
+    ],
+    "canonical_link_labels_before": 1196,
+    "canonical_link_labels_after": 1196,
+    "canonical_merge_status": "pending_sharded_registry_and_prior_checkpoint_reconciliation",
+    "review_state_commit": "38d43ecd4d02e75fad49c14db1bd2d6171ebba4a",
+    "next_operational_shard": "resource_000279.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "audit": {
+    "new_findings": 9,
+    "checkpoint": "source_discovery/runs/r273_audit.jsonl",
+    "checkpoint_commit": "9eda08320fe8029d2a6d420bda09d78b0bbd4c06",
+    "canonical_backlog_before": 399,
+    "canonical_backlog_after": 408,
+    "canonical_backlog_commit": "af0c92febad602e8095be2bb2b68f544213dfd30"
+  },
+  "mime": {
+    "observations": 2698,
+    "unique_application_pdf_urls": 1190,
+    "pdf_urls_without_dot_pdf_substring": 1018,
+    "resource_observations_blob_sha": "268c3b1749d409a72a944e05af6104a7c1abdeff",
+    "notes": "MIME metadata only; binary bodies not read; PDF MIME alone does not prove Olympiad task/solution."
+  },
+  "safeguards": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "binary_downloaded": false,
+    "robots_public_only": true
+  },
+  "open_issues": [
+    "100 r273 reviewed labels checkpointed but not merged into >1MB canonical link_labels.jsonl; earlier checkpoints still pending sharding.",
+    "OAJ II 2025/26 final-round solutions not listed in inspected organizer index; OAJ I first-edition materials continue in resource_000279.",
+    "Pernambuco 2026 category called 'prova' includes exam location PDFs; preserve item-level classification.",
+    "Additional automatic workflow run initiated by sources.jsonl update was still in progress at last check."
+  ]
+}
