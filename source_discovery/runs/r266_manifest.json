@@ -1,0 +1,82 @@
+{
+  "cycle": "r266-20261023T090137269Z",
+  "created_at": "2026-10-23T09:07:48.636Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "d3093e6a14a1a7bba1344a33795ad294dd9e3e1f",
+    "workflow_run_id": 39928866969,
+    "status": "success",
+    "head_sha": "d3093e6a14a1a7bba1344a33795ad294dd9e3e1f"
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_links": 7614,
+    "pending_pages": 93732,
+    "unique_resource_urls": 196496,
+    "blocked_or_failed_cumulative": 1590,
+    "commit": "074378a",
+    "second_automatic_run_from_sources_update": {
+      "id": 39929318674,
+      "status": "in_progress_at_manifest_creation",
+      "reason": "workflow also triggers on sources.jsonl changes; not manually dispatched"
+    }
+  },
+  "discovery": {
+    "verified_new_urls": 3,
+    "canonical_merged": 3,
+    "canonical_total": 1539,
+    "checkpoint": "runs/discovery_r266.jsonl",
+    "canonical_commit": "49ba5af9ce3eacfe3d70943e7ec45f7e545ea7e0",
+    "rights": "unknown"
+  },
+  "review": {
+    "resource_shard": "resource_000270.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000757.jsonl",
+      "batch_000758.jsonl"
+    ],
+    "counts": {
+      "task": 39,
+      "solution": 32,
+      "unrelated": 15,
+      "source": 9,
+      "review": 3,
+      "archive": 2
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoints": [
+      "runs/r266_review_01.jsonl",
+      "runs/r266_review_02.jsonl",
+      "runs/r266_review_03.jsonl",
+      "runs/r266_review_04.jsonl",
+      "runs/r266_review_05.jsonl"
+    ],
+    "canonical_merged": 0,
+    "canonical_total": 1196,
+    "canonical_merge_blocker": "~1MiB GitHub contents limit; sharded canonical registry required",
+    "review_state_commit": "91a2ba5dccf8a0b2fe32989b0dd0708201cbc621",
+    "next_resource_shard": "resource_000271.jsonl",
+    "raw_cursor_unchanged": true,
+    "older_pending_checkpoints": true
+  },
+  "audit": {
+    "new_findings": 7,
+    "checkpoint": "runs/r266_audit.jsonl",
+    "backlog_merged": 7,
+    "backlog_total": 342,
+    "commit": "058fefa86d3b2d9afc081d14af5aa4fee4d3a4ff"
+  },
+  "mime": {
+    "unique_application_pdf_observed": 1136,
+    "unique_pdf_urls_without_dot_pdf_anywhere": 964,
+    "other_non_html_mime_present": true,
+    "binary_bodies_downloaded": false,
+    "latest_observations_updated_during_run": true
+  },
+  "rights": "unknown",
+  "dropbox_modified": false,
+  "schedule_modified": false,
+  "raw_ledger_modified": false
+}
