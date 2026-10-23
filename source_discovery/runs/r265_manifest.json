@@ -1,0 +1,73 @@
+{
+  "cycle": "r265-20261023T080138860Z",
+  "created_at": "2026-10-23T08:07:39.141Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "fb81e7475de6c280c309d16e29a9119dc4fb672a",
+    "timestamp": "2026-10-23T08:01:38.860Z",
+    "action_execution_evidence": "resource_observations.jsonl contains crawler observations at 2026-10-23T08:02:54Z after trigger",
+    "workflow_run_id": null,
+    "final_conclusion": "not independently confirmed"
+  },
+  "discovery": {
+    "new_unique_sources": 4,
+    "checkpoint": "runs/discovery_r265.jsonl",
+    "canonical_merged": 4,
+    "canonical_rows_verified": 1536,
+    "commit": "3ad21cc8b2d3adec0c52570cad27a8b1deac850c",
+    "rights": "unknown"
+  },
+  "review": {
+    "resource_shards": [
+      "resource_000268.jsonl",
+      "resource_000269.jsonl"
+    ],
+    "unique_resources": 200,
+    "matched_raw_occurrences": 200,
+    "raw_shards": [
+      "batch_000755.jsonl",
+      "batch_000756.jsonl",
+      "batch_000757.jsonl",
+      "batch_000758.jsonl"
+    ],
+    "counts": {
+      "task": 102,
+      "solution": 97,
+      "review": 1
+    },
+    "checkpoints": [
+      "runs/r265_review_01.jsonl",
+      "runs/r265_review_02.jsonl",
+      "runs/r265_review_03.jsonl",
+      "runs/r265_review_04.jsonl"
+    ],
+    "full_labels_checkpointed": 200,
+    "canonical_merged": 0,
+    "canonical_labels_verified": 1196,
+    "canonical_merge_pending": 200,
+    "ambiguous_resource_id": "93ffd562b8fad2b57c128f7e",
+    "next_resource_shard": "resource_000270.jsonl",
+    "raw_cursor_unchanged": true,
+    "older_pending_checkpoints": true
+  },
+  "audit": {
+    "new_backlog_rows": 7,
+    "backlog_rows_verified": 335,
+    "commit": "8c8107418fae2625fef7f070db89e2142efb95e6"
+  },
+  "mime": {
+    "observations_checked_by_line_ranges": true,
+    "extensionless_application_pdf_from_previous_observations": "potential_only_not_semantically_confirmed",
+    "non_html_mime_distinct_from_http_failure": true
+  },
+  "crawler": {
+    "latest_crawl_state_blob_sha": "9d96692f060a6fee33c975d1f615279c1e927b43",
+    "current_queue": "not readable from oversized crawl_state.json",
+    "last_confirmed_pending_pages_from_r264": 92168
+  },
+  "binary_downloaded": false,
+  "raw_ledger_modified": false,
+  "dropbox_modified": false,
+  "schedule_modified": false
+}
