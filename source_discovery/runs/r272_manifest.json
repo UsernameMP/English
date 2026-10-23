@@ -1,0 +1,92 @@
+{
+  "cycle": "r272-20261023T150743402Z",
+  "created_at": "2026-10-23T15:12:27.701Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "40d59509545ee47d2374a88443c1cd93020df5c0",
+    "requested_at": "2026-10-23T15:07:43.402Z",
+    "workflow": "RIFT Link Enumeration",
+    "result_persisted": true,
+    "workflow_conclusion": "not_independently_verified"
+  },
+  "crawler": {
+    "crawl_state_blob_sha": "05a1a088352fb1a48f0a7445cb75688be24f55af",
+    "updated_at": "2026-10-23T15:09:57+00:00",
+    "html_pages_last_run": 60,
+    "new_links_last_run": 4119,
+    "pending_pages": 97916,
+    "visited_pages": 18110,
+    "blocked_or_failed_cumulative": 1746,
+    "notes": "Latest persisted state is after r272 trigger; independent Actions conclusion not accessible from available non-PR run endpoint."
+  },
+  "discovery": {
+    "verified_source_indexes": 6,
+    "checkpoint": "source_discovery/runs/discovery_r272.jsonl",
+    "checkpoint_commit": "0846eea872d303ad360bb960a4c641111fe649b9",
+    "canonical_sources_before": 1563,
+    "canonical_sources_after": 1569,
+    "canonical_merge_commit": "7f1a3448c21b8c1f507dc645b98277f09ef8bece",
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000277.jsonl",
+    "unique_resource_ids": 100,
+    "raw_occurrences_matched": 122,
+    "raw_shards": [
+      "batch_000778.jsonl",
+      "batch_000779.jsonl",
+      "batch_000780.jsonl"
+    ],
+    "counts": {
+      "task": 46,
+      "solution": 36,
+      "archive": 1,
+      "source": 1,
+      "unrelated": 2,
+      "review": 14
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoint_files": [
+      "source_discovery/runs/r272_review_r277_000_019.jsonl",
+      "source_discovery/runs/r272_review_r277_020_039.jsonl",
+      "source_discovery/runs/r272_review_r277_040_059.jsonl",
+      "source_discovery/runs/r272_review_r277_060_079.jsonl",
+      "source_discovery/runs/r272_review_r277_080_099.jsonl"
+    ],
+    "canonical_link_labels_before": 1196,
+    "canonical_link_labels_after": 1196,
+    "canonical_merge_status": "pending_sharded_registry_and_prior_checkpoint_reconciliation",
+    "review_state_commit": "2111aa21fce6cf9082dd218a0890f4901ec5f959",
+    "next_operational_shard": "resource_000278.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "audit": {
+    "new_findings": 11,
+    "checkpoint": "source_discovery/runs/r272_audit.jsonl",
+    "checkpoint_commit": "ccc864d852e42e06549888c0bb917ecec9a5f40f",
+    "canonical_backlog_before": 388,
+    "canonical_backlog_after": 399,
+    "canonical_backlog_commit": "9b461dc0767141cb47e0608d5df83de409b2bdfe"
+  },
+  "mime": {
+    "observations": 2673,
+    "unique_application_pdf_urls": 1190,
+    "pdf_urls_without_dot_pdf_substring": 1018,
+    "resource_observations_blob_sha": "9738d242dd351f29116796ffd0cff40e5360042b",
+    "notes": "MIME metadata only; extensionless pdf candidates are not content-confirmed tasks"
+  },
+  "safeguards": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "binary_downloaded": false,
+    "robots_public_only": true
+  },
+  "open_issues": [
+    "100 r272 labels published in full checkpoints, not canonical link_labels.jsonl; older checkpoints still pending sharding/reconciliation.",
+    "14 Polish stage-III annexes remain review; corrected 2021 answer-key variants require version awareness.",
+    "Geological Society India IESO HTML 403 remains unverified; no bypass attempted.",
+    "Independent GitHub Actions conclusion unavailable, but crawler output persisted at 15:09:57 UTC."
+  ]
+}
