@@ -1,0 +1,108 @@
+{
+  "cycle": "r268-20261023T110403026Z",
+  "created_at": "2026-10-23T11:12:11.122Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "be47276ff23b4180b93d41545d3515d5a5d9008c",
+    "requested_at": "2026-10-23T11:04:03.026Z"
+  },
+  "actions": [
+    {
+      "run_id": 39943480436,
+      "status": "success",
+      "crawl_commit": "bb58612",
+      "html_pages": 60,
+      "new_links": 5246,
+      "pending_pages": 94597,
+      "unique_resource_urls": 200050,
+      "blocked_or_failed_cumulative": 1621
+    },
+    {
+      "run_id": 39943938048,
+      "status": "success",
+      "trigger": "automatic_on_sources_update",
+      "crawl_commit": "ffe99a2",
+      "html_pages": 60,
+      "new_links": 7186,
+      "pending_pages": 95396,
+      "unique_resource_urls": 201460,
+      "blocked_or_failed_cumulative": 1623
+    }
+  ],
+  "discovery": {
+    "new_verified_index_urls": 7,
+    "checkpoint": "runs/discovery_r268.jsonl",
+    "canonical_sources_before": 1542,
+    "canonical_sources_after": 1549,
+    "canonical_merge_commit": "0ff72504d287dca1863e753cd00b0cd690e87a6f",
+    "rights": "unknown"
+  },
+  "review": {
+    "resource_shards": [
+      "resource_000272.jsonl",
+      "resource_000273.jsonl"
+    ],
+    "unique_resources": 200,
+    "raw_occurrences_scanned": 271,
+    "raw_shards_scanned": "batch_000759..batch_000766",
+    "counts": {
+      "task": 36,
+      "solution": 13,
+      "archive": 14,
+      "source": 9,
+      "unrelated": 108,
+      "review": 20
+    },
+    "full_labels_checkpointed": 200,
+    "checkpoint_files": [
+      "runs/r268_review_r272_000_019.jsonl",
+      "runs/r268_review_r272_020_039.jsonl",
+      "runs/r268_review_r272_040_059.jsonl",
+      "runs/r268_review_r272_060_079.jsonl",
+      "runs/r268_review_r272_080_099.jsonl",
+      "runs/r268_review_r273_000_019.jsonl",
+      "runs/r268_review_r273_020_039.jsonl",
+      "runs/r268_review_r273_040_059.jsonl",
+      "runs/r268_review_r273_060_079.jsonl",
+      "runs/r268_review_r273_080_099.jsonl"
+    ],
+    "checkpoint_files_verified": 10,
+    "canonical_labels_before": 1196,
+    "canonical_labels_after": 1196,
+    "canonical_merge_status": "pending_large_file_sharding_and_older_checkpoint_reconciliation",
+    "next_operational_shard": "resource_000274.jsonl",
+    "raw_cursor_unchanged": true,
+    "review_state_commit": "7c1bfee1bb4f993415da2768dfa35fdafb4d250e"
+  },
+  "audit": {
+    "findings_added": 13,
+    "files": [
+      "runs/r268_audit.jsonl",
+      "runs/r268_audit_followup.jsonl"
+    ],
+    "canonical_backlog_before": 350,
+    "canonical_backlog_after": 363,
+    "commits": [
+      "11a9640a183cff470e21931a865e04ce5f9f5038",
+      "389cc5f743d5c42a417ff63db0900c66e0b94777"
+    ]
+  },
+  "mime": {
+    "observations": 2550,
+    "unique_application_pdf_urls": 1150,
+    "unique_pdf_urls_without_pdf_substring": 978,
+    "observation_sha": "aa48bbb2fce7b87541f6e6eb1ed736c98307f13b",
+    "binary_downloaded": false
+  },
+  "safeguards": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "robots_and_public_only": true
+  },
+  "open_issues": [
+    "200 current-cycle labels stored in 10 durable checkpoints, not merged into large canonical link_labels.jsonl",
+    "Earlier checkpoint reconciliation remains unresolved",
+    "HTML-only crawler cannot establish completeness for unlinked years, JavaScript-only resources, hidden pagination or restricted content"
+  ]
+}
