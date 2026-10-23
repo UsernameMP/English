@@ -130,6 +130,16 @@
       "season": "2026-2027",
       "target_date": "2026-11-01",
       "mode": "competition"
+    },
+    {
+      "pack_id": "informatics.vsosh.school.5.ai.2026",
+      "subject": "informatics",
+      "grade": 5,
+      "competition": "Школьный этап · информатика · ИИ",
+      "region": "Россия",
+      "season": "2026-2027",
+      "target_date": "2027-03-01",
+      "mode": "competition"
     }
   ]
 }
