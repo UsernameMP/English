@@ -1,0 +1,79 @@
+{
+  "cycle": "r267-20261023T100455207Z",
+  "created_at": "2026-10-23T10:10:00.529Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "34d07cd167233d974c0115e61a64e8d67b1a00ca",
+    "status": "trigger_commit_confirmed_workflow_run_status_unavailable",
+    "run_id": null
+  },
+  "crawler": {
+    "crawl_state_sha_before": "fd3c552628440232dbd279d481904cfd02365797",
+    "crawl_state_sha_last_checked": "fd3c552628440232dbd279d481904cfd02365797",
+    "latest_confirmed_prior_run": {
+      "cycle": "r266",
+      "pending_pages": 93730,
+      "unique_resource_urls": 196630
+    },
+    "current_queue": "unverified"
+  },
+  "discovery": {
+    "verified_public_html_or_bibliographic_sources": 2,
+    "search_index_only_pending": 1,
+    "canonical_sources_before": 1539,
+    "canonical_sources_after": 1541,
+    "checkpoint": "runs/discovery_r267.jsonl",
+    "canonical_commit": "3dd3160dd50d27ca4e1d3f9187c2c3d0551b943b",
+    "rights": "unknown"
+  },
+  "review": {
+    "resource_shard": "resource_000271.jsonl",
+    "raw_shards": [
+      "batch_000758.jsonl",
+      "batch_000759.jsonl"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "counts": {
+      "source": 16,
+      "unrelated": 24,
+      "archive": 2,
+      "task": 34,
+      "review": 13,
+      "solution": 10,
+      "criteria": 1
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoints": [
+      "runs/r267_review_01.jsonl",
+      "runs/r267_review_02.jsonl",
+      "runs/r267_review_03.jsonl",
+      "runs/r267_review_04.jsonl",
+      "runs/r267_review_05.jsonl"
+    ],
+    "canonical_merged": 0,
+    "canonical_labels": 1196,
+    "next_resource_shard": "resource_000272.jsonl",
+    "review_state_commit": "81f34c2eacf2e510497ad230fa606028f9b3cf32",
+    "raw_cursor_unchanged": true,
+    "older_pending_checkpoints": true,
+    "canonical_merge_blocker": "link_labels.jsonl approximately 1.02MB, connector size threshold; sharded canonical registry needed"
+  },
+  "audit": {
+    "new_findings": 8,
+    "checkpoint": "runs/r267_audit.jsonl",
+    "backlog_merged": 8,
+    "backlog_total": 350,
+    "commit": "d95a453e005ec73be56ca0298c012f01b2f31f26"
+  },
+  "mime": {
+    "observations": 2535,
+    "unique_pdf_urls": 1148,
+    "unique_pdf_urls_without_pdf_substring": 976,
+    "observation_sha": "71b20ba889816a2d7de1ae7b4aca2ce885c21a4c",
+    "binary_downloaded": false
+  },
+  "dropbox_modified": false,
+  "schedule_modified": false,
+  "raw_ledger_modified": false
+}
