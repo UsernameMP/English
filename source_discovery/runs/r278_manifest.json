@@ -1,0 +1,111 @@
+{
+  "cycle": "r278-20261023T210717968Z",
+  "created_at": "2026-10-23T21:12:29.188Z",
+  "branch": "rift-source-index",
+  "pr_188": {
+    "merged_into_main": true,
+    "source": "r277_manifest"
+  },
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "7cbe3867407ce57e28fa988ebb1112e4ccb25c42",
+    "requested_at": "2026-10-23T21:07:17.968Z"
+  },
+  "crawler": {
+    "triggered_run": {
+      "id": 40024418056,
+      "status_at_last_check": "in_progress",
+      "result_included": false
+    },
+    "automatic_followup": {
+      "id": 40024735836,
+      "status_at_last_check": "pending",
+      "result_included": false
+    },
+    "last_confirmed_successful_run": {
+      "id": 40016074826,
+      "conclusion": "success",
+      "updated_at": "2026-10-23T20:09:55Z"
+    },
+    "last_reported_metrics_from_r277": {
+      "unique_resource_urls": 217091,
+      "pending_pages": 100753
+    },
+    "current_queue_not_readable": true,
+    "reason": "crawl_state.json large single-line JSON; fetch_file returned empty text, SHA present. No current-run crawler totals asserted."
+  },
+  "discovery": {
+    "verified_new_urls": 5,
+    "canonical_sources_before": 1593,
+    "canonical_sources_after": 1598,
+    "checkpoint": "source_discovery/runs/discovery_r278.jsonl",
+    "canonical_merge_commit": "5c7d4e3701384f25540fac87bfcbf93401c8e549",
+    "countries": [
+      "RO",
+      "VN"
+    ],
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000283.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000793.jsonl",
+      "batch_000794.jsonl"
+    ],
+    "counts": {
+      "task": 19,
+      "solution": 11,
+      "unrelated": 38,
+      "archive": 18,
+      "source": 3,
+      "criteria": 5,
+      "review": 6
+    },
+    "checkpoints": [
+      "source_discovery/runs/r278_review_r283_000_019.jsonl",
+      "source_discovery/runs/r278_review_r283_020_039.jsonl",
+      "source_discovery/runs/r278_review_r283_040_059.jsonl",
+      "source_discovery/runs/r278_review_r283_060_079.jsonl",
+      "source_discovery/runs/r278_review_r283_080_099.jsonl"
+    ],
+    "checkpoints_read_back": true,
+    "canonical_labels_before": 1296,
+    "canonical_labels_after": 1396,
+    "canonical_merge_commit": "4979d830da60b25e17ee40ad31ea74e02ab6dc61",
+    "review_state_commit": "c32342f51a44d9d676b17601f774ac93aba077f2",
+    "next_resource_shard": "resource_000284.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "audit": {
+    "new_findings": 10,
+    "checkpoint": "source_discovery/runs/r278_audit.jsonl",
+    "canonical_backlog_before": 446,
+    "canonical_backlog_after": 456,
+    "canonical_last_commit": "ae56fe2bbf8da1856f7d5dd162ba4047e1c4f4b4",
+    "r278_label_merge_audit_item_resolved": true
+  },
+  "mime": {
+    "checkpoint": "source_discovery/runs/r278_mime_audit.jsonl",
+    "observations": 2806,
+    "unique_application_pdf_urls": 1216,
+    "pdf_urls_without_dot_pdf_substring": 1044,
+    "octet_stream_observations": 90,
+    "postscript_observations": 13,
+    "binary_bodies_not_read": true
+  },
+  "safeguards": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "binary_downloaded": false,
+    "public_only": true
+  },
+  "open_issues": [
+    "Earlier cycles' label checkpoints still need deduplicated reconciliation; current r278 labels are merged.",
+    "New crawler run(s) not complete at last check; do not count their results.",
+    "Romanian 2026 astronomy organizer Subiecte si Bareme page returned 404; not proof of missing papers.",
+    "Peruvian pre-2011 keys, Argentine 3E answer sets, Vietnamese mechanics year gaps and philosophy historical participant works remain unverified."
+  ]
+}
