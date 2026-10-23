@@ -1,0 +1,89 @@
+{
+  "cycle": "r270-20261023T130521000Z",
+  "created_at": "2026-10-23T13:18:00Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "e8a86671e7b444acc27615debd5cc58f5819fbb6",
+    "requested_at": "2026-10-23T13:05:21.000Z",
+    "actions_status": "not_confirmed_for_this_trigger",
+    "last_previous_run_id": 39951250998,
+    "last_previous_run_job_status": "completed",
+    "last_previous_run_job_conclusion": "success"
+  },
+  "discovery": {
+    "new_verified_index_urls": 3,
+    "checkpoint": "runs/discovery_r270.jsonl",
+    "checkpoint_commit": "6304d05161a9346e4f68197d6c83a00331c1eb40",
+    "canonical_sources_before": 1554,
+    "canonical_sources_after": 1557,
+    "canonical_merge_commit": "1d3470dc4903ab6defa54660520e3e950e3c2d12",
+    "rights": "unknown"
+  },
+  "review": {
+    "resource_shard": "resource_000275.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000771.jsonl",
+      "batch_000772.jsonl",
+      "batch_000773.jsonl",
+      "batch_000774.jsonl",
+      "batch_000775.jsonl",
+      "batch_000776.jsonl",
+      "batch_000777.jsonl"
+    ],
+    "counts": {
+      "solution": 83,
+      "review": 10,
+      "archive": 6,
+      "task": 1
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoint_files": [
+      "runs/r270_review_r275_000_019.jsonl",
+      "runs/r270_review_r275_020_039.jsonl",
+      "runs/r270_review_r275_040_059.jsonl",
+      "runs/r270_review_r275_060_079.jsonl",
+      "runs/r270_review_r275_080_099.jsonl"
+    ],
+    "canonical_labels_before": 1196,
+    "canonical_labels_after": 1196,
+    "canonical_merge_status": "pending_large_file_sharding_and_earlier_checkpoint_reconciliation",
+    "review_state_commit": "88822cb7ac2321d08a86bae17f2607e3c42ae509",
+    "next_operational_shard": "resource_000276.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "audit": {
+    "findings_added": 9,
+    "checkpoint": "runs/r270_audit.jsonl",
+    "canonical_backlog_before": 369,
+    "canonical_backlog_after": 378,
+    "canonical_backlog_commit": "2ba6668a3136cc426704b1c7a0945eafc4809b18"
+  },
+  "mime": {
+    "observations": 2569,
+    "unique_application_pdf_urls": 1156,
+    "unique_pdf_urls_without_pdf_substring": 984,
+    "observation_sha": "c9af34a4b9604b409d0b3fcceae4d52e637638f0",
+    "binary_downloaded": false
+  },
+  "crawler": {
+    "crawl_state_sha": "880fd47b6115115aeeafe4a45df7307241ad344f",
+    "current_queue_size": "unknown",
+    "last_confirmed_queue_size_from_r269": 95931,
+    "success_this_cycle": "not_confirmed"
+  },
+  "safeguards": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "robots_and_public_only": true
+  },
+  "open_issues": [
+    "RIFT Link Enumeration action outcome for r270 not confirmed by available workflow-run listing",
+    "100 reviewed labels remain in five checkpoints; canonical link_labels.jsonl ~1.02 MB and older pending checkpoints",
+    "Ten review-uncertain KöMaL resource URLs retained",
+    "Crawl state too large for connector range read; current frontier queue unknown"
+  ]
+}
