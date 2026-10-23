@@ -1,0 +1,8 @@
+RIFT r259b 2026-10-23
+Actions 39887920030 success; r259 trigger already updated, no extra trigger.
+Discovery: 6 new index URLs, 5 JSONL + 1 TXT checkpoint.
+Review resource_000258: 100 unique URLs, 100 raw occurrences, 76 full labels in 11 checkpoints, 24 compact pending. Canonical labels unchanged.
+Audit: 4 JSONL + 2 compact pending; canonical backlog unchanged.
+MIME: 2372 observations, 1124 PDF URLs, 952 without .pdf.
+Canonical: sources 1510, labels 1156, backlog 318. Current queue unreadable.
+No binary files downloaded. No Dropbox or schedule writes.
