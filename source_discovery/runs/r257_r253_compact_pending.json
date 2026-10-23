@@ -1,0 +1,35 @@
+{
+  "cycle": "r257-20261023T000636202Z",
+  "resource_shard": "resource_000253.jsonl",
+  "classification": "unrelated",
+  "country": "LV",
+  "competition": "Latvian VIAA education portal",
+  "raw_shards": [
+    "batch_000740.jsonl",
+    "batch_000741.jsonl"
+  ],
+  "total_resources": 100,
+  "raw_occurrences_matched": 100,
+  "full_label_published_rows": [
+    50,
+    74
+  ],
+  "full_label_published_count": 25,
+  "full_label_unpublished_ranges": [
+    [
+      0,
+      49
+    ],
+    [
+      75,
+      99
+    ]
+  ],
+  "full_label_unpublished_count": 75,
+  "reason": "Official Latvian VIAA site-wide navigation for teacher seminars, Nordplus, Eurydice, career services, scholarships and administration. No olympiad task/solution/criteria content established by raw link context.",
+  "resource_id_dedup_checked": true,
+  "canonical_merged": 0,
+  "rights": "unknown",
+  "binary_downloaded": false,
+  "next_action": "Rebuild 75 full labels by joining resource_shard.resource_id to raw_shards.resource_id and preserving raw occurrence IDs; do not advance canonical cursor based on this compact checkpoint."
+}
