@@ -1,0 +1,68 @@
+{
+  "cycle": "r264-20261023T070122334Z",
+  "created_at": "2026-10-23T07:12:00Z",
+  "branch": "rift-source-index",
+  "resource_shards": [
+    "resource_000265.jsonl",
+    "resource_000266.jsonl",
+    "resource_000267.jsonl"
+  ],
+  "raw_shards": [
+    "batch_000752.jsonl",
+    "batch_000753.jsonl",
+    "batch_000754.jsonl",
+    "batch_000755.jsonl"
+  ],
+  "unique_resources": 300,
+  "matched_occurrences": 300,
+  "unique_resource_ids": 300,
+  "counts": {
+    "task": 148,
+    "solution": 140,
+    "review": 11,
+    "source": 1
+  },
+  "full_labels_checkpointed": 300,
+  "canonical_merged": 40,
+  "pending_canonical_merge": 260,
+  "checkpoint_files": [
+    "runs/r264_review_01.jsonl",
+    "runs/r264_review_02.jsonl",
+    "runs/r264_review_03.jsonl",
+    "runs/r264_review_04.jsonl",
+    "runs/r264_review_05.jsonl",
+    "runs/r264_review_06.jsonl"
+  ],
+  "canonical_label_size_bytes": 1036014,
+  "canonical_label_rows": 1196,
+  "canonical_sharding_required": true,
+  "next_resource_shard": "resource_000268.jsonl",
+  "prior_pending_checkpoints_not_reconciled": true,
+  "prior_r263_corrections_recovered": "runs/r264_recovered_r263_corrections.jsonl",
+  "discovery": {
+    "verified_new_sources": 8,
+    "canonical_merged": 8,
+    "path": "runs/discovery_r264.jsonl"
+  },
+  "audit": {
+    "new_findings": 8,
+    "canonical_merged": 8,
+    "path": "runs/r264_audit.jsonl"
+  },
+  "mime": {
+    "observations": 2408,
+    "unique_application_pdf_urls": 1136,
+    "pdf_urls_without_dot_pdf_anywhere": 964
+  },
+  "crawler": {
+    "run_id": 39915118178,
+    "status": "success",
+    "html_pages": 60,
+    "new_raw_links": 1404,
+    "unique_resource_urls": 194120,
+    "pending_pages": 92168,
+    "blocked_or_failed_cumulative": 1558
+  },
+  "binary_downloaded": false,
+  "rights_default": "unknown"
+}
