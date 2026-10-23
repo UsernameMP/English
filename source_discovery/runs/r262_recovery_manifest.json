@@ -1,0 +1,103 @@
+{
+  "cycle": "r262-20261023T050828143Z",
+  "created_at": "2026-10-23T05:17:43.936Z",
+  "unique_resources_checked": 300,
+  "previously_checkpointed": 20,
+  "new_full_labels_prepared": 280,
+  "classification_counts_new": {
+    "task": 141,
+    "solution": 137,
+    "source": 1,
+    "review": 1
+  },
+  "source_resource_shards": [
+    "resource_000261.jsonl",
+    "resource_000262.jsonl",
+    "resource_000263.jsonl"
+  ],
+  "raw_shards": [
+    "batch_000748.jsonl",
+    "batch_000749.jsonl",
+    "batch_000750.jsonl",
+    "batch_000751.jsonl",
+    "batch_000752.jsonl"
+  ],
+  "full_metadata_git_tree": "9f72844f18bce3638748a59f105b76d7b2fa78e9",
+  "full_metadata_unreferenced_commit": "e703a1aaebb0c7322d598de440cfff29d111bf10",
+  "warning": "Git objects were created but ref update was blocked; dangling objects are not durable until reachable from a branch. Published full/compact checkpoints are partial; canonical labels unchanged.",
+  "full_blob_shas": [
+    {
+      "start": 0,
+      "end": 19,
+      "sha": "2dee8e2bd5e2180528adc19832d7203620a21285"
+    },
+    {
+      "start": 20,
+      "end": 39,
+      "sha": "b2e7b77ae881467aa5cacdd5d7db932c68e0b744"
+    },
+    {
+      "start": 40,
+      "end": 59,
+      "sha": "ce4b7bff3d538d051ab029aa09b494ae965ce655"
+    },
+    {
+      "start": 60,
+      "end": 79,
+      "sha": "897946cfa1f5b3d67bcf30606cab3e3779ec0f9a"
+    },
+    {
+      "start": 80,
+      "end": 99,
+      "sha": "5d7eb700f07e3754874ba25701fe9e6c89cfa6a8"
+    },
+    {
+      "start": 100,
+      "end": 119,
+      "sha": "70ae978db5ac29192b0a7466dd290f32174763ba"
+    },
+    {
+      "start": 120,
+      "end": 139,
+      "sha": "518d95f5299f0fce343e304c32691959ebda8720"
+    },
+    {
+      "start": 140,
+      "end": 159,
+      "sha": "ead80c995dd3db8de841feccaf8778e6cd328569"
+    },
+    {
+      "start": 160,
+      "end": 179,
+      "sha": "0111b13a97df434da199ff50ec5a620d5dc5c3da"
+    },
+    {
+      "start": 180,
+      "end": 199,
+      "sha": "22f7225108b4df99a5b85ebb9f0ee751b5c36933"
+    },
+    {
+      "start": 200,
+      "end": 219,
+      "sha": "6758132d3dbd892d8be0798adb3cc0f2a8b736cd"
+    },
+    {
+      "start": 220,
+      "end": 239,
+      "sha": "335e25542a4e6be32d94eda53f9c04dbdd775ef8"
+    },
+    {
+      "start": 240,
+      "end": 259,
+      "sha": "f370c27deaa0cc534a596d338c79631ffb719cc1"
+    },
+    {
+      "start": 260,
+      "end": 279,
+      "sha": "e6d5b51c8b12e3e5ef07146b83ccfd832c2f65b4"
+    }
+  ],
+  "next_shard_after_recovery": "resource_000264.jsonl",
+  "raw_cursor_unchanged": true,
+  "binary_downloaded": false
+}
