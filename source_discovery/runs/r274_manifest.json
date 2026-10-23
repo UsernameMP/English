@@ -1,0 +1,95 @@
+{
+  "cycle": "r274-20261023T170442885Z",
+  "created_at": "2026-10-23T17:09:38.062Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "344c09d974a7a102a5a95028de10debe5fbd8457",
+    "requested_at": "2026-10-23T17:04:42.885Z",
+    "run_id": 39992112420,
+    "status_at_check": "in_progress",
+    "automatic_source_update_run_id": 39992441828,
+    "automatic_run_status_at_check": "pending"
+  },
+  "crawler": {
+    "last_confirmed_run_id": 39984088577,
+    "last_confirmed_at": "2026-10-23T16:13:02Z",
+    "html_pages_last_confirmed_run": 60,
+    "new_links_last_confirmed_run": 3486,
+    "pending_pages_last_confirmed_run": 99570,
+    "blocked_or_failed_cumulative_last_confirmed_run": 1783,
+    "unique_resource_urls_last_confirmed_run": 214739,
+    "current_run_result": "not_yet_persisted_at_last_check",
+    "notes": "Latest confirmed values from prior successful automatic run's job logs; no current r274 result asserted."
+  },
+  "discovery": {
+    "verified_new_sources": 5,
+    "checkpoint": "source_discovery/runs/discovery_r274.jsonl",
+    "checkpoint_commit": "c008e210f8e97f07d6004494f0b1ec0d4b8ab4c1",
+    "canonical_sources_before": 1574,
+    "canonical_sources_after": 1579,
+    "canonical_merge_commit": "9faa64129a157598ffa070ce13570ffa67cc67af",
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000279.jsonl",
+    "unique_resource_ids": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000781.jsonl",
+      "batch_000782.jsonl",
+      "batch_000783.jsonl",
+      "batch_000785.jsonl",
+      "batch_000790.jsonl"
+    ],
+    "counts": {
+      "unrelated": 84,
+      "task": 4,
+      "solution": 4,
+      "archive": 2,
+      "source": 6
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoint_files": [
+      "source_discovery/runs/r274_review_r279_000_019.jsonl",
+      "source_discovery/runs/r274_review_r279_020_039.jsonl",
+      "source_discovery/runs/r274_review_r279_040_059.jsonl",
+      "source_discovery/runs/r274_review_r279_060_079.jsonl",
+      "source_discovery/runs/r274_review_r279_080_099.jsonl"
+    ],
+    "canonical_link_labels_before": 1196,
+    "canonical_link_labels_after": 1196,
+    "canonical_merge_status": "pending_sharded_registry_and_prior_checkpoint_reconciliation",
+    "review_state_commit": "61ae4ab81d9a8ea7606d390d0155c37dd86ff438",
+    "next_operational_shard": "resource_000280.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "audit": {
+    "new_findings": 8,
+    "checkpoint": "source_discovery/runs/r274_audit.jsonl",
+    "checkpoint_commit": "82bb005932cc8340b9be4ba507e13e95e6784a6d",
+    "canonical_backlog_before": 408,
+    "canonical_backlog_after": 416,
+    "canonical_backlog_commit": "8b34897e6883f90622e1ad0b7e0a6c0d28896a59"
+  },
+  "mime": {
+    "observations": 2717,
+    "unique_application_pdf_urls": 1190,
+    "pdf_urls_without_dot_pdf_substring": 1018,
+    "resource_observations_blob_sha": "175c78cc0c2b093962e42f0fc623c196f6c29e70",
+    "binary_bodies_not_read": true
+  },
+  "safeguards": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "binary_downloaded": false,
+    "public_only": true
+  },
+  "open_issues": [
+    "Current r274 workflow still running; second automatic workflow pending at last check; current queue unknown.",
+    "100 full semantic labels checkpointed, not merged into >1MB canonical link_labels.jsonl; older checkpoints pending.",
+    "OBAPO Drive archive and SACEE English Olympiad destination not independently enumerated.",
+    "XMUM 2022-2023 question-set completeness and UJ postgraduate essay availability/rights remain unknown."
+  ]
+}
