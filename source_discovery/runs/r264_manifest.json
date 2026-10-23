@@ -1,6 +1,6 @@
 {
   "cycle": "r264-20261023T070122334Z",
-  "created_at": "2026-10-23T07:12:00Z",
+  "created_at": "2026-10-23T07:08:52.081Z",
   "branch": "rift-source-index",
   "resource_shards": [
     "resource_000265.jsonl",
@@ -64,5 +64,6 @@
     "blocked_or_failed_cumulative": 1558
   },
   "binary_downloaded": false,
-  "rights_default": "unknown"
+  "rights_default": "unknown",
+  "timestamp_corrected_at": "2026-10-23T07:08:52.081Z"
 }
