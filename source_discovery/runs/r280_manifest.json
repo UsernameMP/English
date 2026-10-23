@@ -1,0 +1,105 @@
+{
+  "cycle": "r280-20261023T230828525Z",
+  "created_at": "2026-10-23T23:14:48.700Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "e59594d0ec1dc0a9dd85fb4103e7f8a64a57cf04",
+    "requested_at": "2026-10-23T23:08:28.525Z"
+  },
+  "crawler": {
+    "primary_run": {
+      "id": 40037938578,
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-23T23:11:38Z",
+      "html_pages": 60,
+      "new_raw_links": 4757,
+      "pending_pages": 101609,
+      "blocked_or_failed_cumulative": 1977,
+      "unique_resource_urls": 219823,
+      "stats_provenance": "GitHub Actions decoded job logs"
+    },
+    "source_change_automatic_followup": {
+      "id": 40038460662,
+      "status_at_manifest": "in_progress",
+      "result_included": false
+    },
+    "crawl_state_single_line_unreadable_via_fetch_file": true
+  },
+  "discovery": {
+    "checkpoint": "source_discovery/runs/discovery_r280.jsonl",
+    "verified_new_urls": 7,
+    "previously_indexed_duplicate_excluded": "https://www.prosofos.pt/onf-os-ensaios",
+    "sources_before": 1604,
+    "sources_after": 1611,
+    "commit": "04de7fe9b007ecdcc84046314e96fd59a90462c4",
+    "countries": [
+      "INT",
+      "CZ",
+      "FR",
+      "BD",
+      "RU",
+      "PY"
+    ],
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000285.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000795.jsonl",
+      "batch_000796.jsonl"
+    ],
+    "counts": {
+      "task": 6,
+      "participant_work": 6,
+      "source": 16,
+      "unrelated": 72
+    },
+    "checkpoints": [
+      "source_discovery/runs/r280_review_r285_000_019.jsonl",
+      "source_discovery/runs/r280_review_r285_020_039.jsonl",
+      "source_discovery/runs/r280_review_r285_040_059.jsonl",
+      "source_discovery/runs/r280_review_r285_060_079.jsonl",
+      "source_discovery/runs/r280_review_r285_080_099.jsonl"
+    ],
+    "canonical_before": 2296,
+    "canonical_after": 2396,
+    "canonical_merge_commit": "1cd6e263749683d4900a23ad9d4a5086bf9d66d2",
+    "next_resource_shard": "resource_000286.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "audit": {
+    "new_findings": 11,
+    "checkpoint": "source_discovery/runs/r280_audit.jsonl",
+    "backlog_before": 466,
+    "backlog_after": 477,
+    "backlog_commit": "99ea144d2c6e78ca0deadb8268869bd7d9585c75"
+  },
+  "mime": {
+    "checkpoint": "source_discovery/runs/r280_mime_audit.jsonl",
+    "observations": 2828,
+    "unique_application_pdf_urls": 1230,
+    "pdf_urls_without_dot_pdf": 1058,
+    "zip_urls": 60,
+    "gzip_urls": 5,
+    "application_octet_stream_urls": 90,
+    "binary_bodies_not_read": true
+  },
+  "safeguards": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "binary_downloaded": false,
+    "robots_and_access_boundaries_respected": true
+  },
+  "open_issues": [
+    "Checkpoints older than r269 still require resource-ID reconciliation.",
+    "Automatically triggered follow-up crawl #40038460662 not yet included in queue statistics.",
+    "Two UES El Salvador URLs auto-merged in prior run are search-indexed, not live-verified archives.",
+    "Historical finalist essays have unknown redistribution rights; no PDF bodies read.",
+    "One pre-existing r202 canonical duplicate resource_id remains preserved as raw evidence."
+  ]
+}
