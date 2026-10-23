@@ -1,5 +1,13 @@
 # English Sprint — ВсОШ 5–6
 
+## v0.6.39
+
+- Informatics grade 5 school-stage 2026/27: six user-supplied AI-themed tasks adapted into 18 individually graded exercises in a separate pilot pack;
+- includes a 5×5 pixel grid transcription, word-edit tie-break tests, constructive cyclic lamp bound and token-merge limits;
+- independent deterministic reference-answer validator and catalog / entitlement / knowledge blueprint registration;
+- question wording is adapted from user-provided prompts; official competition source and publication rights have not been independently verified;
+- versionName 0.6.39 / versionCode 46, preserving signing and updater contract.
+
 Offline Android trainer for fast preparation for the school stage of the English Olympiad (Tatarstan, 5–6 grades).
 
 ## v0.6.13
