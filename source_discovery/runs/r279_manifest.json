@@ -1,0 +1,134 @@
+{
+  "cycle": "r279-20261023T215937759Z",
+  "created_at": "2026-10-23T22:07:31.030Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "requested_at": "2026-10-23T21:59:37.759Z",
+    "commit": "2c555bb847b73e8937d192712867b9ba56e854d6",
+    "path": "source_discovery/run_trigger.json"
+  },
+  "crawler": {
+    "triggered_run": {
+      "id": 40030650150,
+      "conclusion": "success",
+      "completed_at": "2026-10-23T22:04:29Z",
+      "published_commit": "ec0ee18d",
+      "html_pages": 60,
+      "new_raw_links": 3324,
+      "pending_pages": 101077,
+      "blocked_or_failed_cumulative": 1960,
+      "unique_resource_urls": 218306
+    },
+    "source_update_followup": {
+      "id": 40030899992,
+      "status_at_last_check": "in_progress",
+      "result_included": false
+    },
+    "previous_runs_verified": [
+      {
+        "id": 40024418056,
+        "conclusion": "success",
+        "html_pages": 60,
+        "new_raw_links": 16608,
+        "unique_resource_urls": 217615
+      },
+      {
+        "id": 40024735836,
+        "conclusion": "success",
+        "html_pages": 60,
+        "new_raw_links": 3943,
+        "unique_resource_urls": 217915
+      }
+    ],
+    "crawl_state_large_single_line_unreadable_via_fetch_file": true,
+    "stats_provenance": "GitHub Actions decoded job logs"
+  },
+  "discovery": {
+    "checkpoint": "source_discovery/runs/discovery_r279.jsonl",
+    "candidates_found": 6,
+    "verified_new_urls_merged": 4,
+    "search_indexed_not_live_verified_deferred": 2,
+    "canonical_sources_before": 1598,
+    "canonical_sources_after": 1602,
+    "canonical_merge_commit": "1c9cf0fc4d08a613163775f8d7077f4cf907b982",
+    "countries": [
+      "MR",
+      "CR",
+      "AR",
+      "SV"
+    ],
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000284.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000794.jsonl",
+      "batch_000795.jsonl"
+    ],
+    "counts": {
+      "unrelated": 62,
+      "criteria": 8,
+      "task": 16,
+      "review": 1,
+      "participant_work": 5,
+      "source": 8
+    },
+    "checkpoints": [
+      "source_discovery/runs/r279_review_r284_000_019.jsonl",
+      "source_discovery/runs/r279_review_r284_020_039.jsonl",
+      "source_discovery/runs/r279_review_r284_040_059.jsonl",
+      "source_discovery/runs/r279_review_r284_060_079.jsonl",
+      "source_discovery/runs/r279_review_r284_080_099.jsonl"
+    ],
+    "canonical_merged_current": 100,
+    "canonical_current_merge_commit": "727c79fecdab3c6ed7849784b5d6ff7702d2d87e",
+    "historical_reconciled_cycles": [
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276
+    ],
+    "historical_reconciled_labels": 800,
+    "canonical_labels_before": 1396,
+    "canonical_labels_after": 2296,
+    "unique_resource_ids_after": 2295,
+    "legacy_duplicate_resource_id": "cfda3ec050dd356e4aa707ad",
+    "duplicate_note": "Two pre-existing r202 raw occurrences of one JPhO news URL share the same unrelated classification; no raw evidence removed.",
+    "next_resource_shard": "resource_000285.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "audit": {
+    "new_findings": 10,
+    "checkpoint": "source_discovery/runs/r279_audit.jsonl",
+    "backlog_before": 456,
+    "backlog_after": 466,
+    "backlog_commit": "8418265798910c0423697c7df7974e803ad57853"
+  },
+  "mime": {
+    "checkpoint": "source_discovery/runs/r279_mime_audit.jsonl",
+    "observations": 2822,
+    "unique_application_pdf_urls": 1230,
+    "pdf_urls_without_dot_pdf": 1058,
+    "binary_bodies_not_read": true
+  },
+  "safeguards": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "binary_downloaded": false,
+    "robots_and_access_boundaries_respected": true
+  },
+  "open_issues": [
+    "Earlier 2026-10-11 through r268 checkpoint sets still require resource-ID reconciliation; r269-r276 fully merged in this cycle.",
+    "Followup GitHub Actions #40030899992 was still running at last check; results not included.",
+    "Two El Salvador university archive URLs search-indexed but not live verified; deferred in discovery checkpoint and backlog.",
+    "One historical r202 resource_id appears twice in canonical labels with different raw occurrence IDs and identical unrelated type.",
+    "Crawl state is a 30MB single-line JSON and cannot be read by connector fetch_file; crawler metrics taken from completed Actions logs."
+  ]
+}
