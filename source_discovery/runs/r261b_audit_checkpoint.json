@@ -1,0 +1,15 @@
+{
+  "cycle": "r261b",
+  "date": "2026-10-23",
+  "status": "review publication blocked",
+  "review_shard": "resource_000260.jsonl",
+  "unique_resources": 100,
+  "classification_counts": {
+    "task": 46,
+    "solution": 45,
+    "archive": 2,
+    "source": 1,
+    "unrelated": 6
+  },
+  "binary_downloaded": false
+}
