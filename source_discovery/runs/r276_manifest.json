@@ -1,0 +1,110 @@
+{
+  "cycle": "r276-20261023T190650535Z",
+  "created_at": "2026-10-23T19:18:18.184Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "981971843215a47bc43a41e9e8369303b939efd8",
+    "requested_at": "2026-10-23T19:06:50.535Z"
+  },
+  "crawler": {
+    "runs": [
+      {
+        "id": 40008823100,
+        "status": "success",
+        "html_pages": 60,
+        "new_links": 2776,
+        "pending_pages": 100202,
+        "blocked_or_failed_cumulative": 1870,
+        "unique_resource_urls": 216097
+      },
+      {
+        "id": 40009231621,
+        "status": "success",
+        "html_pages": 60,
+        "new_links": 2452,
+        "pending_pages": 100713,
+        "blocked_or_failed_cumulative": 1888,
+        "unique_resource_urls": 216883
+      }
+    ],
+    "html_pages_total": 120,
+    "new_links_total": 5228,
+    "last_confirmed_pending_pages": 100713,
+    "last_confirmed_unique_resource_urls": 216883,
+    "latest_crawl_state_sha": "42c6fabe95fe9ac7c68da8d0e7a6944fd9b5d91e"
+  },
+  "discovery": {
+    "verified_new_unique_source_urls": 4,
+    "checkpoint": "source_discovery/runs/discovery_r276.jsonl",
+    "canonical_sources_before": 1583,
+    "canonical_sources_after": 1587,
+    "canonical_merge_commit": "6825debf60844bc83684e98ed6ca9e3114623811",
+    "urls": [
+      "https://excelentabn.ro/subiecte.php",
+      "https://www.olimpiadasastrofni.com/documentos.html",
+      "https://www.integratedmath.org/competitions/spring-2026",
+      "https://www.uaem.mx/olimpiadas/astronomia/"
+    ],
+    "excluded_duplicate_aliases": [
+      "https://www.iypt.ilyam.org/problems/",
+      "https://www.iypt.ilyam.org/solutions/"
+    ],
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000281.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000791.jsonl",
+      "batch_000792.jsonl"
+    ],
+    "counts": {
+      "task": 66,
+      "solution": 34
+    },
+    "checkpoints": [
+      "source_discovery/runs/r276_review_r281_000_019.jsonl",
+      "source_discovery/runs/r276_review_r281_020_039.jsonl",
+      "source_discovery/runs/r276_review_r281_040_059.jsonl",
+      "source_discovery/runs/r276_review_r281_060_079.jsonl",
+      "source_discovery/runs/r276_review_r281_080_099.jsonl"
+    ],
+    "checkpoints_read_back": true,
+    "canonical_labels_before": 1196,
+    "canonical_labels_after": 1196,
+    "canonical_merge_status": "pending_sharding_and_prior_checkpoint_reconciliation",
+    "review_state_commit": "1da7e8d757eb062ae6ce0c3ca3031563d84a7cc9",
+    "next_resource_shard": "resource_000282.jsonl",
+    "raw_cursor_unchanged": true,
+    "critical_correction": "2021 OAQ Zonal Virtual five URLs are Respuestas (answer resources), not question sheets as inferred in earlier r275 audit."
+  },
+  "audit": {
+    "new_findings": 9,
+    "checkpoint": "source_discovery/runs/r276_audit.jsonl",
+    "canonical_backlog_before": 425,
+    "canonical_backlog_after": 434,
+    "canonical_last_commit": "e8edf109f5a539a66cf8ec04fdb75dfb31e9f85b"
+  },
+  "mime": {
+    "observations": 2771,
+    "unique_application_pdf_urls": 1216,
+    "pdf_urls_without_dot_pdf_substring": 1044,
+    "octet_stream_not_assumed_pdf": true,
+    "binary_bodies_not_read": true
+  },
+  "safeguards": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "binary_downloaded": false,
+    "public_only": true
+  },
+  "open_issues": [
+    "100 r276 full labels stored in five checkpoints but not merged into link_labels.jsonl (file exceeds connector size threshold); older checkpoint reconciliation remains open.",
+    "2021 OAQ answer-key filenames contradict previous r275 backlog assumption; actual 2021 task sheets require separate verification.",
+    "OAQ 3E historical solutions and UAEM astronomy papers incomplete/unknown; do not infer absence.",
+    "Swiss economics extensionless download endpoints yield application/octet-stream, not proof of PDF despite embedded filename."
+  ]
+}
