@@ -29,6 +29,19 @@
       "enabled": true
     },
     {
+      "id": "informatics.vsosh.school.5.ai.2026",
+      "asset": "content/informatics_g5_school_2026_ai.json",
+      "subject": "informatics",
+      "grade_min": 5,
+      "grade_max": 5,
+      "competition": "Школьный этап · информатика · ИИ",
+      "season": "2026-2027",
+      "license_id": "project.original.v1",
+      "content_version": "1.0.0",
+      "sha256": "66149edea6c8b2e281add8db2964bb8183bbfe4bc6b2d1f3c69d4e7574be2758",
+      "enabled": true
+    },
+    {
       "id": "informatics.olympiad.5.new15.ru.2026",
       "asset": "content/informatics_g5_new15_2026.json",
       "subject": "informatics",

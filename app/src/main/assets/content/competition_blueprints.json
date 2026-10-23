@@ -389,6 +389,27 @@
           "weight": 0.16
         }
       ]
+    },
+    {
+      "pack_id": "informatics.vsosh.school.5.ai.2026",
+      "coverage": [
+        {
+          "knowledge_id": "CS.COMBINATORICS.COUNTING",
+          "weight": 0.16666666666666666
+        },
+        {
+          "knowledge_id": "CS.ALGORITHMS.TRACING",
+          "weight": 0.05555555555555555
+        },
+        {
+          "knowledge_id": "CS.ALGORITHMS.LOOPS",
+          "weight": 0.16666666666666666
+        },
+        {
+          "knowledge_id": "CS.AI.OLYMPIAD.5",
+          "weight": 0.6111111111111112
+        }
+      ]
     }
   ]
 }
