@@ -59,7 +59,8 @@ for name, bits in patterns.items():
     prediction = 3 if d3 < d8 else 8
     expect(f"pixels_{name}", f"{d3} / {d8} / {prediction}")
     q = questions[f"pixels_{name}"]
-    assert "Изображение " + name.upper() + ":\\n" + "\\n".join(bits) in q["stimulus"]["text"]
+    matrix = "Изображение " + name.upper() + ":" + chr(10) + chr(10).join(bits)
+    assert matrix in q["stimulus"]["text"]
 
 # Edit distances and leftmost tie breaking for the corrected dictionary.
 words = ["кот", "кит", "рот", "код"]
