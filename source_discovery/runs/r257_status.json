@@ -1,0 +1,65 @@
+{
+  "cycle": "r257-20261023T000636202Z",
+  "checked_at": "2026-10-23T00:15:05.846Z",
+  "github_branch": "rift-source-index",
+  "trigger_commit": "470e93e6e01bd53832bbaf565b00f37461c28fd4",
+  "actions_run_id": 39876092163,
+  "actions_status": "success",
+  "crawler_persist_commit": "413d9b681b5533615d35a0da9679361255fee55d",
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_links": 2388,
+    "unique_resource_urls": 191713,
+    "pending_pages": 91388,
+    "blocked_or_failed_cumulative": 1482
+  },
+  "discovery": {
+    "verified_urls_checkpointed": 12,
+    "checkpoint": "runs/discovery_r257.jsonl",
+    "canonical_sources": 1490,
+    "canonical_merge_pending": 12
+  },
+  "review": {
+    "resource_shards": [
+      "resource_000252.jsonl",
+      "resource_000253.jsonl",
+      "resource_000254.jsonl"
+    ],
+    "unique_resources": 300,
+    "raw_occurrences_matched": 300,
+    "full_labels_checkpointed": 300,
+    "canonical_labels": 1156,
+    "canonical_merged": 0,
+    "classification": {
+      "unrelated": 264,
+      "source": 9,
+      "archive": 1,
+      "review": 26
+    },
+    "manifest": "runs/r257_review_manifest.json",
+    "next_operational_shard": "resource_000255.jsonl",
+    "review_state_cursor": "resource_000253.jsonl",
+    "review_state_update_blocked": true,
+    "canonical_raw_cursor_unchanged": true
+  },
+  "mime": {
+    "observations": 2358,
+    "pdf_unique": 1113,
+    "pdf_without_pdf_extension": 955,
+    "binary_downloaded": false
+  },
+  "audit": {
+    "backlog_before": 307,
+    "backlog_after": 318,
+    "added": 11
+  },
+  "outstanding": [
+    "Merge 12 checkpointed sources into sources.jsonl on next normal crawler merge; do not trigger extra run.",
+    "Merge 300 full labels from sharded checkpoints into canonical link_labels ledger using resource_id dedup and scalable storage.",
+    "Reconcile review_state operational cursor with manifest; two attempts to update were blocked by connector safety checks.",
+    "Resolve 26 vocational competition year pages retained as review and rights of secondary/participant archives.",
+    "Large crawl_state.json remains unreadable through contents connector; queue derived from successful workflow logs."
+  ],
+  "dropbox_modified": false,
+  "schedule_modified": false
+}
