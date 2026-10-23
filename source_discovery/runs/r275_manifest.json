@@ -1,0 +1,97 @@
+{
+  "cycle": "r275-20261023T180822911Z",
+  "created_at": "2026-10-23T18:12:03.441Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "e69ebf55372667ead86542f76e9a5215a9cf1595",
+    "requested_at": "2026-10-23T18:08:22.911Z",
+    "workflow_status": "not_independently_confirmed_at_last_check",
+    "crawl_state_sha_at_last_check": "d8941adccdd819971c79de128ee148bf2cb823bd"
+  },
+  "crawler": {
+    "last_confirmed_run_id": 39992441828,
+    "last_confirmed_status": "success",
+    "last_confirmed_at": "2026-10-23T17:15:38Z",
+    "html_pages_last_confirmed_run": 60,
+    "new_links_last_confirmed_run": 1256,
+    "pending_pages_last_confirmed_run": 99524,
+    "blocked_or_failed_cumulative_last_confirmed_run": 1796,
+    "unique_resource_urls_last_confirmed_run": 214783,
+    "current_r275_result": "unknown; no new crawl_state SHA confirmed"
+  },
+  "discovery": {
+    "verified_new_source_urls": 4,
+    "checkpoint": "source_discovery/runs/discovery_r275.jsonl",
+    "canonical_sources_before": 1579,
+    "canonical_sources_after": 1583,
+    "canonical_merge_commit": "b64aeb391e9c2bf87b8292a89f1ec2687c82ba59",
+    "binary_downloaded": false,
+    "notes": "Two confirmed past-paper archives; GNOL organizer with no historical competition papers; independent ICPC metadata index with results not proven problem files."
+  },
+  "review": {
+    "resource_shard": "resource_000280.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000790.jsonl",
+      "batch_000791.jsonl"
+    ],
+    "counts": {
+      "source": 10,
+      "unrelated": 24,
+      "review": 2,
+      "archive": 7,
+      "task": 39,
+      "solution": 18
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoints": [
+      "source_discovery/runs/r275_review_r280_000_019.jsonl",
+      "source_discovery/runs/r275_review_r280_020_039.jsonl",
+      "source_discovery/runs/r275_review_r280_040_059.jsonl",
+      "source_discovery/runs/r275_review_r280_060_079.jsonl",
+      "source_discovery/runs/r275_review_r280_080_099.jsonl"
+    ],
+    "checkpoints_read_back": true,
+    "canonical_link_labels_before": 1196,
+    "canonical_link_labels_after": 1196,
+    "canonical_merge_status": "pending_sharding_and_prior_checkpoint_reconciliation",
+    "review_state_commit": "fc883ce5e0cf57d4d2588402d739f057fc36e23b",
+    "next_operational_shard": "resource_000281.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "audit": {
+    "new_findings": 9,
+    "checkpoint": "source_discovery/runs/r275_audit.jsonl",
+    "canonical_backlog_before": 416,
+    "canonical_backlog_after": 425,
+    "canonical_backlog_commit": "86d3bcdf8b06d0b659c01b9259a41a21855da059"
+  },
+  "mime": {
+    "observations": 2731,
+    "unique_application_pdf_urls": 1190,
+    "pdf_urls_without_dot_pdf_substring": 1018,
+    "other_non_html_types_include": [
+      "application/octet-stream",
+      "application/zip",
+      "image/jpeg",
+      "application/gzip"
+    ],
+    "binary_bodies_not_read": true
+  },
+  "safeguards": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "binary_downloaded": false,
+    "public_only": true
+  },
+  "open_issues": [
+    "RIFT r275 workflow final status and updated crawl queue not confirmed; last confirmed successful automatic crawl r274 run 39992441828.",
+    "100 full reviewed labels remain in verified checkpoints, not merged into canonical link_labels.jsonl; earlier checkpoints also unresolved.",
+    "OAQ 3E national answer keys missing in visible HTML for 2023–2025; no absence claim.",
+    "Potential literal HTML &amp; entity URLs in OAQ resource shard need canonicalization audit.",
+    "GNOL future competition; ICPC independent catalogue is not a confirmed problem archive."
+  ]
+}
