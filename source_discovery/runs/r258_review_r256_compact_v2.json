@@ -1,0 +1,20 @@
+{
+  "cycle": "r258-20261023T010345011Z",
+  "shard": "resource_000256.jsonl",
+  "classification": {
+    "task": "9-18,24-34,37-49,59-72",
+    "solution": "7,23,54,73",
+    "criteria": "8,51",
+    "archive": "2,36,56",
+    "source": "76",
+    "review": "50,58,75",
+    "unrelated": "all remaining 0-99"
+  },
+  "full_published": "25-49",
+  "unpublished": "0-24,50-99",
+  "raw_shards": [
+    "batch_000743.jsonl",
+    "batch_000744.jsonl"
+  ],
+  "rule": "Manual multilingual context: Onling 2023-2025 language pages contain problems; PDF solutions and grading links remain URL-only; EOES local page has task links."
+}
