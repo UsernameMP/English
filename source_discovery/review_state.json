@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-23T22:06:48.890Z",
+  "updated_at": "2026-10-23T23:12:58.862Z",
   "deferred_shards": [
     1,
     2,
@@ -196,10 +196,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000284.jsonl",
-    "last_completed_shard": "resource_000283.jsonl",
-    "cycle": "r278-20261023T210717968Z",
-    "reason": "100 unique resources and 100 raw occurrences reviewed; all 100 full labels merged into canonical link_labels.jsonl (1396 records)."
+    "next_resource_shard": "resource_000286.jsonl",
+    "last_completed_shard": "resource_000285.jsonl",
+    "cycle": "r280-20261023T230828525Z",
+    "reason": "100 unique URLs with 100 raw occurrences matched across batch_000795 and batch_000796; 100 full labels merged in canonical ledger."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -702,9 +702,9 @@
     "status": "merged_in_r279"
   },
   "latest_operational_resource_review": {
-    "last_completed_shard": "resource_000284.jsonl",
-    "next_resource_shard": "resource_000285.jsonl",
-    "cycle": "r279-20261023T215937759Z",
+    "last_completed_shard": "resource_000285.jsonl",
+    "next_resource_shard": "resource_000286.jsonl",
+    "cycle": "r280-20261023T230828525Z",
     "full_labels_checkpointed": 100,
     "canonical_merged": 100,
     "canonical_merge_pending": 0,
@@ -903,10 +903,10 @@
     "canonical_merge_pending": 0,
     "status": "merged_in_r279"
   },
-  "next_resource_shard": "resource_000285.jsonl",
+  "next_resource_shard": "resource_000286.jsonl",
   "raw_cursor_unchanged": true,
   "unresolved_earlier_shards": true,
-  "notes": "r279 resource_000284 reviewed and merged: 100 unique resources, 100 raw occurrences; 16 task, 8 criteria, 5 participant_work, 8 source, 62 unrelated, 1 review. 2014 IPO named essays are participant works, not official solutions; organizer-only HTML and raw title evidence; older checkpoint reconciliation pending.",
+  "notes": "r280 resource_000285 reviewed and merged: 100 unique resources, 100 raw occurrences; 6 task, 6 participant_work, 16 source, 72 unrelated. Raw cursor unchanged; older checkpoints still pending.",
   "r277_review": {
     "cycle": "r277-20261023T195952259Z",
     "resource_shard": "resource_000282.jsonl",
@@ -1014,5 +1014,35 @@
     ],
     "earlier_checkpoint_sets_unresolved": true,
     "notes": "r269-r276 40 checkpoints read; 800 labels merged without resource_id/raw_occurrence_id duplicates. Historical r278/r277 and current r279 already canonical. Older 2026-10-11 through r268 pending checkpoint inventories require separate reconciliation."
+  },
+  "r280_review": {
+    "cycle": "r280-20261023T230828525Z",
+    "resource_shard": "resource_000285.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000795.jsonl",
+      "batch_000796.jsonl"
+    ],
+    "counts": {
+      "unrelated": 72,
+      "source": 16,
+      "participant_work": 6,
+      "task": 6
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 100,
+    "canonical_merge_commit": "1cd6e263749683d4900a23ad9d4a5086bf9d66d2",
+    "checkpoint_files": [
+      "source_discovery/runs/r280_review_r285_000_019.jsonl",
+      "source_discovery/runs/r280_review_r285_020_039.jsonl",
+      "source_discovery/runs/r280_review_r285_040_059.jsonl",
+      "source_discovery/runs/r280_review_r285_060_079.jsonl",
+      "source_discovery/runs/r280_review_r285_080_099.jsonl"
+    ],
+    "raw_cursor_unchanged": true,
+    "next_resource_shard": "resource_000286.jsonl",
+    "status": "merged",
+    "notes": "2005-2012 Castilla y León philosophical Olympiad: distinguish proposed final essay topics from finalists' authored essays and administrative programmes, galleries, social shares; PDF bodies not opened."
   }
 }
