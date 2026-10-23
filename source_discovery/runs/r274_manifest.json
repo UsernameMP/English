@@ -7,9 +7,10 @@
     "commit": "344c09d974a7a102a5a95028de10debe5fbd8457",
     "requested_at": "2026-10-23T17:04:42.885Z",
     "run_id": 39992112420,
-    "status_at_check": "in_progress",
+    "status_at_check": "failure",
     "automatic_source_update_run_id": 39992441828,
-    "automatic_run_status_at_check": "pending"
+    "automatic_run_status_at_check": "in_progress",
+    "failure_reason": "Persist results step rejected git push (non-fast-forward) after successful git pull --rebase; concurrent branch updates occurred between rebase and push."
   },
   "crawler": {
     "last_confirmed_run_id": 39984088577,
@@ -19,7 +20,7 @@
     "pending_pages_last_confirmed_run": 99570,
     "blocked_or_failed_cumulative_last_confirmed_run": 1783,
     "unique_resource_urls_last_confirmed_run": 214739,
-    "current_run_result": "not_yet_persisted_at_last_check",
+    "current_run_result": "r274 trigger crawl computed 60 HTML pages / 1256 raw links but did not persist; do not count as successful enumeration.",
     "notes": "Latest confirmed values from prior successful automatic run's job logs; no current r274 result asserted."
   },
   "discovery": {
@@ -60,17 +61,17 @@
     "canonical_link_labels_before": 1196,
     "canonical_link_labels_after": 1196,
     "canonical_merge_status": "pending_sharded_registry_and_prior_checkpoint_reconciliation",
-    "review_state_commit": "61ae4ab81d9a8ea7606d390d0155c37dd86ff438",
+    "review_state_commit": "ebc140616b86a21dc24543d93c74858e692bdd89",
     "next_operational_shard": "resource_000280.jsonl",
     "raw_cursor_unchanged": true
   },
   "audit": {
     "new_findings": 8,
     "checkpoint": "source_discovery/runs/r274_audit.jsonl",
-    "checkpoint_commit": "82bb005932cc8340b9be4ba507e13e95e6784a6d",
+    "checkpoint_commit": "125bfab412913864c94370fe3d91823243a1e278",
     "canonical_backlog_before": 408,
     "canonical_backlog_after": 416,
-    "canonical_backlog_commit": "8b34897e6883f90622e1ad0b7e0a6c0d28896a59"
+    "canonical_backlog_commit": "920956559fb3c297eacd66f97fb65089dda4be4f"
   },
   "mime": {
     "observations": 2717,
@@ -87,9 +88,11 @@
     "public_only": true
   },
   "open_issues": [
+    "Trigger workflow #39992112420 failed at git push after rebase due concurrent branch write; automatic source-update workflow #39992441828 in progress and may recover crawl.",
     "Current r274 workflow still running; second automatic workflow pending at last check; current queue unknown.",
     "100 full semantic labels checkpointed, not merged into >1MB canonical link_labels.jsonl; older checkpoints pending.",
     "OBAPO Drive archive and SACEE English Olympiad destination not independently enumerated.",
     "XMUM 2022-2023 question-set completeness and UJ postgraduate essay availability/rights remain unknown."
-  ]
+  ],
+  "updated_at": "2026-10-23T17:10:53.413Z"
 }
