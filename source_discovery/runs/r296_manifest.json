@@ -1,0 +1,115 @@
+{
+  "cycle": "r296-20261024T150631758Z",
+  "requested_at": "2026-10-24T15:06:31.758Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pull_request_188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "commit": "8fc76fd452d68d74064551417db7515b4feb7403",
+    "workflow_run_id": 40105473686,
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-24T15:08:48Z"
+  },
+  "crawler": {
+    "job_id": 120906147322,
+    "html_pages": 60,
+    "new_raw_links": 6490,
+    "unique_resource_urls": 243379,
+    "pending_pages": 110546,
+    "blocked_or_failed_cumulative": 2419,
+    "commit": "c5df929b",
+    "log_evidence": "GitHub Actions job 120906147322"
+  },
+  "following_automatic_run": {
+    "id": 40105639662,
+    "status_at_checkpoint": "in_progress",
+    "triggered_by": "source registry commit",
+    "metrics_not_included": true
+  },
+  "discovery": {
+    "before": 1698,
+    "added": 8,
+    "after": 1706,
+    "commit": "c550ec4d228be2af3bbf2a7c8eb3d55956dcbe8d",
+    "countries": [
+      "MN",
+      "NG"
+    ],
+    "new_archive_sections": 7,
+    "bibliographic_catalogues_only": 1,
+    "verification": "public HTML indexes only; no binary downloads",
+    "source_urls": [
+      "https://www.integral.mn/olympiads/17",
+      "https://www.integral.mn/olympiads/15",
+      "https://www.integral.mn/olympiads/8",
+      "https://www.integral.mn/olympiads/14",
+      "https://www.integral.mn/olympiads/18",
+      "https://www.integral.mn/olympiads/21",
+      "https://www.integral.mn/olympiads/12",
+      "https://ntic.edu.ng/publications/"
+    ]
+  },
+  "review": {
+    "resource_shard": "resource_000301.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000813.jsonl",
+      "batch_000814.jsonl"
+    ],
+    "types": {
+      "task": 57,
+      "solution": 38,
+      "review": 5
+    },
+    "checkpoint": "source_discovery/runs/r296_review_r301.jsonl",
+    "checkpoint_commit": "4617aeb349dd91ce15e15f3e1a58565ee18c7319",
+    "canonical_merged": 0,
+    "canonical_labels_last_confirmed_count": 3788,
+    "canonical_labels_sha": "e7ef21eb48b38eb2e9fb5240757a178b39429cb6",
+    "pending_r294_r295_r296": 300,
+    "cursor_advanced": false,
+    "blocker": "canonical link_labels.jsonl large-file read returns empty; previous HTTP/2 write failed"
+  },
+  "mime": {
+    "current_full_ledger_unavailable": true,
+    "last_reported_observations": 3097,
+    "last_reported_unique_pdf_urls": 1344,
+    "no_binary_fetched": true
+  },
+  "audit": {
+    "backlog_before": 641,
+    "added": 7,
+    "after": 648,
+    "commit": "9f3de3535bd0ec3f5272bb91758553a79b3c3f89",
+    "gaps": [
+      "Mongolian archive historical year/round/pagination",
+      "successor host and copyright",
+      "missing solutions/criteria",
+      "Nigerian bibliography without open tasks",
+      "Slovak B57 year conflicts and malformed slug",
+      "canonical merge blocked",
+      "MIME full ledger inaccessible"
+    ]
+  },
+  "review_state_commit": "e96e671fe2f298615851a458ae1d21846bf3972c",
+  "historical_checkpoints_pending": 27,
+  "safeguards": {
+    "binary_downloads": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "schedule_modified": false,
+    "extra_automation_instances_manually_started": false
+  },
+  "pending": [
+    "following crawler final status",
+    "300 checkpointed semantic labels not yet canonical merged",
+    "27 historical checkpoints",
+    "5 ambiguous Slovak resource URLs",
+    "year/round/criteria/rights gaps"
+  ]
+}
