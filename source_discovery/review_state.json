@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T16:07:29.600Z",
+  "updated_at": "2026-10-24T17:17:35.855Z",
   "deferred_shards": [
     1,
     2,
@@ -42,7 +42,7 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "r282_r283_r284_all_300_labels_merged; older checkpoint reconciliation remains pending",
+  "canonical_merge_status": "r294_r295_r296_r297_r298_500_labels_merged_successfully; 27 older historical checkpoints remain pending",
   "canonical_merged_in_cycle": 300,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -182,10 +182,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000299.jsonl",
-    "last_completed_shard": "resource_000298.jsonl",
-    "cycle": "r293-20261024T120656000Z",
-    "reason": "100 distinct resource_id matched to 100 raw occurrences in batch_000809 and batch_000810; checkpoint merged into canonical labels; raw ledger untouched."
+    "next_resource_shard": "resource_000304.jsonl",
+    "last_completed_shard": "resource_000303.jsonl",
+    "cycle": "r298-20261024T170609536Z",
+    "reason": "r294–r298 five 100-resource checkpoints merged into canonical link_labels.jsonl (3788→4288) by successful GitHub Actions #40114993004; raw ledger and historical cursor untouched."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -889,7 +889,7 @@
     "canonical_merge_pending": 0,
     "status": "merged_in_r279"
   },
-  "next_resource_shard": "resource_000299.jsonl",
+  "next_resource_shard": "resource_000304.jsonl",
   "raw_cursor_unchanged": true,
   "unresolved_earlier_shards": true,
   "notes": "r280 resource_000285 reviewed and merged: 100 unique resources, 100 raw occurrences; 6 task, 6 participant_work, 16 source, 72 unrelated. Raw cursor unchanged; older checkpoints still pending.",
@@ -1470,12 +1470,17 @@
     },
     "full_labels_checkpointed": 100,
     "checkpoint": "runs/r294_review_r299.jsonl",
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "canonical_label_sha_at_attempt": "e7ef21eb48b38eb2e9fb5240757a178b39429cb6",
-    "merge_blocker": "HTTP/2 protocol error reading update_file response/body for large canonical link_labels.jsonl; subsequent fetch_file showed unchanged SHA.",
-    "cursor_advanced": false,
+    "merge_blocker": "resolved_by_idempotent_workflow_merge",
+    "cursor_advanced": true,
     "next_shard_after_merge": "resource_000300.jsonl",
-    "raw_ledger_unchanged": true
+    "raw_ledger_unchanged": true,
+    "status": "merged",
+    "canonical_merge_verified_at": "2026-10-24T17:17:35.855Z",
+    "canonical_merge_workflow_run": 40114993004,
+    "canonical_merge_commit": "155865c9742b",
+    "canonical_labels_after": 4288
   },
   "r295_pending": {
     "cycle": "r295-20261024T140659131Z",
@@ -1493,13 +1498,18 @@
     },
     "checkpoint": "runs/r295_review_r300.jsonl",
     "full_labels_checkpointed": 100,
-    "canonical_merged": 0,
-    "canonical_merge_blocker": "Existing canonical link_labels.jsonl ~3.85 MB cannot be safely retrieved via GitHub connector; previous update_file failed HTTP/2; do not overwrite without current full content and blob SHA.",
+    "canonical_merged": 100,
+    "canonical_merge_blocker": "resolved_by_idempotent_workflow_merge",
     "raw_ledger_unchanged": true,
-    "cursor_advanced": false,
+    "cursor_advanced": true,
     "next_shard_after_reconciliation": "resource_000301.jsonl",
     "unresolved_previous_checkpoint": "runs/r294_review_r299.jsonl",
-    "review_note": "Classified with official Slovak Biology Olympiad HTML anchors and resource URL; 4 B58 district category D URLs end 23 rather than 24 and remain review."
+    "review_note": "Classified with official Slovak Biology Olympiad HTML anchors and resource URL; 4 B58 district category D URLs end 23 rather than 24 and remain review.",
+    "status": "merged",
+    "canonical_merge_verified_at": "2026-10-24T17:17:35.855Z",
+    "canonical_merge_workflow_run": 40114993004,
+    "canonical_merge_commit": "155865c9742b",
+    "canonical_labels_after": 4288
   },
   "r296_pending": {
     "cycle": "r296-20261024T150631758Z",
@@ -1518,10 +1528,10 @@
     "checkpoint": "runs/r296_review_r301.jsonl",
     "checkpoint_commit": "4617aeb349dd91ce15e15f3e1a58565ee18c7319",
     "full_labels_checkpointed": 100,
-    "canonical_merged": 0,
-    "canonical_merge_blocker": "link_labels.jsonl full fetch returns empty for 3.85MB file; previous r294 HTTP/2 update failure; do not overwrite without full content and current SHA",
+    "canonical_merged": 100,
+    "canonical_merge_blocker": "resolved_by_idempotent_workflow_merge",
     "raw_ledger_unchanged": true,
-    "cursor_advanced": false,
+    "cursor_advanced": true,
     "next_shard_after_reconciliation": "resource_000302.jsonl",
     "other_pending": [
       "runs/r294_review_r299.jsonl",
@@ -1534,7 +1544,12 @@
       "B57skDri24",
       "B57skDri24m",
       "B57okEbotul23_"
-    ]
+    ],
+    "status": "merged",
+    "canonical_merge_verified_at": "2026-10-24T17:17:35.855Z",
+    "canonical_merge_workflow_run": 40114993004,
+    "canonical_merge_commit": "155865c9742b",
+    "canonical_labels_after": 4288
   },
   "r297_pending": {
     "cycle": "r297-20261024T160100957Z",
@@ -1553,7 +1568,7 @@
     "checkpoint": "runs/r297_review_r302.jsonl",
     "checkpoint_blob_sha": "65d4536e4828574921456ce649dafb94a3b4995e",
     "full_labels_checkpointed": 100,
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "canonical_labels_sha_at_review": "e7ef21eb48b38eb2e9fb5240757a178b39429cb6",
     "pending_review_checkpoints": [
       "runs/r294_review_r299.jsonl",
@@ -1561,11 +1576,11 @@
       "runs/r296_review_r301.jsonl",
       "runs/r297_review_r302.jsonl"
     ],
-    "pending_review_labels": 400,
+    "pending_review_labels": 0,
     "merge_helper": "merge_review_checkpoints.py",
     "merge_workflow_step_added": true,
-    "merge_status": "helper_committed_not_yet_executed; 4.2MB direct create_blob failed HTTP/2",
-    "cursor_advanced": false,
+    "merge_status": "verified_merged_via_GitHub_Actions_run_40114993004",
+    "cursor_advanced": true,
     "raw_ledger_unchanged": true,
     "next_shard_after_canonical_merge": "resource_000303.jsonl",
     "ambiguous_count": 15,
@@ -1573,7 +1588,12 @@
     "mime_observations_last_checked": 3131,
     "mime_unique_pdf_urls": 1367,
     "mime_extensionless_pdf_urls": 1209,
-    "older_historical_checkpoints_pending": 27
+    "older_historical_checkpoints_pending": 27,
+    "status": "merged",
+    "canonical_merge_verified_at": "2026-10-24T17:17:35.855Z",
+    "canonical_merge_workflow_run": 40114993004,
+    "canonical_merge_commit": "155865c9742b",
+    "canonical_labels_after": 4288
   },
   "r298_pending": {
     "cycle": "r298-20261024T170609536Z",
@@ -1592,11 +1612,11 @@
     "checkpoint": "runs/r298_review_r303.jsonl",
     "checkpoint_blob_sha": "08ad3a871798448ffc2bacdb591d0ae2ac4fd37a",
     "full_labels_checkpointed": 100,
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "merge_allowlist_script": "merge_review_checkpoints.py",
     "merge_allowlist_script_updated": true,
-    "canonical_merge_pending": true,
-    "canonical_cursor_advanced": false,
+    "canonical_merge_pending": false,
+    "canonical_cursor_advanced": true,
     "raw_ledger_unchanged": true,
     "next_shard_after_reconciliation": "resource_000304.jsonl",
     "older_historical_checkpoints_pending": 27,
@@ -1604,6 +1624,31 @@
       "https://nivam.sk/olympiady/B54kkBpr220",
       "https://nivam.sk/olympiady/B54kkBpr120"
     ],
-    "note": "r294–r297 canonical status must be verified after new workflow; r298 checkpoint safe, no direct 4MB overwrite attempted."
+    "note": "r294–r297 canonical status must be verified after new workflow; r298 checkpoint safe, no direct 4MB overwrite attempted.",
+    "status": "merged",
+    "canonical_merge_verified_at": "2026-10-24T17:17:35.855Z",
+    "canonical_merge_workflow_run": 40114993004,
+    "canonical_merge_commit": "155865c9742b",
+    "canonical_labels_after": 4288,
+    "cursor_advanced": true
+  },
+  "r298_merge_audit": {
+    "run_id": 40114993004,
+    "conclusion": "success",
+    "merged_checkpoints": [
+      "runs/r294_review_r299.jsonl",
+      "runs/r295_review_r300.jsonl",
+      "runs/r296_review_r301.jsonl",
+      "runs/r297_review_r302.jsonl",
+      "runs/r298_review_r303.jsonl"
+    ],
+    "added": 500,
+    "canonical_before": 3788,
+    "canonical_after": 4288,
+    "canonical_blob_sha": "b5a5c11bb2658ba3ad18774b0a99781bd474a6d6",
+    "legacy_duplicate_resource_id_count": 1,
+    "legacy_duplicate_resource_id": "cfda3ec050dd356e4aa707ad",
+    "historical_checkpoints_pending": 27,
+    "raw_cursor_unchanged": true
   }
 }
