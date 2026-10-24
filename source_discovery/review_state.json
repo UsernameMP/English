@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T18:08:45.592Z",
+  "updated_at": "2026-10-24T19:10:33.749Z",
   "deferred_shards": [
     1,
     2,
@@ -1674,5 +1674,36 @@
     "historical_checkpoints_pending": 27,
     "ambiguity": "b50okcri16- trailing hyphen; semantic solution label confidence 0.79; body uninspected",
     "status": "merged"
+  },
+  "r300_review": {
+    "cycle": "r300-20261024T190636393Z",
+    "resource_shard": "resource_000305.jsonl",
+    "unique_resources_reviewed": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000817.jsonl",
+      "batch_000818.jsonl"
+    ],
+    "classification_counts": {
+      "task": 49,
+      "solution": 38,
+      "review": 1,
+      "archive": 1,
+      "source": 4,
+      "unrelated": 7
+    },
+    "checkpoint": "runs/r300_review_r305.jsonl",
+    "checkpoint_blob_sha": "f7639b0785919311d3df88405cb6b8462c3b89fb",
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 0,
+    "canonical_labels_before": 4388,
+    "canonical_merge_status": "checkpoint_published_sha_allowlisted_workflow_pending",
+    "next_resource_shard_after_merge": "resource_000306.jsonl",
+    "ambiguous_urls": [
+      "https://nivam.sk/olympiady/b49okf4ul15"
+    ],
+    "raw_cursor_unchanged": true,
+    "operational_cursor_advanced": false,
+    "reviewed_at": "2026-10-24T19:10:33.749Z"
   }
 }
