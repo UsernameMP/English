@@ -1,13 +1,33 @@
 {
   "cycle": "r299-20261024T175916747Z",
-  "reported_at": "2026-10-24T18:03:27.958Z",
+  "reported_at": "2026-10-24T18:08:54.206Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
     "requested_at": "2026-10-24T17:59:16.747Z",
     "commit": "99406c600ba4636706a41b48b5034cbf152b4a05",
     "workflow_run_id": 40118613153,
-    "status": "in_progress_at_checkpoint"
+    "status": "success",
+    "first_workflow_run": {
+      "id": 40118613153,
+      "conclusion": "success",
+      "html_pages": 60,
+      "new_raw_links": 1329,
+      "unique_resource_urls": 244831,
+      "pending_pages": 110861,
+      "blocked_or_failed_cumulative": 2459,
+      "crawler_commit": "979fe35b"
+    },
+    "following_source_push_run": {
+      "id": 40118888958,
+      "conclusion": "success",
+      "html_pages": 60,
+      "new_raw_links": 1656,
+      "unique_resource_urls": 245223,
+      "pending_pages": 111030,
+      "blocked_or_failed_cumulative": 2467,
+      "crawler_commit": "8974ea7b"
+    }
   },
   "discovery": {
     "verified_added": 3,
@@ -42,8 +62,13 @@
     "checkpoint_sha": "293a93e58479ccc7806638c5fcfa916273e9959e",
     "checkpoint_commit": "a48ce4f60b908e85086f057c0c4eb8aacb1a8cde",
     "merge_script_commit": "1d5d86613795b66c5852c351e33e24c744ec8a18",
-    "canonical_merge": "pending_workflow_confirmation",
-    "operational_cursor": "resource_000304.jsonl_until_merge_verified"
+    "canonical_merge": "verified_merged",
+    "operational_cursor": "resource_000305.jsonl",
+    "canonical_before": 4288,
+    "canonical_after": 4388,
+    "canonical_blob_sha": "059a1b8d316b6f08cbb0d069030c832d71332a2d",
+    "canonical_merge_workflow_run": 40118888958,
+    "cursor_commit": "ee5aced6ea21a8112c0b6fb7248f50d5f9fb16c6"
   },
   "audit": {
     "backlog_before": 677,
@@ -62,11 +87,14 @@
     ]
   },
   "mime": {
-    "last_confirmed_observations": 3172,
-    "last_confirmed_unique_pdf_urls": 1382,
-    "last_confirmed_pdf_without_suffix": 1224,
-    "updated_metrics": "pending_current_crawl",
-    "binary_downloads": false
+    "observations": 3213,
+    "unique_pdf_urls": 1388,
+    "pdf_without_pdf_extension": 1230,
+    "application_zip_urls": 61,
+    "application_octet_stream_urls": 159,
+    "observations_blob_sha": "c238f1fed644a10086ec0774e921619ddd1e39b6",
+    "binary_downloads": false,
+    "document_suitability_unverified": true
   },
   "safeguards": {
     "binary_documents_downloaded": false,
@@ -77,9 +105,10 @@
     "schedule_modified": false
   },
   "pending": [
-    "Confirm GitHub Actions #40118613153 and subsequent source-push workflow #40118888958",
-    "Merge r299 100 labels into canonical ledger and only then advance operational cursor",
-    "Reconcile 27 historical checkpoints and one duplicated resource ID",
-    "Audit inaccessible/partial historical archives"
+    "27 historical label checkpoints",
+    "one historical duplicated resource ID with two distinct raw occurrences",
+    "source registry contains two historical duplicate normalized URLs",
+    "Slovak b50okcri16- trailing-hyphen URL verification",
+    "year/round/solution/criteria gaps, robots/403/timeout and pagination audits"
   ]
 }
