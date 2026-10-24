@@ -13,9 +13,6 @@
     5
   ],
   "pending_label_checkpoints": [
-    "labels_checkpoint_20261011_1907_recovered05.jsonl",
-    "labels_checkpoint_20261011_1907_retry02.jsonl",
-    "labels_checkpoint_20261012_0102_apho01.jsonl",
     "labels_checkpoint_20261012_0102_apho02.jsonl",
     "labels_checkpoint_20261012_0102_apho04.jsonl",
     "labels_checkpoint_20261012_0102_apho03_1.jsonl",
@@ -44,7 +41,7 @@
     "labels_checkpoint_20261013_011057_r413_single_29.jsonl",
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
-  "pending_labels_count": 30,
+  "pending_labels_count": 27,
   "canonical_merge_status": "r282_r283_r284_all_300_labels_merged; older checkpoint reconciliation remains pending",
   "canonical_merged_in_cycle": 300,
   "noncontiguous_review": {
@@ -1432,5 +1429,26 @@
     "next_resource_shard": "resource_000299.jsonl",
     "raw_cursor_unchanged": true,
     "notes": "Official Slovak physics HTML context; malformed and year-mismatched URLs retained review; 30 older checkpoints still pending; binary bodies not fetched."
+  },
+  "r293_historical_reconciliation": {
+    "cycle": "r293-20261024T120656000Z",
+    "source_checkpoints": [
+      "labels_checkpoint_20261011_1907_recovered05.jsonl",
+      "labels_checkpoint_20261011_1907_retry02.jsonl",
+      "labels_checkpoint_20261012_0102_apho01.jsonl"
+    ],
+    "reconciled": 18,
+    "types": {
+      "task": 9,
+      "solution": 7,
+      "review": 1,
+      "archive": 1
+    },
+    "checkpoint": "runs/labels_checkpoint_r293_historical_recovered18.jsonl",
+    "canonical_merge_commit": "b1d53ba810d367d1077af987ff4763c28e0288ee",
+    "canonical_labels_after": 3788,
+    "pending_checkpoints_before": 30,
+    "pending_checkpoints_after": 27,
+    "notes": "All 18 normalized labels matched raw occurrence IDs and stable resource IDs. Binary bodies not fetched."
   }
 }
