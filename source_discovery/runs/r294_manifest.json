@@ -1,0 +1,96 @@
+{
+  "cycle": "r294-20261024T130030181Z",
+  "requested_at": "2026-10-24T13:00:30.181Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "eabcc4a5e903031f1d49fe1ab3ed886832679841",
+    "blob_sha": "451ae8a87b20b55d85df23a8bdd9fa7617e4c028",
+    "new_run_status": "not_confirmed",
+    "evidence": "run_trigger readback updated; crawl_state SHA unchanged after trigger; no new workflow run ID accessible via available connector"
+  },
+  "last_confirmed_crawler": {
+    "run_id": 40092738924,
+    "job_id": 120868747258,
+    "conclusion": "success",
+    "completed_at": "2026-10-24T12:15:56Z",
+    "html_pages": 60,
+    "new_raw_links": 3095,
+    "unique_resource_urls": 239504,
+    "pending_pages": 109158,
+    "blocked_or_failed_cumulative": 2330,
+    "evidence": "GitHub Actions job log fetched directly"
+  },
+  "discovery": {
+    "before": 1688,
+    "added": 4,
+    "after": 1692,
+    "commit": "e4668e9d4a2e66f78fe0e362282c5659c28984ce",
+    "verification": "direct public HTML only",
+    "urls": [
+      "https://astro-olymp.314c.com/",
+      "https://olimpiadiclassiche.it/web/archivio-prove.php",
+      "https://amc.edu.mx/amc/index.php?Itemid=80&id=112&option=com_content&view=article",
+      "https://ipeis.rnu.tn/fr/concours-nationaux/sujets-et-corrections"
+    ],
+    "note": "Tunisia competitive national university entrance examination tagged as adjacent, not school Olympiad."
+  },
+  "review": {
+    "resource_shard": "resource_000299.jsonl",
+    "unique_resources": 100,
+    "matched_raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000810.jsonl",
+      "batch_000811.jsonl",
+      "batch_000812.jsonl"
+    ],
+    "types": {
+      "task": 56,
+      "solution": 38,
+      "review": 4,
+      "archive": 1,
+      "source": 1
+    },
+    "checkpoint": "source_discovery/runs/r294_review_r299.jsonl",
+    "checkpoint_commit": "927dd7d2bba43dc74bc2439a3a68d3f7609c858d",
+    "canonical_merged": 0,
+    "canonical_labels_unchanged": 3788,
+    "canonical_merge_blocker": "Both update_file and create_blob failed with HTTP/2 protocol error on ~3.85MB payload; canonical blob SHA confirmed unchanged",
+    "cursor_not_advanced": true,
+    "next_shard_after_merge": "resource_000300.jsonl",
+    "pending_historical_checkpoints": 27
+  },
+  "mime": {
+    "observations": 3097,
+    "unique_application_pdf_urls": 1344,
+    "without_dot_pdf_substring": 1172,
+    "application_octet_stream_observations": 159,
+    "application_zip_observations": 61,
+    "interpretation": "MIME-only; binary bodies not fetched; old extensionless counts use inconsistent definition"
+  },
+  "audit": {
+    "backlog_before": 623,
+    "added": 10,
+    "after": 633,
+    "commit": "748f53842a1eb74680748e3567d31231ceca2340"
+  },
+  "review_state": {
+    "commit": "9481a3f476635ce8005672dc739039fd5031eb1b",
+    "pending_pointer": "r294_pending",
+    "operational_cursor": "resource_000299.jsonl"
+  },
+  "safeguards": {
+    "binary_downloads": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "schedule_modified": false,
+    "extra_automations_created": false
+  },
+  "pending": [
+    "r294 workflow execution and publication unconfirmed",
+    "100 r294 checkpointed labels not yet in canonical link_labels.jsonl",
+    "27 historical checkpoints still pending",
+    "4 ambiguous resources retained review",
+    "year/stage/solution/criteria and external archive completeness gaps remain"
+  ]
+}
