@@ -1,0 +1,115 @@
+{
+  "cycle": "r295-20261024T140659131Z",
+  "requested_at": "2026-10-24T14:06:59.131Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pull_request_188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z",
+    "base": "main"
+  },
+  "trigger": {
+    "commit": "84c01a414ae063d7f4d0dc8deba9ad86713d0af6",
+    "blob_sha": "9d268539c651429626bdd09e0e8da21533474b7b",
+    "workflow_run_id": 40101064696,
+    "status_at_checkpoint": "in_progress",
+    "job_step_at_checkpoint": "Build deduplicated link resource index"
+  },
+  "last_confirmed_crawler": {
+    "run_id": 40096478208,
+    "conclusion": "success",
+    "completed_at": "2026-10-24T13:12:11Z",
+    "html_pages": 60,
+    "new_raw_links": 3017,
+    "unique_resource_urls": 240186,
+    "pending_pages": 109403,
+    "blocked_or_failed_cumulative": 2367,
+    "log_evidence": "job 120880465309"
+  },
+  "discovery": {
+    "before": 1692,
+    "added": 6,
+    "after": 1698,
+    "commit": "1a9ab3a029a40f4cf930fe42584ec0b96d619f32",
+    "verification": "direct public HTML metadata only",
+    "countries": [
+      "TW",
+      "AR",
+      "VN",
+      "TH"
+    ],
+    "confirmed_historical_index": "Taiwan National Geographic Championship 1–21 editions",
+    "sources_with_task_archive_not_confirmed": [
+      "Argentina History Olympiad",
+      "Vietnam National Mechanics Olympiad",
+      "Thailand IESO selection"
+    ]
+  },
+  "review": {
+    "resource_shard": "resource_000300.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000812.jsonl",
+      "batch_000813.jsonl"
+    ],
+    "types": {
+      "task": 54,
+      "solution": 42,
+      "review": 4
+    },
+    "checkpoint": "source_discovery/runs/r295_review_r300.jsonl",
+    "checkpoint_commit": "89d8ef113d3be5a16e1f99dcdff5600b7ff31fe4",
+    "canonical_merged": 0,
+    "canonical_labels_verified_sha": "e7ef21eb48b38eb2e9fb5240757a178b39429cb6",
+    "canonical_labels_last_confirmed_count": 3788,
+    "canonical_merge_blocker": "large canonical file read returns empty; r294 HTTP/2 update failed",
+    "cursor_advanced": false,
+    "other_pending": "r294 100 full labels; 27 historical checkpoints",
+    "cross_checkpoint_resource_id_overlap": 0
+  },
+  "mime": {
+    "current_observations_count": "unavailable_via_large_file_read",
+    "latest_prior_manifest_count": 3097,
+    "prior_manifest_unique_application_pdf_urls": 1344,
+    "prior_manifest_pdf_urls_without_dot_pdf_substring": 1172,
+    "prior_manifest_octet_stream_observations": 159,
+    "prior_manifest_zip_observations": 61,
+    "interpretation": "MIME-only metadata, no binary body fetched; current full ledger not read"
+  },
+  "audit": {
+    "backlog_before": 633,
+    "added": 8,
+    "after": 641,
+    "commit": "c6f9cfc6293d83fe7cc0e75d1b523350330d6471",
+    "focus": [
+      "Taiwan year/stage/solution/criteria and private preliminary tests",
+      "participant works licensing",
+      "Argentina/Vietnam/Thailand public task archives unverified",
+      "Slovakia B58 filename year conflicts",
+      "r294+r295 canonical merge blocker"
+    ]
+  },
+  "verification": {
+    "sources_readback": 1698,
+    "backlog_readback": 641,
+    "review_checkpoint_readback": 100,
+    "trigger_readback": true,
+    "review_state_readback": true,
+    "canonical_label_sha_unchanged": true
+  },
+  "safeguards": {
+    "binary_downloads": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "schedule_modified": false,
+    "extra_automations_created": false
+  },
+  "pending": [
+    "r295 crawler final status and publication",
+    "200 checkpointed full labels not yet canonical merged",
+    "27 historical checkpoints",
+    "4 B58 biology ambiguous resources",
+    "year/round/criteria/rights coverage gaps"
+  ]
+}
