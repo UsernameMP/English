@@ -22,7 +22,7 @@ ALLOWED_TYPES = {"task", "solution", "criteria", "participant_work", "archive", 
 
 
 def git_blob_sha(data):
-    return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\\0" + data).hexdigest()
+    return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
 
 
 def parse_jsonl(data, label):
@@ -90,8 +90,8 @@ def merge():
             new.append(row)
 
     if new:
-        addition = "".join(json.dumps(row, ensure_ascii=False, separators=(",", ":")) + "\\n" for row in new)
-        prefix = old_data + (b"\\n" if old_data and not old_data.endswith(b"\\n") else b"")
+        addition = "".join(json.dumps(row, ensure_ascii=False, separators=(",", ":")) + "\n" for row in new)
+        prefix = old_data + (b"\n" if old_data and not old_data.endswith(b"\n") else b"")
         content = prefix + addition.encode("utf-8")
         fd, temp_name = tempfile.mkstemp(prefix=".rift-labels-", dir=str(ROOT))
         try:
