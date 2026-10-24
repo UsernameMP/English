@@ -1,0 +1,73 @@
+{
+  "cycle": "r289-20261024T080246992Z",
+  "completed_at": "2026-10-24T08:06:38.431Z",
+  "branch": "rift-source-index",
+  "repository": "UsernameMP/English",
+  "trigger": {
+    "commit": "113a03b3cdea7ad4a633ccd97bd4769cb2830ffd",
+    "workflow_run_id": 40076506525,
+    "status_at_last_check": "in_progress"
+  },
+  "discovery": {
+    "sources_before": 1651,
+    "sources_added": 5,
+    "sources_after": 1656,
+    "commit": "4b0907760b7de019de19bb6539725bbfd4f40452",
+    "verified_public_html_only": true
+  },
+  "review": {
+    "resource_shard": "resource_000294.jsonl",
+    "unique_resource_ids": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000804.jsonl",
+      "batch_000805.jsonl"
+    ],
+    "types": {
+      "task": 39,
+      "solution": 38,
+      "review": 23
+    },
+    "checkpoint": "source_discovery/runs/labels_checkpoint_r289_r294.jsonl",
+    "checkpoint_commit": "d32c448bbb0abd9f022cd34d96a3742206dee7ce",
+    "canonical_labels_before": 3270,
+    "canonical_labels_after": 3370,
+    "canonical_merge_commit": "0a202335323bcde0cf37de7d62724f7db9be8d67",
+    "next_resource_shard": "resource_000295.jsonl",
+    "review_state_commit": "7359c6b1927d30e151ef96c678a7617934c21ac2"
+  },
+  "audit": {
+    "backlog_before": 564,
+    "backlog_added": 11,
+    "backlog_after": 575,
+    "backlog_commits": [
+      "3732d8568b1992c1b59f862d360e7804cbd82868",
+      "94ac0d3ef657fe427afd668bacf0644bb7454430"
+    ],
+    "mime_observations": 2981,
+    "application_pdf_unique_urls": 1308,
+    "application_pdf_without_pdf_extension": 1150,
+    "mime_count_discrepancy_open": true
+  },
+  "crawler": {
+    "last_confirmed_success_run": 40072859465,
+    "completed_at": "2026-10-24T07:16:27Z",
+    "html_pages": 60,
+    "new_raw_links": 1339,
+    "unique_resource_urls": 235794,
+    "pending_pages": 107633,
+    "blocked_or_failed_cumulative": 2246,
+    "current_run_results_not_included": true
+  },
+  "pending": {
+    "historical_label_checkpoints": 30,
+    "review_ambiguous": 23,
+    "workflow_completion_unconfirmed": true
+  },
+  "safeguards": {
+    "binary_downloads": false,
+    "raw_ledger_modified_by_review": false,
+    "dropbox_modified": false,
+    "schedule_modified": false
+  }
+}
