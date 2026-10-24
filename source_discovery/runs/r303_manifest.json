@@ -1,6 +1,6 @@
 {
   "cycle": "r303-20261024T220548412Z",
-  "reported_at": "2026-10-24T22:12:41.661Z",
+  "reported_at": "2026-10-24T22:14:08.843Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
@@ -55,14 +55,21 @@
   },
   "audit": {
     "backlog_before": 717,
-    "added": 11,
-    "backlog_after": 728,
+    "added": 12,
+    "backlog_after": 729,
     "checkpoint": "source_discovery/runs/r303_audit.jsonl",
     "checkpoint_commit": "ac1c1de1e395b867dffd3463ad4b718c5e9d322c",
     "canonical_backlog_commit": "a2b9457d2bc4253e3fbf9a31acd752a87153a51c",
     "resolved_prior_r302_blocker": true,
     "older_historical_checkpoints_pending": 27,
-    "frontier_drift": "archive query variants and tokenized dossier URLs found in latest resource shards; backlog recorded"
+    "frontier_drift": "archive query variants and tokenized dossier URLs found in latest resource shards; backlog recorded",
+    "metadata_corrections": {
+      "count": 27,
+      "source_checkpoint": "source_discovery/runs/r302_review_r307.jsonl",
+      "corrections_checkpoint": "source_discovery/runs/r303_r302_grade_corrections.jsonl",
+      "checkpoint_commit": "8ab42566e52f0b5dc8a32ccdc1c65269b244611b",
+      "canonical_patch": "pending"
+    }
   },
   "mime": {
     "current_full_ledger": "unreadable via connector; no fresh counts asserted",
@@ -75,8 +82,8 @@
   "state_shas": {
     "run_trigger.json": "b6152690b8e54107e3340034c0c71504f16eb9c4",
     "sources.jsonl": "786f14416cd907c54eb4e76eb622be5af5c43849",
-    "backlog.jsonl": "cceb03afa6469364bec2f20e3067ea0d9244ec15",
-    "review_state.json": "3d8c919d8b388df71d6580465a4d9155df5cd1ef",
+    "backlog.jsonl": "aa64c7959d574599d2b68fd0d67bf0c766593668",
+    "review_state.json": "68d7a2b0bf3a88400206f29b531dc75f9eb1e63c",
     "link_labels.jsonl": "24b5288ea4820b024f3bf5f1f25a220b5e761030",
     "r303_review_r308.jsonl": "6ee039da354c2f423ee1b099fdbbb6c879b2f1b3",
     "discovery_r303.jsonl": "04d1109ea2aed33dfc9b2b0f7dd1489cac5bd443",
