@@ -64,7 +64,25 @@
     "canonical_link_labels_count_last_known": 2496,
     "canonical_blocker": "GitHub fetch_file returns empty for link_labels.jsonl even 1-line ranges, raw fetch HTTP 400 oversized; no unsafe overwrite",
     "review_state_commit": "00e3661b40142fcaf24a84fc1b20d860181493cf",
-    "next_shard": "resource_000288.jsonl"
+    "next_shard": "resource_000288.jsonl",
+    "stage_correction": {
+      "home_preparation_indices": [
+        31,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "reason": "Official NIVAM HTML distinguishes Domáca príprava from Domáce kolo for B/D/EF",
+      "checkpoint_fix_commits": [
+        "52a636e3634dfef07b44b5f307eb0f99cbbab359",
+        "941fe65655c73c4010c2ab8def45c667f0da6d5b"
+      ]
+    }
   },
   "mime": {
     "observations": 2861,
