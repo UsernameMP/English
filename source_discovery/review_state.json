@@ -1574,5 +1574,36 @@
     "mime_unique_pdf_urls": 1367,
     "mime_extensionless_pdf_urls": 1209,
     "older_historical_checkpoints_pending": 27
+  },
+  "r298_pending": {
+    "cycle": "r298-20261024T170609536Z",
+    "resource_shard": "resource_000303.jsonl",
+    "unique_resources_reviewed": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000815.jsonl",
+      "batch_000816.jsonl"
+    ],
+    "classification_counts": {
+      "task": 57,
+      "solution": 41,
+      "review": 2
+    },
+    "checkpoint": "runs/r298_review_r303.jsonl",
+    "checkpoint_blob_sha": "08ad3a871798448ffc2bacdb591d0ae2ac4fd37a",
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 0,
+    "merge_allowlist_script": "merge_review_checkpoints.py",
+    "merge_allowlist_script_updated": true,
+    "canonical_merge_pending": true,
+    "canonical_cursor_advanced": false,
+    "raw_ledger_unchanged": true,
+    "next_shard_after_reconciliation": "resource_000304.jsonl",
+    "older_historical_checkpoints_pending": 27,
+    "ambiguous_urls": [
+      "https://nivam.sk/olympiady/B54kkBpr220",
+      "https://nivam.sk/olympiady/B54kkBpr120"
+    ],
+    "note": "r294–r297 canonical status must be verified after new workflow; r298 checkpoint safe, no direct 4MB overwrite attempted."
   }
 }
