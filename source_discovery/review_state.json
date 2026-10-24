@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T13:00:30.181Z",
+  "updated_at": "2026-10-24T14:11:36.261Z",
   "deferred_shards": [
     1,
     2,
@@ -1476,5 +1476,29 @@
     "cursor_advanced": false,
     "next_shard_after_merge": "resource_000300.jsonl",
     "raw_ledger_unchanged": true
+  },
+  "r295_pending": {
+    "cycle": "r295-20261024T140659131Z",
+    "resource_shard": "resource_000300.jsonl",
+    "unique_resources_reviewed": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000812.jsonl",
+      "batch_000813.jsonl"
+    ],
+    "classification_counts": {
+      "task": 54,
+      "solution": 42,
+      "review": 4
+    },
+    "checkpoint": "runs/r295_review_r300.jsonl",
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 0,
+    "canonical_merge_blocker": "Existing canonical link_labels.jsonl ~3.85 MB cannot be safely retrieved via GitHub connector; previous update_file failed HTTP/2; do not overwrite without current full content and blob SHA.",
+    "raw_ledger_unchanged": true,
+    "cursor_advanced": false,
+    "next_shard_after_reconciliation": "resource_000301.jsonl",
+    "unresolved_previous_checkpoint": "runs/r294_review_r299.jsonl",
+    "review_note": "Classified with official Slovak Biology Olympiad HTML anchors and resource URL; 4 B58 district category D URLs end 23 rather than 24 and remain review."
   }
 }
