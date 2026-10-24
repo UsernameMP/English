@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T22:13:18.144Z",
+  "updated_at": "2026-10-24T23:04:23.067Z",
   "deferred_shards": [
     1,
     2,
@@ -42,8 +42,8 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "r294_to_r302_checkpoints_900_labels_merged_successfully; r303_100_labels_checkpointed_pending_canonical_merge; 27 older historical checkpoints remain pending",
-  "canonical_merged_in_cycle": 302,
+  "canonical_merge_status": "r294_to_r303_checkpoints_1000_labels_merged_successfully; r304_100_labels_checkpointed_pending_canonical_merge; 27 older historical checkpoints remain pending",
+  "canonical_merged_in_cycle": 303,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -182,10 +182,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000307.jsonl",
-    "last_completed_shard": "resource_000306.jsonl",
-    "cycle": "r301-20261024T200610568Z",
-    "reason": "GitHub Actions #40128456906 success; e0e8c305 commit adds exactly 100 r301 labels to canonical (4488→4588). r302 r307 100-label checkpoint is not yet merged; do not advance to r308."
+    "next_resource_shard": "resource_000309.jsonl",
+    "last_completed_shard": "resource_000308.jsonl",
+    "cycle": "r303-20261024T220548412Z",
+    "reason": "GitHub Actions #40137559364 log confirms existing=4688 added=100 total=4788; r304 r309 100-label checkpoint SHA-allowlisted but not yet merged. Do not advance beyond 309."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -1777,12 +1777,16 @@
     },
     "checkpoint": "runs/r303_review_r308.jsonl",
     "checkpoint_blob_sha": "6ee039da354c2f423ee1b099fdbbb6c879b2f1b3",
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "canonical_before": 4688,
     "allowlist_blob_sha": "5c29652883370adb32ebeb0ce6f7bc9835dca58f",
     "next_after_merge": "resource_000309.jsonl",
     "raw_cursor_unchanged": true,
-    "reason": "100 unique resources and 100 raw occurrences verified from organizer HTML; no binary downloaded; merge pending Actions verification."
+    "reason": "100 unique resources and 100 raw occurrences verified from organizer HTML; no binary downloaded; merge pending Actions verification.",
+    "canonical_after": 4788,
+    "canonical_merge_workflow_run": 40137559364,
+    "canonical_merge_status": "verified_success_from_actions_log",
+    "status": "resolved"
   },
   "r303_metadata_corrections": {
     "source_checkpoint": "runs/r302_review_r307.jsonl",
@@ -1791,5 +1795,30 @@
     "field": "grade",
     "status": "checkpointed_pending_canonical_field_patch",
     "original_canonical_labels_preserved": true
+  },
+  "r304_pending": {
+    "cycle": "r304-20261024T225956068Z",
+    "resource_shard": "resource_000309.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000821.jsonl",
+      "batch_000822.jsonl"
+    ],
+    "counts": {
+      "task": 28,
+      "archive": 41,
+      "source": 15,
+      "unrelated": 13,
+      "review": 3
+    },
+    "checkpoint": "runs/r304_review_r309.jsonl",
+    "checkpoint_blob_sha": "a5297f262cecd074e3327f29beeb85d2518c6e0a",
+    "canonical_merged": 0,
+    "canonical_before": 4788,
+    "next_after_merge": "resource_000310.jsonl",
+    "raw_cursor_unchanged": true,
+    "allowlist_commit": "d06670c25b1fb4b5e58ac2b31df023a8f15f8935",
+    "reason": "Reviewed original raw occurrences and year/stage headings, no binary bodies accessed; awaiting successful SHA-allowlisted workflow merge."
   }
 }
