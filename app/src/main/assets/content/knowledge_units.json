@@ -708,6 +708,96 @@
         "ru": "Искусственный интеллект",
         "en": "Artificial Intelligence"
       }
+    },
+    {
+      "id": "MATH.G1.ARITHMETIC_10",
+      "kind": "concept",
+      "legacy_skill": "arith10",
+      "labels": {
+        "en": "Addition and subtraction to 10",
+        "ru": "Счёт, сложение и вычитание в пределах 10"
+      }
+    },
+    {
+      "id": "MATH.G1.ARITHMETIC_20",
+      "kind": "concept",
+      "legacy_skill": "arith20",
+      "labels": {
+        "en": "Addition and subtraction to 20",
+        "ru": "Сложение и вычитание до 20 с переходом через десяток"
+      }
+    },
+    {
+      "id": "MATH.G1.NUMBERS",
+      "kind": "concept",
+      "legacy_skill": "numbers100",
+      "labels": {
+        "en": "Number order and place value to 100",
+        "ru": "Числовой ряд и разрядный состав чисел до 100"
+      }
+    },
+    {
+      "id": "MATH.G1.UNKNOWN",
+      "kind": "concept",
+      "legacy_skill": "unknown_addend",
+      "labels": {
+        "en": "Finding an unknown addend",
+        "ru": "Нахождение неизвестного слагаемого"
+      }
+    },
+    {
+      "id": "MATH.G1.WORD_PROBLEMS",
+      "kind": "concept",
+      "legacy_skill": "word_problems",
+      "labels": {
+        "en": "One- and two-step word problems",
+        "ru": "Текстовые задачи в одно-два действия"
+      }
+    },
+    {
+      "id": "MATH.G1.PATTERNS",
+      "kind": "strategy",
+      "legacy_skill": "number_patterns",
+      "labels": {
+        "en": "Number patterns",
+        "ru": "Числовые закономерности"
+      }
+    },
+    {
+      "id": "MATH.G1.LOGIC",
+      "kind": "strategy",
+      "legacy_skill": "logic_basic",
+      "labels": {
+        "en": "Logic and elimination",
+        "ru": "Логические задачи и исключение вариантов"
+      }
+    },
+    {
+      "id": "MATH.G1.GEOMETRY",
+      "kind": "concept",
+      "legacy_skill": "geometry_basic",
+      "labels": {
+        "en": "Basic geometry: angles and shapes",
+        "ru": "Начальная геометрия: углы и фигуры"
+      }
+    },
+    {
+      "id": "MATH.G1.MEASUREMENT",
+      "kind": "concept",
+      "legacy_skill": "length_measurement",
+      "labels": {
+        "en": "Length: centimetres and decimetres",
+        "ru": "Длина: сантиметры и дециметры"
+      }
+    },
+    {
+      "id": "MATH.G1.COUNTING",
+      "kind": "strategy",
+      "legacy_skill": "counting_choices",
+      "labels": {
+        "en": "Systematic counting of choices",
+        "ru": "Систематический перебор вариантов"
+      }
     }
   ]
 }

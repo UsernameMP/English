@@ -196,6 +196,34 @@
         "informatics.vsosh.school.5.ai.2026"
       ],
       "device_policy": "local_pilot"
+    },
+    {
+      "id": "pilot.math.g1.magistr.speed.2026",
+      "source": "pilot",
+      "active": true,
+      "subject": "mathematics",
+      "grade_min": 1,
+      "grade_max": 1,
+      "competition": "Магистр счёта · неофициальный тренажёр",
+      "season": "2026-2027",
+      "pack_ids": [
+        "mathematics.olympiad.magistr.g1.speed.ru.2026"
+      ],
+      "device_policy": "local_pilot"
+    },
+    {
+      "id": "pilot.math.g1.magistr.olymp.2026",
+      "source": "pilot",
+      "active": true,
+      "subject": "mathematics",
+      "grade_min": 1,
+      "grade_max": 1,
+      "competition": "Магистр счёта · неофициальный тренажёр",
+      "season": "2026-2027",
+      "pack_ids": [
+        "mathematics.olympiad.magistr.g1.olymp.ru.2026"
+      ],
+      "device_policy": "local_pilot"
     }
   ]
 }

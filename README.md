@@ -1,5 +1,12 @@
 # English Sprint — ВсОШ 5–6
 
+## v0.6.40
+
+- Two independent first-grade Mathematics practice packs aligned to public 2025 Magistr Scheta preparation requirements: Stage I speed (384 original questions, eight families) and Stage II Olympiad (288 original questions, sixteen families).
+- 672 independently graded exercises with explanations, automated answer checks, ten first-grade Knowledge Units, prerequisite edges, pack manifests, pilot access and planning targets.
+- Official past-year task sheets were not found, these are independently authored training exercises and are not presented as verbatim organizer tasks; the listed three-minute stage is a format reference rather than an implemented timer.
+- Version 0.6.40 / versionCode 47; preserves package ID and updater channel.
+
 ## v0.6.39
 
 - Informatics grade 5 school-stage 2026/27: six user-supplied AI-themed tasks adapted into 18 individually graded exercises in a separate pilot pack;

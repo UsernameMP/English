@@ -256,6 +256,36 @@
       "from": "CS.AI.OLYMPIAD.5",
       "type": "uses",
       "to": "CS.GRAPHS.ROUTES"
+    },
+    {
+      "from": "MATH.G1.ARITHMETIC_20",
+      "type": "requires",
+      "to": "MATH.G1.ARITHMETIC_10"
+    },
+    {
+      "from": "MATH.G1.UNKNOWN",
+      "type": "requires",
+      "to": "MATH.G1.ARITHMETIC_10"
+    },
+    {
+      "from": "MATH.G1.WORD_PROBLEMS",
+      "type": "requires",
+      "to": "MATH.G1.ARITHMETIC_10"
+    },
+    {
+      "from": "MATH.G1.MEASUREMENT",
+      "type": "requires",
+      "to": "MATH.G1.NUMBERS"
+    },
+    {
+      "from": "MATH.G1.PATTERNS",
+      "type": "requires",
+      "to": "MATH.G1.NUMBERS"
+    },
+    {
+      "from": "MATH.G1.COUNTING",
+      "type": "requires",
+      "to": "MATH.G1.NUMBERS"
     }
   ]
 }
