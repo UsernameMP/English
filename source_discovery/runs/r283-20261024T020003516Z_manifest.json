@@ -1,0 +1,76 @@
+{
+  "cycle": "r283-20261024T020003516Z",
+  "recorded_at": "2026-10-24T02:03:32.937Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "74329cf106a4a3affac30244672e73c15d5ac469",
+    "workflow_run_id": 40052303132,
+    "status_at_checkpoint": "in_progress"
+  },
+  "discovery": {
+    "canonical_sources_before": 1619,
+    "canonical_sources_after": 1625,
+    "added": 6,
+    "commit": "a3be1dcde495aeacf5860ac3463849db5144afec",
+    "verified_html_only": true
+  },
+  "review": {
+    "resource_shard": "resource_000288.jsonl",
+    "resource_ids_unique": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000798.jsonl",
+      "batch_000799.jsonl"
+    ],
+    "classification_counts": {
+      "task": 43,
+      "solution": 44,
+      "review": 12,
+      "unrelated": 1
+    },
+    "checkpoint_files": [
+      "source_discovery/runs/r283-20261024T020003516Z_review_r288_000_019.jsonl",
+      "source_discovery/runs/r283-20261024T020003516Z_review_r288_020_039.jsonl",
+      "source_discovery/runs/r283-20261024T020003516Z_review_r288_040_059.jsonl",
+      "source_discovery/runs/r283-20261024T020003516Z_review_r288_060_079.jsonl",
+      "source_discovery/runs/r283-20261024T020003516Z_review_r288_080_099.jsonl"
+    ],
+    "canonical_labels_merged": 0,
+    "canonical_label_read_blocker": "GitHub fetch_file returns empty content for link_labels.jsonl (blob dba1eaa01a15ed6148862b5c638e30f870db4d84), including line-range reads; no overwrite attempted",
+    "next_resource_shard": "resource_000289.jsonl",
+    "review_state_commit": "b86d6661bbc35c776c261cd2ed80678b18ee61fa"
+  },
+  "audit": {
+    "backlog_before": 498,
+    "backlog_after": 508,
+    "added": 10,
+    "commit": "706c20bf4e0f157b8f35a555ff6d45ebcd45bf45"
+  },
+  "mime": {
+    "last_observed_rows": 2870,
+    "new_observations_since_previous_report": 9,
+    "additional_extensionless_application_pdf_observations": 4,
+    "admission_test_pdf_false_positive_context": "Romania Moisil school admissions /admitere-clasa-a-v-a/ not olympiad"
+  },
+  "last_confirmed_successful_crawl": {
+    "workflow_run_id": 40048704830,
+    "completed_at": "2026-10-24T01:19:42Z",
+    "html_pages": 60,
+    "new_links": 4431,
+    "unique_resource_urls": 225097,
+    "pending_pages": 104999,
+    "blocked_or_failed": 2065
+  },
+  "pending_workflow_runs": [
+    40052303132,
+    40052538257
+  ],
+  "safeguards": {
+    "binary_downloaded": false,
+    "raw_occurrences_untouched": true,
+    "dropbox_untouched": true,
+    "schedule_untouched": true,
+    "robots_and_access_respected": true
+  }
+}
