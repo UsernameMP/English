@@ -1,0 +1,93 @@
+{
+  "cycle": "r300-20261024T190636393Z",
+  "reported_at": "2026-10-24T19:11:42.343Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "06d2929fee60f888feb164ff1dd200340f22cc3d",
+    "workflow_run_id": 40123787445,
+    "status": "in_progress_at_manifest_creation"
+  },
+  "discovery": {
+    "verified_added": 6,
+    "sources_before": 1728,
+    "sources_after": 1734,
+    "commit": "ebc37c8883a2c82ace2e347b08c9851eae542b1a",
+    "urls": [
+      "https://acio-olympiad.github.io/",
+      "https://acio-olympiad.github.io/2020/index.html",
+      "https://acio-olympiad.github.io/2021/index.html",
+      "https://acio-olympiad.github.io/2022/index.html",
+      "https://www.internationalgeographybee.com/2019-igb-asian-championships-questions/",
+      "https://www.internationalgeographybee.com/2019-igb-regional-tournament-questions/"
+    ],
+    "verification": "public HTML metadata and contest detail links; no binary downloaded"
+  },
+  "review": {
+    "resource_shard": "resource_000305.jsonl",
+    "raw_shards": [
+      "batch_000817.jsonl",
+      "batch_000818.jsonl"
+    ],
+    "unique_resources": 100,
+    "matched_occurrences": 100,
+    "types": {
+      "task": 49,
+      "solution": 38,
+      "review": 1,
+      "archive": 1,
+      "source": 4,
+      "unrelated": 7
+    },
+    "checkpoint": "source_discovery/runs/r300_review_r305.jsonl",
+    "checkpoint_sha": "f7639b0785919311d3df88405cb6b8462c3b89fb",
+    "checkpoint_commit": "aa2ba11a2040110ca1f12e3f594d59dd2cba2e57",
+    "merge_script_sha": "cf633b4c6c20080eafba2dfc738f9b4944236566",
+    "canonical_before": 4388,
+    "canonical_merge": "pending_workflow_verification",
+    "operational_cursor": "resource_000305.jsonl",
+    "next_after_merge": "resource_000306.jsonl"
+  },
+  "mime": {
+    "observed_at": "2026-10-24T18:14:37Z",
+    "observations": 3213,
+    "unique_application_pdf_urls": 1388,
+    "pdf_urls_without_pdf_extension": 1230,
+    "application_zip": 61,
+    "application_octet_stream": 159,
+    "body_downloaded": false
+  },
+  "crawler_latest_verified_before_trigger": {
+    "updated_at": "2026-10-24T18:14:37Z",
+    "html_pages": 60,
+    "new_raw_links": 4307,
+    "pending_pages": 111673,
+    "blocked_or_failed_cumulative": 2482,
+    "robots_denied_or_unavailable": 1612
+  },
+  "audit": {
+    "backlog_before": 685,
+    "added": 10,
+    "backlog_after": 695,
+    "commit": "de178f476f6a979296c0a857aa78dc4bdbf980af",
+    "historical_checkpoints_pending": 27,
+    "ambiguous_resource_urls": [
+      "https://nivam.sk/olympiady/b49okf4ul15"
+    ]
+  },
+  "safety": {
+    "no_binary_download": true,
+    "dropbox_unchanged": true,
+    "raw_shards_unchanged": true,
+    "schedule_unchanged": true
+  },
+  "state_shas": {
+    "sources.jsonl": "523532c5fb4e1be4fcbcdde426f502979ceb7271",
+    "backlog.jsonl": "316928bfacb1778918b6a43cf6169c13a32cffd3",
+    "review_state.json": "a785ea80ebfc7668b9751372066ab8de9f7265c2",
+    "run_trigger.json": "1ee20381ea38ef6b995a5eefd77adc2b30d20413",
+    "link_labels.jsonl": "059a1b8d316b6f08cbb0d069030c832d71332a2d",
+    "runs/r300_review_r305.jsonl": "f7639b0785919311d3df88405cb6b8462c3b89fb",
+    "merge_review_checkpoints.py": "cf633b4c6c20080eafba2dfc738f9b4944236566"
+  }
+}
