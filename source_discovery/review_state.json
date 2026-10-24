@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-23T23:12:58.862Z",
+  "updated_at": "2026-10-24T00:09:25.289Z",
   "deferred_shards": [
     1,
     2,
@@ -196,10 +196,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000286.jsonl",
-    "last_completed_shard": "resource_000285.jsonl",
-    "cycle": "r280-20261023T230828525Z",
-    "reason": "100 unique URLs with 100 raw occurrences matched across batch_000795 and batch_000796; 100 full labels merged in canonical ledger."
+    "next_resource_shard": "resource_000287.jsonl",
+    "last_completed_shard": "resource_000286.jsonl",
+    "cycle": "r281-review-20261024T000752807Z",
+    "reason": "100 unique URLs matched to 100 raw occurrences in batch_000796 and batch_000797; 100 full labels checkpointed and merged in canonical ledger; no raw deletion."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -1044,5 +1044,27 @@
     "next_resource_shard": "resource_000286.jsonl",
     "status": "merged",
     "notes": "2005-2012 Castilla y León philosophical Olympiad: distinguish proposed final essay topics from finalists' authored essays and administrative programmes, galleries, social shares; PDF bodies not opened."
+  },
+  "r281_review": {
+    "cycle": "r281-review-20261024T000752807Z",
+    "resource_shard": "resource_000286.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000796.jsonl",
+      "batch_000797.jsonl"
+    ],
+    "classification_counts": {
+      "unrelated": 60,
+      "source": 9,
+      "archive": 26,
+      "review": 5
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 100,
+    "canonical_merge_commit": "8d0e5d8a7315190834d4706f3d341fe1942592a5",
+    "checkpoint_prefix": "runs/r281-review-20261024T000752807Z_review_r286_",
+    "raw_cursor_unchanged": true,
+    "notes": "Slovak OĽP is Olympiáda ľudských práv (human rights), not philosophy. Official HTML confirms Kronika compilations include tests, essay prompts and final assignments; PDF/DOC bodies not downloaded."
   }
 }
