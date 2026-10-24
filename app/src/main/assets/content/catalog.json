@@ -183,6 +183,32 @@
       "content_version": "0.1.0",
       "sha256": "802d955dd5a2251e29afa5ff32bfaecb05115a309edb2be07316cffe40db8cb0",
       "enabled": true
+    },
+    {
+      "id": "mathematics.olympiad.magistr.g1.speed.ru.2026",
+      "asset": "content/math_g1_magistr_2026_speed.json",
+      "subject": "mathematics",
+      "grade_min": 1,
+      "grade_max": 1,
+      "competition": "Магистр счёта · неофициальный тренажёр",
+      "season": "2026-2027",
+      "license_id": "project.original.v1",
+      "content_version": "1.0.0",
+      "sha256": "9a90765b8c6d5e987a27121d85c3a2f6533da0dd586699cf5f0f3a1ebf800061",
+      "enabled": true
+    },
+    {
+      "id": "mathematics.olympiad.magistr.g1.olymp.ru.2026",
+      "asset": "content/math_g1_magistr_2026_olymp.json",
+      "subject": "mathematics",
+      "grade_min": 1,
+      "grade_max": 1,
+      "competition": "Магистр счёта · неофициальный тренажёр",
+      "season": "2026-2027",
+      "license_id": "project.original.v1",
+      "content_version": "1.0.0",
+      "sha256": "15cc66ffacca2953e7b160d4866116e84843fc3945e7250c59a0ef5510af957b",
+      "enabled": true
     }
   ]
 }
