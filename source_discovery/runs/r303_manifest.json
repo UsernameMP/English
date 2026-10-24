@@ -1,13 +1,13 @@
 {
   "cycle": "r303-20261024T220548412Z",
-  "reported_at": "2026-10-24T22:10:56.935Z",
+  "reported_at": "2026-10-24T22:12:11.327Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
     "commit": "af505edb0c59ff22fef6a2ac945aa7f09aa3b73b",
     "requested_at": "2026-10-24T22:05:48.412Z",
     "workflow_run_id": null,
-    "status": "trigger_committed; current workflow completion not yet verified"
+    "status": "trigger committed; subsequent crawler state publication observed, workflow run ID and final conclusion not independently resolved"
   },
   "prior_completed_crawl": {
     "run_id": 40132548058,
@@ -53,13 +53,14 @@
   },
   "audit": {
     "backlog_before": 717,
-    "added": 10,
-    "backlog_after": 727,
+    "added": 11,
+    "backlog_after": 728,
     "checkpoint": "source_discovery/runs/r303_audit.jsonl",
     "checkpoint_commit": "ac1c1de1e395b867dffd3463ad4b718c5e9d322c",
     "canonical_backlog_commit": "a2b9457d2bc4253e3fbf9a31acd752a87153a51c",
     "resolved_prior_r302_blocker": true,
-    "older_historical_checkpoints_pending": 27
+    "older_historical_checkpoints_pending": 27,
+    "frontier_drift": "archive query variants and tokenized dossier URLs found in latest resource shards; backlog recorded"
   },
   "mime": {
     "current_full_ledger": "unreadable via connector; no fresh counts asserted",
@@ -72,11 +73,12 @@
   "state_shas": {
     "run_trigger.json": "b6152690b8e54107e3340034c0c71504f16eb9c4",
     "sources.jsonl": "b8acf873d40fe1b6a14af2f0d6f175d75b56d5e1",
-    "backlog.jsonl": "689281b6307e89f00fc3065f2c6d50bc58b08aa9",
+    "backlog.jsonl": "cceb03afa6469364bec2f20e3067ea0d9244ec15",
     "review_state.json": "3d8c919d8b388df71d6580465a4d9155df5cd1ef",
     "link_labels.jsonl": "24b5288ea4820b024f3bf5f1f25a220b5e761030",
     "r303_review_r308.jsonl": "6ee039da354c2f423ee1b099fdbbb6c879b2f1b3",
-    "discovery_r303.jsonl": "04d1109ea2aed33dfc9b2b0f7dd1489cac5bd443"
+    "discovery_r303.jsonl": "04d1109ea2aed33dfc9b2b0f7dd1489cac5bd443",
+    "crawl_state.json": "0a4d7d5bbff23f2a7cb88b48d87a261347108fa9"
   },
   "safety": {
     "binary_downloaded": false,
@@ -84,5 +86,24 @@
     "raw_shards_mutated": false,
     "schedule_changed": false,
     "additional_automation_created": false
+  },
+  "current_crawler_observation": {
+    "observed_at": "2026-10-24T22:12:11.327Z",
+    "crawl_state_blob_sha": "0a4d7d5bbff23f2a7cb88b48d87a261347108fa9",
+    "new_resource_shards_observed": [
+      "resource_002537.jsonl",
+      "resource_002538.jsonl",
+      "resource_002539.jsonl",
+      "resource_002540.jsonl",
+      "resource_002541.jsonl",
+      "resource_002542.jsonl",
+      "resource_002543.jsonl"
+    ],
+    "unique_resource_urls_from_last_shard": 254326,
+    "html_pages_new_run": null,
+    "new_raw_links_new_run": null,
+    "pending_pages_new_run": null,
+    "blocked_or_failed_new_run": null,
+    "notes": "Resource shard 002543 contains 26 rows, shard 002542 contains 100; latest unique count is index-derived, not full crawler-state read."
   }
 }
