@@ -1,0 +1,103 @@
+{
+  "cycle": "r302-20261024T205959422Z",
+  "reported_at": "2026-10-24T21:05:53.911Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "812d2fef4b747697f9f6ec207e9e425ce44df70f",
+    "blob_sha": "6e95d6e2689595557f79c585848fe70531c6f3f8",
+    "action_run_id": 40132263758,
+    "status": "in_progress",
+    "steps_verified": [
+      "tests",
+      "merge_sources",
+      "merge_review_checkpoints",
+      "enumerate_HTML"
+    ],
+    "step_in_progress": "build_resource_index",
+    "results_published": false,
+    "previous_successful_run_id": 40128456906,
+    "other_workflow_pending_id": 40132548058
+  },
+  "discovery": {
+    "sources_before": 1741,
+    "verified_html_sources_added": 9,
+    "sources_after": 1750,
+    "canonical_commit": "87d407080b382991be6bb5e52ec58b8e1072bc8d",
+    "checkpoint": "source_discovery/runs/discovery_r302.jsonl",
+    "checkpoint_commit": "307d82e013fda6164be32c686a56c3a64e6a1e7b",
+    "notes": "9 public HTML indices/pointers; documents, historical coverage and rights not inferred."
+  },
+  "review": {
+    "resource_shard": "resource_000307.jsonl",
+    "unique_resources": 100,
+    "matched_raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000819.jsonl",
+      "batch_000820.jsonl"
+    ],
+    "types": {
+      "task": 79,
+      "solution": 20,
+      "criteria": 1
+    },
+    "checkpoint": "source_discovery/runs/r302_review_r307.jsonl",
+    "checkpoint_blob_sha": "f59716a0b441557c6693a95436aa925253be8261",
+    "checkpoint_commit": "cd049c3162239cd8c34b5ea4c5812ed892c197d5",
+    "allowlist_commit": "890ce2fe2948acaf66e748b89b8191194064e209",
+    "canonical_labels_before": 4588,
+    "canonical_merge": "pending; r302 checkpoint written after first workflow checkout; do not claim merged",
+    "cursor": "resource_000307.jsonl remains operational next until canonical merge; resource_000308 after confirmed merge",
+    "previous_r301_merge_verified": {
+      "workflow_run": 40128456906,
+      "commit": "e0e8c3054534a4e23c883a7bfafc53bb4bc3bb97",
+      "added": 100,
+      "canonical_before": 4488,
+      "canonical_after": 4588
+    }
+  },
+  "audit": {
+    "backlog_before": 703,
+    "added": 14,
+    "backlog_after": 717,
+    "resolved_prior_blockers": 2,
+    "commit": "587c11517acc2d5c6292bdc0fce16907ffdd83c3",
+    "checkpoint": "source_discovery/runs/r302_audit.jsonl",
+    "historical_checkpoints_pending": 27,
+    "normalized_source_url_duplicates_before": 11
+  },
+  "mime": {
+    "current_full_ledger": "not readable through connector; no new MIME counts claimed",
+    "last_confirmed_observations": 3213,
+    "last_confirmed_pdf_unique_urls": 1388,
+    "last_confirmed_pdf_without_pdf_suffix": 1230,
+    "last_confirmed_zip": 61,
+    "last_confirmed_octet_stream": 159,
+    "extensionless_pdf_candidate_handling": "metadata only; no binary downloaded"
+  },
+  "crawler_last_verified_metrics": {
+    "workflow_run": 40124042317,
+    "html_pages": 60,
+    "new_raw_links": 2630,
+    "unique_resource_urls": 247482,
+    "pending_pages": 112564,
+    "blocked_or_failed_cumulative": 2521,
+    "note": "Older confirmed metrics; not current r302 run metrics."
+  },
+  "state_shas": {
+    "run_trigger": "6e95d6e2689595557f79c585848fe70531c6f3f8",
+    "sources": "b8acf873d40fe1b6a14af2f0d6f175d75b56d5e1",
+    "backlog": "46a0b74d6378e87781bb099a9e966f408d5bec96",
+    "review_state": "fd1b0bff3aa7011621a6919324650ec645616f8f",
+    "link_labels": "0976ecec6ae6d6f0891a81ef7f84914b6b9a4584",
+    "review_checkpoint": "f59716a0b441557c6693a95436aa925253be8261"
+  },
+  "safety": {
+    "binary_downloaded": false,
+    "dropbox_mutated": false,
+    "raw_shards_mutated": false,
+    "schedule_changed": false,
+    "additional_automation_created": false
+  }
+}
