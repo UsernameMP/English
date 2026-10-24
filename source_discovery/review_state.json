@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T09:09:28.790Z",
+  "updated_at": "2026-10-24T10:02:00.000Z",
   "deferred_shards": [
     1,
     2,
@@ -185,10 +185,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000296.jsonl",
-    "last_completed_shard": "resource_000295.jsonl",
-    "cycle": "r290-20261024T090559061Z",
-    "reason": "100 distinct resource_id matched original raw occurrences across batch_000805–000807; checkpoint and canonical merge completed; raw cursor untouched"
+    "next_resource_shard": "resource_000297.jsonl",
+    "last_completed_shard": "resource_000296.jsonl",
+    "cycle": "r291-20261024T095852000Z",
+    "reason": "100 distinct resource_id checked against 100 original occurrences in batch_000807–000808; checkpoint and canonical merge verified; raw cursor untouched"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -1349,5 +1349,28 @@
     "checkpoint": "runs/labels_checkpoint_r290_r295.jsonl",
     "canonical_merged": 100,
     "canonical_labels_after": 3470
+  },
+  "r291_review": {
+    "cycle": "r291-20261024T095852000Z",
+    "resource_shard": "resource_000296.jsonl",
+    "unique_resource_ids": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000807.jsonl",
+      "batch_000808.jsonl"
+    ],
+    "types": {
+      "task": 68,
+      "solution": 30,
+      "review": 2
+    },
+    "checkpoint": "runs/labels_checkpoint_r291_r296.jsonl",
+    "canonical_merged": 100,
+    "canonical_labels_after": 3570,
+    "ambiguities": [
+      "F64ckAexpOH23m",
+      "F64ckAexpri23"
+    ],
+    "next_resource_shard": "resource_000297.jsonl"
   }
 }
