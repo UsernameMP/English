@@ -410,6 +410,64 @@
           "weight": 0.6111111111111112
         }
       ]
+    },
+    {
+      "pack_id": "mathematics.olympiad.magistr.g1.speed.ru.2026",
+      "coverage": [
+        {
+          "knowledge_id": "MATH.G1.ARITHMETIC_10",
+          "weight": 0.25
+        },
+        {
+          "knowledge_id": "MATH.G1.ARITHMETIC_20",
+          "weight": 0.375
+        },
+        {
+          "knowledge_id": "MATH.G1.NUMBERS",
+          "weight": 0.25
+        },
+        {
+          "knowledge_id": "MATH.G1.UNKNOWN",
+          "weight": 0.125
+        }
+      ]
+    },
+    {
+      "pack_id": "mathematics.olympiad.magistr.g1.olymp.ru.2026",
+      "coverage": [
+        {
+          "knowledge_id": "MATH.G1.COUNTING",
+          "weight": 0.0625
+        },
+        {
+          "knowledge_id": "MATH.G1.GEOMETRY",
+          "weight": 0.0625
+        },
+        {
+          "knowledge_id": "MATH.G1.LOGIC",
+          "weight": 0.125
+        },
+        {
+          "knowledge_id": "MATH.G1.MEASUREMENT",
+          "weight": 0.125
+        },
+        {
+          "knowledge_id": "MATH.G1.NUMBERS",
+          "weight": 0.1875
+        },
+        {
+          "knowledge_id": "MATH.G1.PATTERNS",
+          "weight": 0.125
+        },
+        {
+          "knowledge_id": "MATH.G1.UNKNOWN",
+          "weight": 0.0625
+        },
+        {
+          "knowledge_id": "MATH.G1.WORD_PROBLEMS",
+          "weight": 0.25
+        }
+      ]
     }
   ]
 }
