@@ -10,19 +10,25 @@
     "cycle": "r282-20261024T010851827Z",
     "commit": "27c22ea805d5146f723ea0a62daa8ae7c1ca4939",
     "workflow_run_id": 40048452585,
-    "status_last_checked": "in_progress"
+    "status_last_checked": "completed_success"
   },
   "crawler": {
     "last_confirmed_success_run": 40043433343,
     "html_pages": 60,
-    "new_raw_links": 4425,
-    "pending_pages": 103683,
-    "blocked_or_failed_cumulative": 2036,
-    "unique_resource_urls": 223411,
-    "latest_current_run_results_confirmed": false,
+    "new_raw_links": 1928,
+    "pending_pages": 104489,
+    "blocked_or_failed_cumulative": 2048,
+    "unique_resource_urls": 224396,
+    "latest_current_run_results_confirmed": true,
     "source_update_queued_run": 40048704830,
     "crawl_state_fetch_file_large_empty": true,
-    "source": "GitHub Actions decoded job logs"
+    "source": "GitHub Actions #40048452585 decoded job log",
+    "current_run_id": 40048452585,
+    "current_run_status": "completed",
+    "current_run_conclusion": "success",
+    "current_run_completed_at": "2026-10-24T01:14:07Z",
+    "source_update_run_status_last_checked": "in_progress",
+    "published_commit": "23d9bd3f"
   },
   "discovery": {
     "sources_before": 1615,
@@ -105,7 +111,7 @@
     "rights_unknown_unless_explicit": true
   },
   "open_issues": [
-    "Current crawler run #40048452585 has not yet completed.",
+    "Follow-up workflow #40048704830 initiated by source registry update is in progress; its results not counted.",
     "Canonical link_labels.jsonl inaccessible via connector; 100 labels safely checkpointed but not merged.",
     "Older label checkpoints still require reconciliation.",
     "Competition year-stage-category coverage and rights unknown for several sources."
