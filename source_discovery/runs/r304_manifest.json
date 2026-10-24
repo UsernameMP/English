@@ -1,13 +1,14 @@
 {
   "cycle": "r304-20261024T225956068Z",
-  "reported_at": "2026-10-24T23:05:12.754Z",
+  "reported_at": "2026-10-24T23:06:39.286Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
     "commit": "7cc49f1f890d41da6d8aee517c9ecd1c65176b4e",
     "workflow_run_id": 40140884524,
-    "status": "in_progress_at_last_check",
-    "requested_at": "2026-10-24T22:59:56.068Z"
+    "status": "completed_success",
+    "requested_at": "2026-10-24T22:59:56.068Z",
+    "verified_from": "GitHub Actions #40140884524 completed; job log and published resource shard"
   },
   "previous_verified_crawl": {
     "run_id": 40137559364,
@@ -77,5 +78,22 @@
     "raw_shards_mutated": false,
     "schedule_changed": false,
     "additional_automation_created": false
+  },
+  "current_completed_crawl": {
+    "run_id": 40140884524,
+    "status": "success",
+    "html_pages": 60,
+    "new_raw_links": 3016,
+    "unique_resource_urls": 255230,
+    "pending_pages": 115373,
+    "blocked_or_failed_cumulative": 2645,
+    "resource_last_shard": "resource_002553.jsonl",
+    "verified_from": "GitHub Actions job log and resource shard"
+  },
+  "followup_workflow": {
+    "run_id": 40141046497,
+    "status": "in_progress",
+    "conclusion": null,
+    "reason": "Automatic workflow triggered by canonical sources.jsonl update; no separate automation created."
   }
 }
