@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T04:03:00Z",
+  "updated_at": "2026-10-24T05:03:57Z",
   "deferred_shards": [
     1,
     2,
@@ -196,10 +196,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000290.jsonl",
-    "last_completed_shard": "resource_000289.jsonl",
-    "cycle": "r284-20261024T030814875Z",
-    "reason": "resource_000289 fully reviewed and canonical-merged; next resource_000290; raw cursor unchanged"
+    "next_resource_shard": "resource_000292.jsonl",
+    "last_completed_shard": "resource_000291.jsonl",
+    "cycle": "r286-20261024T050357000Z",
+    "reason": "100 unique resources linked to 100 raw occurrences in batch_000801/802; five checkpoints and canonical merge; raw cursor unchanged"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -903,7 +903,7 @@
     "canonical_merge_pending": 0,
     "status": "merged_in_r279"
   },
-  "next_resource_shard": "resource_000291.jsonl",
+  "next_resource_shard": "resource_000292.jsonl",
   "raw_cursor_unchanged": true,
   "unresolved_earlier_shards": true,
   "notes": "r280 resource_000285 reviewed and merged: 100 unique resources, 100 raw occurrences; 6 task, 6 participant_work, 16 source, 72 unrelated. Raw cursor unchanged; older checkpoints still pending.",
@@ -1184,5 +1184,36 @@
     "canonical_labels_after": 2896,
     "canonical_merge_commit": "943c422bc194a568087e50e44c80e6fc1949c56b",
     "notes": "Official NIVAM HTML context used; answer sheets retained review, mismatched season codes retained review; raw cursor not advanced."
+  },
+  "r286_pending": {
+    "cycle": "r286-20261024T050357000Z",
+    "resource_shard": "resource_000291.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000801.jsonl",
+      "batch_000802.jsonl"
+    ],
+    "counts": {
+      "solution": 34,
+      "task": 32,
+      "review": 34
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 100,
+    "canonical_labels_before": 2896,
+    "canonical_labels_after": 2996,
+    "canonical_merge_commit": "e665287e673043e388e7b75ab25a08adde8fb8d4",
+    "checkpoints": [
+      "labels_checkpoint_r286_r291_01.jsonl",
+      "labels_checkpoint_r286_r291_02.jsonl",
+      "labels_checkpoint_r286_r291_03.jsonl",
+      "labels_checkpoint_r286_r291_04.jsonl",
+      "labels_checkpoint_r286_r291_05.jsonl"
+    ],
+    "next_resource_shard": "resource_000292.jsonl",
+    "raw_cursor_unchanged": true,
+    "notes": "19 malformed target URLs (spaces/Unicode dash), 13 season-code ambiguities (overlap possible), answer sheets and instructions kept review. No document bodies fetched.",
+    "status": "merged"
   }
 }
