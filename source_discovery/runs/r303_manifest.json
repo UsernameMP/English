@@ -1,0 +1,88 @@
+{
+  "cycle": "r303-20261024T220548412Z",
+  "reported_at": "2026-10-24T22:10:56.935Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "af505edb0c59ff22fef6a2ac945aa7f09aa3b73b",
+    "requested_at": "2026-10-24T22:05:48.412Z",
+    "workflow_run_id": null,
+    "status": "trigger_committed; current workflow completion not yet verified"
+  },
+  "prior_completed_crawl": {
+    "run_id": 40132548058,
+    "job_id": 120987678262,
+    "status": "success",
+    "html_pages": 60,
+    "new_raw_links": 3155,
+    "unique_resource_urls": 253531,
+    "pending_pages": 114446,
+    "blocked_or_failed_cumulative": 2584,
+    "source_rows": 1750,
+    "canonical_labels": 4688,
+    "merge_added": 100,
+    "verified_from": "GitHub Actions job log"
+  },
+  "discovery": {
+    "checkpoint": "source_discovery/runs/discovery_r303.jsonl",
+    "checkpoint_commit": "16af59f2067cd0543eebd3e79c626dd1bf683925",
+    "verified_public_html_urls": 7,
+    "canonical_sources_before": 1750,
+    "canonical_merge": "pending_next_workflow; no duplicate URLs in prior 1750 checked"
+  },
+  "review": {
+    "resource_shard": "resource_000308.jsonl",
+    "raw_shards": [
+      "batch_000820.jsonl",
+      "batch_000821.jsonl"
+    ],
+    "unique_resources": 100,
+    "matched_raw_occurrences": 100,
+    "counts": {
+      "task": 71,
+      "solution": 29
+    },
+    "checkpoint": "source_discovery/runs/r303_review_r308.jsonl",
+    "checkpoint_blob_sha": "6ee039da354c2f423ee1b099fdbbb6c879b2f1b3",
+    "checkpoint_commit": "99cec6f60dcf2088311b2014d1ec6d03ac0c86e7",
+    "allowlist_commit": "f9830e9c9cd27a38d1144dafca8a365b8e9929df",
+    "canonical_labels_before": 4688,
+    "canonical_merge": "pending",
+    "next_after_merge": "resource_000309.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "audit": {
+    "backlog_before": 717,
+    "added": 10,
+    "backlog_after": 727,
+    "checkpoint": "source_discovery/runs/r303_audit.jsonl",
+    "checkpoint_commit": "ac1c1de1e395b867dffd3463ad4b718c5e9d322c",
+    "canonical_backlog_commit": "a2b9457d2bc4253e3fbf9a31acd752a87153a51c",
+    "resolved_prior_r302_blocker": true,
+    "older_historical_checkpoints_pending": 27
+  },
+  "mime": {
+    "current_full_ledger": "unreadable via connector; no fresh counts asserted",
+    "last_confirmed_observations": 3213,
+    "last_confirmed_pdf_unique": 1388,
+    "last_confirmed_pdf_no_suffix": 1230,
+    "last_confirmed_zip": 61,
+    "last_confirmed_octet_stream": 159
+  },
+  "state_shas": {
+    "run_trigger.json": "b6152690b8e54107e3340034c0c71504f16eb9c4",
+    "sources.jsonl": "b8acf873d40fe1b6a14af2f0d6f175d75b56d5e1",
+    "backlog.jsonl": "689281b6307e89f00fc3065f2c6d50bc58b08aa9",
+    "review_state.json": "3d8c919d8b388df71d6580465a4d9155df5cd1ef",
+    "link_labels.jsonl": "24b5288ea4820b024f3bf5f1f25a220b5e761030",
+    "r303_review_r308.jsonl": "6ee039da354c2f423ee1b099fdbbb6c879b2f1b3",
+    "discovery_r303.jsonl": "04d1109ea2aed33dfc9b2b0f7dd1489cac5bd443"
+  },
+  "safety": {
+    "binary_downloaded": false,
+    "dropbox_mutated": false,
+    "raw_shards_mutated": false,
+    "schedule_changed": false,
+    "additional_automation_created": false
+  }
+}
