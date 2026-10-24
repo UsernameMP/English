@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T08:05:53.055Z",
+  "updated_at": "2026-10-24T09:15:00Z",
   "deferred_shards": [
     1,
     2,
@@ -185,10 +185,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000295.jsonl",
-    "last_completed_shard": "resource_000294.jsonl",
-    "cycle": "r289-20261024T080246992Z",
-    "reason": "100 unique resource IDs matched one-to-one with raw occurrences in batch_000804/000805; checkpoint and canonical merge verified; raw cursor unchanged"
+    "next_resource_shard": "resource_000296.jsonl",
+    "last_completed_shard": "resource_000295.jsonl",
+    "cycle": "r290-20261024T090559061Z",
+    "reason": "100 distinct resource_id matched original raw occurrences across batch_000805–000807; checkpoint and canonical merge completed; raw cursor untouched"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -1327,5 +1327,27 @@
     "raw_cursor_unchanged": true,
     "notes": "Slovak NIVAM CH51-CH53 chemistry 2014/15-2016/17; 23 answer sheets, instructions, malformed/year-mismatched URL candidates retained review. HTML link metadata only; no binary bodies.",
     "status": "merged"
+  },
+  "last_operational_review": {
+    "cycle": "r290-20261024T090559061Z",
+    "resource_shard": "resource_000295.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000805.jsonl",
+      "batch_000806.jsonl",
+      "batch_000807.jsonl"
+    ],
+    "counts": {
+      "task": 52,
+      "solution": 26,
+      "review": 8,
+      "unrelated": 12,
+      "archive": 1,
+      "source": 1
+    },
+    "checkpoint": "runs/labels_checkpoint_r290_r295.jsonl",
+    "canonical_merged": 100,
+    "canonical_labels_after": 3470
   }
 }
