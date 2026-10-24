@@ -1,0 +1,92 @@
+{
+  "cycle": "r285-20261024T040300000Z",
+  "date": "2026-10-24",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "a8f2f535ee3adefed07946831fac996aa38e2989",
+    "file_sha": "8204ca4a15638d359391af652c080fee944c1f78",
+    "action_status": "not_confirmed",
+    "reason": "commit-run interface lists only PR-triggered runs and returned none; crawl_state blob SHA unchanged"
+  },
+  "crawler_last_confirmed": {
+    "run_id": 40057374540,
+    "html_pages": 60,
+    "new_raw_links": 3407,
+    "unique_resource_urls": 225990,
+    "pending_pages": 105263,
+    "blocked_or_failed_cumulative": 2132,
+    "as_of": "r284 successful workflow"
+  },
+  "discovery": {
+    "new_verified_sources": 5,
+    "canonical_sources_before": 1630,
+    "canonical_sources_after": 1635,
+    "checkpoint": "source_discovery/runs/discovery_r285.jsonl",
+    "merge_commit": "1c6bc4228a633ed531198fc10ebe7d1f3af244f7"
+  },
+  "review": {
+    "resource_shard": "resource_000290.jsonl",
+    "raw_shards": [
+      "batch_000800.jsonl",
+      "batch_000801.jsonl"
+    ],
+    "unique_resources": 100,
+    "matched_raw_occurrences": 100,
+    "counts": {
+      "task": 39,
+      "solution": 37,
+      "review": 20,
+      "unrelated": 4
+    },
+    "canonical_labels_before": 2796,
+    "canonical_labels_after": 2896,
+    "merge_commit": "943c422bc194a568087e50e44c80e6fc1949c56b",
+    "next_resource_shard": "resource_000291.jsonl",
+    "historical_checkpoints_pending": 41
+  },
+  "mime": {
+    "observations": 2883,
+    "unique_pdf_urls": 1259,
+    "without_dot_pdf_substring": 1087,
+    "body_downloaded": false
+  },
+  "audit": {
+    "new_issues": 10,
+    "backlog_before": 521,
+    "backlog_after": 531,
+    "checkpoint": "source_discovery/runs/r285_audit.jsonl"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_deleted": false,
+    "schedule_modified": false,
+    "additional_automations_created": false
+  },
+  "sha_checks": {
+    "sources.jsonl": {
+      "sha": "01309c5d8dc392cb293833263b723bdefdee5e78",
+      "count": 1635
+    },
+    "link_labels.jsonl": {
+      "sha": "61aaac2d3d5e7dadabd8b789eda81d2e09ff1cbe",
+      "count": 2896
+    },
+    "backlog.jsonl": {
+      "sha": "797666d40711fd0a34347d40c887f88789c04cc8",
+      "count": 531
+    },
+    "review_state.json": {
+      "sha": "427c42b7bdea39797c748c18484e428fdc84b5b9",
+      "count": null
+    },
+    "run_trigger.json": {
+      "sha": "8204ca4a15638d359391af652c080fee944c1f78",
+      "count": null
+    },
+    "crawl_state.json": {
+      "sha": "f5454e5e3c8471e24afec904e49654eb886bb18c",
+      "count": null
+    }
+  }
+}
