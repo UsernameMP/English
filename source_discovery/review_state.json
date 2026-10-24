@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T06:11:10.799Z",
+  "updated_at": "2026-10-24T07:08:11.454Z",
   "deferred_shards": [
     1,
     2,
@@ -196,10 +196,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000293.jsonl",
-    "last_completed_shard": "resource_000292.jsonl",
-    "cycle": "r287-20261024T060728885Z",
-    "reason": "100 unique resources linked to 100 raw occurrences across batch_000802/803/804; one checkpoint, canonical merged; raw cursor unchanged"
+    "next_resource_shard": "resource_000294.jsonl",
+    "last_completed_shard": "resource_000293.jsonl",
+    "cycle": "r288-20261024T070429086Z",
+    "reason": "100 unique resource IDs matched 100 raw occurrence IDs in batch_000803/000804; checkpoint and canonical merge verified; raw cursor unchanged"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -903,7 +903,7 @@
     "canonical_merge_pending": 0,
     "status": "merged_in_r279"
   },
-  "next_resource_shard": "resource_000293.jsonl",
+  "next_resource_shard": "resource_000294.jsonl",
   "raw_cursor_unchanged": true,
   "unresolved_earlier_shards": true,
   "notes": "r280 resource_000285 reviewed and merged: 100 unique resources, 100 raw occurrences; 6 task, 6 participant_work, 16 source, 72 unrelated. Raw cursor unchanged; older checkpoints still pending.",
@@ -1242,6 +1242,33 @@
     "next_resource_shard": "resource_000293.jsonl",
     "raw_cursor_unchanged": true,
     "notes": "Slovak NIVAM CH54–56 chemistry 2017/18–2019/20; 19 blank answer forms, instructions and worksheet remain review. Four combined home/school stage labels. No binary fetched.",
+    "status": "merged"
+  },
+  "r288_review": {
+    "cycle": "r288-20261024T070429086Z",
+    "resource_shard": "resource_000293.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000803.jsonl",
+      "batch_000804.jsonl"
+    ],
+    "counts": {
+      "task": 39,
+      "solution": 39,
+      "review": 22
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 100,
+    "canonical_labels_before": 3096,
+    "canonical_labels_after": 3196,
+    "canonical_merge_commit": "ace0e832eb3f86488768bbf9b880b1a53d3f95b6",
+    "checkpoints": [
+      "labels_checkpoint_r288_r293.jsonl"
+    ],
+    "next_resource_shard": "resource_000294.jsonl",
+    "raw_cursor_unchanged": true,
+    "notes": "NIVAM Slovakia chemistry CH53/54 (2016/17-2017/18). CH53 D year suffix mismatches and answer sheets/instructions kept review. No binary fetched.",
     "status": "merged"
   }
 }
