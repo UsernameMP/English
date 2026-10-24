@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T12:06:56.000Z",
+  "updated_at": "2026-10-24T13:00:30.181Z",
   "deferred_shards": [
     1,
     2,
@@ -1450,5 +1450,31 @@
     "pending_checkpoints_before": 30,
     "pending_checkpoints_after": 27,
     "notes": "All 18 normalized labels matched raw occurrence IDs and stable resource IDs. Binary bodies not fetched."
+  },
+  "r294_pending": {
+    "cycle": "r294-20261024T130030181Z",
+    "resource_shard": "resource_000299.jsonl",
+    "unique_resources_reviewed": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000810.jsonl",
+      "batch_000811.jsonl",
+      "batch_000812.jsonl"
+    ],
+    "classification_counts": {
+      "task": 56,
+      "solution": 38,
+      "review": 4,
+      "archive": 1,
+      "source": 1
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoint": "runs/r294_review_r299.jsonl",
+    "canonical_merged": 0,
+    "canonical_label_sha_at_attempt": "e7ef21eb48b38eb2e9fb5240757a178b39429cb6",
+    "merge_blocker": "HTTP/2 protocol error reading update_file response/body for large canonical link_labels.jsonl; subsequent fetch_file showed unchanged SHA.",
+    "cursor_advanced": false,
+    "next_shard_after_merge": "resource_000300.jsonl",
+    "raw_ledger_unchanged": true
   }
 }
