@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T07:10:06.785Z",
+  "updated_at": "2026-10-24T08:05:53.055Z",
   "deferred_shards": [
     1,
     2,
@@ -185,10 +185,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000294.jsonl",
-    "last_completed_shard": "resource_000293.jsonl",
-    "cycle": "r288-20261024T070429086Z",
-    "reason": "100 unique resource IDs matched 100 raw occurrence IDs in batch_000803/000804; checkpoint and canonical merge verified; raw cursor unchanged"
+    "next_resource_shard": "resource_000295.jsonl",
+    "last_completed_shard": "resource_000294.jsonl",
+    "cycle": "r289-20261024T080246992Z",
+    "reason": "100 unique resource IDs matched one-to-one with raw occurrences in batch_000804/000805; checkpoint and canonical merge verified; raw cursor unchanged"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -892,7 +892,7 @@
     "canonical_merge_pending": 0,
     "status": "merged_in_r279"
   },
-  "next_resource_shard": "resource_000294.jsonl",
+  "next_resource_shard": "resource_000295.jsonl",
   "raw_cursor_unchanged": true,
   "unresolved_earlier_shards": true,
   "notes": "r280 resource_000285 reviewed and merged: 100 unique resources, 100 raw occurrences; 6 task, 6 participant_work, 16 source, 72 unrelated. Raw cursor unchanged; older checkpoints still pending.",
@@ -1300,5 +1300,32 @@
     "total_checkpoint_files": 11,
     "total_labels_merged": 74,
     "pending_checkpoints_after": 30
+  },
+  "r289_review": {
+    "cycle": "r289-20261024T080246992Z",
+    "resource_shard": "resource_000294.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000804.jsonl",
+      "batch_000805.jsonl"
+    ],
+    "counts": {
+      "task": 39,
+      "solution": 38,
+      "review": 23
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 100,
+    "canonical_labels_before": 3270,
+    "canonical_labels_after": 3370,
+    "canonical_merge_commit": "0a202335323bcde0cf37de7d62724f7db9be8d67",
+    "checkpoints": [
+      "labels_checkpoint_r289_r294.jsonl"
+    ],
+    "next_resource_shard": "resource_000295.jsonl",
+    "raw_cursor_unchanged": true,
+    "notes": "Slovak NIVAM CH51-CH53 chemistry 2014/15-2016/17; 23 answer sheets, instructions, malformed/year-mismatched URL candidates retained review. HTML link metadata only; no binary bodies.",
+    "status": "merged"
   }
 }
