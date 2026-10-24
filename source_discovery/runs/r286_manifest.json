@@ -1,0 +1,90 @@
+{
+  "cycle": "r286-20261024T050357000Z",
+  "date": "2026-10-24",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "9c5406012d29176ee7ae584bdf24ecac8782ec55",
+    "sha": "0c1e2c6e530a6477f86dd59c4856d20f9a25308b",
+    "workflow": "RIFT Link Enumeration",
+    "status": "execution_evidence_published_completion_unconfirmed",
+    "evidence": "crawl_state blob SHA changed 3f587a4c65b5a9d25b058b00eb2f91bec6d5b42b -> 76fdf5ef2987e45adb465cee245e43a18a4b386e; 12 new MIME observations timestamped 2026-10-24T05:05:17–05:05:29Z; run ID and job conclusion unavailable from connector (PR-only commit-run API)."
+  },
+  "crawler": {
+    "last_confirmed_full_metrics_from": "r284 successful workflow 40057374540",
+    "html_pages": 60,
+    "new_raw_links": 3407,
+    "unique_resource_urls": 225990,
+    "pending_pages": 105263,
+    "blocked_or_failed_cumulative": 2132,
+    "current_metrics": "not_readable; crawl_state large",
+    "new_mime_observations": 12
+  },
+  "discovery": {
+    "added": 5,
+    "sources_before": 1635,
+    "sources_after": 1640,
+    "commit": "fa85c3faab831d84a08b7c199066e81a59cbc120",
+    "urls": [
+      "https://wmc.ms.wits.ac.za/past-papers/",
+      "https://www.maths.otago.ac.nz/pc/",
+      "https://posn101.devcommu.org/",
+      "https://www.foec.edu.ec/calendario/",
+      "https://www.aub.edu.lb/cams/Pages/Mathematics_Olympiad_The_AUB_Editionon_2023.aspx"
+    ],
+    "caveat": "Wits indexed page returned 503 on direct open; NZ historical books not freely verified; Thai portal may require login; Ecuador calendar and AUB 2023 are metadata-only."
+  },
+  "review": {
+    "resource_shard": "resource_000291.jsonl",
+    "raw_shards": [
+      "batch_000801.jsonl",
+      "batch_000802.jsonl"
+    ],
+    "unique_resources": 100,
+    "matched_occurrences": 100,
+    "counts": {
+      "task": 32,
+      "solution": 34,
+      "review": 34
+    },
+    "checkpoints": [
+      "source_discovery/runs/labels_checkpoint_r286_r291_01.jsonl",
+      "source_discovery/runs/labels_checkpoint_r286_r291_02.jsonl",
+      "source_discovery/runs/labels_checkpoint_r286_r291_03.jsonl",
+      "source_discovery/runs/labels_checkpoint_r286_r291_04.jsonl",
+      "source_discovery/runs/labels_checkpoint_r286_r291_05.jsonl"
+    ],
+    "canonical_before": 2896,
+    "canonical_after": 2996,
+    "merge_commit": "e665287e673043e388e7b75ab25a08adde8fb8d4",
+    "next_resource_shard": "resource_000292.jsonl",
+    "unresolved_issues": "19 malformed URL strings and 13 ambiguous CH56 year suffixes (overlap possible); answer sheets and instructions retained review.",
+    "historical_checkpoints_pending": 41
+  },
+  "mime": {
+    "observations": 2895,
+    "unique_pdf_urls": 1271,
+    "pdf_urls_without_dot_pdf": 1099,
+    "body_downloaded": false
+  },
+  "audit": {
+    "backlog_before": 531,
+    "backlog_after": 543,
+    "added": 12,
+    "commit": "22dafcab52ac00713d45d3f6aeabf76f082fb0d7"
+  },
+  "sha_checks": {
+    "sources.jsonl": "b906e9e164015de3f42ccafcfc1c4a9b85b44138",
+    "link_labels.jsonl": "13bae7809b0a46d9a3c0e44bbf8601648b0ad06d",
+    "backlog.jsonl": "f04c357a5bec3c169fadfb8d4741718ebce9cb01",
+    "review_state.json": "23d2fd16aedc8a1e66f1a847e5e7994a22ac8566",
+    "run_trigger.json": "0c1e2c6e530a6477f86dd59c4856d20f9a25308b",
+    "crawl_state.json": "76fdf5ef2987e45adb465cee245e43a18a4b386e"
+  },
+  "safeguards": {
+    "binary_documents_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_deleted": false,
+    "schedule_modified": false,
+    "additional_automations_created": false
+  }
+}
