@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T11:00:58.847Z",
+  "updated_at": "2026-10-24T12:06:56.000Z",
   "deferred_shards": [
     1,
     2,
@@ -185,10 +185,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000298.jsonl",
-    "last_completed_shard": "resource_000297.jsonl",
-    "cycle": "r292-20261024T110058847Z",
-    "reason": "100 distinct resource_id matched to 100 raw occurrences in batch_000808–000809; checkpoint merged into canonical labels; raw ledger untouched."
+    "next_resource_shard": "resource_000299.jsonl",
+    "last_completed_shard": "resource_000298.jsonl",
+    "cycle": "r293-20261024T120656000Z",
+    "reason": "100 distinct resource_id matched to 100 raw occurrences in batch_000809 and batch_000810; checkpoint merged into canonical labels; raw ledger untouched."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -892,7 +892,7 @@
     "canonical_merge_pending": 0,
     "status": "merged_in_r279"
   },
-  "next_resource_shard": "resource_000298.jsonl",
+  "next_resource_shard": "resource_000299.jsonl",
   "raw_cursor_unchanged": true,
   "unresolved_earlier_shards": true,
   "notes": "r280 resource_000285 reviewed and merged: 100 unique resources, 100 raw occurrences; 6 task, 6 participant_work, 16 source, 72 unrelated. Raw cursor unchanged; older checkpoints still pending.",
@@ -1402,5 +1402,35 @@
     "next_resource_shard": "resource_000298.jsonl",
     "raw_cursor_unchanged": true,
     "notes": "Official Slovak physics HTML context; anomalous year/URL variants retained review; 30 historical checkpoints pending. No binary bodies fetched."
+  },
+  "r293_review": {
+    "cycle": "r293-20261024T120656000Z",
+    "resource_shard": "resource_000298.jsonl",
+    "unique_resource_ids": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000809.jsonl",
+      "batch_000810.jsonl"
+    ],
+    "types": {
+      "task": 61,
+      "solution": 34,
+      "review": 5
+    },
+    "checkpoint": "runs/labels_checkpoint_r293_r298.jsonl",
+    "canonical_merged": 100,
+    "canonical_labels_before": 3670,
+    "canonical_labels_after": 3770,
+    "canonical_merge_commit": "852b8aa4ab7498f44026e801b71f193aa9db9d2b",
+    "anomalies": [
+      "f61dkgri20 (1)",
+      "f61okEul21m",
+      "F61okEri21",
+      "F61okFul21m",
+      "fo59dkcul18m"
+    ],
+    "next_resource_shard": "resource_000299.jsonl",
+    "raw_cursor_unchanged": true,
+    "notes": "Official Slovak physics HTML context; malformed and year-mismatched URLs retained review; 30 older checkpoints still pending; binary bodies not fetched."
   }
 }
