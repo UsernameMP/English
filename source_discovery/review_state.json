@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T05:03:57Z",
+  "updated_at": "2026-10-24T06:11:10.799Z",
   "deferred_shards": [
     1,
     2,
@@ -196,10 +196,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000292.jsonl",
-    "last_completed_shard": "resource_000291.jsonl",
-    "cycle": "r286-20261024T050357000Z",
-    "reason": "100 unique resources linked to 100 raw occurrences in batch_000801/802; five checkpoints and canonical merge; raw cursor unchanged"
+    "next_resource_shard": "resource_000293.jsonl",
+    "last_completed_shard": "resource_000292.jsonl",
+    "cycle": "r287-20261024T060728885Z",
+    "reason": "100 unique resources linked to 100 raw occurrences across batch_000802/803/804; one checkpoint, canonical merged; raw cursor unchanged"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -903,7 +903,7 @@
     "canonical_merge_pending": 0,
     "status": "merged_in_r279"
   },
-  "next_resource_shard": "resource_000292.jsonl",
+  "next_resource_shard": "resource_000293.jsonl",
   "raw_cursor_unchanged": true,
   "unresolved_earlier_shards": true,
   "notes": "r280 resource_000285 reviewed and merged: 100 unique resources, 100 raw occurrences; 6 task, 6 participant_work, 16 source, 72 unrelated. Raw cursor unchanged; older checkpoints still pending.",
@@ -1214,6 +1214,34 @@
     "next_resource_shard": "resource_000292.jsonl",
     "raw_cursor_unchanged": true,
     "notes": "19 malformed target URLs (spaces/Unicode dash), 13 season-code ambiguities (overlap possible), answer sheets and instructions kept review. No document bodies fetched.",
+    "status": "merged"
+  },
+  "r287_review": {
+    "cycle": "r287-20261024T060728885Z",
+    "resource_shard": "resource_000292.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000802.jsonl",
+      "batch_000803.jsonl",
+      "batch_000804.jsonl"
+    ],
+    "counts": {
+      "task": 41,
+      "solution": 40,
+      "review": 19
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 100,
+    "canonical_labels_before": 2996,
+    "canonical_labels_after": 3096,
+    "canonical_merge_commit": "99b963285aa49d4af5ec8ad7f4707db3545bd32b",
+    "checkpoints": [
+      "labels_checkpoint_r287_r292.jsonl"
+    ],
+    "next_resource_shard": "resource_000293.jsonl",
+    "raw_cursor_unchanged": true,
+    "notes": "Slovak NIVAM CH54–56 chemistry 2017/18–2019/20; 19 blank answer forms, instructions and worksheet remain review. Four combined home/school stage labels. No binary fetched.",
     "status": "merged"
   }
 }
