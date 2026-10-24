@@ -1,0 +1,110 @@
+{
+  "cycle": "r288-20261024T070429086Z",
+  "recorded_at": "2026-10-24T07:09:21.309Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "7daf9d7648dd569359c813739f957a8b2e535fbe",
+    "verified_readback": true,
+    "workflow_run_id": 40072723166,
+    "status_at_manifest": "in_progress",
+    "conclusion_at_manifest": null,
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40072723166",
+    "source_update_auto_run_id": 40072859465,
+    "source_auto_status_at_manifest": "pending",
+    "source_auto_conclusion_at_manifest": null
+  },
+  "last_confirmed_successful_crawler": {
+    "run_id": 40069222702,
+    "completed_at": "2026-10-24T06:18:55Z",
+    "html_pages": 60,
+    "new_links": 2228,
+    "unique_resource_urls": 235433,
+    "pending_pages": 107627,
+    "blocked_or_failed_cumulative": 2219,
+    "source": "GitHub Actions job log 120799075561"
+  },
+  "discovery": {
+    "new_sources": 5,
+    "sources_before": 1646,
+    "sources_after": 1651,
+    "commit": "5e94d2f866b5365496bdc56070900e2f4ed2db5e",
+    "urls": [
+      "https://site.oba.org.br/711",
+      "https://africanbiologyolympiad.org/resources/",
+      "https://noic.com.br/olimpiadas/historia/comentario-de-questoes/",
+      "https://ips.fisipol.unesa.ac.id/post/pendidikan-ips-unesa-dan-mgmp-ips-sidoarjo-gelar-olimpiade-ips-berbasis-cbt",
+      "https://site.oba.org.br/olaa-1"
+    ],
+    "scope": "HTML links and provenance only; no binary content"
+  },
+  "review": {
+    "resource_shard": "resource_000293.jsonl",
+    "raw_shards": [
+      "batch_000803.jsonl",
+      "batch_000804.jsonl"
+    ],
+    "unique_resources": 100,
+    "matched_occurrences": 100,
+    "counts": {
+      "task": 39,
+      "solution": 39,
+      "review": 22
+    },
+    "checkpoint": "source_discovery/runs/labels_checkpoint_r288_r293.jsonl",
+    "checkpoint_commit": "36aa1e9b69d636f47973b3cf8553d4563290af89",
+    "canonical_merge_commit": "ace0e832eb3f86488768bbf9b880b1a53d3f95b6",
+    "next_resource_shard": "resource_000294.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "historical_reconciliation": {
+    "checkpoint_files": 5,
+    "labels_merged": 36,
+    "raw_occurrences_matched": 36,
+    "resource_ids_matched": 36,
+    "merge_commit": "3f86071c6b399b3528a1e93448f02ac5560d137c",
+    "pending_checkpoints_after": 36
+  },
+  "canonical_labels": {
+    "before": 3096,
+    "after": 3232,
+    "readback_confirmed": true
+  },
+  "mime": {
+    "observations": 2969,
+    "unique_pdf_urls": 1296,
+    "unique_pdf_urls_without_dot_pdf": 1124,
+    "meaning": "MIME-only; no file body or content suitability established"
+  },
+  "audit": {
+    "new_backlog_entries": 10,
+    "backlog_before": 554,
+    "backlog_after": 564,
+    "commit": "9ca37cadb8572208bd58c396edaadcca7fc541d6",
+    "topics": [
+      "Slovak chemistry CH53 category D inconsistent year codes",
+      "blank answer sheets/instructions kept review",
+      "CH53/CH54 coverage matrix",
+      "IOAA missing editions and shared links",
+      "African biology past-paper gap",
+      "UNESA iframe access/rights",
+      "NOIC placeholders",
+      "OLAA past-paper gap",
+      "TPMSO historic redirect"
+    ]
+  },
+  "safeguards": {
+    "binary_downloads": false,
+    "dropbox_modified": false,
+    "raw_occurrence_ledger_modified_by_review": false,
+    "schedule_modified": false,
+    "manual_extra_workflow_dispatches": false
+  },
+  "remaining": [
+    "Current r288 GitHub Actions runs not yet confirmed completed",
+    "36 legacy checkpoint files pending reconciliation",
+    "Historic coverage, stage and criteria gaps unresolved",
+    "Potential GitHub Actions branch update race"
+  ]
+}
