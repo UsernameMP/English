@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T14:11:36.261Z",
+  "updated_at": "2026-10-24T15:09:18.469Z",
   "deferred_shards": [
     1,
     2,
@@ -1500,5 +1500,40 @@
     "next_shard_after_reconciliation": "resource_000301.jsonl",
     "unresolved_previous_checkpoint": "runs/r294_review_r299.jsonl",
     "review_note": "Classified with official Slovak Biology Olympiad HTML anchors and resource URL; 4 B58 district category D URLs end 23 rather than 24 and remain review."
+  },
+  "r296_pending": {
+    "cycle": "r296-20261024T150631758Z",
+    "resource_shard": "resource_000301.jsonl",
+    "unique_resources_reviewed": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000813.jsonl",
+      "batch_000814.jsonl"
+    ],
+    "classification_counts": {
+      "task": 57,
+      "solution": 38,
+      "review": 5
+    },
+    "checkpoint": "runs/r296_review_r301.jsonl",
+    "checkpoint_commit": "4617aeb349dd91ce15e15f3e1a58565ee18c7319",
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 0,
+    "canonical_merge_blocker": "link_labels.jsonl full fetch returns empty for 3.85MB file; previous r294 HTTP/2 update failure; do not overwrite without full content and current SHA",
+    "raw_ledger_unchanged": true,
+    "cursor_advanced": false,
+    "next_shard_after_reconciliation": "resource_000302.jsonl",
+    "other_pending": [
+      "runs/r294_review_r299.jsonl",
+      "runs/r295_review_r300.jsonl",
+      "27 historical checkpoints"
+    ],
+    "ambiguous_slugs": [
+      "B57skDul24",
+      "B57skDul24m",
+      "B57skDri24",
+      "B57skDri24m",
+      "B57okEbotul23_"
+    ]
   }
 }
