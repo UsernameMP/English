@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T01:11:50.619Z",
+  "updated_at": "2026-10-24T02:02:49.508Z",
   "deferred_shards": [
     1,
     2,
@@ -58,9 +58,14 @@
     "source_discovery/runs/r282-20261024T010851827Z_review_r287_020_039.jsonl",
     "source_discovery/runs/r282-20261024T010851827Z_review_r287_040_059.jsonl",
     "source_discovery/runs/r282-20261024T010851827Z_review_r287_060_079.jsonl",
-    "source_discovery/runs/r282-20261024T010851827Z_review_r287_080_099.jsonl"
+    "source_discovery/runs/r282-20261024T010851827Z_review_r287_080_099.jsonl",
+    "source_discovery/runs/r283-20261024T020003516Z_review_r288_000_019.jsonl",
+    "source_discovery/runs/r283-20261024T020003516Z_review_r288_020_039.jsonl",
+    "source_discovery/runs/r283-20261024T020003516Z_review_r288_040_059.jsonl",
+    "source_discovery/runs/r283-20261024T020003516Z_review_r288_060_079.jsonl",
+    "source_discovery/runs/r283-20261024T020003516Z_review_r288_080_099.jsonl"
   ],
-  "pending_labels_count": 78,
+  "pending_labels_count": 51,
   "canonical_merge_status": "r269_r276_checkpoints_reconciled; older checkpoints remain pending",
   "canonical_merged_in_cycle": 1,
   "noncontiguous_review": {
@@ -707,12 +712,12 @@
     "status": "merged_in_r279"
   },
   "latest_operational_resource_review": {
-    "last_completed_shard": "resource_000285.jsonl",
-    "next_resource_shard": "resource_000286.jsonl",
-    "cycle": "r280-20261023T230828525Z",
+    "last_completed_shard": "resource_000288.jsonl",
+    "next_resource_shard": "resource_000289.jsonl",
+    "cycle": "r283-20261024T020003516Z",
     "full_labels_checkpointed": 100,
-    "canonical_merged": 100,
-    "canonical_merge_pending": 0,
+    "canonical_merged": 0,
+    "canonical_merge_pending": 100,
     "canonical_raw_cursor_unchanged": true
   },
   "r271_pending": {
@@ -908,7 +913,7 @@
     "canonical_merge_pending": 0,
     "status": "merged_in_r279"
   },
-  "next_resource_shard": "resource_000288.jsonl",
+  "next_resource_shard": "resource_000289.jsonl",
   "raw_cursor_unchanged": true,
   "unresolved_earlier_shards": true,
   "notes": "r280 resource_000285 reviewed and merged: 100 unique resources, 100 raw occurrences; 6 task, 6 participant_work, 16 source, 72 unrelated. Raw cursor unchanged; older checkpoints still pending.",
@@ -1101,5 +1106,34 @@
     "raw_cursor_unchanged": true,
     "next_resource_shard": "resource_000288.jsonl",
     "notes": "Slovak Chemistry Olympiad 2024/25-2026/27; distinguish Slovak and Hungarian versions, task vs solution, answer-sheet support as review; HTML landing page confirms ambiguous CHO61dkAprri is solution; no binary read."
+  },
+  "r283_review": {
+    "cycle": "r283-20261024T020003516Z",
+    "resource_shard": "resource_000288.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000798.jsonl",
+      "batch_000799.jsonl"
+    ],
+    "classification_counts": {
+      "solution": 44,
+      "task": 43,
+      "review": 12,
+      "unrelated": 1
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 0,
+    "checkpoint_files": [
+      "source_discovery/runs/r283-20261024T020003516Z_review_r288_000_019.jsonl",
+      "source_discovery/runs/r283-20261024T020003516Z_review_r288_020_039.jsonl",
+      "source_discovery/runs/r283-20261024T020003516Z_review_r288_040_059.jsonl",
+      "source_discovery/runs/r283-20261024T020003516Z_review_r288_060_079.jsonl",
+      "source_discovery/runs/r283-20261024T020003516Z_review_r288_080_099.jsonl"
+    ],
+    "canonical_merge_blocker": "link_labels.jsonl returns empty on GitHub fetch_file even though blob exists; preserve current canonical file, checkpoint labels until safe merge",
+    "raw_cursor_unchanged": true,
+    "next_resource_shard": "resource_000289.jsonl",
+    "notes": "Slovak Chemistry 60th/61st editions; response sheets left review, result list unrelated; no binary downloads"
   }
 }
