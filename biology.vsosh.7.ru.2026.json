@@ -1,0 +1,1327 @@
+{
+  "schema_version": "1.0",
+  "bank_id": "biology-vsosh-7-ru-2026",
+  "title": "Биология · ВСОШ",
+  "locale": "ru",
+  "content_version": "0.1.0",
+  "pack": {
+    "id": "biology.vsosh.7.ru.2026",
+    "subject": "biology",
+    "grade_min": 7,
+    "grade_max": 7,
+    "competition": "VSOSh",
+    "region": "RU",
+    "season": "2026-2027",
+    "title": {
+      "ru": "Биология · ВСОШ",
+      "en": "Биология · ВСОШ"
+    },
+    "subtitle": {
+      "ru": "Оригинальные задания по механикам школьного этапа · 7 класс",
+      "en": "Оригинальные задания по механикам школьного этапа · 7 класс"
+    }
+  },
+  "questions": [
+    {
+      "id": "bio_exp_001",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "bio_experiment_inference"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "На трёх одинаковых участках выращивали одно растение. На участке без азотного удобрения прирост был 4 см, без фосфорного — 11 см, без калийного — 10 см. Какой элемент сильнее всего ограничивал рост?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Минимальный прирост наблюдался при недостатке азота, значит именно он был лимитирующим фактором."
+        },
+        "full": {
+          "ru": "Минимальный прирост наблюдался при недостатке азота, значит именно он был лимитирующим фактором."
+        },
+        "rule": {
+          "ru": "Сравнивай результат опыта с изменённым фактором."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.EXPERIMENT.INFERENCE",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Азот"
+        },
+        {
+          "id": "b",
+          "text": "Фосфор"
+        },
+        {
+          "id": "c",
+          "text": "Калий"
+        },
+        {
+          "id": "d",
+          "text": "Нельзя сделать вывод"
+        }
+      ]
+    },
+    {
+      "id": "bio_plant_001",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "bio_plants_structure_function"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Срезанный побег поставили в подкрашенную воду. Через час окраска появилась в жилках листа. По какой ткани прежде всего поднялся краситель?",
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Вода с растворёнными веществами поднимается по ксилеме."
+        },
+        "full": {
+          "ru": "Вода с растворёнными веществами поднимается по ксилеме."
+        },
+        "rule": {
+          "ru": "Ксилема проводит воду и минеральные вещества вверх по растению."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.PLANTS.STRUCTURE_FUNCTION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Флоэма"
+        },
+        {
+          "id": "b",
+          "text": "Ксилема"
+        },
+        {
+          "id": "c",
+          "text": "Пробка"
+        },
+        {
+          "id": "d",
+          "text": "Камбий"
+        }
+      ]
+    },
+    {
+      "id": "bio_repr_001",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "bio_reproduction_modes"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какой организм обычно размножается почкованием?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Почкование характерно для дрожжей."
+        },
+        "full": {
+          "ru": "Почкование характерно для дрожжей."
+        },
+        "rule": {
+          "ru": "Способ размножения — важный диагностический признак группы."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.REPRODUCTION.MODES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Пекарские дрожжи"
+        },
+        {
+          "id": "b",
+          "text": "Мукор"
+        },
+        {
+          "id": "c",
+          "text": "Сосна"
+        },
+        {
+          "id": "d",
+          "text": "Хлорелла"
+        }
+      ]
+    },
+    {
+      "id": "bio_plant_002",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "bio_plants_structure_function"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Выберите функции корня растения.",
+      "answer": [
+        "a",
+        "b",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Корень поглощает вещества, закрепляет растение и иногда запасает органические вещества."
+        },
+        "full": {
+          "ru": "Корень поглощает вещества, закрепляет растение и иногда запасает органические вещества."
+        },
+        "rule": {
+          "ru": "Один орган может выполнять несколько функций."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.PLANTS.STRUCTURE_FUNCTION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Поглощение воды и минеральных солей"
+        },
+        {
+          "id": "b",
+          "text": "Закрепление в субстрате"
+        },
+        {
+          "id": "c",
+          "text": "Образование семян"
+        },
+        {
+          "id": "d",
+          "text": "Запас питательных веществ у некоторых видов"
+        }
+      ]
+    },
+    {
+      "id": "bio_cell_001",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "bio_classification_features"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Установите соответствие между структурой клетки и функцией.",
+      "answer": [
+        "l1:r3",
+        "l2:r1",
+        "l3:r2",
+        "l4:r4"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Функции органоидов следуют из их строения и роли в клетке."
+        },
+        "full": {
+          "ru": "Функции органоидов следуют из их строения и роли в клетке."
+        },
+        "rule": {
+          "ru": "Сопоставляй структуру с её основной функцией."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.CLASSIFICATION.FEATURES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Ядро"
+        },
+        {
+          "id": "l2",
+          "text": "Хлоропласт"
+        },
+        {
+          "id": "l3",
+          "text": "Вакуоль"
+        },
+        {
+          "id": "l4",
+          "text": "Клеточная мембрана"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Фотосинтез"
+        },
+        {
+          "id": "r2",
+          "text": "Хранение клеточного сока"
+        },
+        {
+          "id": "r3",
+          "text": "Хранение наследственной информации"
+        },
+        {
+          "id": "r4",
+          "text": "Избирательный транспорт веществ"
+        }
+      ]
+    },
+    {
+      "id": "bio_exp_002",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "bio_experiment_inference"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Расположите этапы корректного биологического эксперимента.",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Гипотеза задаёт проверку, затем нужен контроль, измерения и вывод."
+        },
+        "full": {
+          "ru": "Гипотеза задаёт проверку, затем нужен контроль, измерения и вывод."
+        },
+        "rule": {
+          "ru": "Эксперимент должен позволять отделить влияние исследуемого фактора."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.EXPERIMENT.INFERENCE",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Сформулировать гипотезу"
+        },
+        {
+          "id": "b",
+          "text": "Выбрать контроль и опыт"
+        },
+        {
+          "id": "c",
+          "text": "Провести измерения"
+        },
+        {
+          "id": "d",
+          "text": "Сравнить результаты и сделать вывод"
+        }
+      ]
+    },
+    {
+      "id": "bio_plant_003",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "free_response",
+      "mode": "practice",
+      "skills": [
+        "bio_plants_structure_function"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Как называется проводящая ткань, по которой вода поднимается от корней к листьям?",
+      "answer": [
+        "ксилема"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Это ксилема."
+        },
+        "full": {
+          "ru": "Это ксилема."
+        },
+        "rule": {
+          "ru": "Ксилема проводит воду и минеральные соли."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.PLANTS.STRUCTURE_FUNCTION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "bio_eco_001",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "bio_ecology_food_webs"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "В цепи «трава → кузнечик → лягушка → уж» кто является потребителем второго порядка?",
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Лягушка питается первичным потребителем — кузнечиком."
+        },
+        "full": {
+          "ru": "Лягушка питается первичным потребителем — кузнечиком."
+        },
+        "rule": {
+          "ru": "Порядок потребителя считают от продуцента через звенья питания."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.ECOLOGY.FOOD_WEBS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Трава"
+        },
+        {
+          "id": "b",
+          "text": "Кузнечик"
+        },
+        {
+          "id": "c",
+          "text": "Лягушка"
+        },
+        {
+          "id": "d",
+          "text": "Уж"
+        }
+      ]
+    },
+    {
+      "id": "bio_adapt_001",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "bio_classification_features"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какие признаки помогают растениям засушливых мест уменьшать потерю воды?",
+      "answer": [
+        "a",
+        "b",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Толстая кутикула, уменьшенная листовая поверхность и водозапасающие ткани снижают риск обезвоживания."
+        },
+        "full": {
+          "ru": "Толстая кутикула, уменьшенная листовая поверхность и водозапасающие ткани снижают риск обезвоживания."
+        },
+        "rule": {
+          "ru": "Адаптации оценивают по их функциональному эффекту."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.CLASSIFICATION.FEATURES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Толстая кутикула"
+        },
+        {
+          "id": "b",
+          "text": "Мелкие листья"
+        },
+        {
+          "id": "c",
+          "text": "Большое число широко открытых устьиц"
+        },
+        {
+          "id": "d",
+          "text": "Запас воды в тканях"
+        }
+      ]
+    },
+    {
+      "id": "bio_class_001",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "bio_classification_features"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите группу животных и характерный признак.",
+      "answer": [
+        "l1:r2",
+        "l2:r4",
+        "l3:r3",
+        "l4:r1"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "У каждой крупной группы есть устойчивые морфологические признаки."
+        },
+        "full": {
+          "ru": "У каждой крупной группы есть устойчивые морфологические признаки."
+        },
+        "rule": {
+          "ru": "Классификация опирается на совокупность признаков."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.CLASSIFICATION.FEATURES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Насекомые"
+        },
+        {
+          "id": "l2",
+          "text": "Паукообразные"
+        },
+        {
+          "id": "l3",
+          "text": "Рыбы"
+        },
+        {
+          "id": "l4",
+          "text": "Птицы"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Перья"
+        },
+        {
+          "id": "r2",
+          "text": "Три пары ходильных ног"
+        },
+        {
+          "id": "r3",
+          "text": "Плавники и жабры"
+        },
+        {
+          "id": "r4",
+          "text": "Четыре пары ходильных ног"
+        }
+      ]
+    },
+    {
+      "id": "bio_exp_003",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "bio_experiment_inference"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Ученик проверяет влияние освещения на скорость фотосинтеза водного растения. Что должно быть одинаковым в контрольной и опытной группах?",
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Температуру нужно контролировать, а освещённость — изменять."
+        },
+        "full": {
+          "ru": "Температуру нужно контролировать, а освещённость — изменять."
+        },
+        "rule": {
+          "ru": "В корректном опыте изменяют один фактор, остальные удерживают постоянными."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.EXPERIMENT.INFERENCE",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Интенсивность света"
+        },
+        {
+          "id": "b",
+          "text": "Температура воды"
+        },
+        {
+          "id": "c",
+          "text": "Расстояние до лампы"
+        },
+        {
+          "id": "d",
+          "text": "Освещённость листьев"
+        }
+      ]
+    },
+    {
+      "id": "bio_repr_002",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "free_response",
+      "mode": "practice",
+      "skills": [
+        "bio_reproduction_modes"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Как называется деление клетки, при котором образуются две генетически близкие дочерние клетки?",
+      "answer": [
+        "митоз"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Такое деление называется митозом."
+        },
+        "full": {
+          "ru": "Такое деление называется митозом."
+        },
+        "rule": {
+          "ru": "Митоз сохраняет набор наследственного материала в дочерних клетках."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.REPRODUCTION.MODES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "bio_water_001",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "bio_plants_structure_function"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Расположите путь воды через растение.",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Вода поглощается корнем, идёт по ксилеме к листу и испаряется через устьица."
+        },
+        "full": {
+          "ru": "Вода поглощается корнем, идёт по ксилеме к листу и испаряется через устьица."
+        },
+        "rule": {
+          "ru": "Транспирационный ток связывает поглощение и испарение воды."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.PLANTS.STRUCTURE_FUNCTION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Корневые волоски"
+        },
+        {
+          "id": "b",
+          "text": "Ксилема корня и стебля"
+        },
+        {
+          "id": "c",
+          "text": "Жилки листа"
+        },
+        {
+          "id": "d",
+          "text": "Испарение через устьица"
+        }
+      ]
+    },
+    {
+      "id": "bio_fungi_001",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "bio_classification_features"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Почему грибы не относят к растениям?",
+      "answer": [
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Грибы — гетеротрофы и получают готовые органические вещества."
+        },
+        "full": {
+          "ru": "Грибы — гетеротрофы и получают готовые органические вещества."
+        },
+        "rule": {
+          "ru": "Тип питания — один из ключевых признаков царства."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.CLASSIFICATION.FEATURES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Они всегда одноклеточные"
+        },
+        {
+          "id": "b",
+          "text": "У них нет клеточной стенки"
+        },
+        {
+          "id": "c",
+          "text": "Они питаются готовыми органическими веществами"
+        },
+        {
+          "id": "d",
+          "text": "Они не размножаются спорами"
+        }
+      ]
+    },
+    {
+      "id": "bio_photo_001",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "bio_plants_structure_function"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Что непосредственно необходимо зелёному растению для фотосинтеза?",
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Фотосинтез использует свет, воду и углекислый газ."
+        },
+        "full": {
+          "ru": "Фотосинтез использует свет, воду и углекислый газ."
+        },
+        "rule": {
+          "ru": "Отделяй исходные вещества процесса от его продуктов."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.PLANTS.STRUCTURE_FUNCTION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Свет"
+        },
+        {
+          "id": "b",
+          "text": "Углекислый газ"
+        },
+        {
+          "id": "c",
+          "text": "Вода"
+        },
+        {
+          "id": "d",
+          "text": "Готовая глюкоза из почвы"
+        }
+      ]
+    },
+    {
+      "id": "bio_repr_003",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "bio_reproduction_modes"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите способ размножения и пример.",
+      "answer": [
+        "l1:r3",
+        "l2:r4",
+        "l3:r1",
+        "l4:r2"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Примеры различаются по тому, образуются ли гаметы и какой орган участвует."
+        },
+        "full": {
+          "ru": "Примеры различаются по тому, образуются ли гаметы и какой орган участвует."
+        },
+        "rule": {
+          "ru": "Определяй способ по механизму, а не по названию организма."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.REPRODUCTION.MODES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Почкование"
+        },
+        {
+          "id": "l2",
+          "text": "Спорообразование"
+        },
+        {
+          "id": "l3",
+          "text": "Вегетативное размножение"
+        },
+        {
+          "id": "l4",
+          "text": "Половое размножение"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Клубнями картофеля"
+        },
+        {
+          "id": "r2",
+          "text": "Семена цветкового растения"
+        },
+        {
+          "id": "r3",
+          "text": "Дрожжевая клетка образует вырост"
+        },
+        {
+          "id": "r4",
+          "text": "Споры папоротника"
+        }
+      ]
+    },
+    {
+      "id": "bio_data_001",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "bio_experiment_inference"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Число дыхательных движений у рыбы при 10 °C — 32 в минуту, при 18 °C — 55, при 26 °C — 81. Какой вывод лучше всего поддерживают данные?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Во всех трёх измерениях частота возрастает вместе с температурой."
+        },
+        "full": {
+          "ru": "Во всех трёх измерениях частота возрастает вместе с температурой."
+        },
+        "rule": {
+          "ru": "Вывод должен следовать только из наблюдаемой зависимости."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.EXPERIMENT.INFERENCE",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "С ростом температуры частота дыхания увеличивается"
+        },
+        {
+          "id": "b",
+          "text": "Температура не влияет на дыхание"
+        },
+        {
+          "id": "c",
+          "text": "Рыба перестаёт дышать при 26 °C"
+        },
+        {
+          "id": "d",
+          "text": "Частота дыхания зависит только от массы"
+        }
+      ]
+    },
+    {
+      "id": "bio_rel_001",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "bio_ecology_food_webs"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какие примеры описывают взаимовыгодные отношения организмов?",
+      "answer": [
+        "a",
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "В лишайнике и при опылении пользу получают оба участника."
+        },
+        "full": {
+          "ru": "В лишайнике и при опылении пользу получают оба участника."
+        },
+        "rule": {
+          "ru": "Для симбиоза важно определить выгоду или вред для каждой стороны."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.ECOLOGY.FOOD_WEBS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Гриб и водоросль в лишайнике"
+        },
+        {
+          "id": "b",
+          "text": "Пчела и цветковое растение при опылении"
+        },
+        {
+          "id": "c",
+          "text": "Щука и карась"
+        },
+        {
+          "id": "d",
+          "text": "Клещ и млекопитающее"
+        }
+      ]
+    },
+    {
+      "id": "bio_tissue_001",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "bio_plants_structure_function"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите растительную ткань и основную функцию.",
+      "answer": [
+        "l1:r4",
+        "l2:r3",
+        "l3:r2",
+        "l4:r1"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Ткани различаются по функции: проведение, защита, рост."
+        },
+        "full": {
+          "ru": "Ткани различаются по функции: проведение, защита, рост."
+        },
+        "rule": {
+          "ru": "Функция ткани определяется специализацией её клеток."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.PLANTS.STRUCTURE_FUNCTION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Ксилема"
+        },
+        {
+          "id": "l2",
+          "text": "Флоэма"
+        },
+        {
+          "id": "l3",
+          "text": "Покровная ткань"
+        },
+        {
+          "id": "l4",
+          "text": "Образовательная ткань"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Рост за счёт деления клеток"
+        },
+        {
+          "id": "r2",
+          "text": "Защита поверхности"
+        },
+        {
+          "id": "r3",
+          "text": "Перенос органических веществ"
+        },
+        {
+          "id": "r4",
+          "text": "Перенос воды и минеральных солей"
+        }
+      ]
+    },
+    {
+      "id": "bio_key_001",
+      "subject": "biology",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "bio_classification_features"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "В определительном ключе сказано: «1а — есть позвоночник → к пункту 2; 1б — позвоночника нет → к пункту 5». Какой признак нужно проверить первым?",
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Первое ветвление ключа прямо требует проверить позвоночник."
+        },
+        "full": {
+          "ru": "Первое ветвление ключа прямо требует проверить позвоночник."
+        },
+        "rule": {
+          "ru": "Определительный ключ читают последовательно, начиная с первого разделяющего признака."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "BIO.CLASSIFICATION.FEATURES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Тип питания"
+        },
+        {
+          "id": "b",
+          "text": "Наличие позвоночника"
+        },
+        {
+          "id": "c",
+          "text": "Способ размножения"
+        },
+        {
+          "id": "d",
+          "text": "Среду обитания"
+        }
+      ]
+    }
+  ]
+}

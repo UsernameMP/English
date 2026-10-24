@@ -1,0 +1,1334 @@
+{
+  "schema_version": "1.0",
+  "bank_id": "ecology-vsosh-7-8-ru-2026",
+  "title": "Экология · ВСОШ",
+  "locale": "ru",
+  "content_version": "0.1.0",
+  "pack": {
+    "id": "ecology.vsosh.7-8.ru.2026",
+    "subject": "ecology",
+    "grade_min": 7,
+    "grade_max": 8,
+    "competition": "VSOSh",
+    "region": "RU",
+    "season": "2026-2027",
+    "title": {
+      "ru": "Экология · ВСОШ",
+      "en": "Экология · ВСОШ"
+    },
+    "subtitle": {
+      "ru": "Оригинальные задания по механикам школьного этапа · 7–8 классы",
+      "en": "Оригинальные задания по механикам школьного этапа · 7–8 классы"
+    }
+  },
+  "questions": [
+    {
+      "id": "eco_basic_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "eco_environment_change"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Как формируются наследуемые приспособления популяции к устойчивым условиям среды?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Наследуемые адаптации закрепляются естественным отбором в ряду поколений."
+        },
+        "full": {
+          "ru": "Отбор повышает долю наследуемых вариантов, повышающих приспособленность в данных условиях."
+        },
+        "rule": {
+          "ru": "Различай индивидуальные изменения и эволюционное формирование наследуемых адаптаций."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.EVOLUTION.ADAPTATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Постепенно закрепляются естественным отбором в ряду поколений"
+        },
+        {
+          "id": "b",
+          "text": "Возникают у всех особей по желанию в течение жизни"
+        },
+        {
+          "id": "c",
+          "text": "Появляются только из-за тренировки органов"
+        },
+        {
+          "id": "d",
+          "text": "Не связаны с наследственностью"
+        }
+      ]
+    },
+    {
+      "id": "eco_pop_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "eco_population_resources"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите характеристику популяции и ресурсный фактор, который сильнее всего на неё влияет.",
+      "answer": [
+        "l1:r2",
+        "l2:r1"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Для присутствия ресурс должен быть вообще доступен; численность ограничивается его количеством."
+        },
+        "full": {
+          "ru": "Для присутствия ресурс должен быть вообще доступен; численность ограничивается его количеством."
+        },
+        "rule": {
+          "ru": "Различай наличие фактора и его количественную обеспеченность."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.POPULATION.RESOURCES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Возможность присутствия вида на территории"
+        },
+        {
+          "id": "l2",
+          "text": "Максимально поддерживаемая численность"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Количество доступного ресурса"
+        },
+        {
+          "id": "r2",
+          "text": "Наличие необходимого ресурса"
+        }
+      ]
+    },
+    {
+      "id": "eco_succ_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "eco_environment_change"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "После пожара на участке сохранилась почва, и постепенно появляются травы, кустарники и деревья. Как называется такой процесс?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Почва сохранилась, поэтому восстановление идёт как вторичная сукцессия."
+        },
+        "full": {
+          "ru": "Почва сохранилась, поэтому восстановление идёт как вторичная сукцессия."
+        },
+        "rule": {
+          "ru": "Тип сукцессии зависит от наличия ранее сформированной почвы."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.ENVIRONMENT.CHANGE",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Вторичная сукцессия"
+        },
+        {
+          "id": "b",
+          "text": "Первичная сукцессия"
+        },
+        {
+          "id": "c",
+          "text": "Мутация"
+        },
+        {
+          "id": "d",
+          "text": "Миграция"
+        }
+      ]
+    },
+    {
+      "id": "eco_services_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "eco_human_impact"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какие экосистемные услуги леса могут быть утрачены при его уничтожении?",
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Лес регулирует воду, участвует в углеродном цикле и поддерживает местообитания."
+        },
+        "full": {
+          "ru": "Лес регулирует воду, участвует в углеродном цикле и поддерживает местообитания."
+        },
+        "rule": {
+          "ru": "Экосистемная услуга — полезная функция природной системы."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.HUMAN.IMPACT",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Регуляция стока воды"
+        },
+        {
+          "id": "b",
+          "text": "Связывание углерода"
+        },
+        {
+          "id": "c",
+          "text": "Среда обитания видов"
+        },
+        {
+          "id": "d",
+          "text": "Автоматическое производство металлов"
+        }
+      ]
+    },
+    {
+      "id": "eco_impact_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "eco_human_impact"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите воздействие и наиболее прямое последствие.",
+      "answer": [
+        "l1:r2",
+        "l2:r3",
+        "l3:r1",
+        "l4:r4"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Каждое воздействие имеет характерную цепочку последствий."
+        },
+        "full": {
+          "ru": "Каждое воздействие имеет характерную цепочку последствий."
+        },
+        "rule": {
+          "ru": "Выбирай наиболее прямой причинный эффект."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.HUMAN.IMPACT",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Избыточное внесение удобрений в водосборе"
+        },
+        {
+          "id": "l2",
+          "text": "Вырубка леса на склоне"
+        },
+        {
+          "id": "l3",
+          "text": "Сжигание ископаемого топлива"
+        },
+        {
+          "id": "l4",
+          "text": "Фрагментация местообитаний дорогой"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Рост выбросов CO₂"
+        },
+        {
+          "id": "r2",
+          "text": "Эвтрофикация водоёма"
+        },
+        {
+          "id": "r3",
+          "text": "Повышение риска эрозии"
+        },
+        {
+          "id": "r4",
+          "text": "Изоляция популяций"
+        }
+      ]
+    },
+    {
+      "id": "eco_succ_002",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "eco_environment_change"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Расположите стадии восстановления лесного участка после пожара при сохранённой почве.",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "По мере сукцессии усложняется структура сообщества."
+        },
+        "full": {
+          "ru": "По мере сукцессии усложняется структура сообщества."
+        },
+        "rule": {
+          "ru": "Сукцессия — направленная смена сообществ во времени."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.ENVIRONMENT.CHANGE",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Пионерные травы"
+        },
+        {
+          "id": "b",
+          "text": "Кустарники"
+        },
+        {
+          "id": "c",
+          "text": "Молодые деревья"
+        },
+        {
+          "id": "d",
+          "text": "Зрелое лесное сообщество"
+        }
+      ]
+    },
+    {
+      "id": "eco_biodiv_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "free_response",
+      "mode": "practice",
+      "skills": [
+        "eco_sustainability_decisions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Как одним словом называется разнообразие генов, видов и экосистем?",
+      "answer": [
+        "биоразнообразие",
+        "биологическое разнообразие"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Это биоразнообразие."
+        },
+        "full": {
+          "ru": "Это биоразнообразие."
+        },
+        "rule": {
+          "ru": "Термин включает несколько уровней разнообразия живой природы."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.SUSTAINABILITY.DECISIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "eco_limit_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "eco_population_resources"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Для водного растения света достаточно, но содержание фосфатов очень низкое. Какой фактор вероятнее станет лимитирующим?",
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Лимитирующим станет фактор, который находится в дефиците."
+        },
+        "full": {
+          "ru": "Лимитирующим станет фактор, который находится в дефиците."
+        },
+        "rule": {
+          "ru": "Рост ограничивает не любой фактор, а наиболее дефицитный относительно потребности."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.POPULATION.RESOURCES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Свет"
+        },
+        {
+          "id": "b",
+          "text": "Фосфор"
+        },
+        {
+          "id": "c",
+          "text": "Кислород воздуха над водоёмом"
+        },
+        {
+          "id": "d",
+          "text": "Длина названия растения"
+        }
+      ]
+    },
+    {
+      "id": "eco_greenhouse_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "eco_human_impact"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какие газы вносят вклад в парниковый эффект?",
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "CO₂, метан и водяной пар поглощают тепловое излучение; кислород не является основным парниковым газом."
+        },
+        "full": {
+          "ru": "CO₂, метан и водяной пар поглощают тепловое излучение; кислород не является основным парниковым газом."
+        },
+        "rule": {
+          "ru": "Парниковый эффект связан со способностью молекул поглощать инфракрасное излучение."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.HUMAN.IMPACT",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Углекислый газ"
+        },
+        {
+          "id": "b",
+          "text": "Метан"
+        },
+        {
+          "id": "c",
+          "text": "Водяной пар"
+        },
+        {
+          "id": "d",
+          "text": "Кислород как основной парниковый газ"
+        }
+      ]
+    },
+    {
+      "id": "eco_rel_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "eco_population_resources"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите тип взаимодействия и пример.",
+      "answer": [
+        "l1:r3",
+        "l2:r1",
+        "l3:r2",
+        "l4:r4"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Тип взаимодействия определяется выгодой и ущербом для участников."
+        },
+        "full": {
+          "ru": "Тип взаимодействия определяется выгодой и ущербом для участников."
+        },
+        "rule": {
+          "ru": "Сравнивай результат взаимодействия для обеих сторон."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.POPULATION.RESOURCES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Хищничество"
+        },
+        {
+          "id": "l2",
+          "text": "Паразитизм"
+        },
+        {
+          "id": "l3",
+          "text": "Конкуренция"
+        },
+        {
+          "id": "l4",
+          "text": "Мутуализм"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Клещ питается кровью млекопитающего"
+        },
+        {
+          "id": "r2",
+          "text": "Два вида птиц используют одно ограниченное место для гнездования"
+        },
+        {
+          "id": "r3",
+          "text": "Волк ловит зайца"
+        },
+        {
+          "id": "r4",
+          "text": "Пчела получает нектар и опыляет растение"
+        }
+      ]
+    },
+    {
+      "id": "eco_trophic_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "eco_population_resources"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "В цепи «водоросль → дафния → рыба → цапля» кто является первичным потребителем?",
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Дафния питается продуцентом, значит она первичный потребитель."
+        },
+        "full": {
+          "ru": "Дафния питается продуцентом, значит она первичный потребитель."
+        },
+        "rule": {
+          "ru": "Первичный потребитель непосредственно использует продуцента."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.POPULATION.RESOURCES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Водоросль"
+        },
+        {
+          "id": "b",
+          "text": "Дафния"
+        },
+        {
+          "id": "c",
+          "text": "Рыба"
+        },
+        {
+          "id": "d",
+          "text": "Цапля"
+        }
+      ]
+    },
+    {
+      "id": "eco_sustain_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "eco_sustainability_decisions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какие меры обычно повышают экологическую устойчивость города?",
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Эти меры уменьшают нагрузку на ресурсы, выбросы или сохраняют экосистемные функции."
+        },
+        "full": {
+          "ru": "Эти меры уменьшают нагрузку на ресурсы, выбросы или сохраняют экосистемные функции."
+        },
+        "rule": {
+          "ru": "Оценивай не лозунг, а ожидаемый экологический эффект."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.SUSTAINABILITY.DECISIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Раздельный сбор отходов"
+        },
+        {
+          "id": "b",
+          "text": "Развитие общественного транспорта"
+        },
+        {
+          "id": "c",
+          "text": "Сохранение зелёных зон"
+        },
+        {
+          "id": "d",
+          "text": "Увеличение холостого пробега автомобилей"
+        }
+      ]
+    },
+    {
+      "id": "eco_food_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "eco_population_resources"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Расположите звенья пищевой цепи от продуцента к верхнему хищнику.",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Энергия передаётся от растения к растительноядному и далее к хищникам."
+        },
+        "full": {
+          "ru": "Энергия передаётся от растения к растительноядному и далее к хищникам."
+        },
+        "rule": {
+          "ru": "Пищевая цепь начинается с продуцента."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.POPULATION.RESOURCES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Трава"
+        },
+        {
+          "id": "b",
+          "text": "Кузнечик"
+        },
+        {
+          "id": "c",
+          "text": "Лягушка"
+        },
+        {
+          "id": "d",
+          "text": "Уж"
+        }
+      ]
+    },
+    {
+      "id": "eco_pop_002",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "free_response",
+      "mode": "practice",
+      "skills": [
+        "eco_population_resources"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Как называется совокупность особей одного вида, длительно обитающих на общей территории и скрещивающихся между собой?",
+      "answer": [
+        "популяция"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Это популяция."
+        },
+        "full": {
+          "ru": "Это популяция."
+        },
+        "rule": {
+          "ru": "Популяция — внутривидовая единица, связанная общей территорией и воспроизводством."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.POPULATION.RESOURCES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "eco_invasive_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "eco_environment_change"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Почему интродукция чужеродного вида иногда опасна для экосистемы?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "При отсутствии привычных ограничителей чужеродный вид может стать инвазивным."
+        },
+        "full": {
+          "ru": "При отсутствии привычных ограничителей чужеродный вид может стать инвазивным."
+        },
+        "rule": {
+          "ru": "Оценивай возможные связи нового вида с ресурсами и конкурентами."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.ENVIRONMENT.CHANGE",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Он может быстро распространяться и вытеснять местные виды"
+        },
+        {
+          "id": "b",
+          "text": "Любой новый вид сразу исчезает"
+        },
+        {
+          "id": "c",
+          "text": "Он всегда повышает биоразнообразие без последствий"
+        },
+        {
+          "id": "d",
+          "text": "Он не взаимодействует с местными организмами"
+        }
+      ]
+    },
+    {
+      "id": "eco_indicator_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "eco_environment_change"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите показатель и то, что он помогает оценить.",
+      "answer": [
+        "l1:r2",
+        "l2:r3",
+        "l3:r4",
+        "l4:r1"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Экологические показатели интерпретируют через процесс, который они отражают."
+        },
+        "full": {
+          "ru": "Экологические показатели интерпретируют через процесс, который они отражают."
+        },
+        "rule": {
+          "ru": "Показатель важен только вместе с его экологическим смыслом."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.ENVIRONMENT.CHANGE",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Число видов на участке"
+        },
+        {
+          "id": "l2",
+          "text": "Концентрация нитратов в воде"
+        },
+        {
+          "id": "l3",
+          "text": "Содержание кислорода в воде"
+        },
+        {
+          "id": "l4",
+          "text": "Площадь зелёных насаждений"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Обеспеченность городской территории зелёной инфраструктурой"
+        },
+        {
+          "id": "r2",
+          "text": "Видовое богатство"
+        },
+        {
+          "id": "r3",
+          "text": "Возможный риск эвтрофикации"
+        },
+        {
+          "id": "r4",
+          "text": "Условия для дыхания водных организмов"
+        }
+      ]
+    },
+    {
+      "id": "eco_eutro_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "eco_human_impact"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Что может способствовать эвтрофикации пресного водоёма?",
+      "answer": [
+        "a",
+        "b",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Эвтрофикацию вызывает избыток биогенных элементов, особенно азота и фосфора."
+        },
+        "full": {
+          "ru": "Эвтрофикацию вызывает избыток биогенных элементов, особенно азота и фосфора."
+        },
+        "rule": {
+          "ru": "Ищи источники дополнительного поступления питательных веществ."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.HUMAN.IMPACT",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Смыв удобрений с полей"
+        },
+        {
+          "id": "b",
+          "text": "Поступление фосфатов со сточными водами"
+        },
+        {
+          "id": "c",
+          "text": "Снижение поступления биогенных элементов до нуля"
+        },
+        {
+          "id": "d",
+          "text": "Избыток азота и фосфора"
+        }
+      ]
+    },
+    {
+      "id": "eco_capacity_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "eco_population_resources"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Что лучше всего описывает ёмкость среды для популяции?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Ёмкость среды определяется ресурсами и ограничениями территории."
+        },
+        "full": {
+          "ru": "Ёмкость среды определяется ресурсами и ограничениями территории."
+        },
+        "rule": {
+          "ru": "Численность популяции ограничена доступными ресурсами и условиями."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.POPULATION.RESOURCES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Максимальную численность, которую среда может длительно поддерживать"
+        },
+        {
+          "id": "b",
+          "text": "Скорость движения особей"
+        },
+        {
+          "id": "c",
+          "text": "Количество видов во всём биоме"
+        },
+        {
+          "id": "d",
+          "text": "Число мутаций за поколение"
+        }
+      ]
+    },
+    {
+      "id": "eco_pollution_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "eco_human_impact"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите тип загрязнения и характерный источник.",
+      "answer": [
+        "l1:r3",
+        "l2:r2",
+        "l3:r4",
+        "l4:r1"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Тип загрязнения определяется физическим или химическим фактором воздействия."
+        },
+        "full": {
+          "ru": "Тип загрязнения определяется физическим или химическим фактором воздействия."
+        },
+        "rule": {
+          "ru": "Классифицируй воздействие по природе фактора."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.HUMAN.IMPACT",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Шумовое"
+        },
+        {
+          "id": "l2",
+          "text": "Световое"
+        },
+        {
+          "id": "l3",
+          "text": "Химическое"
+        },
+        {
+          "id": "l4",
+          "text": "Тепловое"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Сброс нагретой воды электростанцией"
+        },
+        {
+          "id": "r2",
+          "text": "Яркая ночная подсветка"
+        },
+        {
+          "id": "r3",
+          "text": "Интенсивный транспорт"
+        },
+        {
+          "id": "r4",
+          "text": "Попадание нефтепродуктов в почву"
+        }
+      ]
+    },
+    {
+      "id": "eco_leaf_001",
+      "subject": "ecology",
+      "grade_min": 7,
+      "grade_max": 8,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "eco_sustainability_decisions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какие последствия может иметь полное удаление опавшей листвы из парка каждый год?",
+      "answer": [
+        "a",
+        "b",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Листовой опад участвует в круговороте вещества и создаёт местообитания."
+        },
+        "full": {
+          "ru": "Листовой опад участвует в круговороте вещества и создаёт местообитания."
+        },
+        "rule": {
+          "ru": "Хозяйственное решение оценивают по нескольким экосистемным функциям."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "ECO.SUSTAINABILITY.DECISIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Снижение возврата органического вещества в почву"
+        },
+        {
+          "id": "b",
+          "text": "Уменьшение числа убежищ для части беспозвоночных"
+        },
+        {
+          "id": "c",
+          "text": "Гарантированное улучшение всех свойств экосистемы"
+        },
+        {
+          "id": "d",
+          "text": "Изменение условий почвообразования"
+        }
+      ]
+    }
+  ]
+}
