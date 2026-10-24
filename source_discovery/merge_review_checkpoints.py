@@ -19,6 +19,7 @@ CHECKPOINTS = {
     "r297_review_r302.jsonl": "65d4536e4828574921456ce649dafb94a3b4995e",
     "r298_review_r303.jsonl": "08ad3a871798448ffc2bacdb591d0ae2ac4fd37a",
     "r299_review_r304.jsonl": "293a93e58479ccc7806638c5fcfa916273e9959e",
+    "r300_review_r305.jsonl": "f7639b0785919311d3df88405cb6b8462c3b89fb",
 }
 ALLOWED_TYPES = {"task", "solution", "criteria", "participant_work", "archive", "source", "unrelated", "review"}
 
