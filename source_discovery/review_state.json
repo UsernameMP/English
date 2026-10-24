@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T07:09:01.019Z",
+  "updated_at": "2026-10-24T07:10:06.785Z",
   "deferred_shards": [
     1,
     2,
@@ -13,12 +13,6 @@
     5
   ],
   "pending_label_checkpoints": [
-    "labels_checkpoint_20261011_17_07.jsonl",
-    "labels_checkpoint_20261011_1907_ibo01.jsonl",
-    "labels_checkpoint_20261011_1907_ibo02.jsonl",
-    "labels_checkpoint_20261011_1907_ibo03.jsonl",
-    "labels_checkpoint_20261011_1907_recovered02.jsonl",
-    "labels_checkpoint_20261011_1907_recovered03.jsonl",
     "labels_checkpoint_20261011_1907_recovered05.jsonl",
     "labels_checkpoint_20261011_1907_retry02.jsonl",
     "labels_checkpoint_20261012_0102_apho01.jsonl",
@@ -50,7 +44,7 @@
     "labels_checkpoint_20261013_011057_r413_single_29.jsonl",
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
-  "pending_labels_count": 36,
+  "pending_labels_count": 30,
   "canonical_merge_status": "r282_r283_r284_all_300_labels_merged; older checkpoint reconciliation remains pending",
   "canonical_merged_in_cycle": 300,
   "noncontiguous_review": {
@@ -1289,9 +1283,22 @@
     "resource_ids_matched": 36,
     "labels_merged": 36,
     "canonical_labels_before": 3196,
-    "canonical_labels_after": 3232,
+    "canonical_labels_after": 3270,
     "canonical_merge_commit": "3f86071c6b399b3528a1e93448f02ac5560d137c",
     "status": "merged",
-    "notes": "Historical 2026-10-11 JMO task labels; original checkpoint and raw provenance retained. No binary read."
+    "notes": "Historical 2026-10-11 JMO task labels; original checkpoint and raw provenance retained. No binary read.",
+    "additional_checkpoint_files": [
+      "labels_checkpoint_20261011_17_07.jsonl",
+      "labels_checkpoint_20261011_1907_ibo01.jsonl",
+      "labels_checkpoint_20261011_1907_ibo02.jsonl",
+      "labels_checkpoint_20261011_1907_ibo03.jsonl",
+      "labels_checkpoint_20261011_1907_recovered02.jsonl",
+      "labels_checkpoint_20261011_1907_recovered03.jsonl"
+    ],
+    "additional_labels_merged": 38,
+    "additional_merge_commit": "a72c98355b84ff558387d0385effb6af02ea1f88",
+    "total_checkpoint_files": 11,
+    "total_labels_merged": 74,
+    "pending_checkpoints_after": 30
   }
 }
