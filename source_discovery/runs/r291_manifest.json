@@ -1,0 +1,109 @@
+{
+  "cycle": "r291-20261024T095852000Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "completed_at": "2026-10-24T10:03:00.000Z",
+  "trigger": {
+    "commit": "be6df155fdf521917002140a828be14cfe2f31f1",
+    "run_id": 40084108373,
+    "status": "completed",
+    "conclusion": "success",
+    "run_url": "https://github.com/UsernameMP/English/actions/runs/40084108373"
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_links": 2187,
+    "unique_resource_urls": 238011,
+    "pending_pages": 108733,
+    "blocked_or_failed_cumulative": 2286,
+    "source": "successful GitHub Actions job 120843423159 logs",
+    "automatic_followup_run_id": 40084317324,
+    "automatic_followup_last_observed_status": "in_progress",
+    "followup_results_not_included": true
+  },
+  "discovery": {
+    "before": 1660,
+    "added": 11,
+    "after": 1671,
+    "commit": "367180a124ed996603422e655a80f7f04894e831",
+    "verification": "public HTML metadata only; no binary bodies",
+    "urls": [
+      "https://daryn.kz/kk/aul-olimp-kz/",
+      "https://daryn.kz/kk/respa-kz/",
+      "https://daryn.kz/kk/resp-junior-olimpiad-kz/",
+      "https://daryn.kz/kk/philosophy-syni-oilau/",
+      "https://daryn.kz/kk/finance-economica-kz/",
+      "https://daryn.kz/kk/resp-ol-lingvist-kz/",
+      "https://daryn.kz/kk/pro-eco-kz/",
+      "https://jbotsuruoka.iab.keio.ac.jp/about.html",
+      "https://oradeistorie.ro/olimpiade-si-concursuri/",
+      "https://cecierj.edu.br/olimpiada/ii-olimpiada-de-ciencia-arte-provas-e-gabaritos-fase-1/",
+      "https://cecierj.edu.br/category/olimpiada/"
+    ]
+  },
+  "review": {
+    "resource_shard": "resource_000296.jsonl",
+    "unique_resource_ids": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000807.jsonl",
+      "batch_000808.jsonl"
+    ],
+    "types": {
+      "task": 68,
+      "solution": 30,
+      "review": 2
+    },
+    "checkpoint": "source_discovery/runs/labels_checkpoint_r291_r296.jsonl",
+    "checkpoint_commit": "8fc1a7a7b91cff92a0fd77163069858a964a9b29",
+    "canonical_labels_before": 3470,
+    "canonical_labels_after": 3570,
+    "merge_commit": "8d6f2242c6a0781d1a14de47f1d87654f1b9791b",
+    "next_resource_shard": "resource_000297.jsonl",
+    "review_state_commit": "9436257f5b3e06d338c6d206aad62cd42e82b1ac",
+    "historical_pending_checkpoints": 30,
+    "ambiguous_urls": [
+      "https://nivam.sk/olympiady/F64ckAexpOH23m",
+      "https://nivam.sk/olympiady/F64ckAexpri23"
+    ]
+  },
+  "mime": {
+    "observations": 3043,
+    "unique_application_pdf_urls": 1340,
+    "pdf_without_pdf_extension": 1182,
+    "zip_unique_urls": 61,
+    "octet_stream_observations": 121,
+    "binary_bodies_downloaded": false
+  },
+  "audit": {
+    "backlog_before": 586,
+    "added": 15,
+    "after": 601,
+    "latest_commit": "f570e8b9124fbf204fe6c5654a4e8aea7c519202",
+    "topics": [
+      "Kazakhstan round/year/grade and Drive external access",
+      "Kazakhstan participant works and privacy",
+      "Japan biology 2022 host-only papers",
+      "Romanian history missing years",
+      "Brazil OCA stage and participant works",
+      "Slovakia F64 experiment document ambiguity",
+      "Slovakia F64 home-round solution pairing and URL aliases",
+      "MIME context and non-HTML",
+      "Brazil OMIFCE direct access 502"
+    ]
+  },
+  "safeguards": {
+    "binary_downloads": false,
+    "raw_ledger_modified_by_review": false,
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false
+  },
+  "verification": {
+    "sources": 1671,
+    "labels": 3570,
+    "backlog": 601,
+    "trigger_cycle": "r291-20261024T095852000Z",
+    "next_resource_shard": "resource_000297.jsonl"
+  }
+}
