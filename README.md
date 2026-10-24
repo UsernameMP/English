@@ -1,5 +1,11 @@
 # English Sprint — ВсОШ 5–6
 
+## v0.6.41
+
+- Android launcher icon and round launcher icon use the user-selected fourth (bottom-right) rocket + R mark from the concept sheet, cropped as a standalone icon and optimized as WebP.
+- Adaptive icon foreground uses the same new mark through `drawable-nodpi/rift_art.webp`; package identifier and pilot signing chain stay unchanged.
+- VersionName 0.6.41 / versionCode 48.
+
 ## v0.6.40
 
 - Two independent first-grade Mathematics practice packs aligned to public 2025 Magistr Scheta preparation requirements: Stage I speed (384 original questions, eight families) and Stage II Olympiad (288 original questions, sixteen families).
