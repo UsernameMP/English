@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Idempotently merge explicitly audited RIFT Review checkpoints, without downloading documents.
 
-Only the four reviewed resource shards listed here are eligible. Older historical
+Only the explicitly audited reviewed resource shards listed here are eligible. Older historical
 checkpoints require separate reconciliation and are intentionally not merged.
 """
 import hashlib
@@ -17,6 +17,7 @@ CHECKPOINTS = {
     "r295_review_r300.jsonl": "c578f9c6b466ce51704d0ec31c49c5c61d20ed1f",
     "r296_review_r301.jsonl": "1f3ad337080850ecd2c54105d33f8bab4231d0ab",
     "r297_review_r302.jsonl": "65d4536e4828574921456ce649dafb94a3b4995e",
+    "r298_review_r303.jsonl": "08ad3a871798448ffc2bacdb591d0ae2ac4fd37a",
 }
 ALLOWED_TYPES = {"task", "solution", "criteria", "participant_work", "archive", "source", "unrelated", "review"}
 
