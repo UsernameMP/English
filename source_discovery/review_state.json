@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T10:02:00.000Z",
+  "updated_at": "2026-10-24T11:00:58.847Z",
   "deferred_shards": [
     1,
     2,
@@ -185,10 +185,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000297.jsonl",
-    "last_completed_shard": "resource_000296.jsonl",
-    "cycle": "r291-20261024T095852000Z",
-    "reason": "100 distinct resource_id checked against 100 original occurrences in batch_000807–000808; checkpoint and canonical merge verified; raw cursor untouched"
+    "next_resource_shard": "resource_000298.jsonl",
+    "last_completed_shard": "resource_000297.jsonl",
+    "cycle": "r292-20261024T110058847Z",
+    "reason": "100 distinct resource_id matched to 100 raw occurrences in batch_000808–000809; checkpoint merged into canonical labels; raw ledger untouched."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -892,7 +892,7 @@
     "canonical_merge_pending": 0,
     "status": "merged_in_r279"
   },
-  "next_resource_shard": "resource_000295.jsonl",
+  "next_resource_shard": "resource_000298.jsonl",
   "raw_cursor_unchanged": true,
   "unresolved_earlier_shards": true,
   "notes": "r280 resource_000285 reviewed and merged: 100 unique resources, 100 raw occurrences; 6 task, 6 participant_work, 16 source, 72 unrelated. Raw cursor unchanged; older checkpoints still pending.",
@@ -1372,5 +1372,35 @@
       "F64ckAexpri23"
     ],
     "next_resource_shard": "resource_000297.jsonl"
+  },
+  "r292_review": {
+    "cycle": "r292-20261024T110058847Z",
+    "resource_shard": "resource_000297.jsonl",
+    "unique_resource_ids": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000808.jsonl",
+      "batch_000809.jsonl"
+    ],
+    "types": {
+      "task": 63,
+      "solution": 32,
+      "review": 5
+    },
+    "checkpoint": "runs/labels_checkpoint_r292_r297.jsonl",
+    "canonical_merged": 100,
+    "canonical_labels_before": 3570,
+    "canonical_labels_after": 3670,
+    "canonical_merge_commit": "bb7f4cec9308e99a5b0d095dccd18768186c3817",
+    "anomalies": [
+      "F36dkGul22",
+      "F63okFuk22m",
+      "f62okgul21 (1)",
+      "f62okgri21 (1)",
+      "f62ckaul21m exp"
+    ],
+    "next_resource_shard": "resource_000298.jsonl",
+    "raw_cursor_unchanged": true,
+    "notes": "Official Slovak physics HTML context; anomalous year/URL variants retained review; 30 historical checkpoints pending. No binary bodies fetched."
   }
 }
