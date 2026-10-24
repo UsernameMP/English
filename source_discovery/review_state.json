@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T22:10:05.254Z",
+  "updated_at": "2026-10-24T22:13:18.144Z",
   "deferred_shards": [
     1,
     2,
@@ -1783,5 +1783,13 @@
     "next_after_merge": "resource_000309.jsonl",
     "raw_cursor_unchanged": true,
     "reason": "100 unique resources and 100 raw occurrences verified from organizer HTML; no binary downloaded; merge pending Actions verification."
+  },
+  "r303_metadata_corrections": {
+    "source_checkpoint": "runs/r302_review_r307.jsonl",
+    "corrections_checkpoint": "runs/r303_r302_grade_corrections.jsonl",
+    "affected_resources": 27,
+    "field": "grade",
+    "status": "checkpointed_pending_canonical_field_patch",
+    "original_canonical_labels_preserved": true
   }
 }
