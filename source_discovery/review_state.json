@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T17:17:35.855Z",
+  "updated_at": "2026-10-24T18:08:45.592Z",
   "deferred_shards": [
     1,
     2,
@@ -182,10 +182,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000304.jsonl",
-    "last_completed_shard": "resource_000303.jsonl",
-    "cycle": "r298-20261024T170609536Z",
-    "reason": "r294–r298 five 100-resource checkpoints merged into canonical link_labels.jsonl (3788→4288) by successful GitHub Actions #40114993004; raw ledger and historical cursor untouched."
+    "next_resource_shard": "resource_000305.jsonl",
+    "last_completed_shard": "resource_000304.jsonl",
+    "cycle": "r299-20261024T175916747Z",
+    "reason": "100 unique r304 reviewed labels merged to canonical link_labels.jsonl (4288→4388), verified by GitHub Actions #40118888958 and full blob read; historical raw cursor unchanged."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -889,7 +889,7 @@
     "canonical_merge_pending": 0,
     "status": "merged_in_r279"
   },
-  "next_resource_shard": "resource_000304.jsonl",
+  "next_resource_shard": "resource_000305.jsonl",
   "raw_cursor_unchanged": true,
   "unresolved_earlier_shards": true,
   "notes": "r280 resource_000285 reviewed and merged: 100 unique resources, 100 raw occurrences; 6 task, 6 participant_work, 16 source, 72 unrelated. Raw cursor unchanged; older checkpoints still pending.",
@@ -1326,26 +1326,22 @@
     "status": "merged"
   },
   "last_operational_review": {
-    "cycle": "r290-20261024T090559061Z",
-    "resource_shard": "resource_000295.jsonl",
+    "cycle": "r299-20261024T175916747Z",
+    "resource_shard": "resource_000304.jsonl",
     "unique_resources": 100,
     "raw_occurrences": 100,
     "raw_shards": [
-      "batch_000805.jsonl",
-      "batch_000806.jsonl",
-      "batch_000807.jsonl"
+      "batch_000816.jsonl",
+      "batch_000817.jsonl"
     ],
     "counts": {
-      "task": 52,
-      "solution": 26,
-      "review": 8,
-      "unrelated": 12,
-      "archive": 1,
-      "source": 1
+      "task": 59,
+      "solution": 41
     },
-    "checkpoint": "runs/labels_checkpoint_r290_r295.jsonl",
+    "checkpoint": "runs/r299_review_r304.jsonl",
     "canonical_merged": 100,
-    "canonical_labels_after": 3470
+    "canonical_labels_after": 4388,
+    "workflow_run": 40118888958
   },
   "r291_review": {
     "cycle": "r291-20261024T095852000Z",
@@ -1650,5 +1646,33 @@
     "legacy_duplicate_resource_id": "cfda3ec050dd356e4aa707ad",
     "historical_checkpoints_pending": 27,
     "raw_cursor_unchanged": true
+  },
+  "r299_review": {
+    "cycle": "r299-20261024T175916747Z",
+    "resource_shard": "resource_000304.jsonl",
+    "unique_resources_reviewed": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000816.jsonl",
+      "batch_000817.jsonl"
+    ],
+    "classification_counts": {
+      "task": 59,
+      "solution": 41
+    },
+    "checkpoint": "runs/r299_review_r304.jsonl",
+    "checkpoint_blob_sha": "293a93e58479ccc7806638c5fcfa916273e9959e",
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 100,
+    "canonical_labels_before": 4288,
+    "canonical_labels_after": 4388,
+    "canonical_labels_sha": "059a1b8d316b6f08cbb0d069030c832d71332a2d",
+    "canonical_merge_workflow_run": 40118888958,
+    "canonical_merge_verified_at": "2026-10-24T18:08:45.592Z",
+    "raw_cursor_unchanged": true,
+    "next_resource_shard": "resource_000305.jsonl",
+    "historical_checkpoints_pending": 27,
+    "ambiguity": "b50okcri16- trailing hyphen; semantic solution label confidence 0.79; body uninspected",
+    "status": "merged"
   }
 }
