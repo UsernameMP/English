@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T19:10:33.749Z",
+  "updated_at": "2026-10-24T20:09:35.762Z",
   "deferred_shards": [
     1,
     2,
@@ -42,7 +42,7 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "r294_r295_r296_r297_r298_500_labels_merged_successfully; 27 older historical checkpoints remain pending",
+  "canonical_merge_status": "r294_to_r300_checkpoints_700_labels_merged_successfully; r301_100_labels_pending; 27 older historical checkpoints remain pending",
   "canonical_merged_in_cycle": 300,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -182,10 +182,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000305.jsonl",
-    "last_completed_shard": "resource_000304.jsonl",
-    "cycle": "r299-20261024T175916747Z",
-    "reason": "100 unique r304 reviewed labels merged to canonical link_labels.jsonl (4288→4388), verified by GitHub Actions #40118888958 and full blob read; historical raw cursor unchanged."
+    "next_resource_shard": "resource_000306.jsonl",
+    "last_completed_shard": "resource_000305.jsonl",
+    "cycle": "r300-20261024T190636393Z",
+    "reason": "100 r300 labels merged to canonical 4388→4488; GitHub Actions #40124042317 crawl job success and merge log verified. r301 r306 checkpoint not yet canonically merged."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -1705,5 +1705,24 @@
     "raw_cursor_unchanged": true,
     "operational_cursor_advanced": false,
     "reviewed_at": "2026-10-24T19:10:33.749Z"
+  },
+  "r301_pending": {
+    "cycle": "r301-20261024T200610568Z",
+    "resource_shard": "resource_000306.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000818.jsonl",
+      "batch_000819.jsonl"
+    ],
+    "counts": {
+      "task": 42,
+      "solution": 32,
+      "review": 26
+    },
+    "checkpoint": "runs/r301_review_r306.jsonl",
+    "canonical_merged": 0,
+    "next_after_merge": "resource_000307.jsonl",
+    "note": "26 Answer-sheet PDF links remain review: organizer HTML says Answers but document may be blank answer sheet; binary not inspected. No cursor advance until canonical merge."
   }
 }
