@@ -1,0 +1,87 @@
+{
+  "cycle": "r287-20261024T060728885Z",
+  "recorded_at": "2026-10-24T06:12:16.333Z",
+  "branch": "rift-source-index",
+  "repository": "UsernameMP/English",
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "22bb05dbfa559010430c182b0c06e770fbc421fb",
+    "workflow_run_id": 40068954293,
+    "workflow_status_at_manifest": "in_progress",
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40068954293",
+    "source_update_auto_run_id": 40069222702,
+    "source_update_auto_run_status_at_manifest": "pending"
+  },
+  "last_successful_crawler": {
+    "run_id": 40064934828,
+    "completed_at": "2026-10-24T05:13:28Z",
+    "html_pages": 60,
+    "new_links": 4380,
+    "unique_resource_urls": 228706,
+    "pending_pages": 106882,
+    "blocked_or_failed_cumulative": 2164,
+    "source": "GitHub Actions job log 120786326110"
+  },
+  "discovery": {
+    "added_sources": 6,
+    "canonical_sources_after": 1646,
+    "commit": "72eff5b4cbf9f57144163913867aad103a55a09c",
+    "urls": [
+      "https://npho.edu.kg/",
+      "https://edu.roalgo.ro/olimpiada/solutii/oji-clasa-XI-XII/",
+      "https://philo.abhinav.ac.in/InPO.htm",
+      "https://www.kanazawa-u.ac.jp/admission/teacher/a_lympiad/a_lympiad-bosyu2024/",
+      "https://ci.nii.ac.jp/ncid/BD1336960X",
+      "https://kaznaru.edu.kz/en/news/10086"
+    ]
+  },
+  "review": {
+    "resource_shard": "resource_000292.jsonl",
+    "raw_shards": [
+      "batch_000802.jsonl",
+      "batch_000803.jsonl",
+      "batch_000804.jsonl"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "counts": {
+      "task": 41,
+      "solution": 40,
+      "review": 19
+    },
+    "checkpoint": "source_discovery/runs/labels_checkpoint_r287_r292.jsonl",
+    "checkpoint_commit": "7623e9f5b42f1852234cf5b1a67fdd4b752c367b",
+    "canonical_labels_before": 2996,
+    "canonical_labels_after": 3096,
+    "canonical_merge_commit": "99b963285aa49d4af5ec8ad7f4707db3545bd32b",
+    "canonical_readback_confirmed": true,
+    "next_resource_shard": "resource_000293.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "mime": {
+    "observations": 2922,
+    "unique_pdf_urls": 1276,
+    "unique_pdf_urls_without_pdf_extension": 1118,
+    "interpretation": "MIME-only observations, not confirmation of olympiad relevance; no binary bodies downloaded"
+  },
+  "audit": {
+    "new_backlog_entries": 11,
+    "backlog_after": 554,
+    "commit": "f8eaec452e6f110040c9f3e08abf94ff92473a30",
+    "legacy_pending_checkpoints": 41,
+    "issues": [
+      "Slovak answer sheets and worksheets remain review",
+      "Mongolian university archive redirect loop",
+      "Nepal STAN timeout",
+      "NPhO 2024 final-stage document placeholders",
+      "copyright and one-year embargo on A-lympiad"
+    ]
+  },
+  "safeguards": {
+    "binary_downloads": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "schedule_modified": false,
+    "extra_manual_workflow_dispatches": false
+  }
+}
