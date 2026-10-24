@@ -1,0 +1,90 @@
+{
+  "cycle": "r284-20261024T030814875Z",
+  "generated_at": "2026-10-24T03:21:17.315Z",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "7d46f24699eadc5b01a08b7f6c4c442e0220a900",
+    "requested_at": "2026-10-24T03:08:14.875Z",
+    "run_id": 40057070715,
+    "run_result": "failure_at_git_push_due_concurrent_ref_update",
+    "recovery_run_id": 40057374540,
+    "recovery_run_result": "success",
+    "recovery_run_url": "https://github.com/UsernameMP/English/actions/runs/40057374540"
+  },
+  "crawler_last_published": {
+    "run_id": 40057374540,
+    "html_pages": 60,
+    "new_raw_links": 3407,
+    "pending_pages": 105263,
+    "blocked_or_failed_cumulative": 2132,
+    "unique_resource_urls": 225990,
+    "source_registry": 1630,
+    "metrics_source": "successful GitHub Actions job log; crawl_state 68.9MB not readable through connector"
+  },
+  "discovery": {
+    "new_verified_sources": 5,
+    "canonical_sources_before": 1625,
+    "canonical_sources_after": 1630,
+    "checkpoint": "source_discovery/runs/discovery_r284.jsonl",
+    "canonical_merge_commit": "926f3e6113aeb9f5dd84ab0a6f44fecd39b09856",
+    "urls": [
+      "https://noic.com.br/obo/economia/",
+      "https://sites.ac-corse.fr/maths/olympiades-4e-les-sujets/",
+      "https://www.prosofos.pt/",
+      "https://rustaveli.org.ge/geo/siakhleebi/qimiis-54-e-saertashoriso-olimpiadistvis-shesarchevi-turebi-gaimarta",
+      "https://olimpicos.net/nbpho/"
+    ]
+  },
+  "review": {
+    "resource_shard": "resource_000289.jsonl",
+    "raw_shards": [
+      "batch_000799.jsonl",
+      "batch_000800.jsonl"
+    ],
+    "unique_resource_ids": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "task": 41,
+      "solution": 37,
+      "review": 19,
+      "unrelated": 3
+    },
+    "checkpoint_prefix": "source_discovery/runs/labels_checkpoint_r284_r289_",
+    "checkpoint_count": 5,
+    "canonical_merged_r284": 100,
+    "reconciled_r282_r283": 200,
+    "canonical_labels_before": 2496,
+    "canonical_labels_after": 2796,
+    "canonical_merge_commit": "e57520898e5880c08b5ac672e4cfacdb32afbbab",
+    "next_resource_shard": "resource_000290.jsonl",
+    "raw_cursor_unchanged": true,
+    "historical_duplicate_resource_id_preserved": true
+  },
+  "mime": {
+    "observations": 2883,
+    "unique_pdf_urls": 1259,
+    "pdf_urls_without_dot_pdf": 1101,
+    "note": "MIME-only evidence; binary bodies not fetched and suitability not asserted"
+  },
+  "audit": {
+    "backlog_before": 508,
+    "backlog_after": 521,
+    "new_review_coverage_issues": 11,
+    "additional_workflow_and_size_issues": 2,
+    "resolved_label_merge_blockers": 3,
+    "checkpoint": "source_discovery/runs/r284_audit.jsonl",
+    "remaining_issues": [
+      "Older checkpoint reconciliation",
+      "Crawl_state monolithic 68.9MB read limit",
+      "GitHub Actions push race under concurrent branch writes",
+      "Per-year and stage archive coverage not established"
+    ]
+  },
+  "safeguards": {
+    "binary_documents_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_deleted": false,
+    "schedule_modified": false,
+    "extra_automation_created": false
+  }
+}
