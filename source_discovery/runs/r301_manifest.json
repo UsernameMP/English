@@ -1,0 +1,94 @@
+{
+  "cycle": "r301-20261024T200610568Z",
+  "reported_at": "2026-10-24T20:10:26.106Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "af11f1530d45ca5297a510e02642d6f83e28285c",
+    "path": "source_discovery/run_trigger.json",
+    "workflow": "RIFT Link Enumeration",
+    "new_run_status": "not_confirmed_yet",
+    "previous_successful_run": 40124042317
+  },
+  "discovery": {
+    "sources_before": 1734,
+    "verified_added": 7,
+    "sources_after": 1741,
+    "canonical_commit": "ba7b2f89edc3bd407f418f01ee94bc10717159e5",
+    "checkpoint": "source_discovery/runs/discovery_r301.jsonl",
+    "checkpoint_commit": "db4eb68cad97dcdd7e76bec0e2fede98dc136aa6",
+    "urls": [
+      "https://www.jpho.jp/challenge/challenge2024/",
+      "https://olimpiada-artystyczna.pl/",
+      "https://olimpiada.ic.unicamp.br/passadas/OBI1999/",
+      "https://olimpiada.ic.unicamp.br/passadas/OBI2023/fase3/programacao/",
+      "https://olimpiada.ic.unicamp.br/passadas/OBI2025/",
+      "https://www.olympiad.org.za/",
+      "https://www.tmfcr.cz/iypt.php"
+    ]
+  },
+  "review": {
+    "resource_shard": "resource_000306.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000818.jsonl",
+      "batch_000819.jsonl"
+    ],
+    "types": {
+      "task": 42,
+      "solution": 32,
+      "review": 26
+    },
+    "checkpoint": "source_discovery/runs/r301_review_r306.jsonl",
+    "checkpoint_sha": "9f574a33f87a1f2c06fef96442a62b738f982a4e",
+    "checkpoint_commit": "44ce1044ba66dc28052c2f3c32788201f1435282",
+    "allowlist_commit": "10970c00b688b665a13ea74702a1e2a471678f98",
+    "canonical_before": 4488,
+    "canonical_merge": "pending_workflow_confirmation",
+    "cursor_after_previous_merge": "resource_000306.jsonl",
+    "next_after_pending_merge": "resource_000307.jsonl"
+  },
+  "audit": {
+    "backlog_before": 695,
+    "added": 8,
+    "backlog_after": 703,
+    "commit": "948f15bfff847da50a5aba2d50943b5429c4fff9",
+    "historical_checkpoints_pending": 27
+  },
+  "crawler_latest_verified": {
+    "run_id": 40124042317,
+    "completed_at": "2026-10-24T19:20:10Z",
+    "html_pages": 60,
+    "new_raw_links": 2630,
+    "unique_resource_urls": 247482,
+    "pending_pages": 112564,
+    "blocked_or_failed_cumulative": 2521
+  },
+  "mime": {
+    "last_confirmed_at": "2026-10-24T18:14:37Z",
+    "observations": 3213,
+    "unique_application_pdf_urls": 1388,
+    "pdf_urls_without_pdf_extension": 1230,
+    "application_zip": 61,
+    "application_octet_stream": 159,
+    "current_full_ledger": "not_connector_readable",
+    "binary_downloaded": false
+  },
+  "safety": {
+    "no_binary_download": true,
+    "dropbox_unchanged": true,
+    "raw_shards_unchanged": true,
+    "schedule_unchanged": true
+  },
+  "state_shas": {
+    "source_discovery/run_trigger.json": "e2c8ab0d8cc92b860b2f8da6a445b0bb1d9b7dd0",
+    "source_discovery/sources.jsonl": "243974b5d579c61d066bbb9db1ca5c98c366d737",
+    "source_discovery/backlog.jsonl": "5d361e0204cb845b47f268852c9d91f7b31ebf79",
+    "source_discovery/review_state.json": "47f7d2d1a568f7386deec03d49870eaa33473599",
+    "source_discovery/link_labels.jsonl": "43d4a80164a628abc101558973bf48b2b01a7516",
+    "source_discovery/runs/r301_review_r306.jsonl": "9f574a33f87a1f2c06fef96442a62b738f982a4e",
+    "source_discovery/merge_review_checkpoints.py": "ec07c5588007214a2d35a3cc3767e1ee6e64f415",
+    "source_discovery/crawl_state.json": "d1e03ab0d30bf841d3f2fa20992c8b2104e986e8"
+  }
+}
