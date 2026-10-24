@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T20:09:35.762Z",
+  "updated_at": "2026-10-24T21:04:42.366Z",
   "deferred_shards": [
     1,
     2,
@@ -42,8 +42,8 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "r294_to_r300_checkpoints_700_labels_merged_successfully; r301_100_labels_pending; 27 older historical checkpoints remain pending",
-  "canonical_merged_in_cycle": 300,
+  "canonical_merge_status": "r294_to_r301_checkpoints_800_labels_merged_successfully; r302_100_labels_checkpointed_pending_canonical_merge; 27 older historical checkpoints remain pending",
+  "canonical_merged_in_cycle": 301,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -182,10 +182,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000306.jsonl",
-    "last_completed_shard": "resource_000305.jsonl",
-    "cycle": "r300-20261024T190636393Z",
-    "reason": "100 r300 labels merged to canonical 4388→4488; GitHub Actions #40124042317 crawl job success and merge log verified. r301 r306 checkpoint not yet canonically merged."
+    "next_resource_shard": "resource_000307.jsonl",
+    "last_completed_shard": "resource_000306.jsonl",
+    "cycle": "r301-20261024T200610568Z",
+    "reason": "GitHub Actions #40128456906 success; e0e8c305 commit adds exactly 100 r301 labels to canonical (4488→4588). r302 r307 100-label checkpoint is not yet merged; do not advance to r308."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -1695,15 +1695,15 @@
     "checkpoint": "runs/r300_review_r305.jsonl",
     "checkpoint_blob_sha": "f7639b0785919311d3df88405cb6b8462c3b89fb",
     "full_labels_checkpointed": 100,
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "canonical_labels_before": 4388,
-    "canonical_merge_status": "checkpoint_published_sha_allowlisted_workflow_pending",
+    "canonical_merge_status": "verified_success",
     "next_resource_shard_after_merge": "resource_000306.jsonl",
     "ambiguous_urls": [
       "https://nivam.sk/olympiady/b49okf4ul15"
     ],
     "raw_cursor_unchanged": true,
-    "operational_cursor_advanced": false,
+    "operational_cursor_advanced": true,
     "reviewed_at": "2026-10-24T19:10:33.749Z"
   },
   "r301_pending": {
@@ -1721,8 +1721,33 @@
       "review": 26
     },
     "checkpoint": "runs/r301_review_r306.jsonl",
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "next_after_merge": "resource_000307.jsonl",
-    "note": "26 Answer-sheet PDF links remain review: organizer HTML says Answers but document may be blank answer sheet; binary not inspected. No cursor advance until canonical merge."
+    "note": "26 Answer-sheet PDF links remain review: organizer HTML says Answers but document may be blank answer sheet; binary not inspected. No cursor advance until canonical merge.",
+    "canonical_merge_commit": "e0e8c3054534a4e23c883a7bfafc53bb4bc3bb97",
+    "status": "resolved"
+  },
+  "r302_pending": {
+    "cycle": "r302-20261024T205959422Z",
+    "resource_shard": "resource_000307.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000819.jsonl",
+      "batch_000820.jsonl"
+    ],
+    "counts": {
+      "task": 79,
+      "solution": 20,
+      "criteria": 1
+    },
+    "checkpoint": "runs/r302_review_r307.jsonl",
+    "checkpoint_blob_sha": "f59716a0b441557c6693a95436aa925253be8261",
+    "canonical_merged": 0,
+    "canonical_before": 4588,
+    "allowlist_commit": "890ce2fe2948acaf66e748b89b8191194064e209",
+    "next_after_merge": "resource_000308.jsonl",
+    "raw_cursor_unchanged": true,
+    "reason": "No PDF/ZIP/image downloaded; labels based on organizer HTML and original raw occurrences; canonical merge awaits a completed workflow."
   }
 }
