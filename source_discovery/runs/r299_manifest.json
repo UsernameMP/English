@@ -1,0 +1,85 @@
+{
+  "cycle": "r299-20261024T175916747Z",
+  "reported_at": "2026-10-24T18:03:27.958Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "requested_at": "2026-10-24T17:59:16.747Z",
+    "commit": "99406c600ba4636706a41b48b5034cbf152b4a05",
+    "workflow_run_id": 40118613153,
+    "status": "in_progress_at_checkpoint"
+  },
+  "discovery": {
+    "verified_added": 3,
+    "sources_before": 1725,
+    "sources_after": 1728,
+    "commit": "1e5bac7296f0342bbcf0bfb9fbca483bfa9ed6cf",
+    "urls": [
+      "https://myclo.my/past-year-questions",
+      "https://olimpiadadeportugues.org/treinamento/op/banco-de-questoes",
+      "https://olimpiadadeportugues.org/treinamento/op-be-a-ba/banco-de-questoes"
+    ],
+    "verification": "direct public HTML link metadata; no binary downloads"
+  },
+  "review": {
+    "resource_shard": "resource_000304.jsonl",
+    "raw_shards": [
+      "batch_000816.jsonl",
+      "batch_000817.jsonl"
+    ],
+    "unique_resources": 100,
+    "matched_occurrences": 100,
+    "types": {
+      "task": 59,
+      "solution": 41
+    },
+    "years": [
+      "2015/16",
+      "2016/17",
+      "2017/18"
+    ],
+    "checkpoint": "source_discovery/runs/r299_review_r304.jsonl",
+    "checkpoint_sha": "293a93e58479ccc7806638c5fcfa916273e9959e",
+    "checkpoint_commit": "a48ce4f60b908e85086f057c0c4eb8aacb1a8cde",
+    "merge_script_commit": "1d5d86613795b66c5852c351e33e24c744ec8a18",
+    "canonical_merge": "pending_workflow_confirmation",
+    "operational_cursor": "resource_000304.jsonl_until_merge_verified"
+  },
+  "audit": {
+    "backlog_before": 677,
+    "added": 8,
+    "backlog_after": 685,
+    "commit": "b14f3006e3b80174dc58775ca19f677b7053bf42",
+    "topics": [
+      "MyCLO missing years and solutions",
+      "Brazil Portuguese training vs competition papers",
+      "APLO license and actual contest language versions",
+      "Brazil ONHB grading access",
+      "EDI/IRO timeout and 403",
+      "OCCAFI direct 500",
+      "two historical duplicate source URLs",
+      "Slovak extensionless slug anomaly"
+    ]
+  },
+  "mime": {
+    "last_confirmed_observations": 3172,
+    "last_confirmed_unique_pdf_urls": 1382,
+    "last_confirmed_pdf_without_suffix": 1224,
+    "updated_metrics": "pending_current_crawl",
+    "binary_downloads": false
+  },
+  "safeguards": {
+    "binary_documents_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_deleted": false,
+    "robots_bypassed": false,
+    "additional_automation_created": false,
+    "schedule_modified": false
+  },
+  "pending": [
+    "Confirm GitHub Actions #40118613153 and subsequent source-push workflow #40118888958",
+    "Merge r299 100 labels into canonical ledger and only then advance operational cursor",
+    "Reconcile 27 historical checkpoints and one duplicated resource ID",
+    "Audit inaccessible/partial historical archives"
+  ]
+}
