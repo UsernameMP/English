@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T21:04:42.366Z",
+  "updated_at": "2026-10-24T22:10:05.254Z",
   "deferred_shards": [
     1,
     2,
@@ -42,8 +42,8 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "r294_to_r301_checkpoints_800_labels_merged_successfully; r302_100_labels_checkpointed_pending_canonical_merge; 27 older historical checkpoints remain pending",
-  "canonical_merged_in_cycle": 301,
+  "canonical_merge_status": "r294_to_r302_checkpoints_900_labels_merged_successfully; r303_100_labels_checkpointed_pending_canonical_merge; 27 older historical checkpoints remain pending",
+  "canonical_merged_in_cycle": 302,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -889,7 +889,7 @@
     "canonical_merge_pending": 0,
     "status": "merged_in_r279"
   },
-  "next_resource_shard": "resource_000305.jsonl",
+  "next_resource_shard": "resource_000308.jsonl",
   "raw_cursor_unchanged": true,
   "unresolved_earlier_shards": true,
   "notes": "r280 resource_000285 reviewed and merged: 100 unique resources, 100 raw occurrences; 6 task, 6 participant_work, 16 source, 72 unrelated. Raw cursor unchanged; older checkpoints still pending.",
@@ -1326,22 +1326,22 @@
     "status": "merged"
   },
   "last_operational_review": {
-    "cycle": "r299-20261024T175916747Z",
-    "resource_shard": "resource_000304.jsonl",
+    "cycle": "r303-20261024T220548412Z",
+    "resource_shard": "resource_000308.jsonl",
     "unique_resources": 100,
     "raw_occurrences": 100,
     "raw_shards": [
-      "batch_000816.jsonl",
-      "batch_000817.jsonl"
+      "batch_000820.jsonl",
+      "batch_000821.jsonl"
     ],
     "counts": {
-      "task": 59,
-      "solution": 41
+      "task": 71,
+      "solution": 29
     },
-    "checkpoint": "runs/r299_review_r304.jsonl",
-    "canonical_merged": 100,
-    "canonical_labels_after": 4388,
-    "workflow_run": 40118888958
+    "checkpoint": "runs/r303_review_r308.jsonl",
+    "canonical_merged": 0,
+    "canonical_labels_after": 4688,
+    "status": "checkpointed_pending_merge"
   },
   "r291_review": {
     "cycle": "r291-20261024T095852000Z",
@@ -1743,11 +1743,45 @@
     },
     "checkpoint": "runs/r302_review_r307.jsonl",
     "checkpoint_blob_sha": "f59716a0b441557c6693a95436aa925253be8261",
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "canonical_before": 4588,
     "allowlist_commit": "890ce2fe2948acaf66e748b89b8191194064e209",
     "next_after_merge": "resource_000308.jsonl",
     "raw_cursor_unchanged": true,
-    "reason": "No PDF/ZIP/image downloaded; labels based on organizer HTML and original raw occurrences; canonical merge awaits a completed workflow."
+    "reason": "No PDF/ZIP/image downloaded; labels based on organizer HTML and original raw occurrences; canonical merge awaits a completed workflow.",
+    "canonical_after": 4688,
+    "canonical_merge_workflow_run": 40132548058,
+    "canonical_merge_commit": "7d6a4ff1",
+    "status": "resolved",
+    "merge_verified_at": "2026-10-24T22:10:05.254Z"
+  },
+  "r303_pending": {
+    "cycle": "r303-20261024T220548412Z",
+    "resource_shard": "resource_000308.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000820.jsonl",
+      "batch_000821.jsonl"
+    ],
+    "counts": {
+      "task": 71,
+      "solution": 29
+    },
+    "subjects": {
+      "coding_robotics": 14,
+      "economic_management_sciences": 8,
+      "mathematical_literacy": 11,
+      "technology": 7,
+      "mathematics": 60
+    },
+    "checkpoint": "runs/r303_review_r308.jsonl",
+    "checkpoint_blob_sha": "6ee039da354c2f423ee1b099fdbbb6c879b2f1b3",
+    "canonical_merged": 0,
+    "canonical_before": 4688,
+    "allowlist_blob_sha": "5c29652883370adb32ebeb0ce6f7bc9835dca58f",
+    "next_after_merge": "resource_000309.jsonl",
+    "raw_cursor_unchanged": true,
+    "reason": "100 unique resources and 100 raw occurrences verified from organizer HTML; no binary downloaded; merge pending Actions verification."
   }
 }
