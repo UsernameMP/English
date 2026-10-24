@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T15:09:18.469Z",
+  "updated_at": "2026-10-24T16:07:29.600Z",
   "deferred_shards": [
     1,
     2,
@@ -1535,5 +1535,44 @@
       "B57skDri24m",
       "B57okEbotul23_"
     ]
+  },
+  "r297_pending": {
+    "cycle": "r297-20261024T160100957Z",
+    "resource_shard": "resource_000302.jsonl",
+    "unique_resources_reviewed": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000814.jsonl",
+      "batch_000815.jsonl"
+    ],
+    "classification_counts": {
+      "task": 47,
+      "solution": 38,
+      "review": 15
+    },
+    "checkpoint": "runs/r297_review_r302.jsonl",
+    "checkpoint_blob_sha": "65d4536e4828574921456ce649dafb94a3b4995e",
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 0,
+    "canonical_labels_sha_at_review": "e7ef21eb48b38eb2e9fb5240757a178b39429cb6",
+    "pending_review_checkpoints": [
+      "runs/r294_review_r299.jsonl",
+      "runs/r295_review_r300.jsonl",
+      "runs/r296_review_r301.jsonl",
+      "runs/r297_review_r302.jsonl"
+    ],
+    "pending_review_labels": 400,
+    "merge_helper": "merge_review_checkpoints.py",
+    "merge_workflow_step_added": true,
+    "merge_status": "helper_committed_not_yet_executed; 4.2MB direct create_blob failed HTTP/2",
+    "cursor_advanced": false,
+    "raw_ledger_unchanged": true,
+    "next_shard_after_canonical_merge": "resource_000303.jsonl",
+    "ambiguous_count": 15,
+    "unknown_year_count": 29,
+    "mime_observations_last_checked": 3131,
+    "mime_unique_pdf_urls": 1367,
+    "mime_extensionless_pdf_urls": 1209,
+    "older_historical_checkpoints_pending": 27
   }
 }
