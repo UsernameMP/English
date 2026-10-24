@@ -140,6 +140,26 @@
       "season": "2026-2027",
       "target_date": "2027-03-01",
       "mode": "competition"
+    },
+    {
+      "pack_id": "mathematics.olympiad.magistr.g1.speed.ru.2026",
+      "subject": "mathematics",
+      "grade": 1,
+      "competition": "Магистр счёта · неофициальный тренажёр",
+      "region": "Татарстан",
+      "season": "2026-2027",
+      "target_date": "2026-10-25",
+      "mode": "competition"
+    },
+    {
+      "pack_id": "mathematics.olympiad.magistr.g1.olymp.ru.2026",
+      "subject": "mathematics",
+      "grade": 1,
+      "competition": "Магистр счёта · неофициальный тренажёр",
+      "region": "Татарстан",
+      "season": "2026-2027",
+      "target_date": "2026-10-25",
+      "mode": "competition"
     }
   ]
 }
