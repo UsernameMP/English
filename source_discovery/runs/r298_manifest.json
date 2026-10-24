@@ -1,0 +1,159 @@
+{
+  "cycle": "r298-20261024T170609536Z",
+  "reported_at": "2026-10-24T17:18:12.991Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "63385d5aa4785e936c2d8918d6b019392a3209a1",
+    "requested_at": "2026-10-24T17:06:09.536Z",
+    "first_workflow_run": {
+      "id": 40114591230,
+      "conclusion": "failure",
+      "reason": "Crawler and checkpoint merge completed locally, but final git push rejected after concurrent branch update; no first-run results persisted."
+    },
+    "following_source_push_run": {
+      "id": 40114993004,
+      "conclusion": "success",
+      "source_commit": "c027614d409803ae9350283bcc2d23fd37ffa52d",
+      "crawler_commit": "155865c9742b",
+      "url": "https://github.com/UsernameMP/English/actions/runs/40114993004"
+    }
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_links": 580,
+    "unique_resource_urls": 244586,
+    "pending_pages": 110849,
+    "blocked_or_failed_cumulative": 2456,
+    "metrics_from": "Successful GitHub Actions #40114993004 job logs; source_discovery resource index build",
+    "raw_ledger_preserved": true
+  },
+  "discovery": {
+    "sources_before": 1714,
+    "verified_added": 11,
+    "sources_after": 1725,
+    "canonical_commit": "c027614d409803ae9350283bcc2d23fd37ffa52d",
+    "checkpoints": [
+      "source_discovery/runs/discovery_r298.jsonl",
+      "source_discovery/runs/discovery_r298_b.jsonl"
+    ],
+    "countries": [
+      "RO",
+      "PL",
+      "CO",
+      "CR",
+      "MX",
+      "international"
+    ],
+    "verification": "direct public HTML index and publication metadata only",
+    "urls": [
+      "https://www.isj.tm.edu.ro/specializari/limba-engleza/olimpiada-de-limba-engleza-2026",
+      "https://www.kgof.edu.pl/archiwum/73/aktualnosci.php",
+      "https://orm.univalle.edu.co/olimpiadas-anteriores",
+      "https://olcoma.bss.design/material_apoyo.html",
+      "https://revistas.tec.ac.cr/index.php/matematica/article/view/4233",
+      "https://revistas.tec.ac.cr/index.php/matematica/article/view/5047",
+      "https://onam.uas.edu.mx/",
+      "https://www.lop.org.pl/Szyfr_prawidlowych_odpowiedzi_testu_etapu_podstawowego_XXXII_OWE",
+      "https://opho.physoly.org/",
+      "https://www.integratedmath.org/",
+      "https://intchc.org/en/"
+    ]
+  },
+  "review": {
+    "resource_shard": "resource_000303.jsonl",
+    "raw_shards": [
+      "batch_000815.jsonl",
+      "batch_000816.jsonl"
+    ],
+    "unique_resources": 100,
+    "matched_raw_occurrences": 100,
+    "types": {
+      "task": 57,
+      "solution": 41,
+      "review": 2
+    },
+    "year_range": "2017/18–2019/20",
+    "country": "SK",
+    "subject": "biology",
+    "checkpoint": "source_discovery/runs/r298_review_r303.jsonl",
+    "checkpoint_sha": "08ad3a871798448ffc2bacdb591d0ae2ac4fd37a",
+    "canonical_merged": 100,
+    "canonical_before": 3788,
+    "canonical_after": 4288,
+    "canonical_blob_sha": "b5a5c11bb2658ba3ad18774b0a99781bd474a6d6",
+    "merge_includes": [
+      "r294",
+      "r295",
+      "r296",
+      "r297",
+      "r298"
+    ],
+    "total_new_canonical_labels": 500,
+    "operational_cursor": "resource_000304.jsonl",
+    "historical_checkpoints_pending": 27,
+    "unresolved_urls": [
+      "https://nivam.sk/olympiady/B54kkBpr220",
+      "https://nivam.sk/olympiady/B54kkBpr120"
+    ],
+    "legacy_duplicate_resource_id": "cfda3ec050dd356e4aa707ad"
+  },
+  "mime": {
+    "observations": 3172,
+    "unique_pdf_urls": 1382,
+    "pdf_urls_without_pdf_suffix": 1224,
+    "zip_unique_urls": 61,
+    "octet_stream_observations": 159,
+    "observations_sha": "ab31f6d1c1615dbe7857e8e00b271330bdd0da2b",
+    "binary_downloads": false,
+    "usability_unverified": true
+  },
+  "audit": {
+    "backlog_before": 659,
+    "added": 18,
+    "backlog_after": 677,
+    "resolved_older_merge_blockers": 2,
+    "latest_commit": "2496ac5c43ee9a16b909075f5016986bcf7c9423",
+    "topics": [
+      "Romania English grading by grades and years",
+      "Polish Physics experimental criteria",
+      "Colombia ORM pagination",
+      "Costa Rica historical mirrors and publication rights",
+      "Mexico astronomy organizer continuity",
+      "Poland ecology missing original task",
+      "South Africa SAASTA timeout",
+      "Argentina OACJr 403",
+      "Poland logic archive 403",
+      "Slovak practical task number mismatch",
+      "legacy resource-id duplicate",
+      "MIME extensionless PDF"
+    ],
+    "coverage_exhaustive": false
+  },
+  "resilience": {
+    "workflow_commit": "919120be48cff6bd0eea626d1ab5440eff29ab8c",
+    "change": "retry git pull --rebase + push on moving remote ref without force push",
+    "schedule_unchanged": true,
+    "manual_run_started": false
+  },
+  "safeguards": {
+    "binary_documents_downloaded": false,
+    "dropbox_modified": false,
+    "raw_links_deleted": false,
+    "robots_bypassed": false,
+    "redistribution_rights_assumed": false,
+    "additional_automation_created": false
+  },
+  "pending": [
+    "27 historical label checkpoints",
+    "two r303 swapped practical-task identifiers",
+    "one historical duplicate resource ID with distinct raw occurrences",
+    "historical year/round/criteria/rights/pagination gaps",
+    "403/timeout pages not verified as archives"
+  ]
+}
