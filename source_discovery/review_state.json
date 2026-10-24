@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T02:02:49.508Z",
+  "updated_at": "2026-10-24T03:13:38.533Z",
   "deferred_shards": [
     1,
     2,
@@ -63,10 +63,15 @@
     "source_discovery/runs/r283-20261024T020003516Z_review_r288_020_039.jsonl",
     "source_discovery/runs/r283-20261024T020003516Z_review_r288_040_059.jsonl",
     "source_discovery/runs/r283-20261024T020003516Z_review_r288_060_079.jsonl",
-    "source_discovery/runs/r283-20261024T020003516Z_review_r288_080_099.jsonl"
+    "source_discovery/runs/r283-20261024T020003516Z_review_r288_080_099.jsonl",
+    "source_discovery/runs/labels_checkpoint_r284_r289_000_019.jsonl",
+    "source_discovery/runs/labels_checkpoint_r284_r289_020_039.jsonl",
+    "source_discovery/runs/labels_checkpoint_r284_r289_040_059.jsonl",
+    "source_discovery/runs/labels_checkpoint_r284_r289_060_079.jsonl",
+    "source_discovery/runs/labels_checkpoint_r284_r289_080_099.jsonl"
   ],
   "pending_labels_count": 51,
-  "canonical_merge_status": "r269_r276_checkpoints_reconciled; older checkpoints remain pending",
+  "canonical_merge_status": "r284_100_labels_checkpointed_canonical_unmerged; r282_r283_also_pending; older checkpoints require reconciliation",
   "canonical_merged_in_cycle": 1,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -206,10 +211,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000288.jsonl",
-    "last_completed_shard": "resource_000287.jsonl",
-    "cycle": "r282-20261024T010851827Z",
-    "reason": "100 unique resources matched to 100 raw occurrences; all 100 labels checkpointed; canonical merge blocked because GitHub connector returns empty for link_labels.jsonl even one-line ranges; raw evidence preserved."
+    "next_resource_shard": "resource_000290.jsonl",
+    "last_completed_shard": "resource_000289.jsonl",
+    "cycle": "r284-20261024T030814875Z",
+    "reason": "100 unique resources matched to 100 raw occurrences from batch_000799 and batch_000800; five full label checkpoints read back; canonical label merge blocked by unreadable 2.5MB link_labels.jsonl."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -913,7 +918,7 @@
     "canonical_merge_pending": 0,
     "status": "merged_in_r279"
   },
-  "next_resource_shard": "resource_000289.jsonl",
+  "next_resource_shard": "resource_000290.jsonl",
   "raw_cursor_unchanged": true,
   "unresolved_earlier_shards": true,
   "notes": "r280 resource_000285 reviewed and merged: 100 unique resources, 100 raw occurrences; 6 task, 6 participant_work, 16 source, 72 unrelated. Raw cursor unchanged; older checkpoints still pending.",
@@ -1135,5 +1140,34 @@
     "raw_cursor_unchanged": true,
     "next_resource_shard": "resource_000289.jsonl",
     "notes": "Slovak Chemistry 60th/61st editions; response sheets left review, result list unrelated; no binary downloads"
+  },
+  "r284_review": {
+    "cycle": "r284-20261024T030814875Z",
+    "resource_shard": "resource_000289.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000799.jsonl",
+      "batch_000800.jsonl"
+    ],
+    "classification_counts": {
+      "unrelated": 3,
+      "task": 41,
+      "review": 19,
+      "solution": 37
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 0,
+    "checkpoint_files": [
+      "source_discovery/runs/labels_checkpoint_r284_r289_000_019.jsonl",
+      "source_discovery/runs/labels_checkpoint_r284_r289_020_039.jsonl",
+      "source_discovery/runs/labels_checkpoint_r284_r289_040_059.jsonl",
+      "source_discovery/runs/labels_checkpoint_r284_r289_060_079.jsonl",
+      "source_discovery/runs/labels_checkpoint_r284_r289_080_099.jsonl"
+    ],
+    "canonical_merge_blocker": "GitHub fetch_file of existing 2.5MB link_labels.jsonl returns empty; preserving original blob and full checkpoint records",
+    "raw_cursor_unchanged": true,
+    "next_resource_shard": "resource_000290.jsonl",
+    "notes": "Slovak Chemistry 59th-60th editions; 19 blank response sheets remain review, three results sheets unrelated, Slovak/Hungarian/Ukrainian variants preserved; no binary bodies downloaded."
   }
 }
