@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T00:09:25.289Z",
+  "updated_at": "2026-10-24T01:11:50.619Z",
   "deferred_shards": [
     1,
     2,
@@ -53,7 +53,12 @@
     "labels_checkpoint_20261013_011057_r413_single_25.jsonl",
     "labels_checkpoint_20261013_011057_r413_single_28.jsonl",
     "labels_checkpoint_20261013_011057_r413_single_29.jsonl",
-    "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
+    "labels_checkpoint_20261013_011057_r413_single_36.jsonl",
+    "source_discovery/runs/r282-20261024T010851827Z_review_r287_000_019.jsonl",
+    "source_discovery/runs/r282-20261024T010851827Z_review_r287_020_039.jsonl",
+    "source_discovery/runs/r282-20261024T010851827Z_review_r287_040_059.jsonl",
+    "source_discovery/runs/r282-20261024T010851827Z_review_r287_060_079.jsonl",
+    "source_discovery/runs/r282-20261024T010851827Z_review_r287_080_099.jsonl"
   ],
   "pending_labels_count": 78,
   "canonical_merge_status": "r269_r276_checkpoints_reconciled; older checkpoints remain pending",
@@ -121,7 +126,7 @@
       "cycle": "hourly-20261013T120636000Z-r27"
     }
   ],
-  "pending_labels_count_at_least": 155,
+  "pending_labels_count_at_least": 255,
   "recovered_cycle09_labels_checkpointed": 5,
   "recovered_cycle09_labels_still_local": 1,
   "r27_pending": {
@@ -196,10 +201,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000287.jsonl",
-    "last_completed_shard": "resource_000286.jsonl",
-    "cycle": "r281-review-20261024T000752807Z",
-    "reason": "100 unique URLs matched to 100 raw occurrences in batch_000796 and batch_000797; 100 full labels checkpointed and merged in canonical ledger; no raw deletion."
+    "next_resource_shard": "resource_000288.jsonl",
+    "last_completed_shard": "resource_000287.jsonl",
+    "cycle": "r282-20261024T010851827Z",
+    "reason": "100 unique resources matched to 100 raw occurrences; all 100 labels checkpointed; canonical merge blocked because GitHub connector returns empty for link_labels.jsonl even one-line ranges; raw evidence preserved."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -903,7 +908,7 @@
     "canonical_merge_pending": 0,
     "status": "merged_in_r279"
   },
-  "next_resource_shard": "resource_000286.jsonl",
+  "next_resource_shard": "resource_000288.jsonl",
   "raw_cursor_unchanged": true,
   "unresolved_earlier_shards": true,
   "notes": "r280 resource_000285 reviewed and merged: 100 unique resources, 100 raw occurrences; 6 task, 6 participant_work, 16 source, 72 unrelated. Raw cursor unchanged; older checkpoints still pending.",
@@ -1066,5 +1071,35 @@
     "checkpoint_prefix": "runs/r281-review-20261024T000752807Z_review_r286_",
     "raw_cursor_unchanged": true,
     "notes": "Slovak OĽP is Olympiáda ľudských práv (human rights), not philosophy. Official HTML confirms Kronika compilations include tests, essay prompts and final assignments; PDF/DOC bodies not downloaded."
+  },
+  "r282_review": {
+    "cycle": "r282-20261024T010851827Z",
+    "resource_shard": "resource_000287.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000797.jsonl",
+      "batch_000798.jsonl"
+    ],
+    "classification_counts": {
+      "unrelated": 21,
+      "source": 2,
+      "task": 41,
+      "solution": 26,
+      "review": 10
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 0,
+    "checkpoint_files": [
+      "source_discovery/runs/r282-20261024T010851827Z_review_r287_000_019.jsonl",
+      "source_discovery/runs/r282-20261024T010851827Z_review_r287_020_039.jsonl",
+      "source_discovery/runs/r282-20261024T010851827Z_review_r287_040_059.jsonl",
+      "source_discovery/runs/r282-20261024T010851827Z_review_r287_060_079.jsonl",
+      "source_discovery/runs/r282-20261024T010851827Z_review_r287_080_099.jsonl"
+    ],
+    "canonical_merge_blocker": "fetch_file(link_labels.jsonl) returns empty content even for 1-line ranges; existing blob SHA dba1eaa01a15ed6148862b5c638e30f870db4d84; safe update impossible without reading complete ledger",
+    "raw_cursor_unchanged": true,
+    "next_resource_shard": "resource_000288.jsonl",
+    "notes": "Slovak Chemistry Olympiad 2024/25-2026/27; distinguish Slovak and Hungarian versions, task vs solution, answer-sheet support as review; HTML landing page confirms ambiguous CHO61dkAprri is solution; no binary read."
   }
 }
