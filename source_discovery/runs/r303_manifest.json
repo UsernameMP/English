@@ -1,6 +1,6 @@
 {
   "cycle": "r303-20261024T220548412Z",
-  "reported_at": "2026-10-24T22:12:11.327Z",
+  "reported_at": "2026-10-24T22:12:41.661Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
@@ -28,7 +28,9 @@
     "checkpoint_commit": "16af59f2067cd0543eebd3e79c626dd1bf683925",
     "verified_public_html_urls": 7,
     "canonical_sources_before": 1750,
-    "canonical_merge": "pending_next_workflow; no duplicate URLs in prior 1750 checked"
+    "canonical_merge": "verified_direct_SHA_update; 7 records reread from canonical lines 1751–1757",
+    "canonical_sources_after": 1757,
+    "canonical_commit": "6a9fcb1134ca2135c17e1c4460a4dc69adae7e50"
   },
   "review": {
     "resource_shard": "resource_000308.jsonl",
@@ -72,7 +74,7 @@
   },
   "state_shas": {
     "run_trigger.json": "b6152690b8e54107e3340034c0c71504f16eb9c4",
-    "sources.jsonl": "b8acf873d40fe1b6a14af2f0d6f175d75b56d5e1",
+    "sources.jsonl": "786f14416cd907c54eb4e76eb622be5af5c43849",
     "backlog.jsonl": "cceb03afa6469364bec2f20e3067ea0d9244ec15",
     "review_state.json": "3d8c919d8b388df71d6580465a4d9155df5cd1ef",
     "link_labels.jsonl": "24b5288ea4820b024f3bf5f1f25a220b5e761030",
