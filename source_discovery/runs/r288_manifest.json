@@ -1,6 +1,6 @@
 {
   "cycle": "r288-20261024T070429086Z",
-  "recorded_at": "2026-10-24T07:09:21.309Z",
+  "recorded_at": "2026-10-24T07:11:20.034Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
@@ -8,12 +8,15 @@
     "commit": "7daf9d7648dd569359c813739f957a8b2e535fbe",
     "verified_readback": true,
     "workflow_run_id": 40072723166,
-    "status_at_manifest": "in_progress",
-    "conclusion_at_manifest": null,
+    "status_at_manifest": "completed",
+    "conclusion_at_manifest": "success",
     "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40072723166",
     "source_update_auto_run_id": 40072859465,
-    "source_auto_status_at_manifest": "pending",
-    "source_auto_conclusion_at_manifest": null
+    "source_auto_status_at_manifest": "in_progress",
+    "source_auto_conclusion_at_manifest": null,
+    "completed_at": "2026-10-24T07:10:39Z",
+    "run_log_verified": true,
+    "crawler_publication_verified": true
   },
   "last_confirmed_successful_crawler": {
     "run_id": 40069222702,
@@ -59,16 +62,17 @@
     "raw_cursor_unchanged": true
   },
   "historical_reconciliation": {
-    "checkpoint_files": 5,
-    "labels_merged": 36,
+    "checkpoint_files": 11,
+    "labels_merged": 74,
     "raw_occurrences_matched": 36,
     "resource_ids_matched": 36,
     "merge_commit": "3f86071c6b399b3528a1e93448f02ac5560d137c",
-    "pending_checkpoints_after": 36
+    "pending_checkpoints_after": 30,
+    "second_merge_commit": "a72c98355b84ff558387d0385effb6af02ea1f88"
   },
   "canonical_labels": {
     "before": 3096,
-    "after": 3232,
+    "after": 3270,
     "readback_confirmed": true
   },
   "mime": {
@@ -102,9 +106,20 @@
     "manual_extra_workflow_dispatches": false
   },
   "remaining": [
-    "Current r288 GitHub Actions runs not yet confirmed completed",
-    "36 legacy checkpoint files pending reconciliation",
+    "Additional source-update GitHub Actions run #40072859465 still in progress",
+    "30 legacy checkpoint files pending reconciliation",
     "Historic coverage, stage and criteria gaps unresolved",
     "Potential GitHub Actions branch update race"
-  ]
+  ],
+  "current_cycle_crawler": {
+    "run_id": 40072723166,
+    "job_id": 120809447226,
+    "html_pages": 60,
+    "new_links": 2415,
+    "unique_resource_urls": 235749,
+    "pending_pages": 107707,
+    "blocked_or_failed_cumulative": 2234,
+    "log_commit": "2b0c2c2e",
+    "completed_at": "2026-10-24T07:10:39Z"
+  }
 }
