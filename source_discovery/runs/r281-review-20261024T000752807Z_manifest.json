@@ -1,0 +1,101 @@
+{
+  "cycle": "r281-review-20261024T000752807Z",
+  "created_at": "2026-10-24T00:10:37.027Z",
+  "branch": "rift-source-index",
+  "pr_188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "already_present": "r281-20261024T000008652Z",
+    "commit": "5243a57d33ad209959220b5693285bf865b1ef60",
+    "updated_in_this_work_unit": false,
+    "reason": "Existing same-hour trigger had already initiated crawler; duplicate trigger intentionally avoided."
+  },
+  "crawler": {
+    "primary_run": {
+      "id": 40042729071,
+      "status": "completed",
+      "conclusion": "success",
+      "html_pages": 60,
+      "new_raw_links": 4611,
+      "pending_pages": 102529,
+      "blocked_or_failed_cumulative": 2008,
+      "unique_resource_urls": 221425,
+      "provenance": "GitHub Actions decoded job log"
+    },
+    "source_update_automatic_followup": {
+      "id": 40043433343,
+      "status_at_manifest": "in_progress",
+      "result_included": false
+    },
+    "crawl_state_large_file_unreadable_via_fetch_file": true
+  },
+  "discovery": {
+    "checkpoint": "source_discovery/runs/r281-review-20261024T000752807Z_discovery.jsonl",
+    "verified_new_urls": 4,
+    "sources_before": 1611,
+    "sources_after": 1615,
+    "commit": "a373b9daea49c0a620b80f687358683508d93e0b",
+    "countries": [
+      "ES"
+    ],
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000286.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000796.jsonl",
+      "batch_000797.jsonl"
+    ],
+    "counts": {
+      "unrelated": 60,
+      "source": 9,
+      "archive": 26,
+      "review": 5
+    },
+    "checkpoints": [
+      "source_discovery/runs/r281-review-20261024T000752807Z_review_r286_000_019.jsonl",
+      "source_discovery/runs/r281-review-20261024T000752807Z_review_r286_020_039.jsonl",
+      "source_discovery/runs/r281-review-20261024T000752807Z_review_r286_040_059.jsonl",
+      "source_discovery/runs/r281-review-20261024T000752807Z_review_r286_060_079.jsonl",
+      "source_discovery/runs/r281-review-20261024T000752807Z_review_r286_080_099.jsonl"
+    ],
+    "canonical_before": 2396,
+    "canonical_after": 2496,
+    "canonical_merge_commit": "8d0e5d8a7315190834d4706f3d341fe1942592a5",
+    "next_resource_shard": "resource_000287.jsonl",
+    "review_state_commit": "988895d8855c64a90a6a8fbe3cf3c46beb20f6c9",
+    "raw_cursor_unchanged": true,
+    "classification_basis": "Official HTML confirms OĽP is Slovak human-rights Olympiad; annual chronicles mix regional tests, essays and final assignments; no PDF/DOC read."
+  },
+  "audit": {
+    "checkpoint": "source_discovery/runs/r281-review-20261024T000752807Z_audit.jsonl",
+    "new_findings": 11,
+    "backlog_before": 477,
+    "backlog_after": 488,
+    "backlog_commit": "55514d5185d9ad212e65ca8d4d64364ee5dbcfdb"
+  },
+  "mime": {
+    "observations": 2833,
+    "unique_application_pdf_urls": 1230,
+    "pdf_urls_without_dot_pdf": 1058,
+    "binary_bodies_not_read": true
+  },
+  "safeguards": {
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "binary_downloaded": false,
+    "robots_and_access_boundaries_respected": true
+  },
+  "open_issues": [
+    "Source-update automatic follow-up run not yet included in crawler totals.",
+    "Older review checkpoints remain pending reconciliation.",
+    "OĽP chronicles are mixed historical collections; per-year/stage contents and rights not established.",
+    "Catalonia chemistry year headings lack directly parsed paper links.",
+    "NCP Pakistan event archive live fetch timed out."
+  ]
+}
