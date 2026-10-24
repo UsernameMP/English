@@ -22,7 +22,7 @@ all_counts = {}
 def expected_answer(q):
     category = q["skills"][0]
     p = q["prompt"]
-    v = list(map(int, re.findall(r"\\d+", p)))
+    v = list(map(int, re.findall(r"\d+", p)))
     if category in {"add10", "add20"}:
         if category == "add20":
             assert v[0] % 10 + v[1] % 10 >= 10
@@ -68,11 +68,11 @@ def expected_answer(q):
         return v[0] * (3 if "треугольник" in p else 4)
     if category == "position":
         assert len(q["options"]) == 3
-        match = re.search(r"Дети (\\w+), (\\w+) и (\\w+) стоят", p)
+        match = re.search(r"Дети (\w+), (\w+) и (\w+) стоят", p)
         assert match
         return match.group(2)
     if category == "deduction":
-        match = re.search(r"Монета не в (\\w+) и не в (\\w+) коробке", p)
+        match = re.search(r"Монета не в (\w+) и не в (\w+) коробке", p)
         assert match
         excluded = set(match.groups())
         return next(o["text"] for o in q["options"] if o["text"] not in excluded)
