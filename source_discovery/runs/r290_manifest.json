@@ -1,0 +1,107 @@
+{
+  "cycle": "r290-20261024T090559061Z",
+  "completed_at": "2026-10-24T09:10:25.087Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "73b1e4476f451fa30c7532cb77a4761b7a053e51",
+    "run_id": 40080617957,
+    "status": "completed",
+    "conclusion": "success",
+    "run_url": "https://github.com/UsernameMP/English/actions/runs/40080617957"
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_links": 3895,
+    "unique_resource_urls": 236754,
+    "pending_pages": 108137,
+    "blocked_or_failed_cumulative": 2274,
+    "source": "GitHub Actions 40080617957 successful job logs",
+    "subsequent_source_update_run_id": 40080753672,
+    "subsequent_run_status_last_checked": "in_progress",
+    "additional_source_metadata_run_id": 40080861772,
+    "additional_run_status_last_checked": "pending",
+    "additional_results_not_included": true
+  },
+  "discovery": {
+    "sources_before": 1656,
+    "added": 4,
+    "after": 1660,
+    "urls": [
+      "https://olm.math.uni.wroc.pl/zadania/",
+      "https://www.olimpiada.franciszkanie-warszawa.pl/archiwum.php",
+      "https://www.aip.nagoya-u.ac.jp/research-information/math-con",
+      "https://olimpiada.iapg.org.ar/"
+    ],
+    "latest_commit": "1fc06e50d4d4c20c1c84567d97ecbafb317ea134",
+    "verified_public_HTML_metadata_only": true
+  },
+  "review": {
+    "resource_shard": "resource_000295.jsonl",
+    "unique_resource_ids": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000805.jsonl",
+      "batch_000806.jsonl",
+      "batch_000807.jsonl"
+    ],
+    "types": {
+      "task": 52,
+      "solution": 26,
+      "review": 8,
+      "unrelated": 12,
+      "archive": 1,
+      "source": 1
+    },
+    "checkpoint": "source_discovery/runs/labels_checkpoint_r290_r295.jsonl",
+    "checkpoint_latest_commit": "757511b17ab35c4060624e12e015164b2e3353e3",
+    "canonical_labels_before": 3370,
+    "after": 3470,
+    "latest_merge_commit": "5b7fbf2b307cb133faac3113e44f67f5bfd81d42",
+    "next_resource_shard": "resource_000296.jsonl",
+    "review_state_latest_commit": "579e0df2a521505739ff75704af1194c27078d67",
+    "old_pending_checkpoint_files": 30
+  },
+  "mime": {
+    "observations": 3007,
+    "application_pdf_unique_urls": 1320,
+    "application_pdf_without_pdf_extension": 1162,
+    "zip_unique_urls": 61,
+    "octet_stream_observations": 105,
+    "all_metadata_only": true,
+    "extension_rule": "/\\.pdf(?:$|[?#])/i"
+  },
+  "audit": {
+    "backlog_before": 575,
+    "added": 11,
+    "after": 586,
+    "latest_commit": "31f1527524155ba66471dde2ffe3e808672c4d4f",
+    "topics": [
+      "Poland linguistic olympiad missing years and stages",
+      "Franciscan olympiad inconsistent early edition numbering",
+      "Nagoya mathematics contest historical migration",
+      "Argentina energy olympiad missing historical tasks",
+      "Taiwan geography portal timeout",
+      "CNFG successor URL 404",
+      "Indonesia OCEANS 403 and template-content risk",
+      "Slovak Physics F67 solution year-code conflict",
+      "Slovak Chemistry answer sheets vs solutions",
+      "Slovak Physics F66 incomplete stage pairings",
+      "MIME octet-stream vs actual competition context"
+    ]
+  },
+  "safeguards": {
+    "binary_downloads": false,
+    "raw_ledger_modified_by_review": false,
+    "dropbox_modified": false,
+    "automation_schedule_modified": false,
+    "additional_automation_created": false
+  },
+  "verification": {
+    "source_count": 1660,
+    "label_count": 3470,
+    "backlog_count": 586,
+    "next_resource_shard": "resource_000296.jsonl",
+    "run_trigger_cycle": "r290-20261024T090559061Z"
+  }
+}
