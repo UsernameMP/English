@@ -1,0 +1,76 @@
+{
+  "cycle": "r293-20261024T120656000Z",
+  "requested_at": "2026-10-24T12:06:56.000Z",
+  "branch": "rift-source-index",
+  "repository": "UsernameMP/English",
+  "trigger": {
+    "commit": "c5dc1776fedcba819abb6268a5c2f79287ca1a70",
+    "workflow_run": 40092640772,
+    "status": "success",
+    "subsequent_run": 40092738924,
+    "subsequent_status": "in_progress"
+  },
+  "discovery": {
+    "new_sources": 11,
+    "source_count": 1688,
+    "commit": "9e668ce395cc81743eb7bb5a00bef04eb0883078",
+    "verification": "public HTML only; no binary bodies"
+  },
+  "review": {
+    "resource_shard": "resource_000298.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000809.jsonl",
+      "batch_000810.jsonl"
+    ],
+    "counts": {
+      "task": 61,
+      "solution": 34,
+      "review": 5
+    },
+    "checkpoint": "runs/labels_checkpoint_r293_r298.jsonl",
+    "historical_checkpoints_reconciled": 3,
+    "historical_labels_recovered": 18,
+    "historical_checkpoint": "runs/labels_checkpoint_r293_historical_recovered18.jsonl",
+    "canonical_labels_after": 3788,
+    "canonical_merge_commits": [
+      "852b8aa4ab7498f44026e801b71f193aa9db9d2b",
+      "b1d53ba810d367d1077af987ff4763c28e0288ee"
+    ],
+    "next_resource_shard": "resource_000299.jsonl",
+    "pending_historical_checkpoints": 27
+  },
+  "mime": {
+    "observations": 3081,
+    "application_pdf_unique_urls": 1340,
+    "application_pdf_without_dot_pdf": 1182,
+    "application_octet_stream_observations": 159,
+    "interpretation": "MIME-only metadata; octet-stream not assumed PDF"
+  },
+  "audit": {
+    "new_backlog_items": 13,
+    "backlog_after": 623,
+    "commit": "3fd210bcb68ca560b6b6b6eb463b2a8090f3d6de"
+  },
+  "crawler_last_confirmed_success": {
+    "run": 40092640772,
+    "html_pages": 60,
+    "new_raw_links": 2127,
+    "unique_resource_urls": 239224,
+    "pending_pages": 109153,
+    "blocked_or_failed_cumulative": 2316
+  },
+  "safeguards": {
+    "binary_downloads": false,
+    "dropbox_modified": false,
+    "raw_ledger_review_modified": false,
+    "schedule_modified": false
+  },
+  "pending": [
+    "subsequent crawler run 40092738924 not yet completed",
+    "27 historical label checkpoints remain",
+    "5 ambiguous physics links in r298 remain review",
+    "unverified external archives and year/stage/criteria gaps remain"
+  ]
+}
