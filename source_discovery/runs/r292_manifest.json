@@ -1,0 +1,93 @@
+{
+  "cycle": "r292-20261024T110058847Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "completed_at": "2026-10-24T11:04:46.287Z",
+  "trigger": {
+    "commit": "1c7b4a2fa8f5d77e4af3a49640a3b02e1987e817",
+    "run_id": 40088215763,
+    "status": "completed",
+    "conclusion": "success",
+    "run_url": "https://github.com/UsernameMP/English/actions/runs/40088215763"
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_links": 1624,
+    "unique_resource_urls": 238516,
+    "pending_pages": 108968,
+    "blocked_or_failed_cumulative": 2298,
+    "source": "GitHub Actions crawl job 120855366144 log",
+    "note": "The new sources were committed after this run began; they are not asserted to have been crawled."
+  },
+  "discovery": {
+    "before": 1671,
+    "added": 6,
+    "after": 1677,
+    "commit": "19d6c927713299061d95881a38cbb0cdefdfc3cc",
+    "verification": "public HTML metadata only",
+    "urls": [
+      "https://www.acku.org.my/scimathbusiness-pastyear",
+      "https://multimedia.uned.ac.cr/ece/olimpri/",
+      "https://multimedia.uned.ac.cr/ece/olimpri/materiales/cuadernillos-2021/",
+      "https://multimedia.uned.ac.cr/ece/olimpri/materiales/cuadernillos-2022/",
+      "https://multimedia.uned.ac.cr/ece/olimpri/materiales/cuadernillos-2023/",
+      "https://noticias.uai.edu.ar/facultades/tecnolog%C3%ADa-inform%C3%A1tica/2024/olimp%C3%ADada-federal-de-inform%C3%A1tica-y-rob%C3%B3tica-ofirca-2024-todo-lo-que-ten%C3%A9s-que-saber/"
+    ]
+  },
+  "review": {
+    "resource_shard": "resource_000297.jsonl",
+    "unique_resource_ids": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000808.jsonl",
+      "batch_000809.jsonl"
+    ],
+    "types": {
+      "task": 63,
+      "solution": 32,
+      "review": 5
+    },
+    "checkpoint": "source_discovery/runs/labels_checkpoint_r292_r297.jsonl",
+    "checkpoint_commit": "379e79c5ef97b1b3ec870c96ac87c0e06f2c32a7",
+    "canonical_labels_before": 3570,
+    "canonical_labels_after": 3670,
+    "merge_commit": "bb7f4cec9308e99a5b0d095dccd18768186c3817",
+    "review_state_commit": "f729a24dd2fb7291d17b9df8a898d50992d1b018",
+    "next_resource_shard": "resource_000298.jsonl",
+    "pending_historical_checkpoints": 30,
+    "anomalies": [
+      "F36dkGul22",
+      "F63okFuk22m",
+      "f62okgul21 (1)",
+      "f62okgri21 (1)",
+      "f62ckaul21m exp"
+    ]
+  },
+  "mime": {
+    "observations": 3080,
+    "unique_application_pdf_urls": 1340,
+    "pdf_without_pdf_extension": 1182,
+    "application_octet_stream_observations": 158,
+    "zip_unique_urls": 61,
+    "binary_bodies_downloaded": false
+  },
+  "audit": {
+    "backlog_before": 601,
+    "added": 9,
+    "after": 610,
+    "commit": "a74cde519ffed3bc9c3836a921b8f04cb5a767b0"
+  },
+  "safeguards": {
+    "binary_downloads": false,
+    "raw_ledger_modified_by_review": false,
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false
+  },
+  "verification": {
+    "canonical_labels": 3670,
+    "source_registry": 1677,
+    "backlog": 610,
+    "next_resource_shard": "resource_000298.jsonl"
+  }
+}
