@@ -1,0 +1,95 @@
+{
+  "cycle": "r282-20261024T010851827Z",
+  "created_at": "2026-10-24T01:13:17.594Z",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "cycle": "r282-20261024T010851827Z",
+    "commit": "27c22ea805d5146f723ea0a62daa8ae7c1ca4939",
+    "workflow_run_id": 40048452585,
+    "status_last_checked": "in_progress"
+  },
+  "crawler": {
+    "last_confirmed_success_run": 40043433343,
+    "html_pages": 60,
+    "new_raw_links": 4425,
+    "pending_pages": 103683,
+    "blocked_or_failed_cumulative": 2036,
+    "unique_resource_urls": 223411,
+    "latest_current_run_results_confirmed": false,
+    "source_update_queued_run": 40048704830,
+    "crawl_state_fetch_file_large_empty": true,
+    "source": "GitHub Actions decoded job logs"
+  },
+  "discovery": {
+    "sources_before": 1615,
+    "sources_added": 4,
+    "sources_after": 1619,
+    "commit": "2dd11071dc6005e243d9b76a6885bf0e9c6aca5d",
+    "urls": [
+      "https://miciencia.page/",
+      "https://www.ifset.org/programs/sllo",
+      "https://ipomexico.org/noticias.html",
+      "https://ipomexico.jimdofree.com/olimpiada-mexicana-de-filosofia/"
+    ],
+    "note": "Verified publicly indexed HTML, not verified full task collections. All URLs deduplicated against 1615 canonical entries."
+  },
+  "review": {
+    "resource_shard": "resource_000287.jsonl",
+    "raw_shards": [
+      "batch_000797.jsonl",
+      "batch_000798.jsonl"
+    ],
+    "unique_resource_ids": 100,
+    "raw_occurrences_matched": 100,
+    "counts": {
+      "task": 41,
+      "solution": 26,
+      "source": 2,
+      "unrelated": 21,
+      "review": 10
+    },
+    "checkpoint_files": [
+      "source_discovery/runs/r282-20261024T010851827Z_review_r287_000_019.jsonl",
+      "source_discovery/runs/r282-20261024T010851827Z_review_r287_020_039.jsonl",
+      "source_discovery/runs/r282-20261024T010851827Z_review_r287_040_059.jsonl",
+      "source_discovery/runs/r282-20261024T010851827Z_review_r287_060_079.jsonl",
+      "source_discovery/runs/r282-20261024T010851827Z_review_r287_080_099.jsonl"
+    ],
+    "checkpointed": 100,
+    "canonical_merged": 0,
+    "canonical_link_labels_count_last_known": 2496,
+    "canonical_blocker": "GitHub fetch_file returns empty for link_labels.jsonl even 1-line ranges, raw fetch HTTP 400 oversized; no unsafe overwrite",
+    "review_state_commit": "00e3661b40142fcaf24a84fc1b20d860181493cf",
+    "next_shard": "resource_000288.jsonl"
+  },
+  "mime": {
+    "observations": 2861,
+    "application_pdf_unique_urls": 1243,
+    "pdf_urls_without_dot_pdf": 1085,
+    "binary_bodies_downloaded": 0
+  },
+  "audit": {
+    "backlog_before": 488,
+    "added": 10,
+    "backlog_after": 498,
+    "commit": "7f95092667260d9d5714c0a9db036116841d6247"
+  },
+  "safeguards": {
+    "no_pdf_doc_zip_image_torrent_body_download": true,
+    "raw_shards_unchanged_by_review": true,
+    "dropbox_unmodified": true,
+    "schedule_unchanged": true,
+    "no_extra_automation_instances": true,
+    "rights_unknown_unless_explicit": true
+  },
+  "open_issues": [
+    "Current crawler run #40048452585 has not yet completed.",
+    "Canonical link_labels.jsonl inaccessible via connector; 100 labels safely checkpointed but not merged.",
+    "Older label checkpoints still require reconciliation.",
+    "Competition year-stage-category coverage and rights unknown for several sources."
+  ]
+}
