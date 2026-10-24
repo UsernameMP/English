@@ -1,0 +1,133 @@
+{
+  "cycle": "r297-20261024T160100957Z",
+  "reported_at": "2026-10-24T16:11:09.206Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "commit": "e6d331b9d6870c7f9747d37fa098af148eac859b",
+    "workflow_run_id": 40109602288,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/UsernameMP/English/actions/runs/40109602288"
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_links": 7914,
+    "unique_resource_urls": 244291,
+    "pending_pages": 110827,
+    "blocked_or_failed_cumulative": 2431,
+    "visited_pages": 21917,
+    "updated_at": "2026-10-24T16:06:18+00:00",
+    "run_log_job_id": 120918362843,
+    "metrics_verified_from": "GitHub Actions logs + crawl_state.json blob + resource shards",
+    "commit": "622ad223756a00a82667c1fceb31b82cd12d6f4d"
+  },
+  "following_automatic_run": {
+    "id": 40109882528,
+    "status_at_checkpoint": "pending",
+    "triggered_by": "source registry commit",
+    "metrics_not_included": true
+  },
+  "discovery": {
+    "sources_before": 1706,
+    "added": 8,
+    "sources_after": 1714,
+    "commit": "878add8558ae0101e6f41e66e66f3d1e04a8cd9a",
+    "countries": [
+      "EE",
+      "PT",
+      "AM",
+      "PL"
+    ],
+    "source_urls": [
+      "https://teaduskool.ut.ee/et/olumpiaadid/eesti/bioloogiaolumpiaad/arhiiv",
+      "https://olumpiaadid.tallinn.ee/20242025-oppeaasta-koolivooru-ulesanded-ja-lahendused",
+      "https://olimpiadas.spf.pt/apuramento/2018.shtml",
+      "https://olymp.am/",
+      "https://eio.ee/",
+      "https://www.concurso-de-pangea.com.pt/provas-2023/",
+      "https://kuratorium.krakow.pl/malopolski-konkurs-geograficzny/",
+      "https://olimpicos.net/efo/"
+    ],
+    "verified_by": "public HTML metadata only",
+    "duplicates_skipped": 2,
+    "existing_normalized_duplicate_entries": 12
+  },
+  "review": {
+    "resource_shard": "resource_000302.jsonl",
+    "unique_resources": 100,
+    "matched_raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000814.jsonl",
+      "batch_000815.jsonl"
+    ],
+    "types": {
+      "task": 47,
+      "solution": 38,
+      "review": 15
+    },
+    "unknown_year": 29,
+    "checkpoint": "source_discovery/runs/r297_review_r302.jsonl",
+    "checkpoint_blob_sha": "65d4536e4828574921456ce649dafb94a3b4995e",
+    "canonical_merged": 0,
+    "canonical_labels_count": 3788,
+    "pending_r294_to_r297": 400,
+    "older_checkpoints_pending": 27,
+    "operational_cursor_advanced": false,
+    "reason": "4.2MB direct Git blob write failed HTTP/2; reviewed checkpoints preserved"
+  },
+  "canonical_merge_remediation": {
+    "script": "source_discovery/merge_review_checkpoints.py",
+    "workflow": ".github/workflows/rift-link-enumeration.yml",
+    "script_commit": "6b0079f2f689451545ebbd842fcc5ae294bd6de3",
+    "workflow_commit": "14161aed457e6553f4bad245b2bf683310f09e7e",
+    "status": "committed, not yet observed running; allowlisted four 100-row checkpoints, validates Git blob SHA, deduplicates raw_occurrence_id/resource_id, atomic write",
+    "schedule_changed": false,
+    "additional_manual_run": false
+  },
+  "mime": {
+    "observations": 3134,
+    "application_pdf_unique_urls": 1370,
+    "pdf_without_pdf_suffix": 1212,
+    "application_octet_stream_observations": 159,
+    "observations_sha": "560e4eba51df59c3263c80f0a363ae4bb598f760",
+    "binary_bodies_fetched": false,
+    "usability_unverified": true
+  },
+  "audit": {
+    "backlog_before": 648,
+    "added": 11,
+    "after": 659,
+    "commit": "c98c5f36b5aed3d26779001b2e29f51f4cdd68ea",
+    "topics": [
+      "Estonian historic stage/rubric coverage",
+      "Portuguese theoretical/experimental years",
+      "Armenian year-stage-criteria",
+      "Polish post-reform archive",
+      "Slovak malformed mixed-role links",
+      "existing source duplicates",
+      "Lithuanian 502",
+      "MIME taxonomy",
+      "canonical merge pending"
+    ]
+  },
+  "review_state_commit": "9bdbc3eee8fb81507d8e52517c0c8e620d022bfd",
+  "safeguards": {
+    "binary_downloads": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_review": false,
+    "schedule_modified": false,
+    "additional_automation_created": false
+  },
+  "pending": [
+    "following automatic crawler status",
+    "400 verified checkpoint labels not yet canonical merged",
+    "27 historical checkpoints",
+    "15 ambiguous r302 resources",
+    "historic year/round/rubric/rights/pagination gaps"
+  ]
+}
