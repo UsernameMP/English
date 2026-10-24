@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-24T03:20:02.839Z",
+  "updated_at": "2026-10-24T04:03:00Z",
   "deferred_shards": [
     1,
     2,
@@ -702,12 +702,12 @@
     "status": "merged_in_r279"
   },
   "latest_operational_resource_review": {
-    "last_completed_shard": "resource_000288.jsonl",
-    "next_resource_shard": "resource_000289.jsonl",
-    "cycle": "r283-20261024T020003516Z",
+    "last_completed_shard": "resource_000290.jsonl",
+    "next_resource_shard": "resource_000291.jsonl",
+    "cycle": "r285-20261024T040300000Z",
     "full_labels_checkpointed": 100,
-    "canonical_merged": 0,
-    "canonical_merge_pending": 100,
+    "canonical_merged": 100,
+    "canonical_merge_pending": 0,
     "canonical_raw_cursor_unchanged": true
   },
   "r271_pending": {
@@ -903,7 +903,7 @@
     "canonical_merge_pending": 0,
     "status": "merged_in_r279"
   },
-  "next_resource_shard": "resource_000290.jsonl",
+  "next_resource_shard": "resource_000291.jsonl",
   "raw_cursor_unchanged": true,
   "unresolved_earlier_shards": true,
   "notes": "r280 resource_000285 reviewed and merged: 100 unique resources, 100 raw occurrences; 6 task, 6 participant_work, 16 source, 72 unrelated. Raw cursor unchanged; older checkpoints still pending.",
@@ -1157,5 +1157,32 @@
     "notes": "Slovak Chemistry 59th-60th editions; 19 blank response sheets remain review, three results sheets unrelated, Slovak/Hungarian/Ukrainian variants preserved; no binary bodies downloaded. Canonical merge of r282-r284 (300 records) confirmed by readback; Hungarian -MZ metadata corrected.",
     "status": "merged",
     "canonical_merge_commit": "e57520898e5880c08b5ac672e4cfacdb32afbbab"
+  },
+  "r285_review": {
+    "cycle": "r285-20261024T040300000Z",
+    "resource_shard": "resource_000290.jsonl",
+    "raw_shards": [
+      "batch_000800.jsonl",
+      "batch_000801.jsonl"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences_in_examined_shards": 100,
+    "counts": {
+      "task": 39,
+      "solution": 37,
+      "review": 20,
+      "unrelated": 4
+    },
+    "checkpoints": [
+      "labels_checkpoint_r285_r290_01.jsonl",
+      "labels_checkpoint_r285_r290_02.jsonl",
+      "labels_checkpoint_r285_r290_03.jsonl",
+      "labels_checkpoint_r285_r290_04.jsonl",
+      "labels_checkpoint_r285_r290_05.jsonl"
+    ],
+    "canonical_labels_before": 2796,
+    "canonical_labels_after": 2896,
+    "canonical_merge_commit": "943c422bc194a568087e50e44c80e6fc1949c56b",
+    "notes": "Official NIVAM HTML context used; answer sheets retained review, mismatched season codes retained review; raw cursor not advanced."
   }
 }
