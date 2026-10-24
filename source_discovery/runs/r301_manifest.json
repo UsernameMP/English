@@ -1,14 +1,16 @@
 {
   "cycle": "r301-20261024T200610568Z",
-  "reported_at": "2026-10-24T20:10:26.106Z",
+  "reported_at": "2026-10-24T20:11:57.844Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
     "commit": "af11f1530d45ca5297a510e02642d6f83e28285c",
     "path": "source_discovery/run_trigger.json",
     "workflow": "RIFT Link Enumeration",
-    "new_run_status": "not_confirmed_yet",
-    "previous_successful_run": 40124042317
+    "new_run_status": "crawler_checkpoint_committed; workflow_run_id_and_final_job_conclusion_unavailable",
+    "previous_successful_run": 40124042317,
+    "crawler_commit": "625722e06537a652bc3cb65dd65e5113edf74286",
+    "crawler_commit_time": "2026-10-24T20:11:02Z"
   },
   "discovery": {
     "sources_before": 1734,
@@ -45,7 +47,7 @@
     "checkpoint_commit": "44ce1044ba66dc28052c2f3c32788201f1435282",
     "allowlist_commit": "10970c00b688b665a13ea74702a1e2a471678f98",
     "canonical_before": 4488,
-    "canonical_merge": "pending_workflow_confirmation",
+    "canonical_merge": "pending; canonical link_labels SHA unchanged after crawler checkpoint (r301 allowlist likely committed after workflow checkout)",
     "cursor_after_previous_merge": "resource_000306.jsonl",
     "next_after_pending_merge": "resource_000307.jsonl"
   },
@@ -89,6 +91,13 @@
     "source_discovery/link_labels.jsonl": "43d4a80164a628abc101558973bf48b2b01a7516",
     "source_discovery/runs/r301_review_r306.jsonl": "9f574a33f87a1f2c06fef96442a62b738f982a4e",
     "source_discovery/merge_review_checkpoints.py": "ec07c5588007214a2d35a3cc3767e1ee6e64f415",
-    "source_discovery/crawl_state.json": "d1e03ab0d30bf841d3f2fa20992c8b2104e986e8"
+    "source_discovery/crawl_state.json": "4acda061c42ef8d75255cdab4240dda7ca09e221",
+    "source_discovery/resource_observations.jsonl": "ce52f9c58a183bdbe52ad30f40903ff2022ffc4a"
+  },
+  "crawler_latest_published": {
+    "commit": "625722e06537a652bc3cb65dd65e5113edf74286",
+    "committer": "github-actions[bot]",
+    "published_at": "2026-10-24T20:11:02Z",
+    "metrics": "not_readable_from_large_crawl_state_through_connector"
   }
 }
