@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T00:10:12.845Z",
+  "updated_at": "2026-10-25T01:06:16.248Z",
   "deferred_shards": [
     1,
     2,
@@ -42,8 +42,8 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "r294_to_r304_checkpoints_1100_labels_merged_successfully; r305_100_labels_checkpointed_pending_canonical_merge; 27 older historical checkpoints remain pending",
-  "canonical_merged_in_cycle": 304,
+  "canonical_merge_status": "r294_to_r305_checkpoints_1200_labels_merged_successfully; r306_100_labels_checkpointed_pending_canonical_merge; 27 older historical checkpoints remain pending",
+  "canonical_merged_in_cycle": 305,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -182,10 +182,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000310.jsonl",
-    "last_completed_shard": "resource_000309.jsonl",
-    "cycle": "r305-20261025T000437600Z",
-    "reason": "GitHub Actions #40141046497 log confirmed r304 merged existing=4788 added=100 total=4888. r305 r310 100-label checkpoint SHA-allowlisted, canonical merge pending. Do not advance beyond r310 until verified."
+    "next_resource_shard": "resource_000311.jsonl",
+    "last_completed_shard": "resource_000310.jsonl",
+    "cycle": "r306-20261025T010210777Z",
+    "reason": "GitHub Actions #40145569249 job log confirmed r305 merge existing=4888 added=100 total=4988. r306 r311 100-label checkpoint SHA-allowlisted; canonical merge pending. Do not advance beyond r311 until verified."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -1844,10 +1844,38 @@
     },
     "checkpoint": "runs/r305_review_r310.jsonl",
     "checkpoint_blob_sha": "c497cae957172af9cfb7f4ceb0bbd4acb27502ee",
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "canonical_before": 4888,
     "next_after_merge": "resource_000311.jsonl",
     "raw_cursor_unchanged": true,
-    "reason": "Semantically reviewed 100 unique resource URLs using original raw anchors and organizer context. SHA-allowlisted in merge_review_checkpoints.py; awaiting successful workflow merge."
+    "reason": "Semantically reviewed 100 unique resource URLs using original raw anchors and organizer context. SHA-allowlisted in merge_review_checkpoints.py; awaiting successful workflow merge.",
+    "canonical_after": 4988,
+    "canonical_merge_workflow_run": 40145569249,
+    "canonical_merge_status": "verified_success_from_actions_job_log",
+    "status": "resolved",
+    "merge_verified_at": "2026-10-25T01:06:16.248Z"
+  },
+  "r306_pending": {
+    "cycle": "r306-20261025T010210777Z",
+    "resource_shard": "resource_000311.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000823.jsonl",
+      "batch_000824.jsonl",
+      "batch_000825.jsonl"
+    ],
+    "counts": {
+      "unrelated": 88,
+      "source": 10,
+      "review": 2
+    },
+    "checkpoint": "runs/r306_review_r311.jsonl",
+    "checkpoint_blob_sha": "7398a8845c27a10193f0993716ac864367e90abf",
+    "canonical_merged": 0,
+    "canonical_before": 4988,
+    "next_after_merge": "resource_000312.jsonl",
+    "raw_cursor_unchanged": true,
+    "reason": "French academic site navigation, not olympiad documents. All 100 occurrences semantically reviewed and checkpointed, pending canonical merge."
   }
 }
