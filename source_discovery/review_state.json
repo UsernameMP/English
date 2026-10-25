@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T07:13:55.214Z",
+  "updated_at": "2026-10-25T08:06:09.290Z",
   "deferred_shards": [
     1,
     2,
@@ -2098,5 +2098,42 @@
     "raw_cursor_unchanged": true,
     "historical_checkpoints_pending": 27,
     "notes": "HSE design and art-history tasks, keys, criteria and participant works; KöMaL numbered problem pages; ambiguous auxiliary data and scoring distributions retained review; stage metadata conservative; no binary downloads."
+  },
+  "r313_pending": {
+    "cycle": "r313-20261025T080111326Z",
+    "resource_shard": "resource_000318.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_checked": 100,
+    "raw_shards": [
+      "batch_000835.jsonl",
+      "batch_000836.jsonl",
+      "batch_000837.jsonl",
+      "batch_000838.jsonl",
+      "batch_000839.jsonl",
+      "batch_000840.jsonl"
+    ],
+    "counts": {
+      "solution": 3,
+      "task": 33,
+      "unrelated": 11,
+      "source": 8,
+      "criteria": 31,
+      "archive": 1,
+      "review": 13
+    },
+    "review_checkpoint": "runs/r313_review_r318.jsonl",
+    "review_checkpoint_sha": "d6627a7af10f90ea19bb330bcfea4e686bc7bd3f",
+    "discovery_checkpoint": "runs/discovery_r313.jsonl",
+    "discovery_checkpoint_sha": "c9d33e82ca3550c48a0e4d0f88d9838ed2147732",
+    "discovery_verified_new_urls": 13,
+    "sha_allowlisted": true,
+    "canonical_merged": 0,
+    "review_cursor_advanced": false,
+    "next_after_verified_merge": "resource_000319.jsonl",
+    "raw_cursor_unchanged": true,
+    "extensionless_pdf_mime_candidates": 50,
+    "observed_image_png": 1,
+    "rights_caveat": "Brazil OBB organizer explicitly forbids unauthorized exam reproduction; metadata only",
+    "notes": "HSE Higher Test art history and international relations tasks/criteria; HSE Higher League 2025/26 final-round university exams and rubrics; 13 ancillary documents retained review; no binaries downloaded."
   }
 }
