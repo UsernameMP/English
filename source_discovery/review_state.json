@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T15:15:38.827Z",
+  "updated_at": "2026-10-25T16:06:13.604Z",
   "deferred_shards": [
     1,
     2,
@@ -13,9 +13,10 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r320_review_r325.jsonl"
+    "runs/r320_review_r325.jsonl",
+    "runs/r321_review_r326.jsonl"
   ],
-  "pending_labels_count": 100,
+  "pending_labels_count": 200,
   "canonical_merge_status": "r319 resource_000324 100 labels merged via Actions #40205265951: canonical 6356 -> 6456 (verified job log and blob); r320 resource_000325 100 labels SHA-pinned, canonical merge pending.",
   "canonical_merged_in_cycle": 319,
   "noncontiguous_review": {
@@ -2321,5 +2322,31 @@
     "canonical_merged": 0,
     "cursor_advanced": false,
     "rights_note": "NOSB questions may only be released by national office; URL and metadata only"
+  },
+  "r321_pending": {
+    "cycle": "r321-20261025T160259441Z",
+    "resource_shard": "resource_000326.jsonl",
+    "reviewed_row_range": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000848.jsonl",
+      "batch_000849.jsonl"
+    ],
+    "classification_counts": {
+      "unrelated": 47,
+      "review": 2,
+      "task": 19,
+      "source": 1,
+      "archive": 16,
+      "solution": 15
+    },
+    "checkpoint": "runs/r321_review_r326.jsonl",
+    "checkpoint_blob_sha": "0bb11f34197902841cf62c0213317847f79056c5",
+    "sha_allowlisted_in": "merge_review_checkpoints.py",
+    "canonical_merged": 0,
+    "cursor_advanced": false,
+    "raw_cursor_unchanged": true,
+    "notes": "All 100 unique resource IDs mapped to exact raw occurrence IDs; official NOSB STEAM challenge HTML and OBL historical exams/keys; 2 gated Scoutlier resources remain review. No binary or account content downloaded."
   }
 }
