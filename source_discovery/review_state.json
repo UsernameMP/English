@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T06:08:41.079Z",
+  "updated_at": "2026-10-25T06:10:58.886Z",
   "deferred_shards": [
     1,
     2,
@@ -42,8 +42,8 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "r310 source+label checkpoints and r311 source+label checkpoints pending canonical merge verification; r311 SHA-allowlisted; 27 historical checkpoints pending; do not advance operational cursor until r310 confirmed",
-  "canonical_merged_in_cycle": 309,
+  "canonical_merge_status": "r310 15 sources merged (1807->1822) and 100 labels merged (5388->5488) in crawler persistence at 2026-10-25T06:08:14Z; r311 10 source and 100 label checkpoints SHA-pinned pending next merge; 27 historical checkpoints pending",
+  "canonical_merged_in_cycle": 310,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -182,10 +182,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000315.jsonl",
-    "last_completed_shard": "resource_000314.jsonl",
-    "cycle": "r310-20261025T050806871Z",
-    "reason": "r310 resource_000315 and r311 resource_000316 checkpoints published and SHA-allowlisted; canonical merge of r310 not yet confirmed. Keep cursor at resource_000315 until verified; do not reclassify resource_000316."
+    "next_resource_shard": "resource_000316.jsonl",
+    "last_completed_shard": "resource_000315.jsonl",
+    "cycle": "r311-20261025T060341694Z",
+    "reason": "r310 100 labels confirmed merged (canonical 5488); r311 resource_000316 100 labels checkpointed and SHA-allowlisted, pending canonical merge. Do not advance to resource_000317 until verified."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2056,6 +2056,9 @@
     "discovery_checkpoint_sha": "8c931576c552dec859a7c3c5507f1f65310b92a7",
     "canonical_merged": false,
     "next_after_verified_merge": "resource_000317.jsonl",
-    "cursor_advanced": false
+    "cursor_advanced": false,
+    "r310_canonical_merged": true,
+    "r310_canonical_label_count": 5488,
+    "r310_canonical_source_count": 1822
   }
 }
