@@ -1,1345 +1,6 @@
 {
   "queue": [
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/63",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/64",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/65",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/66",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/?start=180",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "parent_url": "https://wiskundeolympiade.nl/?start=192",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/58",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/59",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/60",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/61",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/nl/dashboard/mijn-studiekeuze",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "parent_url": "https://wiskundeolympiade.nl/junior",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/62",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/53",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/54",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/55",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/nl",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "parent_url": "https://wiskundeolympiade.nl/junior",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/56",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/57",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/48",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/49",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/nl/over-de-vu",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "parent_url": "https://wiskundeolympiade.nl/junior",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/50",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/51",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/52",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/42",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/nl/over-de-vu/faculteiten/faculteit-der-betawetenschappen",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "parent_url": "https://wiskundeolympiade.nl/junior",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/43",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/44",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/45",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/47",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://wiskundeolympiade.nl/nl/over-de-vu/diensten/bestuurszaken/meer-over/cookieverklaring",
-      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
-      "parent_url": "https://wiskundeolympiade.nl/junior",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/38",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/39",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/40",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/41",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/ruzne/wolframalpha.com",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "parent_url": "https://www.matematickaolympiada.cz/ruzne/matematicky-rozcestnik",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/34",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/35",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/36",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/37",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/ruzne/mathcomps.fun",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "parent_url": "https://www.matematickaolympiada.cz/ruzne/matematicky-rozcestnik",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/30",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/31",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/32",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/33",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/aktuality/2-rocnik-ceny-cantor",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "parent_url": "https://www.matematickaolympiada.cz/aktuality/76-rocnik-mo-zacina",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.tmfsr.sk/sk/archiv/13",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/map/kanazawasakurah.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/mo2026/jmo/honsen_kaijyo.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/map/nagoyah.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/mo2026/jmo/honsen_kaijyo.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/map/osakah.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/mo2026/jmo/honsen_kaijyo.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/aktuality/soustredeni-z9-a-b-c-2026",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "parent_url": "https://www.matematickaolympiada.cz/aktuality",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/map/okayamah.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/mo2026/jmo/honsen_kaijyo.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/map/hiroshimah.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/mo2026/jmo/honsen_kaijyo.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/map/fukuokah.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/mo2026/jmo/honsen_kaijyo.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/map/miyazakih.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/mo2026/jmo/honsen_kaijyo.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/aktuality/14-cesko-polsko-slovenska-matematicka-soutez-junioru",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "parent_url": "https://www.matematickaolympiada.cz/aktuality",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/map/nahah.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/mo2026/jmo/honsen_kaijyo.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/results_all.txt",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/resu.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/results_gold.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/resu.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/results_silver.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/resu.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/aktuality/uspech-nasich-divek-na-egmo",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "parent_url": "https://www.matematickaolympiada.cz/aktuality",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/results_bronze.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/resu.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/img/first_day.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/img/second_day.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol1.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/aktuality?page=2",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "parent_url": "https://www.matematickaolympiada.cz/aktuality",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol21.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol22.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol31.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol32.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/aktuality?page=3",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "parent_url": "https://www.matematickaolympiada.cz/aktuality",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol33.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol41.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol42.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol5.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/aktuality?page=4",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "parent_url": "https://www.matematickaolympiada.cz/aktuality",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol6.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/phot2.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/phot3.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/photo/04.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/aktuality?page=5",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "parent_url": "https://www.matematickaolympiada.cz/aktuality",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/photo/Scan0626.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/photo/imo2003(024).jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/photo/Scan0622.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/photo/18.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/aktuality?page=6",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "parent_url": "https://www.matematickaolympiada.cz/aktuality",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/photo/imo2003(021).jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/photo/imo2003(016).jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/photo/imo2003(002).jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/photo/imo2003(023).jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/aktuality?page=7",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "parent_url": "https://www.matematickaolympiada.cz/aktuality",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/photo/imo2003(012).jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/photo/imo2003(020).jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.imojp.org/archive/imo2003/contents/photo/Scan0542.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
-      "priority": 2,
-      "depth": 3
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=C1514&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=mat&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/aktuality?page=8",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "parent_url": "https://www.matematickaolympiada.cz/aktuality",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=C1515&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=mat&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=C1516&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=mat&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=C1517&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=mat&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=B4990&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=mat&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.matematickaolympiada.cz/aktuality?page=9",
-      "root": "https://www.matematickaolympiada.cz/en",
-      "parent_url": "https://www.matematickaolympiada.cz/aktuality",
-      "priority": 1,
-      "depth": 3
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=B4991&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=mat&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=B4992&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=mat&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=B4993&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=mat&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=B4994&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=mat&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/813/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/133/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=B4995&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=mat&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=B4996&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=mat&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=B4997&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=mat&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=A738&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=mat&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/814/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/133/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=I469&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=inf&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.komal.hu/feladat?a=feladat&f=I471&l=en",
-      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
-      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=inf&l=en",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2012/jmo2012/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2011/jmo2011/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/815/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/133/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2010/jmo2010/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2009/jmo2009/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2008/jmo2008/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2007/jmo2007/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/816/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/133/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2006/jmo2006/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2005/jmo2005/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2004/jmo2004/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2003/jmo2003/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/817/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/133/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2002/jmo2002/index.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2001/jmo2001/jmoSuccess.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/jmo/jmo_apply.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/818/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/133/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2023/jmo/problems/jmo33hq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32hq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2021/jmo2021/problems/jmo31yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/819/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/133/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2021/jmo2021/problems/jmo31hq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2020/jmo2020/problems/jmo30yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2020/jmo2020/problems/jmo30hq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2019/jmo2019/problems/jmo29yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/820/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/133/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2019/jmo2019/problems/jmo29mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2018/jmo2018/problems/jmo28yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2018/jmo2018/problems/jmo28mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2017/jmo2017/problems/jmo27yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/821/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/133/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2017/jmo2017/problems/jmo27mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2016/jmo2016/problems/jmo26yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2016/jmo2016/problems/jmo26mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2015/jmo2015/problems/jmo25yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/822/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/133/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2015/jmo2015/problems/jmo25mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2014/jmo2014/problems/jmo24yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2014/jmo2014/problems/jmo24mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2013/jmo2013/problems/jmo23yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/823/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2013/jmo2013/problems/jmo23mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2012/jmo2012/problems/jmo22yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2012/jmo2012/problems/jmo22mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2011/jmo2011/problems/jmo21yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/824/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2011/jmo2011/problems/jmo21mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2010/jmo2010/problems/jmo20yq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2010/jmo2010/problems/jmo20mq.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "depth": 1
-    },
-    {
-      "url": "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2014/Sarbatorile%20mai%20importante%20din%20anul%20scolar%202013-2014.jpg",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/istoriesocio-umane/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/istoriesocio-umane/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/825/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2014/Adresa%20MEN,%20Optionale%20si%20Ziua%20%20Holocaustului.jpg",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/istoriesocio-umane/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/istoriesocio-umane/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2014/Notificare%2058771%20forma%20scanata.tif",
-      "root": "https://isj.vs.edu.ro/curriculum-si-inspectie/istoriesocio-umane/",
-      "parent_url": "https://isj.vs.edu.ro/curriculum-si-inspectie/istoriesocio-umane/",
-      "priority": 3,
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/787/ebb5b8e8010bf7cf/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/789/b253c0290bf688e7/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/826/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/788/129e2d3d84243303/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/793/77c8ec2166dbcf16/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/795/3921d48066296063/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/794/3aa11f4c1f10324a/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/827/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/798/b742daac33ac7b86/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/799/125a86cbd521d86b/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/801/b4957e6ee9d5b781/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/800/b8fc4efd53cb7125/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/828/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/805/df7a579224321ede/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/806/e5c05fad1feaadf9/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/809/971ff5e93d0ffd21/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/807/c570037b5d23a350/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/829/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/810/fb98b4f4a260e36c/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/811/6a3a1e41e01886da/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/814/55adb0c10bf15667/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/815/0fa321bcbb30a655/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/830/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/817/fa7aeecbf1d97e68/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/967/651c4e4df880b775/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/820/63113aee9951d968/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/821/c05d8b80d35b3ddf/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/831/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/823/d02b555334d22aa0/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/822/8da885e7d1faa43b/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/826/2760041d36ca60df/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/827/865f9bdcef0689ce/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/832/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/830/c5470c31a0004b61/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/829/840b3cbc222c8c3e/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/833/156760b15dfaabff/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/834/fff65ee13a7111a6/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/833/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/135/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/836/1c59b4bf19f5af60/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/837/1a45d8cdecf8861f/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/839/ee1a6d64d6d5edab/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/media-download/838/38829bf146024c38/PDF/",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://www.mmo.mn/olympiads/stats/834/",
-      "root": "https://www.mmo.mn/olympiads/problems/",
-      "parent_url": "https://www.mmo.mn/olympiads/problems/135/",
-      "priority": 1,
-      "depth": 5
-    },
-    {
-      "url": "https://www.jpho.jp/challenge/c-archives.html",
-      "root": "https://www.jpho.jp/challenge/c-exam.html",
-      "depth": 1
-    },
-    {
-      "url": "https://ioling.org/problems/2005/t1/",
-      "root": "https://ioling.org/problems/slides/",
-      "parent_url": "https://ioling.org/problems/by_year",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://ioling.org/problems/2006/",
-      "root": "https://ioling.org/problems/slides/",
-      "parent_url": "https://ioling.org/problems/by_year",
-      "priority": 2,
-      "depth": 2
-    },
-    {
       "url": "https://ioling.org/problems/2006/i1/",
       "root": "https://ioling.org/problems/slides/",
       "parent_url": "https://ioling.org/problems/by_year",
@@ -143668,11 +142329,53 @@
       "depth": 2
     },
     {
+      "url": "https://cnstefancelmare.ro/download/1592-DIFEREN%C8%9AE%20Gimnaziu%20Con%C8%9Binuturi%20de%20parcurs%20de%20c%C4%83tre%20elevi.pdf,",
+      "root": "https://cnstefancelmare.ro/pagini/228-olimpiada-de-geografie-etapa-judeteana-4-martie-2023",
+      "parent_url": "https://cnstefancelmare.ro/pagini/363-anunt-examene-de-diferenta-2026",
+      "priority": 3,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/archiv/2014/Úvodné sústredenie/Problem_13.nb",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/149",
+      "priority": 2,
+      "depth": 2
+    },
+    {
       "url": "https://moshist.ru/news/596",
       "root": "https://moshist.ru/",
       "parent_url": "https://moshist.ru/",
       "priority": 0,
       "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/archiv/2014/Úvodné sústredenie/Problem_3.nb",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/149",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2011/2.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2011/index.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2011/3.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2011/index.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2011/4.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2011/index.html",
+      "priority": 2,
+      "depth": 4
     },
     {
       "url": "https://moshist.ru/news/595",
@@ -143682,11 +142385,67 @@
       "depth": 1
     },
     {
+      "url": "https://www.imojp.org/archive/about/account/2011/5.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2011/index.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2010/2.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2010/index.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2010/3.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2010/index.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2010/4.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2010/index.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
       "url": "https://moshist.ru/news/594",
       "root": "https://moshist.ru/",
       "parent_url": "https://moshist.ru/",
       "priority": 0,
       "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2010/5.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2010/index.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2009/2.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2009/index.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2009/3.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2009/index.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2009/4.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2009/index.html",
+      "priority": 2,
+      "depth": 4
     },
     {
       "url": "https://moshist.ru/news/593",
@@ -143696,11 +142455,67 @@
       "depth": 1
     },
     {
+      "url": "https://www.imojp.org/archive/about/account/2009/5.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2009/index.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2008/2.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2008/index.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2008/3.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2008/index.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2008/4.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2008/index.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
       "url": "https://moshist.ru/news/592",
       "root": "https://moshist.ru/",
       "parent_url": "https://moshist.ru/",
       "priority": 0,
       "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/about/account/2008/5.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/about/account/2008/index.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/map/images/tokyoAPMOAPMO.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/mo2026/map/tokyoAPMO.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob01.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob02.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
     },
     {
       "url": "https://moshist.ru/news/591",
@@ -143710,11 +142525,67 @@
       "depth": 1
     },
     {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob03.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob04.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob05.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob06.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
+    },
+    {
       "url": "https://moshist.ru/news/590",
       "root": "https://moshist.ru/",
       "parent_url": "https://moshist.ru/",
       "priority": 0,
       "depth": 1
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob07.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob08.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob09.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob10.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
     },
     {
       "url": "https://moshist.ru/news/589",
@@ -143724,6 +142595,34 @@
       "depth": 1
     },
     {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob11.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob12.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob13.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob14.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
+    },
+    {
       "url": "https://moshist.ru/news/588",
       "root": "https://moshist.ru/",
       "parent_url": "https://moshist.ru/",
@@ -143731,10 +142630,66 @@
       "depth": 1
     },
     {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob15.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob16.html",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
+      "priority": 2,
+      "depth": 5
+    },
+    {
+      "url": "https://www.tmfsr.sk/archiv/2012/Úvodné sústredenie/Gorale.odp",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/125",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/map/images/tokyoh.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/mo2026/map/tokyoh.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
       "url": "https://moshist.ru/news/587",
       "root": "https://moshist.ru/",
       "parent_url": "https://moshist.ru/",
       "priority": 0,
+      "depth": 1
+    },
+    {
+      "url": "https://shi.matmor.unam.mx/omm/recursos/recursos/canguro/anima",
+      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
+      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/prob15/prob76a100.html",
+      "priority": 2,
+      "depth": 4
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/116",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/117",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/118",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
       "depth": 1
     },
     {
@@ -143745,10 +142700,66 @@
       "depth": 1
     },
     {
+      "url": "https://www.tmfsr.sk/sk/archiv/100",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/101",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/102",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/103",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
       "url": "https://moshist.ru/news/585",
       "root": "https://moshist.ru/",
       "parent_url": "https://moshist.ru/",
       "priority": 0,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/104",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/105",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/106",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/107",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
       "depth": 1
     },
     {
@@ -143759,10 +142770,66 @@
       "depth": 1
     },
     {
+      "url": "https://www.tmfsr.sk/sk/archiv/87",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/88",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/89",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/93",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
       "url": "https://moshist.ru/news/583",
       "root": "https://moshist.ru/",
       "parent_url": "https://moshist.ru/",
       "priority": 0,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/97",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/98",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/99",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/80",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
       "depth": 1
     },
     {
@@ -143773,10 +142840,66 @@
       "depth": 1
     },
     {
+      "url": "https://www.tmfsr.sk/sk/archiv/81",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/82",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/83",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/84",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
       "url": "https://moshist.ru/news/581",
       "root": "https://moshist.ru/",
       "parent_url": "https://moshist.ru/",
       "priority": 0,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/85",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/86",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/74",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/75",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
       "depth": 1
     },
     {
@@ -143787,10 +142910,66 @@
       "depth": 1
     },
     {
+      "url": "https://www.tmfsr.sk/sk/archiv/76",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/77",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/78",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/79",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
       "url": "https://moshist.ru/news/579",
       "root": "https://moshist.ru/",
       "parent_url": "https://moshist.ru/",
       "priority": 0,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/67",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/68",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/69",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/70",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
       "depth": 1
     },
     {
@@ -143801,6 +142980,33 @@
       "depth": 1
     },
     {
+      "url": "https://www.tmfsr.sk/sk/archiv/71",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/72",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/73",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "priority": 2,
+      "depth": 1
+    },
+    {
+      "url": "https://blogs.helsinki.fi/kielitieteen-olympialaiset/",
+      "root": "https://blogs.helsinki.fi/kielitieteen-olympialaiset/",
+      "depth": 0,
+      "priority": 2
+    },
+    {
       "url": "https://moshist.ru/news/577",
       "root": "https://moshist.ru/",
       "parent_url": "https://moshist.ru/",
@@ -143808,11 +143014,59 @@
       "depth": 1
     },
     {
+      "url": "https://blogs.helsinki.fi/kielitieteen-olympialaiset/millaisia-kilpailutehtavat-ovat/",
+      "root": "https://blogs.helsinki.fi/kielitieteen-olympialaiset/millaisia-kilpailutehtavat-ovat/",
+      "depth": 0,
+      "priority": 2
+    },
+    {
+      "url": "https://ordembiologos.pt/olimpiadas-portuguesas-da-biologia",
+      "root": "https://ordembiologos.pt/olimpiadas-portuguesas-da-biologia",
+      "depth": 0,
+      "priority": 2
+    },
+    {
+      "url": "https://www.tec.ac.cr/olimpiada-costarricense-astronomia-astronautica-ocaa",
+      "root": "https://www.tec.ac.cr/olimpiada-costarricense-astronomia-astronautica-ocaa",
+      "depth": 0,
+      "priority": 2
+    },
+    {
+      "url": "https://www.stae.is/stak/keppnin2025",
+      "root": "https://www.stae.is/stak/keppnin2025",
+      "depth": 0,
+      "priority": 2
+    },
+    {
       "url": "https://moshist.ru/news/576",
       "root": "https://moshist.ru/",
       "parent_url": "https://moshist.ru/",
       "priority": 0,
       "depth": 1
+    },
+    {
+      "url": "https://www.stae.is/stak/keppnin2022",
+      "root": "https://www.stae.is/stak/keppnin2022",
+      "depth": 0,
+      "priority": 2
+    },
+    {
+      "url": "https://www.stae.is/node/51651",
+      "root": "https://www.stae.is/node/51651",
+      "depth": 0,
+      "priority": 2
+    },
+    {
+      "url": "https://www.stae.is/stak/%C3%BAtg%C3%A1fa-b%C3%B3k",
+      "root": "https://www.stae.is/stak/%C3%BAtg%C3%A1fa-b%C3%B3k",
+      "depth": 0,
+      "priority": 2
+    },
+    {
+      "url": "https://www.stae.is/stak",
+      "root": "https://www.stae.is/stak",
+      "depth": 0,
+      "priority": 2
     },
     {
       "url": "https://moshist.ru/news/575",
@@ -841881,13 +841135,6 @@
       "depth": 3
     },
     {
-      "url": "https://cnstefancelmare.ro/download/1592-DIFEREN%C8%9AE%20Gimnaziu%20Con%C8%9Binuturi%20de%20parcurs%20de%20c%C4%83tre%20elevi.pdf,",
-      "root": "https://cnstefancelmare.ro/pagini/228-olimpiada-de-geografie-etapa-judeteana-4-martie-2023",
-      "parent_url": "https://cnstefancelmare.ro/pagini/363-anunt-examene-de-diferenta-2026",
-      "priority": 3,
-      "depth": 2
-    },
-    {
       "url": "https://www.tmfsr.sk/sk/registracia/112",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/archiv/112",
@@ -842084,273 +841331,14 @@
       "depth": 4
     },
     {
-      "url": "https://www.tmfsr.sk/archiv/2014/Úvodné sústredenie/Problem_13.nb",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/archiv/149",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.tmfsr.sk/archiv/2014/Úvodné sústredenie/Problem_3.nb",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/archiv/149",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2011/2.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2011/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2011/3.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2011/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2011/4.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2011/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2011/5.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2011/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2010/2.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2010/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2010/3.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2010/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2010/4.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2010/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2010/5.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2010/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2009/2.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2009/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2009/3.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2009/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2009/4.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2009/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2009/5.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2009/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2008/2.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2008/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2008/3.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2008/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2008/4.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2008/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/about/account/2008/5.html",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/about/account/2008/index.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/map/images/tokyoAPMOAPMO.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/mo2026/map/tokyoAPMO.html",
-      "priority": 2,
-      "depth": 4
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob01.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob02.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob03.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob04.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob05.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob06.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob07.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob08.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob09.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob10.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob11.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
       "url": "https://bmos.ukmt.org.uk/news/20031203-00-bmo1.shtml",
       "root": "https://bmos.ukmt.org.uk/home/bmo",
       "depth": 2
     },
     {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob12.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob13.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob14.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob15.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
       "url": "https://bmos.ukmt.org.uk/news/20030929-00-royalsociety.shtml",
       "root": "https://bmos.ukmt.org.uk/home/bmo",
       "depth": 2
-    },
-    {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/canguro/prob16.html",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/canguro/anima",
-      "priority": 2,
-      "depth": 5
-    },
-    {
-      "url": "https://www.tmfsr.sk/archiv/2012/Úvodné sústredenie/Gorale.odp",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/archiv/125",
-      "priority": 2,
-      "depth": 2
-    },
-    {
-      "url": "https://www.imojp.org/archive/mo2026/map/images/tokyoh.jpg",
-      "root": "https://www.imojp.org/domestic/jmo_overview.html",
-      "parent_url": "https://www.imojp.org/archive/mo2026/map/tokyoh.html",
-      "priority": 2,
-      "depth": 4
     },
     {
       "url": "https://bmos.ukmt.org.uk/news/20030731-00-imoreport.shtml",
@@ -842363,276 +841351,1401 @@
       "depth": 2
     },
     {
-      "url": "https://shi.matmor.unam.mx/omm/recursos/recursos/canguro/anima",
-      "root": "https://shi.matmor.unam.mx/omm/recursos/final/previos/",
-      "parent_url": "https://shi.matmor.unam.mx/omm/recursos/prob15/prob76a100.html",
+      "url": "https://www.tmfsr.sk/sk/registracia/63",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/63",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/login/63",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/63",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/registracia/64",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/64",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/login/64",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/64",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/registracia/65",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/65",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/login/65",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/65",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/registracia/66",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/66",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/login/66",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/66",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/index.php?vyber=fotogaleria&kategoria=foto-2004-Brisbane&lang=svk",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/66",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/dokumenty/2004/teletext.JPG",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/66",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/registracia/58",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/58",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/login/58",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/58",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/registracia/59",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/59",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/login/59",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/59",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/registracia/60",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/60",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/login/60",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/60",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/registracia/61",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/61",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/login/61",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/61",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/registracia/62",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/62",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/login/62",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/62",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/registracia/53",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/53",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/login/53",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/53",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/registracia/54",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/54",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/login/54",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/54",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/registracia/55",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/55",
+      "priority": 1,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/login/55",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/55",
+      "priority": 0,
+      "depth": 2
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/dokumenty/prednaska.htm",
+      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "parent_url": "https://www.tmfsr.sk/sk/archiv/55",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/probehlo-celostatni-kolo-75-rocniku-mo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=2",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/celostatko-se-blizi-novinky-z-kategorie-a",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=2",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/probehla-krajska-kola-kategorie-a",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=2",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/ucastnici-imo-a-egmo-v-senatu-pcr",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=2",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/vyhlaseni-ceny-cantor",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=2",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/75-rocnik-mo-zacina",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=2",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/soustredeni-v-janskych-laznich-a-instagram-mo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=2",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/cesky-tym-na-memo-2025-v-chemnitzu",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=2",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/chces-byt-v-olympiade-jeste-silnejsi-zkus-prase",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=3",
       "priority": 2,
       "depth": 4
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/116",
+      "url": "https://www.matematickaolympiada.cz/aktuality/66-mezinarodni-matematicka-olympiada",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=3",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/zlato-a-zlato-z-caps-2025",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=3",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/soustredeni-nejlepsich-resitelu-kategorii-b-c-a-z9-v-karlove-pod-pradedem",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=3",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/13-cesko-polsko-slovenska-matematicka-soutez-junioru",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=3",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/100-narozeniny-casopisu-rozhledy-matematicko-fyzikalni",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=3",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/celostatko-z9-vyberko-pred-imo-mo-jede-dal",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=3",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/nejlepsi-vysledek-ceska-na-egmo-v-historii",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=3",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/ustredni-kolo-i-celostatko-open-znaji-sve-viteze",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=4",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/postupujici-do-celostatka-a-celostatko-open",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=4",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/soutez-duogeo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=4",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/matematicky-krouzek-matematicky-klub-seminare-k-mo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=4",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/74-rocnik-mo-odstartoval-tradicnim-soustredenim",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=4",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/4-medaile-z-memo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=4",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/65-mezinarodni-matematicka-olympiada",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=4",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/caps-2024",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=4",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/soustredeni-nejlepsich-resitelu-b-c-v-karlove-pod-pradedem",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=5",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/12-cesko-polsko-slovenske-stretnuti-junioru",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=5",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/prvni-celostatni-kolo-kategorie-z9",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=5",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/4-medaile-z-egmo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=5",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/rocenky-mo-online",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=5",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/celostatni-kolo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=5",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/krajska-kola-kategorie-a-1",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=5",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/desatero-resitele",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=5",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/online-kurzy-navodne-ulohy",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=6",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/73-rocnik-mo-zacina",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=6",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/bronz-a-bronz-z-memo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=6",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/ctyri-bronzy-z-imo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=6",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/caps-2023",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=6",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/soustredeni-ceskych-a-slovenskych-tymu-pred-mezinarodni-a-stredevropskou-matematickou-olympiadou",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=6",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/soustredeni-nejlepsich-resitelu-z9",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=6",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/soustredeni-nejlepsich-resitelu-kategorii-b-a-c",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=6",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/ulohy-1-kola-nasledujiciho-rocniku",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=7",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/11-cesko-polsko-slovenska-matematicka-soutez-junioru",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=7",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/vyberove-soustredeni-pred-11-cesko-polsko-slovenskou-matematickou-soutezi-junioru",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=7",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/stribro-a-dva-bronzy-z-egmo",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=7",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/vysledky-ustredniho-kola",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=7",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/vysledky-krajskych-kol-kategorie-a",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=7",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/krajska-kola-kategorie-a",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=7",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality/na-216-skolach-probehlo-skolni-kolo-kategorie-a",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality?page=7",
+      "priority": 1,
+      "depth": 4
+    },
+    {
+      "url": "https://ioling.org/2006",
+      "root": "https://ioling.org/problems/slides/",
+      "parent_url": "https://ioling.org/problems/2006/",
+      "priority": 1,
+      "depth": 3
+    },
+    {
+      "url": "https://ioling.org/results/2006",
+      "root": "https://ioling.org/problems/slides/",
+      "parent_url": "https://ioling.org/problems/2006/",
+      "priority": 1,
+      "depth": 3
+    },
+    {
+      "url": "https://ioling.org/participants/2006",
+      "root": "https://ioling.org/problems/slides/",
+      "parent_url": "https://ioling.org/problems/2006/",
+      "priority": 1,
+      "depth": 3
+    },
+    {
+      "url": "https://ioling.org/loc/2006",
+      "root": "https://ioling.org/problems/slides/",
+      "parent_url": "https://ioling.org/problems/2006/",
+      "priority": 1,
+      "depth": 3
+    },
+    {
+      "url": "https://ioling.org/jury/2006",
+      "root": "https://ioling.org/problems/slides/",
+      "parent_url": "https://ioling.org/problems/2006/",
+      "priority": 1,
+      "depth": 3
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/nl/dashboard/mijn-studiekeuze",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "parent_url": "https://wiskundeolympiade.nl/junior",
+      "priority": 1,
+      "depth": 3
+    },
+    {
+      "url": "https://wiskundeolympiade.nl/nl",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "parent_url": "https://wiskundeolympiade.nl/junior",
+      "priority": 1,
+      "depth": 3
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/56",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/117",
+      "url": "https://www.tmfsr.sk/sk/archiv/57",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/118",
+      "url": "https://www.tmfsr.sk/sk/archiv/48",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/100",
+      "url": "https://www.tmfsr.sk/sk/archiv/49",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/101",
+      "url": "https://wiskundeolympiade.nl/nl/over-de-vu",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "parent_url": "https://wiskundeolympiade.nl/junior",
+      "priority": 1,
+      "depth": 3
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/50",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/102",
+      "url": "https://www.tmfsr.sk/sk/archiv/51",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/103",
+      "url": "https://www.tmfsr.sk/sk/archiv/52",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/104",
+      "url": "https://www.tmfsr.sk/sk/archiv/42",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/105",
+      "url": "https://wiskundeolympiade.nl/nl/over-de-vu/faculteiten/faculteit-der-betawetenschappen",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "parent_url": "https://wiskundeolympiade.nl/junior",
+      "priority": 1,
+      "depth": 3
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/43",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/106",
+      "url": "https://www.tmfsr.sk/sk/archiv/44",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/107",
+      "url": "https://www.tmfsr.sk/sk/archiv/45",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/87",
+      "url": "https://www.tmfsr.sk/sk/archiv/47",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/88",
+      "url": "https://wiskundeolympiade.nl/nl/over-de-vu/diensten/bestuurszaken/meer-over/cookieverklaring",
+      "root": "https://wiskundeolympiade.nl/wedstrijdarchief",
+      "parent_url": "https://wiskundeolympiade.nl/junior",
+      "priority": 1,
+      "depth": 3
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/38",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/89",
+      "url": "https://www.tmfsr.sk/sk/archiv/39",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/93",
+      "url": "https://www.tmfsr.sk/sk/archiv/40",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/97",
+      "url": "https://www.tmfsr.sk/sk/archiv/41",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/98",
+      "url": "https://www.matematickaolympiada.cz/ruzne/wolframalpha.com",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/ruzne/matematicky-rozcestnik",
+      "priority": 1,
+      "depth": 3
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/34",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/99",
+      "url": "https://www.tmfsr.sk/sk/archiv/35",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/80",
+      "url": "https://www.tmfsr.sk/sk/archiv/36",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/81",
+      "url": "https://www.tmfsr.sk/sk/archiv/37",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/82",
+      "url": "https://www.matematickaolympiada.cz/ruzne/mathcomps.fun",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/ruzne/matematicky-rozcestnik",
+      "priority": 1,
+      "depth": 3
+    },
+    {
+      "url": "https://www.tmfsr.sk/sk/archiv/30",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/83",
+      "url": "https://www.tmfsr.sk/sk/archiv/31",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/84",
+      "url": "https://www.tmfsr.sk/sk/archiv/32",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/85",
+      "url": "https://www.tmfsr.sk/sk/archiv/33",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/86",
+      "url": "https://www.tmfsr.sk/sk/archiv/13",
       "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
       "priority": 2,
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/74",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
+      "url": "https://www.imojp.org/archive/mo2026/map/kanazawasakurah.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/mo2026/jmo/honsen_kaijyo.html",
       "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/img/first_day.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/img/second_day.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol1.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol21.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol22.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol31.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol32.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol33.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol41.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol42.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol5.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/img/sol6.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/prob.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/phot2.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/phot3.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/photo/04.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/photo/Scan0626.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/photo/imo2003(024).jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/photo/Scan0622.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/photo/18.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/photo/imo2003(021).jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/photo/imo2003(016).jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/photo/imo2003(002).jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/photo/imo2003(023).jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/photo/imo2003(012).jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/photo/imo2003(020).jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.imojp.org/archive/imo2003/contents/photo/Scan0542.jpg",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "parent_url": "https://www.imojp.org/archive/imo2003/contents/phot.html",
+      "priority": 2,
+      "depth": 3
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality?page=8",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality",
+      "priority": 1,
+      "depth": 3
+    },
+    {
+      "url": "https://www.matematickaolympiada.cz/aktuality?page=9",
+      "root": "https://www.matematickaolympiada.cz/en",
+      "parent_url": "https://www.matematickaolympiada.cz/aktuality",
+      "priority": 1,
+      "depth": 3
+    },
+    {
+      "url": "https://www.komal.hu/feladat?a=feladat&f=A738&l=en",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=mat&l=en",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.komal.hu/feladat?a=feladat&f=I469&l=en",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=inf&l=en",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.komal.hu/feladat?a=feladat&f=I471&l=en",
+      "root": "https://www.komal.hu/lap/korabbilapok.e.shtml",
+      "parent_url": "https://www.komal.hu/verseny/feladat.cgi?a=honap&h=201812&t=inf&l=en",
+      "priority": 2,
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2012/jmo2012/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2011/jmo2011/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2010/jmo2010/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2009/jmo2009/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2008/jmo2008/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2007/jmo2007/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2006/jmo2006/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2005/jmo2005/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2004/jmo2004/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2003/jmo2003/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2002/jmo2002/index.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2001/jmo2001/jmoSuccess.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 2
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2026/jmo/jmo_apply.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/75",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
+      "url": "https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/76",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
+      "url": "https://www.imojp.org/archive/mo2023/jmo/problems/jmo33hq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/77",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
+      "url": "https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/78",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
+      "url": "https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32hq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/79",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
+      "url": "https://www.imojp.org/archive/mo2021/jmo2021/problems/jmo31yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/67",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
+      "url": "https://www.imojp.org/archive/mo2021/jmo2021/problems/jmo31hq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/68",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
+      "url": "https://www.imojp.org/archive/mo2020/jmo2020/problems/jmo30yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/69",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
+      "url": "https://www.imojp.org/archive/mo2020/jmo2020/problems/jmo30hq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/70",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
+      "url": "https://www.imojp.org/archive/mo2019/jmo2019/problems/jmo29yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/71",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
+      "url": "https://www.imojp.org/archive/mo2019/jmo2019/problems/jmo29mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/72",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
+      "url": "https://www.imojp.org/archive/mo2018/jmo2018/problems/jmo28yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
       "depth": 1
     },
     {
-      "url": "https://www.tmfsr.sk/sk/archiv/73",
-      "root": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "parent_url": "https://www.tmfsr.sk/sk/o_sutazi/12",
-      "priority": 2,
+      "url": "https://www.imojp.org/archive/mo2018/jmo2018/problems/jmo28mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2017/jmo2017/problems/jmo27yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2017/jmo2017/problems/jmo27mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2016/jmo2016/problems/jmo26yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2016/jmo2016/problems/jmo26mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2015/jmo2015/problems/jmo25yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2015/jmo2015/problems/jmo25mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2014/jmo2014/problems/jmo24yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2014/jmo2014/problems/jmo24mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2013/jmo2013/problems/jmo23yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2013/jmo2013/problems/jmo23mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2012/jmo2012/problems/jmo22yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2012/jmo2012/problems/jmo22mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2011/jmo2011/problems/jmo21yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2011/jmo2011/problems/jmo21mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2010/jmo2010/problems/jmo20yq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.imojp.org/archive/mo2010/jmo2010/problems/jmo20mq.html",
+      "root": "https://www.imojp.org/domestic/jmo_overview.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/stats/825/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/stats/826/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/stats/827/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/stats/828/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/809/971ff5e93d0ffd21/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/807/c570037b5d23a350/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/stats/829/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/810/fb98b4f4a260e36c/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/811/6a3a1e41e01886da/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/814/55adb0c10bf15667/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/815/0fa321bcbb30a655/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/stats/830/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/817/fa7aeecbf1d97e68/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/967/651c4e4df880b775/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/820/63113aee9951d968/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/821/c05d8b80d35b3ddf/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/stats/831/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/823/d02b555334d22aa0/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/822/8da885e7d1faa43b/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/826/2760041d36ca60df/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/827/865f9bdcef0689ce/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/stats/832/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/134/",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/830/c5470c31a0004b61/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/829/840b3cbc222c8c3e/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/833/156760b15dfaabff/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/834/fff65ee13a7111a6/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/stats/833/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/135/",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/836/1c59b4bf19f5af60/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/837/1a45d8cdecf8861f/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/839/ee1a6d64d6d5edab/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/media-download/838/38829bf146024c38/PDF/",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
+      "depth": 1
+    },
+    {
+      "url": "https://www.mmo.mn/olympiads/stats/834/",
+      "root": "https://www.mmo.mn/olympiads/problems/",
+      "parent_url": "https://www.mmo.mn/olympiads/problems/135/",
+      "priority": 1,
+      "depth": 5
+    },
+    {
+      "url": "https://www.jpho.jp/challenge/c-archives.html",
+      "root": "https://www.jpho.jp/challenge/c-exam.html",
       "depth": 1
     }
   ],
@@ -842734,9 +842847,12 @@
     "http://isj.vs.edu.ro/download/Geografie/2014/Pliant%20Soc.%20de%20geografie%20mai%202014.jpg",
     "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2014/Adresa%20MEN%20-Olimpiada%20de%20Istorie.jpg",
     "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2014/Adresa%20MEN%20privind%20Ziua%20Eroilor,%2029%20mai%202014.jpg",
+    "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2014/Adresa%20MEN,%20Optionale%20si%20Ziua%20%20Holocaustului.jpg",
     "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2014/Adresa%20seminar%20Holocaust,%20aug.2014.jpg",
+    "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2014/Notificare%2058771%20forma%20scanata.tif",
     "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2014/Precizari%20MEN%20-Olimpiada%20de%20Istorie,%20Clasa%20a-VIII-a%20,%20Anul%20sc.%202013-14.jpg",
     "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2014/Precizari.jpg",
+    "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2014/Sarbatorile%20mai%20importante%20din%20anul%20scolar%202013-2014.jpg",
     "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2015/Adresa%20cursuri%20optionale%20si%20Comemorarea%20Holocaustului.jpg",
     "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2015/Concurs%20Judetean de Istorie -Licee, editia a-III-a.jpg",
     "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2015/Concurs%20Locuri%20ale%20memoriei%20in%20%20localitatea%20ta.jpg",
@@ -846824,6 +846940,8 @@
     "https://ioling.org/problems/2005/i3/",
     "https://ioling.org/problems/2005/i4/",
     "https://ioling.org/problems/2005/i5/",
+    "https://ioling.org/problems/2005/t1/",
+    "https://ioling.org/problems/2006/",
     "https://ioling.org/problems/2008/i3/",
     "https://ioling.org/problems/2010/i2/",
     "https://ioling.org/problems/2012/i2/",
@@ -855827,6 +855945,7 @@
     "https://wiskundeolympiade.nl/?start=168",
     "https://wiskundeolympiade.nl/?start=174",
     "https://wiskundeolympiade.nl/?start=18",
+    "https://wiskundeolympiade.nl/?start=180",
     "https://wiskundeolympiade.nl/?start=186",
     "https://wiskundeolympiade.nl/?start=192",
     "https://wiskundeolympiade.nl/?start=24",
@@ -857431,6 +857550,10 @@
     "https://www.imojp.org/archive/imo2003/contents/prob.html",
     "https://www.imojp.org/archive/imo2003/contents/regu.html",
     "https://www.imojp.org/archive/imo2003/contents/resu.html",
+    "https://www.imojp.org/archive/imo2003/contents/results_all.txt",
+    "https://www.imojp.org/archive/imo2003/contents/results_bronze.html",
+    "https://www.imojp.org/archive/imo2003/contents/results_gold.html",
+    "https://www.imojp.org/archive/imo2003/contents/results_silver.html",
     "https://www.imojp.org/archive/imo2003/contents/sche.html",
     "https://www.imojp.org/archive/imo2003/contents/spon.html",
     "https://www.imojp.org/archive/imo2003/contents/tokyo.html",
@@ -858529,12 +858652,14 @@
     "https://www.imojp.org/archive/mo2026/map/fukui.html",
     "https://www.imojp.org/archive/mo2026/map/fukuoka2.html",
     "https://www.imojp.org/archive/mo2026/map/fukuokae.html",
+    "https://www.imojp.org/archive/mo2026/map/fukuokah.html",
     "https://www.imojp.org/archive/mo2026/map/fukushimacorasse.html",
     "https://www.imojp.org/archive/mo2026/map/gifu.html",
     "https://www.imojp.org/archive/mo2026/map/hakodate.html",
     "https://www.imojp.org/archive/mo2026/map/hamamatsu2.html",
     "https://www.imojp.org/archive/mo2026/map/hirosaki.html",
     "https://www.imojp.org/archive/mo2026/map/hiroshima.html",
+    "https://www.imojp.org/archive/mo2026/map/hiroshimah.html",
     "https://www.imojp.org/archive/mo2026/map/images/fukuokae.jpg",
     "https://www.imojp.org/archive/mo2026/map/images/osakae.jpg",
     "https://www.imojp.org/archive/mo2026/map/images/wasedae.jpg",
@@ -858554,22 +858679,27 @@
     "https://www.imojp.org/archive/mo2026/map/maebashi2.html",
     "https://www.imojp.org/archive/mo2026/map/mito.html",
     "https://www.imojp.org/archive/mo2026/map/miyazaki.html",
+    "https://www.imojp.org/archive/mo2026/map/miyazakih.html",
     "https://www.imojp.org/archive/mo2026/map/moka.html",
     "https://www.imojp.org/archive/mo2026/map/morioka.html",
     "https://www.imojp.org/archive/mo2026/map/nagano.html",
     "https://www.imojp.org/archive/mo2026/map/nagasaki.html",
     "https://www.imojp.org/archive/mo2026/map/nagoya2.html",
     "https://www.imojp.org/archive/mo2026/map/nagoyae.html",
+    "https://www.imojp.org/archive/mo2026/map/nagoyah.html",
     "https://www.imojp.org/archive/mo2026/map/naha.html",
+    "https://www.imojp.org/archive/mo2026/map/nahah.html",
     "https://www.imojp.org/archive/mo2026/map/nanao.html",
     "https://www.imojp.org/archive/mo2026/map/nara.html",
     "https://www.imojp.org/archive/mo2026/map/niigata2.html",
     "https://www.imojp.org/archive/mo2026/map/okayama.html",
+    "https://www.imojp.org/archive/mo2026/map/okayamah.html",
     "https://www.imojp.org/archive/mo2026/map/ooita2.html",
     "https://www.imojp.org/archive/mo2026/map/osaka.html",
     "https://www.imojp.org/archive/mo2026/map/osaka4.html",
     "https://www.imojp.org/archive/mo2026/map/osakaAPMO.html",
     "https://www.imojp.org/archive/mo2026/map/osakae.html",
+    "https://www.imojp.org/archive/mo2026/map/osakah.html",
     "https://www.imojp.org/archive/mo2026/map/otsu.html",
     "https://www.imojp.org/archive/mo2026/map/saga.html",
     "https://www.imojp.org/archive/mo2026/map/saitama1.html",
@@ -859577,12 +859707,24 @@
     "https://www.jpho.jp/challenge/media-download/474/009d75ee42b4f7f0/PDF/",
     "https://www.jpho.jp/challenge/media-download/475/f417f866a1823c34/PDF/",
     "https://www.jpho.jp/challenge/media-download/785/df0ef443fbca2864/PDF/",
+    "https://www.jpho.jp/challenge/media-download/787/ebb5b8e8010bf7cf/PDF/",
+    "https://www.jpho.jp/challenge/media-download/788/129e2d3d84243303/PDF/",
+    "https://www.jpho.jp/challenge/media-download/789/b253c0290bf688e7/PDF/",
     "https://www.jpho.jp/challenge/media-download/791/aeada089a65e5b66/PDF/",
     "https://www.jpho.jp/challenge/media-download/792/a6ca8b68287fbbb7/PDF/",
+    "https://www.jpho.jp/challenge/media-download/793/77c8ec2166dbcf16/PDF/",
+    "https://www.jpho.jp/challenge/media-download/794/3aa11f4c1f10324a/PDF/",
+    "https://www.jpho.jp/challenge/media-download/795/3921d48066296063/PDF/",
     "https://www.jpho.jp/challenge/media-download/796/61cc9ad4a92bd0d7/PDF/",
     "https://www.jpho.jp/challenge/media-download/797/2549cf7be17a7ce8/PDF/",
+    "https://www.jpho.jp/challenge/media-download/798/b742daac33ac7b86/PDF/",
+    "https://www.jpho.jp/challenge/media-download/799/125a86cbd521d86b/PDF/",
+    "https://www.jpho.jp/challenge/media-download/800/b8fc4efd53cb7125/PDF/",
+    "https://www.jpho.jp/challenge/media-download/801/b4957e6ee9d5b781/PDF/",
     "https://www.jpho.jp/challenge/media-download/802/a216d1cdcbe1d2e8/PDF/",
     "https://www.jpho.jp/challenge/media-download/803/46d74762d8e72f7b/PDF/",
+    "https://www.jpho.jp/challenge/media-download/805/df7a579224321ede/PDF/",
+    "https://www.jpho.jp/challenge/media-download/806/e5c05fad1feaadf9/PDF/",
     "https://www.jpho.jp/challenge/media-download/812/afa819c61b437a66/PDF/",
     "https://www.jpho.jp/challenge/media-download/813/bcdf2cd69edf3240/PDF/",
     "https://www.jpho.jp/challenge/media-download/818/15e08f1e2e7f443f/PDF/",
@@ -860454,6 +860596,14 @@
     "https://www.komal.hu/feladat?a=feladat&f=B4819&l=en",
     "https://www.komal.hu/feladat?a=feladat&f=B4820&l=en",
     "https://www.komal.hu/feladat?a=feladat&f=B4821&l=en",
+    "https://www.komal.hu/feladat?a=feladat&f=B4990&l=en",
+    "https://www.komal.hu/feladat?a=feladat&f=B4991&l=en",
+    "https://www.komal.hu/feladat?a=feladat&f=B4992&l=en",
+    "https://www.komal.hu/feladat?a=feladat&f=B4993&l=en",
+    "https://www.komal.hu/feladat?a=feladat&f=B4994&l=en",
+    "https://www.komal.hu/feladat?a=feladat&f=B4995&l=en",
+    "https://www.komal.hu/feladat?a=feladat&f=B4996&l=en",
+    "https://www.komal.hu/feladat?a=feladat&f=B4997&l=en",
     "https://www.komal.hu/feladat?a=feladat&f=B4998&l=en",
     "https://www.komal.hu/feladat?a=feladat&f=B4999&l=en",
     "https://www.komal.hu/feladat?a=feladat&f=B5000&l=en",
@@ -860664,6 +860814,10 @@
     "https://www.komal.hu/feladat?a=feladat&f=C1511&l=en",
     "https://www.komal.hu/feladat?a=feladat&f=C1512&l=en",
     "https://www.komal.hu/feladat?a=feladat&f=C1513&l=en",
+    "https://www.komal.hu/feladat?a=feladat&f=C1514&l=en",
+    "https://www.komal.hu/feladat?a=feladat&f=C1515&l=en",
+    "https://www.komal.hu/feladat?a=feladat&f=C1516&l=en",
+    "https://www.komal.hu/feladat?a=feladat&f=C1517&l=en",
     "https://www.komal.hu/feladat?a=feladat&f=C1518&l=en",
     "https://www.komal.hu/feladat?a=feladat&f=C1519&l=en",
     "https://www.komal.hu/feladat?a=feladat&f=C1520&l=en",
@@ -862792,10 +862946,20 @@
     "https://www.matematica.pt/canguru/provas-canguru.php",
     "https://www.matematickaolympiada.cz/",
     "https://www.matematickaolympiada.cz/aktuality",
+    "https://www.matematickaolympiada.cz/aktuality/14-cesko-polsko-slovenska-matematicka-soutez-junioru",
+    "https://www.matematickaolympiada.cz/aktuality/2-rocnik-ceny-cantor",
     "https://www.matematickaolympiada.cz/aktuality/7-zlatych-z-memo",
     "https://www.matematickaolympiada.cz/aktuality/76-rocnik-mo-zacina",
     "https://www.matematickaolympiada.cz/aktuality/caps2026",
     "https://www.matematickaolympiada.cz/aktuality/imo-a-imsc-2026",
+    "https://www.matematickaolympiada.cz/aktuality/soustredeni-z9-a-b-c-2026",
+    "https://www.matematickaolympiada.cz/aktuality/uspech-nasich-divek-na-egmo",
+    "https://www.matematickaolympiada.cz/aktuality?page=2",
+    "https://www.matematickaolympiada.cz/aktuality?page=3",
+    "https://www.matematickaolympiada.cz/aktuality?page=4",
+    "https://www.matematickaolympiada.cz/aktuality?page=5",
+    "https://www.matematickaolympiada.cz/aktuality?page=6",
+    "https://www.matematickaolympiada.cz/aktuality?page=7",
     "https://www.matematickaolympiada.cz/co-je-mo",
     "https://www.matematickaolympiada.cz/dokumenty-mo",
     "https://www.matematickaolympiada.cz/en",
@@ -863371,6 +863535,18 @@
     "https://www.mmo.mn/olympiads/stats/1341/",
     "https://www.mmo.mn/olympiads/stats/1342/",
     "https://www.mmo.mn/olympiads/stats/1343/",
+    "https://www.mmo.mn/olympiads/stats/813/",
+    "https://www.mmo.mn/olympiads/stats/814/",
+    "https://www.mmo.mn/olympiads/stats/815/",
+    "https://www.mmo.mn/olympiads/stats/816/",
+    "https://www.mmo.mn/olympiads/stats/817/",
+    "https://www.mmo.mn/olympiads/stats/818/",
+    "https://www.mmo.mn/olympiads/stats/819/",
+    "https://www.mmo.mn/olympiads/stats/820/",
+    "https://www.mmo.mn/olympiads/stats/821/",
+    "https://www.mmo.mn/olympiads/stats/822/",
+    "https://www.mmo.mn/olympiads/stats/823/",
+    "https://www.mmo.mn/olympiads/stats/824/",
     "https://www.mmo.mn/olympiads/stats/995/",
     "https://www.mmo.mn/olympiads/stats/996/",
     "https://www.mmo.mn/olympiads/stats/997/",
@@ -865592,6 +865768,18 @@
     "https://www.tmfsr.sk/sk/archiv/263",
     "https://www.tmfsr.sk/sk/archiv/264",
     "https://www.tmfsr.sk/sk/archiv/265",
+    "https://www.tmfsr.sk/sk/archiv/53",
+    "https://www.tmfsr.sk/sk/archiv/54",
+    "https://www.tmfsr.sk/sk/archiv/55",
+    "https://www.tmfsr.sk/sk/archiv/58",
+    "https://www.tmfsr.sk/sk/archiv/59",
+    "https://www.tmfsr.sk/sk/archiv/60",
+    "https://www.tmfsr.sk/sk/archiv/61",
+    "https://www.tmfsr.sk/sk/archiv/62",
+    "https://www.tmfsr.sk/sk/archiv/63",
+    "https://www.tmfsr.sk/sk/archiv/64",
+    "https://www.tmfsr.sk/sk/archiv/65",
+    "https://www.tmfsr.sk/sk/archiv/66",
     "https://www.tmfsr.sk/sk/o_sutazi/12",
     "https://www.tourolaw.edu/mootcourt/2023competition",
     "https://www.tourolaw.edu/studentresources/exam-schedules-info",
@@ -870582,15 +870770,15 @@
     "https://www.komal.hu/tablok/?ev=2005&tablo=1": "robots-denied-or-unavailable",
     "https://www.komal.hu/tablok/?ev=2004&tablo=1": "robots-denied-or-unavailable",
     "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2014/Sarbatorile%20mai%20importante%20din%20anul%20scolar%202013-2014.jpg": {
-      "tries": 2,
+      "tries": 3,
       "error": "HTTPError"
     },
     "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2014/Adresa%20MEN,%20Optionale%20si%20Ziua%20%20Holocaustului.jpg": {
-      "tries": 2,
+      "tries": 3,
       "error": "HTTPError"
     },
     "http://isj.vs.edu.ro/download/Istorie_Cultura_Civica/2014/Notificare%2058771%20forma%20scanata.tif": {
-      "tries": 2,
+      "tries": 3,
       "error": "HTTPError"
     },
     "https://storeroom.kaditay.com/nsmq/": "robots-denied-or-unavailable",
@@ -872047,15 +872235,59 @@
     "https://www.tmfsr.sk/archiv/2012/Úvodné sústredenie/Gorale.odp": {
       "tries": 1,
       "error": "InvalidURL"
-    }
+    },
+    "https://wiskundeolympiade.nl/nl/dashboard/mijn-studiekeuze": {
+      "tries": 1,
+      "error": "HTTPError"
+    },
+    "https://wiskundeolympiade.nl/nl": {
+      "tries": 1,
+      "error": "HTTPError"
+    },
+    "https://wiskundeolympiade.nl/nl/over-de-vu": {
+      "tries": 1,
+      "error": "HTTPError"
+    },
+    "https://wiskundeolympiade.nl/nl/over-de-vu/faculteiten/faculteit-der-betawetenschappen": {
+      "tries": 1,
+      "error": "HTTPError"
+    },
+    "https://wiskundeolympiade.nl/nl/over-de-vu/diensten/bestuurszaken/meer-over/cookieverklaring": {
+      "tries": 1,
+      "error": "HTTPError"
+    },
+    "https://www.matematickaolympiada.cz/ruzne/wolframalpha.com": {
+      "tries": 1,
+      "error": "HTTPError"
+    },
+    "https://www.matematickaolympiada.cz/ruzne/mathcomps.fun": {
+      "tries": 1,
+      "error": "HTTPError"
+    },
+    "https://www.imojp.org/archive/mo2026/map/kanazawasakurah.html": {
+      "tries": 1,
+      "error": "HTTPError"
+    },
+    "https://www.komal.hu/feladat?a=feladat&f=C1514&l=en": "robots-denied-or-unavailable",
+    "https://www.komal.hu/feladat?a=feladat&f=C1515&l=en": "robots-denied-or-unavailable",
+    "https://www.komal.hu/feladat?a=feladat&f=C1516&l=en": "robots-denied-or-unavailable",
+    "https://www.komal.hu/feladat?a=feladat&f=C1517&l=en": "robots-denied-or-unavailable",
+    "https://www.komal.hu/feladat?a=feladat&f=B4990&l=en": "robots-denied-or-unavailable",
+    "https://www.komal.hu/feladat?a=feladat&f=B4991&l=en": "robots-denied-or-unavailable",
+    "https://www.komal.hu/feladat?a=feladat&f=B4992&l=en": "robots-denied-or-unavailable",
+    "https://www.komal.hu/feladat?a=feladat&f=B4993&l=en": "robots-denied-or-unavailable",
+    "https://www.komal.hu/feladat?a=feladat&f=B4994&l=en": "robots-denied-or-unavailable",
+    "https://www.komal.hu/feladat?a=feladat&f=B4995&l=en": "robots-denied-or-unavailable",
+    "https://www.komal.hu/feladat?a=feladat&f=B4996&l=en": "robots-denied-or-unavailable",
+    "https://www.komal.hu/feladat?a=feladat&f=B4997&l=en": "robots-denied-or-unavailable"
   },
   "version": 1,
-  "updated_at": "2026-10-25T04:10:08+00:00",
+  "updated_at": "2026-10-25T05:12:31+00:00",
   "last_run": {
     "html_pages": 60,
-    "new_links": 5154,
-    "pending_pages": 121203,
-    "blocked_or_failed": 2765
+    "new_links": 4743,
+    "pending_pages": 121217,
+    "blocked_or_failed": 2785
   },
   "html_ampersand_repair_v1": true,
   "html_ampersand_requeued": 4,
