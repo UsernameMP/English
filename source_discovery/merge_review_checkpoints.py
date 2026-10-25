@@ -28,6 +28,7 @@ CHECKPOINTS = {
     "r306_review_r311.jsonl": "7398a8845c27a10193f0993716ac864367e90abf",
     "r307_review_r312.jsonl": "39485d7151f2f72c12b4ebcae6a3af0dae59404b",
     "r308_review_r313.jsonl": "6f1023442a34d73da3bbedc1ed500b4a67c3f212",
+    "r309_review_r314.jsonl": "b4a6c2d457d8f04b5442cc820f8f8ad34b8c49c5",
 }
 TYPE_CORRECTION_CHECKPOINTS = {
     "r307_r306_corrections_fixed.jsonl": "61254ca48e8195307d65609906992aad77815041",
