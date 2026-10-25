@@ -1,0 +1,141 @@
+{
+  "cycle": "r327-20261025T220445213Z",
+  "reported_at": "2026-10-25T22:10:35.561Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "requested_at": "2026-10-25T22:04:45.213Z",
+    "commit": "ebb8f63e695f45013e1dbba93d04571ca9f3422c",
+    "workflow_name": "RIFT Link Enumeration",
+    "workflow_run_id": 40238485836,
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-25T22:08:44Z",
+    "crawler_persist_commit": "9d794e9b53f79c7a6168f0c3dcfa1c9a017027a5",
+    "verified_by": "GitHub Actions REST run and decoded job logs plus canonical GitHub blob SHAs"
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_occurrences": 4101,
+    "raw_occurrences_before": 1346980,
+    "raw_occurrences_after": 1351081,
+    "unique_resource_urls_before": 285161,
+    "unique_resource_urls_after": 285708,
+    "unique_resource_urls_delta": 547,
+    "raw_shards": 13511,
+    "last_raw_shard": "batch_013511.jsonl",
+    "last_raw_rows": 81,
+    "resource_shards": 2858,
+    "last_resource_shard": "resource_002858.jsonl",
+    "last_resource_rows": 8,
+    "pending_html_pages": 129564,
+    "blocked_or_failed_cumulative": 3000,
+    "source": "GitHub Actions decoded job log; last shards independently fetched"
+  },
+  "discovery": {
+    "checkpoint": "runs/discovery_r327.jsonl",
+    "checkpointed_HTML_pointers": 25,
+    "countries": [
+      "MN",
+      "AZ",
+      "AL",
+      "UY",
+      "ZA",
+      "SG",
+      "RO",
+      "BR",
+      "ES",
+      "CL",
+      "PE",
+      "TW",
+      "LK",
+      "BD",
+      "JP",
+      "US"
+    ],
+    "canonical_sources_before": 1974,
+    "canonical_sources_after": 1982,
+    "r326_sources_new_merged": 8,
+    "r326_duplicate_or_existing": 14,
+    "r327_sources_canonical_merged": 0,
+    "canonical_uniqueness": "pending_idempotent_merge; 25 verified HTML pointers not 25 proven novel URLs",
+    "verification": "official or secondary HTML indexes; binary bodies not downloaded"
+  },
+  "review": {
+    "resource_shard": "resource_000332.jsonl",
+    "unique_resources_classified": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000854.jsonl",
+      "batch_000855.jsonl",
+      "batch_000856.jsonl"
+    ],
+    "counts": {
+      "source": 14,
+      "unrelated": 26,
+      "task": 28,
+      "archive": 5,
+      "solution": 26,
+      "review": 1
+    },
+    "checkpoint": "runs/r327_review_r332.jsonl",
+    "checkpoint_sha": "42d05cd4c78021f69cd8c2f2b0d79acd7d20c1ec",
+    "sha_pinned_in": "merge_review_checkpoints.py",
+    "canonical_labels_before": 7056,
+    "canonical_labels_after": 7156,
+    "r326_labels_merged": 100,
+    "r327_canonical_merged": 0,
+    "operational_cursor": "resource_000332.jsonl",
+    "year_filename_mismatch_count": 19,
+    "anchor_filename_conflict_count": 1,
+    "notes": "USAAAO Astroarena 2018-2020 index-year vs PDF basename 2021 mismatches; 2016 LP_solution anchor 'Problem sheet' remains review; OBOL Drive folders archive, not verified individual tasks."
+  },
+  "audit": {
+    "backlog_before": 1124,
+    "added": 23,
+    "backlog_after": 1147,
+    "checkpoint": "runs/r327_audit.jsonl",
+    "canonical_published": true,
+    "examples": [
+      "Mongolian 2019/20 Olympiad explicitly cancelled; historical MMO-39 date anomaly",
+      "Uruguayan chemistry archive has 2014-2018 gaps between two published blocks",
+      "South African AstroQuiz 2020 absent and 2021+ rounds reduced in index",
+      "USAAAO 19 year/filename conflicts and 2016 anchor/filename conflict",
+      "Azerbaijani official semifinal HTML returned 502 while search index still lists it"
+    ]
+  },
+  "mime": {
+    "observations_last_confirmed": 3667,
+    "resource_observations_blob_unchanged_this_run": true,
+    "latest_pdf_count": "not independently read",
+    "non_html_not_counted_as_crawler_errors": true,
+    "no_binary_download": true
+  },
+  "verified_blob_sha": {
+    "source_discovery/run_trigger.json": "147044e22dccfa65a58c750c7d59725059b8a358",
+    "source_discovery/sources.jsonl": "e66146d2d90efb2485e465a5868af51ea55d5bd0",
+    "source_discovery/link_labels.jsonl": "6dd0c644b9a05c7712ae5d52241c578b1efb1ae5",
+    "source_discovery/backlog.jsonl": "9c37a40939c16ad1333c2ea7483d6c505222e64c",
+    "source_discovery/review_state.json": "bebcdc1ab24b96c2b0ef70a736b337467a0e8ecb",
+    "source_discovery/crawl_state.json": "ea8a745a9cad9669fb27777e80ce69f6d974f8bd",
+    "source_discovery/resource_observations.jsonl": "62e2e722a88098b5e78037c7179871e0c448bb24",
+    "source_discovery/runs/discovery_r327.jsonl": "4b2fb17627bb430cd850a4e03282bfd2582bb38b",
+    "source_discovery/runs/r327_review_r332.jsonl": "42d05cd4c78021f69cd8c2f2b0d79acd7d20c1ec",
+    "source_discovery/runs/r327_audit.jsonl": "66274d6e511769c5f17870ed7fe2f5f5614703da",
+    "source_discovery/merge_review_checkpoints.py": "24a01b44e051087ee20d33166cf1f0ae176b9625"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automation_created": false,
+    "robots_and_access_limits_respected": true
+  },
+  "open_items": [
+    "25 r327 HTML pointers checkpointed; uniqueness and canonical source merge pending next normal workflow.",
+    "100 r327 labels SHA-pinned and pending next normal canonical merge; cursor held on r332.",
+    "23 new audit gaps remain pending; historical rights and missing rounds not asserted complete.",
+    "Oversized sources and MIME observation ledgers cannot be read via connector; uniqueness relies on idempotent merger."
+  ]
+}
