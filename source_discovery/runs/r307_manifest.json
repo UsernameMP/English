@@ -1,0 +1,90 @@
+{
+  "cycle": "r307-20261025T020616137Z",
+  "reported_at": "2026-10-25T02:12:49.529Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "ef6099c8c97d67afe54ee5fe3185c4b5ac044d9d",
+    "requested_at": "2026-10-25T02:06:16.137Z",
+    "workflow_run_id": 40153178142,
+    "status": "completed_success",
+    "followup_workflow_run_id": 40153430111,
+    "followup_status": "in_progress"
+  },
+  "crawl": {
+    "last_confirmed_run": 40153178142,
+    "html_pages": 60,
+    "new_raw_links": 929,
+    "unique_resource_urls": 265487,
+    "pending_pages": 120746,
+    "blocked_or_failed_cumulative": 2745,
+    "source": "GitHub Actions crawl job log",
+    "followup_not_counted": true
+  },
+  "discovery": {
+    "canonical_before": 1778,
+    "added": 8,
+    "canonical_after": 1786,
+    "commit": "e3780d38d47c293f39ab171d08eeb7b412175554",
+    "timeline_metadata_update_commit": "2f4849affbb0aa9b8b62462b24fe7e575f22bb05",
+    "rights": "unknown",
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000312.jsonl",
+    "raw_shards": [
+      "batch_000824.jsonl",
+      "batch_000825.jsonl"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 59,
+      "source": 14,
+      "archive": 25,
+      "review": 2
+    },
+    "checkpoint": "runs/r307_review_r312.jsonl",
+    "checkpoint_blob_sha": "39485d7151f2f72c12b4ebcae6a3af0dae59404b",
+    "allowlisted_commit": "67e1bacb90ab6f661ff62fa4a37f020fa0a77cfe",
+    "canonical_before": 5088,
+    "canonical_merge": "pending_followup_workflow",
+    "next_after_merge": "resource_000313.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "metadata_corrections": {
+    "grade_corrections": 27,
+    "type_corrections": 2,
+    "incorrect_original_checkpoint": "runs/r306_review_corrections.jsonl",
+    "fixed_checkpoint": "runs/r307_r306_corrections_fixed.jsonl",
+    "fixed_checkpoint_blob_sha": "61254ca48e8195307d65609906992aad77815041",
+    "helper": "apply_review_corrections.py",
+    "workflow_step_added": true,
+    "canonical_applied": "pending_workflow"
+  },
+  "mime": {
+    "blob_sha": "dd6e5b2abfdf7b2b0103291afe0a673d850042bc",
+    "observations": 3399,
+    "unique_pdf": 1487,
+    "extensionless_pdf": 1329,
+    "unique_zip": 67,
+    "unique_octet_stream": 182,
+    "metadata_only": true,
+    "after_new_crawl_not_yet_recounted": true
+  },
+  "audit": {
+    "backlog_before": 759,
+    "backlog_after": 778,
+    "new_records": 19,
+    "old_mime_read_blockers_resolved": 2,
+    "historical_checkpoints_pending": 27,
+    "source_duplicate_normalized_count": 1
+  },
+  "safeguards": {
+    "binary_documents_downloaded": false,
+    "raw_occurrences_deleted": false,
+    "dropbox_modified": false,
+    "schedule_changed": false,
+    "additional_automation_created": false
+  }
+}
