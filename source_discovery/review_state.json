@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T08:12:42.036Z",
+  "updated_at": "2026-10-25T09:04:53.860Z",
   "deferred_shards": [
     1,
     2,
@@ -42,7 +42,7 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "GitHub Actions #40175440341 completed success; r313 13 discovery sources merged (1846->1859) and 100 unique review labels merged (5688->5788). Historical 27 original checkpoints reconciled to two SHA-pinned files (29+39=68) but canonical merge awaits next scheduled workflow.",
+  "canonical_merge_status": "r314 trigger workflow #40178873710 completed success: 68 reconciled historical labels merged (5788->5856); r314 100 unique review labels SHA-pinned for next workflow, not yet verified in canonical ledger.",
   "canonical_merged_in_cycle": 313,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -184,8 +184,8 @@
   "operational_review_cursor": {
     "next_resource_shard": "resource_000319.jsonl",
     "last_completed_shard": "resource_000318.jsonl",
-    "cycle": "r313-20261025T080111326Z",
-    "reason": "r313 100 unique reviewed labels verified in canonical link_labels.jsonl (5788); advance to resource_000319, raw cursor unchanged."
+    "cycle": "r314-20261025T090027020Z",
+    "reason": "r314 100 unique resource_000319 labels checkpointed and SHA-pinned, but canonical merge not yet verified; keep cursor at r319."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2163,5 +2163,27 @@
     "requires_next_workflow": true,
     "provenance_validation": "Original raw occurrence, URL, parent and resource ID cross-checked; five older UK physics entries cross-checked with resource_000154; two compact records filled from original raw shards.",
     "notes": "Historical source checkpoints retained unchanged for traceability. Do not clear pending_label_checkpoints until canonical merge is verified."
+  },
+  "r314_pending": {
+    "cycle": "r314-20261025T090027020Z",
+    "resource_shard": "resource_000319.jsonl",
+    "reviewed_row_range": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000840.jsonl",
+      "batch_000841.jsonl"
+    ],
+    "counts": {
+      "task": 39,
+      "criteria": 39,
+      "solution": 1,
+      "review": 21
+    },
+    "checkpoint": "runs/r314_review_r319.jsonl",
+    "checkpoint_sha": "0bfcd59a94f115c5f8951b2101410f4b6a937252",
+    "sha_allowlisted": true,
+    "canonical_merged": 0,
+    "cursor_advanced": false
   }
 }
