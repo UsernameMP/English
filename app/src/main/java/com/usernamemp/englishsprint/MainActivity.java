@@ -29,6 +29,9 @@ import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.Space;
 import android.widget.TextView;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.webkit.WebResourceRequest;
 import android.text.InputType;
 
 import java.util.ArrayList;
@@ -75,6 +78,9 @@ public class MainActivity extends Activity {
     private MiniGameHost miniGames;
     private UpdateManager updater;
     private boolean homeVisible = false;
+    private boolean kmoOpen = false;
+    private boolean kmoFromPicker = false;
+    private WebView kmoWebView;
 
     private List<Question> session = new ArrayList<>();
     private int questionIndex = 0;
@@ -154,6 +160,7 @@ public class MainActivity extends Activity {
 
     @Override
     public void onBackPressed() {
+        if (kmoOpen) { closeKmo(); return; }
         if (miniGames != null && miniGames.abortActive()) {
             hideSystemNavigation();
             return;
@@ -368,6 +375,12 @@ public class MainActivity extends Activity {
         root.addView(text(subjectLabel(subject)+" · "+getString(R.string.grade_fmt,grade),14,MUTED,Typeface.NORMAL)); root.addView(space(14));
         Button all=primaryButton(getString(R.string.all_olympiads)); all.setOnClickListener(v->selectFirstApplicable(courses,grade)); root.addView(all,matchWrap());
         root.addView(space(10));
+        if ("mathematics".equals(subject) && grade == 5) {
+            Button kmo = secondaryButton("КМО · 10 оригинальных интерактивных задач");
+            kmo.setOnClickListener(v -> showKmoOriginals(true));
+            LinearLayout.LayoutParams kmoLp = matchWrap(); kmoLp.bottomMargin = dp(8);
+            root.addView(kmo, kmoLp);
+        }
         for(ContentCatalog.Course c:courses){
             Button b=secondaryButton(competitionLabel(c.competition));
             b.setOnClickListener(v->selectCourse(c.packId,grade,c.competition));
@@ -404,12 +417,70 @@ public class MainActivity extends Activity {
         Button context=secondaryButton(subjectLabel(QuestionBank.currentPack().subject)+" · "+getString(R.string.grade_fmt,learningContext.grade())+" · "+targetLabel+" ▾");
         context.setContentDescription(getString(R.string.change_course));
         context.setOnClickListener(v->showCourseStorefront()); root.addView(context,matchWrap()); root.addView(space(14));
+        if ("mathematics".equals(QuestionBank.currentPack().subject) && learningContext.grade() == 5) {
+            Button kmo = primaryButton("КМО · оригинальные интерактивные задачи (10)");
+            kmo.setOnClickListener(v -> showKmoOriginals(false));
+            root.addView(kmo, matchWrap()); root.addView(space(12));
+        }
         Button auto=primaryButton(getString(R.string.auto_training)); auto.setOnClickListener(v->startSession(getString(R.string.quick_training),quickSession())); root.addView(auto,matchWrap());
         root.addView(space(14)); root.addView(text(getString(R.string.choose_topic),18,INK,Typeface.BOLD)); root.addView(space(10));
         if("english".equals(QuestionBank.currentPack().subject)) addTopicGrid(root,new String[]{"A+","⌕","▶","✦"},new int[]{R.string.grammar_title,R.string.reading_title,R.string.listening_title,R.string.story_title},new Question.Type[]{Question.Type.GRAMMAR,Question.Type.READING,Question.Type.LISTENING,Question.Type.STORY});
         else addKnowledgeTopicGrid(root);
         root.addView(space(10)); Button atlas=secondaryButton(getString(R.string.skill_map)); atlas.setOnClickListener(v->showProgress()); root.addView(atlas,matchWrap());
         setScrollable(root);
+    }
+
+
+    /** Original Kazan Mathematics Olympiad interactive tasks. No task generation. */
+    private void showKmoOriginals(boolean fromPicker) {
+        kmoOpen = true;
+        kmoFromPicker = fromPicker;
+        homeVisible = false;
+        LinearLayout shell = column();
+        LinearLayout titleBar = row();
+        titleBar.setPadding(dp(12), dp(6), dp(12), dp(6));
+        titleBar.setBackgroundColor(Color.rgb(10, 29, 77));
+        Button back = compactButton("←");
+        back.setContentDescription("Вернуться из КМО");
+        back.setOnClickListener(v -> closeKmo());
+        titleBar.addView(back, new LinearLayout.LayoutParams(dp(52), dp(46)));
+        TextView title = text("КМО · 5 класс", 18, Color.WHITE, Typeface.BOLD);
+        title.setPadding(dp(12), 0, 0, 0);
+        titleBar.addView(title, new LinearLayout.LayoutParams(0, dp(46), 1f));
+        title.setGravity(Gravity.CENTER_VERTICAL);
+        shell.addView(titleBar, new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        WebView web = new WebView(this);
+        kmoWebView = web;
+        web.getSettings().setJavaScriptEnabled(true);
+        web.getSettings().setDomStorageEnabled(true);
+        web.getSettings().setAllowFileAccess(true);
+        web.getSettings().setAllowContentAccess(false);
+        web.getSettings().setAllowFileAccessFromFileURLs(false);
+        web.getSettings().setAllowUniversalAccessFromFileURLs(false);
+        web.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                return !request.getUrl().toString().startsWith("file:///android_asset/kmo/");
+            }
+        });
+        shell.addView(web, new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f));
+        setContentView(shell);
+        hideSystemNavigation();
+        web.loadUrl("file:///android_asset/kmo/index.html");
+    }
+
+    private void closeKmo() {
+        kmoOpen = false;
+        if (kmoWebView != null) {
+            kmoWebView.stopLoading();
+            kmoWebView.loadUrl("about:blank");
+            kmoWebView.destroy();
+            kmoWebView = null;
+        }
+        if (kmoFromPicker) showCompetitionPicker("mathematics", 5);
+        else showTrainingHub();
     }
 
     private void addTopicGrid(LinearLayout root,String[] icons,int[] labels,Question.Type[] types) {
