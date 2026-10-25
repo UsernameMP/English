@@ -1,0 +1,114 @@
+{
+  "cycle": "r324-20261025T190044351Z",
+  "reported_at": "2026-10-25T19:07:30.573Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "requested_at": "2026-10-25T19:00:44.351Z",
+    "commit": "5a909bb9796c8a7aa8a750e73e07d9f0d6fc6bbe",
+    "workflow_run_id": 40223967792,
+    "workflow_name": "RIFT Link Enumeration",
+    "status": "completed",
+    "conclusion": "success",
+    "crawler_persist_commit": "ea5e466e7ccd836837e49f82889c0cf868d1d1c5",
+    "crawler_persist_at": "2026-10-25T19:05:37Z"
+  },
+  "crawl": {
+    "unique_resource_urls_before": 280950,
+    "unique_resource_urls_after": 282854,
+    "unique_resource_urls_delta": 1904,
+    "raw_occurrences_before": 1328095,
+    "raw_occurrences_after": 1335154,
+    "new_raw_occurrences": 7059,
+    "resource_shards": 2829,
+    "last_resource_shard": "resource_002829.jsonl",
+    "last_resource_rows": 54,
+    "raw_shards": 13352,
+    "last_raw_shard": "batch_013352.jsonl",
+    "last_raw_rows": 54,
+    "configured_max_html_pages": 60,
+    "actual_html_pages": "not independently read from large crawl_state",
+    "pending_pages": "not independently read from large crawl_state",
+    "blocked_or_failed": "not independently read from large crawl_state",
+    "source": "GitHub resource/links shard tree counts and last shard rows at trigger commit versus post-run commit; crawl_state blob changed but is >64MiB connector response limit"
+  },
+  "discovery": {
+    "queries": 30,
+    "checkpoint": "runs/discovery_r324.jsonl",
+    "checkpointed_new_HTML_pointers": 14,
+    "canonical_sources_before": 1932,
+    "canonical_sources_after": 1944,
+    "prior_r323_sources_merged": 12,
+    "r324_sources_canonical_merged": 0,
+    "notes": "All 14 absent from 1932-row canonical and r323 checkpoint at comparison. Includes some search-index-only pointers with live timeout/403, explicitly marked as such."
+  },
+  "review": {
+    "resource_shard": "resource_000329.jsonl",
+    "unique_resources_classified": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000851.jsonl",
+      "batch_000852.jsonl"
+    ],
+    "counts": {
+      "review": 10,
+      "task": 12,
+      "solution": 12,
+      "source": 13,
+      "unrelated": 32,
+      "archive": 21
+    },
+    "checkpoint": "runs/r324_review_r329.jsonl",
+    "checkpoint_sha": "3a2192162e2e3fb50f46f827dd0922e790f02ed3",
+    "sha_pinned_in": "merge_review_checkpoints.py",
+    "canonical_labels_before": 6756,
+    "canonical_labels_after": 6856,
+    "prior_r323_labels_merged": 100,
+    "r324_canonical_merged": 0,
+    "operational_cursor": "resource_000329.jsonl",
+    "ambiguity": "Nine PLO task links point to same Drive target as their solution links; classified review instead of inferring document role."
+  },
+  "audit": {
+    "backlog_before": 1067,
+    "added": 18,
+    "backlog_after": 1085,
+    "checkpoint": "runs/r324_audit.jsonl",
+    "canonical_published": true
+  },
+  "mime": {
+    "observations": 3639,
+    "pdf_unique_urls": 1551,
+    "pdf_without_pdf_substring": 1379,
+    "zip_mime_observations": 72,
+    "non_html_not_counted_as_errors": true,
+    "no_binary_download": true
+  },
+  "verified_blob_sha": {
+    "source_discovery/run_trigger.json": "5677ddd06c9d42cc3145d50768fb67cd2831b58b",
+    "source_discovery/sources.jsonl": "77d4cfe8a286f02f83840830038ccc263bb61484",
+    "source_discovery/backlog.jsonl": "e006c51a3a80004d2aa892b372300ff6a6711eac",
+    "source_discovery/review_state.json": "ac4505a8646bcff27bd29093864f11da93c93423",
+    "source_discovery/crawl_state.json": "183e5b61b33d5f2761f148241bfff5235e6557aa",
+    "source_discovery/link_labels.jsonl": "1220f8cabaeb55ff704a66faf9a08406f07826be",
+    "source_discovery/resource_observations.jsonl": "4ec16912eb4e47d932a8761d1caf2820454578e0",
+    "source_discovery/runs/discovery_r324.jsonl": "4d8657d6d54c808ab249cc1b650bd4e2d096c79d",
+    "source_discovery/runs/r324_review_r329.jsonl": "3a2192162e2e3fb50f46f827dd0922e790f02ed3",
+    "source_discovery/runs/r324_audit.jsonl": "3396b54f475884ce45e539735dfbeeba1abb6877",
+    "source_discovery/runs/r324_search_log.json": "f024247f976ec5b3ac70730559a6ffae8de2e044",
+    "source_discovery/merge_review_checkpoints.py": "206e693a384e78462f8f87d9c31a45887d861b9b"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automation_created": false
+  },
+  "open_items": [
+    "14 new r324 source pointers in SHA-checkpoint, awaiting next normal merger into sources.jsonl.",
+    "100 r324 unique reviewed labels SHA-pinned, awaiting next normal workflow merge into link_labels.jsonl.",
+    "Ten r324 resources remain review (nine ambiguous shared Google Drive hrefs plus external puzzle index).",
+    "Crawler pending queue and error totals not read from oversized crawl_state; no completeness assertion.",
+    "Historical archive gaps, 403/timeout and rights unknown remain in backlog."
+  ]
+}
