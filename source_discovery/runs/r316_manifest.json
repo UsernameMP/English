@@ -1,14 +1,16 @@
 {
   "cycle": "r316-20261025T110810197Z",
-  "reported_at": "2026-10-25T11:10:57.119Z",
+  "reported_at": "2026-10-25T11:11:58.196Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
     "commit": "3ae503a44ae056c5f323aed529f25888ea545241",
     "run_id": 40187603151,
     "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40187603151",
-    "status_at_last_check": "in_progress",
-    "conclusion": null
+    "status_at_last_check": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-25T11:11:25Z",
+    "job_id": 121151602210
   },
   "discovery": {
     "checkpoint": "runs/discovery_r316.jsonl",
@@ -24,7 +26,7 @@
       "GE"
     ],
     "canonical_before_last_confirmed": 1877,
-    "canonical_merge_status": "checkpointed_pending_workflow",
+    "canonical_merge_status": "checkpointed_after_workflow_checkout_pending_next_merge",
     "note": "Canonical source file too large for connector direct full read; merge_sources.py will normalize/deduplicate; do not claim all 12 are newly canonical."
   },
   "review": {
@@ -44,7 +46,7 @@
     "checkpoint_sha": "64dd6748788186625586d6c1d174ad6b79b8a3d0",
     "sha_allowlisted": true,
     "canonical_labels_last_confirmed": 6056,
-    "canonical_merge_status": "pending_workflow",
+    "canonical_merge_status": "checkpointed_after_workflow_checkout_pending_next_merge",
     "cursor_next": "resource_000321.jsonl",
     "raw_cursor_unchanged": true
   },
@@ -56,10 +58,16 @@
     "historical_alias_pairs_unresolved": 15
   },
   "crawl": {
-    "unique_resources_last_confirmed": 273832,
-    "queue_last_confirmed": 122845,
-    "errors_last_confirmed": 2863,
-    "run316_stats": "pending completion"
+    "unique_resources_before": 273832,
+    "unique_resources_after": 274415,
+    "unique_resources_delta": 583,
+    "html_pages": 60,
+    "new_raw_occurrences": 827,
+    "pending_pages": 122881,
+    "blocked_or_failed": 2879,
+    "crawl_commit": "16203ba1",
+    "source": "GitHub Actions #40187603151 job log",
+    "run_status": "success"
   },
   "mime": {
     "observations_last_confirmed": 3556,
@@ -75,7 +83,7 @@
     "extra_automations_created": false
   },
   "open_items": [
-    "Confirm GitHub Actions r316 outcome and new crawler counters.",
+    "Workflow r316 completed successfully; 12 discovery pointers and 100 labels were published after workflow checkout, so canonical merges remain pending.",
     "Merge 12 Discovery pointers with canonical sources and deduplicate.",
     "Merge 100 r321 labels with canonical link_labels after SHA-pinned workflow.",
     "Clarify 29 supplemental/ambiguous r321 resources.",
