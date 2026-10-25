@@ -474,10 +474,13 @@ public class MainActivity extends Activity {
     private void closeKmo() {
         kmoOpen = false;
         if (kmoWebView != null) {
-            kmoWebView.stopLoading();
-            kmoWebView.loadUrl("about:blank");
-            kmoWebView.destroy();
+            WebView old = kmoWebView;
             kmoWebView = null;
+            old.stopLoading();
+            if (old.getParent() instanceof ViewGroup) {
+                ((ViewGroup) old.getParent()).removeView(old);
+            }
+            old.destroy();
         }
         if (kmoFromPicker) showCompetitionPicker("mathematics", 5);
         else showTrainingHub();
