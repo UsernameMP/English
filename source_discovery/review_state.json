@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T10:19:33.008Z",
+  "updated_at": "2026-10-25T11:10:32.683Z",
   "deferred_shards": [
     1,
     2,
@@ -2193,5 +2193,28 @@
     "canonical_merged_verified": true,
     "canonical_labels_total": 6056,
     "merged_workflow_run_id": 40183845074
+  },
+  "r316_pending": {
+    "cycle": "r316-20261025T110810197Z",
+    "resource_shard": "resource_000321.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000842.jsonl",
+      "batch_000843.jsonl"
+    ],
+    "classification_counts": {
+      "task": 37,
+      "criteria": 34,
+      "review": 29
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoint": "runs/r316_review_r321.jsonl",
+    "checkpoint_blob_sha": "64dd6748788186625586d6c1d174ad6b79b8a3d0",
+    "allowlisted_in": "merge_review_checkpoints.py",
+    "canonical_merged": false,
+    "cursor_advanced": false,
+    "raw_cursor_unchanged": true,
+    "notes": "Await GitHub Actions checkpoint merge confirmation; no binary material downloaded."
   }
 }
