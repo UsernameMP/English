@@ -1,0 +1,114 @@
+{
+  "cycle": "r323-20261025T180149192Z",
+  "reported_at": "2026-10-25T18:09:59.933Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "55d184f2f9c8b44695c17000e1d217a62b65b32a",
+    "blob_sha": "5d6fff8dbabaee22671ba0d577bcd902fdf20a29",
+    "requested_at": "2026-10-25T18:01:49.192Z",
+    "workflow_name": "RIFT Link Enumeration",
+    "execution_evidence": "crawl_state.json updated 2026-10-25T18:04:15Z and canonical source/label blobs changed after trigger",
+    "workflow_run_id": null,
+    "actions_conclusion": "not_independently_available_via_connector",
+    "note": "Push trigger configuration checked; GitHub Actions run id/conclusion not independently obtained. Do not equate observed state update with confirmed workflow success."
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_occurrences": 3560,
+    "unique_resource_urls_before": 279444,
+    "unique_resource_urls_after": 280950,
+    "unique_resource_urls_delta": 1506,
+    "pending_pages": 127192,
+    "blocked_or_failed": 2953,
+    "robots_denied_or_unavailable": 1928,
+    "crawl_state_updated_at": "2026-10-25T18:04:15+00:00",
+    "source": "GitHub crawl_state.json blob and last resource shard resource_002810.jsonl (50 rows)"
+  },
+  "discovery": {
+    "search_queries": 71,
+    "initial_candidates_checkpointed": 15,
+    "initial_known_duplicates_detected": 13,
+    "checkpoint_verified_absent_from_current_canonical": 12,
+    "checkpoint": "runs/discovery_r323.jsonl",
+    "checkpoint_blob_sha": "58d5889cc5c21aa1f86592ad934ffa9ee07dc3e3",
+    "canonical_sources_before": 1924,
+    "canonical_sources_after": 1932,
+    "canonical_new_sources_from_prior_r322": 8,
+    "r323_canonical_merge_pending": true,
+    "search_log": "runs/r323_search_log.json",
+    "note": "Full canonical source blob was fetched to check normalized URLs. The 12 new candidates are public HTML competition pointers, not all proven task archives. No extra trigger created."
+  },
+  "review": {
+    "resource_shard": "resource_000328.jsonl",
+    "unique_resources_classified": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000850.jsonl",
+      "batch_000851.jsonl"
+    ],
+    "counts": {
+      "task": 53,
+      "solution": 46,
+      "review": 1
+    },
+    "checkpoint": "runs/r323_review_r328.jsonl",
+    "checkpoint_blob_sha": "dbaaf5795bf565caebc9a7e24f28457bf61d520b",
+    "sha_pinned_in": "merge_review_checkpoints.py",
+    "canonical_labels_before": 6656,
+    "canonical_labels_after": 6756,
+    "r322_canonical_merged": 100,
+    "r323_canonical_merged": 0,
+    "operational_cursor": "resource_000328.jsonl",
+    "note": "Organizer PLO practice index; year unknown; malformed solution URL retained in review; no Google Drive file body fetched."
+  },
+  "audit": {
+    "backlog_before": 1044,
+    "added": 23,
+    "backlog_after": 1067,
+    "checkpoint": "runs/r323_audit.jsonl",
+    "canonical_published": true,
+    "topics": [
+      "PLO malformed link and provenance",
+      "year/stage and historical archive gaps",
+      "participant and author rights",
+      "university engineering and vocational practical competitions",
+      "external Google Drive and historical link persistence"
+    ]
+  },
+  "mime": {
+    "observations": 3636,
+    "pdf_unique_urls": 1548,
+    "pdf_without_pdf_substring": 1376,
+    "zip_mime_observations": 61,
+    "non_html_not_counted_as_crawl_errors": true,
+    "no_binary_download": true
+  },
+  "verified_blob_sha": {
+    "source_discovery/run_trigger.json": "5d6fff8dbabaee22671ba0d577bcd902fdf20a29",
+    "source_discovery/sources.jsonl": "f70056671e22885b0ff459f906fd7839872a4c72",
+    "source_discovery/backlog.jsonl": "3917cc4b7e0faf5700cd008b0de9b30f1977f52c",
+    "source_discovery/review_state.json": "cb2b7066f41e38b4c95b7c7cea5d934bc1bd7b10",
+    "source_discovery/crawl_state.json": "6a4cc53cd794d33a06fb20de016cad0bdea483f1",
+    "source_discovery/link_labels.jsonl": "b263ec774d3449b7d13ffb304b50db77fe743035",
+    "source_discovery/resource_observations.jsonl": "eeef47059e0ffe261df3ee227f53174e8576aabc",
+    "source_discovery/runs/discovery_r323.jsonl": "58d5889cc5c21aa1f86592ad934ffa9ee07dc3e3",
+    "source_discovery/runs/r323_review_r328.jsonl": "dbaaf5795bf565caebc9a7e24f28457bf61d520b",
+    "source_discovery/runs/r323_audit.jsonl": "d7c03977a1971e8f46e687e2eaa42dc7c4ab3568",
+    "source_discovery/runs/r323_search_log.json": "d8c165d02f208968da4c7045acd389cfcaddcc2a",
+    "source_discovery/merge_review_checkpoints.py": "df449cecd72334145301b8def8ed41e2a0293ddd"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automation_created": false
+  },
+  "open_items": [
+    "12 r323 verified new HTML pointers are SHA-checkpointed, canonical merge pending next regular workflow.",
+    "100 r323 unique reviewed labels are SHA-pinned; canonical merge pending; cursor held at resource_000328.",
+    "One PLO solution href malformed; years and adaptation provenance unknown.",
+    "GitHub Actions execution effects confirmed by state update, but run ID/conclusion not independently available."
+  ]
+}
