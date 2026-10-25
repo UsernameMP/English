@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T18:08:36.702Z",
+  "updated_at": "2026-10-25T19:06:13.138Z",
   "deferred_shards": [
     1,
     2,
@@ -13,11 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r323_review_r328.jsonl"
+    "runs/r324_review_r329.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "Verified by reading canonical link_labels.jsonl blob: r322 resource_000327 100/100 merged with no type conflicts; canonical 6656 -> 6756. r323 resource_000328 100 unique labels SHA-pinned in merger, not yet canonical; hold cursor.",
-  "canonical_merged_in_cycle": 322,
+  "canonical_merge_status": "Verified canonical link_labels.jsonl Git blob: r323 resource_000328 100/100 labels merged without resource/type conflicts; canonical 6756 -> 6856. r324 resource_000329 100 unique labels SHA-pinned in merger; not yet canonical. Hold operational cursor at r329.",
+  "canonical_merged_in_cycle": 323,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -156,10 +156,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000328.jsonl",
-    "last_completed_shard": "resource_000328.jsonl",
-    "cycle": "r323-20261025T180149192Z",
-    "reason": "r322 canonical 100 labels verified; r323 resource_000328 classified and SHA-pinned, pending next regular workflow; cursor held at r328 until merge."
+    "next_resource_shard": "resource_000329.jsonl",
+    "last_completed_shard": "resource_000329.jsonl",
+    "cycle": "r324-20261025T190044351Z",
+    "reason": "r323 100/100 canonical merge verified; r324 resource_000329 100 classified and SHA-pinned, pending next regular workflow; hold cursor at r329."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2388,8 +2388,33 @@
     },
     "checkpoint": "runs/r323_review_r328.jsonl",
     "checkpoint_blob_sha": "dbaaf5795bf565caebc9a7e24f28457bf61d520b",
+    "canonical_merged": 100,
+    "canonical_cursor_moved": true,
+    "notes": "Organizer PLO practice archive; individual years unknown, one malformed solution URL preserved as review; binary files not accessed."
+  },
+  "r324_pending": {
+    "cycle": "r324-20261025T190044351Z",
+    "resource_shard": "resource_000329.jsonl",
+    "reviewed_row_range": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000851.jsonl",
+      "batch_000852.jsonl"
+    ],
+    "classification_counts": {
+      "review": 10,
+      "task": 12,
+      "solution": 12,
+      "source": 13,
+      "unrelated": 32,
+      "archive": 21
+    },
+    "checkpoint": "runs/r324_review_r329.jsonl",
+    "checkpoint_blob_sha": "3a2192162e2e3fb50f46f827dd0922e790f02ed3",
+    "sha_allowlisted_in": "merge_review_checkpoints.py",
     "canonical_merged": 0,
     "canonical_cursor_moved": false,
-    "notes": "Organizer PLO practice archive; individual years unknown, one malformed solution URL preserved as review; binary files not accessed."
+    "notes": "Nine ambiguous PLO task/solution targets share the same Drive href; organizer Netherlands IChO navigation is Dutch preparation and national final selection, not necessarily international IChO exams. No binary bodies fetched."
   }
 }
