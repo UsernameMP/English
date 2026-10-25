@@ -1,6 +1,6 @@
 {
   "cycle": "r326-20261025T210428057Z",
-  "recorded_at": "2026-10-25T21:09:30.388Z",
+  "recorded_at": "2026-10-25T21:11:13.795Z",
   "queries_attempted": [
     "site:olympiad.org.za \"past papers\" \"geography\" olympiad",
     "site:edu.uz olimpiada masalalar yechimlari fizika matematika talabalar 2024",
@@ -43,12 +43,22 @@
     "Swiss Earth Science Olympiad archive exams tasks past problems",
     "olimpiada geograficzna Czech zadani reseni archiv zemepisna olympiada",
     "olympiada biológia Slovensko archív úlohy riešenia celoštátne kolo",
-    "international research tournament problems archive IYPT IYNT biology young naturalists tournament official"
+    "international research tournament problems archive IYPT IYNT biology young naturalists tournament official",
+    "site:filozofska-olimpijada.si arhiv teme eseji filozofska olimpijada",
+    "site:philolympics.at philosophie olympiade essay themen archive",
+    "site:oeconomia.pt olimpiadas economia provas resoluções arquivo",
+    "site:geographyolympiad.org archives geography past tests fieldwork",
+    "site:olympiad.edu.pl olimpiada historii sztuki zadania archiwum",
+    "site:olimpiadadelinguistica.org pruebas soluciones archivo olimpíada",
+    "site:geoolympiad.org \"past tests\" \"written\" \"fieldwork\" years",
+    "site:teaduskool.ut.ee \"filosoofiaolümpiaad\" \"arhiiv\" esseed",
+    "site:olympiad.sk geografia olympiáda úlohy riešenia archív",
+    "site:olympiad.org.uk linguistics olympiad past papers solutions archive"
   ],
-  "query_count": 42,
+  "query_count": 52,
   "source_checkpoint": "runs/discovery_r326.jsonl",
   "review_checkpoint": "runs/r326_review_r331.jsonl",
-  "candidate_HTML_pointers_checkpointed": 21,
+  "candidate_HTML_pointers_checkpointed": 22,
   "canonical_uniqueness": "pending merge_sources.py against 1958+ canonical records; source registry too large for connector read",
   "reviewed_unique_resource_urls": 100,
   "raw_occurrences_matched": 100,
@@ -58,5 +68,6 @@
     "batch_000855.jsonl"
   ],
   "binary_downloaded": false,
-  "prior_cycle_exact_queries_repeated": false
+  "prior_cycle_exact_queries_repeated": false,
+  "note": "Additional Estonian philosophy archive pointer; Austrian 2027 topics embargo recorded as audit, not scraped."
 }
