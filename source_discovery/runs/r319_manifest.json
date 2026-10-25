@@ -1,0 +1,107 @@
+{
+  "cycle": "r319-20261025T135953999Z",
+  "reported_at": "2026-10-25T14:04:19.842Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "2d2009c4f8567e8239a566e67bf706a3e2347fd5",
+    "blob_sha": "0eda5319ac1a2bbf468b40f3a49428d9b144c67d",
+    "action_run_id": 40200162494,
+    "action_url": "https://github.com/UsernameMP/English/actions/runs/40200162494",
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_occurrences": 8350,
+    "unique_resource_urls_before": 275896,
+    "unique_resource_urls_after": 276087,
+    "unique_resource_urls_delta": 191,
+    "pending_pages": 123979,
+    "blocked_or_failed": 2925,
+    "resource_shards_changed": 4,
+    "resource_shards_last": "resource_002761.jsonl",
+    "resource_shards_last_rows": 87,
+    "source": "GitHub Actions job log #121189468363",
+    "crawl_state_blob_sha": "488e147329e51137e894e8e123d944da2ef294df"
+  },
+  "discovery": {
+    "html_verified_pointers_checkpointed": 12,
+    "checkpoint": "runs/discovery_r319.jsonl",
+    "checkpoint_blob_sha": "4c6e4edeacf8ac7504685b7a0c69b04c87a8a84b",
+    "canonical_uniqueness": "pending next merge_sources.py normalized dedup; large canonical registry not fully readable",
+    "canonical_sources_before_workflow": 1896,
+    "canonical_sources_after_workflow": 1902,
+    "prior_r318_sources_merged": 6,
+    "new_r319_sources_merged": 0,
+    "rights": "unknown_or_reserved"
+  },
+  "review": {
+    "resource_shard": "resource_000324.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000845.jsonl",
+      "batch_000846.jsonl",
+      "batch_000847.jsonl"
+    ],
+    "counts": {
+      "task": 30,
+      "criteria": 32,
+      "solution": 16,
+      "review": 16,
+      "unrelated": 5,
+      "source": 1
+    },
+    "checkpoint": "runs/r319_review_r324.jsonl",
+    "checkpoint_blob_sha": "2859b8053dc976d7de1859f4bf3fb37584532916",
+    "sha_allowlisted_in": "merge_review_checkpoints.py",
+    "canonical_labels_before_workflow": 6256,
+    "canonical_labels_after_workflow": 6356,
+    "prior_r318_labels_merged": 100,
+    "new_r319_labels_merged": 0,
+    "operational_cursor": "resource_000324.jsonl",
+    "binary_downloaded": false
+  },
+  "mime": {
+    "observation_ledger_blob_sha": "d1ec9e510a1e97c9a0330a72767919909cd6cd85",
+    "current_count": "not_verified_due_connector_large_file_empty_reads",
+    "rule": "MIME evidence not task suitability; no PDF/ZIP/image bodies fetched"
+  },
+  "audit": {
+    "backlog_before": 967,
+    "added": 17,
+    "backlog_after": 984,
+    "backlog_blob_sha": "673475d3e69c98d38bcd62759784a423da2eca2e",
+    "themes": [
+      "year_and_stage_matrices",
+      "missing_question_and_solution_links",
+      "historical_and_mirror_gaps",
+      "rubric_and_participant_work_rights",
+      "dynamic_pagination",
+      "temporary_MMT_unavailability",
+      "community_provenance",
+      "ambiguous_supplements"
+    ]
+  },
+  "verified_sha": {
+    "sources": "23a0253c609ea8f6216079ed7b0ffeed127d1b53",
+    "link_labels": "a6cad4f8cda7d042316735a1d1038ccefaa45064",
+    "review_state": "b0f237dbd77cab80714422fe8f1b83dd7e7a9068",
+    "review_merge_script": "6b7b2845fe7c039ee71056fe6d27e24dc50a9a6d"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automations_created": false
+  },
+  "open_items": [
+    "12 discovery pointers await canonical normalized dedup/merge; some may already be registered.",
+    "100 r319 labels await canonical merge on next ordinary workflow; cursor must not advance yet.",
+    "16 review-ambiguous resource links remain, including KöMaL M391 and HSE supporting materials.",
+    "17 specific audit gaps pending; historical aliases and pagination not exhausted.",
+    "Current MIME observation counts unavailable from oversized ledger; SHA confirms it changed."
+  ]
+}
