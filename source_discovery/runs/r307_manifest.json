@@ -1,6 +1,6 @@
 {
   "cycle": "r307-20261025T020616137Z",
-  "reported_at": "2026-10-25T02:14:55.071Z",
+  "reported_at": "2026-10-25T02:15:15.833Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
@@ -88,12 +88,13 @@
   },
   "audit": {
     "backlog_before": 759,
-    "backlog_after": 778,
-    "new_records": 19,
+    "backlog_after": 779,
+    "new_records": 20,
     "old_mime_read_blockers_resolved": 2,
     "historical_checkpoints_pending": 27,
     "source_duplicate_normalized_count": 1,
-    "historical_checkpoint_records_seen": 68
+    "historical_checkpoint_records_seen": 68,
+    "historical_checkpoint_overlap_with_pre_r307_canonical": 0
   },
   "safeguards": {
     "binary_documents_downloaded": false,
