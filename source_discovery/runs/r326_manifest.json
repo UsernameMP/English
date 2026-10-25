@@ -1,0 +1,133 @@
+{
+  "cycle": "r326-20261025T210428057Z",
+  "reported_at": "2026-10-25T21:13:42.555Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "requested_at": "2026-10-25T21:04:28.057Z",
+    "commit": "a201e0ad4795cfba55e2b6ece544fb2bd670b666",
+    "workflow_name": "RIFT Link Enumeration",
+    "workflow_run_id": 40233748356,
+    "status": "completed",
+    "conclusion": "success",
+    "job_completed_at": "2026-10-25T21:12:08Z",
+    "crawler_persist_commit": "9a09dd6c158cbf2fe2f249afd68c44d141e5c765",
+    "verified_by": "GitHub Actions REST run/jobs plus bot commit and changed canonical blobs"
+  },
+  "crawl": {
+    "unique_resource_urls_before": 284345,
+    "unique_resource_urls_after": 285161,
+    "unique_resource_urls_delta": 816,
+    "raw_occurrences_before": 1342455,
+    "raw_occurrences_after": 1346980,
+    "new_raw_occurrences": 4525,
+    "resource_shards": 2852,
+    "last_resource_shard": "resource_002852.jsonl",
+    "last_resource_rows": 61,
+    "raw_shards": 13470,
+    "last_raw_shard": "batch_013470.jsonl",
+    "last_raw_rows": 80,
+    "configured_max_html_pages": 60,
+    "actual_html_pages": "not_independently_read",
+    "pending_pages": "not_independently_read",
+    "blocked_or_failed": "not_independently_read",
+    "source": "GitHub shard counts, last-shard rows and bot commit; crawl_state large and connector cannot return ranges"
+  },
+  "discovery": {
+    "queries": 52,
+    "checkpoint": "runs/discovery_r326.jsonl",
+    "checkpointed_HTML_pointers": 22,
+    "countries": [
+      "LV",
+      "EE",
+      "FR",
+      "SK",
+      "NO",
+      "CH",
+      "HR",
+      "BO",
+      "US"
+    ],
+    "canonical_sources_before": 1958,
+    "canonical_sources_after": 1974,
+    "r325_sources_merged": 16,
+    "r326_sources_canonical_merged": 0,
+    "canonical_uniqueness": "pending_idempotent_merge; 22 are verified pointers, not yet 22 proven novel URLs",
+    "rights": "unknown_or_reserved_except_IYNT_restriction"
+  },
+  "review": {
+    "resource_shard": "resource_000331.jsonl",
+    "unique_resources_classified": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000853.jsonl",
+      "batch_000854.jsonl",
+      "batch_000855.jsonl"
+    ],
+    "counts": {
+      "archive": 16,
+      "unrelated": 30,
+      "task": 12,
+      "source": 42
+    },
+    "checkpoint": "runs/r326_review_r331.jsonl",
+    "checkpoint_sha": "8c0c30e2fe7d4db827992e37a91b2dd73d9c179e",
+    "sha_pinned_in": "merge_review_checkpoints.py",
+    "canonical_labels_before": 6956,
+    "canonical_labels_after": 7056,
+    "r325_labels_merged": 100,
+    "r326_canonical_merged": 0,
+    "operational_cursor": "resource_000331.jsonl",
+    "notes": "ONHB 2009-2016 organizer links labelled Prova em PDF; Drive file bodies not checked. NOIC subject hubs classified source rather than individual tasks. No duplicate resource_id with r325 checkpoint."
+  },
+  "audit": {
+    "backlog_before": 1101,
+    "added": 23,
+    "backlog_after": 1124,
+    "checkpoint": "runs/r326_audit.jsonl",
+    "canonical_published": true,
+    "examples": [
+      "Latvia mathematics archive spans 1980/81-2025/26 with cancelled years and mixed DOC/PDF links",
+      "Swiss historical round naming changed; multilingual coverage uneven",
+      "IYNT Croatia explicitly restricts problem reuse to Council-supported events",
+      "Bolivian 2022 first-stage task and solution anchors share same Drive URL",
+      "Austrian 2027 philosophy topics are intentionally withheld due AI-related competition safeguards"
+    ]
+  },
+  "mime": {
+    "observations_before": 3656,
+    "observations_after": 3667,
+    "observations_added": 11,
+    "last_confirmed_pdf_unique_urls": 1567,
+    "latest_pdf_count": "not_independently_read",
+    "non_html_not_counted_as_crawler_errors": true,
+    "no_binary_download": true
+  },
+  "verified_blob_sha": {
+    "source_discovery/run_trigger.json": "7c11debd53b840d3fce6826f1a7728358f2e08aa",
+    "source_discovery/sources.jsonl": "8cb38ed97c9bf67d6b9a30679bc432e3b875299f",
+    "source_discovery/link_labels.jsonl": "7169754062f8775d245372afe92d64a0ef1f0847",
+    "source_discovery/backlog.jsonl": "34bd8f6d4b1c72bcc3d6fe9bb398f5ca50cb5731",
+    "source_discovery/review_state.json": "f7854875ee36081a06d5caa178551dffd858ddf5",
+    "source_discovery/crawl_state.json": "e05bdcb3b875cfc3ac29eb7daa4a89c900bab393",
+    "source_discovery/resource_observations.jsonl": "62e2e722a88098b5e78037c7179871e0c448bb24",
+    "source_discovery/runs/discovery_r326.jsonl": "f3b5ce9c2484c717aba8a3779123103feef850f7",
+    "source_discovery/runs/r326_review_r331.jsonl": "8c0c30e2fe7d4db827992e37a91b2dd73d9c179e",
+    "source_discovery/runs/r326_audit.jsonl": "4dec7f9d89d07626e94e76eaa6d01322377cf62f",
+    "source_discovery/merge_review_checkpoints.py": "f3bc48c2ba3b0ca74078f2c85520f6a5149590b9"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automation_created": false,
+    "robots_and_access_limits_respected": true
+  },
+  "open_items": [
+    "22 r326 verified source pointers checkpointed but canonical uniqueness/merge pending next normal workflow.",
+    "100 r326 unique reviewed labels SHA-pinned but not yet canonical; operational cursor held at r331.",
+    "23 audit gaps remain pending, including rights and non-public 2027 philosophy essay topics.",
+    "Crawler frontier/error totals and latest PDF MIME breakdown not read from oversized state/observations; no completeness assertion."
+  ]
+}
