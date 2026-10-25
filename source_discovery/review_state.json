@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T06:10:58.886Z",
+  "updated_at": "2026-10-25T07:13:55.214Z",
   "deferred_shards": [
     1,
     2,
@@ -42,8 +42,8 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "r310 15 sources merged (1807->1822) and 100 labels merged (5388->5488) in crawler persistence at 2026-10-25T06:08:14Z; r311 10 source and 100 label checkpoints SHA-pinned pending next merge; 27 historical checkpoints pending",
-  "canonical_merged_in_cycle": 310,
+  "canonical_merge_status": "GitHub Actions #40171435659 completed success; r311 discovery 10 sources merged (1822->1832) and r311 100 review labels merged (5488->5588); r312 14 deduplicated source candidates and 100 reviewed labels SHA-pinned but not canonically merged; 27 historical checkpoints remain pending.",
+  "canonical_merged_in_cycle": 311,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -182,10 +182,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000316.jsonl",
-    "last_completed_shard": "resource_000315.jsonl",
-    "cycle": "r311-20261025T060341694Z",
-    "reason": "r310 100 labels confirmed merged (canonical 5488); r311 resource_000316 100 labels checkpointed and SHA-allowlisted, pending canonical merge. Do not advance to resource_000317 until verified."
+    "next_resource_shard": "resource_000317.jsonl",
+    "last_completed_shard": "resource_000316.jsonl",
+    "cycle": "r312-20261025T070449051Z",
+    "reason": "r311 100 labels verified in canonical; r312 resource_000317 100 unique resources reviewed, SHA-pinned pending merge; do not advance to resource_000318 until verified."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2054,11 +2054,51 @@
     "review_checkpoint_sha": "44efa09651b1c1a1ba376863cb08b952e55cdab6",
     "discovery_checkpoint": "runs/discovery_r311.jsonl",
     "discovery_checkpoint_sha": "8c931576c552dec859a7c3c5507f1f65310b92a7",
-    "canonical_merged": false,
+    "canonical_merged": 100,
     "next_after_verified_merge": "resource_000317.jsonl",
-    "cursor_advanced": false,
+    "cursor_advanced": true,
     "r310_canonical_merged": true,
     "r310_canonical_label_count": 5488,
-    "r310_canonical_source_count": 1822
+    "r310_canonical_source_count": 1822,
+    "canonical_label_count_after": 5588,
+    "canonical_source_count_after": 1832,
+    "workflow_run": 40171435659
+  },
+  "r312_pending": {
+    "cycle": "r312-20261025T070449051Z",
+    "resource_shard": "resource_000317.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_checked": 122,
+    "raw_shards": [
+      "batch_000829.jsonl",
+      "batch_000830.jsonl",
+      "batch_000831.jsonl",
+      "batch_000832.jsonl",
+      "batch_000833.jsonl",
+      "batch_000834.jsonl",
+      "batch_000835.jsonl",
+      "batch_000836.jsonl"
+    ],
+    "counts": {
+      "unrelated": 16,
+      "solution": 18,
+      "review": 5,
+      "task": 43,
+      "source": 4,
+      "criteria": 11,
+      "participant_work": 3
+    },
+    "review_checkpoint": "runs/r312_review_r317.jsonl",
+    "review_checkpoint_sha": "9def741c80390429b330c0bbf46963135f123a6f",
+    "discovery_checkpoint": "runs/discovery_r312.jsonl",
+    "discovery_checkpoint_sha": "4c0a2538430795c0f4d20b5e66bbb6031888e399",
+    "canonical_merged": 0,
+    "canonical_labels_before": 5588,
+    "canonical_sources_before": 1832,
+    "review_cursor_advanced": false,
+    "next_after_verified_merge": "resource_000318.jsonl",
+    "raw_cursor_unchanged": true,
+    "historical_checkpoints_pending": 27,
+    "notes": "HSE design and art-history tasks, keys, criteria and participant works; KöMaL numbered problem pages; ambiguous auxiliary data and scoring distributions retained review; stage metadata conservative; no binary downloads."
   }
 }
