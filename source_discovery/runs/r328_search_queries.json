@@ -1,6 +1,6 @@
 {
   "cycle": "r328-20261025T230015983Z",
-  "queried_at": "2026-10-25T23:04:11.722Z",
+  "queried_at": "2026-10-25T23:05:40.562Z",
   "queries": [
     "site:olympiad.org \"past papers\" geology geography olympiad archives",
     "national linguistics olympiad archive tasks solutions Africa 2024 2025",
@@ -49,7 +49,17 @@
     "site:org.rs olimpijada zadaci rešenja arhiva filozofija geografija",
     "site:komal.hu/feladat \"K634\" \"megoldás\" 2019",
     "site:komal.hu/feladat \"A761\" \"statisztika\" 2019",
-    "site:komal.hu/feladat \"K634\" \"Megoldás\" \"2019 november\" KöMaL"
+    "site:komal.hu/feladat \"K634\" \"Megoldás\" \"2019 november\" KöMaL",
+    "philosophy olympiad national archive past essay prompts grading rubric 2008 2025",
+    "history olympiad past exam questions solutions official archive national 2025",
+    "economics olympiad past papers case study finance business official archive 2018 2025",
+    "environmental science olympiad past papers archive biodiversity ecology",
+    "linguistics olympiad old national archive problem sets Africa",
+    "site:edu.tr felsefe olimpiyatı geçmiş yıllar soruları değerlendirme",
+    "site:edu.pl olimpiada historyczna zadania arkusze archiwum kryteria",
+    "site:org.nz economics competition past papers solutions archive",
+    "site:edu.br olimpíada filosofia redações premiadas questões arquivos",
+    "site:org.au olympiad geography history economics past papers solutions"
   ],
   "notes": "Search terms issued during r328. Results screened against r326-r327 checkpoints; canonical source URL uniqueness remains subject to idempotent merger. KöMaL targeted queries returned no results. No binary downloads."
 }
