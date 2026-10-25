@@ -1,0 +1,94 @@
+{
+  "cycle": "r318-20261025T130042325Z",
+  "reported_at": "2026-10-25T13:12:03.643Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "2f1f71d41c4126fc73fdfafd5fd6fb7b390b0555",
+    "run_trigger_blob_sha": "a376f614146f2d80ffce8dcc94cce4eabbeb2b77",
+    "action_execution": "confirmed_by_new_crawl_state_and_canonical_registry_blob_changes",
+    "workflow_run_id": null,
+    "workflow_final_conclusion": "not_directly_available_from_connector"
+  },
+  "crawl": {
+    "last_run_at": "2026-10-25T13:03:31+00:00",
+    "html_pages": 60,
+    "new_raw_occurrences": 5158,
+    "unique_resource_urls_before": 275209,
+    "unique_resource_urls_after": 275896,
+    "unique_resource_urls_delta": 687,
+    "pending_pages": 123891,
+    "visited_pages": 24850,
+    "blocked_or_failed": 2919,
+    "robots_denied_or_unavailable": 1914,
+    "http_errors": 674,
+    "crawl_state_blob_sha": "79a528d54d96c9fbdf321352c61b055e7d32e366",
+    "unique_url_count_method": "2759 resource shards, last has 96 rows"
+  },
+  "discovery": {
+    "checked_html_pointers": 20,
+    "already_canonical": 14,
+    "new_unique_against_registry_snapshot": 6,
+    "checkpoint": "runs/discovery_r318.jsonl",
+    "checkpoint_sha": "eeb8d3afa6fe5d2bd72d4e147ebd7ba44715f6df",
+    "existing_checks": "runs/r318_existing_source_checks.jsonl",
+    "canonical_sources_after_workflow": 1896,
+    "canonical_registry_blob_sha": "77cc6e5280d568f60c7934a1148e6203745d4725",
+    "pending_canonical_merge": 6,
+    "rights": "unknown_or_reserved",
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000323.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000844.jsonl",
+      "batch_000845.jsonl"
+    ],
+    "counts": {
+      "task": 38,
+      "criteria": 39,
+      "solution": 1,
+      "review": 22
+    },
+    "checkpoint": "runs/r318_review_r323.jsonl",
+    "checkpoint_sha": "2613b46aa06e281353ad04a29853e11639253900",
+    "sha_allowlisted": true,
+    "canonical_labels_after_workflow": 6256,
+    "canonical_labels_blob_sha": "88502b5e7e67ee67447a4870f2398460a65ca537",
+    "r317_merged": 100,
+    "r318_merged": 0,
+    "cursor": "resource_000323.jsonl",
+    "binary_downloaded": false
+  },
+  "mime": {
+    "observations": 3614,
+    "pdf_mime_urls": 1529,
+    "pdf_urls_without_dot_pdf_anywhere": 1357,
+    "zip_mime_urls": 61,
+    "zip_like_urls_reported_last_cycle": 72,
+    "blob_sha": "018a06421a02a22e2e81bd1342a4f5c0b97b1357",
+    "note": "MIME only; no binary body read, no inference of task suitability"
+  },
+  "audit": {
+    "backlog_before": 943,
+    "added": 24,
+    "backlog_after": 967,
+    "backlog_blob_sha": "cf983364b6dd1f35c31be75d1010fe6e0ba379cf",
+    "themes": "historical years/rounds, language matrices, missing rubrics, participant-work rights, MIME and non-HTML, hidden pagination, source authenticity"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automations_created": false
+  },
+  "open_items": [
+    "Six newly verified HTML source pointers await next standard merge; fourteen already-known URLs recorded separately.",
+    "100 SHA-pinned r318 resource labels await canonical merge; 22 ambiguous auxiliary documents retained as review.",
+    "Workflow run ID and final Actions conclusion not directly accessible, though crawler state and registry changes confirm execution.",
+    "Coverage gaps and historic URL aliases remain; do not assert archive exhaustion."
+  ]
+}
