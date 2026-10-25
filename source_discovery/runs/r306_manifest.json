@@ -1,0 +1,100 @@
+{
+  "cycle": "r306-20261025T010210777Z",
+  "reported_at": "2026-10-25T01:08:23.843Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr_188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z",
+    "verified_from": "GitHub PR REST"
+  },
+  "trigger": {
+    "commit": "2ca6eea3d4576f91e278fd035a43e3e90b15205f",
+    "requested_at": "2026-10-25T01:02:10.777Z",
+    "workflow_run_id": 40149039993,
+    "status": "completed_success",
+    "followup_workflow_run_id": 40149259445,
+    "followup_status": "in_progress_at_manifest_time"
+  },
+  "crawl": {
+    "run_id": 40149039993,
+    "status": "success",
+    "html_pages": 60,
+    "new_raw_links": 4831,
+    "unique_resource_urls": 263757,
+    "pending_pages": 119466,
+    "blocked_or_failed_cumulative": 2729,
+    "verified_from": "GitHub Actions job log",
+    "followup_results_not_counted": true
+  },
+  "discovery": {
+    "new_unique_sources": 9,
+    "canonical_before": 1769,
+    "canonical_after": 1778,
+    "canonical_commit": "841f6e19e7bed0855d029ff1feb12dd8be97dedf",
+    "checkpoint": "runs/discovery_r306.jsonl",
+    "categories": "2 Hong Kong physics year archives, 2 Brazil humanities year archives, 1 Taiwan multisubject finals, 1 Russian university historical edition, 1 Brazil humanities organizer search-cached 502, 1 Indonesia catalog-only, 1 Kenya competition-only",
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000311.jsonl",
+    "raw_shards": [
+      "batch_000823.jsonl",
+      "batch_000824.jsonl",
+      "batch_000825.jsonl"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 88,
+      "source": 10,
+      "review": 2
+    },
+    "checkpoint": "runs/r306_review_r311.jsonl",
+    "checkpoint_blob_sha": "7398a8845c27a10193f0993716ac864367e90abf",
+    "sha_allowlisted": true,
+    "canonical_before": 4988,
+    "canonical_merge": "pending_verified_success",
+    "next_after_merge": "resource_000312.jsonl",
+    "raw_cursor_unchanged": true,
+    "prior_r305_merge": {
+      "run_id": 40145569249,
+      "existing": 4888,
+      "added": 100,
+      "total": 4988,
+      "status": "verified_success"
+    },
+    "post_review_corrections": {
+      "count": 2,
+      "checkpoint": "runs/r306_review_corrections.jsonl",
+      "status": "pending_conflict_checked_canonical_patch",
+      "types": "review -> unrelated"
+    }
+  },
+  "audit": {
+    "checkpoint": "runs/r306_audit.jsonl",
+    "added_original": 11,
+    "added_post_review_correction": 1,
+    "backlog_before": 747,
+    "backlog_after": 759,
+    "prior_r305_merge_blocker_resolved": true,
+    "older_historical_checkpoints_pending": 27,
+    "grade_corrections_pending": 27
+  },
+  "mime": {
+    "current_full_ledger": "unreadable_via_connector",
+    "last_confirmed_observations": 3213,
+    "last_confirmed_pdf_unique": 1388,
+    "last_confirmed_pdf_no_suffix": 1230,
+    "last_confirmed_zip": 61,
+    "last_confirmed_octet_stream": 159,
+    "stale_stats_not_updated": true
+  },
+  "safety": {
+    "binary_downloaded": false,
+    "dropbox_mutated": false,
+    "raw_shards_mutated": false,
+    "schedule_changed": false,
+    "additional_automation_created": false
+  }
+}
