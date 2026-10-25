@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light"><title>КМО · 5 класс</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="top"><div class="logo">КМО</div><div><strong>Казанская математическая олимпиада</strong><small>5 класс · оригинальные отборочные задачи</small></div><button id="stats" class="ghost" aria-label="Статистика" title="Статистика">◎</button></header>
+<main class="shell">
+  <div id="navigation" aria-label="Задания" class="nav"></div>
+  <div class="intro"><span id="source"></span><span id="progress"></span></div>
+  <h1 id="task-title"></h1><p id="task-prompt"></p>
+  <section id="workarea" aria-live="polite"></section>
+  <div class="actions"><button id="reset" class="ghost">Сбросить</button><button id="hint" class="ghost">Подсказка</button><button id="check" class="primary">Проверить</button></div>
+  <div id="message" class="message" role="status" aria-live="polite"></div>
+  <details id="explanation"><summary>Разбор и исходные данные</summary><p id="solution"></p></details>
+  <footer><button id="prev" class="ghost">← Предыдущая</button><button id="next" class="primary">Следующая →</button></footer>
+</main><dialog id="statsDialog"><h2>Обратная связь по механикам</h2><p>Данные хранятся только на этом устройстве. Время и действия измеряют удобство интерфейса, а не школьную оценку.</p><div id="statsTable"></div><button id="closeStats" class="primary">Закрыть</button></dialog>
+<script src="app.js"></script></body></html>

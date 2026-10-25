@@ -65,6 +65,11 @@ jobs:
       - name: Validate 1st-grade Magistr Scheta practice corpus
         run: python3 scripts/validate_magistr_g1.py
 
+      - name: Validate KMO original interactive mechanics
+        run: |
+          node --check app/src/main/assets/kmo/app.js
+          node scripts/validate_kmo_originals.cjs
+
       - name: Validate 5–6 grade law olympiad pilot
         run: python3 scripts/validate_law_g5_6.py
 

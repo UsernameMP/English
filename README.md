@@ -1,5 +1,12 @@
 # English Sprint — ВсОШ 5–6
 
+## v0.6.42
+
+- Добавлена отдельная тема «КМО» в математике 5 класса: 10 интерактивных оригинальных задач из отборов КМО 2025/26 (8 задач) и 2024/25 (2 задачи), без генерации новых условий.
+- Offline WebView: разрезание, корзины, маршрут по сотам, цифры, скобки, упаковка, катер и буйки, логическая сортировка, карточки, раскраска. Локальная аналитика UX по механикам.
+- Автоматизированные golden tests содержимого и интерфейсов: scripts/validate_kmo_originals.cjs; описание docs/kmo_g5_original_mechanics.md.
+- VersionName 0.6.42 / versionCode 49; приложение и пилотная подпись прежние.
+
 ## v0.6.41
 
 - Android launcher icon and round launcher icon use the user-selected fourth (bottom-right) rocket + R mark from the concept sheet, cropped as a standalone icon and optimized as WebP.
