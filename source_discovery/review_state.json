@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T13:10:52.911Z",
+  "updated_at": "2026-10-25T14:03:50.384Z",
   "deferred_shards": [
     1,
     2,
@@ -13,11 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r318_review_r323.jsonl"
+    "runs/r319_review_r324.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "r317 resource_000322 100 labels merged: canonical 6156 -> 6256 (verified via GitHub blob); r318 resource_000323 100 labels SHA-pinned checkpointed, not yet canonical.",
-  "canonical_merged_in_cycle": 317,
+  "canonical_merge_status": "r318 resource_000323 merged +100 via Actions #40200162494: canonical 6256 -> 6356 (workflow log); r319 resource_000324 100 labels SHA-pinned in checkpoint, canonical merge pending.",
+  "canonical_merged_in_cycle": 318,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -156,10 +156,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000323.jsonl",
-    "last_completed_shard": "resource_000322.jsonl",
-    "cycle": "r317-20261025T120756291Z",
-    "reason": "r317 merged and verified; r318 resource_000323 reviewed in checkpoint but not yet canonical; do not advance beyond pending r323."
+    "next_resource_shard": "resource_000324.jsonl",
+    "last_completed_shard": "resource_000323.jsonl",
+    "cycle": "r319-20261025T135953999Z",
+    "reason": "r318 labels merged and verified from workflow log; r319 resource_000324 checkpointed but not yet canonical; do not advance until merged."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2267,9 +2267,37 @@
     "checkpoint": "runs/r318_review_r323.jsonl",
     "checkpoint_blob_sha": "2613b46aa06e281353ad04a29853e11639253900",
     "sha_allowlisted_in": "merge_review_checkpoints.py",
+    "canonical_merged": 100,
+    "cursor_advanced": true,
+    "raw_cursor_unchanged": true,
+    "notes": "All 100 matched raw occurrence IDs and HSE organizer year/discipline table; КиР means criteria+solutions, 22 К заданию remain review. No binary bodies fetched.",
+    "merged_in_action_run": 40200162494
+  },
+  "r319_pending": {
+    "cycle": "r319-20261025T135953999Z",
+    "resource_shard": "resource_000324.jsonl",
+    "reviewed_row_range": "0-99",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000845.jsonl",
+      "batch_000846.jsonl",
+      "batch_000847.jsonl"
+    ],
+    "classification_counts": {
+      "task": 30,
+      "criteria": 32,
+      "solution": 16,
+      "review": 16,
+      "unrelated": 5,
+      "source": 1
+    },
+    "checkpoint": "runs/r319_review_r324.jsonl",
+    "checkpoint_blob_sha": "2859b8053dc976d7de1859f4bf3fb37584532916",
+    "sha_allowlisted_in": "merge_review_checkpoints.py",
     "canonical_merged": 0,
     "cursor_advanced": false,
     "raw_cursor_unchanged": true,
-    "notes": "All 100 matched raw occurrence IDs and HSE organizer year/discipline table; КиР means criteria+solutions, 22 К заданию remain review. No binary bodies fetched."
+    "notes": "All 100 unique URLs mapped to exact raw IDs; official HSE 2020/21 organizer table, Hungarian KöMaL solution/stats links, NOSB navigation; binary bodies not fetched."
   }
 }
