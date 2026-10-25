@@ -21,7 +21,15 @@
     "site:edu.pe olimpiada exámenes anteriores química física",
     "site:edu.bo olimpiada pruebas respuestas astronomía",
     "site:ac.ug olympiad past papers mathematics",
-    "site:ac.zw olympiad past papers physics"
+    "site:ac.zw olympiad past papers physics",
+    "national junior science humanities olympiad past papers sociology psychology archive official",
+    "olimpiada filozoficzna zadania arkusze oceny etap szkolny okręgowy centralny archiwum",
+    "olimpiada historyczna zadania klucze odpowiedzi archiwum 2010 2025",
+    "olimpiada lingwistyki zadania rozwiązania etapy 2018 2025",
+    "concurso investigación escolar rúbricas proyectos olimpiada nacional archivo finalistas ciencias sociales",
+    "universiteto olimpiada istorijos užduotys vertinimo kriterijai archyvas",
+    "Olimpiada de Filosofia Brasil provas anteriores 2015 2024 arquivos",
+    "olimpiade informatica scuole prove territoriali nazionali soluzioni archivio"
   ],
   "known_from_recent_registry_checks": [
     "https://economicas.ua.es/es/actividades-y-eventos/olimpiadas-de-economia/ediciones-anteriores/examenes-olimpiadas-de-economia.html",
@@ -30,7 +38,7 @@
     "https://www.olimpiadas.unam.mx/anteriores/"
   ],
   "verified_candidates_checkpoint": "runs/discovery_r321.jsonl",
-  "new_candidate_count_before_full_canonical_dedup": 9,
+  "new_candidate_count_before_full_canonical_dedup": 17,
   "review_context_urls": [
     "https://obling.org/problemas",
     "https://nosb.org/new-storm-surge-resources-and-challenge-with-prizes/",
