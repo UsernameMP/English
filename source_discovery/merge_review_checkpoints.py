@@ -32,6 +32,7 @@ CHECKPOINTS = {
     "r310_review_r315.jsonl": "f7a85607997343f15eddf16e3372e7601dbc792f",
     "r311_review_r316.jsonl": "44efa09651b1c1a1ba376863cb08b952e55cdab6",
     "r312_review_r317.jsonl": "9def741c80390429b330c0bbf46963135f123a6f",
+    "r313_review_r318.jsonl": "b3d3b9346d9fb0fa0fe9453be1f84ffc5a658bd5",
 }
 TYPE_CORRECTION_CHECKPOINTS = {
     "r307_r306_corrections_fixed.jsonl": "61254ca48e8195307d65609906992aad77815041",
