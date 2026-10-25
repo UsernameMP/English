@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T09:08:56.056Z",
+  "updated_at": "2026-10-25T10:12:31.156Z",
   "deferred_shards": [
     1,
     2,
@@ -157,7 +157,7 @@
     "next_resource_shard": "resource_000320.jsonl",
     "last_completed_shard": "resource_000319.jsonl",
     "cycle": "r314-20261025T090027020Z",
-    "reason": "All 100 unique resource_000319 labels verified in canonical link_labels.jsonl (5956) after successful workflow #40179165556; advance to r320; raw cursor unchanged."
+    "reason": "r315 checkpoint SHA-allowlisted, canonical merge not yet verified; cursor intentionally retained."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2167,5 +2167,28 @@
     "merged_into_canonical": true,
     "workflow_run_id": 40178873710,
     "original_files_retained": true
+  },
+  "r315_pending": {
+    "cycle": "r315-20261025T100846384Z",
+    "resource_shard": "resource_000320.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000841.jsonl",
+      "batch_000842.jsonl"
+    ],
+    "counts": {
+      "task": 37,
+      "criteria": 40,
+      "review": 23
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 0,
+    "checkpoint": "runs/r315_review_r320.jsonl",
+    "checkpoint_sha": "73e9d45c3609c2c61146357527e523e06d1e63c3",
+    "sha_allowlisted": true,
+    "operational_cursor_advanced": false,
+    "raw_cursor_unchanged": true,
+    "notes": "23 supplemental reference/attachment links left review; КиР combined criteria+solutions mapped to criteria with secondary-role note. Await workflow verification before advancing cursor."
   }
 }
