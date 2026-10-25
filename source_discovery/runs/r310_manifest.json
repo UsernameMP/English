@@ -1,0 +1,104 @@
+{
+  "cycle": "r310-20261025T050806871Z",
+  "reported_at": "2026-10-25T05:16:45.308Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "e46d1a1f865b2690090967e137e3d497e1ab936b",
+    "blob_sha": "f728e57d999bc4eae7d77f78077cf1fc0a7f20bb",
+    "workflow_run_id": 40164424334,
+    "status": "completed_success",
+    "url": "https://github.com/UsernameMP/English/actions/runs/40164424334",
+    "workflow_persist_commit": "bd0da68cebf79cee79fe9ad80b9935638f25d17c"
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_links": 4743,
+    "pending_pages": 121217,
+    "blocked_or_failed_cumulative": 2785,
+    "unique_resource_urls": 266965,
+    "previous_corrected_unique_urls": 266856,
+    "increase": 109,
+    "source": "GitHub Actions #40164424334 job logs and 1-based resource shard count",
+    "resource_index_last_shard": "resource_002670.jsonl",
+    "resource_index_last_shard_rows": 65,
+    "formula": "(2670 - 1)*100 + 65",
+    "historical_r309_overcount_correction": "runs/r310_r309_resource_count_correction.json"
+  },
+  "discovery": {
+    "canonical_before": 1793,
+    "canonical_after": 1807,
+    "r309_checkpoint_candidates": 20,
+    "r309_net_new_sources": 14,
+    "r309_duplicate_urls": 6,
+    "new_r310_verified_public_HTML_pointers": 15,
+    "r310_checkpoint": "runs/discovery_r310.jsonl",
+    "r310_checkpoint_sha": "9988ca8ee47c918207205cb3356e9a3d532f5248",
+    "r310_checkpoint_commit": "6a70f7695786faedda98bc81e366d2a66da92570",
+    "r310_merge_status": "pending_next_existing_scheduled_workflow",
+    "rights": "unknown_or_explicitly_restricted_as_recorded"
+  },
+  "review": {
+    "r309_resource_shard": "resource_000314.jsonl",
+    "r309_canonical_labels_added": 100,
+    "canonical_labels_before": 5288,
+    "canonical_labels_after": 5388,
+    "r310_resource_shard": "resource_000315.jsonl",
+    "r310_raw_shards": [
+      "batch_000828.jsonl",
+      "batch_000829.jsonl"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 74,
+      "source": 24,
+      "review": 1,
+      "archive": 1
+    },
+    "checkpoint": "runs/r310_review_r315.jsonl",
+    "checkpoint_sha": "f7a85607997343f15eddf16e3372e7601dbc792f",
+    "checkpoint_commit": "ed11bc817bf2f2d162dc9d9b73ff538252970adb",
+    "sha_allowlist_commit": "031af621c9fbac4d36a2fc4bfbe3a7e8085c191a",
+    "r310_canonical_merge": "pending_next_existing_scheduled_workflow",
+    "cursor": "resource_000315.jsonl",
+    "next_after_merge": "resource_000316.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "mime": {
+    "observations": 3522,
+    "unique_pdf_urls": 1511,
+    "pdf_without_dot_pdf_anywhere_in_URL": 1353,
+    "zip": 61,
+    "application_octet_stream": 222,
+    "metadata_only": true,
+    "blob_sha": "eb29f3e3d4a63d97ff1a1d3f35749fc6b3b6c128"
+  },
+  "audit": {
+    "backlog_before": 805,
+    "backlog_added": 18,
+    "backlog_after": 823,
+    "prior_r309_checkpoint_merge_blocker_resolved": true,
+    "open_historical_checkpoints": 27,
+    "possible_source_alias_pairs": 14,
+    "source_alias_checkpoint": "runs/r310_source_alias_candidates.jsonl",
+    "r309_thai_posn_metadata_corrections_pending": 2,
+    "provenance_checkpoint": "runs/r310_r309_posn_provenance_corrections.jsonl",
+    "provenance_correction_script_updated": true,
+    "provenance_regression_test_added": true,
+    "source_duplicate_pairs_unverified": true,
+    "canonical_sources_blob_sha": "746f25ca5599caa0f23034cddc2e81aeea61aeab",
+    "canonical_labels_blob_sha": "75d50c5976aa3d63a6efc0a7481b5d3d45ac713e",
+    "backlog_blob_sha": "d5a917d4cb868fb6ed1bc77e411d7d980a415942",
+    "review_state_blob_sha": "a1acac0e60507e5e83cb27e5738664afca8dc40f"
+  },
+  "safeguards": {
+    "binary_documents_downloaded": false,
+    "raw_occurrences_deleted": false,
+    "dropbox_modified": false,
+    "schedule_changed": false,
+    "additional_automation_created": false,
+    "access_restrictions_bypassed": false,
+    "claims_of_archive_completeness": false
+  }
+}
