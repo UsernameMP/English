@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T15:11:46.109Z",
+  "updated_at": "2026-10-25T15:15:38.827Z",
   "deferred_shards": [
     1,
     2,
@@ -13,12 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r319_review_r324.jsonl",
     "runs/r320_review_r325.jsonl"
   ],
-  "pending_labels_count": 200,
-  "canonical_merge_status": "r319 checkpoint merge step completed in in-progress Actions #40205265951, but final persistence and canonical count unverified; r320 checkpoint SHA-pinned, merge pending.",
-  "canonical_merged_in_cycle": 318,
+  "pending_labels_count": 100,
+  "canonical_merge_status": "r319 resource_000324 100 labels merged via Actions #40205265951: canonical 6356 -> 6456 (verified job log and blob); r320 resource_000325 100 labels SHA-pinned, canonical merge pending.",
+  "canonical_merged_in_cycle": 319,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -157,10 +156,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000324.jsonl",
-    "last_completed_shard": "resource_000323.jsonl",
+    "next_resource_shard": "resource_000325.jsonl",
+    "last_completed_shard": "resource_000324.jsonl",
     "cycle": "r320-20261025T150509455Z",
-    "reason": "r319 resource_000324 and r320 resource_000325 are checkpointed, but canonical merge for r319 not yet verified and r320 not yet merged; do not advance."
+    "reason": "r319 merged and verified; r320 resource_000325 classified and checkpointed, but not yet canonical, so cursor remains here."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
