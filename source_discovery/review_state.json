@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T03:14:45.142Z",
+  "updated_at": "2026-10-25T03:17:58.077Z",
   "deferred_shards": [
     1,
     2,
@@ -42,7 +42,7 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "r294_to_r307_SHA_allowlisted_checkpoints_1400_labels_merged; 29 audited corrections applied by Actions #40156913497; r308 100 labels checkpointed and SHA-allowlisted, canonical merge awaiting persistence; 27 historical checkpoints pending",
+  "canonical_merge_status": "r294_to_r307_1400_labels_merged; 29 SHA-audited corrections applied #40156913497; r308 100 checkpointed but Actions #40157225004 merge step failed on corrected r306 occurrence (continue-on-error); SHA-pinned compatibility fix commit 5ca4b38a not yet exercised; 27 historical checkpoints pending",
   "canonical_merged_in_cycle": 307,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -1957,6 +1957,11 @@
     "operational_cursor_advanced": false,
     "next_after_merge": "resource_000314.jsonl",
     "raw_cursor_unchanged": true,
-    "notes": "Mongolian future placeholder links not counted as task; KöMaL solution links rely on multilingual anchor; Thai POSN exam archive categories and pagination. Await GitHub Actions successful persist."
+    "notes": "Mongolian future placeholder links not counted as task; KöMaL solution links rely on multilingual anchor; Thai POSN exam archive categories and pagination. Await GitHub Actions successful persist.",
+    "canonical_merge_attempt_run_id": 40157225004,
+    "canonical_merge_attempt_status": "failed_conflicting_corrected_occurrence",
+    "canonical_merge_error": "Conflicting occurrence: 869f6211fb1370425d826cbd",
+    "merge_fix_commit": "5ca4b38a4a63bbd99eba755fbbd041bf7e72d7d8",
+    "merge_fix_verified": false
   }
 }
