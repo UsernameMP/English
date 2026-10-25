@@ -1,0 +1,109 @@
+{
+  "cycle": "r314-20261025T090027020Z",
+  "reported_at": "2026-10-25T09:06:06.725Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr_188_merged": true,
+  "trigger": {
+    "commit": "abee2fd6c6dee1fcb5dcc7a11f26c26263415c7d",
+    "run_id": 40178873710,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/UsernameMP/English/actions/runs/40178873710"
+  },
+  "subsequent_source_update_workflow": {
+    "run_id": 40179165556,
+    "trigger_commit": "d9a49c221c455fbdd84463bf098293eb5a44ac98",
+    "status": "in_progress",
+    "conclusion": null,
+    "url": "https://github.com/UsernameMP/English/actions/runs/40179165556",
+    "note": "Triggered automatically by canonical sources.jsonl update, not a separate ChatGPT automation."
+  },
+  "discovery": {
+    "canonical_sources_before": 1859,
+    "added_verified_urls": 10,
+    "canonical_sources_after": 1869,
+    "canonical_source_sha": "9238698d217dae1389dfc3c550768c2568998954",
+    "canonical_commit": "d9a49c221c455fbdd84463bf098293eb5a44ac98",
+    "checkpoint": "runs/discovery_r314.jsonl",
+    "status": "canonical_published_verified",
+    "new_exact_duplicates": 0
+  },
+  "review": {
+    "resource_shard": "resource_000319.jsonl",
+    "unique_resources_reviewed": 100,
+    "raw_occurrences_checked": 100,
+    "raw_shards": [
+      "batch_000840.jsonl",
+      "batch_000841.jsonl"
+    ],
+    "counts": {
+      "task": 39,
+      "criteria": 39,
+      "solution": 1,
+      "review": 21
+    },
+    "checkpoint": "runs/r314_review_r319.jsonl",
+    "checkpoint_sha": "0bfcd59a94f115c5f8951b2101410f4b6a937252",
+    "sha_allowlisted": true,
+    "canonical_labels_after_historical_merge": 5856,
+    "canonical_labels_r314_added": 0,
+    "cursor_advanced": false,
+    "official_competition": "Олимпиада студентов и выпускников «Высшая лига»",
+    "official_archive_url": "https://olymp.hse.ru/ma/second/prevtasks",
+    "level": "university_students_and_graduates",
+    "extensionless_pdf_mime_in_shard": 97
+  },
+  "historical_reconciliation": {
+    "previously_pending": 68,
+    "merged_in_trigger_workflow": 68,
+    "canonical_labels_before": 5788,
+    "after": 5856,
+    "workflow_step": "success",
+    "original_checkpoint_count": 27
+  },
+  "crawl": {
+    "first_workflow_html_pages": 60,
+    "new_raw_occurrences": 5186,
+    "unique_resource_urls_before": 270746,
+    "unique_resource_urls_after": 271144,
+    "unique_resource_urls_delta": 398,
+    "queue_pages_after": 122031,
+    "blocked_or_failed_after": 2826,
+    "latest_crawl_state_sha": "9ccf4dcf20d9eea8965e83606970696ad5452ab4",
+    "second_workflow_results_not_yet_included": true
+  },
+  "mime": {
+    "observations_last_read": 3551,
+    "unique_pdf_urls": 1515,
+    "pdf_urls_without_dot_pdf": 1343,
+    "zip_observations": 61,
+    "octet_stream_observations": 222,
+    "note": "MIME evidence does not prove suitability and non-HTML responses are not crawler errors."
+  },
+  "audit": {
+    "backlog_before": 882,
+    "added": 15,
+    "backlog_after": 897,
+    "backlog_sha": "97f635c9bef3d177055d301d15c53de0d958c2be",
+    "blocked_unverified": [
+      "school1.edu.mn/intro HTTP 404",
+      "aktobe.daryn.kz/itogi HTTP 402",
+      "Blogspot historical OBA mirror redirected to access challenge"
+    ],
+    "copyright": "Third-party teacher mirrors and participant work have unknown reuse rights."
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "raw_ledger_modified_by_assistant": false,
+    "dropbox_modified": false,
+    "automation_schedule_modified": false,
+    "new_chatgpt_automation_instances_created": false
+  },
+  "open_items": [
+    "100 r314 reviewed labels SHA-pinned, awaiting canonical merge verification from subsequent source-update workflow.",
+    "21 HSE ancillary resources retained as review; do not treat as task documents.",
+    "Historical exact URL duplicate in older sources remains.",
+    "Coverage gaps across years, stages, solutions, criteria, mirrors and pagination remain."
+  ]
+}
