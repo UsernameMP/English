@@ -1,0 +1,91 @@
+{
+  "cycle": "r305-20261025T000437600Z",
+  "reported_at": "2026-10-25T00:10:57.463Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "66bcc03d5bc8cf46ba70c2799479862f32708508",
+    "requested_at": "2026-10-25T00:04:37.600Z",
+    "workflow_run_id": 40145274055,
+    "status": "completed_success",
+    "verified_from": "GitHub Actions run status and job log"
+  },
+  "crawl": {
+    "run_id": 40145274055,
+    "status": "success",
+    "html_pages": 60,
+    "new_raw_links": 4698,
+    "unique_resource_urls": 262227,
+    "pending_pages": 118561,
+    "blocked_or_failed_cumulative": 2703,
+    "source": "GitHub Actions crawl job log",
+    "followup_run_id": 40145569249,
+    "followup_status": "in_progress_not_counted"
+  },
+  "discovery": {
+    "verified_public_html_urls": 6,
+    "confirmed_historical_archive_urls": 4,
+    "competition_only_without_verified_papers": 2,
+    "canonical_sources_before": 1763,
+    "canonical_sources_after": 1769,
+    "canonical_commit": "40717b844f0e262ca6250e9de56fac25ee83cc82",
+    "checkpoint": "runs/discovery_r305.jsonl",
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000310.jsonl",
+    "raw_shards": [
+      "batch_000822.jsonl",
+      "batch_000823.jsonl"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "archive": 21,
+      "source": 3,
+      "task": 3,
+      "unrelated": 72,
+      "review": 1
+    },
+    "checkpoint": "runs/r305_review_r310.jsonl",
+    "checkpoint_blob_sha": "c497cae957172af9cfb7f4ceb0bbd4acb27502ee",
+    "allowlisted": true,
+    "canonical_before": 4888,
+    "canonical_merge": "pending_verified_success",
+    "next_after_merge": "resource_000311.jsonl",
+    "raw_cursor_unchanged": true,
+    "prior_r304_merge": {
+      "run_id": 40141046497,
+      "existing": 4788,
+      "added": 100,
+      "total": 4888,
+      "status": "verified_success"
+    }
+  },
+  "audit": {
+    "checkpoint": "runs/r305_audit.jsonl",
+    "added": 9,
+    "backlog_before": 738,
+    "backlog_after": 747,
+    "canonical_backlog_commit": "968816c73f20fbd5d3a8f837340ddef5d4bc6938",
+    "prior_r304_blocker_resolved": 1,
+    "older_historical_checkpoints_pending": 27,
+    "grade_corrections_pending": 27
+  },
+  "mime": {
+    "current_full_ledger": "unreadable_via_connector",
+    "last_confirmed_observations": 3213,
+    "last_confirmed_pdf_unique": 1388,
+    "last_confirmed_pdf_no_suffix": 1230,
+    "last_confirmed_zip": 61,
+    "last_confirmed_octet_stream": 159,
+    "note": "Stale previous verification, not updated by this cycle; no PDF/ZIP/image body downloaded."
+  },
+  "safety": {
+    "binary_downloaded": false,
+    "dropbox_mutated": false,
+    "raw_shards_mutated": false,
+    "schedule_changed": false,
+    "additional_automation_created": false
+  }
+}
