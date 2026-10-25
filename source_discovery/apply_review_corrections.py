@@ -15,6 +15,7 @@ TARGET = ROOT / "link_labels.jsonl"
 CORRECTIONS = (
     ("r303_r302_grade_corrections.jsonl", "8c71b29217f77ba43fba68fda2f1ab0a2e458d25", "grade"),
     ("r307_r306_corrections_fixed.jsonl", "61254ca48e8195307d65609906992aad77815041", "type"),
+    ("r310_r309_posn_provenance_corrections.jsonl", "76b6b3247555152976cf8f9c526585e860df93fc", "metadata"),
 )
 
 def blob_sha(data):
@@ -54,6 +55,26 @@ def apply():
                 raise ValueError(f"{filename}: unknown raw occurrence {raw_id}")
             if row.get("resource_id") != patch["resource_id"] or row.get("url") != patch["url"]:
                 raise ValueError(f"{filename}: provenance conflict for {raw_id}")
+            if kind == "metadata":
+                # All four provenance fields must match either the original or the
+                # corrected tuple. Partial edits and unrelated canonical rows abort.
+                if row.get("type") != patch.get("type"):
+                    raise ValueError(f"{filename}: type mismatch for {raw_id}")
+                keys = ("country", "competition", "subject", "level")
+                old_match = all(row.get(k) == patch["previous_" + k] for k in keys)
+                new_match = all(row.get(k) == patch["corrected_" + k] for k in keys)
+                if new_match:
+                    already += 1
+                    continue
+                if not old_match:
+                    raise ValueError(f"{filename}: provenance metadata conflict for {raw_id}")
+                for key in keys:
+                    row[key] = patch["corrected_" + key]
+                row["correction_checkpoint"] = filename
+                row["correction_evidence"] = patch.get("evidence_source_url")
+                row["corrected_at"] = patch.get("detected_at")
+                changed += 1
+                continue
             if kind == "grade":
                 if patch.get("field") != "grade" or row.get("year") != patch["year"]:
                     raise ValueError(f"{filename}: grade/year mismatch for {raw_id}")
