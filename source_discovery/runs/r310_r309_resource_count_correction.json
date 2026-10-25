@@ -1,0 +1,24 @@
+{
+  "cycle": "r310-20261025T050806871Z",
+  "kind": "resource_shard_count_off_by_one_correction",
+  "source": "source_discovery/build_resource_index.py",
+  "indexing": "1-based resource shard numbers: resource_{i//100 + 1:06d}.jsonl",
+  "prior": {
+    "workflow_persist_commit": "c31d31323aad8b98039e856655345aa64d7a23bb",
+    "last_shard": "resource_002669.jsonl",
+    "last_shard_rows": 56,
+    "incorrect_r309_manifest_count": 266956,
+    "correct_count": 266856
+  },
+  "current": {
+    "workflow_run": 40164424334,
+    "workflow_persist_commit": "bd0da68cebf79cee79fe9ad80b9935638f25d17c",
+    "last_shard": "resource_002670.jsonl",
+    "last_shard_rows": 65,
+    "correct_count": 266965
+  },
+  "increase": 109,
+  "reason": "The r309 manifest treated 1-based shard indices as 0-based, inflating unique URL count by 100. GitHub Actions build_resource_index.py independently reports 266965 current unique URLs. Correct formula (last_shard_number - 1)*100 + last_shard_rows.",
+  "verified_at": "2026-10-25T05:15:33.312Z",
+  "binary_downloaded": false
+}
