@@ -1,0 +1,120 @@
+{
+  "cycle": "r328-20261025T230015983Z",
+  "reported_at": "2026-10-25T23:08:16.650Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "requested_at": "2026-10-25T23:00:15.983Z",
+    "commit": "08e31a360835e086f5340d297b310a70a27f36c2",
+    "blob_sha": "171263b4e061f7f7d7b057dc63bb4d1e0c0ab934",
+    "workflow_name": "RIFT Link Enumeration",
+    "run_id": 40242759386,
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-25T23:06:22Z",
+    "crawler_persist_commit": "9bdd4201",
+    "verification": "GitHub Actions REST run status, decoded job logs, post-run shard and blob checks"
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_occurrences_in_job_log": 3800,
+    "unique_resource_urls_after": 286356,
+    "previous_reported_resource_urls": 285708,
+    "delta_since_previous_report": 648,
+    "pending_html_pages": 129888,
+    "blocked_or_failed_cumulative": 3054,
+    "last_raw_shard": "batch_013614.jsonl",
+    "last_raw_rows": 15,
+    "raw_occurrences_current_shard_derived": 1361315,
+    "raw_occurrences_delta_note": "Raw total cannot be attributed wholly to this workflow: prior manifest and current shard counts differ by more than job-reported 3800 new links.",
+    "last_resource_shard": "resource_002864.jsonl",
+    "last_resource_rows": 56,
+    "resource_shard_count": 2864
+  },
+  "discovery": {
+    "queries_logged": 58,
+    "checkpoint": "runs/discovery_r328.jsonl",
+    "html_pointers_checkpointed": 23,
+    "canonical_sources_after_workflow": 1989,
+    "canonical_sources_added_by_this_workflow": 0,
+    "r328_sources_canonical_merged": 0,
+    "canonical_uniqueness": "pending_idempotent_merge; large sources.jsonl connector returns empty even for line ranges",
+    "notable": "Brazilian geography/physics, Korean linguistics, Thai physics, Bangladesh mathematics, Taiwan economics/geography, historical IYPT/IYNT, Russia biology/history/economics, US philosophy/economics"
+  },
+  "review": {
+    "resource_shard": "resource_000333.jsonl",
+    "unique_resources_classified": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000855.jsonl",
+      "batch_000856.jsonl",
+      "batch_000857.jsonl"
+    ],
+    "counts": {
+      "unrelated": 78,
+      "solution": 19,
+      "task": 3
+    },
+    "checkpoint": "runs/r328_review_r333.jsonl",
+    "checkpoint_sha": "9e340a0ae9a3f7674827201528faa62cb84b9d59",
+    "sha_pinned_in": "merge_review_checkpoints.py",
+    "canonical_labels_before": 7156,
+    "canonical_labels_after": 7256,
+    "r327_labels_merged": 100,
+    "r328_canonical_merged": 0,
+    "operational_cursor": "resource_000333.jsonl",
+    "notes": "78 Náboj photo-gallery WebP URLs are unrelated to problem materials. 19 KöMaL links explicitly have Hungarian solution/statistics anchors; three A-series links statistics only; classification is metadata-based, not document-body validation."
+  },
+  "audit": {
+    "backlog_before": 1147,
+    "added": 28,
+    "backlog_after": 1175,
+    "checkpoint": "runs/r328_audit.jsonl",
+    "canonical_published": true,
+    "examples": [
+      "Korean Linguistics Olympiad historical answers nonpublic and explanations pending",
+      "APLO best participant solutions have explicit no-redistribution warning",
+      "Saint Petersburg biology research competition archive has gaps in 2005 and 2021 year index and participant best answers",
+      "Brazilian geography 2019-2020 and 2024 year/phase index gaps",
+      "IYNT 2013 old mirrors and grading criteria",
+      "USAEBO complete 2026 papers require adviser contact; official answer keys not posted",
+      "KöMaL combined task/solution pages require context-aware classification"
+    ]
+  },
+  "mime": {
+    "resource_observations_blob_sha": "d0018021f6fe772502e65099a9e5b483448f4f3b",
+    "observation_count": "not independently established because large file returns empty even for ranges",
+    "last_confirmed_prior_count": 3667,
+    "non_html_is_not_error": true,
+    "webp_metadata_classified_without_download": 78
+  },
+  "verified_blob_sha": {
+    "source_discovery/run_trigger.json": "171263b4e061f7f7d7b057dc63bb4d1e0c0ab934",
+    "source_discovery/sources.jsonl": "ad19ac57c0dd4bcd15d39bcee9ff8e3ae87014c7",
+    "source_discovery/link_labels.jsonl": "d33bf7083d92ad3ffafcd2731441c6aa3e3446b6",
+    "source_discovery/backlog.jsonl": "e2b9f87bf6f2108033aee4664e9c2256fc86a299",
+    "source_discovery/review_state.json": "0b8b33eb63f0052f0e7b40ee2a7687ab194b50f6",
+    "source_discovery/crawl_state.json": "c8882a7af75cc6a3d08aa51447a79560fa5120fe",
+    "source_discovery/resource_observations.jsonl": "d0018021f6fe772502e65099a9e5b483448f4f3b",
+    "source_discovery/runs/discovery_r328.jsonl": "6485321076e2ded18362fb29aa7a3c30ec815361",
+    "source_discovery/runs/r328_review_r333.jsonl": "9e340a0ae9a3f7674827201528faa62cb84b9d59",
+    "source_discovery/runs/r328_audit.jsonl": "5219e042e381d914da60b914e8e24161406ddc91",
+    "source_discovery/runs/r328_search_queries.json": "a3d573cf14f157d7689d25b588e985318a0e914d",
+    "source_discovery/merge_review_checkpoints.py": "34fa88f308b54dad1e0a7ddb21d437ff444f696c"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "additional_workflow_instances_triggered": false,
+    "robots_and_public_access_only": true,
+    "rights_not_assumed": true
+  },
+  "unresolved": [
+    "23 discovery pointers pending canonical deduplication/merge; do not call all 23 new unique sources",
+    "100 r328 semantic labels checkpointed and SHA-pinned, pending canonical merge",
+    "large canonical source/MIME files cannot be read fully by connector; MIME count not independently verified",
+    "some archives have restricted participant work and historic inaccessible links; no bypass attempted"
+  ]
+}
