@@ -42,8 +42,8 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "r294_to_r308_1500_labels_merged; canonical 5288 after #40160788492; 29 audited corrections applied; r309 resource_000314 100 labels SHA-allowlisted pending canonical merge; 27 historical checkpoints pending",
-  "canonical_merged_in_cycle": 308,
+  "canonical_merge_status": "r294_to_r309_1600_labels_merged; canonical 5388 after Actions #40164424334; 29 prior corrections applied; r310 resource_000315 100 labels SHA-allowlisted pending next canonical merge; 2 Thai POSN provenance corrections SHA-pinned pending; 27 historical checkpoints pending",
+  "canonical_merged_in_cycle": 309,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -182,10 +182,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000314.jsonl",
-    "last_completed_shard": "resource_000313.jsonl",
-    "cycle": "r309-20261025T040823693Z",
-    "reason": "GitHub Actions #40160788492 completed success, corrected checkpoint merge step succeeded, persist commit c31d31323aad8b98039e856655345aa64d7a23bb added 100 labels (r308). New r309 resource_000314 labels checkpointed and SHA-allowlisted but not yet canonical-merged; do not advance to resource_000315 until successful merge."
+    "next_resource_shard": "resource_000315.jsonl",
+    "last_completed_shard": "resource_000314.jsonl",
+    "cycle": "r310-20261025T050806871Z",
+    "reason": "Actions #40164424334 completed success and canonical labels 5288->5388, confirming r309 merge. r310 resource_000315 100 unique labels checkpointed and SHA-allowlisted, pending next workflow merge. Do not advance to resource_000316 until merged."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -1326,22 +1326,25 @@
     "status": "merged"
   },
   "last_operational_review": {
-    "cycle": "r303-20261024T220548412Z",
-    "resource_shard": "resource_000308.jsonl",
+    "cycle": "r310-20261025T050806871Z",
+    "resource_shard": "resource_000315.jsonl",
     "unique_resources": 100,
     "raw_occurrences": 100,
     "raw_shards": [
-      "batch_000820.jsonl",
-      "batch_000821.jsonl"
+      "batch_000828.jsonl",
+      "batch_000829.jsonl"
     ],
     "counts": {
-      "task": 71,
-      "solution": 29
+      "unrelated": 74,
+      "source": 24,
+      "review": 1,
+      "archive": 1
     },
-    "checkpoint": "runs/r303_review_r308.jsonl",
+    "checkpoint": "runs/r310_review_r315.jsonl",
+    "checkpoint_blob_sha": "f7a85607997343f15eddf16e3372e7601dbc792f",
     "canonical_merged": 0,
-    "canonical_labels_after": 4688,
-    "status": "checkpointed_pending_merge"
+    "canonical_labels_after": 5388,
+    "status": "checkpointed_SHA_allowlisted_pending_merge"
   },
   "r291_review": {
     "cycle": "r291-20261024T095852000Z",
@@ -1986,10 +1989,42 @@
     "checkpoint": "runs/r309_review_r314.jsonl",
     "checkpoint_blob_sha": "b4a6c2d457d8f04b5442cc820f8f8ad34b8c49c5",
     "sha_allowlisted": true,
-    "canonical_merged": 0,
-    "operational_cursor_advanced": false,
+    "canonical_merged": 100,
+    "operational_cursor_advanced": true,
     "next_after_merge": "resource_000315.jsonl",
     "raw_cursor_unchanged": true,
-    "notes": "Korean KPO/IPO rights expressly restrict redistribution; mixed task/participant-work posts classified archive; HSE global university navigation excluded."
+    "notes": "Korean KPO/IPO rights expressly restrict redistribution; mixed task/participant-work posts classified archive; HSE global university navigation excluded.",
+    "status": "merged_verified_actions_40164424334"
+  },
+  "r310_pending": {
+    "cycle": "r310-20261025T050806871Z",
+    "resource_shard": "resource_000315.jsonl",
+    "raw_shards": [
+      "batch_000828.jsonl",
+      "batch_000829.jsonl"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 74,
+      "source": 24,
+      "review": 1,
+      "archive": 1
+    },
+    "checkpoint": "runs/r310_review_r315.jsonl",
+    "checkpoint_blob_sha": "f7a85607997343f15eddf16e3372e7601dbc792f",
+    "sha_allowlisted": true,
+    "canonical_merged": 0,
+    "next_after_merge": "resource_000316.jsonl",
+    "raw_cursor_unchanged": true,
+    "notes": "HSE university-wide navigation mostly unrelated; official archive 2008/09-2025/26 and 20 subject landing pages; first-round work-viewing link retained review."
+  },
+  "r310_provenance_corrections": {
+    "checkpoint": "runs/r310_r309_posn_provenance_corrections.jsonl",
+    "sha": "76b6b3247555152976cf8f9c526585e860df93fc",
+    "count": 2,
+    "script_updated": true,
+    "applied_to_canonical": false,
+    "requires_next_workflow": true
   }
 }
