@@ -1,6 +1,6 @@
 {
   "cycle": "r320-20261025T150509455Z",
-  "reported_at": "2026-10-25T15:12:23.204Z",
+  "reported_at": "2026-10-25T15:15:55.907Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
@@ -8,8 +8,9 @@
     "blob_sha": "81b1ffa9ca1fbc5870c6b9e60eebe4752e03066f",
     "action_run_id": 40205265951,
     "action_url": "https://github.com/UsernameMP/English/actions/runs/40205265951",
-    "status": "in_progress",
-    "conclusion": null
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-25T15:14:55Z"
   },
   "baseline": {
     "source_count": 1902,
@@ -20,12 +21,17 @@
     "blocked_or_failed": 2925
   },
   "discovery": {
-    "web_results_examined": "dozens across multiple languages and disciplines; 33 checked directly against full 1902-source canonical registry, 28 already registered",
+    "web_results_examined": "Multiple multilingual searches, >60 candidate URLs cross-checked against 1902 canonical source snapshot; 50 already-known pointers logged separately, 13 new confirmed against updated 1906 registry",
     "new_verified_source_urls": 13,
     "checkpoint": "runs/discovery_r320.jsonl",
     "sha": "a7a69e48e6dab866b38694ce7fd31e46d5f24a66",
     "canonical_merge_pending": true,
-    "rights": "unknown_or_reserved"
+    "rights": "unknown_or_reserved",
+    "known_source_checks_checkpoint": "runs/r320_existing_source_checks.jsonl",
+    "canonical_sources_before_workflow": 1902,
+    "canonical_sources_after_workflow": 1906,
+    "prior_r319_sources_merged": 4,
+    "new_r320_sources_merged": 0
   },
   "review": {
     "resource_shard": "resource_000325.jsonl",
@@ -45,7 +51,12 @@
     "sha": "35336d00e09cb8dbcbb277e86d1dd9a9ca3c0b02",
     "merge_script_sha": "caf0cc82350409cb7a800ee1af9a80ec49fceade",
     "canonical_merge_pending": true,
-    "rights": "NOSB national office exclusively releases its competition questions; metadata only"
+    "rights": "NOSB national office exclusively releases its competition questions; metadata only",
+    "canonical_labels_before_workflow": 6356,
+    "canonical_labels_after_workflow": 6456,
+    "prior_r319_labels_merged": 100,
+    "new_r320_labels_merged": 0,
+    "operational_cursor": "resource_000325.jsonl"
   },
   "mime": {
     "observations": 3616,
@@ -72,9 +83,10 @@
     ]
   },
   "verified_sha": {
-    "review_state": "13682fab2c16c87936a13b36c678bffded3f3717",
-    "sources": "23a0253c609ea8f6216079ed7b0ffeed127d1b53",
-    "link_labels": "a6cad4f8cda7d042316735a1d1038ccefaa45064"
+    "review_state": "18b5edddd89e36fd5bb7ca04b67298b46594fb83",
+    "sources": "a66f54425ba45e3149759a07104525e441213e20",
+    "link_labels": "cd2a11ae52d2961d3ea9cf1adee5fecd2e074a0a",
+    "backlog": "179917656243bff3b44469a387dfbe514f20c19a"
   },
   "safeguards": {
     "binary_downloaded": false,
@@ -84,10 +96,21 @@
     "extra_automations_created": false
   },
   "open_items": [
-    "RIFT Actions r320 in progress; final success and new crawl metrics pending.",
-    "13 new sources staged for next normal merge, no extra run.",
-    "100 labels SHA-pinned and staged, no cursor advance before canonical merge.",
-    "NOSB Kahoot round4 duplicates round3 URL, and two ambiguous links remain review.",
-    "Older coverage gaps remain unresolved; no archive exhaustion claim."
-  ]
+    "13 verified new source pointers remain in discovery checkpoint; canonical merge next normal workflow, no extra run.",
+    "100 r320 NOSB labels remain SHA-pinned in checkpoint; canonical merge pending and cursor held on resource_000325.",
+    "Two NOSB resources remain review; Kahoot Round 4 duplicates Round 3 URL; sample questions have organizer-controlled rights.",
+    "Historical archive gaps, temporary access restrictions, and potential URL aliases remain unresolved."
+  ],
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_occurrences": 7175,
+    "unique_resource_urls_before": 276087,
+    "unique_resource_urls_after": 276326,
+    "unique_resource_urls_delta": 239,
+    "pending_pages": 124053,
+    "blocked_or_failed": 2927,
+    "visited_pages": 24972,
+    "source": "GitHub Actions #40205265951 job #121204723666 log",
+    "crawl_state_blob_sha": "c1972e3c847bc61b9e9f38a321edfaa300c6dfb6"
+  }
 }
