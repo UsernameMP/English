@@ -79,7 +79,7 @@ function baskets(){
  after[0][0]-=5;after[0][1]+=5;after[1][1]-=4;after[1][2]+=4;after[2][2]-=2;after[2][3]+=2;
  const badges=["Из №1 → №2: 5, затем поровну","Из №2 → №3: 4, затем 2:1","Из №3 → №4: 2, затем по 3"];
  return '<p class="muted">Подбирай начальное распределение кнопками. Перекладывание в каждом условии независимо от двух других.</p>'+
- '<div class="basketbox">'+s.v.map((n,i)=>'<div class="basket"><small>Корзина '+(i+1)+'</small><strong>'+n+'</strong><div class="dots">'+(n?"◆".repeat(Math.min(6,n)):"пусто")+'</div><div class="num-actions"><button data-basket="'+i+'" data-delta="-1">−</button><button data-basket="'+i+'" data-delta="1">+</button></div></div>').join("")+"</div>"+
+ '<div class="basketbox">'+s.v.map((n,i)=>'<div class="basket"><small>Корзина '+(i+1)+'</small><strong>'+n+'</strong><div class="dots">'+(n?"◆".repeat(Math.min(6,n)):"пусто")+'</div><div class="num-actions"><button data-basket="'+i+'" data-delta="-10">−10</button><button data-basket="'+i+'" data-delta="-1">−</button><button data-basket="'+i+'" data-delta="1">+</button><button data-basket="'+i+'" data-delta="10">+10</button></div></div>').join("")+"</div>"+
  '<p class="metric">Всего в исходных корзинах: <strong>'+s.v.reduce((a,b)=>a+b,0)+"</strong></p>"+
  '<div class="chip-row">'+badges.map((x,i)=>idhtml("trial:"+i,"Опыт "+(i+1),s.trial===i?"chip on":"chip")).join("")+"</div>"+
  '<div class="stageNote">'+badges[s.trial]+'<br>После переноса: '+after[s.trial].map((v,i)=>"№"+(i+1)+" = "+v).join(", ")+"</div>";
@@ -165,7 +165,7 @@ function boat(){
  return '<p class="muted">Перемещай катер по линии. Буйки на схеме стоят на 50, 150 и 250 м от старта — это допустимый пример исходных условий, а не заданные оригиналом координаты.</p>'+
  '<div class="line">'+[...buoys,450].map((v,i)=>'<div class="point" style="left:'+(v/450*100)+'%;background:'+(i===3?"#008e7d":"#e3a949")+'"><small>'+(i===3?"МАЯК":"буй")+'</small></div>').join("")+'</div>'+
  '<input type="range" class="track" id="boatRange" min="0" max="450" step="5" value="'+x+'" aria-label="Положение катера">'+
- '<div class="metric">Катер прошёл <strong>'+x+' м</strong><br>До маяка: '+(450-x)+' м<br>До трёх буйков: '+buoys.map(b=>Math.abs(x-b)).join(" + ")+" = <strong>"+sum+" м</strong><br>"+(x>250&&x<450?"Все три буйка уже позади.":"Нужно пройти все буйки, но не достигать маяка.")+"</div>";
+ '<div class="metric" id="boatLive">Катер прошёл <strong>'+x+' м</strong><br>До маяка: '+(450-x)+' м<br>До трёх буйков: '+buoys.map(b=>Math.abs(x-b)).join(" + ")+" = <strong>"+sum+" м</strong><br>"+(x>250&&x<450?"Все три буйка уже позади.":"Нужно пройти все буйки, но не достигать маяка.")+"</div>";
 }
 function checkBoat(){const x=states[6].x;return x===300?{ok:true,text:"Верно: катер в 300 м от старта, до маяка 150 м, сумма расстояний до буйков снова 450."}:{ok:false,text:"Нужно быть за всеми тремя буйками, ещё не у маяка, и иметь сумму расстояний до буйков 450 м."};}
 
@@ -229,7 +229,12 @@ $("workarea").addEventListener("click",event=>{
  if(a.startsWith("target:")){states[5].target=+a.split(":")[1];states[5].rects=[];draw();}
  }
 });
-$("workarea").addEventListener("input",event=>{if(event.target.id==="boatRange"){states[6].x=+event.target.value;act();draw();}});
+$("workarea").addEventListener("input",event=>{if(event.target.id==="boatRange"){
+   const x=+event.target.value;states[6].x=x;
+   const distances=[50,150,250].map(b=>Math.abs(x-b));
+   const live=$("boatLive");if(live)live.innerHTML='Катер прошёл <strong>'+x+' м</strong><br>До маяка: '+(450-x)+' м<br>До трёх буйков: '+distances.join(" + ")+' = <strong>'+distances.reduce((a,b)=>a+b,0)+' м</strong><br>'+(x>250&&x<450?'Все три буйка уже позади.':'Нужно пройти все буйки, но не достигать маяка.');
+ }});
+ $("workarea").addEventListener("change",event=>{if(event.target.id==="boatRange"){act();draw();}});
 let dragged=null;
 $("workarea").addEventListener("dragstart",e=>{let card=e.target.closest("[data-card]");if(card)dragged=+card.dataset.card;});
 $("workarea").addEventListener("dragover",e=>{if(e.target.closest("[data-card]"))e.preventDefault();});
