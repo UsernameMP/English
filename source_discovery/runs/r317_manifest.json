@@ -49,8 +49,11 @@
     "added": 19,
     "backlog_after": 943,
     "checkpoint": "runs/r317_audit_backlog.jsonl",
-    "backlog_sha": "c87734a0fc7ba55cbf12fd14a06c3d460f745ee3",
-    "focus": "historical year/round gaps, original provenance, participant-work rights, supplementary attachments, archive format differences"
+    "backlog_sha": "17ed7e0c2f3b3b449810a368fb916d3fa478dd57",
+    "focus": "historical year/round gaps, original provenance, participant-work rights, supplementary attachments, archive format differences",
+    "checkpoint_sha": "b3160a074fbadbb1516e19c4b4cd8c14d45cc515",
+    "novel_source_pointers": 10,
+    "checked_existing_source_pointers": 13
   },
   "crawl": {
     "html_pages": 60,
