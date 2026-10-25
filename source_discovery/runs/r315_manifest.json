@@ -1,0 +1,87 @@
+{
+  "cycle": "r315-20261025T100846384Z",
+  "reported_at": "2026-10-25T10:13:32.038Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "2dd9d853ae9d20a6a4ba11f8a4dbd86542affec2",
+    "run_id": 40183563327,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/UsernameMP/English/actions/runs/40183563327"
+  },
+  "subsequent_source_update_workflow": {
+    "run_id": 40183845074,
+    "status": "in_progress",
+    "conclusion": null,
+    "url": "https://github.com/UsernameMP/English/actions/runs/40183845074"
+  },
+  "discovery": {
+    "new_sources": 8,
+    "canonical_before": 1869,
+    "canonical_after": 1877,
+    "checkpoint": "runs/discovery_r315.jsonl",
+    "canonical_commit": "73a2914358146af9ce82f76f9dbb160b331e3ce9",
+    "sha": "f51404150349d9c7ec4592665afcaa486a845b43",
+    "status": "published"
+  },
+  "review": {
+    "resource_shard": "resource_000320.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000841.jsonl",
+      "batch_000842.jsonl"
+    ],
+    "counts": {
+      "task": 37,
+      "criteria": 40,
+      "review": 23
+    },
+    "checkpoint": "runs/r315_review_r320.jsonl",
+    "checkpoint_sha": "73e9d45c3609c2c61146357527e523e06d1e63c3",
+    "sha_allowlisted": true,
+    "canonical_before": 5956,
+    "canonical_after": 5956,
+    "canonical_merge_status": "pending second workflow",
+    "cursor_next": "resource_000320.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "crawl": {
+    "first_run_html_pages": 60,
+    "first_run_new_raw_occurrences": 5846,
+    "unique_resources_before": 271795,
+    "unique_resources_after_first_run": 273057,
+    "queue_after_first_run": 122528,
+    "blocked_or_failed_after_first_run": 2839,
+    "latest_crawl_sha": "3eaa65e4fb14f3b5394121149009b76eb8aa8e33",
+    "second_run_results_included": false
+  },
+  "mime": {
+    "observations": 3556,
+    "pdf_unique": 1515,
+    "pdf_without_dot_pdf": 1343,
+    "zip_unique": 61,
+    "octet_stream_unique": 222,
+    "sha": "dd0a4c232d3003d853b60a3b6ba16b0ff3b44f6a",
+    "note": "MIME-only metadata does not establish task suitability."
+  },
+  "audit": {
+    "backlog_before": 898,
+    "added": 12,
+    "backlog_after": 910,
+    "sha": "da3e370ae88e3a2eaeeefb84929b815aaa5dbf25"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_evidence_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automations_created": false
+  },
+  "open_items": [
+    "Wait for second workflow to merge 100 labels and verify cursor advancement.",
+    "23 supplementary reference/attachment links remain review.",
+    "Rights and historical year/stage/solution coverage remain unresolved."
+  ]
+}
