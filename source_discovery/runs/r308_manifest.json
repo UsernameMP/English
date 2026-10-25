@@ -1,6 +1,6 @@
 {
   "cycle": "r308-20261025T030520740Z",
-  "reported_at": "2026-10-25T03:14:58.969Z",
+  "reported_at": "2026-10-25T03:18:07.547Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
@@ -8,18 +8,19 @@
     "workflow_run_id": 40156913497,
     "status": "completed_success",
     "followup_run_id": 40157225004,
-    "followup_status": "in_progress_at_manifest_time",
-    "source_update_triggered_followup": true
+    "followup_status": "completed_success_overall_but_review_merge_step_failed",
+    "source_update_triggered_followup": true,
+    "followup_completed_at": "2026-10-25T03:16:00Z"
   },
   "crawl": {
-    "last_confirmed_run_id": 40156913497,
+    "last_confirmed_run_id": 40157225004,
     "html_pages": 60,
-    "new_raw_links": 490,
-    "unique_resource_urls": 266020,
-    "pending_pages": 120901,
-    "blocked_or_failed_cumulative": 2745,
-    "source": "GitHub Actions #40156913497 job log",
-    "followup_not_counted": true
+    "new_raw_links": 1471,
+    "unique_resource_urls": 266763,
+    "pending_pages": 121234,
+    "blocked_or_failed_cumulative": 2752,
+    "source": "GitHub Actions #40157225004 job log",
+    "followup_not_counted": false
   },
   "discovery": {
     "canonical_before": 1786,
@@ -52,11 +53,16 @@
     "checkpoint_commit": "aa32761b7285387dcf2ba72df52462bd081e58e0",
     "sha_allowlist_commit": "da35a1ee1a9ee1c874897ef64364e91b608310c9",
     "canonical_before": 5188,
-    "canonical_merge": "pending_followup_persist",
+    "canonical_merge": "blocked_corrected_occurrence_conflict",
     "operational_cursor": "resource_000313.jsonl",
     "next_after_merge": "resource_000314.jsonl",
     "raw_cursor_unchanged": true,
-    "review_state_commit": "4e1d7bd47af3fdd3e1cd69293eda72ad1b87c640"
+    "review_state_commit": "531e1a01c07de57070c86bd0f4d075d5596fd43d",
+    "merge_attempt_run_id": 40157225004,
+    "merge_error": "ValueError: Conflicting occurrence: 869f6211fb1370425d826cbd",
+    "merge_fix_commit": "5ca4b38a4a63bbd99eba755fbbd041bf7e72d7d8",
+    "merge_fix_verified": false,
+    "regression_test": "source_discovery/test_review_checkpoint_corrections.py"
   },
   "metadata_corrections": {
     "grade_corrections": 27,
@@ -66,23 +72,24 @@
     "job_log": "RIFT audited corrections: changed=29 already=0 total=5188"
   },
   "mime": {
-    "observations": 3487,
+    "observations": 3506,
     "unique_pdf": 1499,
     "extensionless_pdf": 1341,
     "application_zip": 61,
     "application_octet_stream": 222,
-    "source_blob_sha": "7921acbdadc7a42bebc24d513d16f85123275e4f",
-    "metadata_only": true,
-    "followup_not_recounted": true
+    "source_blob_sha": "6ca529824fe26d111a9f7497befdd4bcb84e0a5c",
+    "metadata_only": true
   },
   "audit": {
     "backlog_before": 779,
-    "new_records": 12,
-    "backlog_after": 791,
+    "new_records": 13,
+    "backlog_after": 792,
     "commit": "26050b53630badae9353be2f9892a47db1f09070",
     "historical_checkpoints_pending": 27,
     "source_duplicate_unresolved": 1,
-    "not_exhaustive": true
+    "not_exhaustive": true,
+    "latest_commit": "5231173e3fe3d4b11b1b6c88077b97042742810b",
+    "merge_bug_recorded": true
   },
   "safeguards": {
     "binary_documents_downloaded": false,
