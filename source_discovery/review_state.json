@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T08:06:09.290Z",
+  "updated_at": "2026-10-25T08:07:24.209Z",
   "deferred_shards": [
     1,
     2,
@@ -42,8 +42,8 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "GitHub Actions #40171435659 completed success; r311 discovery 10 sources merged (1822->1832) and r311 100 review labels merged (5488->5588); r312 14 deduplicated source candidates and 100 reviewed labels SHA-pinned but not canonically merged; 27 historical checkpoints remain pending.",
-  "canonical_merged_in_cycle": 311,
+  "canonical_merge_status": "GitHub Actions #40174985995 completed success: r312 14 source URLs merged (1832->1846) and 100 review labels merged (5588->5688); r313 13 discovery source pointers and 100 labels SHA-pinned in checkpoints, not yet canonically merged; 27 historical checkpoints remain pending.",
+  "canonical_merged_in_cycle": 312,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -182,10 +182,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000317.jsonl",
-    "last_completed_shard": "resource_000316.jsonl",
-    "cycle": "r312-20261025T070449051Z",
-    "reason": "r311 100 labels verified in canonical; r312 resource_000317 100 unique resources reviewed, SHA-pinned pending merge; do not advance to resource_000318 until verified."
+    "next_resource_shard": "resource_000318.jsonl",
+    "last_completed_shard": "resource_000317.jsonl",
+    "cycle": "r313-20261025T080111326Z",
+    "reason": "r312 100 labels verified in canonical; r313 resource_000318 100 unique resources reviewed, SHA-pinned pending merge; do not advance to resource_000319 until verified."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2090,14 +2090,17 @@
     "review_checkpoint_sha": "9def741c80390429b330c0bbf46963135f123a6f",
     "discovery_checkpoint": "runs/discovery_r312.jsonl",
     "discovery_checkpoint_sha": "4c0a2538430795c0f4d20b5e66bbb6031888e399",
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "canonical_labels_before": 5588,
     "canonical_sources_before": 1832,
-    "review_cursor_advanced": false,
+    "review_cursor_advanced": true,
     "next_after_verified_merge": "resource_000318.jsonl",
     "raw_cursor_unchanged": true,
     "historical_checkpoints_pending": 27,
-    "notes": "HSE design and art-history tasks, keys, criteria and participant works; KöMaL numbered problem pages; ambiguous auxiliary data and scoring distributions retained review; stage metadata conservative; no binary downloads."
+    "notes": "HSE design and art-history tasks, keys, criteria and participant works; KöMaL numbered problem pages; ambiguous auxiliary data and scoring distributions retained review; stage metadata conservative; no binary downloads.",
+    "canonical_labels_after": 5688,
+    "canonical_sources_after": 1846,
+    "workflow_run": 40174985995
   },
   "r313_pending": {
     "cycle": "r313-20261025T080111326Z",
@@ -2134,6 +2137,8 @@
     "extensionless_pdf_mime_candidates": 50,
     "observed_image_png": 1,
     "rights_caveat": "Brazil OBB organizer explicitly forbids unauthorized exam reproduction; metadata only",
-    "notes": "HSE Higher Test art history and international relations tasks/criteria; HSE Higher League 2025/26 final-round university exams and rubrics; 13 ancillary documents retained review; no binaries downloaded."
+    "notes": "HSE Higher Test art history and international relations tasks/criteria; HSE Higher League 2025/26 final-round university exams and rubrics; 13 ancillary documents retained review; no binaries downloaded.",
+    "canonical_labels_before": 5688,
+    "canonical_sources_before": 1846
   }
 }
