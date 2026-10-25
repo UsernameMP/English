@@ -1,0 +1,86 @@
+{
+  "cycle": "r317-20261025T120756291Z",
+  "reported_at": "2026-10-25T12:15:39.307Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "afb121d586d159f2a17e7de4b65405b9fe61c108",
+    "run_id": 40191782068,
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40191782068",
+    "status": "completed",
+    "conclusion": "success",
+    "job_id": 121164110606
+  },
+  "discovery": {
+    "checkpoint": "runs/discovery_r317.jsonl",
+    "checkpoint_sha": "75bc7095431cb8eb8142b4908373b1efa797b4b4",
+    "new_unique_html_pointers_against_canonical": 10,
+    "already_known_checked": 13,
+    "existing_checks_journal": "runs/r317_existing_source_checks.jsonl",
+    "canonical_sources_after_workflow": 1886,
+    "canonical_merge_status": "10 checkpointed after workflow checkout; pending next standard merge, no extra run initiated",
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000322.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000843.jsonl",
+      "batch_000844.jsonl"
+    ],
+    "counts": {
+      "task": 37,
+      "criteria": 38,
+      "solution": 1,
+      "review": 24
+    },
+    "checkpoint": "runs/r317_review_r322.jsonl",
+    "checkpoint_sha": "b5681a897720aadf67e9adb55ae1fc78aca90b39",
+    "sha_allowlisted": true,
+    "canonical_labels_after_workflow": 6156,
+    "r316_labels_merged_in_workflow": 100,
+    "r317_labels_merged": 0,
+    "cursor": "resource_000322.jsonl",
+    "raw_ledger_unchanged": true
+  },
+  "audit": {
+    "backlog_before": 924,
+    "added": 19,
+    "backlog_after": 943,
+    "checkpoint": "runs/r317_audit_backlog.jsonl",
+    "backlog_sha": "c87734a0fc7ba55cbf12fd14a06c3d460f745ee3",
+    "focus": "historical year/round gaps, original provenance, participant-work rights, supplementary attachments, archive format differences"
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_occurrences": 4418,
+    "unique_resource_urls_before": 274415,
+    "unique_resource_urls_after": 275209,
+    "unique_resource_urls_delta": 794,
+    "pending_pages": 123512,
+    "blocked_or_failed": 2903,
+    "source": "GitHub Actions #40191782068 job #121164110606 logs",
+    "run_status": "success"
+  },
+  "mime": {
+    "observations": 3614,
+    "pdf_unique": 1529,
+    "pdf_without_dot_pdf": 1371,
+    "zip_unique": 72,
+    "note": "MIME evidence is not semantic confirmation; no PDF, ZIP or image body downloaded"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automations_created": false
+  },
+  "open_items": [
+    "Merge 10 novel r317 discovery pointers with canonical sources using existing merge_sources.py.",
+    "Merge 100 r317 reviewed resource labels with canonical link_labels using SHA-pinned existing workflow.",
+    "Resolve 24 ambiguous supplemental resources, including one missing subject context.",
+    "Audit 19 new coverage and rights gaps; historical URL aliases remain unresolved."
+  ]
+}
