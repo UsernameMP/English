@@ -1,6 +1,6 @@
 {
   "cycle": "r306-20261025T010210777Z",
-  "reported_at": "2026-10-25T01:08:23.843Z",
+  "reported_at": "2026-10-25T01:09:56.164Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "pr_188": {
@@ -14,7 +14,8 @@
     "workflow_run_id": 40149039993,
     "status": "completed_success",
     "followup_workflow_run_id": 40149259445,
-    "followup_status": "in_progress_at_manifest_time"
+    "followup_status": "completed_success",
+    "followup_verified_from": "GitHub Actions #40149259445 status and crawl job log"
   },
   "crawl": {
     "run_id": 40149039993,
@@ -25,7 +26,18 @@
     "pending_pages": 119466,
     "blocked_or_failed_cumulative": 2729,
     "verified_from": "GitHub Actions job log",
-    "followup_results_not_counted": true
+    "followup_results_not_counted": false,
+    "latest_confirmed_run_id": 40149259445,
+    "latest_confirmed": {
+      "run_id": 40149259445,
+      "status": "success",
+      "html_pages": 60,
+      "new_raw_links": 1864,
+      "unique_resource_urls": 264703,
+      "pending_pages": 120205,
+      "blocked_or_failed_cumulative": 2731,
+      "verified_from": "GitHub Actions job log"
+    }
   },
   "discovery": {
     "new_unique_sources": 9,
@@ -54,7 +66,7 @@
     "checkpoint_blob_sha": "7398a8845c27a10193f0993716ac864367e90abf",
     "sha_allowlisted": true,
     "canonical_before": 4988,
-    "canonical_merge": "pending_verified_success",
+    "canonical_merge": "verified_success",
     "next_after_merge": "resource_000312.jsonl",
     "raw_cursor_unchanged": true,
     "prior_r305_merge": {
@@ -67,9 +79,13 @@
     "post_review_corrections": {
       "count": 2,
       "checkpoint": "runs/r306_review_corrections.jsonl",
-      "status": "pending_conflict_checked_canonical_patch",
+      "status": "pending_conflict_checked_canonical_patch_not_applied",
       "types": "review -> unrelated"
-    }
+    },
+    "canonical_after": 5088,
+    "canonical_merge_run_id": 40149259445,
+    "canonical_merge_log": "existing=4988 added=100 skipped=1200 total=5088",
+    "next_resource_shard": "resource_000312.jsonl"
   },
   "audit": {
     "checkpoint": "runs/r306_audit.jsonl",
@@ -79,7 +95,9 @@
     "backlog_after": 759,
     "prior_r305_merge_blocker_resolved": true,
     "older_historical_checkpoints_pending": 27,
-    "grade_corrections_pending": 27
+    "grade_corrections_pending": 27,
+    "prior_r306_merge_blocker_resolved": true,
+    "post_review_corrections_pending": 2
   },
   "mime": {
     "current_full_ledger": "unreadable_via_connector",
