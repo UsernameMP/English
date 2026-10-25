@@ -1,0 +1,84 @@
+{
+  "cycle": "r316-20261025T110810197Z",
+  "reported_at": "2026-10-25T11:10:57.119Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "3ae503a44ae056c5f323aed529f25888ea545241",
+    "run_id": 40187603151,
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40187603151",
+    "status_at_last_check": "in_progress",
+    "conclusion": null
+  },
+  "discovery": {
+    "checkpoint": "runs/discovery_r316.jsonl",
+    "verified_html_pointers": 12,
+    "countries": [
+      "UY",
+      "ZA",
+      "TH",
+      "BR",
+      "CR",
+      "CO",
+      "MN",
+      "GE"
+    ],
+    "canonical_before_last_confirmed": 1877,
+    "canonical_merge_status": "checkpointed_pending_workflow",
+    "note": "Canonical source file too large for connector direct full read; merge_sources.py will normalize/deduplicate; do not claim all 12 are newly canonical."
+  },
+  "review": {
+    "resource_shard": "resource_000321.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000842.jsonl",
+      "batch_000843.jsonl"
+    ],
+    "counts": {
+      "task": 37,
+      "criteria": 34,
+      "review": 29
+    },
+    "checkpoint": "runs/r316_review_r321.jsonl",
+    "checkpoint_sha": "64dd6748788186625586d6c1d174ad6b79b8a3d0",
+    "sha_allowlisted": true,
+    "canonical_labels_last_confirmed": 6056,
+    "canonical_merge_status": "pending_workflow",
+    "cursor_next": "resource_000321.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "audit": {
+    "backlog_before": 910,
+    "added": 14,
+    "backlog_after": 924,
+    "backlog_sha": "aa6dc7103007e857bc66f0d10f183180db7bef6a",
+    "historical_alias_pairs_unresolved": 15
+  },
+  "crawl": {
+    "unique_resources_last_confirmed": 273832,
+    "queue_last_confirmed": 122845,
+    "errors_last_confirmed": 2863,
+    "run316_stats": "pending completion"
+  },
+  "mime": {
+    "observations_last_confirmed": 3556,
+    "pdf_unique_last_confirmed": 1515,
+    "pdf_without_dot_pdf_last_confirmed": 1343,
+    "note": "MIME-only observations are not semantic labels; no binary bodies fetched."
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_evidence_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automations_created": false
+  },
+  "open_items": [
+    "Confirm GitHub Actions r316 outcome and new crawler counters.",
+    "Merge 12 Discovery pointers with canonical sources and deduplicate.",
+    "Merge 100 r321 labels with canonical link_labels after SHA-pinned workflow.",
+    "Clarify 29 supplemental/ambiguous r321 resources.",
+    "Audit 15 historical URL aliases and historical year/round/solution/rights gaps."
+  ]
+}
