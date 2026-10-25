@@ -1,0 +1,105 @@
+{
+  "cycle": "r312-20261025T070449051Z",
+  "reported_at": "2026-10-25T07:14:49.576Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "18fb89ab491b576d1e5eff53ffcd4e4283281e14",
+    "blob_sha": "55f5c25ec3f45491490e5dabf41e3df895cdc7b3",
+    "workflow_run_id": 40171435659,
+    "workflow_status": "completed",
+    "workflow_conclusion": "success",
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40171435659",
+    "persistence_commit": "2bbb39baf53160b5030ce28e41580a9c0a2f4eed"
+  },
+  "discovery": {
+    "canonical_sources": 1832,
+    "canonical_blob_sha": "b0053f347fed9a37e2c0cbd4ecfb19cfe03dc32e",
+    "r311_merged": 10,
+    "checkpoint": "runs/discovery_r312.jsonl",
+    "checkpoint_sha": "4c0a2538430795c0f4d20b5e66bbb6031888e399",
+    "new_verified_urls": 14,
+    "verified_novel_against_all_1832_canonical_urls": true,
+    "prior_already_indexed_candidates_excluded": 10,
+    "r312_canonical_merged": 0,
+    "merge_mechanism": "merge_sources.py next scheduled workflow; normalized URL dedup"
+  },
+  "review": {
+    "canonical_labels": 5588,
+    "canonical_blob_sha": "1df91276a575fbcf0abccbd920569eb072373fac",
+    "r311_merged": 100,
+    "resource_shard": "resource_000317.jsonl",
+    "unique_resources_reviewed": 100,
+    "raw_occurrences_checked": 122,
+    "raw_shards": [
+      "batch_000829.jsonl",
+      "batch_000830.jsonl",
+      "batch_000831.jsonl",
+      "batch_000832.jsonl",
+      "batch_000833.jsonl",
+      "batch_000834.jsonl",
+      "batch_000835.jsonl",
+      "batch_000836.jsonl"
+    ],
+    "counts": {
+      "unrelated": 16,
+      "solution": 18,
+      "review": 5,
+      "task": 43,
+      "source": 4,
+      "criteria": 11,
+      "participant_work": 3
+    },
+    "checkpoint": "runs/r312_review_r317.jsonl",
+    "checkpoint_sha": "9def741c80390429b330c0bbf46963135f123a6f",
+    "sha_allowlisted": true,
+    "allowlist_blob_sha": "9de6d0ac3e62e036f63105405b8522ccca93e1f8",
+    "r312_canonical_merged": 0,
+    "cursor": "resource_000317.jsonl",
+    "cursor_advanced": false,
+    "ambiguous_review_kept": 5,
+    "stage_inference_conservatively_removed": true
+  },
+  "audit": {
+    "backlog_before": 837,
+    "added": 30,
+    "backlog_after": 867,
+    "backlog_blob_sha": "1870d7dddfe49cc4def574481eeaf74e2640e822",
+    "historical_label_checkpoints_pending": 27,
+    "posn_provenance_corrections_applied_and_verified": 2,
+    "review_state_blob_sha": "b176c7652a1052b6b4c85b0299e90bb1251b341d"
+  },
+  "crawl": {
+    "last_resource_shard": "resource_002696.jsonl",
+    "last_resource_shard_rows": 1,
+    "unique_resource_urls": 269501,
+    "formula": "(2696-1)*100+1",
+    "previous_r311_unique_resource_urls": 267378,
+    "delta_since_r311": 2123,
+    "last_raw_shard": "batch_012481.jsonl",
+    "last_raw_shard_rows": 81,
+    "crawl_state_blob_sha": "ad993aa4bcaaa5ff17b2fc3e8ef1e09487b4f134",
+    "current_queue_pages": "unavailable: 80,576,987-byte blob exceeds connector 67,108,864-byte decode limit; fetch_file range returned empty",
+    "last_confirmed_queue_pages_from_r311": 121335,
+    "current_error_count": "not verified"
+  },
+  "mime": {
+    "observations": 3547,
+    "unique_pdf_urls": 1515,
+    "pdf_urls_without_dot_pdf_anywhere": 1343,
+    "zip_observations": 61,
+    "gzip_observations": 7,
+    "octet_stream_observations": 222,
+    "resource_observations_blob_sha": "0f520af189839094f70c3b5a9232983c04ca7d14",
+    "pdf_utility_not_asserted": true
+  },
+  "safeguards": {
+    "binary_task_pdf_doc_zip_image_bodies_downloaded": false,
+    "raw_occurrences_deleted": false,
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false,
+    "robots_and_access_controls_respected": true
+  }
+}
