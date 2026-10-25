@@ -1,0 +1,112 @@
+{
+  "cycle": "r321-20261025T160259441Z",
+  "reported_at": "2026-10-25T16:08:35.980Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "fea78fcbbaab2bd43aedf2b8afc482cf5196f29b",
+    "blob_sha": "c5428acfc59d72056f3ffcad1946a37ae7709da9",
+    "run_id": 40209817002,
+    "run_url": "https://github.com/UsernameMP/English/actions/runs/40209817002",
+    "status": "completed",
+    "conclusion": "success",
+    "job_id": 121218449367
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_occurrences": 8828,
+    "unique_resource_urls_before": 276326,
+    "unique_resource_urls_after": 278526,
+    "unique_resource_urls_delta": 2200,
+    "pending_pages": 126128,
+    "blocked_or_failed": 2953,
+    "source": "GitHub Actions #40209817002 job #121218449367 log; latest resource index build"
+  },
+  "discovery": {
+    "verified_HTML_pointers_checkpointed": 17,
+    "checkpoint": "runs/discovery_r321.jsonl",
+    "checkpoint_blob_sha": "07d8944c7e00f84fe3a28f0487121b6f51b6fd91",
+    "known_recent_urls_excluded": 4,
+    "canonical_unique_additions_r321": "pending_normalized_dedup_next_regular_workflow",
+    "canonical_sources_after_workflow": 1919,
+    "prior_r320_sources_merged": 13,
+    "search_log": "runs/r321_search_log.json",
+    "rights": "unknown_or_reserved"
+  },
+  "review": {
+    "resource_shard": "resource_000326.jsonl",
+    "unique_resources_classified": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000848.jsonl",
+      "batch_000849.jsonl"
+    ],
+    "counts": {
+      "unrelated": 47,
+      "review": 2,
+      "task": 19,
+      "source": 1,
+      "archive": 16,
+      "solution": 15
+    },
+    "checkpoint": "runs/r321_review_r326.jsonl",
+    "checkpoint_blob_sha": "0bb11f34197902841cf62c0213317847f79056c5",
+    "sha_pinned_in": "merge_review_checkpoints.py",
+    "canonical_merge_pending": true,
+    "canonical_labels_after_workflow": 6556,
+    "prior_r320_labels_merged": 100,
+    "operational_cursor": "resource_000326.jsonl",
+    "rights": "unknown_or_reserved",
+    "no_binary_download": true
+  },
+  "audit": {
+    "backlog_before": 1001,
+    "added": 24,
+    "backlog_after": 1025,
+    "backlog_blob_sha": "e4960dea57485f0f926a3b859a34ab8538b0dd00",
+    "topics": [
+      "OBL years/rounds/answer keys",
+      "NOSB STEAM challenge rubric and gated materials",
+      "Spain Economics exams",
+      "Peru Chemistry historical keys",
+      "OLAA years and stages",
+      "Poland Linguistics and AGH cancelled final",
+      "Brazil Logic rounds",
+      "phoXiv provenance and rights",
+      "Korean Junior Science archives"
+    ]
+  },
+  "mime": {
+    "observations_current": "not_readable_with_connector_due_large_file",
+    "last_confirmed_observations_from_r320": 3616,
+    "last_confirmed_pdf_mime_urls_from_r320": 1531,
+    "non_html_not_counted_as_errors": true,
+    "no_binary_download": true
+  },
+  "verified_blob_sha": {
+    "source_discovery/run_trigger.json": "c5428acfc59d72056f3ffcad1946a37ae7709da9",
+    "source_discovery/crawl_state.json": "f3a74b879ed6ae2c1e1ea3ef96cd6bc9ab902f45",
+    "source_discovery/sources.jsonl": "45f5a7db1661ed95d751c999d39496f91f90e4fd",
+    "source_discovery/link_labels.jsonl": "5b30f92c6f964bffee43169a434674be41e2ac2c",
+    "source_discovery/backlog.jsonl": "e4960dea57485f0f926a3b859a34ab8538b0dd00",
+    "source_discovery/review_state.json": "83bfe5311dc122d1ab46616e0785ef467f5165ce",
+    "source_discovery/runs/discovery_r321.jsonl": "07d8944c7e00f84fe3a28f0487121b6f51b6fd91",
+    "source_discovery/runs/r321_review_r326.jsonl": "0bb11f34197902841cf62c0213317847f79056c5",
+    "source_discovery/runs/r321_search_log.json": "cb8137a77c4f534472cabc117f962bc5b18a13b7",
+    "source_discovery/merge_review_checkpoints.py": "e044d97b7f393238363b4634ba329a5f589b9f54",
+    "source_discovery/resource_observations.jsonl": "db1a338575776aed62d54d23c18b226bb22dbfa0"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automation_created": false
+  },
+  "open_items": [
+    "17 HTML pointers checkpointed, canonical normalized dedup/merge pending next regular workflow.",
+    "100 r321 reviewed labels SHA-pinned, canonical merge pending next regular workflow; cursor held on resource_000326.",
+    "2 Scoutlier gated resources remain review; no access bypass.",
+    "Historic stage/answer-key gaps and rights remain unresolved."
+  ]
+}
