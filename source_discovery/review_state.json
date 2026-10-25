@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T03:17:58.077Z",
+  "updated_at": "2026-10-25T04:14:16.100Z",
   "deferred_shards": [
     1,
     2,
@@ -42,8 +42,8 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "r294_to_r307_1400_labels_merged; 29 SHA-audited corrections applied #40156913497; r308 100 checkpointed but Actions #40157225004 merge step failed on corrected r306 occurrence (continue-on-error); SHA-pinned compatibility fix commit 5ca4b38a not yet exercised; 27 historical checkpoints pending",
-  "canonical_merged_in_cycle": 307,
+  "canonical_merge_status": "r294_to_r308_1500_labels_merged; canonical 5288 after #40160788492; 29 audited corrections applied; r309 resource_000314 100 labels SHA-allowlisted pending canonical merge; 27 historical checkpoints pending",
+  "canonical_merged_in_cycle": 308,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -182,10 +182,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000313.jsonl",
-    "last_completed_shard": "resource_000312.jsonl",
-    "cycle": "r307-20261025T020616137Z",
-    "reason": "GitHub Actions #40153430111 completed success and job log verified merge existing=5088 added=100 total=5188. Continue with unique resource_000313. Raw cursor unchanged."
+    "next_resource_shard": "resource_000314.jsonl",
+    "last_completed_shard": "resource_000313.jsonl",
+    "cycle": "r309-20261025T040823693Z",
+    "reason": "GitHub Actions #40160788492 completed success, corrected checkpoint merge step succeeded, persist commit c31d31323aad8b98039e856655345aa64d7a23bb added 100 labels (r308). New r309 resource_000314 labels checkpointed and SHA-allowlisted but not yet canonical-merged; do not advance to resource_000315 until successful merge."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -1953,15 +1953,43 @@
     "checkpoint": "runs/r308_review_r313.jsonl",
     "checkpoint_blob_sha": "6f1023442a34d73da3bbedc1ed500b4a67c3f212",
     "sha_allowlisted": true,
-    "canonical_merged": 0,
-    "operational_cursor_advanced": false,
+    "canonical_merged": 100,
+    "operational_cursor_advanced": true,
     "next_after_merge": "resource_000314.jsonl",
     "raw_cursor_unchanged": true,
     "notes": "Mongolian future placeholder links not counted as task; KöMaL solution links rely on multilingual anchor; Thai POSN exam archive categories and pagination. Await GitHub Actions successful persist.",
     "canonical_merge_attempt_run_id": 40157225004,
-    "canonical_merge_attempt_status": "failed_conflicting_corrected_occurrence",
+    "canonical_merge_attempt_status": "resolved_success_run_40160788492",
     "canonical_merge_error": "Conflicting occurrence: 869f6211fb1370425d826cbd",
     "merge_fix_commit": "5ca4b38a4a63bbd99eba755fbbd041bf7e72d7d8",
-    "merge_fix_verified": false
+    "merge_fix_verified": true,
+    "canonical_merge_commit": "c31d31323aad8b98039e856655345aa64d7a23bb"
+  },
+  "r309_pending": {
+    "cycle": "r309-20261025T040823693Z",
+    "resource_shard": "resource_000314.jsonl",
+    "raw_shards": [
+      "batch_000827.jsonl",
+      "batch_000828.jsonl"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 69,
+      "source": 11,
+      "archive": 8,
+      "criteria": 1,
+      "participant_work": 2,
+      "task": 7,
+      "review": 2
+    },
+    "checkpoint": "runs/r309_review_r314.jsonl",
+    "checkpoint_blob_sha": "b4a6c2d457d8f04b5442cc820f8f8ad34b8c49c5",
+    "sha_allowlisted": true,
+    "canonical_merged": 0,
+    "operational_cursor_advanced": false,
+    "next_after_merge": "resource_000315.jsonl",
+    "raw_cursor_unchanged": true,
+    "notes": "Korean KPO/IPO rights expressly restrict redistribution; mixed task/participant-work posts classified archive; HSE global university navigation excluded."
   }
 }
