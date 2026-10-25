@@ -1,0 +1,40 @@
+{
+  "cycle": "r321-20261025T160259441Z",
+  "verified_at": "2026-10-25T16:06:40.736Z",
+  "queries_attempted": [
+    "site:olimpiadas.unc.edu.ar archivos problemas olimpiada linguistica argentina ediciones",
+    "site:olimpiadadelenguaje.cl pruebas olimpiada lingüística chile archivos",
+    "site:olimpiadascientificas.org.bo pruebas olimpiada geografia astronomia años soluciones",
+    "site:olimpiadas.edu.uy pruebas olimpiada informatica uruguay archivo",
+    "site:olympiads.edu.np past questions chemistry olympiad nepal archive",
+    "site:olimpiada.org.py pruebas soluciones olimpiada física Paraguay",
+    "site:edu.mn олимпиад бодлого архив биологи газарзүй",
+    "site:edu.gh olympiad past questions physics chemistry ghana university",
+    "olimpiada lingüística nacional archivo problemas soluciones edición sitio oficial hispanoamérica",
+    "Olimpiade de biologie subiecte bareme arhiva 2015 2024 site edu.ro",
+    "olympiad geoscience earth science national past papers archive official Africa Asia",
+    "olimpiada ciencias de la tierra archivos pruebas soluciones 2018 2025 países",
+    "olimpiada nacional astronomia colombia pruebas años anteriores archivo",
+    "olimpiada lingüística colombiana problemas ediciones pruebas soluciones",
+    "olimpíada nacional de geografía argentina exámenes anteriores archivo",
+    "olimpiada economía nacional universidad México exámenes años anteriores",
+    "site:edu.pe olimpiada exámenes anteriores química física",
+    "site:edu.bo olimpiada pruebas respuestas astronomía",
+    "site:ac.ug olympiad past papers mathematics",
+    "site:ac.zw olympiad past papers physics"
+  ],
+  "known_from_recent_registry_checks": [
+    "https://economicas.ua.es/es/actividades-y-eventos/olimpiadas-de-economia/ediciones-anteriores/examenes-olimpiadas-de-economia.html",
+    "https://www.ubu.es/facultad-de-ciencias-economicas-y-empresariales/olimpiada-espanola-de-economia/examenes-de-ediciones-anteriores-fase-nacional",
+    "https://sites.google.com/site/asociacionolimpiadaeconomia/olimpiada-nacional/pruebas",
+    "https://www.olimpiadas.unam.mx/anteriores/"
+  ],
+  "verified_candidates_checkpoint": "runs/discovery_r321.jsonl",
+  "new_candidate_count_before_full_canonical_dedup": 9,
+  "review_context_urls": [
+    "https://obling.org/problemas",
+    "https://nosb.org/new-storm-surge-resources-and-challenge-with-prizes/",
+    "https://nosb.org/steam-leader-challenge-ocean-acoustics/"
+  ],
+  "no_binary_download": true
+}
