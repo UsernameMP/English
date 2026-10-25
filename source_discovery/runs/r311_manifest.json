@@ -7,23 +7,23 @@
     "commit": "795e982b02d95a4672d55960b86d94c82d934a3d",
     "blob_sha": "aae9d2ffdf7bd1840b4f1765ef3ff8c83597993e",
     "readback_verified": true,
-    "workflow_execution": "not_confirmed_no_new_crawl_persisted_at_report_time",
+    "workflow_execution": "enumeration_persistence_confirmed_via_changed_crawl_state_blob_and_last_run_2026-10-25T06:08:14Z; GitHub Actions run ID and final status not retrieved",
     "workflow_run_id": null
   },
   "discovery": {
-    "canonical_sources_last_confirmed": 1807,
-    "canonical_sources_blob_sha": "746f25ca5599caa0f23034cddc2e81aeea61aeab",
+    "canonical_sources_last_confirmed": 1822,
+    "canonical_sources_blob_sha": "03849cf83eb9d04b483cb8224003237508c7645b",
     "new_verified_HTML_sources_checkpointed": 10,
     "checkpoint": "runs/discovery_r311.jsonl",
     "checkpoint_blob_sha": "8c931576c552dec859a7c3c5507f1f65310b92a7",
     "checkpoint_commit": "1c69e7429b7daeac0fbf932c5c1b6729cc6d18f3",
-    "r310_sources_pending": 15,
+    "r310_sources_pending": 0,
     "r311_sources_pending": 10,
-    "canonical_merge": "not_confirmed"
+    "canonical_merge": "r310 15 added; r311 pending"
   },
   "review": {
-    "canonical_labels_last_confirmed": 5388,
-    "canonical_labels_blob_sha": "75d50c5976aa3d63a6efc0a7481b5d3d45ac713e",
+    "canonical_labels_last_confirmed": 5488,
+    "canonical_labels_blob_sha": "77501ce6313de7f43ded83676be86365500795ea",
     "resource_shard": "resource_000316.jsonl",
     "unique_resources": 100,
     "raw_occurrences_in_seven_read_shards": 192,
@@ -40,10 +40,10 @@
     "checkpoint_blob_sha": "44efa09651b1c1a1ba376863cb08b952e55cdab6",
     "checkpoint_commit": "303b57ae03625362929fd743864405c0575a77c8",
     "sha_allowlist_commit": "aaf0618e6fc80e5b4c0beecdaf89693bcd7d4c38",
-    "r310_labels_pending": 100,
+    "r310_labels_pending": 0,
     "r311_labels_pending": 100,
-    "canonical_merge": "not_confirmed",
-    "cursor": "resource_000315.jsonl",
+    "canonical_merge": "r310 100 added; r311 pending",
+    "cursor": "resource_000316.jsonl",
     "cursor_advanced": false
   },
   "audit": {
@@ -51,8 +51,8 @@
     "backlog_blob_sha": "c656d2706c90a8f3c9db90730b47cbeb6061102f",
     "added": 14,
     "backlog_commit": "fa06b2ac98c41ab1414f01b6d71bd0ee476c9b4f",
-    "review_state_blob_sha": "7d78843941a1e05751b9ff990d76ba6820690ba7",
-    "review_state_commit": "998a0f9552e78fd281da3509af91d135e289587b",
+    "review_state_blob_sha": "b72631826677e58c612d252e5ce6f15f3b745b14",
+    "review_state_commit": "53a23519d723cb1aebaedea19a481d25e2b50e7d",
     "historical_checkpoints_pending": 27,
     "ambiguous_hse_numeric_pdf_links": 8,
     "thai_posn_provenance_corrections_pending": 2
@@ -65,8 +65,20 @@
       "pending_pages": 121217,
       "blocked_or_failed_cumulative": 2785
     },
-    "crawl_state_blob_sha": "35467949847dde387e03c6b9efb7bd9eccfc11f0",
-    "new_cycle_crawl_progress": "not_confirmed"
+    "crawl_state_blob_sha": "22cf85ac808f57dde40fef7a7119a143f01909c3",
+    "new_cycle_crawl_progress": "persisted",
+    "current_confirmed": {
+      "html_pages": 60,
+      "new_raw_links": 2135,
+      "unique_resource_urls": 267378,
+      "pending_pages": 121335,
+      "blocked_or_failed_cumulative": 2799,
+      "visited_pages": 23987,
+      "updated_at": "2026-10-25T06:08:14+00:00",
+      "last_resource_shard": "resource_002674.jsonl",
+      "last_resource_shard_rows": 78,
+      "formula": "(2674-1)*100+78"
+    }
   },
   "mime": {
     "last_confirmed_from_r310": {
@@ -76,7 +88,15 @@
       "zip": 61,
       "octet_stream": 222
     },
-    "resource_observations_blob_sha": "eb29f3e3d4a63d97ff1a1d3f35749fc6b3b6c128"
+    "resource_observations_blob_sha": "9bf7bedbdd9a4125250df523634d8daa061199b6",
+    "current_confirmed": {
+      "observations": 3524,
+      "unique_pdf_urls": 1511,
+      "pdf_without_dot_pdf_anywhere_in_url": 1339,
+      "pdf_url_not_ending_dot_pdf": 1353,
+      "zip": 61,
+      "octet_stream": 222
+    }
   },
   "safeguards": {
     "binary_documents_downloaded": false,
@@ -84,5 +104,6 @@
     "dropbox_modified": false,
     "schedule_changed": false,
     "additional_automation_created": false
-  }
+  },
+  "updated_at": "2026-10-25T06:11:09.489Z"
 }
