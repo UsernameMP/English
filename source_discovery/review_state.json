@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T01:09:40.946Z",
+  "updated_at": "2026-10-25T02:14:36.803Z",
   "deferred_shards": [
     1,
     2,
@@ -42,8 +42,8 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "r294_to_r306_checkpoints_1300_labels_merged_successfully; 2 r306 review->unrelated corrections pending conflict-checked patch; 27 older historical checkpoints remain pending",
-  "canonical_merged_in_cycle": 306,
+  "canonical_merge_status": "r294_to_r307_SHA_allowlisted_checkpoints_1400_labels_merged_successfully; 27 grade and 2 type corrections pending workflow; 27 historical checkpoints still pending",
+  "canonical_merged_in_cycle": 307,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -182,10 +182,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000312.jsonl",
-    "last_completed_shard": "resource_000311.jsonl",
-    "cycle": "r306-20261025T010210777Z",
-    "reason": "GitHub Actions #40149259445 log confirmed r306 merge existing=4988 added=100 total=5088. Two post-review corrections are separately checkpointed, not yet patched. Continue with unique resource_000312."
+    "next_resource_shard": "resource_000313.jsonl",
+    "last_completed_shard": "resource_000312.jsonl",
+    "cycle": "r307-20261025T020616137Z",
+    "reason": "GitHub Actions #40153430111 completed success and job log verified merge existing=5088 added=100 total=5188. Continue with unique resource_000313. Raw cursor unchanged."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -1885,14 +1885,52 @@
   },
   "r306_corrections_pending": {
     "count": 2,
-    "checkpoint": "runs/r306_review_corrections.jsonl",
+    "checkpoint": "runs/r307_r306_corrections_fixed.jsonl",
+    "original_checkpoint_superseded": "runs/r306_review_corrections.jsonl",
     "raw_occurrence_ids": [
       "869f6211fb1370425d826cbd",
-      "b4a2c72fa666bc0dc836439e"
+      "ce2bdb57a0acd1b217bfc4a5"
     ],
     "from": "review",
     "to": "unrelated",
     "canonical_applied": false,
-    "requires_conflict_checked_patch": true
+    "requires_conflict_checked_patch": true,
+    "helper": "source_discovery/apply_review_corrections.py"
+  },
+  "r307_review": {
+    "cycle": "r307-20261025T020616137Z",
+    "resource_shard": "resource_000312.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000824.jsonl",
+      "batch_000825.jsonl"
+    ],
+    "counts": {
+      "unrelated": 59,
+      "source": 14,
+      "archive": 25,
+      "review": 2
+    },
+    "checkpoint": "runs/r307_review_r312.jsonl",
+    "checkpoint_blob_sha": "39485d7151f2f72c12b4ebcae6a3af0dae59404b",
+    "canonical_merged": 100,
+    "canonical_before": 5088,
+    "canonical_after": 5188,
+    "canonical_merge_workflow_run": 40153430111,
+    "canonical_merge_status": "verified_success_from_actions_job_log",
+    "next_after_merge": "resource_000313.jsonl",
+    "raw_cursor_unchanged": true,
+    "status": "merged",
+    "merge_verified_at": "2026-10-25T02:14:36.803Z"
+  },
+  "r307_metadata_corrections": {
+    "grade_corrections": 27,
+    "type_corrections": 2,
+    "verified_against_canonical_before_merge": true,
+    "script": "source_discovery/apply_review_corrections.py",
+    "workflow_step_added": true,
+    "canonical_applied": false,
+    "reason": "Workflow #40153430111 used pre-change workflow definition; correction step will run on a later scheduled workflow."
   }
 }
