@@ -1,0 +1,119 @@
+{
+  "cycle": "r325-20261025T200822699Z",
+  "reported_at": "2026-10-25T20:14:18.106Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "requested_at": "2026-10-25T20:08:22.699Z",
+    "commit": "c9f2f0efa352145c9fb756e7c7053acc3e110692",
+    "workflow_name": "RIFT Link Enumeration",
+    "crawler_persist_commit": "538f95b2696f7eb4389d756f621996751a145e4f",
+    "crawler_persist_at": "2026-10-25T20:12:35Z",
+    "verification": "GitHub Actions bot committed crawl state, links, resources and canonical labels after trigger; exact Actions run ID/conclusion not independently retrievable"
+  },
+  "crawl": {
+    "unique_resource_urls_before": 282854,
+    "unique_resource_urls_after": 284345,
+    "unique_resource_urls_delta": 1491,
+    "raw_occurrences_before": 1335154,
+    "raw_occurrences_after": 1342455,
+    "new_raw_occurrences": 7301,
+    "resource_shards": 2844,
+    "last_resource_shard": "resource_002844.jsonl",
+    "last_resource_rows": 45,
+    "raw_shards": 13425,
+    "last_raw_shard": "batch_013425.jsonl",
+    "last_raw_rows": 55,
+    "configured_max_html_pages": 60,
+    "actual_html_pages": "not_independently_read",
+    "pending_pages": "not_independently_read",
+    "blocked_or_failed": "not_independently_read",
+    "source": "GitHub shard index counts, last-shard rows, and GitHub Actions bot persist commit; large crawl_state not parsed"
+  },
+  "discovery": {
+    "queries": 58,
+    "checkpoint": "runs/discovery_r325.jsonl",
+    "checkpointed_new_HTML_pointers": 16,
+    "countries": [
+      "RO",
+      "PT",
+      "ID",
+      "GR",
+      "MM",
+      "BR"
+    ],
+    "canonical_sources_before": 1958,
+    "canonical_sources_after": 1958,
+    "r324_sources_merged_before_this_cycle": 14,
+    "r325_sources_canonical_merged": 0,
+    "notes": "All 16 absent from 1958-row canonical at comparison; sources.jsonl update deferred because direct write would trigger an extra crawler workflow. Next normal merge_sources.py run picks up checkpoint. HTML metadata only; third-party mirrors and JS-only portal explicitly flagged."
+  },
+  "review": {
+    "resource_shard": "resource_000330.jsonl",
+    "unique_resources_classified": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000852.jsonl",
+      "batch_000853.jsonl"
+    ],
+    "counts": {
+      "archive": 57,
+      "task": 3,
+      "unrelated": 20,
+      "source": 19,
+      "review": 1
+    },
+    "checkpoint": "runs/r325_review_r330.jsonl",
+    "checkpoint_sha": "76d34ff82c779b8a7b6e5673ab305b1f5acda1a3",
+    "sha_pinned_in": "merge_review_checkpoints.py",
+    "canonical_labels_before": 6856,
+    "canonical_labels_after": 6956,
+    "prior_r324_labels_merged": 100,
+    "r325_canonical_merged": 0,
+    "operational_cursor": "resource_000330.jsonl",
+    "ambiguity": "ONHB live 'Acesse a prova' portal retained review, no login bypass; Dutch year pages classified archive not international exam; KöMaL monthly problem listings classified task."
+  },
+  "audit": {
+    "backlog_before": 1085,
+    "added": 16,
+    "backlog_after": 1101,
+    "checkpoint": "runs/r325_audit.jsonl",
+    "canonical_published": true
+  },
+  "mime": {
+    "observations": 3656,
+    "pdf_unique_urls": 1567,
+    "pdf_without_pdf_substring": 1395,
+    "zip_mime_observations": 61,
+    "non_html_not_counted_as_errors": true,
+    "no_binary_download": true
+  },
+  "verified_blob_sha": {
+    "source_discovery/run_trigger.json": "c96e2421382e4df5d0887de0a13d80b3fef8a777",
+    "source_discovery/sources.jsonl": "3ba736bde783b90300cb5f5a915483a913661d96",
+    "source_discovery/link_labels.jsonl": "66593baee3e4118f71a3fa280f28958e74a30fbc",
+    "source_discovery/backlog.jsonl": "81186095b0de66d8d0b93a1b02c7b27db978bef2",
+    "source_discovery/review_state.json": "d254581e6bd36b03cb3a3f61f5b999466ce0419d",
+    "source_discovery/crawl_state.json": "439372c118302cb5895663809769e04e4512b698",
+    "source_discovery/resource_observations.jsonl": "a1f954fcd5518cd9f5202a03b4c6cd7c6fc16458",
+    "source_discovery/runs/discovery_r325.jsonl": "f6f5c471218da053b01722d5b43b21810aa7e87f",
+    "source_discovery/runs/r325_review_r330.jsonl": "76d34ff82c779b8a7b6e5673ab305b1f5acda1a3",
+    "source_discovery/runs/r325_audit.jsonl": "d8d31a9f7c87cb6804f5c1c6b436855f5c27ecaa",
+    "source_discovery/runs/r325_search_log.json": "40fa64792b7184f398551d8111626fb1de3d0854",
+    "source_discovery/merge_review_checkpoints.py": "8e0f439ab929b3d92689d653e422bf412f9eb229"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automation_created": false
+  },
+  "open_items": [
+    "16 r325 HTML source pointers checkpointed, not yet canonical; next normal workflow merge.",
+    "100 r325 unique reviewed labels SHA-pinned, not yet canonical; next normal workflow merge.",
+    "ONHB 2025 live exam portal remains review; 16 audit gaps remain pending.",
+    "Crawler frontier and error totals not read from oversized crawl_state; no completeness assertion.",
+    "Workflow persist confirmed; Actions run ID and conclusion not independently available."
+  ]
+}
