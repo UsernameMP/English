@@ -34,13 +34,16 @@ jobs:
           persist-credentials: true
       - name: Verify discovery and crawler regressions
         run: |
-          python -m py_compile source_discovery/crawl_links.py source_discovery/merge_sources.py source_discovery/link_intelligence.py source_discovery/build_resource_index.py source_discovery/merge_review_checkpoints.py
+          python -m py_compile source_discovery/crawl_links.py source_discovery/merge_sources.py source_discovery/link_intelligence.py source_discovery/build_resource_index.py source_discovery/merge_review_checkpoints.py source_discovery/apply_review_corrections.py
           python -m unittest discover -s source_discovery -p 'test_*.py' -v
       - name: Merge discovered sources into the registry
         run: python source_discovery/merge_sources.py
       - name: Merge audited Review checkpoints into canonical labels
         continue-on-error: true
         run: python source_discovery/merge_review_checkpoints.py
+      - name: Apply SHA-pinned audited label corrections
+        continue-on-error: true
+        run: python source_discovery/apply_review_corrections.py
       - name: Enumerate publicly accessible HTML links
         env:
           RIFT_PAGES_PER_RUN: "60"
