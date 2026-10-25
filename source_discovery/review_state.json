@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T22:09:53.849Z",
+  "updated_at": "2026-10-25T23:07:10.484Z",
   "deferred_shards": [
     1,
     2,
@@ -13,11 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r327_review_r332.jsonl"
+    "runs/r328_review_r333.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "RIFT Link Enumeration #40238485836 completed success 2026-10-25T22:08:44Z; workflow log merged 100 r326 labels, canonical 7056 -> 7156. r327 resource_000332 100 distinct resources / 100 original occurrences saved at runs/r327_review_r332.jsonl SHA 42d05cd4c78021f69cd8c2f2b0d79acd7d20c1ec and SHA-pinned in merge_review_checkpoints.py, not yet canonical. Operational cursor held at r332.",
-  "canonical_merged_in_cycle": 326,
+  "canonical_merge_status": "RIFT Link Enumeration #40242759386 completed success 2026-10-25T23:06:22Z; workflow job log merged 100 r327 labels, canonical 7156 -> 7256. r328 resource_000333 100 distinct resources / 100 raw occurrences saved and SHA-pinned; canonical r328 merge pending. Operational cursor held at r333.",
+  "canonical_merged_in_cycle": 327,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -2442,25 +2442,46 @@
     "binary_downloaded": false
   },
   "latest_review": {
-    "cycle": "r327-20261025T220445213Z",
-    "resource_shard": "resource_000332.jsonl",
+    "cycle": "r328-20261025T230015983Z",
+    "resource_shard": "resource_000333.jsonl",
     "unique_resources": 100,
     "raw_occurrences": 100,
     "raw_shards": [
-      "batch_000854.jsonl",
       "batch_000855.jsonl",
-      "batch_000856.jsonl"
+      "batch_000856.jsonl",
+      "batch_000857.jsonl"
     ],
     "counts": {
-      "source": 14,
-      "unrelated": 26,
-      "task": 28,
-      "archive": 5,
-      "solution": 26,
-      "review": 1
+      "unrelated": 78,
+      "solution": 19,
+      "task": 3
     },
-    "checkpoint": "runs/r327_review_r332.jsonl",
-    "checkpoint_sha": "42d05cd4c78021f69cd8c2f2b0d79acd7d20c1ec",
-    "canonical_merged": 0
+    "checkpoint": "runs/r328_review_r333.jsonl",
+    "checkpoint_sha": "9e340a0ae9a3f7674827201528faa62cb84b9d59",
+    "canonical_merged": 0,
+    "notes": "78 Náboj event-gallery WebP images unrelated; 19 KöMaL Hungarian 'megoldás, statisztika' solution links and 3 A-series task/statistics links. Metadata-only, no image or document bodies downloaded."
+  },
+  "r328_pending": {
+    "cycle": "r328-20261025T230015983Z",
+    "resource_shard": "resource_000333.jsonl",
+    "unique_resources_reviewed": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000855.jsonl",
+      "batch_000856.jsonl",
+      "batch_000857.jsonl"
+    ],
+    "counts": {
+      "unrelated": 78,
+      "solution": 19,
+      "task": 3
+    },
+    "checkpoint": "runs/r328_review_r333.jsonl",
+    "checkpoint_sha": "9e340a0ae9a3f7674827201528faa62cb84b9d59",
+    "sha_allowlisted_in": "merge_review_checkpoints.py",
+    "canonical_merged": 0,
+    "cursor_advanced": false,
+    "rights": "unknown_or_reserved",
+    "binary_downloaded": false
   }
 }
