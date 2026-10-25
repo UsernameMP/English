@@ -205,11 +205,32 @@ $("prev").addEventListener("click",()=>selectTask(current-1));$("next").addEvent
 $("check").addEventListener("click",applyCheck);
 $("reset").addEventListener("click",()=>{states[current]=init()[current];act();draw();});
 $("hint").addEventListener("click",()=>{m().hints++;save();msg(tasks[current].hint);});
+let brushOn=false, brushPrev=null, suppressClickUntil=0;
+function brushCellAt(clientX,clientY,first=false){
+ const under=document.elementFromPoint(clientX,clientY), btn=under&&under.closest("[data-cell]");
+ if(!btn||!$("workarea").contains(btn))return;
+ const key=btn.dataset.cell;if(key===brushPrev)return;brushPrev=key;
+ const st=states[0],g=first&&st.groups[key]===st.paint?0:st.paint;
+ st.groups[key]=g;btn.className="cell g"+g;act();
+}
+$("workarea").addEventListener("pointerdown",event=>{
+ if(current!==0||!event.target.closest("[data-cell]"))return;
+ brushOn=true;brushPrev=null;event.preventDefault();brushCellAt(event.clientX,event.clientY,true);
+});
+$("workarea").addEventListener("pointermove",event=>{
+ if(brushOn&&current===0){event.preventDefault();brushCellAt(event.clientX,event.clientY,false);}
+});
+function finishBrush(){
+ if(brushOn){brushOn=false;brushPrev=null;suppressClickUntil=Date.now()+500;draw();}
+}
+window.addEventListener("pointerup",finishBrush);
+window.addEventListener("pointercancel",finishBrush);
+
 $("workarea").addEventListener("click",event=>{
  let el=event.target.closest("[data-paint],[data-cell],[data-basket],[data-action],[data-hex],[data-digit],[data-key],[data-bracket],[data-gap],[data-square],[data-season],[data-month],[data-card],[data-color]");
  if(!el)return;
  if(el.hasAttribute("data-paint")){states[0].paint=+el.dataset.paint;draw();return;}
- if(el.hasAttribute("data-cell")){setCell(el.dataset.cell);return;}
+ if(el.hasAttribute("data-cell")){if(Date.now()>=suppressClickUntil)setCell(el.dataset.cell);return;}
  if(el.hasAttribute("data-basket")){let i=+el.dataset.basket,delta=+el.dataset.delta,s=states[1];s.v[i]=Math.max(0,Math.min(100,s.v[i]+delta));act();draw();return;}
  if(el.hasAttribute("data-hex")){stepHex(el.dataset.hex);return;}
  if(el.hasAttribute("data-digit")){let i=+el.dataset.digit;if(i<3){states[3].sel=i;draw();}return;}
