@@ -33,7 +33,10 @@ CHECKPOINTS = {
     "r311_review_r316.jsonl": "44efa09651b1c1a1ba376863cb08b952e55cdab6",
     "r312_review_r317.jsonl": "9def741c80390429b330c0bbf46963135f123a6f",
     "r313_review_r318.jsonl": "d6627a7af10f90ea19bb330bcfea4e686bc7bd3f",
+    "r313_historical_reconciled_apho_29.jsonl": "9a2a4e530e53f0ac6c3cefbbc4fc63373dba9f30",
+    "r313_historical_reconciled_r413_39.jsonl": "9d75650d7df61c1cdd0b6ddf79bc11705ec321a4",
 }
+EXPECTED_ROWS = {"r313_historical_reconciled_apho_29.jsonl": 29, "r313_historical_reconciled_r413_39.jsonl": 39}
 TYPE_CORRECTION_CHECKPOINTS = {
     "r307_r306_corrections_fixed.jsonl": "61254ca48e8195307d65609906992aad77815041",
 }
@@ -114,8 +117,9 @@ def merge():
         if actual_sha != expected_sha:
             raise ValueError(f"{filename}: unexpected Git blob SHA {actual_sha}")
         rows = parse_jsonl(data, filename)
-        if len(rows) != 100:
-            raise ValueError(f"{filename}: expected 100 records, got {len(rows)}")
+        expected_rows = EXPECTED_ROWS.get(filename, 100)
+        if len(rows) != expected_rows:
+            raise ValueError(f"{filename}: expected {expected_rows} records, got {len(rows)}")
         for row in rows:
             occ = row.get("raw_occurrence_id")
             rid = row.get("resource_id")
