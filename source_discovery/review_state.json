@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T02:14:36.803Z",
+  "updated_at": "2026-10-25T03:14:45.142Z",
   "deferred_shards": [
     1,
     2,
@@ -42,7 +42,7 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "r294_to_r307_SHA_allowlisted_checkpoints_1400_labels_merged_successfully; 27 grade and 2 type corrections pending workflow; 27 historical checkpoints still pending",
+  "canonical_merge_status": "r294_to_r307_SHA_allowlisted_checkpoints_1400_labels_merged; 29 audited corrections applied by Actions #40156913497; r308 100 labels checkpointed and SHA-allowlisted, canonical merge awaiting persistence; 27 historical checkpoints pending",
   "canonical_merged_in_cycle": 307,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -1932,5 +1932,31 @@
     "workflow_step_added": true,
     "canonical_applied": false,
     "reason": "Workflow #40153430111 used pre-change workflow definition; correction step will run on a later scheduled workflow."
+  },
+  "r308_pending": {
+    "cycle": "r308-20261025T030520740Z",
+    "resource_shard": "resource_000313.jsonl",
+    "raw_shards": [
+      "batch_000825.jsonl",
+      "batch_000826.jsonl",
+      "batch_000827.jsonl"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "review": 28,
+      "unrelated": 20,
+      "solution": 20,
+      "archive": 15,
+      "source": 17
+    },
+    "checkpoint": "runs/r308_review_r313.jsonl",
+    "checkpoint_blob_sha": "6f1023442a34d73da3bbedc1ed500b4a67c3f212",
+    "sha_allowlisted": true,
+    "canonical_merged": 0,
+    "operational_cursor_advanced": false,
+    "next_after_merge": "resource_000314.jsonl",
+    "raw_cursor_unchanged": true,
+    "notes": "Mongolian future placeholder links not counted as task; KöMaL solution links rely on multilingual anchor; Thai POSN exam archive categories and pagination. Await GitHub Actions successful persist."
   }
 }
