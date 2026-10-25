@@ -1,0 +1,112 @@
+{
+  "cycle": "r322-20261025T170404000Z",
+  "reported_at": "2026-10-25T17:09:21.329Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "867da741938974fb24f4c5b5fd98dba702231e34",
+    "blob_sha": "970f0b6009ab24d1013053b5c50ce309f21a9358",
+    "workflow_run_id": 40214669252,
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40214669252",
+    "job_id": 121233113178,
+    "status": "completed",
+    "conclusion": "success",
+    "verified_from": "GitHub Actions jobs and job log"
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_occurrences": 3127,
+    "unique_resource_urls_before": 278526,
+    "unique_resource_urls_after": 279444,
+    "unique_resource_urls_delta": 918,
+    "pending_pages": 126418,
+    "blocked_or_failed": 2953,
+    "source": "GitHub Actions #40214669252 job #121233113178 log"
+  },
+  "discovery": {
+    "search_queries": 41,
+    "verified_HTML_pointers_checkpointed": 16,
+    "checkpoint": "runs/discovery_r322.jsonl",
+    "checkpoint_blob_sha": "179c5c4dc99348b85181e5d51546fca3b042f694",
+    "canonical_unique_additions_r322": "pending_normalized_dedup_and_merge_next_regular_workflow",
+    "canonical_sources_after_workflow": 1924,
+    "source_registry_readability": "GitHub fetch_file returned empty content for large canonical sources.jsonl; count from successful Actions job log",
+    "search_log": "runs/r322_search_log.json",
+    "rights": "unknown_or_reserved"
+  },
+  "review": {
+    "resource_shard": "resource_000327.jsonl",
+    "unique_resources_classified": 100,
+    "raw_occurrences_matched": 105,
+    "raw_shards": [
+      "batch_000849.jsonl",
+      "batch_000850.jsonl",
+      "batch_000851.jsonl"
+    ],
+    "counts": {
+      "solution": 28,
+      "task": 29,
+      "source": 37,
+      "review": 2,
+      "unrelated": 3,
+      "archive": 1
+    },
+    "checkpoint": "runs/r322_review_r327.jsonl",
+    "checkpoint_blob_sha": "8e3bfc9f0990b3d35033163fe5d36dc17508c5b6",
+    "sha_pinned_in": "merge_review_checkpoints.py",
+    "canonical_merge_pending": true,
+    "canonical_labels_after_workflow": 6656,
+    "prior_r321_labels_merged": 100,
+    "operational_cursor": "resource_000327.jsonl",
+    "rights": "unknown_or_reserved",
+    "no_binary_download": true
+  },
+  "audit": {
+    "backlog_before": 1025,
+    "added": 19,
+    "backlog_after": 1044,
+    "checkpoint": "runs/r322_audit.jsonl",
+    "canonical_published": true,
+    "topics": [
+      "philosophy participant essay rights",
+      "school/university competition year-stage gaps",
+      "Portuguese math historical directories",
+      "Brazilian linguistics historical phase normalization",
+      "Panini Google Drive metadata and rights",
+      "third-party historical S3 link persistence"
+    ]
+  },
+  "mime": {
+    "observations_current": "not_countable_with_GitHub_file_connector_due_large_file",
+    "observation_blob_sha": "eeef47059e0ffe261df3ee227f53174e8576aabc",
+    "non_html_not_counted_as_errors": true,
+    "no_binary_download": true
+  },
+  "verified_blob_sha": {
+    "source_discovery/run_trigger.json": "970f0b6009ab24d1013053b5c50ce309f21a9358",
+    "source_discovery/sources.jsonl": "f461f04713c78c949bd0334520e7395faa0b91ad",
+    "source_discovery/crawl_state.json": "4ede1614cefdb6cc60fef425b80228ed1405980a",
+    "source_discovery/link_labels.jsonl": "3cf1a2943a6bacf43dfc5fb469992f2e5d0d18ca",
+    "source_discovery/review_state.json": "0539c78470bd8d6473cf670b3961af7ebc14f3c3",
+    "source_discovery/backlog.jsonl": "cddc1ce11e0a7f4ff5abc3da403457993f447fbd",
+    "source_discovery/runs/discovery_r322.jsonl": "179c5c4dc99348b85181e5d51546fca3b042f694",
+    "source_discovery/runs/r322_review_r327.jsonl": "8e3bfc9f0990b3d35033163fe5d36dc17508c5b6",
+    "source_discovery/runs/r322_audit.jsonl": "27c1fbed713233ab36dc8a15275fceaf61d34222",
+    "source_discovery/runs/r322_search_log.json": "7b1967c874531974cdd6ba1d4f751f00fc101f90",
+    "source_discovery/merge_review_checkpoints.py": "0852b846f3960ee44fcf255b15bd889e8bc07815",
+    "source_discovery/resource_observations.jsonl": "eeef47059e0ffe261df3ee227f53174e8576aabc"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automation_created": false
+  },
+  "open_items": [
+    "16 HTML pointers SHA-checkpointed; canonical source dedup/merge pending next regular workflow.",
+    "100 r322 reviewed labels SHA-pinned; canonical merge pending next regular workflow; cursor held at resource_000327.",
+    "2 social-media pointers remain review; source and author rights unknown.",
+    "MIME current count unavailable from oversized observations file; no binary body fetched."
+  ]
+}
