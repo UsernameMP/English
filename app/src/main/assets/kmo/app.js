@@ -37,7 +37,7 @@ function draw(){
  $("task-title").textContent=t.title;$("task-prompt").textContent=t.prompt;$("solution").textContent=t.solution;
  $("navigation").innerHTML=tasks.map((t,i)=>'<button class="'+(i===current?"active ":m(i).solved?"done":"")+'" data-nav="'+i+'" title="'+t.title+'">'+(i+1)+"</button>").join("");
  $("prev").disabled=current===0;$("next").disabled=current===tasks.length-1;
- let f=[cut,baskets,hex,digits,brackets,packing,boat,calendar,cards,color][current];
+ let f=[cut,baskets,hexSvg,digits,brackets,packing,boat,calendar,cards,color][current];
  $("workarea").innerHTML=f();clearMsg();
  if(showHint)msg(t.hint);
 }
