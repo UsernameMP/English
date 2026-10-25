@@ -1,0 +1,136 @@
+{
+  "cycle": "r313-20261025T080111326Z",
+  "reported_at": "2026-10-25T08:13:02.514Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr_188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z",
+    "merge_commit_sha": "a4fb3912e1e3321f9917570544d2a43fe0c7f072"
+  },
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "6633fbc54ead46b142b068b25dc391392ed5a52f",
+    "cycle": "r313-20261025T080111326Z",
+    "workflow_run_id": 40174985995,
+    "workflow_status": "completed",
+    "workflow_conclusion": "success",
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40174985995"
+  },
+  "subsequent_automatic_source_push_workflow": {
+    "run_id": 40175440341,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/UsernameMP/English/actions/runs/40175440341",
+    "note": "Automatically triggered by the canonical sources.jsonl update; no new ChatGPT automation instance or schedule change."
+  },
+  "discovery": {
+    "canonical_sources_before": 1846,
+    "canonical_sources_after": 1859,
+    "added_verified_urls": 13,
+    "checkpoint": "runs/discovery_r313.jsonl",
+    "checkpoint_sha": "c9d33e82ca3550c48a0e4d0f88d9838ed2147732",
+    "canonical_sources_sha": "a3e3b3016131f5668d28f26bc7198f1e0932eee5",
+    "canonical_merge_commit": "d97050b7d0b2b35567ef8b68e6e35ed341de8e97",
+    "one_preexisting_historical_exact_url_duplicate": true
+  },
+  "review": {
+    "canonical_labels_before": 5688,
+    "canonical_labels_after": 5788,
+    "unique_resources_reviewed": 100,
+    "raw_occurrences_checked": 100,
+    "resource_shard": "resource_000318.jsonl",
+    "raw_shards": [
+      "batch_000835.jsonl",
+      "batch_000836.jsonl",
+      "batch_000837.jsonl",
+      "batch_000838.jsonl",
+      "batch_000839.jsonl",
+      "batch_000840.jsonl"
+    ],
+    "counts": {
+      "task": 33,
+      "solution": 3,
+      "criteria": 31,
+      "participant_work": 0,
+      "archive": 1,
+      "source": 8,
+      "unrelated": 11,
+      "review": 13
+    },
+    "checkpoint": "runs/r313_review_r318.jsonl",
+    "checkpoint_sha": "d6627a7af10f90ea19bb330bcfea4e686bc7bd3f",
+    "canonical_sha": "aede11ba5b09d15d2ebdfa88c5917849b0238d8c",
+    "cursor_next": "resource_000319.jsonl",
+    "raw_cursor_unchanged": true,
+    "extensionless_pdf_mime_confirmed_in_shard": 50,
+    "image_png_mime_confirmed_in_shard": 1
+  },
+  "historical_reconciliation": {
+    "original_checkpoint_files": 27,
+    "unique_records": 68,
+    "checkpoint_A": "runs/r313_historical_reconciled_apho_29.jsonl",
+    "checkpoint_A_sha": "9a2a4e530e53f0ac6c3cefbbc4fc63373dba9f30",
+    "checkpoint_A_records": 29,
+    "checkpoint_B": "runs/r313_historical_reconciled_r413_39.jsonl",
+    "checkpoint_B_sha": "9d75650d7df61c1cdd0b6ddf79bc11705ec321a4",
+    "checkpoint_B_records": 39,
+    "canonical_overlap_at_audit": 0,
+    "merge_script_sha": "e0044e7ad2d53a3c20122dc33fdd78223f6cdb91",
+    "sha_allowlisted": true,
+    "canonical_merged": 0,
+    "next_scheduled_workflow_required": true,
+    "original_checkpoints_retained": true
+  },
+  "audit": {
+    "backlog_before": 867,
+    "added": 15,
+    "backlog_after": 882,
+    "backlog_sha": "2e01988859519eee20c8fb70c1521707803f9b3d",
+    "notable_rights": "Brazil OBB organizer regulation article 32 forbids unauthorized exam reproduction and distribution."
+  },
+  "crawl": {
+    "first_workflow": {
+      "new_raw_occurrences": 4683,
+      "html_pages": 60
+    },
+    "latest_workflow": {
+      "new_raw_occurrences": 4397,
+      "html_pages": 60
+    },
+    "total_new_raw_occurrences": 9080,
+    "unique_resources_before": 269501,
+    "unique_resources_after": 270746,
+    "unique_resources_delta": 1245,
+    "raw_occurrences_after": 1257161,
+    "queue_pages_after": 121860,
+    "visited_pages_after": 24253,
+    "blocked_or_failed_after": 2826,
+    "robots_denied_or_unavailable": 1866,
+    "crawl_state_sha": "e6809a76cf410b399d96443d25035fb0cf871c5e",
+    "updated_at": "2026-10-25T08:10:06+00:00"
+  },
+  "mime": {
+    "observations": 3551,
+    "unique_pdf_urls": 1515,
+    "pdf_urls_without_dot_pdf": 1343,
+    "zip_observations": 61,
+    "octet_stream_observations": 222,
+    "resource_observations_sha": "588da3bf35ba73e11449ae447ed99e290d0e0342",
+    "binary_utility_not_asserted": true
+  },
+  "safeguards": {
+    "pdf_doc_zip_image_archive_bodies_downloaded": false,
+    "raw_occurrences_deleted": false,
+    "dropbox_modified": false,
+    "automation_schedule_modified": false,
+    "new_chatgpt_automation_instances_created": false,
+    "robots_and_access_controls_respected": true
+  },
+  "open_items": [
+    "68 historical labels are SHA-pinned but not yet canonically merged; do not clear the 27 original checkpoint references until verified.",
+    "13 HSE ancillary resources retained as review.",
+    "Historical duplicate Canadian Mathematical Olympiad URL remains in sources.jsonl.",
+    "Year/round/criteria/rights gaps remain in backlog; archive exhaustion not asserted."
+  ]
+}
