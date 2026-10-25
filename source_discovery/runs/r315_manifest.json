@@ -1,6 +1,6 @@
 {
   "cycle": "r315-20261025T100846384Z",
-  "reported_at": "2026-10-25T10:13:32.038Z",
+  "reported_at": "2026-10-25T10:19:45.211Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
@@ -12,9 +12,10 @@
   },
   "subsequent_source_update_workflow": {
     "run_id": 40183845074,
-    "status": "in_progress",
-    "conclusion": null,
-    "url": "https://github.com/UsernameMP/English/actions/runs/40183845074"
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/UsernameMP/English/actions/runs/40183845074",
+    "note": "Automated GitHub workflow after source publication; merged 100 labels."
   },
   "discovery": {
     "new_sources": 8,
@@ -22,8 +23,17 @@
     "canonical_after": 1877,
     "checkpoint": "runs/discovery_r315.jsonl",
     "canonical_commit": "73a2914358146af9ce82f76f9dbb160b331e3ce9",
-    "sha": "f51404150349d9c7ec4592665afcaa486a845b43",
-    "status": "published"
+    "sha": "2f239817e9dab6d70635dacaa9d82d66f2ac8ac9",
+    "status": "published",
+    "canonical_status": "published_verified_after_alias_cleanup",
+    "alias_cleanup": {
+      "duplicates_detected": 6,
+      "duplicates_removed": 6,
+      "reason": "Trailing-slash alias re-added by merge_sources.py after manual canonical publication; checkpoint URL fields normalized while original provenance_url retained.",
+      "cleanup_commit": "7e5360dc8228ffcd52b0a16fca7fb8b167c32992",
+      "remaining_exact_duplicates": 0,
+      "remaining_historical_normalized_alias_pairs": 15
+    }
   },
   "review": {
     "resource_shard": "resource_000320.jsonl",
@@ -42,20 +52,30 @@
     "checkpoint_sha": "73e9d45c3609c2c61146357527e523e06d1e63c3",
     "sha_allowlisted": true,
     "canonical_before": 5956,
-    "canonical_after": 5956,
-    "canonical_merge_status": "pending second workflow",
-    "cursor_next": "resource_000320.jsonl",
-    "raw_cursor_unchanged": true
+    "canonical_after": 6056,
+    "canonical_merge_status": "merged_and_verified",
+    "cursor_next": "resource_000321.jsonl",
+    "raw_cursor_unchanged": true,
+    "canonical_labels_sha": "d954a065fe5d3d27fc3ea3cd538d32c0a3384002",
+    "cursor_advanced": true
   },
   "crawl": {
     "first_run_html_pages": 60,
     "first_run_new_raw_occurrences": 5846,
+    "second_run_html_pages": 60,
+    "second_run_new_raw_occurrences": 4970,
+    "total_html_pages": 120,
+    "total_new_raw_occurrences": 10816,
     "unique_resources_before": 271795,
     "unique_resources_after_first_run": 273057,
+    "unique_resources_after_second_run": 273832,
+    "unique_resources_delta": 2037,
     "queue_after_first_run": 122528,
+    "queue_after_second_run": 122845,
     "blocked_or_failed_after_first_run": 2839,
-    "latest_crawl_sha": "3eaa65e4fb14f3b5394121149009b76eb8aa8e33",
-    "second_run_results_included": false
+    "blocked_or_failed_after_second_run": 2863,
+    "latest_crawl_sha": "eb4697c91a1d6d129d7a4b37c344d043a00a6be1",
+    "second_run_results_included": true
   },
   "mime": {
     "observations": 3556,
@@ -70,18 +90,21 @@
     "backlog_before": 898,
     "added": 12,
     "backlog_after": 910,
-    "sha": "da3e370ae88e3a2eaeeefb84929b815aaa5dbf25"
+    "sha": "da3e370ae88e3a2eaeeefb84929b815aaa5dbf25",
+    "alias_issue": "Six newly introduced slash aliases corrected, 15 historical alias candidate pairs still require separate verification."
   },
   "safeguards": {
     "binary_downloaded": false,
     "dropbox_modified": false,
     "raw_evidence_modified_by_assistant": false,
     "schedule_modified": false,
-    "extra_automations_created": false
+    "extra_automations_created": false,
+    "extra_chatgpt_automation_instances_created": false
   },
   "open_items": [
-    "Wait for second workflow to merge 100 labels and verify cursor advancement.",
-    "23 supplementary reference/attachment links remain review.",
-    "Rights and historical year/stage/solution coverage remain unresolved."
+    "23 HSE supplemental/reference attachments remain review; task suitability not inferred from MIME.",
+    "15 historical normalized URL alias candidate pairs remain; no exact duplicate strings in canonical sources.",
+    "Historical year/round/solution/rubric/rights gaps remain in backlog.",
+    "Automatic follow-on GitHub workflow triggered by alias-cleanup source write may still be running; its results are not counted in r315."
   ]
 }
