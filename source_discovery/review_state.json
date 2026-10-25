@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T08:07:24.209Z",
+  "updated_at": "2026-10-25T08:12:42.036Z",
   "deferred_shards": [
     1,
     2,
@@ -42,8 +42,8 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "GitHub Actions #40174985995 completed success: r312 14 source URLs merged (1832->1846) and 100 review labels merged (5588->5688); r313 13 discovery source pointers and 100 labels SHA-pinned in checkpoints, not yet canonically merged; 27 historical checkpoints remain pending.",
-  "canonical_merged_in_cycle": 312,
+  "canonical_merge_status": "GitHub Actions #40175440341 completed success; r313 13 discovery sources merged (1846->1859) and 100 unique review labels merged (5688->5788). Historical 27 original checkpoints reconciled to two SHA-pinned files (29+39=68) but canonical merge awaits next scheduled workflow.",
+  "canonical_merged_in_cycle": 313,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -182,10 +182,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000318.jsonl",
-    "last_completed_shard": "resource_000317.jsonl",
+    "next_resource_shard": "resource_000319.jsonl",
+    "last_completed_shard": "resource_000318.jsonl",
     "cycle": "r313-20261025T080111326Z",
-    "reason": "r312 100 labels verified in canonical; r313 resource_000318 100 unique resources reviewed, SHA-pinned pending merge; do not advance to resource_000319 until verified."
+    "reason": "r313 100 unique reviewed labels verified in canonical link_labels.jsonl (5788); advance to resource_000319, raw cursor unchanged."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2130,8 +2130,8 @@
     "discovery_checkpoint_sha": "c9d33e82ca3550c48a0e4d0f88d9838ed2147732",
     "discovery_verified_new_urls": 13,
     "sha_allowlisted": true,
-    "canonical_merged": 0,
-    "review_cursor_advanced": false,
+    "canonical_merged": 100,
+    "review_cursor_advanced": true,
     "next_after_verified_merge": "resource_000319.jsonl",
     "raw_cursor_unchanged": true,
     "extensionless_pdf_mime_candidates": 50,
@@ -2139,6 +2139,29 @@
     "rights_caveat": "Brazil OBB organizer explicitly forbids unauthorized exam reproduction; metadata only",
     "notes": "HSE Higher Test art history and international relations tasks/criteria; HSE Higher League 2025/26 final-round university exams and rubrics; 13 ancillary documents retained review; no binaries downloaded.",
     "canonical_labels_before": 5688,
-    "canonical_sources_before": 1846
+    "canonical_sources_before": 1846,
+    "canonical_labels_after": 5788,
+    "canonical_sources_after": 1859,
+    "workflow_run": 40175440341,
+    "historical_reconciliation_count": 68,
+    "historical_reconciliation_merged": 0
+  },
+  "historical_reconciliation_r313": {
+    "source_checkpoint_files": 27,
+    "reconciled_unique_resources": 68,
+    "reconciled_unique_occurrences": 68,
+    "canonical_overlaps_at_review": 0,
+    "checkpoint_A": "runs/r313_historical_reconciled_apho_29.jsonl",
+    "checkpoint_A_sha": "9a2a4e530e53f0ac6c3cefbbc4fc63373dba9f30",
+    "checkpoint_A_rows": 29,
+    "checkpoint_B": "runs/r313_historical_reconciled_r413_39.jsonl",
+    "checkpoint_B_sha": "9d75650d7df61c1cdd0b6ddf79bc11705ec321a4",
+    "checkpoint_B_rows": 39,
+    "sha_allowlisted": true,
+    "merge_script_sha": "e0044e7ad2d53a3c20122dc33fdd78223f6cdb91",
+    "canonical_merged": 0,
+    "requires_next_workflow": true,
+    "provenance_validation": "Original raw occurrence, URL, parent and resource ID cross-checked; five older UK physics entries cross-checked with resource_000154; two compact records filled from original raw shards.",
+    "notes": "Historical source checkpoints retained unchanged for traceability. Do not clear pending_label_checkpoints until canonical merge is verified."
   }
 }
