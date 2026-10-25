@@ -29,6 +29,9 @@ CHECKPOINTS = {
     "r307_review_r312.jsonl": "39485d7151f2f72c12b4ebcae6a3af0dae59404b",
     "r308_review_r313.jsonl": "6f1023442a34d73da3bbedc1ed500b4a67c3f212",
 }
+TYPE_CORRECTION_CHECKPOINTS = {
+    "r307_r306_corrections_fixed.jsonl": "61254ca48e8195307d65609906992aad77815041",
+}
 ALLOWED_TYPES = {"task", "solution", "criteria", "participant_work", "archive", "source", "unrelated", "review"}
 
 
@@ -51,6 +54,35 @@ def parse_jsonl(data, label):
     return rows
 
 
+def audited_type_corrections():
+    """Load only SHA-pinned, provenance-matched corrections already applied to canonical labels."""
+    overrides = {}
+    for filename, expected_sha in TYPE_CORRECTION_CHECKPOINTS.items():
+        data = (ROOT / "runs" / filename).read_bytes()
+        if git_blob_sha(data) != expected_sha:
+            raise ValueError(f"{filename}: unexpected correction blob SHA")
+        for patch in parse_jsonl(data, filename):
+            occurrence = patch.get("raw_occurrence_id")
+            if not occurrence or occurrence in overrides:
+                raise ValueError(f"{filename}: duplicate/missing corrected occurrence")
+            overrides[occurrence] = dict(patch, correction_checkpoint=filename)
+    return overrides
+
+
+def is_audited_type_override(canonical, original, overrides):
+    """Allow a prior reviewed label to differ only when an audited correction changed its type."""
+    occurrence = canonical.get("raw_occurrence_id")
+    patch = overrides.get(occurrence)
+    return bool(
+        patch
+        and canonical.get("correction_checkpoint") == patch["correction_checkpoint"]
+        and original.get("resource_id") == canonical.get("resource_id") == patch.get("resource_id")
+        and original.get("url") == canonical.get("url") == patch.get("url")
+        and original.get("type") == patch.get("previous_type")
+        and canonical.get("type") == patch.get("corrected_type")
+    )
+
+
 def merge():
     old_data = TARGET.read_bytes()
     canonical = parse_jsonl(old_data, TARGET.name)
@@ -68,6 +100,8 @@ def merge():
 
     new = []
     skipped = 0
+    audited_overrides = audited_type_corrections()
+    corrected_skipped = 0
     for filename, expected_sha in CHECKPOINTS.items():
         path = ROOT / "runs" / filename
         data = path.read_bytes()
@@ -86,14 +120,22 @@ def merge():
                 raise ValueError(f"{filename}: incomplete review row {occ!r}")
             prior = by_occurrence.get(occ)
             if prior:
-                if prior.get("resource_id") != rid or prior.get("url") != url or prior.get("type") != kind:
-                    raise ValueError(f"Conflicting occurrence: {occ}")
+                if prior.get("resource_id") != rid or prior.get("url") != url:
+                    raise ValueError(f"Conflicting occurrence provenance: {occ}")
+                if prior.get("type") != kind:
+                    if not is_audited_type_override(prior, row, audited_overrides):
+                        raise ValueError(f"Conflicting occurrence type: {occ}")
+                    corrected_skipped += 1
                 skipped += 1
                 continue
             prior_resource = by_resource.get(rid)
             if prior_resource:
-                if prior_resource.get("url") != url or prior_resource.get("type") != kind:
-                    raise ValueError(f"Conflicting resource: {rid}")
+                if prior_resource.get("url") != url:
+                    raise ValueError(f"Conflicting resource URL: {rid}")
+                if prior_resource.get("type") != kind:
+                    if not is_audited_type_override(prior_resource, row, audited_overrides):
+                        raise ValueError(f"Conflicting resource type: {rid}")
+                    corrected_skipped += 1
                 skipped += 1
                 continue
             by_occurrence[occ] = row
@@ -114,7 +156,7 @@ def merge():
         finally:
             if os.path.exists(temp_name):
                 os.unlink(temp_name)
-    print(f"RIFT reviewed checkpoint merge: existing={len(canonical)} added={len(new)} skipped={skipped} total={len(canonical)+len(new)}")
+    print(f"RIFT reviewed checkpoint merge: existing={len(canonical)} added={len(new)} skipped={skipped} audited_type_overrides={corrected_skipped} total={len(canonical)+len(new)}")
     return len(new)
 
 
