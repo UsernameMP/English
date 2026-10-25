@@ -1,0 +1,118 @@
+{
+  "cycle": "r309-20261025T040823693Z",
+  "reported_at": "2026-10-25T04:14:48.435Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "d888e10373feb87a35058e404a24c4408de2a047",
+    "workflow_run_id": 40160788492,
+    "status": "completed_success",
+    "url": "https://github.com/UsernameMP/English/actions/runs/40160788492",
+    "workflow_persist_commit": "c31d31323aad8b98039e856655345aa64d7a23bb",
+    "corrected_checkpoint_merge_step": "success",
+    "r308_canonical_labels_added": 100
+  },
+  "crawl": {
+    "unique_resource_urls": 266956,
+    "calculation": "resource_002668.jsonl 100 rows + resource_002669.jsonl 56 rows; 0-based contiguous shards",
+    "prior_confirmed_unique_resource_urls": 266763,
+    "increase": 193,
+    "pending_pages_last_confirmed": 121234,
+    "pending_pages_current": "not_readable_via_oversized_crawl_state",
+    "html_pages_current": "not_extracted_from_job_log",
+    "new_raw_links_current": "not_extracted_from_job_log",
+    "crawler_errors_current": "not_extracted_from_job_log",
+    "crawl_state_blob_sha": "2b68147a1f2b512dfe9640fc406d9bfa8533a8ea",
+    "notes": "Previous crawl_state blob SHA recorded before new workflow; current crawl_state updated by persist commit. Verify current SHA separately if needed."
+  },
+  "discovery": {
+    "verified_HTML_source_pointers_checkpointed": 20,
+    "countries": [
+      "UY",
+      "FI",
+      "PT",
+      "CR",
+      "IS",
+      "NO",
+      "GH",
+      "AT"
+    ],
+    "checkpoint": "runs/discovery_r309.jsonl",
+    "checkpoint_sha": "0b02c725468da267a74984bafaf110a202ce9926",
+    "checkpoint_commit": "80e7f64dd611aef8da6a1f9ded1ea3128ef108d4",
+    "canonical_sources_before": 1793,
+    "canonical_sources_after": 1793,
+    "merge_status": "pending_next_workflow",
+    "deduplication": "merge_sources.py normalizes URLs and skips existing registry URLs",
+    "rights": "unknown_except_specific_KPO_restrictions_in_audit",
+    "binary_downloaded": false
+  },
+  "review": {
+    "resource_shard": "resource_000314.jsonl",
+    "raw_shards": [
+      "batch_000827.jsonl",
+      "batch_000828.jsonl"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 69,
+      "source": 11,
+      "archive": 8,
+      "criteria": 1,
+      "participant_work": 2,
+      "task": 7,
+      "review": 2
+    },
+    "checkpoint": "runs/r309_review_r314.jsonl",
+    "checkpoint_sha": "b4a6c2d457d8f04b5442cc820f8f8ad34b8c49c5",
+    "checkpoint_commit": "f79cdd402ac70007fb307b17878378c2cf76ddf3",
+    "sha_allowlist_commit": "482b573ca0b464d6bec137565812289f9454929d",
+    "canonical_before": 5188,
+    "canonical_after": 5288,
+    "canonical_after_source": "r308 100 labels merged by Actions #40160788492",
+    "r309_canonical_merge": "pending_next_workflow",
+    "cursor": "resource_000314.jsonl",
+    "next_after_successful_merge": "resource_000315.jsonl",
+    "raw_cursor_unchanged": true,
+    "rights_alert": "Korean KPO/IPO organizer explicitly prohibits unauthorized reproduction/distribution/modification of questions and participant essays."
+  },
+  "mime": {
+    "previous_confirmed_observations": 3506,
+    "new_observations_in_workflow_persist_commit": 3,
+    "observations_inferred": 3509,
+    "unique_pdf_last_confirmed": 1499,
+    "extensionless_pdf_last_confirmed": 1341,
+    "zip_last_confirmed": 61,
+    "octet_stream_last_confirmed": 222,
+    "current_breakdown": "not_readable_from_large_resource_observations_file",
+    "metadata_only": true
+  },
+  "audit": {
+    "backlog_before": 792,
+    "added": 13,
+    "backlog_after": 805,
+    "prior_r308_merge_blocker_resolved": 1,
+    "commit": "08ba6b57f156cb57b99d4135622c45071db8be53",
+    "open_historical_checkpoints": 27,
+    "source_duplicate_historical": 1,
+    "source_checkpoint_pending": 20,
+    "review_checkpoint_pending": 100,
+    "not_exhaustive": true
+  },
+  "state": {
+    "review_state_commit": "27ea7582bdc73b406de66f19d249a7bdc38d0136",
+    "canonical_sources_sha": "b04dd863218e0c3b56ef2b34ccd45f5875c80c0c",
+    "canonical_labels_sha": "bbc42f6f5956854deef56b0b5bee409b56ce3676",
+    "backlog_sha": "6d5438ba608974ee6ce352c388e044cec7a2e29a",
+    "review_state_sha": "47ce681cbccddc235606b9b50dc0e21992016c1e"
+  },
+  "safeguards": {
+    "binary_documents_downloaded": false,
+    "raw_occurrences_deleted": false,
+    "dropbox_modified": false,
+    "schedule_changed": false,
+    "additional_automation_created": false,
+    "access_restrictions_bypassed": false
+  }
+}
