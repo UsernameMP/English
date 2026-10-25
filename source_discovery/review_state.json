@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T04:14:16.100Z",
+  "updated_at": "2026-10-25T06:08:41.079Z",
   "deferred_shards": [
     1,
     2,
@@ -42,7 +42,7 @@
     "labels_checkpoint_20261013_011057_r413_single_36.jsonl"
   ],
   "pending_labels_count": 27,
-  "canonical_merge_status": "r294_to_r309_1600_labels_merged; canonical 5388 after Actions #40164424334; 29 prior corrections applied; r310 resource_000315 100 labels SHA-allowlisted pending next canonical merge; 2 Thai POSN provenance corrections SHA-pinned pending; 27 historical checkpoints pending",
+  "canonical_merge_status": "r310 source+label checkpoints and r311 source+label checkpoints pending canonical merge verification; r311 SHA-allowlisted; 27 historical checkpoints pending; do not advance operational cursor until r310 confirmed",
   "canonical_merged_in_cycle": 309,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -185,7 +185,7 @@
     "next_resource_shard": "resource_000315.jsonl",
     "last_completed_shard": "resource_000314.jsonl",
     "cycle": "r310-20261025T050806871Z",
-    "reason": "Actions #40164424334 completed success and canonical labels 5288->5388, confirming r309 merge. r310 resource_000315 100 unique labels checkpointed and SHA-allowlisted, pending next workflow merge. Do not advance to resource_000316 until merged."
+    "reason": "r310 resource_000315 and r311 resource_000316 checkpoints published and SHA-allowlisted; canonical merge of r310 not yet confirmed. Keep cursor at resource_000315 until verified; do not reclassify resource_000316."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2026,5 +2026,36 @@
     "script_updated": true,
     "applied_to_canonical": false,
     "requires_next_workflow": true
+  },
+  "r311_pending": {
+    "cycle": "r311-20261025T060341694Z",
+    "resource_shard": "resource_000316.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_checked": 192,
+    "raw_shards": [
+      "batch_000829.jsonl",
+      "batch_000830.jsonl",
+      "batch_000832.jsonl",
+      "batch_000833.jsonl",
+      "batch_000835.jsonl",
+      "batch_000837.jsonl",
+      "batch_000838.jsonl"
+    ],
+    "counts": {
+      "source": 8,
+      "unrelated": 25,
+      "archive": 1,
+      "task": 30,
+      "criteria": 27,
+      "review": 8,
+      "solution": 1
+    },
+    "review_checkpoint": "runs/r311_review_r316.jsonl",
+    "review_checkpoint_sha": "44efa09651b1c1a1ba376863cb08b952e55cdab6",
+    "discovery_checkpoint": "runs/discovery_r311.jsonl",
+    "discovery_checkpoint_sha": "8c931576c552dec859a7c3c5507f1f65310b92a7",
+    "canonical_merged": false,
+    "next_after_verified_merge": "resource_000317.jsonl",
+    "cursor_advanced": false
   }
 }
