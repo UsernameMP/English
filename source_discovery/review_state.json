@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T11:10:32.683Z",
+  "updated_at": "2026-10-25T12:15:25.795Z",
   "deferred_shards": [
     1,
     2,
@@ -12,10 +12,12 @@
     4,
     5
   ],
-  "pending_label_checkpoints": [],
-  "pending_labels_count": 0,
-  "canonical_merge_status": "GitHub Actions #40183845074 success; r315 100 labels merged (5956->6056), all resource_id and type values verified.",
-  "canonical_merged_in_cycle": 315,
+  "pending_label_checkpoints": [
+    "runs/r317_review_r322.jsonl"
+  ],
+  "pending_labels_count": 100,
+  "canonical_merge_status": "GitHub Actions #40191782068 success; r316 resource_000321 100 labels merged, canonical 6056->6156; r317 resource_000322 100 labels SHA-checkpointed and pending.",
+  "canonical_merged_in_cycle": 316,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -154,10 +156,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000321.jsonl",
-    "last_completed_shard": "resource_000320.jsonl",
-    "cycle": "r315-20261025T100846384Z",
-    "reason": "All 100 unique resource_000320 labels verified against canonical link_labels.jsonl (6056) after successful GitHub Actions #40183845074; raw cursor unchanged."
+    "next_resource_shard": "resource_000322.jsonl",
+    "last_completed_shard": "resource_000321.jsonl",
+    "cycle": "r316-20261025T110810197Z",
+    "reason": "r316 100 labels merged in Actions #40191782068; r317 resource_000322 checkpointed but not canonical, so cursor not advanced beyond r322."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2212,9 +2214,35 @@
     "checkpoint": "runs/r316_review_r321.jsonl",
     "checkpoint_blob_sha": "64dd6748788186625586d6c1d174ad6b79b8a3d0",
     "allowlisted_in": "merge_review_checkpoints.py",
-    "canonical_merged": false,
+    "canonical_merged": 100,
+    "cursor_advanced": true,
+    "raw_cursor_unchanged": true,
+    "notes": "Await GitHub Actions checkpoint merge confirmation; no binary material downloaded.",
+    "canonical_labels_after": 6156,
+    "merged_workflow_run_id": 40191782068,
+    "status": "merged_verified"
+  },
+  "r317_pending": {
+    "cycle": "r317-20261025T120756291Z",
+    "resource_shard": "resource_000322.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000843.jsonl",
+      "batch_000844.jsonl"
+    ],
+    "classification_counts": {
+      "task": 37,
+      "criteria": 38,
+      "solution": 1,
+      "review": 24
+    },
+    "checkpoint": "runs/r317_review_r322.jsonl",
+    "checkpoint_blob_sha": "b5681a897720aadf67e9adb55ae1fc78aca90b39",
+    "sha_allowlisted_in": "merge_review_checkpoints.py",
+    "canonical_merged": 0,
     "cursor_advanced": false,
     "raw_cursor_unchanged": true,
-    "notes": "Await GitHub Actions checkpoint merge confirmation; no binary material downloaded."
+    "notes": "HSE Higher League 2021/22–2022/23 final-round papers; КиР primary criteria and secondary solutions; supplementary 'К заданию' links retained review. No binary accessed."
   }
 }
