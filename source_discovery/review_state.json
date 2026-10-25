@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T14:03:50.384Z",
+  "updated_at": "2026-10-25T15:11:46.109Z",
   "deferred_shards": [
     1,
     2,
@@ -13,10 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r319_review_r324.jsonl"
+    "runs/r319_review_r324.jsonl",
+    "runs/r320_review_r325.jsonl"
   ],
-  "pending_labels_count": 100,
-  "canonical_merge_status": "r318 resource_000323 merged +100 via Actions #40200162494: canonical 6256 -> 6356 (workflow log); r319 resource_000324 100 labels SHA-pinned in checkpoint, canonical merge pending.",
+  "pending_labels_count": 200,
+  "canonical_merge_status": "r319 checkpoint merge step completed in in-progress Actions #40205265951, but final persistence and canonical count unverified; r320 checkpoint SHA-pinned, merge pending.",
   "canonical_merged_in_cycle": 318,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -158,8 +159,8 @@
   "operational_review_cursor": {
     "next_resource_shard": "resource_000324.jsonl",
     "last_completed_shard": "resource_000323.jsonl",
-    "cycle": "r319-20261025T135953999Z",
-    "reason": "r318 labels merged and verified from workflow log; r319 resource_000324 checkpointed but not yet canonical; do not advance until merged."
+    "cycle": "r320-20261025T150509455Z",
+    "reason": "r319 resource_000324 and r320 resource_000325 are checkpointed, but canonical merge for r319 not yet verified and r320 not yet merged; do not advance."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2299,5 +2300,27 @@
     "cursor_advanced": false,
     "raw_cursor_unchanged": true,
     "notes": "All 100 unique URLs mapped to exact raw IDs; official HSE 2020/21 organizer table, Hungarian KöMaL solution/stats links, NOSB navigation; binary bodies not fetched."
+  },
+  "r320_pending": {
+    "cycle": "r320-20261025T150509455Z",
+    "resource_shard": "resource_000325.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences_matched": 100,
+    "raw_shards": [
+      "batch_000847.jsonl",
+      "batch_000848.jsonl"
+    ],
+    "counts": {
+      "task": 47,
+      "source": 6,
+      "unrelated": 45,
+      "review": 2
+    },
+    "full_labels_checkpointed": 100,
+    "checkpoint": "runs/r320_review_r325.jsonl",
+    "checkpoint_sha": "35336d00e09cb8dbcbb277e86d1dd9a9ca3c0b02",
+    "canonical_merged": 0,
+    "cursor_advanced": false,
+    "rights_note": "NOSB questions may only be released by national office; URL and metadata only"
   }
 }
