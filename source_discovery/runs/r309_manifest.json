@@ -22,8 +22,8 @@
     "html_pages_current": "not_extracted_from_job_log",
     "new_raw_links_current": "not_extracted_from_job_log",
     "crawler_errors_current": "not_extracted_from_job_log",
-    "crawl_state_blob_sha": "2b68147a1f2b512dfe9640fc406d9bfa8533a8ea",
-    "notes": "Previous crawl_state blob SHA recorded before new workflow; current crawl_state updated by persist commit. Verify current SHA separately if needed."
+    "crawl_state_blob_sha": "a6cb98ca26b07c70784e9cb8cc0064508c829af5",
+    "notes": "Current crawl_state SHA verified, but 37MB JSON content cannot be read through the file connector; queue and current per-run crawler counts not asserted."
   },
   "discovery": {
     "verified_HTML_source_pointers_checkpointed": 20,
@@ -86,7 +86,8 @@
     "zip_last_confirmed": 61,
     "octet_stream_last_confirmed": 222,
     "current_breakdown": "not_readable_from_large_resource_observations_file",
-    "metadata_only": true
+    "metadata_only": true,
+    "observations_blob_sha": "2698d24b67aa6f8374fdfdbae670887870b82a7a"
   },
   "audit": {
     "backlog_before": 792,
