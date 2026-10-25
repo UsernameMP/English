@@ -1,0 +1,93 @@
+{
+  "cycle": "r320-20261025T150509455Z",
+  "reported_at": "2026-10-25T15:12:23.204Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "673cbf87f7d29aee6b218c47d6b653c3132ca43b",
+    "blob_sha": "81b1ffa9ca1fbc5870c6b9e60eebe4752e03066f",
+    "action_run_id": 40205265951,
+    "action_url": "https://github.com/UsernameMP/English/actions/runs/40205265951",
+    "status": "in_progress",
+    "conclusion": null
+  },
+  "baseline": {
+    "source_count": 1902,
+    "reviewed_labels": 6356,
+    "backlog_count": 984,
+    "unique_resource_urls": 276087,
+    "pending_pages": 123979,
+    "blocked_or_failed": 2925
+  },
+  "discovery": {
+    "web_results_examined": "dozens across multiple languages and disciplines; 33 checked directly against full 1902-source canonical registry, 28 already registered",
+    "new_verified_source_urls": 13,
+    "checkpoint": "runs/discovery_r320.jsonl",
+    "sha": "a7a69e48e6dab866b38694ce7fd31e46d5f24a66",
+    "canonical_merge_pending": true,
+    "rights": "unknown_or_reserved"
+  },
+  "review": {
+    "resource_shard": "resource_000325.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000847.jsonl",
+      "batch_000848.jsonl"
+    ],
+    "counts": {
+      "task": 47,
+      "source": 6,
+      "unrelated": 45,
+      "review": 2
+    },
+    "checkpoint": "runs/r320_review_r325.jsonl",
+    "sha": "35336d00e09cb8dbcbb277e86d1dd9a9ca3c0b02",
+    "merge_script_sha": "caf0cc82350409cb7a800ee1af9a80ec49fceade",
+    "canonical_merge_pending": true,
+    "rights": "NOSB national office exclusively releases its competition questions; metadata only"
+  },
+  "mime": {
+    "observations": 3616,
+    "pdf_mime_urls": 1531,
+    "pdf_urls_without_dot_pdf_substring": 1359,
+    "zip_observations": 61,
+    "source_blob_sha": "d1ec9e510a1e97c9a0330a72767919909cd6cd85",
+    "no_binary_download": true
+  },
+  "audit": {
+    "backlog_before": 984,
+    "added": 17,
+    "backlog_after": 1001,
+    "sha": "179917656243bff3b44469a387dfbe514f20c19a",
+    "themes": [
+      "missing_years_and_rounds",
+      "Kahoot_round4_duplicate_link",
+      "cross_platform_question_duplicates",
+      "historical_mirrors",
+      "copyright_and_redistribution",
+      "participant_work_rights",
+      "temporary_access_blocks",
+      "rubric_and_solution_gaps"
+    ]
+  },
+  "verified_sha": {
+    "review_state": "13682fab2c16c87936a13b36c678bffded3f3717",
+    "sources": "23a0253c609ea8f6216079ed7b0ffeed127d1b53",
+    "link_labels": "a6cad4f8cda7d042316735a1d1038ccefaa45064"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automations_created": false
+  },
+  "open_items": [
+    "RIFT Actions r320 in progress; final success and new crawl metrics pending.",
+    "13 new sources staged for next normal merge, no extra run.",
+    "100 labels SHA-pinned and staged, no cursor advance before canonical merge.",
+    "NOSB Kahoot round4 duplicates round3 URL, and two ambiguous links remain review.",
+    "Older coverage gaps remain unresolved; no archive exhaustion claim."
+  ]
+}
