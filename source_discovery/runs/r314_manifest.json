@@ -1,6 +1,6 @@
 {
   "cycle": "r314-20261025T090027020Z",
-  "reported_at": "2026-10-25T09:06:06.725Z",
+  "reported_at": "2026-10-25T09:09:05.724Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "pr_188_merged": true,
@@ -14,8 +14,8 @@
   "subsequent_source_update_workflow": {
     "run_id": 40179165556,
     "trigger_commit": "d9a49c221c455fbdd84463bf098293eb5a44ac98",
-    "status": "in_progress",
-    "conclusion": null,
+    "status": "completed",
+    "conclusion": "success",
     "url": "https://github.com/UsernameMP/English/actions/runs/40179165556",
     "note": "Triggered automatically by canonical sources.jsonl update, not a separate ChatGPT automation."
   },
@@ -47,12 +47,17 @@
     "checkpoint_sha": "0bfcd59a94f115c5f8951b2101410f4b6a937252",
     "sha_allowlisted": true,
     "canonical_labels_after_historical_merge": 5856,
-    "canonical_labels_r314_added": 0,
-    "cursor_advanced": false,
+    "canonical_labels_r314_added": 100,
+    "cursor_advanced": true,
     "official_competition": "Олимпиада студентов и выпускников «Высшая лига»",
     "official_archive_url": "https://olymp.hse.ru/ma/second/prevtasks",
     "level": "university_students_and_graduates",
-    "extensionless_pdf_mime_in_shard": 97
+    "extensionless_pdf_mime_in_shard": 97,
+    "canonical_labels_after_r314_merge": 5956,
+    "canonical_labels_sha": "583b2a9d66bfcc2922a537b63dd90b05f30efd98",
+    "canonical_merge_verified": true,
+    "cursor_next": "resource_000320.jsonl",
+    "raw_cursor_unchanged": true
   },
   "historical_reconciliation": {
     "previously_pending": 68,
@@ -60,18 +65,23 @@
     "canonical_labels_before": 5788,
     "after": 5856,
     "workflow_step": "success",
-    "original_checkpoint_count": 27
+    "original_checkpoint_count": 27,
+    "original_checkpoint_references_cleared_after_merge_verification": true
   },
   "crawl": {
     "first_workflow_html_pages": 60,
     "new_raw_occurrences": 5186,
     "unique_resource_urls_before": 270746,
-    "unique_resource_urls_after": 271144,
-    "unique_resource_urls_delta": 398,
-    "queue_pages_after": 122031,
-    "blocked_or_failed_after": 2826,
-    "latest_crawl_state_sha": "9ccf4dcf20d9eea8965e83606970696ad5452ab4",
-    "second_workflow_results_not_yet_included": true
+    "unique_resource_urls_after": 271795,
+    "unique_resource_urls_delta": 1049,
+    "queue_pages_after": 122358,
+    "blocked_or_failed_after": 2836,
+    "latest_crawl_state_sha": "d6847dc792f4042b13747ff587be0202e6ecfd14",
+    "second_workflow_results_not_yet_included": false,
+    "second_workflow_html_pages": 60,
+    "second_workflow_new_raw_occurrences": 4431,
+    "total_html_pages": 120,
+    "total_new_raw_occurrences": 9617
   },
   "mime": {
     "observations_last_read": 3551,
@@ -101,9 +111,9 @@
     "new_chatgpt_automation_instances_created": false
   },
   "open_items": [
-    "100 r314 reviewed labels SHA-pinned, awaiting canonical merge verification from subsequent source-update workflow.",
-    "21 HSE ancillary resources retained as review; do not treat as task documents.",
+    "21 HSE supplementary resource links remain in review; task/solution status not inferred from MIME.",
     "Historical exact URL duplicate in older sources remains.",
-    "Coverage gaps across years, stages, solutions, criteria, mirrors and pagination remain."
+    "Other earlier historical compact checkpoints and coverage gaps require separate reconciliation; the 27 original APhO/r413 checkpoint references are reconciled and retained.",
+    "Year/round/criteria/rights gaps remain in backlog; no archive completeness claim."
   ]
 }
