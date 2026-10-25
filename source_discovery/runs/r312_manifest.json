@@ -33,12 +33,10 @@
     "unique_resources_reviewed": 100,
     "raw_occurrences_checked": 122,
     "raw_shards": [
-      "batch_000829.jsonl",
       "batch_000830.jsonl",
       "batch_000831.jsonl",
       "batch_000832.jsonl",
       "batch_000833.jsonl",
-      "batch_000834.jsonl",
       "batch_000835.jsonl",
       "batch_000836.jsonl"
     ],
