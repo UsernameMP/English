@@ -1,6 +1,6 @@
 {
   "cycle": "r314-20261025T090027020Z",
-  "reported_at": "2026-10-25T09:09:05.724Z",
+  "reported_at": "2026-10-25T09:09:29.961Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "pr_188_merged": true,
@@ -93,15 +93,17 @@
   },
   "audit": {
     "backlog_before": 882,
-    "added": 15,
-    "backlog_after": 897,
-    "backlog_sha": "97f635c9bef3d177055d301d15c53de0d958c2be",
+    "added": 16,
+    "backlog_after": 898,
+    "backlog_sha": "aa03e2cb330bf2ac59b8e9ca0708d5dd7d56b317",
     "blocked_unverified": [
       "school1.edu.mn/intro HTTP 404",
       "aktobe.daryn.kz/itogi HTTP 402",
       "Blogspot historical OBA mirror redirected to access challenge"
     ],
-    "copyright": "Third-party teacher mirrors and participant work have unknown reuse rights."
+    "copyright": "Third-party teacher mirrors and participant work have unknown reuse rights.",
+    "exact_source_url_duplicate_groups": 0,
+    "normalized_url_alias_candidate_pairs": 15
   },
   "safeguards": {
     "binary_downloaded": false,
@@ -112,7 +114,7 @@
   },
   "open_items": [
     "21 HSE supplementary resource links remain in review; task/solution status not inferred from MIME.",
-    "Historical exact URL duplicate in older sources remains.",
+    "15 normalized URL alias pairs require verification; zero exact duplicate URL strings in sources.jsonl.",
     "Other earlier historical compact checkpoints and coverage gaps require separate reconciliation; the 27 original APhO/r413 checkpoint references are reconciled and retained.",
     "Year/round/criteria/rights gaps remain in backlog; no archive completeness claim."
   ]
