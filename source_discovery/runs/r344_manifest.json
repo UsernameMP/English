@@ -1,0 +1,98 @@
+{
+  "cycle": "r344-20261026T150744295Z",
+  "reported_at": "2026-10-26T15:19:32.451Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "commit": "84aaabc456445f5488d24c6c6ea80d13effa02b1",
+    "requested_at": "2026-10-26T15:07:44.295Z"
+  },
+  "workflow": {
+    "primary": {
+      "run_id": 40346281242,
+      "conclusion": "success",
+      "crawl_commit": "403ded52"
+    },
+    "automatic_followup": {
+      "run_id": 40347869977,
+      "status": "in_progress",
+      "cause": "sources.jsonl push; automatic GitHub Actions event, not an extra scheduled task"
+    }
+  },
+  "crawl": {
+    "html_pages_primary": 60,
+    "new_raw_occurrences_primary": 2144,
+    "raw_total_after_primary": 1449449,
+    "unique_url_resources_after_primary": 305231,
+    "html_frontier_after_primary": 138038,
+    "blocked_or_failed_after_primary": 3321,
+    "not_exhaustiveness": true
+  },
+  "discovery": {
+    "search_queries": 60,
+    "verified_new_source_urls": 5,
+    "canonical_before": 2090,
+    "canonical_after": 2095,
+    "source_sha": "32189b4a08c431b302a2757d6ec796f9c53ad1d5",
+    "checkpoint": "runs/discovery_r344.jsonl",
+    "query_log": "runs/r344_search_queries.json"
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 111,
+    "counts": {
+      "task": 75,
+      "solution": 4,
+      "unrelated": 14,
+      "review": 7
+    },
+    "resource_ranges": [
+      "resource_000349.jsonl:35-99",
+      "resource_000350.jsonl:0-34"
+    ],
+    "raw_shards": "batch_000900..000907",
+    "checkpoints": [
+      "runs/r344_review_r349_350_00_49.jsonl",
+      "runs/r344_review_r349_350_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "8d22e0276e11252d16d53f8ce5ff175344eba5ec",
+      "b2a32a5500874161d40312dd5bc0ca1e24ccfacd"
+    ],
+    "canonical_labels_before": 8856,
+    "canonical_merge_status": "pending followup workflow commit",
+    "next_cursor": {
+      "shard": "resource_000350.jsonl",
+      "row": 35
+    }
+  },
+  "mime": {
+    "observations_after_primary": 3908,
+    "application_pdf": 1653,
+    "pdf_without_terminal_dot_pdf": 1495,
+    "non_html_is_not_error": true
+  },
+  "audit": {
+    "canonical_before": 1435,
+    "added": 15,
+    "canonical_after": 1450,
+    "checkpoint": "runs/r344_audit.jsonl"
+  },
+  "safeguards": {
+    "binaries_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_manually_modified": false,
+    "schedule_modified": false,
+    "robots_bypassed": false,
+    "permissions_assumed": false
+  },
+  "unresolved": [
+    "Await canonical merge of 100 SHA-pinned review labels and followup workflow completion.",
+    "Serbian school-year and grade aliases; dynamic print-to-PDF MIME; official provenance and reuse rights.",
+    "Older noncontiguous historical review checkpoints not reconciled."
+  ]
+}
