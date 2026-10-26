@@ -1,0 +1,13 @@
+{
+  "cycle": "r332-20261026T025944015Z",
+  "checked_at": "2026-10-26T03:03:29.899Z",
+  "previous_confirmed_observations_r331": 3707,
+  "resource_observations_blob_before_crawl": "433db372bf6e92c63b64c9c3bcd0975f56d92b79",
+  "new_count": "pending workflow completion; large file not readable through GitHub connector",
+  "pdf_count": "not independently verified",
+  "extensionless_pdf_rule": "Content-Type application/pdf is MIME evidence even if URL has no .pdf; not proof of olympiad task/solution",
+  "non_html_handling": "MIME-only observations are not crawler errors",
+  "robots_handling": "robots denied/unavailable are distinct from non-HTML responses",
+  "binary_bodies_saved": false,
+  "note": "No binary task files downloaded or stored. One web index navigation resolved to a PDF preview through the search service; no PDF was saved or incorporated into RIFT."
+}
