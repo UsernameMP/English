@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T04:11:16.377Z",
+  "updated_at": "2026-10-26T05:03:40.831Z",
   "deferred_shards": [
     1,
     2,
@@ -13,11 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r333_review_r338.jsonl"
+    "runs/r334_review_r339.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "r332 100/100 labels merged. r333 100/100 unique labels SHA-pinned in runs/r333_review_r338.jsonl and merge_review_checkpoints.py; direct 8.6MB canonical update_file attempted with current blob SHA but returned 'h2 protocol error: error reading a body from connection'; reread confirms link_labels.jsonl unchanged (7756). Next ordinary workflow merge pending.",
-  "canonical_merged_in_cycle": 332,
+  "canonical_merge_status": "r333 100 labels merged by normal workflow commit 28fc446064e20359df14f23e765770b6d80eac28 (2026-10-26T04:17:09Z). r334 100 unique labels in SHA-pinned runs/r334_review_r339.jsonl, canonical merge pending next ordinary workflow.",
+  "canonical_merged_in_cycle": 333,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -156,10 +156,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000339.jsonl",
-    "last_completed_shard": "resource_000338.jsonl",
-    "cycle": "r333-20261026T040035640Z",
-    "reason": "100 unique JOI/JOIG 2021/22 URL resources classified using 100 original raw occurrences from batch_000870 and batch_000871; checkpoint SHA-pinned; no raw evidence deleted. Canonical raw cursor unchanged."
+    "next_resource_shard": "resource_000340.jsonl",
+    "last_completed_shard": "resource_000339.jsonl",
+    "cycle": "r334-20261026T045932017Z",
+    "reason": "100 unique JOI/JOIG 2020/21 and 2021/22 URLs reviewed from 101 original occurrences in batch_000871..000873; six ZIP judge data URLs deferred; raw cursor unchanged."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2582,14 +2582,42 @@
     },
     "checkpoint": "runs/r333_review_r338.jsonl",
     "checkpoint_sha": "cd74d665b92c91219fea1a1729800ca4eec90bba",
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "canonical_raw_cursor_unchanged": true,
     "direct_canonical_write": {
       "attempted": true,
       "result": "blocked",
       "error": "h2 protocol error: error reading a body from connection",
       "canonical_blob_sha_after_check": "5916ca5901011b751326b7fdb0ceaa5c5cade9c0",
-      "checkpoint_preserved": true
-    }
+      "checkpoint_preserved": true,
+      "subsequent_workflow_merge": "confirmed"
+    },
+    "merge_pending": false,
+    "merged_workflow_commit": "28fc446064e20359df14f23e765770b6d80eac28"
+  },
+  "r334_pending": {
+    "cycle": "r334-20261026T045932017Z",
+    "resource_shard": "resource_000339.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 101,
+    "raw_shards": [
+      "batch_000871.jsonl",
+      "batch_000872.jsonl",
+      "batch_000873.jsonl"
+    ],
+    "counts": {
+      "solution": 55,
+      "task": 30,
+      "review": 6,
+      "source": 8,
+      "criteria": 1
+    },
+    "checkpoint": "runs/r334_review_r339.jsonl",
+    "checkpoint_sha": "fb2694ba8d4efaa4721d91011fc3b33499b60d0b",
+    "canonical_merged": 0,
+    "merge_pending": true,
+    "uncertain_resources": 6,
+    "canonical_raw_cursor_unchanged": true,
+    "notes": "Official organizer HTML checked; ZIP judge data kept review; sample source code is official solution example but source bodies not fetched."
   }
 }
