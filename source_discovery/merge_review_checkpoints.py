@@ -55,6 +55,7 @@ CHECKPOINTS = {
     "r333_review_r338.jsonl": "cd74d665b92c91219fea1a1729800ca4eec90bba",
     "r334_review_r339.jsonl": "fb2694ba8d4efaa4721d91011fc3b33499b60d0b",
     "r335_review_r340.jsonl": "8307595398375b10c356b3ad84fa43fd6df5e3bd",
+    "r336_review_r341.jsonl": "7ba4b1cd35b73936fe3418b70f2779f2a73ca48b",
     "r313_historical_reconciled_apho_29.jsonl": "9a2a4e530e53f0ac6c3cefbbc4fc63373dba9f30",
     "r313_historical_reconciled_r413_39.jsonl": "9d75650d7df61c1cdd0b6ddf79bc11705ec321a4",
 }
