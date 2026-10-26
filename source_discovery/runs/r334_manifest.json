@@ -1,0 +1,124 @@
+{
+  "cycle": "r334-20261026T045932017Z",
+  "reported_at": "2026-10-26T05:07:00.260Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "eed84e88d14b66de84371613f4e4721625e5d1e2",
+    "requested_at": "2026-10-26T04:59:32.017Z",
+    "sha": "b6eca6a9ace2585b86dcc86385e0cc9f63aa09f5"
+  },
+  "workflow": {
+    "run_id": 40271875687,
+    "url": "https://github.com/UsernameMP/English/actions/runs/40271875687",
+    "status": "completed",
+    "conclusion": "success",
+    "output_commit": "71e093f81af98ec23f919cc8ae7755f415edb837",
+    "job_log_confirmed": true
+  },
+  "crawl": {
+    "html_pages_processed": 60,
+    "new_raw_occurrences": 7040,
+    "raw_total_shard_derived": 1398048,
+    "raw_last_shard": "batch_013981.jsonl",
+    "raw_last_shard_rows": 48,
+    "unique_resources": 297673,
+    "resource_last_shard": "resource_002977.jsonl",
+    "resource_last_shard_rows": 73,
+    "html_pending": 134488,
+    "blocked_or_failed_cumulative": 3127,
+    "counts_one_based_shards": true,
+    "previous_cron_at_2026_10_26_0417": {
+      "raw_total": 1391008,
+      "unique_resources": 297013,
+      "raw_added": 3035,
+      "unique_added": 739
+    },
+    "r333_report_correction": {
+      "raw_reported": 1388073,
+      "raw_correct": 1387973,
+      "resource_reported": 296374,
+      "resource_correct": 296274,
+      "reason": "Shard names start at 1; previous manifest used zero-based count formula."
+    }
+  },
+  "discovery": {
+    "queries_logged": 65,
+    "html_pointers_checkpointed": 23,
+    "unique_within_checkpoint": 23,
+    "canonical_unique_status": "not established; idempotent merge pending",
+    "checkpoint": "runs/discovery_r334.jsonl",
+    "canonical_sources": 2048,
+    "merged_in_this_cycle": 0
+  },
+  "review": {
+    "resource_shard": "resource_000339.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 101,
+    "raw_shards": [
+      "batch_000871.jsonl",
+      "batch_000872.jsonl",
+      "batch_000873.jsonl"
+    ],
+    "counts": {
+      "solution": 55,
+      "task": 30,
+      "review": 6,
+      "source": 8,
+      "criteria": 1
+    },
+    "checkpoint": "runs/r334_review_r339.jsonl",
+    "checkpoint_sha": "fb2694ba8d4efaa4721d91011fc3b33499b60d0b",
+    "pinned_in": "merge_review_checkpoints.py",
+    "canonical_labels": 7856,
+    "r333_merged_by_cron_commit": "28fc446064e20359df14f23e765770b6d80eac28",
+    "r334_merged": 0,
+    "cursor": "resource_000340.jsonl",
+    "raw_cursor_unchanged": true
+  },
+  "mime": {
+    "observations": 3731,
+    "added_this_workflow": 2,
+    "prior_confirmed_pdf": 1598,
+    "prior_confirmed_pdf_without_dot_pdf": 1426,
+    "current_pdf_count_not_recomputed": true,
+    "non_html_not_error": true,
+    "robots_separate": true
+  },
+  "audit": {
+    "new_rows": 24,
+    "backlog_before": 1291,
+    "backlog_after": 1315,
+    "checkpoint": "runs/r334_audit.jsonl",
+    "r333_off_by_one_corrected": true,
+    "github_diff_stats_zero_added_shards_confirmed": true
+  },
+  "verified_blob_sha": {
+    "source_discovery/run_trigger.json": "b6eca6a9ace2585b86dcc86385e0cc9f63aa09f5",
+    "source_discovery/crawl_state.json": "107b461a5f1d9665c68d9ecdcf43749576fa7faa",
+    "source_discovery/sources.jsonl": "42e1c0a9da542dfaed15fd491580a99980a6e2bf",
+    "source_discovery/link_labels.jsonl": "342721420765bb6ebebc272026cd4b1e621ef6a8",
+    "source_discovery/backlog.jsonl": "96e4ef56e993e067b19e4e137f7062133698cc6a",
+    "source_discovery/review_state.json": "6ab5aa42b66ef517620288041e26c85aa97e6ead",
+    "source_discovery/resource_observations.jsonl": "0e10a2346f342fb2a35ec3c688682a762f855d08",
+    "source_discovery/runs/discovery_r334.jsonl": "7bb461e329bd900c5bf5955eedc871ef80457d0a",
+    "source_discovery/runs/r334_review_r339.jsonl": "fb2694ba8d4efaa4721d91011fc3b33499b60d0b",
+    "source_discovery/runs/r334_queries.jsonl": "9e241e42c9a7eb5cd129d35a4bffd4f5f37e4eda",
+    "source_discovery/runs/r334_audit.jsonl": "488f0b96a088e9606851debe4d8d7191b87cc4d7",
+    "source_discovery/merge_review_checkpoints.py": "50cd9607d8560f5654312afdfbdedcec9e183abc"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_manually_modified": false,
+    "schedule_modified": false,
+    "extra_workflow_instances_created": false
+  },
+  "unresolved": [
+    "23 discovery pointers await idempotent canonical merge; exact new unique source count not yet known",
+    "100 r334 reviewed labels SHA-pinned and awaiting next ordinary workflow merge",
+    "Six official JOI/JOIG judge-data ZIP URLs remain review",
+    "MIME new response types not individually established because large observation file not readable by connector; previous PDF count is not current",
+    "Coverage gaps and rights restrictions remain open; HTML frontier is not a completeness proof"
+  ]
+}
