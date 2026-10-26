@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T06:12:00.000Z",
+  "updated_at": "2026-10-26T07:08:00.000Z",
   "deferred_shards": [
     1,
     2,
@@ -13,11 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r335_review_r340.jsonl"
+    "runs/r336_review_r341.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "r334 100 labels merged by r335 workflow (GitHub Actions #40277984943, success 2026-10-26T06:11:43Z); r335 100 unique labels SHA-pinned, canonical merge pending next ordinary workflow.",
-  "canonical_merged_in_cycle": 334,
+  "canonical_merge_status": "r335 100 labels merged by RIFT Link Enumeration #40283329740 (success, 2026-10-26T07:05:09Z); r336 100 unique labels SHA-pinned in merge_review_checkpoints.py, awaiting next ordinary workflow.",
+  "canonical_merged_in_cycle": 335,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -156,10 +156,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000341.jsonl",
-    "last_completed_shard": "resource_000340.jsonl",
-    "cycle": "r335-20261026T060718412Z",
-    "reason": "100 unique JOI 2019/20 and 2020/21 resources reviewed with 101 original occurrences in batch_000872..000874; seven judge-data ZIP URLs retained as review; raw cursor unchanged."
+    "next_resource_shard": "resource_000342.jsonl",
+    "last_completed_shard": "resource_000341.jsonl",
+    "cycle": "r336-20261026T070213000Z",
+    "reason": "100 unique JOI 2017/18 and 2018/19 resources reviewed against 100 original occurrences in batch_000873..000875; 5 judge-data ZIP URLs remain review; binary bodies not opened; raw cursor unchanged."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2648,9 +2648,44 @@
     },
     "checkpoint": "runs/r335_review_r340.jsonl",
     "checkpoint_sha": "8307595398375b10c356b3ad84fa43fd6df5e3bd",
+    "canonical_merged": 100,
+    "merge_pending": false,
+    "uncertain_resources": 7,
+    "canonical_raw_cursor_unchanged": true,
+    "merged_by_workflow": "40283329740"
+  },
+  "r336_pending": {
+    "cycle": "r336-20261026T070213000Z",
+    "resource_shard": "resource_000341.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000873.jsonl",
+      "batch_000874.jsonl",
+      "batch_000875.jsonl"
+    ],
+    "counts": {
+      "unrelated": 10,
+      "source": 10,
+      "criteria": 3,
+      "task": 33,
+      "solution": 39,
+      "review": 5
+    },
+    "checkpoint": "runs/r336_review_r341.jsonl",
+    "checkpoint_sha": "7ba4b1cd35b73936fe3418b70f2779f2a73ca48b",
     "canonical_merged": 0,
     "merge_pending": true,
-    "uncertain_resources": 7,
+    "uncertain_resources": 5,
     "canonical_raw_cursor_unchanged": true
+  },
+  "r336_discovery_audit": {
+    "discovery_checkpoint": "runs/discovery_r336.jsonl",
+    "candidate_html_pointers": 20,
+    "canonical_uniqueness": "pending full-registry merge_sources.py dedup",
+    "audit_checkpoint": "runs/r336_audit.jsonl",
+    "audit_rows": 16,
+    "backlog_canonical_merge_pending": true,
+    "reason": "Large canonical sources.jsonl and backlog.jsonl cannot be safely replaced via connector (empty text reads)."
   }
 }
