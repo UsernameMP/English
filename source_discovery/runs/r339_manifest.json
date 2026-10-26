@@ -1,0 +1,119 @@
+{
+  "cycle": "r339-20261026T100010020Z",
+  "reported_at": "2026-10-26T10:10:48.151Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z",
+    "base": "main"
+  },
+  "trigger": {
+    "requested_at": "2026-10-26T10:00:10.020Z",
+    "commit": "de0d9aa9f643c6bd43587536e803db0aa5a0371c",
+    "blob_sha": "c841bdead5fb96a62ac183acb3fa45d2ddaff1ee"
+  },
+  "workflow": {
+    "run_id": 40303955282,
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-26T10:09:48Z",
+    "output_commit": "f24962184ae9955aa67786e684f5dd09065ecb4a",
+    "concurrent_writes_rebased_cleanly": true,
+    "additional_workflow_started_by_r339_checkpoint_writes": false
+  },
+  "crawl": {
+    "html_pages_processed": 60,
+    "new_links_reported": 1676,
+    "raw_total_from_one_based_shards": 1423271,
+    "raw_last_shard": "batch_014233.jsonl",
+    "raw_last_shard_rows": 71,
+    "unique_resource_urls": 300191,
+    "resource_last_shard": "resource_003002.jsonl",
+    "resource_last_shard_rows": 91,
+    "pending_html_pages": 135662,
+    "blocked_or_failed_cumulative": 3210,
+    "frontier_not_completeness": true
+  },
+  "discovery": {
+    "unique_queries_logged": 50,
+    "verified_HTML_pointers_checkpointed": 7,
+    "canonical_sources": 2080,
+    "canonical_sources_added_this_cycle": 0,
+    "canonical_dedup_pending": true,
+    "checkpoint": "runs/discovery_r339.jsonl",
+    "checkpoint_blob_sha": "33cb18f7b1876df4fa8a9407068d2a71736cd81e",
+    "query_log": "runs/r339_queries.jsonl",
+    "note": "Canonical sources.jsonl too large for safe full connector read; merge_sources.py will deduplicate on next ordinary workflow, not claimed as new."
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 112,
+    "resource_ranges": [
+      "resource_000344.jsonl:35-99",
+      "resource_000345.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000880.jsonl",
+      "batch_000881.jsonl",
+      "batch_000882.jsonl"
+    ],
+    "counts": {
+      "unrelated": 50,
+      "source": 9,
+      "review": 12,
+      "archive": 1,
+      "task": 28
+    },
+    "checkpoints": [
+      {
+        "path": "runs/r339_review_r344_345_00_49.jsonl",
+        "rows": 50,
+        "blob_sha": "92c03eb9ae0ca9187f286014439f5be7f5896446"
+      },
+      {
+        "path": "runs/r339_review_r344_345_50_99.jsonl",
+        "rows": 50,
+        "blob_sha": "831e9801e0e43f2c3b7b78467aa5abe6361549cb"
+      }
+    ],
+    "merge_script_sha": "e7a83a76ba66e7a625adc011b3204694a5af8ab0",
+    "canonical_labels_before": 8356,
+    "canonical_labels_after": 8356,
+    "canonical_merge_pending": 100,
+    "next_resource_shard": "resource_000345.jsonl",
+    "next_row_index": 35,
+    "review_state_blob_sha": "b3131739e6b1698068ec749ebc22668c53229c3a"
+  },
+  "mime": {
+    "current_blob_sha": "1927f5f2bbeeb5120566f752244327c18a5a122d",
+    "current_count": "not independently readable",
+    "last_confirmed_previous_cycle": 3840,
+    "bolivia_extensionless_pdf_resources_reviewed": 12,
+    "binary_bodies_not_downloaded": true
+  },
+  "audit": {
+    "canonical_backlog_before": 1354,
+    "canonical_backlog_after": 1370,
+    "new_rows": 16,
+    "checkpoint": "runs/r339_audit.jsonl",
+    "checkpoint_blob_sha": "853cb3e493e86e7aad624213a084dda0cfb69d2d",
+    "canonical_blob_sha": "4e4c6414f6f4f75de828bad9bf1b53309305c180"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_manually_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false,
+    "rights_assumed": false
+  },
+  "unresolved": [
+    "Seven verified HTML pointers require canonical dedup/merge on next ordinary workflow; no source count increment claimed.",
+    "One hundred SHA-pinned review labels await canonical merge on next ordinary workflow; 12 Bolivia extensionless PDF candidates remain review.",
+    "Older noncontiguous historical review checkpoints remain separately pending.",
+    "Mongolian paired view/download URL equivalence unproven without binary bodies.",
+    "Mongolian solutions/criteria, Bolivia subject PDF purpose, and gaps in OBG/OLAA/UNAM/OMF historical stages remain open.",
+    "Current MIME registry counts could not be read safely through large-file connector."
+  ]
+}
