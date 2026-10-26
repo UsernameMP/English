@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T00:12:26.000Z",
+  "updated_at": "2026-10-26T01:10:22.458Z",
   "deferred_shards": [
     1,
     2,
@@ -13,11 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r329_review_r334.jsonl"
+    "runs/r330_review_r335.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "RIFT Link Enumeration #40247681034 completed success 2026-10-26T00:12:25Z. Job log: 100 r328 labels merged, canonical 7256 -> 7356; sources 1989 -> 1997 (+8 r328). r329 100 labels SHA-pinned in runs/r329_review_r334.jsonl; r329 canonical merge pending. Operational cursor held at resource_000334.jsonl.",
-  "canonical_merged_in_cycle": 328,
+  "canonical_merge_status": "RIFT Link Enumeration #40252497353 completed success 2026-10-26T01:10:03Z; job log: r329 100 labels merged, canonical 7356 -> 7456; sources 1997 -> 2008 (+11 r329). r330 100 labels SHA-pinned in runs/r330_review_r335.jsonl; r330 canonical merge pending. Operational cursor held at resource_000335.jsonl.",
+  "canonical_merged_in_cycle": 329,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -156,10 +156,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000334.jsonl",
-    "last_completed_shard": "resource_000334.jsonl",
-    "cycle": "r329-20261026T000531000Z",
-    "reason": "100 unique resources classified and checkpoint SHA-pinned; cursor held at r334 pending canonical merge."
+    "next_resource_shard": "resource_000335.jsonl",
+    "last_completed_shard": "resource_000335.jsonl",
+    "cycle": "r330-20261026T010536261Z",
+    "reason": "100 unique resource URLs semantically classified, all 100 raw occurrences matched, checkpoint SHA-pinned; cursor held at r335 pending canonical merge."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2487,5 +2487,32 @@
     "checkpoint_sha": "8815e098f2d5f05124739f3f2b7e3ff258e6f9c8",
     "canonical_merged": 0,
     "merge_pending": true
+  },
+  "r330_pending": {
+    "resource_shard": "resource_000335.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000861.jsonl",
+      "batch_000862.jsonl",
+      "batch_000863.jsonl",
+      "batch_000864.jsonl",
+      "batch_000865.jsonl",
+      "batch_000866.jsonl",
+      "batch_000867.jsonl"
+    ],
+    "counts": {
+      "unrelated": 62,
+      "archive": 4,
+      "task": 7,
+      "review": 3,
+      "solution": 20,
+      "source": 4
+    },
+    "full_labels_checkpointed": 100,
+    "canonical_merged": 0,
+    "checkpoint": "runs/r330_review_r335.jsonl",
+    "checkpoint_sha": "32159fe2fbe0eaefef89f6002a8d4c211d34ff48",
+    "notes": "3 ambiguous IJSO annex/booklet/Advent PDFs remain review; binary bodies not fetched; prior historical noncontiguous review states preserved."
   }
 }
