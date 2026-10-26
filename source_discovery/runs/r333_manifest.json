@@ -1,6 +1,6 @@
 {
   "cycle": "r333-20261026T040035640Z",
-  "reported_at": "2026-10-26T04:11:09.692Z",
+  "reported_at": "2026-10-26T04:11:31.823Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
@@ -94,7 +94,7 @@
     "source_discovery/sources.jsonl": "42e1c0a9da542dfaed15fd491580a99980a6e2bf",
     "source_discovery/link_labels.jsonl": "5916ca5901011b751326b7fdb0ceaa5c5cade9c0",
     "source_discovery/backlog.jsonl": "570ac7beeec411e5b26bebcfad141e4e296bed74",
-    "source_discovery/review_state.json": "117ee23020ceef7d88f9189bdf806d367068724f",
+    "source_discovery/review_state.json": "c91fdcfabb59abf5ee26f574c9418f8a1e43305a",
     "source_discovery/resource_observations.jsonl": "25d6cdf35de8d8a9dc7c0965eb97aea8c158ca84",
     "source_discovery/runs/discovery_r333.jsonl": "a6565549b89610dad327a27f0eef0999890357cd",
     "source_discovery/runs/r333_review_r338.jsonl": "cd74d665b92c91219fea1a1729800ca4eec90bba",
