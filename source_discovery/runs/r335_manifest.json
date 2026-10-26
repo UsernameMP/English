@@ -1,0 +1,110 @@
+{
+  "cycle": "r335-20261026T060718412Z",
+  "reported_at": "2026-10-26T06:12:00Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "4a6a6d0ef7b48ef43c451b87e7f9a64603e5a0b8",
+    "requested_at": "2026-10-26T06:07:18.412Z",
+    "blob_sha": "205870f997a950a4845885af3aff683ec5556cdc"
+  },
+  "workflow": {
+    "run_id": 40277984943,
+    "url": "https://github.com/UsernameMP/English/actions/runs/40277984943",
+    "status": "completed",
+    "conclusion": "success",
+    "output_commit": "51b3b77688b4e735d84439014903f1d2ef08f080",
+    "job_log_confirmed": true
+  },
+  "crawl": {
+    "html_pages_processed": 60,
+    "new_raw_occurrences_this_workflow": 1799,
+    "raw_total_shard_derived": 1408746,
+    "raw_last_shard": "batch_014088.jsonl",
+    "raw_last_shard_rows": 46,
+    "unique_resources": 298794,
+    "resource_last_shard": "resource_002988.jsonl",
+    "resource_last_shard_rows": 94,
+    "html_pending": 135131,
+    "blocked_or_failed_cumulative": 3153,
+    "one_based_shard_counting": true,
+    "do_not_equate_new_links_with_total_growth": true
+  },
+  "discovery": {
+    "queries_logged": 88,
+    "verified_html_pointers": 6,
+    "canonical_preexisting_duplicates_excluded": true,
+    "canonical_sources_before": 2055,
+    "canonical_sources_after": 2061,
+    "checkpoint": "runs/discovery_r335.jsonl",
+    "verification": "public_HTML_only_no_binary",
+    "countries": [
+      "KR",
+      "UA"
+    ],
+    "new_subjects": [
+      "philosophy",
+      "biology"
+    ],
+    "other_leads_deferred": "runs/r335_audit.jsonl"
+  },
+  "review": {
+    "resource_shard": "resource_000340.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 101,
+    "raw_shards": [
+      "batch_000872.jsonl",
+      "batch_000873.jsonl",
+      "batch_000874.jsonl"
+    ],
+    "counts": {
+      "solution": 37,
+      "task": 37,
+      "review": 7,
+      "criteria": 3,
+      "source": 9,
+      "archive": 6,
+      "unrelated": 1
+    },
+    "checkpoint": "runs/r335_review_r340.jsonl",
+    "checkpoint_blob_sha": "8307595398375b10c356b3ad84fa43fd6df5e3bd",
+    "canonical_labels_before": 7956,
+    "canonical_labels_after_this_commit": 7956,
+    "canonical_merge_pending": 100,
+    "pinned_in": "merge_review_checkpoints.py",
+    "next_resource_shard": "resource_000341.jsonl",
+    "original_raw_unchanged": true
+  },
+  "mime": {
+    "observations": 3774,
+    "application_pdf": 1610,
+    "pdf_without_dot_pdf_extension": 1452,
+    "zip_observations": 72,
+    "extensionless_pdf_not_validated_as_tasks": true,
+    "non_html_not_error": true,
+    "robots_restrictions_separate": true
+  },
+  "audit": {
+    "new_rows": 15,
+    "backlog_before": 1324,
+    "backlog_after": 1339,
+    "checkpoint": "runs/r335_audit.jsonl",
+    "uncertain_zip_review": 7,
+    "rights_restrictions_preserved": true
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_manually_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false,
+    "github_write_atomic_single_commit_planned": true
+  },
+  "unresolved": [
+    "100 r335 reviewed labels checkpointed and SHA-pinned; canonical merge deferred until next ordinary workflow",
+    "Seven official JOI judge-data ZIP links remain review without body inspection",
+    "KPO participant works have explicit reproduction restrictions",
+    "Brazil OBF index timed out, OBRAC edition archive 403, Mongolia education index direct HTML disabled, UCR past editions 502",
+    "Historical years and coverage not exhausted; HTML queue is not completeness evidence"
+  ]
+}
