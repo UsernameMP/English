@@ -1,0 +1,134 @@
+{
+  "cycle": "r338-20261026T090537588Z",
+  "reported_at": "2026-10-26T09:18:29Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "requested_at": "2026-10-26T09:05:37.588Z",
+    "commit": "71e290001485ca84482a0440b43413761382d1f8",
+    "blob_sha": "341805b0249bd3df931880b4eaf7ba3b4b6e5e15"
+  },
+  "workflow": {
+    "triggered_run": {
+      "id": 40296933935,
+      "status": "completed",
+      "conclusion": "failure",
+      "reason": "Concurrent direct sources.jsonl update produced a git rebase conflict during Persist results. The runner enumerated 60 pages but its raw crawl output was not pushed.",
+      "new_links_not_persisted": 1854,
+      "unique_urls_not_persisted": 299952
+    },
+    "source_push_auto_run": {
+      "id": 40297676047,
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-26T09:18:12Z",
+      "output_commit": "7f38a025",
+      "automatically_triggered_by_direct_sources_write": true,
+      "not_an_explicit_additional_automation": true
+    },
+    "caution": "Direct updates of sources.jsonl trigger the workflow and must not be performed while another crawl run is active; the overlapping push caused one failed run. No schedule changes were made."
+  },
+  "crawl": {
+    "html_pages_processed_and_persisted": 60,
+    "new_links_reported_by_successful_workflow": 1872,
+    "raw_total_from_one_based_shards": 1421595,
+    "raw_last_shard": "batch_014216.jsonl",
+    "raw_last_shard_rows": 95,
+    "previous_r337_corrected_raw_total": 1419723,
+    "delta_reconciled": 1872,
+    "unique_resource_urls": 299982,
+    "resource_last_shard": "resource_003000.jsonl",
+    "resource_last_shard_rows": 82,
+    "html_pending": 135626,
+    "blocked_or_failed_cumulative": 3193,
+    "frontier_not_completeness": true
+  },
+  "discovery": {
+    "search_queries_logged": 50,
+    "verified_new_HTML_pointers_added_directly": 10,
+    "canonical_sources_after_successful_workflow": 2080,
+    "canonical_new_from_r337_checkpoint_merged": 5,
+    "checkpoint": "runs/discovery_r338.jsonl",
+    "query_log": "runs/r338_queries.jsonl",
+    "direct_source_commit": "f99dc8636598faa32ab2bb6079cb513c16aec73f",
+    "dedup_against_prior_2065_canonical_rows": true,
+    "legacy_normalized_url_duplicate_groups": 9
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "resource_ranges": [
+      "resource_000343.jsonl:35-99",
+      "resource_000344.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000876.jsonl",
+      "batch_000877.jsonl",
+      "batch_000879.jsonl",
+      "batch_000880.jsonl"
+    ],
+    "counts": {
+      "unrelated": 68,
+      "solution": 17,
+      "task": 12,
+      "source": 2,
+      "archive": 1,
+      "criteria": 0,
+      "participant_work": 0,
+      "review": 0
+    },
+    "checkpoints": [
+      {
+        "path": "runs/r338_review_r343_344_00_49.jsonl",
+        "rows": 50,
+        "sha": "fb6b56bac44621a490b25b7958b1b6b4782da5f8"
+      },
+      {
+        "path": "runs/r338_review_r343_344_50_99.jsonl",
+        "rows": 50,
+        "sha": "ed4ec41055a124369cd0639a0a8859bea48e1f1c"
+      }
+    ],
+    "pinned_in": "merge_review_checkpoints.py",
+    "canonical_labels_before": 8156,
+    "canonical_merged_from_r337": 100,
+    "canonical_merged_from_r338": 100,
+    "canonical_labels_after": 8356,
+    "verified_by_successful_workflow": 40297676047,
+    "next_resource_shard": "resource_000344.jsonl",
+    "next_row_index": 35
+  },
+  "mime": {
+    "observations": 3840,
+    "application_pdf": 1637,
+    "pdf_urls_without_dot_pdf_in_url": 1465,
+    "source_blob_sha": "f35b718fa68f29971d4116458a3fb46ca4fd8596",
+    "binary_bodies_not_downloaded": true
+  },
+  "audit": {
+    "checkpoint": "runs/r338_audit.jsonl",
+    "checkpoint_rows": 14,
+    "canonical_backlog_before": 1339,
+    "added_from_checkpoint": 14,
+    "added_normalized_duplicate_recount": 1,
+    "canonical_backlog_after": 1354,
+    "raw_discrepancy_resolved": true,
+    "legacy_duplicate_groups_pending": 9,
+    "restricted_archives_not_bypassed": true
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_manually_modified": false,
+    "schedule_modified": false,
+    "additional_automation_created": false,
+    "source_update_automatically_triggered_additional_workflow": true
+  },
+  "unresolved": [
+    "Nine legacy normalized source URL duplicate groups require provenance-preserving consolidation.",
+    "NBO teacher-only 30+ year archive is not public; no access bypass.",
+    "PION missing listed years 2017/2021/2022 require historical host audit; not presumed cancelled.",
+    "RVTHV year/grade/solution gaps and Iceland STAK dynamic pagination remain.",
+    "Binary contents and redistribution rights remain unverified."
+  ]
+}
