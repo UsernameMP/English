@@ -1,0 +1,28 @@
+{
+  "cycle": "r343-20261026T140738937Z",
+  "checked_at": "2026-10-26T14:15:40.439Z",
+  "initial_source_blob_sha": "ba38eb6911272d71af3dfe80dc676e9f975ad09c",
+  "initial_source_count": 2085,
+  "post_enumeration_source_count": 2087,
+  "post_enumeration_includes_r342_addendum": true,
+  "registered_this_cycle": 3,
+  "current_source_blob_sha": "9d77a0a10653b8518afbb3f650931747ee827769",
+  "current_source_count": 2090,
+  "candidates": [
+    {
+      "url": "https://live.poshenloh.com/past-contests",
+      "count": 1
+    },
+    {
+      "url": "https://www.kpo.or.kr/bbs/sub4_1/423341",
+      "count": 1
+    },
+    {
+      "url": "https://github.com/open-cu/awesome-ioai-tasks",
+      "count": 1
+    }
+  ],
+  "all_registered_once": true,
+  "normalization_note": "Scheme/www/trailing slash normalized for audit; merger uses crawl_links.normalize.",
+  "source_update_commit": "a206456f4ba08158117359cf848dfef6ad776646"
+}
