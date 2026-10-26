@@ -94,10 +94,10 @@
       "runs/r350_review_r355_356_50_99.jsonl"
     ],
     "checkpoint_shas": [
-      "f80e7cb890b6312516521468d3bcfefa1cd8422c",
-      "08730fed99a342fc554ada6906c2350ab7aea8ca"
+      "6e75ae0fbc170f4f0701ee405b3e3e528e529f10",
+      "c210826e0a9103b0299a9045bdcda5aa6c97f6c5"
     ],
-    "merge_script_sha": "82033a71480c9d755109981a194b4d1bec0d07b7",
+    "merge_script_sha": "6fc0afa5982a90771facc9203b1d329992a9cff4",
     "canonical_r350_merged": 0,
     "next_cursor": {
       "shard": "resource_000356.jsonl",
@@ -137,6 +137,9 @@
     "dropbox_modified": false,
     "raw_ledger_modified_by_assistant": false,
     "schedule_modified": false,
-    "extra_workflow_runs_started_by_assistant": false
+    "extra_workflow_runs_started_by_assistant": false,
+    "html_index_with_inline_task_text_viewed": 1,
+    "html_task_text_saved_to_github": false,
+    "note": "One KöMaL HTML index with inline problem text was opened while verifying links; task text not stored, binary task materials not downloaded."
   }
 }
