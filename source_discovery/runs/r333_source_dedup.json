@@ -1,0 +1,29 @@
+{
+  "cycle": "r333-20261026T040035640Z",
+  "checked_at": "2026-10-26T04:06:39.617Z",
+  "canonical_source_count": 2024,
+  "removed_existing_canonical_duplicates": [
+    "https://www.saasta.ac.za/national-science-olympiad/",
+    "https://www.web.ichemc.edu.lk/cosl/past-papers/",
+    "https://www.pace.edu/law/academics/environmental-law-program/programs-and-partnerships/national-environmental-law-moot-3",
+    "https://www.pace.edu/law/academics/experiential-learning/advocacy-program/moot-court-competitions/international-2",
+    "https://apex-minds.org/",
+    "https://pedagogie.ac-nantes.fr/les-disciplines-du-second-degre/mathematiques/des-maths/olympiades/les-sujets-des-olympiades",
+    "https://studolymp.com/imc",
+    "https://www.imo.kg/",
+    "https://mo-archive.com/"
+  ],
+  "new_verified_pointers": [
+    "https://mathhub.io/us/competitions/",
+    "https://contest-nexus.com/",
+    "https://www.eisatopon.gr/2024/09/experimental-lincoln-math-olympiad-elmo.html?m=1",
+    "https://www.eisatopon.gr/2024/06/pan-african-mathematics-olympiad-pamo.html",
+    "https://olymp.am/hy/node/1159",
+    "https://olymp.am/hy/node/1160",
+    "https://www.olymp.am/hy/node/1161",
+    "https://www.olymp.am/hy/node/954",
+    "https://www.olymp.am/hy/node/643"
+  ],
+  "checkpoint_rows_after": 16,
+  "canonical_uniqueness": "verified against current sources.jsonl using host/path normalized URLs; final merge remains idempotent"
+}
