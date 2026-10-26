@@ -1,0 +1,100 @@
+{
+  "cycle": "r348-20261026T185904788Z",
+  "reported_at": "2026-10-26T19:09:12.713Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "requested_at": "2026-10-26T18:59:04.788Z",
+    "commit": "b1f03a463501ae8cff06ade2fc3387a371511185",
+    "blob_sha": "abb64bff2d74cbfb715602a76705c83e8eaca02f"
+  },
+  "workflow": {
+    "primary": {
+      "run_id": 40382617467,
+      "conclusion": "success",
+      "completed_at": "2026-10-26T19:02:25Z"
+    },
+    "source_triggered": {
+      "run_id": 40383232113,
+      "status": "in_progress",
+      "conclusion": null,
+      "reason": "Automatically triggered by direct source registry update; no manual second trigger"
+    }
+  },
+  "discovery": {
+    "search_queries": 95,
+    "verified_novel_html_pointers": 6,
+    "canonical_added": 6,
+    "canonical_source_count_after_direct_update": 2116,
+    "checkpoint": "runs/discovery_r348.jsonl",
+    "query_log": "runs/r348_search_queries.json",
+    "source_commit": "d45cf4ba66bcd1153c461ceb5a39a2f76617b5b0"
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 101,
+    "counts": {
+      "solution": 81,
+      "archive": 8,
+      "task": 2,
+      "unrelated": 6,
+      "review": 3
+    },
+    "resource_ranges": [
+      "resource_000353.jsonl:35-99",
+      "resource_000354.jsonl:0-34"
+    ],
+    "checkpoints": [
+      "runs/r348_review_r353_354_00_49.jsonl",
+      "runs/r348_review_r353_354_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "6703174c56624408da61f1ac5e454fd43adaf01f",
+      "791c366b9030f97a3eb1961282c3015a98cddee5"
+    ],
+    "merge_script_registered": true,
+    "canonical_merged": "pending_workflow_readback",
+    "next_cursor": {
+      "shard": "resource_000354.jsonl",
+      "row": 35
+    }
+  },
+  "audit": {
+    "new_findings": 15,
+    "canonical_added": 15,
+    "canonical_backlog_count": 1487,
+    "checkpoint": "runs/r348_audit.jsonl",
+    "commit": "4edcbd71f0ec022056ea16d0e26c951f865ec091"
+  },
+  "first_crawl": {
+    "html_pages": 60,
+    "new_raw_occurrences": 1030,
+    "raw_occurrences_total": 1466194,
+    "unique_resources": 307769,
+    "html_frontier_pending": 138891,
+    "blocked_or_failed_cumulative": 3398
+  },
+  "mime": {
+    "observations": 3975,
+    "application_pdf": 1659,
+    "pdf_without_dotpdf": 1501
+  },
+  "unresolved": [
+    "Three reviewed resources intentionally left review: two KöMaL ZIP attachments and one legacy CGI cross-reference.",
+    "Historical noncontiguous review checkpoints not reconciled.",
+    "OCCAFI VIII direct HTML fetch timed out; preserved in backlog, not added as verified source.",
+    "Second automatic crawler run pending; final counts and label merge require readback."
+  ],
+  "safeguards": {
+    "binary_material_downloaded": false,
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "additional_automation_created": false,
+    "raw_ledger_manually_modified": false,
+    "robots_bypassed": false
+  }
+}
