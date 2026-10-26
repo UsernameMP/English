@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T21:07:34.804Z",
+  "updated_at": "2026-10-26T21:09:51.407Z",
   "deferred_shards": [
     1,
     2,
@@ -3161,7 +3161,8 @@
       "runs/r350_review_r355_356_50_99.jsonl"
     ],
     "canonical_merged": 0,
-    "registered_merge_script_sha": "82033a71480c9d755109981a194b4d1bec0d07b7"
+    "registered_merge_script_sha": "6fc0afa5982a90771facc9203b1d329992a9cff4",
+    "safeguard_note": "One KöMaL HTML task index was viewed to verify link semantics; no task text persisted, no binary files fetched."
   },
   "r349_canonical_merge_confirmed": {
     "cycle": "r350",
