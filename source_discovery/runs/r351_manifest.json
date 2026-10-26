@@ -1,0 +1,135 @@
+{
+  "cycle": "r351-20261026T220651871Z",
+  "reported_at": "2026-10-26T22:12:27.732Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z",
+    "merge_commit_sha": "a4fb3912e1e3321f9917570544d2a43fe0c7f072"
+  },
+  "trigger": {
+    "requested_at": "2026-10-26T22:06:51.871Z",
+    "commit": "c5317f39eae94c95a098956c61f7377fae98d17d",
+    "blob_sha": "16647c1886cbf4add030299e76b6076ff6eabcaa"
+  },
+  "workflow": {
+    "run_id": 40409890782,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/UsernameMP/English/actions/runs/40409890782",
+    "finished_at": "2026-10-26T22:11:24Z",
+    "verified_from": "GitHub Actions API and job logs",
+    "tests_passed": true,
+    "all_steps_success": true
+  },
+  "crawler": {
+    "html_pages_processed": 60,
+    "new_raw_occurrences": 2847,
+    "raw_occurrences_total": 1484256,
+    "previous_raw_occurrences_total": 1481409,
+    "last_raw_shard": "batch_014842.jsonl",
+    "last_raw_rows": 56,
+    "unique_resource_urls": 311070,
+    "previous_unique_resource_urls": 309874,
+    "new_unique_resource_urls": 1196,
+    "last_resource_shard": "resource_003111.jsonl",
+    "last_resource_rows": 70,
+    "pending_html_frontier": 140215,
+    "blocked_or_failed_cumulative": 3453,
+    "metric_source": "GitHub Actions job logs and raw/resource shard readback; blocked_or_failed includes mixed access/network errors, not all HTTP failures"
+  },
+  "canonical": {
+    "sources": 2123,
+    "sources_added_from_r350": 5,
+    "sources_blob_sha": "9d3a6a4e9b6dd3c21689256e2e79caa805200e64",
+    "labels": 9556,
+    "labels_added_from_r350": 100,
+    "labels_blob_sha": "499f1ef63e8e4b59db301b23538f789199f82e31",
+    "backlog_blob_sha": "fe98d37a0a61a4f0267b34d7c8837144b1707e47",
+    "backlog_new_from_r351": 0
+  },
+  "discovery": {
+    "search_queries": 57,
+    "exact_query_repeats_against_r343_r350": 0,
+    "prior_queries_checked": 570,
+    "verified_HTML_pointers_checkpointed": 20,
+    "canonical_added_from_r351_confirmed": 0,
+    "checkpoint": "runs/discovery_r351.jsonl",
+    "checkpoint_sha": "1fa17a433233a79331600b4e96282f6337e0824b",
+    "search_log": "runs/r351_search_queries.json",
+    "canonical_merge_pending": true,
+    "notes": "The 20 verified pointers are not claimed as 20 unique new canonical sources; dedup by merge_sources.py pending existing workflow."
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 107,
+    "counts": {
+      "solution": 35,
+      "task": 3,
+      "unrelated": 61,
+      "review": 1
+    },
+    "ranges": [
+      "resource_000356.jsonl:35-99",
+      "resource_000357.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000956.jsonl",
+      "batch_000957.jsonl",
+      "batch_000958.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r351_review_r356_357_00_49.jsonl",
+      "runs/r351_review_r356_357_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "cd3741ef9cb82ef13f3cfdbe6cc4f925995ed7a3",
+      "40cbfef7153331921528245c658ebe751b495860"
+    ],
+    "merge_script_sha": "7436772d50825a66d1eed4f8998ee8982c73dd6b",
+    "canonical_r351_merged": 0,
+    "next_cursor": {
+      "shard": "resource_000357.jsonl",
+      "row": 35
+    },
+    "duplicate_raw_parent_occurrences": 7,
+    "important_false_positive": "Japanese exam venue maps under /archive/ incorrectly type-hinted archive; classified unrelated by parent and Japanese anchor context",
+    "uncertain": "KöMaL B4570 statistics-only link retained as review"
+  },
+  "audit": {
+    "checkpoint": "runs/r351_audit.jsonl",
+    "checkpoint_sha": "3e8ba8bc1ea4408497ce4077f0df845fcfe68771",
+    "new_findings": 23,
+    "canonical_backlog_added": 0,
+    "notable": [
+      "APLO published translations not used in actual contests, 2021–22 contest versions differ, CC BY-NC 4.0",
+      "Ethics Bowl post-2022 archive paywalled; no bypass",
+      "IMMC winning papers are participant_work and rights unknown",
+      "KöMaL statistics-only not automatically solution",
+      "Japan 2025 exam venue map false positives",
+      "Czech historical volumes combine tasks and solutions, rights unknown"
+    ]
+  },
+  "mime": {
+    "observations_blob_sha": "07b08bd08ca665c77cde523907b22546f9988e15",
+    "exact_current_count": "not independently readable through connector size limits",
+    "notes": "MIME-only observations kept separate from crawler errors; no PDF/ZIP/image bodies downloaded; review batch includes one image/jpeg cover correctly excluded"
+  },
+  "unresolved": [
+    "20 verified HTML source pointers await normalized canonical dedup/merge on next existing workflow.",
+    "100 r351 SHA-pinned labels await canonical link_labels.jsonl merge on next existing workflow.",
+    "23 audit gaps are in checkpoint; backlog.jsonl unchanged because safe large-file append is unavailable.",
+    "One KöMaL statistics-only resource remains review; historical checkpoints need reconciliation.",
+    "MIME observations exact count unreadable via connector size limits."
+  ],
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automation_instances_created": false,
+    "workflow_trigger_count": 1,
+    "source_redistribution": false
+  }
+}
