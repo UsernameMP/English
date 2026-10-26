@@ -1,6 +1,6 @@
 {
   "cycle": "r334-20261026T045932017Z",
-  "reported_at": "2026-10-26T05:07:00.260Z",
+  "reported_at": "2026-10-26T05:10:00.695Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
@@ -43,13 +43,21 @@
     }
   },
   "discovery": {
-    "queries_logged": 65,
-    "html_pointers_checkpointed": 23,
-    "unique_within_checkpoint": 23,
-    "canonical_unique_status": "not established; idempotent merge pending",
+    "queries_logged": 101,
+    "html_pointers_checkpointed": 28,
+    "unique_within_checkpoint": 28,
+    "canonical_preexisting_duplicates": 21,
+    "unique_new_sources_merged": 7,
+    "canonical_sources_before": 2048,
+    "canonical_sources_after": 2055,
+    "canonical_sources": 2055,
+    "merged_in_this_cycle": 7,
     "checkpoint": "runs/discovery_r334.jsonl",
-    "canonical_sources": 2048,
-    "merged_in_this_cycle": 0
+    "dedup_report": "runs/r334_source_dedup.json",
+    "canonical_merge_commits": [
+      "1a1aea0181ccf152cf8492589457e22d536a2fea",
+      "0a6165a416b8111ef4a000172ae389a9364462e7"
+    ]
   },
   "review": {
     "resource_shard": "resource_000339.jsonl",
@@ -86,26 +94,28 @@
     "robots_separate": true
   },
   "audit": {
-    "new_rows": 24,
+    "new_rows": 33,
     "backlog_before": 1291,
-    "backlog_after": 1315,
+    "backlog_after": 1324,
     "checkpoint": "runs/r334_audit.jsonl",
     "r333_off_by_one_corrected": true,
-    "github_diff_stats_zero_added_shards_confirmed": true
+    "github_diff_stats_zero_added_shards_confirmed": true,
+    "search_index_access_blockers_recorded": 6
   },
   "verified_blob_sha": {
     "source_discovery/run_trigger.json": "b6eca6a9ace2585b86dcc86385e0cc9f63aa09f5",
     "source_discovery/crawl_state.json": "107b461a5f1d9665c68d9ecdcf43749576fa7faa",
-    "source_discovery/sources.jsonl": "42e1c0a9da542dfaed15fd491580a99980a6e2bf",
+    "source_discovery/sources.jsonl": "84dd9af8d8efa3cd6c316c8d79db3754b0abbd46",
     "source_discovery/link_labels.jsonl": "342721420765bb6ebebc272026cd4b1e621ef6a8",
-    "source_discovery/backlog.jsonl": "96e4ef56e993e067b19e4e137f7062133698cc6a",
+    "source_discovery/backlog.jsonl": "21a8a9df3536dc0ead5a596ee147ee2215b98c89",
     "source_discovery/review_state.json": "6ab5aa42b66ef517620288041e26c85aa97e6ead",
     "source_discovery/resource_observations.jsonl": "0e10a2346f342fb2a35ec3c688682a762f855d08",
-    "source_discovery/runs/discovery_r334.jsonl": "7bb461e329bd900c5bf5955eedc871ef80457d0a",
+    "source_discovery/runs/discovery_r334.jsonl": "4b2b05b8e86ee30ecf80479010f9260d05da09e0",
     "source_discovery/runs/r334_review_r339.jsonl": "fb2694ba8d4efaa4721d91011fc3b33499b60d0b",
-    "source_discovery/runs/r334_queries.jsonl": "9e241e42c9a7eb5cd129d35a4bffd4f5f37e4eda",
-    "source_discovery/runs/r334_audit.jsonl": "488f0b96a088e9606851debe4d8d7191b87cc4d7",
-    "source_discovery/merge_review_checkpoints.py": "50cd9607d8560f5654312afdfbdedcec9e183abc"
+    "source_discovery/runs/r334_queries.jsonl": "42f2f091d0c664f807fa2152268b0b258e1ab847",
+    "source_discovery/runs/r334_audit.jsonl": "31b46a24e0b8b251b36425a269d853074dac19c4",
+    "source_discovery/merge_review_checkpoints.py": "50cd9607d8560f5654312afdfbdedcec9e183abc",
+    "source_discovery/runs/r334_source_dedup.json": "32c9a641033fe80e8bd93b63f4047a7500b8e175"
   },
   "safeguards": {
     "binary_downloaded": false,
@@ -115,10 +125,11 @@
     "extra_workflow_instances_created": false
   },
   "unresolved": [
-    "23 discovery pointers await idempotent canonical merge; exact new unique source count not yet known",
+    "21/28 discovered HTML pointers already existed in canonical registry; only seven unique URLs were added; further discovery must compare against all 2055 canonical URLs before search/promotion.",
     "100 r334 reviewed labels SHA-pinned and awaiting next ordinary workflow merge",
     "Six official JOI/JOIG judge-data ZIP URLs remain review",
     "MIME new response types not individually established because large observation file not readable by connector; previous PDF count is not current",
-    "Coverage gaps and rights restrictions remain open; HTML frontier is not a completeness proof"
+    "Coverage gaps and rights restrictions remain open; HTML frontier is not a completeness proof",
+    "Official QSHA Albania year pages require subject/stage/grade audit; older years remain unverified."
   ]
 }
