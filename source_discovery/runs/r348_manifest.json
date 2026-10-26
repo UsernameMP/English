@@ -1,6 +1,6 @@
 {
   "cycle": "r348-20261026T185904788Z",
-  "reported_at": "2026-10-26T19:09:12.713Z",
+  "reported_at": "2026-10-26T19:14:37.636Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "pr188": {
@@ -20,8 +20,9 @@
     },
     "source_triggered": {
       "run_id": 40383232113,
-      "status": "in_progress",
-      "conclusion": null,
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-26T19:13:09Z",
       "reason": "Automatically triggered by direct source registry update; no manual second trigger"
     }
   },
@@ -57,11 +58,12 @@
       "791c366b9030f97a3eb1961282c3015a98cddee5"
     ],
     "merge_script_registered": true,
-    "canonical_merged": "pending_workflow_readback",
+    "canonical_merged": 0,
     "next_cursor": {
       "shard": "resource_000354.jsonl",
       "row": 35
-    }
+    },
+    "canonical_merge_status": "pending next normal workflow; second run checkout preceded SHA-pinned checkpoint registration; 9256 canonical labels verified unchanged"
   },
   "audit": {
     "new_findings": 15,
@@ -70,24 +72,19 @@
     "checkpoint": "runs/r348_audit.jsonl",
     "commit": "4edcbd71f0ec022056ea16d0e26c951f865ec091"
   },
-  "first_crawl": {
-    "html_pages": 60,
-    "new_raw_occurrences": 1030,
-    "raw_occurrences_total": 1466194,
-    "unique_resources": 307769,
-    "html_frontier_pending": 138891,
-    "blocked_or_failed_cumulative": 3398
-  },
   "mime": {
-    "observations": 3975,
+    "observations": 3978,
     "application_pdf": 1659,
-    "pdf_without_dotpdf": 1501
+    "pdf_without_dotpdf": 1501,
+    "sha": "abab4076f0a04d8c89c0e2350e5f39ae388a6f7e",
+    "note": "MIME-only observations are candidates, not semantic task confirmations"
   },
   "unresolved": [
-    "Three reviewed resources intentionally left review: two KöMaL ZIP attachments and one legacy CGI cross-reference.",
-    "Historical noncontiguous review checkpoints not reconciled.",
-    "OCCAFI VIII direct HTML fetch timed out; preserved in backlog, not added as verified source.",
-    "Second automatic crawler run pending; final counts and label merge require readback."
+    "Three reviewed resources intentionally remain review: two KöMaL ZIP attachments and one legacy CGI cross-reference.",
+    "100 r348 semantic labels are SHA-pinned and registered in merge_review_checkpoints.py but not yet canonical; next normal workflow should merge.",
+    "Historical noncontiguous checkpoints remain unreconciled.",
+    "OCCAFI VIII direct HTML fetch failed; retained in audit backlog, not added as verified source.",
+    "No binary documents downloaded; no assumptions about redistribution rights."
   ],
   "safeguards": {
     "binary_material_downloaded": false,
@@ -96,5 +93,32 @@
     "additional_automation_created": false,
     "raw_ledger_manually_modified": false,
     "robots_bypassed": false
+  },
+  "crawl": {
+    "html_pages_this_cycle": 120,
+    "new_raw_occurrences_this_cycle": 5655,
+    "raw_occurrences_total": 1470819,
+    "raw_last_shard": "batch_014709.jsonl",
+    "raw_last_shard_rows": 19,
+    "unique_resource_urls": 308745,
+    "resource_last_shard": "resource_003088.jsonl",
+    "resource_last_shard_rows": 45,
+    "html_frontier_pending": 139482,
+    "blocked_or_failed_cumulative": 3412,
+    "last_crawl_state_updated_at": "2026-10-26T19:10:44Z",
+    "not_exhaustiveness": true
+  },
+  "canonical": {
+    "sources": 2116,
+    "sources_added_in_cycle": 8,
+    "source_growth_breakdown": {
+      "prior_r347_pending_merged": 2,
+      "r348_direct_novel": 6
+    },
+    "reviewed_labels": 9256,
+    "review_labels_new_canonical_this_cycle": 0,
+    "review_labels_checkpointed_pending": 100,
+    "backlog": 1487,
+    "backlog_added_in_cycle": 15
   }
 }
