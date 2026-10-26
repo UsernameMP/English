@@ -1,0 +1,118 @@
+{
+  "cycle": "r337-20261026T081807947Z",
+  "reported_at": "2026-10-26T08:24:00Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "requested_at": "2026-10-26T08:18:07.947Z",
+    "commit": "5175382b893008dbf6dd59388c37ba2f399510e8",
+    "blob_sha": "9d06eba376aeaa67d9d2a7a8d3ee0b861c9cd0b1"
+  },
+  "workflow": {
+    "run_id": 40291313763,
+    "url": "https://github.com/UsernameMP/English/actions/runs/40291313763",
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-26T08:23:52Z",
+    "output_commit": "68f47765e5f1187b61a0457b41cf727e23b15610",
+    "job_log_confirmed": true
+  },
+  "crawl": {
+    "html_pages_processed": 60,
+    "new_links_reported_by_workflow": 2658,
+    "raw_total_from_last_shard": 1419823,
+    "raw_last_shard": "batch_014198.jsonl",
+    "raw_last_shard_rows": 23,
+    "raw_total_r336_manifest": 1417065,
+    "raw_total_difference": 2758,
+    "delta_vs_new_links_unreconciled": 100,
+    "unique_resource_urls": 299581,
+    "resource_last_shard": "resource_002996.jsonl",
+    "resource_last_shard_rows": 81,
+    "html_pending": 135429,
+    "blocked_or_failed_cumulative": 3182,
+    "frontier_not_completeness": true
+  },
+  "discovery": {
+    "search_queries_logged": 49,
+    "unique_search_queries": 48,
+    "verified_public_HTML_pointers_checkpointed": 12,
+    "canonical_new_from_previous_r336_checkpoint": 4,
+    "canonical_sources_confirmed_by_workflow": 2065,
+    "r337_canonical_unique_new": "not yet established; dedup on next ordinary workflow",
+    "checkpoint": "runs/discovery_r337.jsonl",
+    "checkpoint_sha": "90501fd19b51280d4c481fca92eb00cb8a104555",
+    "queries": "runs/r337_queries.jsonl"
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "resource_ranges": [
+      "resource_000342.jsonl:35-99",
+      "resource_000343.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000875.jsonl",
+      "batch_000876.jsonl"
+    ],
+    "counts": {
+      "unrelated": 59,
+      "task": 9,
+      "solution": 21,
+      "source": 6,
+      "review": 3,
+      "criteria": 2
+    },
+    "checkpoints": [
+      {
+        "path": "runs/r337_review_r342_343_00_49.jsonl",
+        "rows": 50,
+        "sha": "79544ba01295141ec60b06512eb5e322311718d7"
+      },
+      {
+        "path": "runs/r337_review_r342_343_50_99.jsonl",
+        "rows": 50,
+        "sha": "8d077e68d037a5dab7c4cc9b8cb28f9124cb9fbc"
+      }
+    ],
+    "pinned_in": "merge_review_checkpoints.py",
+    "canonical_labels_after_workflow": 8156,
+    "canonical_merged_from_r336": 100,
+    "r337_canonical_merge_pending": 100,
+    "next_resource_shard": "resource_000343.jsonl",
+    "next_row_index": 35,
+    "three_judge_zip_resources_review": true,
+    "raw_unchanged": true
+  },
+  "mime": {
+    "observations_sha": "f35b718fa68f29971d4116458a3fb46ca4fd8596",
+    "changed_during_workflow": true,
+    "current_count_not_established": true,
+    "non_html_not_error": true,
+    "binary_bodies_not_downloaded": true
+  },
+  "audit": {
+    "checkpoint": "runs/r337_audit.jsonl",
+    "checkpoint_sha": "891ea795a34b60d12c88c30d25e90dad65c33bd2",
+    "rows": 16,
+    "canonical_backlog_confirmed_before": 1339,
+    "canonical_backlog_unchanged": true,
+    "canonical_merge_pending": 16,
+    "raw_count_reconciliation_open": true
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_manually_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false
+  },
+  "unresolved": [
+    "12 verified HTML source pointers await deduplication against 2065 canonical URLs; no claim of 12 new canonical additions.",
+    "100 r337 reviewed labels SHA-pinned and awaiting next ordinary workflow merge; three judge ZIP resources intentionally remain review.",
+    "16 audit findings checkpointed; large canonical backlog.jsonl not overwritten.",
+    "Raw ledger delta 2758 vs workflow new_links 2658 differs by 100; unresolved.",
+    "MIME registry blob changed but count cannot be read through oversized connector response.",
+    "One exact duplicate search query within 49 logged; 48 distinct."
+  ]
+}
