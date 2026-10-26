@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T13:38:30.998Z",
+  "updated_at": "2026-10-26T14:13:24.232Z",
   "deferred_shards": [
     1,
     2,
@@ -12,9 +12,11 @@
     4,
     5
   ],
-  "pending_label_checkpoints": [],
-  "pending_labels_count": 0,
-  "canonical_merge_status": "Automatic GitHub workflow #40330861906 merged all 100 SHA-pinned r342 labels, canonical 8656->8756; older noncontiguous historical checkpoints remain separately unresolved.",
+  "pending_label_checkpoints": [
+    "runs/r343_review_r348_349.jsonl"
+  ],
+  "pending_labels_count": 100,
+  "canonical_merge_status": "r343: 100 audited labels SHA-pinned in merge_review_checkpoints.py, pending ordinary workflow; prior canonical 8756 after r342. Historical noncontiguous checkpoints remain separately unresolved.",
   "canonical_merged_in_cycle": 342,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -154,13 +156,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000348.jsonl",
+    "next_resource_shard": "resource_000349.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000347.jsonl",
-    "last_completed_cycle": "r342-20261026T132025874Z",
-    "cycle": "r342-20261026T132025874Z",
-    "reason": "100 unique URLs from resource_000347 rows35-99 and resource_000348 rows0-34; 100 original raw occurrences in batch_000889..000895; binary bodies not fetched.",
-    "skip_already_reviewed": "resource_000348 rows0-34 classified in r342; next row35"
+    "last_completed_shard": "resource_000348.jsonl",
+    "last_completed_cycle": "r343-20261026T140738937Z",
+    "cycle": "r343-20261026T140738937Z",
+    "reason": "100 unique resources: resource_000348 rows35-99 and resource_000349 rows0-34, 100 raw occurrences in batch_000896..000900. No binaries downloaded.",
+    "skip_already_reviewed": "resource_000349 rows0-34 classified in r343; next row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2915,5 +2917,31 @@
       "next_row_index": 35
     },
     "historical_unreconciled_remain": true
+  },
+  "r343_review": {
+    "cycle": "r343-20261026T140738937Z",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "resource_ranges": [
+      "resource_000348.jsonl:35-99",
+      "resource_000349.jsonl:0-34"
+    ],
+    "counts": {
+      "archive": 2,
+      "task": 6,
+      "unrelated": 23,
+      "solution": 68,
+      "source": 1
+    },
+    "label_checkpoint": "runs/r343_review_r348_349.jsonl",
+    "label_blob_sha": "97dc7701c9d1accbf3f5a700144bd8f79589cd54",
+    "canonical_merged": 0,
+    "raw_shards": [
+      "batch_000896.jsonl",
+      "batch_000897.jsonl",
+      "batch_000898.jsonl",
+      "batch_000899.jsonl",
+      "batch_000900.jsonl"
+    ]
   }
 }
