@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T04:05:26.403Z",
+  "updated_at": "2026-10-26T04:05:39.044Z",
   "deferred_shards": [
     1,
     2,
@@ -160,7 +160,7 @@
     "next_resource_shard": "resource_000339.jsonl",
     "last_completed_shard": "resource_000338.jsonl",
     "cycle": "r333-20261026T040035640Z",
-    "reason": "100 unique JOI/JOIG 2021/22 URL resources classified using 100 original raw occurrences from batch_000870..000873; checkpoint SHA-pinned; no raw evidence deleted. Canonical raw cursor unchanged."
+    "reason": "100 unique JOI/JOIG 2021/22 URL resources classified using 100 original raw occurrences from batch_000870 and batch_000871; checkpoint SHA-pinned; no raw evidence deleted. Canonical raw cursor unchanged."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2571,9 +2571,7 @@
     "raw_occurrences": 100,
     "raw_shards": [
       "batch_000870.jsonl",
-      "batch_000871.jsonl",
-      "batch_000872.jsonl",
-      "batch_000873.jsonl"
+      "batch_000871.jsonl"
     ],
     "counts": {
       "review": 6,
