@@ -66,5 +66,23 @@
     "Japan geography olympiad 過去問 解答 地理オリンピック",
     "Korean linguistics olympiad 기출문제 해설 대회 2024"
   ],
-  "notes": "Queries were chosen after inspecting r349 and recent cycle manifests; indexed results not equivalent to verified sources. Direct HTML checks documented in discovery_r350; inaccessible sites kept for audit. No binary bodies fetched."
+  "notes": "60 unique queries. Exact string dedup confirmed against 510 queries in r343–r349; older r340–r342 logs not found at standard paths. Semantic overlap and already-indexed source URLs may remain; source dedup delegated to merge_sources.py. No binary content downloaded.",
+  "prior_query_dedup": {
+    "checked_logs": [
+      "r343",
+      "r344",
+      "r345",
+      "r346",
+      "r347",
+      "r348",
+      "r349"
+    ],
+    "prior_exact_queries": 510,
+    "exact_repeats": 0,
+    "not_checked": [
+      "r340",
+      "r341",
+      "r342"
+    ]
+  }
 }
