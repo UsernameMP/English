@@ -1,0 +1,145 @@
+{
+  "cycle": "r347-20261026T180304725Z",
+  "reported_at": "2026-10-26T18:19:39.279Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z",
+    "verified_via": "GitHub fetch_pr"
+  },
+  "trigger": {
+    "requested_at": "2026-10-26T18:03:04.725Z",
+    "commit": "7c47ea42ad5c6edbaf0baef13a0fa7b677ef6996",
+    "blob_sha": "015ca367906088c3916e41bebf3d2ea8e609501a"
+  },
+  "workflow": {
+    "name": "RIFT Link Enumeration",
+    "direct_run_id_or_conclusion": "not accessible through connected GitHub Actions API; publication verified independently",
+    "enumerations_observed": 2,
+    "first_crawl_state_updated_at": "2026-10-26T18:08:13Z",
+    "second_crawl_state_updated_at": "2026-10-26T18:13:43Z",
+    "second_run_automatically_triggered_by_sources_change": true,
+    "final_crawl_state_blob_sha": "57c4e69983c2fbaac3022ca454f89f9b610181d3",
+    "final_label_blob_sha": "b9edb1edf31e1967d4bcc5382495341bd46a736c"
+  },
+  "crawl": {
+    "html_pages_this_cycle": 120,
+    "new_raw_occurrences_this_cycle": 5906,
+    "raw_occurrences_total": 1465164,
+    "raw_last_shard": "batch_014652.jsonl",
+    "raw_last_shard_rows": 64,
+    "unique_resource_urls": 307724,
+    "resource_last_shard": "resource_003078.jsonl",
+    "resource_last_shard_rows": 24,
+    "html_frontier_pending": 138918,
+    "blocked_or_failed_cumulative": 3385,
+    "not_exhaustiveness": true
+  },
+  "canonical": {
+    "sources": 2108,
+    "source_growth_since_r346": 9,
+    "source_growth_breakdown": {
+      "prior_discovery_merged": 5,
+      "r347_direct_novel": 4
+    },
+    "reviewed_labels": 9256,
+    "labels_merged_from_r346": 100,
+    "labels_merged_from_r347": 100,
+    "backlog": 1472,
+    "backlog_added_in_r347": 22
+  },
+  "discovery": {
+    "unique_search_queries": 75,
+    "html_pointers_verified": 11,
+    "already_canonical_at_dedup": 5,
+    "new_canonical_added": 4,
+    "novel_checkpointed_pending_merge": 2,
+    "checkpoint_files": [
+      "runs/discovery_r347.jsonl",
+      "runs/discovery_r347_addendum.jsonl"
+    ],
+    "query_log": "runs/r347_search_queries.json",
+    "canonical_dedup_verified_via": "GitHub fetch_blob of sources.jsonl; normalized URL exact scheme/netloc and fragment"
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 107,
+    "resource_ranges": [
+      "resource_000352.jsonl:35-99",
+      "resource_000353.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000910.jsonl",
+      "batch_000911.jsonl",
+      "batch_000912.jsonl",
+      "batch_000913.jsonl",
+      "batch_000914.jsonl",
+      "batch_000915.jsonl"
+    ],
+    "counts": {
+      "task": 46,
+      "solution": 32,
+      "unrelated": 10,
+      "review": 7,
+      "archive": 1,
+      "source": 4
+    },
+    "checkpoints": [
+      "runs/r347_review_r352_353_00_49.jsonl",
+      "runs/r347_review_r352_353_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "71ebcb66c7f72b2bb24d272c464a5ae486da6a3e",
+      "5ca38586a22331ef963d1bbb572b357f636fe122"
+    ],
+    "canonical_merged": 100,
+    "merge_contract_bug_fixed": "r346 50-row checkpoint files were missing from EXPECTED_ROWS; fixed in commit db871287cff55442927d53c1b2de89a543871907; both cycles merged in next workflow",
+    "next_cursor": {
+      "shard": "resource_000353.jsonl",
+      "row": 35
+    },
+    "crosslinked_grade7_8_resources": 3,
+    "unresolved_review": 7
+  },
+  "mime": {
+    "observations": 3941,
+    "application_pdf": 1653,
+    "pdf_without_dotpdf_suffix": 1494,
+    "blob_sha": "8261d2344f92d58bcb1ffa32d1a306f6261e82d0",
+    "classification_note": "MIME-only non-HTML observation is not proof of a task; no PDF body accessed"
+  },
+  "audit": {
+    "new_findings": 22,
+    "canonical_backlog_added": 22,
+    "checkpoints": [
+      "runs/r347_audit.jsonl",
+      "runs/r347_audit_addendum.jsonl"
+    ],
+    "main_topics": [
+      "Bolivian OPMAT numbering and historical gaps",
+      "Polish stage and rights coverage",
+      "Indonesia KSN/OSN naming and provenance",
+      "Swedish 2020 no final and CC BY-NC-SA",
+      "NACLO missing 2024 PDFs",
+      "HBCSE restricted rights",
+      "Serbian shared grade-7/8 URLs",
+      "KöMaL mixed HTML solution/statistics"
+    ]
+  },
+  "unresolved": [
+    "Two novel official linguistics archives are in discovery_r347_addendum.jsonl but not yet merged into canonical sources; next normal workflow should deduplicate.",
+    "Seven resource labels intentionally remain review, including dynamic PDF print endpoints and auxiliary TXT attachments.",
+    "Historical noncontiguous checkpoints remain unreconciled; do not equate canonical labels with full coverage.",
+    "GitHub Actions run IDs/conclusions were not directly returned by connector; two successful repository state publications verified, not an explicit Actions success conclusion."
+  ],
+  "safeguards": {
+    "binary_task_material_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_manually_modified": false,
+    "schedule_modified": false,
+    "additional_automation_created": false,
+    "robots_bypassed": false,
+    "rights_assumed": false
+  }
+}
