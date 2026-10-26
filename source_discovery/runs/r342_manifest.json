@@ -1,6 +1,6 @@
 {
   "cycle": "r342-20261026T132025874Z",
-  "reported_at": "2026-10-26T13:35:12.713Z",
+  "reported_at": "2026-10-26T13:38:50.881Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "pr188": {
@@ -19,9 +19,10 @@
     "crawl_output_commit": "c6fcf68d45be8d89d5b1e594d0dc08a86fec27e1",
     "automatically_triggered_by_source_update": {
       "run_id": 40330861906,
-      "status": "in_progress",
-      "conclusion": null,
-      "manual_trigger": false
+      "status": "completed",
+      "conclusion": "success",
+      "manual_trigger": false,
+      "triggered_by_source_update_commit": "d944e72a21b243e4c5fd698a7c7e15a5fc82e788"
     }
   },
   "crawl": {
@@ -34,7 +35,20 @@
     "unique_resource_urls_after_trigger_run": 303051,
     "queue_after_trigger_run": 136752,
     "blocked_or_failed_after_trigger_run": 3242,
-    "frontier_not_exhaustiveness": true
+    "frontier_not_exhaustiveness": true,
+    "automatic_followup_run": {
+      "run_id": 40330861906,
+      "html_pages_processed": 60,
+      "new_raw_occurrences": 2319,
+      "raw_total_after": 1440130,
+      "unique_resource_urls_after": 303937,
+      "pending_pages_after": 137359,
+      "blocked_or_failed_after": 3289,
+      "raw_last_shard": "batch_014402.jsonl",
+      "raw_last_shard_rows": 30,
+      "resource_last_shard": "resource_003040.jsonl",
+      "resource_last_shard_rows": 37
+    }
   },
   "discovery": {
     "search_queries": 65,
@@ -53,7 +67,9 @@
       "runs/discovery_r342_addendum.jsonl",
       "runs/r342_source_dedup.json"
     ],
-    "index_only_unverified": 2
+    "index_only_unverified": 2,
+    "source_count_after_followup": 2085,
+    "pending_checkpoint_merger": "Next ordinary workflow merge_sources.py; no manual extra run requested."
   },
   "review": {
     "unique_resources": 100,
@@ -73,7 +89,7 @@
     "labels_checkpointed": 100,
     "labels_merged_by_trigger_run_from_r341": 100,
     "canonical_labels_after_trigger_run": 8656,
-    "new_labels_canonical_merge": "pending extra automatic workflow outcome",
+    "new_labels_canonical_merge": "completed by automatic workflow #40330861906",
     "label_checkpoints": [
       "runs/r342_review_r347_348_00_49.jsonl",
       "runs/r342_review_r347_348_50_99.jsonl"
@@ -83,14 +99,18 @@
       "shard": "resource_000348.jsonl",
       "row": 35
     },
-    "unresolved_zip": 6
+    "unresolved_zip": 6,
+    "canonical_labels_after_followup": 8756,
+    "new_labels_canonical_merged": 100,
+    "review_state_blob_sha": "54acb4935d05c49b9b4d2a8be6b7dd1ac7ef5507"
   },
   "mime": {
-    "observations_after_trigger_run": 3883,
+    "observations_after_followup": 3887,
     "application_pdf": 1653,
     "pdf_without_dot_pdf": 1480,
-    "blob_sha": "d524ccdb2abc137978cc198530a5ead04f6193d7",
-    "binary_downloaded": false
+    "blob_sha": "a2d8295a5afc0cc8c62eace3ff5eb4e3b2fd3735",
+    "binary_downloaded": false,
+    "mime_only_not_document_validity": true
   },
   "audit": {
     "added": 20,
@@ -99,7 +119,8 @@
       "runs/r342_audit.jsonl",
       "runs/r342_audit_addendum.jsonl"
     ],
-    "unknown_sections_not_exhausted": true
+    "unknown_sections_not_exhausted": true,
+    "canonical_backlog_blob_sha": "9da0350254d64f7e2f8b54e1382053822e1d56b1"
   },
   "safeguards": {
     "binary_downloaded": false,
@@ -114,6 +135,6 @@
     "Two newly verified HTML pointers are checkpointed but not yet merged into canonical sources.jsonl.",
     "Six IYPT meeting attachment ZIP URLs remain review without inspecting ZIP contents.",
     "Earlier historical review checkpoints remain unreconciled.",
-    "Second workflow triggered automatically by sources.jsonl update; its final state is being checked."
+    "Automatic workflow #40330861906 completed successfully and merged 100 r342 labels; its crawler data is included in final counts."
   ]
 }
