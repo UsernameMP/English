@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T12:16:25.028Z",
+  "updated_at": "2026-10-26T13:27:35.020Z",
   "deferred_shards": [
     1,
     2,
@@ -13,12 +13,12 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r341_review_r346_347_00_49.jsonl",
-    "runs/r341_review_r346_347_50_99.jsonl"
+    "runs/r342_review_r347_348_00_49.jsonl",
+    "runs/r342_review_r347_348_50_99.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "Workflow #40319844160 merged 100 r340 labels, canonical 8456->8556; 100 r341 labels SHA-pinned in checkpoints. Direct update of 9.6MB link_labels.jsonl failed with h2 protocol error; canonical file unchanged; next ordinary workflow may merge idempotently.",
-  "canonical_merged_in_cycle": 341,
+  "canonical_merge_status": "Workflow #40329738806 merged 100 r341 labels, canonical 8556->8656; 100 r342 labels in two SHA-pinned checkpoints, merge script updated, canonical merge awaits next ordinary workflow. Historical noncontiguous checkpoints remain separately unresolved.",
+  "canonical_merged_in_cycle": 342,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -157,13 +157,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000347.jsonl",
+    "next_resource_shard": "resource_000348.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000346.jsonl",
-    "last_completed_cycle": "r341-20261026T120508689Z",
-    "cycle": "r341-20261026T120508689Z",
-    "reason": "100 unique resources from resource_000346 rows35-99 and resource_000347 rows0-34; 101 raw occurrences from batch_000883..000888; no binary body fetched.",
-    "skip_already_reviewed": "resource_000347 rows0-34 already reviewed in r341; next row35"
+    "last_completed_shard": "resource_000347.jsonl",
+    "last_completed_cycle": "r342-20261026T132025874Z",
+    "cycle": "r342-20261026T132025874Z",
+    "reason": "100 unique URLs from resource_000347 rows35-99 and resource_000348 rows0-34; 100 original raw occurrences in batch_000889..000895; binary bodies not fetched.",
+    "skip_already_reviewed": "resource_000348 rows0-34 classified in r342; next row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2863,5 +2863,46 @@
     ],
     "merge_script_blob_sha": "eec884c55bc0f515f814bb1f48eb392c86584eec",
     "canonical_blocker": "Direct GitHub update_file failed with h2 protocol error on oversized canonical link_labels.jsonl; no loss of data; await next ordinary workflow."
+  },
+  "r342_pending": {
+    "cycle": "r342-20261026T132025874Z",
+    "resource_ranges": [
+      "resource_000347.jsonl:35-99",
+      "resource_000348.jsonl:0-34"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000889.jsonl",
+      "batch_000890.jsonl",
+      "batch_000891.jsonl",
+      "batch_000892.jsonl",
+      "batch_000893.jsonl",
+      "batch_000894.jsonl",
+      "batch_000895.jsonl"
+    ],
+    "counts": {
+      "task": 7,
+      "solution": 13,
+      "criteria": 4,
+      "source": 1,
+      "unrelated": 69,
+      "review": 6
+    },
+    "checkpoints": [
+      {
+        "path": "runs/r342_review_r347_348_00_49.jsonl",
+        "sha": "c8fddef80c9beb558ef660e91393a5ecc83c1739",
+        "rows": 50
+      },
+      {
+        "path": "runs/r342_review_r347_348_50_99.jsonl",
+        "sha": "024a728bf68f34f33f32d54be2f86dbb4effb19e",
+        "rows": 50
+      }
+    ],
+    "canonical_merged": 0,
+    "canonical_labels_after_current_workflow": 8656,
+    "unresolved": "Six IYPT administrative ZIP attachments remain review; no ZIP bodies fetched."
   }
 }
