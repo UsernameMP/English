@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T03:05:04.331Z",
+  "updated_at": "2026-10-26T03:11:16.356Z",
   "deferred_shards": [
     1,
     2,
@@ -13,12 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r331_review_r336.jsonl",
     "runs/r332_review_r337.jsonl"
   ],
-  "pending_labels_count": 200,
-  "canonical_merge_status": "r332 workflow #40261837948 started; r331 checkpoint merge step succeeded but canonical write not yet verified. r332 100 labels in SHA-pinned runs/r332_review_r337.jsonl; canonical merge pending next ordinary workflow. Operational cursor held at resource_000337.jsonl.",
-  "canonical_merged_in_cycle": 330,
+  "pending_labels_count": 100,
+  "canonical_merge_status": "RIFT Link Enumeration #40261837948 completed success at 2026-10-26T03:10:29Z. GitHub Actions log confirms 100 r331 labels merged into canonical link_labels.jsonl (7556 -> 7656). r332 100 labels SHA-pinned in runs/r332_review_r337.jsonl and merge_review_checkpoints.py; next ordinary workflow merge pending. Operational cursor held at resource_000337.jsonl.",
+  "canonical_merged_in_cycle": 331,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -2535,12 +2534,13 @@
       "task": 20
     },
     "full_labels_checkpointed": 100,
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "checkpoint": "runs/r331_review_r336.jsonl",
     "checkpoint_sha": "b3e6d8741a2455f6f1b9b60e6a9741e51fcedbe5",
-    "merge_pending": true,
+    "merge_pending": false,
     "uncertain_resources": 5,
-    "notes": "Three official JOI ZIP data bundles and two KöMaL .txt auxiliary files left review; no binary content downloaded; original raw ledger untouched."
+    "notes": "Three official JOI ZIP data bundles and two KöMaL .txt auxiliary files left review; no binary content downloaded; original raw ledger untouched.",
+    "merged_workflow_run_id": 40261837948
   },
   "r332_pending": {
     "resource_shard": "resource_000337.jsonl",
