@@ -1,0 +1,136 @@
+{
+  "cycle": "r343-20261026T140738937Z",
+  "reported_at": "2026-10-26T14:18:49.642Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "requested_at": "2026-10-26T14:07:38.937Z",
+    "commit": "6703463eb3fac0e4eb84d940baf06162568074ed",
+    "run_trigger_blob_sha": "0c97e027c7bb7900c24023b4b628e1071a2ee54f"
+  },
+  "workflow": {
+    "primary": {
+      "run_id": 40336772222,
+      "status": "completed",
+      "conclusion": "success",
+      "crawl_commit": "3db8bbf766eb"
+    },
+    "automatic_followup": {
+      "run_id": 40337732137,
+      "status": "completed",
+      "conclusion": "success",
+      "cause": "push to sources.jsonl, not an additional automation instance",
+      "crawl_commit": "4bd6b94b4fd2"
+    }
+  },
+  "crawl": {
+    "html_pages_processed": 120,
+    "new_raw_occurrences": 7175,
+    "first_run_new_raw": 2462,
+    "followup_new_raw": 4713,
+    "raw_occurrences_total": 1447305,
+    "raw_last_shard": "batch_014474.jsonl",
+    "raw_last_shard_rows": 5,
+    "unique_resource_urls": 304665,
+    "resource_last_shard": "resource_003047.jsonl",
+    "resource_last_shard_rows": 65,
+    "queue_html_pages": 137701,
+    "blocked_or_failed": 3302,
+    "robots_denied_or_unavailable_combined": 2168,
+    "frontier_not_exhaustiveness": true
+  },
+  "discovery": {
+    "multilingual_search_queries": 83,
+    "unique_queries": 83,
+    "canonical_sources_before": 2085,
+    "prior_cycle_sources_merged_by_primary_workflow": 2,
+    "verified_new_sources_added_directly": 3,
+    "canonical_sources_after": 2090,
+    "source_registry_sha": "9d77a0a10653b8518afbb3f650931747ee827769",
+    "new_sources": [
+      "https://live.poshenloh.com/past-contests",
+      "https://www.kpo.or.kr/bbs/sub4_1/423341",
+      "https://github.com/open-cu/awesome-ioai-tasks"
+    ],
+    "source_commit": "a206456f4ba08158117359cf848dfef6ad776646",
+    "checkpoints": [
+      "runs/discovery_r343.jsonl",
+      "runs/r343_source_dedup.json",
+      "runs/r343_search_queries.json"
+    ]
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "resource_ranges": [
+      "resource_000348.jsonl:35-99",
+      "resource_000349.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000896.jsonl",
+      "batch_000897.jsonl",
+      "batch_000898.jsonl",
+      "batch_000899.jsonl",
+      "batch_000900.jsonl"
+    ],
+    "counts": {
+      "task": 6,
+      "solution": 68,
+      "criteria": 0,
+      "participant_work": 0,
+      "archive": 2,
+      "source": 1,
+      "unrelated": 23,
+      "review": 0
+    },
+    "label_checkpoint": "runs/r343_review_r348_349.jsonl",
+    "label_checkpoint_blob_sha": "97dc7701c9d1accbf3f5a700144bd8f79589cd54",
+    "labels_merged_by_followup_workflow": 100,
+    "canonical_labels_before": 8756,
+    "canonical_labels_after": 8856,
+    "canonical_labels_sha": "7d80ad9e1c31a14dbcf0cce7c53aa950e711830d",
+    "next_cursor": {
+      "shard": "resource_000349.jsonl",
+      "row": 35
+    },
+    "historical_noncontiguous_checkpoints_still_pending": true
+  },
+  "mime": {
+    "observations": 3898,
+    "application_pdf": 1653,
+    "pdf_without_terminal_dot_pdf": 1495,
+    "metric_definition": "URL regex /\\.pdf(?:$|[?#])/i; difference from r342 report noted for audit",
+    "binary_downloaded": false
+  },
+  "audit": {
+    "canonical_backlog_before": 1422,
+    "added": 13,
+    "canonical_backlog_after": 1435,
+    "backlog_sha": "f0631d23f4268a5d332817d556599a79a049f5fd",
+    "checkpoints": [
+      "runs/r343_audit.jsonl",
+      "runs/r343_mime_audit.jsonl"
+    ],
+    "unknown_sections_not_exhausted": true
+  },
+  "safeguards": {
+    "binary_task_materials_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_manually_modified": false,
+    "schedule_modified": false,
+    "extra_automation_instances_created": false,
+    "robots_bypassed": false,
+    "rights_assumed": false
+  },
+  "unresolved": [
+    "Older noncontiguous historical review checkpoints remain unreconciled.",
+    "KöMaL magazine PDFs and IPT references were classified from URL/anchor/parent metadata only; binary contents not inspected.",
+    "The extensionless PDF count differs from the previous manifest despite unchanged PDF count; metric-definition audit is open.",
+    "Blocked and unavailable pages remain separate from MIME non-HTML responses; 2168 crawler entries use combined robots-denied-or-unavailable classification.",
+    "Historical gaps, third-party mirrors, JS-only pages and participant-work redistribution rights remain open."
+  ]
+}
