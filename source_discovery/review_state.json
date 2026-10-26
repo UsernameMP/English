@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T22:10:50.752Z",
+  "updated_at": "2026-10-26T22:11:53.401Z",
   "deferred_shards": [
     1,
     2,
@@ -13,13 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r350_review_r355_356_00_49.jsonl",
-    "runs/r350_review_r355_356_50_99.jsonl",
     "runs/r351_review_r356_357_00_49.jsonl",
     "runs/r351_review_r356_357_50_99.jsonl"
   ],
-  "pending_labels_count": 200,
-  "canonical_merge_status": "r351: 100 audited labels saved as two 50-row SHA-pinned checkpoints and registered in merge_review_checkpoints.py; canonical merge pending next normal workflow. r350 pending status must be verified against current canonical readback.",
+  "pending_labels_count": 100,
+  "canonical_merge_status": "GitHub Actions 40409890782 successfully merged r350 labels (9456 -> 9556). r351: 100 SHA-pinned unique-resource labels in two checkpoints, registered in merge_review_checkpoints.py, awaiting next normal workflow.",
   "canonical_merged_in_cycle": 350,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -3162,7 +3160,7 @@
       "runs/r350_review_r355_356_00_49.jsonl",
       "runs/r350_review_r355_356_50_99.jsonl"
     ],
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "registered_merge_script_sha": "6fc0afa5982a90771facc9203b1d329992a9cff4",
     "safeguard_note": "One KöMaL HTML task index was viewed to verify link semantics; no task text persisted, no binary files fetched."
   },
@@ -3200,5 +3198,8 @@
     "reviewed_at": "2026-10-27",
     "next_resource_shard": "resource_000357.jsonl",
     "next_row_index": 35
-  }
+  },
+  "pending_audit_checkpoints": [
+    "runs/r351_audit.jsonl"
+  ]
 }
