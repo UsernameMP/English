@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T17:13:26.782Z",
+  "updated_at": "2026-10-26T18:09:09.035Z",
   "deferred_shards": [
     1,
     2,
@@ -157,13 +157,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000352.jsonl",
+    "next_resource_shard": "resource_000353.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000351.jsonl",
-    "last_completed_cycle": "r346-20261026T170635796Z",
-    "cycle": "r346-20261026T170635796Z",
-    "reason": "100 unique resource URLs from resource_000351 rows35–99 and resource_000352 rows0–34; 105 original occurrences checked in batch_000907..000910.",
-    "skip_already_reviewed": "resource_000352 rows0–34 classified in r346; next row35"
+    "last_completed_shard": "resource_000352.jsonl",
+    "last_completed_cycle": "r347-20261026T180304725Z",
+    "cycle": "r347-20261026T180304725Z",
+    "reason": "100 unique resource URLs from resource_000352 rows35–99 and resource_000353 rows0–34; 107 raw occurrences checked in batch_000910..000915.",
+    "skip_already_reviewed": "resource_000353 rows0–34 reviewed in r347; next row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -3034,5 +3034,42 @@
     "merged_labels": 100,
     "canonical_total": 9056,
     "verified_at": "2026-10-26T17:13:26.782Z"
+  },
+  "r347_review": {
+    "cycle": "r347-20261026T180304725Z",
+    "resource_ranges": [
+      "resource_000352.jsonl:35-99",
+      "resource_000353.jsonl:0-34"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 107,
+    "raw_shards": [
+      "batch_000910.jsonl",
+      "batch_000911.jsonl",
+      "batch_000912.jsonl",
+      "batch_000913.jsonl",
+      "batch_000914.jsonl",
+      "batch_000915.jsonl"
+    ],
+    "counts": {
+      "task": 46,
+      "solution": 32,
+      "unrelated": 10,
+      "review": 7,
+      "archive": 1,
+      "source": 4
+    },
+    "checkpoints": [
+      "runs/r347_review_r352_353_00_49.jsonl",
+      "runs/r347_review_r352_353_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "71ebcb66c7f72b2bb24d272c464a5ae486da6a3e",
+      "5ca38586a22331ef963d1bbb572b357f636fe122"
+    ],
+    "canonical_merged": 0,
+    "merge_registered": true,
+    "canonical_raw_cursor_unchanged": true,
+    "ambiguous_crosslinked_grades_7_8": 3
   }
 }
