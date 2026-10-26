@@ -1,0 +1,110 @@
+{
+  "cycle": "r349-20261026T200200765Z",
+  "reported_at": "2026-10-26T20:09:44.095Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "requested_at": "2026-10-26T20:02:00.765Z",
+    "commit": "f62e133da34028dc078edbe50bc1cfcae9c29b69",
+    "blob_sha": "df4071110125f741438c3bddc4aad5887d753183"
+  },
+  "workflow": {
+    "run_id": 40392032570,
+    "status": "completed",
+    "conclusion": "success",
+    "run_url": "https://github.com/UsernameMP/English/actions/runs/40392032570",
+    "crawler_commit": "fb5d8a13c58d4048787c2df381f768316eb2925a",
+    "steps_verified": [
+      "Merge discovered sources",
+      "Merge audited Review checkpoints",
+      "Enumerate publicly accessible HTML links",
+      "Build deduplicated link resource index",
+      "Persist results"
+    ],
+    "r349_review_registration_after_checkout": true
+  },
+  "discovery": {
+    "search_queries": 60,
+    "unique_queries": 60,
+    "verified_html_pointers_checkpointed": 7,
+    "canonical_added_confirmed": 0,
+    "checkpoint": "runs/discovery_r349.jsonl",
+    "search_log": "runs/r349_search_queries.json",
+    "canonical_source_blob_unchanged": "c915af20004b85c1411d51e39959ce1eff74e721",
+    "deduplication_pending": true
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 114,
+    "counts": {
+      "unrelated": 61,
+      "solution": 21,
+      "task": 13,
+      "review": 5
+    },
+    "ranges": [
+      "resource_000354.jsonl:35-99",
+      "resource_000355.jsonl:0-34"
+    ],
+    "checkpoints": [
+      "runs/r349_review_r354_355_00_49.jsonl",
+      "runs/r349_review_r354_355_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "4f891f21ae6cd32c9fd7ea5f08605429dacf8ca8",
+      "811e44af8a46e3bb3b461486281f79b2ec5657d8"
+    ],
+    "merge_script_registered": true,
+    "canonical_r349_merged": 0,
+    "canonical_label_blob_sha": "0e46a3198ffa4fab25bde927638f0b466f2c85b1",
+    "next_cursor": {
+      "shard": "resource_000355.jsonl",
+      "row": 35
+    }
+  },
+  "audit": {
+    "checkpoint": "runs/r349_audit.jsonl",
+    "new_findings": 15,
+    "canonical_added": 0,
+    "backlog_blob_sha_unchanged": "fe98d37a0a61a4f0267b34d7c8837144b1707e47"
+  },
+  "crawl": {
+    "last_raw_shard": "batch_014791.jsonl",
+    "last_raw_rows": 74,
+    "raw_occurrences_total": 1479174,
+    "previous_raw_occurrences": 1470819,
+    "raw_occurrences_added": 8355,
+    "last_resource_shard": "resource_003096.jsonl",
+    "last_resource_rows": 95,
+    "unique_resource_urls": 309695,
+    "previous_unique_resource_urls": 308745,
+    "unique_resource_urls_added": 950,
+    "source": "Direct GitHub readback of final shard existence and row counts, not inference from action logs",
+    "html_frontier_pending": "not readable from large crawl_state.json; previous confirmed 139482"
+  },
+  "mime": {
+    "observations_blob_sha": "f180350f1de16d7f3fb1c7dd91e33ea963d18a1c",
+    "exact_current_count": "not independently readable due connector size",
+    "classification_note": "MIME non-HTML observations are not crawler errors or confirmed task labels"
+  },
+  "unresolved": [
+    "Seven verified source pointers require canonical URL dedup and merge.",
+    "100 r349 labels SHA-pinned and registered but workflow checkout preceded registration; canonical merge pending.",
+    "15 audit items in checkpoint, canonical backlog unchanged.",
+    "Five review resources: four KöMaL auxiliary TXT and M338 statistics-only page.",
+    "Older noncontiguous historical checkpoints remain.",
+    "Current frontier size and MIME observation count cannot be independently read due large-file connector limit."
+  ],
+  "safeguards": {
+    "binary_material_downloaded": false,
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "additional_automation_created": false,
+    "raw_ledger_manually_modified": false,
+    "robots_bypassed": false
+  }
+}
