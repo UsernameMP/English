@@ -62,9 +62,24 @@
     "site:olimpiadadefilosofia.com.ar consignas ensayos ediciones anteriores",
     "site:olimpiadasdelconocimiento.edu.mx pruebas años anteriores biología historia",
     "site:olympiad.hk past paper archives astronomy physics chemistry",
-    "site:olympiads.edu.hk past papers science olympiad junior"
+    "site:olympiads.edu.hk past papers science olympiad junior",
+    "site:olympiads.hbcse.tifr.res.in past papers olympiad astronomy biology chemistry physics 2000 2025",
+    "site:olympiads.hbcse.tifr.res.in \"Previous years\" \"Question papers\" INO",
+    "site:olympiad.org.uk biology past papers questions answers",
+    "site:linguisticsolympiad.org.uk past papers solutions round 1",
+    "site:naclo.org practice problems archive past problems solutions",
+    "site:lingolympiad.org problems archives national linguistics olympiad",
+    "site:olimpiada-de-lingvistica.ro subiecte bareme arhiva",
+    "site:olimpiade.ro \"lingvistică\" \"subiecte\" \"bareme\" 2014 2025",
+    "site:olimpiadelinguistica.it prove soluzioni anni precedenti",
+    "site:olympiad.ge \"ლინგვისტიკის\" \"ამოცანები\" არქივი",
+    "site:olimpiada.edu.md subiecte bareme olimpiada republicana geografie biologie",
+    "site:olimpiade.md \"subiecte\" \"bareme\" \"olimpiada\" arhiva",
+    "site:olimpiada.uz masalalar yechimlar olimpiada arxivi",
+    "site:olympiad.kg архив заданий решений олимпиады физика математика",
+    "site:olympiad.tj масъалаҳо ҷавобҳо олимпиада математика"
   ],
-  "query_count": 60,
-  "unique_query_count": 60,
-  "notes": "Queries from four multilingual research batches; use to avoid repeated exact searches. Some results irrelevant; only independently checked HTML pointers are in discovery_r347.jsonl. No binary bodies requested."
+  "query_count": 75,
+  "unique_query_count": 75,
+  "notes": "Queries from four multilingual research batches; use to avoid repeated exact searches. Some results irrelevant; only independently checked HTML pointers are in discovery_r347.jsonl. No binary bodies requested. Additional 15 queries across linguistics, India and Central Asia; two verified novel sources checkpointed in discovery_r347_addendum.jsonl; HBCSE official past-papers archive already canonical."
 }
