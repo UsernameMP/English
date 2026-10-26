@@ -66,10 +66,12 @@ CHECKPOINTS = {
     "r340_review_r345_346_50_99.jsonl": "8289f46630a657147528a7e621a38f24f49daffe",
     "r341_review_r346_347_00_49.jsonl": "965c20d55b508f4c93ea30b529c3d296347382ec",
     "r341_review_r346_347_50_99.jsonl": "3f920b666720aaa5ef43b3209cb338c904005cd5",
+    "r342_review_r347_348_00_49.jsonl": "c8fddef80c9beb558ef660e91393a5ecc83c1739",
+    "r342_review_r347_348_50_99.jsonl": "024a728bf68f34f33f32d54be2f86dbb4effb19e",
     "r313_historical_reconciled_apho_29.jsonl": "9a2a4e530e53f0ac6c3cefbbc4fc63373dba9f30",
     "r313_historical_reconciled_r413_39.jsonl": "9d75650d7df61c1cdd0b6ddf79bc11705ec321a4",
 }
-EXPECTED_ROWS = {"r341_review_r346_347_00_49.jsonl": 50, "r341_review_r346_347_50_99.jsonl": 50, "r340_review_r345_346_00_49.jsonl": 50, "r340_review_r345_346_50_99.jsonl": 50, "r339_review_r344_345_00_49.jsonl": 50, "r339_review_r344_345_50_99.jsonl": 50, "r313_historical_reconciled_apho_29.jsonl": 29, "r313_historical_reconciled_r413_39.jsonl": 39, "r337_review_r342_343_00_49.jsonl": 50, "r337_review_r342_343_50_99.jsonl": 50, "r338_review_r343_344_00_49.jsonl": 50, "r338_review_r343_344_50_99.jsonl": 50}
+EXPECTED_ROWS = {"r342_review_r347_348_00_49.jsonl": 50, "r342_review_r347_348_50_99.jsonl": 50, "r341_review_r346_347_00_49.jsonl": 50, "r341_review_r346_347_50_99.jsonl": 50, "r340_review_r345_346_00_49.jsonl": 50, "r340_review_r345_346_50_99.jsonl": 50, "r339_review_r344_345_00_49.jsonl": 50, "r339_review_r344_345_50_99.jsonl": 50, "r313_historical_reconciled_apho_29.jsonl": 29, "r313_historical_reconciled_r413_39.jsonl": 39, "r337_review_r342_343_00_49.jsonl": 50, "r337_review_r342_343_50_99.jsonl": 50, "r338_review_r343_344_00_49.jsonl": 50, "r338_review_r343_344_50_99.jsonl": 50}
 TYPE_CORRECTION_CHECKPOINTS = {
     "r307_r306_corrections_fixed.jsonl": "61254ca48e8195307d65609906992aad77815041",
 }
