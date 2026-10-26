@@ -1,0 +1,119 @@
+{
+  "cycle": "r342-20261026T132025874Z",
+  "reported_at": "2026-10-26T13:35:12.713Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "commit": "5f578b50b29e1cf88dc85cb7057585e922112163",
+    "requested_at": "2026-10-26T13:20:25.874Z",
+    "blob_sha": "31172462ed22d2d3b6ff17cd650b2ff25655faba"
+  },
+  "workflow": {
+    "trigger_run_id": 40329738806,
+    "status": "completed",
+    "conclusion": "success",
+    "crawl_output_commit": "c6fcf68d45be8d89d5b1e594d0dc08a86fec27e1",
+    "automatically_triggered_by_source_update": {
+      "run_id": 40330861906,
+      "status": "in_progress",
+      "conclusion": null,
+      "manual_trigger": false
+    }
+  },
+  "crawl": {
+    "prior_scheduled_run_id": 40328582718,
+    "prior_scheduled_new_raw": 4748,
+    "prior_scheduled_unique_urls": 302403,
+    "html_pages_processed_by_trigger_run": 60,
+    "new_raw_occurrences_by_trigger_run": 2693,
+    "raw_total_after_trigger_run": 1437811,
+    "unique_resource_urls_after_trigger_run": 303051,
+    "queue_after_trigger_run": 136752,
+    "blocked_or_failed_after_trigger_run": 3242,
+    "frontier_not_exhaustiveness": true
+  },
+  "discovery": {
+    "search_queries": 65,
+    "verified_HTML_candidates": 10,
+    "already_canonical": 8,
+    "new_unique_verified_pointers": 2,
+    "new_pointers": [
+      "https://armaganka.org.mk/Competitions.aspx?id=260",
+      "https://pregatirematematicaolimpiadejuniori.wordpress.com/cipru/"
+    ],
+    "canonical_new_sources_merged": 0,
+    "source_count_after_trigger_run": 2085,
+    "verified_existing_source_upgraded": "https://ioaastrophysics.org/resources/problems-from-past-ioaa",
+    "checkpoint_files": [
+      "runs/discovery_r342.jsonl",
+      "runs/discovery_r342_addendum.jsonl",
+      "runs/r342_source_dedup.json"
+    ],
+    "index_only_unverified": 2
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "resource_ranges": [
+      "resource_000347.jsonl:35-99",
+      "resource_000348.jsonl:0-34"
+    ],
+    "counts": {
+      "task": 7,
+      "solution": 13,
+      "criteria": 4,
+      "source": 1,
+      "unrelated": 69,
+      "review": 6
+    },
+    "labels_checkpointed": 100,
+    "labels_merged_by_trigger_run_from_r341": 100,
+    "canonical_labels_after_trigger_run": 8656,
+    "new_labels_canonical_merge": "pending extra automatic workflow outcome",
+    "label_checkpoints": [
+      "runs/r342_review_r347_348_00_49.jsonl",
+      "runs/r342_review_r347_348_50_99.jsonl"
+    ],
+    "merge_script_sha": "c01973890752c8251c1d337fe223cfc21d6ab772",
+    "next_cursor": {
+      "shard": "resource_000348.jsonl",
+      "row": 35
+    },
+    "unresolved_zip": 6
+  },
+  "mime": {
+    "observations_after_trigger_run": 3883,
+    "application_pdf": 1653,
+    "pdf_without_dot_pdf": 1480,
+    "blob_sha": "d524ccdb2abc137978cc198530a5ead04f6193d7",
+    "binary_downloaded": false
+  },
+  "audit": {
+    "added": 20,
+    "canonical_backlog_after": 1422,
+    "checkpoint_files": [
+      "runs/r342_audit.jsonl",
+      "runs/r342_audit_addendum.jsonl"
+    ],
+    "unknown_sections_not_exhausted": true
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_manually_modified": false,
+    "schedule_modified": false,
+    "additional_automation_created": false,
+    "extra_workflow_auto_triggered": true,
+    "access_bypass": false
+  },
+  "unresolved": [
+    "Two newly verified HTML pointers are checkpointed but not yet merged into canonical sources.jsonl.",
+    "Six IYPT meeting attachment ZIP URLs remain review without inspecting ZIP contents.",
+    "Earlier historical review checkpoints remain unreconciled.",
+    "Second workflow triggered automatically by sources.jsonl update; its final state is being checked."
+  ]
+}
