@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T04:05:39.044Z",
+  "updated_at": "2026-10-26T04:08:34.637Z",
   "deferred_shards": [
     1,
     2,
@@ -13,12 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r332_review_r337.jsonl",
     "runs/r333_review_r338.jsonl"
   ],
-  "pending_labels_count": 200,
-  "canonical_merge_status": "r332 review (100) and r333 review (100) checkpointed; r332 merge awaits current RIFT Link Enumeration result, r333 merge awaits subsequent workflow if current checkout predates SHA pin. Do not claim canonical merge without inspecting link_labels.jsonl SHA and workflow logs.",
-  "canonical_merged_in_cycle": 331,
+  "pending_labels_count": 100,
+  "canonical_merge_status": "Verified 100/100 r332 raw occurrence IDs in canonical link_labels.jsonl after RIFT Link Enumeration 2026-10-26T04:04:57Z; r333 100/100 labels remain SHA-pinned in runs/r333_review_r338.jsonl and merge_review_checkpoints.py, with 0/100 canonical; next ordinary workflow merge pending.",
+  "canonical_merged_in_cycle": 332,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
