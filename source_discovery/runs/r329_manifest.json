@@ -1,0 +1,104 @@
+{
+  "cycle": "r329-20261026T000531000Z",
+  "reported_at": "2026-10-26T00:12:28.000Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "requested_at": "2026-10-26T00:05:31.000Z",
+    "commit": "2c73197cefd4637a9edf6888b93fd0cb6eb50b6d",
+    "workflow_run_id": 40247681034,
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-26T00:12:28Z",
+    "url": "https://github.com/UsernameMP/English/actions/runs/40247681034"
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_occurrences_job_log": 4930,
+    "unique_resource_urls_before": 286356,
+    "unique_resource_urls_after": 286979,
+    "unique_resource_delta": 623,
+    "pending_html_pages": 130142,
+    "blocked_or_failed_cumulative": 3055,
+    "source": "verified GitHub Actions job logs"
+  },
+  "discovery": {
+    "queries_logged": 56,
+    "checkpoint": "runs/discovery_r329.jsonl",
+    "verified_html_pointers_checkpointed": 11,
+    "checked_against_canonical_sources_at_start": 1989,
+    "checked_against_pending_discovery_r326_r327_r328": true,
+    "canonical_sources_after_workflow": 1997,
+    "canonical_sources_added_by_workflow_from_r328": 8,
+    "r329_sources_canonical_merged": 0,
+    "notes": "r329 checkpoint published after workflow merge step; next normal workflow merges idempotently. No extra workflow initiated."
+  },
+  "review": {
+    "resource_shard": "resource_000334.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000857.jsonl",
+      "batch_000858.jsonl",
+      "batch_000859.jsonl",
+      "batch_000860.jsonl",
+      "batch_000861.jsonl"
+    ],
+    "counts": {
+      "unrelated": 77,
+      "review": 2,
+      "solution": 17,
+      "task": 4
+    },
+    "checkpoint": "runs/r329_review_r334.jsonl",
+    "checkpoint_sha": "8815e098f2d5f05124739f3f2b7e3ff258e6f9c8",
+    "sha_pinned_in": "merge_review_checkpoints.py",
+    "canonical_labels_before": 7256,
+    "canonical_labels_after": 7356,
+    "r328_labels_merged": 100,
+    "r329_labels_canonical_merged": 0,
+    "operational_cursor": "resource_000334.jsonl"
+  },
+  "audit": {
+    "checkpoint": "runs/r329_audit.jsonl",
+    "added_to_backlog": 17,
+    "canonical_backlog_after": 1192,
+    "issues": "historical gaps, repeated source URLs, wrong type hints, restricted sites, year/stage matrix, multilingual variants, rights"
+  },
+  "mime": {
+    "checkpoint": "runs/r329_mime_audit.json",
+    "observations": 3685,
+    "application_pdf": 1584,
+    "pdf_without_dot_pdf": 1412,
+    "application_zip": 61,
+    "binary_bodies_downloaded": false,
+    "non_html_not_error": true
+  },
+  "verified_blob_sha": {
+    "source_discovery/run_trigger.json": "08a94e6ef3c7dd9d8793338c46b558610b107b57",
+    "source_discovery/sources.jsonl": "d9b245055eb0d0487ae9c4b467cf46e3c2e954a0",
+    "source_discovery/link_labels.jsonl": "e4e152282388a433d5ef01a109171c3e9ddbce4a",
+    "source_discovery/backlog.jsonl": "e0160d1c1af9e3602201e6f8409117852adbd59e",
+    "source_discovery/review_state.json": "34645c170143f0237e2e7b6387a20369aa4d20e0",
+    "source_discovery/resource_observations.jsonl": "38d461674196a51197100ff8c2271a133911de8e",
+    "source_discovery/runs/discovery_r329.jsonl": "40635c4b077e0f51382a484d521a5c5fbcf0ccab",
+    "source_discovery/runs/r329_review_r334.jsonl": "8815e098f2d5f05124739f3f2b7e3ff258e6f9c8",
+    "source_discovery/runs/r329_audit.jsonl": "ebc5a33dddfb67d661140ab17b307df3c8df027c",
+    "source_discovery/runs/r329_queries.jsonl": "e1bdecdf57d9f040703d4dd5feb470aa8b8cbc9a",
+    "source_discovery/runs/r329_mime_audit.json": "3bc70535e5575ca3d861c7c074947a4bcfa31577",
+    "source_discovery/merge_review_checkpoints.py": "9f52d7c38f813b5c030b06879fbe9307dfe17e36"
+  },
+  "safeguards": {
+    "binary_documents_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_modified": false,
+    "schedule_modified": false,
+    "extra_workflow_instances_requested": false
+  },
+  "unresolved": [
+    "11 new source pointers await canonical merge",
+    "100 r329 labels await canonical merge",
+    "2 KöMaL auxiliary ZIP URLs remain review",
+    "Historical URL aliases and inaccessible/robots-restricted archives require further audit"
+  ]
+}
