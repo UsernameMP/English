@@ -1,0 +1,106 @@
+{
+  "cycle": "r336-20261026T070213000Z",
+  "reported_at": "2026-10-26T07:09:00Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "requested_at": "2026-10-26T07:02:13.000Z",
+    "commit": "91957bf1370fcadc2a7c0abe9a807ac49403738e",
+    "blob_sha": "ebc1a3767e66ca60465c68feb8867749021aea49"
+  },
+  "workflow": {
+    "run_id": 40283329740,
+    "url": "https://github.com/UsernameMP/English/actions/runs/40283329740",
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-26T07:05:09Z",
+    "output_commit_prefix": "4b90f372",
+    "job_log_confirmed": true
+  },
+  "crawl": {
+    "html_pages_processed": 60,
+    "new_links_reported_by_workflow": 4740,
+    "raw_total_from_last_shard": 1417065,
+    "raw_last_shard": "batch_014171.jsonl",
+    "raw_last_shard_rows": 65,
+    "raw_total_r335_manifest": 1408746,
+    "raw_total_difference": 8319,
+    "delta_vs_new_links_not_reconciled": true,
+    "unique_resources": 299253,
+    "resource_last_shard": "resource_002993.jsonl",
+    "resource_last_shard_rows": 53,
+    "html_pending": 135381,
+    "blocked_or_failed_cumulative": 3155,
+    "html_frontier_not_completeness": true
+  },
+  "discovery": {
+    "search_queries_logged": 40,
+    "verified_public_HTML_pointers_checkpointed": 20,
+    "duplicate_exclusions_against_r332_to_r335": 2,
+    "full_canonical_uniqueness": "not yet checked; canonical sources too large for connector read; merge_sources.py idempotently deduplicates on next ordinary workflow",
+    "canonical_sources_confirmed_by_workflow": 2061,
+    "canonical_new_sources_in_r336": 0,
+    "checkpoint": "runs/discovery_r336.jsonl",
+    "queries": "runs/r336_queries.jsonl"
+  },
+  "review": {
+    "resource_shard": "resource_000341.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000873.jsonl",
+      "batch_000874.jsonl",
+      "batch_000875.jsonl"
+    ],
+    "counts": {
+      "task": 33,
+      "solution": 39,
+      "criteria": 3,
+      "source": 10,
+      "unrelated": 10,
+      "review": 5
+    },
+    "checkpoint": "runs/r336_review_r341.jsonl",
+    "checkpoint_blob_sha": "7ba4b1cd35b73936fe3418b70f2779f2a73ca48b",
+    "pinned_in": "merge_review_checkpoints.py",
+    "canonical_labels_before_workflow": 7956,
+    "canonical_labels_after_workflow": 8056,
+    "canonical_merged_from_r335": 100,
+    "r336_canonical_merge_pending": 100,
+    "operational_next_shard": "resource_000342.jsonl",
+    "next_row_index": 35,
+    "earlier_rows_0_to_34_already_merged": true,
+    "original_raw_unchanged": true
+  },
+  "mime": {
+    "observations_sha": "368009af1dc85d512f5fcad4523040922aaa1f3b",
+    "updated_during_workflow": true,
+    "current_count_not_established": true,
+    "non_html_not_error": true,
+    "binary_bodies_not_downloaded": true
+  },
+  "audit": {
+    "checkpoint": "runs/r336_audit.jsonl",
+    "rows": 17,
+    "canonical_backlog_before": 1339,
+    "canonical_backlog_after": 1339,
+    "canonical_backlog_merge_pending": 17,
+    "rights_and_historical_gaps_retained": true,
+    "raw_count_reconciliation_open": true
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_manually_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false
+  },
+  "unresolved": [
+    "20 verified HTML source pointers await deduplication against all 2061 canonical URLs; no claims of new canonical additions.",
+    "100 r336 reviewed labels await next ordinary workflow merge; 5 judge-data ZIP URLs intentionally remain review.",
+    "17 audit findings checkpointed; large backlog.jsonl not replaced and canonical backlog count unchanged.",
+    "Raw ledger 1,417,065 vs r335 manifest 1,408,746 differs by 8,319, exceeding crawler reported new_links=4,740; reconcile historical counting or other append.",
+    "Current MIME counts unavailable through oversized connector read; no PDF count asserted.",
+    "Next resource shard 000342 rows 0–34 already reviewed historically; resume at row 35."
+  ]
+}
