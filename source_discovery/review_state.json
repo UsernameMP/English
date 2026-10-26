@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T17:12:07.300Z",
+  "updated_at": "2026-10-26T17:13:26.782Z",
   "deferred_shards": [
     1,
     2,
@@ -13,14 +13,12 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r345_review_r350_351_00_49.jsonl",
-    "runs/r345_review_r350_351_50_99.jsonl",
     "runs/r346_review_r351_352_00_49.jsonl",
     "runs/r346_review_r351_352_50_99.jsonl"
   ],
-  "pending_labels_count": 200,
-  "canonical_merge_status": "r346: 100 SHA-pinned labels checkpointed, registered in merge_review_checkpoints.py; canonical merge pending. r345 labels may merge during in-progress enumeration and require post-run verification.",
-  "canonical_merged_in_cycle": 344,
+  "pending_labels_count": 100,
+  "canonical_merge_status": "RIFT r346: workflow 40365531517 merged 100 r345 labels (8956->9056). R346's 100 labels are SHA-pinned in two checkpoint files, registered in merge_review_checkpoints.py, and pending next normal workflow merge; no extra run requested.",
+  "canonical_merged_in_cycle": 345,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -3030,5 +3028,11 @@
       "b6585fd1f66c5474edef3fc5911067e72b4e7a39"
     ],
     "canonical_merged": 0
+  },
+  "r345_review_canonical_merge_verified": {
+    "workflow_run_id": 40365531517,
+    "merged_labels": 100,
+    "canonical_total": 9056,
+    "verified_at": "2026-10-26T17:13:26.782Z"
   }
 }
