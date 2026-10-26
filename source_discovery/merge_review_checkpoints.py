@@ -70,3 +70,129 @@ ALLOWED_TYPES = {"task", "solution", "criteria", "participant_work", "archive", 
 
 def git_blob_sha(data):
     return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
+
+
+def parse_jsonl(data, label):
+    rows = []
+    for line_no, line in enumerate(data.decode("utf-8").splitlines(), 1):
+        if not line.strip():
+            continue
+        try:
+            obj = json.loads(line)
+        except json.JSONDecodeError as exc:
+            raise ValueError(f"{label}:{line_no}: malformed JSON") from exc
+        if not isinstance(obj, dict):
+            raise ValueError(f"{label}:{line_no}: expected object")
+        rows.append(obj)
+    return rows
+
+
+def audited_type_corrections():
+    """Load only SHA-pinned, provenance-matched corrections already applied to canonical labels."""
+    overrides = {}
+    for filename, expected_sha in TYPE_CORRECTION_CHECKPOINTS.items():
+        data = (ROOT / "runs" / filename).read_bytes()
+        if git_blob_sha(data) != expected_sha:
+            raise ValueError(f"{filename}: unexpected correction blob SHA")
+        for patch in parse_jsonl(data, filename):
+            occurrence = patch.get("raw_occurrence_id")
+            if not occurrence or occurrence in overrides:
+                raise ValueError(f"{filename}: duplicate/missing corrected occurrence")
+            overrides[occurrence] = dict(patch, correction_checkpoint=filename)
+    return overrides
+
+
+def is_audited_type_override(canonical, original, overrides):
+    """Allow a prior reviewed label to differ only when an audited correction changed its type."""
+    occurrence = canonical.get("raw_occurrence_id")
+    patch = overrides.get(occurrence)
+    return bool(
+        patch
+        and canonical.get("correction_checkpoint") == patch["correction_checkpoint"]
+        and original.get("resource_id") == canonical.get("resource_id") == patch.get("resource_id")
+        and original.get("url") == canonical.get("url") == patch.get("url")
+        and original.get("type") == patch.get("previous_type")
+        and canonical.get("type") == patch.get("corrected_type")
+    )
+
+
+def merge():
+    old_data = TARGET.read_bytes()
+    canonical = parse_jsonl(old_data, TARGET.name)
+    by_occurrence = {}
+    by_resource = {}
+    for row in canonical:
+        occurrence = row.get("raw_occurrence_id") or row.get("id")
+        resource = row.get("resource_id")
+        if occurrence:
+            if occurrence in by_occurrence:
+                raise ValueError(f"Duplicate canonical raw occurrence: {occurrence}")
+            by_occurrence[occurrence] = row
+        if resource:
+            by_resource.setdefault(resource, row)
+
+    new = []
+    skipped = 0
+    audited_overrides = audited_type_corrections()
+    corrected_skipped = 0
+    for filename, expected_sha in CHECKPOINTS.items():
+        path = ROOT / "runs" / filename
+        data = path.read_bytes()
+        actual_sha = git_blob_sha(data)
+        if actual_sha != expected_sha:
+            raise ValueError(f"{filename}: unexpected Git blob SHA {actual_sha}")
+        rows = parse_jsonl(data, filename)
+        expected_rows = EXPECTED_ROWS.get(filename, 100)
+        if len(rows) != expected_rows:
+            raise ValueError(f"{filename}: expected {expected_rows} records, got {len(rows)}")
+        for row in rows:
+            occ = row.get("raw_occurrence_id")
+            rid = row.get("resource_id")
+            url = row.get("url")
+            kind = row.get("type")
+            if not occ or not rid or not url or kind not in ALLOWED_TYPES:
+                raise ValueError(f"{filename}: incomplete review row {occ!r}")
+            prior = by_occurrence.get(occ)
+            if prior:
+                if prior.get("resource_id") != rid or prior.get("url") != url:
+                    raise ValueError(f"Conflicting occurrence provenance: {occ}")
+                if prior.get("type") != kind:
+                    if not is_audited_type_override(prior, row, audited_overrides):
+                        raise ValueError(f"Conflicting occurrence type: {occ}")
+                    corrected_skipped += 1
+                skipped += 1
+                continue
+            prior_resource = by_resource.get(rid)
+            if prior_resource:
+                if prior_resource.get("url") != url:
+                    raise ValueError(f"Conflicting resource URL: {rid}")
+                if prior_resource.get("type") != kind:
+                    if not is_audited_type_override(prior_resource, row, audited_overrides):
+                        raise ValueError(f"Conflicting resource type: {rid}")
+                    corrected_skipped += 1
+                skipped += 1
+                continue
+            by_occurrence[occ] = row
+            by_resource[rid] = row
+            new.append(row)
+
+    if new:
+        addition = "".join(json.dumps(row, ensure_ascii=False, separators=(",", ":")) + "\n" for row in new)
+        prefix = old_data + (b"\n" if old_data and not old_data.endswith(b"\n") else b"")
+        content = prefix + addition.encode("utf-8")
+        fd, temp_name = tempfile.mkstemp(prefix=".rift-labels-", dir=str(ROOT))
+        try:
+            with os.fdopen(fd, "wb") as handle:
+                handle.write(content)
+                handle.flush()
+                os.fsync(handle.fileno())
+            os.replace(temp_name, TARGET)
+        finally:
+            if os.path.exists(temp_name):
+                os.unlink(temp_name)
+    print(f"RIFT reviewed checkpoint merge: existing={len(canonical)} added={len(new)} skipped={skipped} audited_type_overrides={corrected_skipped} total={len(canonical)+len(new)}")
+    return len(new)
+
+
+if __name__ == "__main__":
+    merge()
