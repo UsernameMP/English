@@ -1,0 +1,137 @@
+{
+  "cycle": "r352-20261026T230654384Z",
+  "reported_at": "2026-10-26T23:15:23.952Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z",
+    "verified_from": "GitHub REST API"
+  },
+  "trigger": {
+    "requested_at": "2026-10-26T23:06:54.384Z",
+    "commit": "35f5789f4f90d8ee8c401fd3593ea59cb2d0a09c",
+    "blob_sha": "c478c772f2d30ad65689b8b290a43e83364122f7",
+    "count": 1
+  },
+  "workflow": {
+    "run_id": 40417477477,
+    "url": "https://github.com/UsernameMP/English/actions/runs/40417477477",
+    "status": "completed",
+    "conclusion": "success",
+    "finished_at": "2026-10-26T23:13:47Z",
+    "verified_from": "GitHub Actions API and job logs",
+    "tests_passed": true
+  },
+  "crawler": {
+    "html_pages_processed": 60,
+    "new_raw_occurrences": 3774,
+    "raw_occurrences_total": 1488030,
+    "previous_raw_occurrences_total": 1484256,
+    "last_raw_shard": "batch_014880.jsonl",
+    "last_raw_rows": 30,
+    "unique_resource_urls": 311958,
+    "previous_unique_resource_urls": 311070,
+    "new_unique_resource_urls": 888,
+    "last_resource_shard": "resource_003120.jsonl",
+    "last_resource_rows": 58,
+    "pending_html_frontier": 140659,
+    "blocked_or_failed_cumulative": 3460,
+    "previous_blocked_or_failed_cumulative": 3453,
+    "metric_source": "GitHub Actions job logs and shard readback",
+    "note": "blocked_or_failed is cumulative mixed access/network errors; non-HTML MIME responses are not automatically errors"
+  },
+  "canonical": {
+    "sources": 2127,
+    "sources_added_from_r351": 4,
+    "sources_blob_sha": "1e9de475401956ee319f57f51107bac5a9f4d08d",
+    "labels": 9656,
+    "labels_added_from_r351": 100,
+    "labels_blob_sha": "ba1f18c9800fb4459a350e51aef97d1555502ee0",
+    "backlog_blob_sha": "fe98d37a0a61a4f0267b34d7c8837144b1707e47",
+    "backlog_added_from_r352": 0
+  },
+  "discovery": {
+    "search_queries": 84,
+    "exact_query_repeats_against_r343_r351": 0,
+    "prior_queries_checked": 627,
+    "verified_HTML_pointers_checkpointed": 24,
+    "canonical_added_from_r352_confirmed": 0,
+    "checkpoint": "runs/discovery_r352.jsonl",
+    "checkpoint_sha": "a7c09f6f2e7d6bc60b17141944bdd8ddd4b09940",
+    "search_log": "runs/r352_search_queries.json",
+    "search_log_sha": "cf996fb4afb99aa7023fa688e41a8eb7cac4cdf5",
+    "canonical_merge_pending": true,
+    "note": "24 pointers are not claimed as 24 unique new canonical sources; normalized dedup and merge on next existing workflow."
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 34,
+      "source": 1,
+      "archive": 2,
+      "task": 36,
+      "solution": 23,
+      "review": 4
+    },
+    "ranges": [
+      "resource_000357.jsonl:35-99",
+      "resource_000358.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000958.jsonl",
+      "batch_000959.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r352_review_r357_358_00_49.jsonl",
+      "runs/r352_review_r357_358_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "0f2692514cd9c16acc747cecae304bb258391ee7",
+      "f035d89f9144f68f5dc125d0866d77dc5663f3d7"
+    ],
+    "merge_script_sha": "35a273e13c00e78d0ee177e37f0299ddf30e3d4f",
+    "review_state_sha": "c30cb00cb1c04f86bd1032b54a1be9aa49adecc6",
+    "canonical_r352_merged": 0,
+    "next_cursor": {
+      "shard": "resource_000358.jsonl",
+      "row": 35
+    },
+    "uncertain": "Three 2017 PD resolution-format links conflict with 'solution to be uploaded' note; 2013 PD resolution level ambiguous."
+  },
+  "audit": {
+    "checkpoint": "runs/r352_audit.jsonl",
+    "checkpoint_sha": "07f320a95b6095ba3782116d52529ef58dd4e32b",
+    "findings": 30,
+    "canonical_backlog_added": 0,
+    "notable": [
+      "JBO 2020 alternative exam, 2021 video-only and 2025 ZIP task data; explicit commercial rights restriction",
+      "Dutch biology older archive teacher-restricted; Dutch physics anti-bot challenge not bypassed",
+      "Indonesian 2024 OSN compilation copyright metadata contradictory",
+      "Argentina UBA 2017 PD solution link contradictory; 2013 PD solution level uncertain",
+      "Brazil OCZM 2016–2019 headings without direct files, no exhaustion claim"
+    ]
+  },
+  "mime": {
+    "observations_blob_sha": "a2572d3676bdb76efb0819f477bd0caa5bcacb25",
+    "exact_current_count": "not independently readable via GitHub connector size limit",
+    "notes": "MIME-only extensionless PDFs and non-HTML responses remain candidates, not confirmed tasks; no binary content downloaded."
+  },
+  "unresolved": [
+    "24 HTML pointers await canonical dedup/merge on next existing workflow.",
+    "100 SHA-pinned r352 semantic labels await canonical link_labels.jsonl merge on next existing workflow.",
+    "30 audit gaps saved as checkpoint; canonical backlog.jsonl unchanged because safe append unavailable.",
+    "Four UBA resources remain review; other historical checkpoint reconciliation remains open.",
+    "MIME observations exact count not independently read; no claim of exhaustive coverage."
+  ],
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automation_instances_created": false,
+    "workflow_trigger_count": 1,
+    "source_redistribution": false
+  }
+}
