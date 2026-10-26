@@ -1,0 +1,13 @@
+{
+  "cycle": "r330-20261026T010536261Z",
+  "observed_at": "2026-10-26T01:10:43.687Z",
+  "resource_observations_blob_sha": "b8be21f65a6ec6eaaaacdb6c15218a3c496c2ad8",
+  "last_verified_previous_cycle": {
+    "observations": 3685,
+    "application_pdf": 1584,
+    "pdf_without_dot_pdf": 1412
+  },
+  "current_cycle_counts": "not_verified: resource_observations.jsonl too large for GitHub connector ranged reads",
+  "policy": "Treat observed non-HTML MIME responses as resource candidates, not crawler failures; extensionless application/pdf is a possible document; no binary bodies downloaded; respect robots and access restrictions.",
+  "caveat": "PDF MIME proves media type only, not olympiad task suitability; link parent/anchor context required."
+}
