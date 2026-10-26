@@ -1,0 +1,142 @@
+{
+  "cycle": "r350-20261026T210110024Z",
+  "reported_at": "2026-10-26T21:09:12.045Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "requested_at": "2026-10-26T21:01:10.024Z",
+    "commit": "a8dd1b7cbf83201df0d11ed1e626031d599187a0",
+    "blob_sha": "6bdf34629f64becf8b2225a44a5d7d009842189d"
+  },
+  "workflow": {
+    "run_id": 40400759742,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/UsernameMP/English/actions/runs/40400759742",
+    "crawler_persisted_branch_head": "53e40abc",
+    "steps_verified": [
+      "Verify discovery and crawler regressions",
+      "Merge discovered sources into the registry",
+      "Merge audited Review checkpoints into canonical labels",
+      "Enumerate publicly accessible HTML links",
+      "Build deduplicated link resource index",
+      "Persist results"
+    ]
+  },
+  "crawler": {
+    "html_pages_processed": 60,
+    "new_raw_occurrences": 2235,
+    "raw_occurrences_total": 1481409,
+    "last_raw_shard": "batch_014814.jsonl",
+    "last_raw_rows": 9,
+    "unique_resource_urls": 309874,
+    "previous_unique_resource_urls": 309695,
+    "new_unique_resource_urls": 179,
+    "last_resource_shard": "resource_003099.jsonl",
+    "last_resource_rows": 74,
+    "pending_html_frontier": 140042,
+    "blocked_or_failed_cumulative": 3450,
+    "metric_source": "GitHub Actions job log and final raw/resource shard readback; blocked_or_failed is combined counter, not solely HTTP errors"
+  },
+  "canonical": {
+    "sources": 2118,
+    "sources_added_from_r349": 2,
+    "sources_blob_sha": "c14dfc007983ee8b66390612ef7db17531518f25",
+    "labels": 9456,
+    "labels_added_from_r349": 100,
+    "labels_blob_sha": "e104564b484a7f9312a334277733007348332bc9",
+    "backlog_blob_sha": "fe98d37a0a61a4f0267b34d7c8837144b1707e47",
+    "backlog_new_from_r350": 0
+  },
+  "discovery": {
+    "search_queries": 60,
+    "exact_query_repeats_against_r343_r349": 0,
+    "prior_queries_checked": 510,
+    "verified_html_pointers_checkpointed": 23,
+    "canonical_added_confirmed": 0,
+    "checkpoint": "runs/discovery_r350.jsonl",
+    "checkpoint_sha": "d316c65b98d67bddfd37f5294dd5a51b958e55fa",
+    "search_log": "runs/r350_search_queries.json",
+    "canonical_merge_pending": true
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 101,
+    "counts": {
+      "solution": 80,
+      "task": 2,
+      "archive": 6,
+      "unrelated": 7,
+      "review": 5
+    },
+    "ranges": [
+      "resource_000355.jsonl:35-99",
+      "resource_000356.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000947.jsonl",
+      "batch_000948.jsonl",
+      "batch_000949.jsonl",
+      "batch_000950.jsonl",
+      "batch_000951.jsonl",
+      "batch_000952.jsonl",
+      "batch_000953.jsonl",
+      "batch_000954.jsonl",
+      "batch_000955.jsonl",
+      "batch_000956.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r350_review_r355_356_00_49.jsonl",
+      "runs/r350_review_r355_356_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "f80e7cb890b6312516521468d3bcfefa1cd8422c",
+      "08730fed99a342fc554ada6906c2350ab7aea8ca"
+    ],
+    "merge_script_sha": "82033a71480c9d755109981a194b4d1bec0d07b7",
+    "canonical_r350_merged": 0,
+    "next_cursor": {
+      "shard": "resource_000356.jsonl",
+      "row": 35
+    },
+    "duplicate_raw_parent_occurrences": 1
+  },
+  "audit": {
+    "checkpoint": "runs/r350_audit.jsonl",
+    "checkpoint_sha": "ac50a665359ae307805512a047b9d960d4f7625",
+    "new_findings": 25,
+    "canonical_backlog_added": 0,
+    "notable": [
+      "iGeo MMT temporarily unavailable",
+      "Peru chemistry early years incomplete answer keys and delayed editions",
+      "Finnish MAOL apparent 2020–2024 finals gap",
+      "Polish AGH 2019/20 stage 3 explicitly cancelled",
+      "Romanian history 2020 national/2021 event cancellations",
+      "KöMaL statistics-only links not proven solutions"
+    ]
+  },
+  "mime": {
+    "observations_blob_sha": "cf36c1820164e82bfa32c8009f0dabbb10721d05",
+    "exact_current_count": "not independently readable through connector size limits",
+    "note": "MIME observations separate from errors; extensionless application/pdf only candidate pending competition context"
+  },
+  "unresolved": [
+    "23 verified source pointers await normalized canonical dedup/merge by next existing workflow.",
+    "100 r350 SHA-pinned reviewed labels await canonical merge by next existing workflow.",
+    "25 audit gaps in checkpoint; backlog.jsonl unchanged because large-file safe append unavailable.",
+    "Five resources retained as review: three KöMaL auxiliary TXT and two statistics-only M-series links.",
+    "Older noncontiguous historical checkpoints remain for separate reconciliation.",
+    "MIME observation exact count unreadable from large file; no binary content fetched."
+  ],
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_workflow_runs_started_by_assistant": false
+  }
+}
