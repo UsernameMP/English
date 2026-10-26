@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T19:14:25.289Z",
+  "updated_at": "2026-10-26T20:08:26.410Z",
   "deferred_shards": [
     1,
     2,
@@ -13,11 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r348_review_r353_354_00_49.jsonl",
-    "runs/r348_review_r353_354_50_99.jsonl"
+    "runs/r349_review_r354_355_00_49.jsonl",
+    "runs/r349_review_r354_355_50_99.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "RIFT r348: two successful crawler runs, but r348 SHA-pinned 100 labels not yet in canonical link_labels.jsonl (9256 unchanged); checkpoint registration committed after second workflow checkout. Next normal workflow should merge; do not mark canonical until readback.",
+  "canonical_merge_status": "r349: 100 unique resource labels checkpointed and SHA-pinned; merge script registered after r349 workflow checkout. Canonical merge pending next normal workflow. r348 canonical label blob changed during completed run but exact total not independently verified.",
   "canonical_merged_in_cycle": 347,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -157,13 +157,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000354.jsonl",
+    "next_resource_shard": "resource_000355.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000353.jsonl",
-    "last_completed_cycle": "r348-20261026T185904788Z",
-    "cycle": "r348-20261026T185904788Z",
-    "reason": "100 unique resource URLs: resource_000353 rows35–99 and resource_000354 rows0–34; 101 original occurrences across batch_000915,000917,000920,000921,000923,000925–000930; 1 duplicate URL across parents deduplicated.",
-    "skip_already_reviewed": "resource_000354 rows0–34 reviewed in r348; next row35"
+    "last_completed_shard": "resource_000355.jsonl",
+    "last_completed_cycle": "r349-20261026T200200765Z",
+    "cycle": "r349-20261026T200200765Z",
+    "reason": "100 unique resources: resource_000354 rows35–99 and resource_000355 rows0–34; 114 raw occurrences across batch_000930–000947; 14 extra parent occurrences deduplicated.",
+    "skip_already_reviewed": "resource_000355 rows0–34 completed; continue row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -3107,5 +3107,38 @@
     "unresolved_review": 3,
     "canonical_labels_after_second_run": 9256,
     "workflow_merge_pending": true
+  },
+  "r349_review": {
+    "cycle": "r349-20261026T200200765Z",
+    "resource_ranges": [
+      "resource_000354.jsonl:35-99",
+      "resource_000355.jsonl:0-34"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 114,
+    "counts": {
+      "unrelated": 61,
+      "solution": 21,
+      "task": 13,
+      "review": 5
+    },
+    "checkpoints": [
+      "runs/r349_review_r354_355_00_49.jsonl",
+      "runs/r349_review_r354_355_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "4f891f21ae6cd32c9fd7ea5f08605429dacf8ca8",
+      "811e44af8a46e3bb3b461486281f79b2ec5657d8"
+    ],
+    "canonical_merged": 0,
+    "workflow_run_id": 40392032570,
+    "workflow_success": true,
+    "workflow_checkout_before_registration": true,
+    "next_cursor": {
+      "shard": "resource_000355.jsonl",
+      "row": 35
+    },
+    "audit_checkpoint": "runs/r349_audit.jsonl",
+    "discovery_checkpoint": "runs/discovery_r349.jsonl"
   }
 }
