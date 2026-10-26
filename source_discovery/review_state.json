@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T09:18:29.000Z",
+  "updated_at": "2026-10-26T10:06:33.466Z",
   "deferred_shards": [
     1,
     2,
@@ -12,9 +12,12 @@
     4,
     5
   ],
-  "pending_label_checkpoints": [],
-  "pending_labels_count": 0,
-  "canonical_merge_status": "GitHub Actions RIFT Link Enumeration #40297676047 succeeded 2026-10-26T09:18:12Z; SHA-pinned r337 (100) and r338 (100) checkpoint labels merged into canonical link_labels.jsonl: 8156 -> 8356. Earlier historical noncontiguous pending records remain separate.",
+  "pending_label_checkpoints": [
+    "runs/r339_review_r344_345_00_49.jsonl",
+    "runs/r339_review_r344_345_50_99.jsonl"
+  ],
+  "pending_labels_count": 100,
+  "canonical_merge_status": "r339 SHA-pinned review checkpoints 100 labels pending next ordinary workflow; prior r338 canonical merge 8356 confirmed; older historical noncontiguous pending remains separate.",
   "canonical_merged_in_cycle": 338,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -154,13 +157,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000344.jsonl",
+    "next_resource_shard": "resource_000345.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000343.jsonl",
-    "last_completed_cycle": "r338-20261026T090537588Z",
-    "cycle": "r338-20261026T090537588Z",
-    "reason": "100 unique resources: resource_000343 rows35–99 and resource_000344 rows0–34; matched all raw occurrences batch_000876..000880; HTML context verified, no binary bodies opened.",
-    "skip_already_reviewed": "resource_000343 rows0–34 from r337; next resource_000344 row35."
+    "last_completed_shard": "resource_000344.jsonl",
+    "last_completed_cycle": "r339-20261026T100010020Z",
+    "cycle": "r339-20261026T100010020Z",
+    "reason": "100 unique resources: resource_000344 rows35-99 plus resource_000345 rows0-34; 112 raw occurrences in batch_000880..000882; organizer HTML verified; no binary bodies opened.",
+    "skip_already_reviewed": "resource_000345 rows0-34 reviewed r339; next row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2751,5 +2754,40 @@
     "canonical_total_after_merge": 8356,
     "merge_run_id": 40297676047,
     "status": "merged_verified"
+  },
+  "r339_pending": {
+    "cycle": "r339-20261026T100010020Z",
+    "resource_ranges": [
+      "resource_000344.jsonl:35-99",
+      "resource_000345.jsonl:0-34"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 112,
+    "raw_shards": [
+      "batch_000880.jsonl",
+      "batch_000881.jsonl",
+      "batch_000882.jsonl"
+    ],
+    "counts": {
+      "unrelated": 50,
+      "source": 9,
+      "review": 12,
+      "archive": 1,
+      "task": 28
+    },
+    "checkpoints": [
+      "runs/r339_review_r344_345_00_49.jsonl",
+      "runs/r339_review_r344_345_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "92c03eb9ae0ca9187f286014439f5be7f5896446",
+      "831e9801e0e43f2c3b7b78467aa5abe6361549cb"
+    ],
+    "canonical_merged": 0,
+    "merge_pending": true,
+    "next_resource_shard": "resource_000345.jsonl",
+    "next_row_index": 35,
+    "uncertain_resources": 12,
+    "raw_unchanged": true
   }
 }
