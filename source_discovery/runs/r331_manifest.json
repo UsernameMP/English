@@ -1,0 +1,106 @@
+{
+  "cycle": "r331-20261026T015901280Z",
+  "reported_at": "2026-10-26T02:06:19.814Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "664924e293e10d3ba751a1830bdec3d9f7b2fd5c",
+    "workflow_run_id": 40256838263,
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-26T02:02:33Z",
+    "url": "https://github.com/UsernameMP/English/actions/runs/40256838263"
+  },
+  "crawl": {
+    "html_pages_processed": "not independently confirmed from run log",
+    "new_raw_occurrences": 4195,
+    "raw_occurrences_total": 1378078,
+    "unique_resource_urls_before": 288721,
+    "unique_resource_urls_after": 291678,
+    "unique_resource_delta": 2957,
+    "pending_html_pages": "not independently readable in large crawl_state.json",
+    "last_confirmed_pending_pages_r330": 130240,
+    "blocked_or_failed_current": "not independently readable",
+    "source": "GitHub crawl commit 6c180eff; links_shards/resource_shards line deltas and terminal shard lengths"
+  },
+  "discovery": {
+    "queries_logged": 63,
+    "checkpoint": "runs/discovery_r331.jsonl",
+    "metadata_verified_pointers": 20,
+    "countries": 9,
+    "compared_to": "discovery_r316-r330",
+    "full_canonical_uniqueness": "pending idempotent merge",
+    "canonical_sources_estimated_from_verified_commit_deltas": 2011,
+    "canonical_sources_added_this_cycle": 0,
+    "notes": "r330 had 11 checkpoint pointers, only 3 new URLs added by previous extra crawler commit; r331 20 pointers are not yet canonical"
+  },
+  "review": {
+    "resource_shard": "resource_000336.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 105,
+    "raw_shards": [
+      "batch_000867.jsonl",
+      "batch_000868.jsonl",
+      "batch_000869.jsonl"
+    ],
+    "counts": {
+      "task": 20,
+      "solution": 49,
+      "criteria": 0,
+      "participant_work": 0,
+      "archive": 12,
+      "source": 7,
+      "unrelated": 7,
+      "review": 5
+    },
+    "checkpoint": "runs/r331_review_r336.jsonl",
+    "checkpoint_sha": "b3e6d8741a2455f6f1b9b60e6a9741e51fcedbe5",
+    "sha_pinned_in": "merge_review_checkpoints.py",
+    "canonical_labels_after_workflow": 7556,
+    "previous_r330_labels_merged": 100,
+    "r331_labels_canonical_merged": 0,
+    "operational_cursor": "resource_000336.jsonl"
+  },
+  "audit": {
+    "checkpoint": "runs/r331_audit.jsonl",
+    "added_to_canonical_backlog": 24,
+    "canonical_backlog_after": 1234,
+    "rights_gaps": "participant submissions, organizer rights and third-party mirrors"
+  },
+  "mime": {
+    "checkpoint": "runs/r331_mime_audit.json",
+    "observations_after_commit_deltas": 3707,
+    "observations_added_r331": 2,
+    "current_pdf_count": "unknown; large file not readable",
+    "binary_bodies_downloaded": false,
+    "non_html_not_error": true
+  },
+  "verified_blob_sha": {
+    "source_discovery/run_trigger.json": "0bc25ddd0fe45d7b919bfd2845c5ec769ee22777",
+    "source_discovery/sources.jsonl": "8ae2a24afaec9d5a59503addc38c8c4930337701",
+    "source_discovery/backlog.jsonl": "968f5f629c43067f446e92e5ecb2727818a98ad3",
+    "source_discovery/review_state.json": "3b05d79689d9d8b0ada50dcbe56faf9b5993f7fe",
+    "source_discovery/link_labels.jsonl": "95bebce7313edd9f0ce05fd011639da7cfc84074",
+    "source_discovery/resource_observations.jsonl": "433db372bf6e92c63b64c9c3bcd0975f56d92b79",
+    "source_discovery/runs/discovery_r331.jsonl": "6cad85f1754d78a85058d071c83b38898bec9d1b",
+    "source_discovery/runs/r331_review_r336.jsonl": "b3e6d8741a2455f6f1b9b60e6a9741e51fcedbe5",
+    "source_discovery/runs/r331_queries.jsonl": "3b4655e87d4e253b7024e8fc09e47937cddaa596",
+    "source_discovery/runs/r331_audit.jsonl": "1311d25a6d2127d2e5982461768bf1e83b9b531f",
+    "source_discovery/runs/r331_mime_audit.json": "bc36b3ebf0506d928ea9f707b4c295e656cad97e",
+    "source_discovery/merge_review_checkpoints.py": "d5bd228a221c64c17709969603220c85d9801eff"
+  },
+  "safeguards": {
+    "binary_documents_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_modified": false,
+    "schedule_modified": false,
+    "extra_workflow_instances_requested": false
+  },
+  "unresolved": [
+    "20 discovery HTML pointers require idempotent canonical merge and full uniqueness verification",
+    "100 SHA-pinned reviewed labels require canonical merge in next ordinary workflow run",
+    "Five resources remain review: three JOI ZIP data archives and two KöMaL .txt auxiliary files",
+    "HTML frontier and current crawler error count cannot be read from large crawl_state.json",
+    "Historical coverage, stage, participant rights and 403 UNCuyo indexes remain open"
+  ]
+}
