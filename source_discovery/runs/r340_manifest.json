@@ -1,0 +1,121 @@
+{
+  "cycle": "r340-20261026T110303000Z",
+  "reported_at": "2026-10-26T11:12:23.358Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z",
+    "base": "main"
+  },
+  "trigger": {
+    "requested_at": "2026-10-26T11:03:03.000Z",
+    "commit": "8d2c6edfab789e2423256a1e39ce641e75c783f8",
+    "blob_sha": "7b75e4827b7ca333238a8ad8cd00a6580ca93516"
+  },
+  "workflow": {
+    "run_id": 40312165068,
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-26T11:10:37Z",
+    "output_commit": "006b74cbad7a",
+    "additional_workflows_started_by_r340_checkpoint_writes": false
+  },
+  "crawl": {
+    "html_pages_processed": 60,
+    "new_links_reported": 4347,
+    "raw_total_from_one_based_shards": 1427618,
+    "raw_last_shard": "batch_014277.jsonl",
+    "raw_last_shard_rows": 18,
+    "unique_resource_urls": 301510,
+    "resource_last_shard": "resource_003016.jsonl",
+    "resource_last_shard_rows": 10,
+    "pending_html_pages": 136126,
+    "blocked_or_failed_cumulative": 3219,
+    "frontier_not_completeness": true
+  },
+  "discovery": {
+    "unique_queries_logged": 52,
+    "verified_HTML_pointers_checkpointed": 14,
+    "canonical_sources": 2080,
+    "canonical_sources_added_this_cycle": 0,
+    "canonical_dedup_pending": true,
+    "checkpoint": "runs/discovery_r340.jsonl",
+    "checkpoint_blob_sha": "26c51a9a4143abf7f621b6d5ad6a7d3072ec40eb",
+    "query_log": "runs/r340_queries.jsonl",
+    "query_log_sha": "c467f9c7183d815e2385ce1f82d35d4c5cba966c",
+    "note": "Previous r339 checkpoint merged +0 in r340 workflow; r340 14 verified HTML pointers created after workflow checkout and await dedup by next ordinary merge_sources.py. Full canonical sources.jsonl unreadable through connector."
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 115,
+    "resource_ranges": [
+      "resource_000345.jsonl:35-99",
+      "resource_000346.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000881.jsonl",
+      "batch_000882.jsonl",
+      "batch_000883.jsonl"
+    ],
+    "counts": {
+      "task": 42,
+      "archive": 31,
+      "source": 5,
+      "unrelated": 21,
+      "review": 1
+    },
+    "checkpoints": [
+      {
+        "path": "runs/r340_review_r345_346_00_49.jsonl",
+        "rows": 50,
+        "blob_sha": "ac92745da482b3847b5fa894c673dfc4e3b6332a"
+      },
+      {
+        "path": "runs/r340_review_r345_346_50_99.jsonl",
+        "rows": 50,
+        "blob_sha": "8289f46630a657147528a7e621a38f24f49daffe"
+      }
+    ],
+    "merge_script_sha": "4ca46560cb955862c2bf601fcb430efd766ed5a1",
+    "canonical_labels_before": 8356,
+    "canonical_labels_after": 8456,
+    "canonical_merged_from_previous_cycle": 100,
+    "canonical_merge_pending_this_cycle": 100,
+    "next_resource_shard": "resource_000346.jsonl",
+    "next_row_index": 35,
+    "review_state_blob_sha": "aa232806d8b371c0afb249c060ecc3ffeba0fb5d"
+  },
+  "mime": {
+    "current_blob_sha": "1927f5f2bbeeb5120566f752244327c18a5a122d",
+    "changed_since_r339": false,
+    "last_reported_count": 3840,
+    "independently_recounted": false,
+    "binary_bodies_downloaded": false
+  },
+  "audit": {
+    "canonical_backlog_before": 1370,
+    "canonical_backlog_after": 1385,
+    "new_rows": 15,
+    "checkpoint": "runs/r340_audit.jsonl",
+    "checkpoint_blob_sha": "ca7bcde12ae46783750b2a6c2e65878407458f98",
+    "canonical_blob_sha": "1a424a452323fc09862556a6194e3bc486553176"
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_manually_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false,
+    "rights_assumed": false
+  },
+  "unresolved": [
+    "14 HTML pointers await canonical source deduplication; no claim of 14 newly unique canonical sources.",
+    "100 r340 SHA-pinned labels await canonical merge by next ordinary workflow; 1 future Mongolian edition remains review.",
+    "Older historical noncontiguous review checkpoints remain separately pending.",
+    "Paired Mongolian PDF-view and extensionless-download URLs may be aliases but byte equivalence cannot be proven without prohibited binary fetch.",
+    "Czech Physics Olympiad archive direct access returned HTTP 403 and IESO past-exams page HTTP 502; no bypass.",
+    "2020/21 Mongolia olympiads officially not held; do not count as missing documents.",
+    "Current MIME count not independently read; unchanged blob since prior run."
+  ]
+}
