@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T08:18:07.947Z",
+  "updated_at": "2026-10-26T08:24:00.000Z",
   "deferred_shards": [
     1,
     2,
@@ -13,13 +13,12 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r336_review_r341.jsonl",
     "runs/r337_review_r342_343_00_49.jsonl",
     "runs/r337_review_r342_343_50_99.jsonl"
   ],
-  "pending_labels_count": 200,
-  "canonical_merge_status": "r336 100 labels merged in running GitHub Actions #40291313763 (not yet persisted at review-state write); r337 100 labels SHA-pinned in merge_review_checkpoints.py and pending next ordinary workflow.",
-  "canonical_merged_in_cycle": 335,
+  "pending_labels_count": 100,
+  "canonical_merge_status": "r336 100 labels merged and persisted by RIFT Link Enumeration #40291313763 (success, 2026-10-26T08:23:52Z); canonical total 8156. r337 100 unique labels SHA-pinned and pending next ordinary workflow.",
+  "canonical_merged_in_cycle": 336,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -2730,6 +2729,7 @@
     "canonical_merged": 0,
     "next_resource_shard": "resource_000343.jsonl",
     "next_row_index": 35,
-    "raw_unchanged": true
+    "raw_unchanged": true,
+    "workflow_merge_pending": true
   }
 }
