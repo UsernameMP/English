@@ -1,0 +1,26 @@
+{
+  "cycle": "r331-20261026T015901280Z",
+  "checked_at": "2026-10-26T02:05:48.083Z",
+  "observations_last_confirmed_r329": 3685,
+  "additions_since_r329": [
+    {
+      "commit": "473f7dc6741e58c17099e132aaa9707798933036",
+      "added": 9
+    },
+    {
+      "commit": "16724ecb9c8b4db2bcbe5f5ebdb47aa7469e787f",
+      "added": 11
+    },
+    {
+      "commit": "6c180effeed8b370d0712c4f577ad637a38d5688",
+      "added": 2
+    }
+  ],
+  "observations_current_inferred_from_git_line_deltas": 3707,
+  "source": "GitHub commit file stats; no deletions in resource_observations.jsonl across these commits",
+  "pdf_count_current": "not_established_without_large_file_content",
+  "extensionless_pdf_candidate_policy": "Use MIME evidence as candidate only; no task suitability claim without source context",
+  "non_html_response_not_crawl_error": true,
+  "robots_denied_or_unavailable_not_bypassed": true,
+  "binary_bodies_downloaded": false
+}
