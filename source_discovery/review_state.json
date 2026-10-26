@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T18:16:35.873Z",
+  "updated_at": "2026-10-26T19:03:27.092Z",
   "deferred_shards": [
     1,
     2,
@@ -154,13 +154,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000353.jsonl",
+    "next_resource_shard": "resource_000354.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000352.jsonl",
-    "last_completed_cycle": "r347-20261026T180304725Z",
-    "cycle": "r347-20261026T180304725Z",
-    "reason": "100 unique resource URLs from resource_000352 rows35–99 and resource_000353 rows0–34; 107 raw occurrences checked in batch_000910..000915.",
-    "skip_already_reviewed": "resource_000353 rows0–34 reviewed in r347; next row35"
+    "last_completed_shard": "resource_000353.jsonl",
+    "last_completed_cycle": "r348-20261026T185904788Z",
+    "cycle": "r348-20261026T185904788Z",
+    "reason": "100 unique resource URLs: resource_000353 rows35–99 and resource_000354 rows0–34; 101 original occurrences across batch_000915,000917,000920,000921,000923,000925–000930; 1 duplicate URL across parents deduplicated.",
+    "skip_already_reviewed": "resource_000354 rows0–34 reviewed in r348; next row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -3071,5 +3071,36 @@
     "ambiguous_crosslinked_grades_7_8": 3,
     "canonical_merge_verified": true,
     "canonical_labels_verified_total": 9256
+  },
+  "r348_review": {
+    "cycle": "r348-20261026T185904788Z",
+    "resource_ranges": [
+      "resource_000353.jsonl:35-99",
+      "resource_000354.jsonl:0-34"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 101,
+    "counts": {
+      "solution": 81,
+      "archive": 8,
+      "task": 2,
+      "unrelated": 6,
+      "review": 3
+    },
+    "checkpoint_files": [
+      "runs/r348_review_r353_354_00_49.jsonl",
+      "runs/r348_review_r353_354_50_99.jsonl"
+    ],
+    "checkpoint_blob_shas": [
+      "6703174c56624408da61f1ac5e454fd43adaf01f",
+      "791c366b9030f97a3eb1961282c3015a98cddee5"
+    ],
+    "merge_script_registered": true,
+    "canonical_merged": 0,
+    "next_cursor": {
+      "shard": "resource_000354.jsonl",
+      "row": 35
+    },
+    "unresolved_review": 3
   }
 }
