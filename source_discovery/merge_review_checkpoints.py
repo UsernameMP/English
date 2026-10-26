@@ -62,10 +62,12 @@ CHECKPOINTS = {
     "r338_review_r343_344_50_99.jsonl": "ed4ec41055a124369cd0639a0a8859bea48e1f1c",
     "r339_review_r344_345_00_49.jsonl": "92c03eb9ae0ca9187f286014439f5be7f5896446",
     "r339_review_r344_345_50_99.jsonl": "831e9801e0e43f2c3b7b78467aa5abe6361549cb",
+    "r340_review_r345_346_00_49.jsonl": "ac92745da482b3847b5fa894c673dfc4e3b6332a",
+    "r340_review_r345_346_50_99.jsonl": "8289f46630a657147528a7e621a38f24f49daffe",
     "r313_historical_reconciled_apho_29.jsonl": "9a2a4e530e53f0ac6c3cefbbc4fc63373dba9f30",
     "r313_historical_reconciled_r413_39.jsonl": "9d75650d7df61c1cdd0b6ddf79bc11705ec321a4",
 }
-EXPECTED_ROWS = {"r339_review_r344_345_00_49.jsonl": 50, "r339_review_r344_345_50_99.jsonl": 50, "r313_historical_reconciled_apho_29.jsonl": 29, "r313_historical_reconciled_r413_39.jsonl": 39, "r337_review_r342_343_00_49.jsonl": 50, "r337_review_r342_343_50_99.jsonl": 50, "r338_review_r343_344_00_49.jsonl": 50, "r338_review_r343_344_50_99.jsonl": 50}
+EXPECTED_ROWS = {"r340_review_r345_346_00_49.jsonl": 50, "r340_review_r345_346_50_99.jsonl": 50, "r339_review_r344_345_00_49.jsonl": 50, "r339_review_r344_345_50_99.jsonl": 50, "r313_historical_reconciled_apho_29.jsonl": 29, "r313_historical_reconciled_r413_39.jsonl": 39, "r337_review_r342_343_00_49.jsonl": 50, "r337_review_r342_343_50_99.jsonl": 50, "r338_review_r343_344_00_49.jsonl": 50, "r338_review_r343_344_50_99.jsonl": 50}
 TYPE_CORRECTION_CHECKPOINTS = {
     "r307_r306_corrections_fixed.jsonl": "61254ca48e8195307d65609906992aad77815041",
 }
