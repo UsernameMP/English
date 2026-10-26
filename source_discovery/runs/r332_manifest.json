@@ -1,28 +1,38 @@
 {
   "cycle": "r332-20261026T025944015Z",
-  "reported_at": "2026-10-26T03:06:04.534Z",
+  "reported_at": "2026-10-26T03:11:29.665Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
     "commit": "7efe6a656b15b35f8843314b54ffcddcd3be8e75",
     "workflow_run_id": 40261837948,
-    "status": "in_progress",
-    "conclusion": null,
-    "url": "https://github.com/UsernameMP/English/actions/runs/40261837948"
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/UsernameMP/English/actions/runs/40261837948",
+    "completed_at": "2026-10-26T03:10:29Z",
+    "crawl_commit": "ff273613c4555eb2566a8bd96bc4258b4bf4d769"
   },
   "crawl": {
-    "baseline_unique_urls_r331": 291678,
-    "baseline_raw_occurrences_r331": 1378078,
-    "latest_unique_urls": "pending crawler persistence",
-    "latest_raw_occurrences": "pending crawler persistence",
-    "pending_html_pages": "not readable in large crawl_state.json"
+    "html_pages_processed": 60,
+    "new_raw_occurrences": 7268,
+    "raw_occurrences_before": 1378078,
+    "raw_occurrences_after": 1385346,
+    "unique_resource_urls_before": 291678,
+    "unique_resource_urls_after": 295702,
+    "unique_resource_delta": 4024,
+    "pending_html_pages": 133400,
+    "blocked_or_failed_cumulative": 3073,
+    "source": "GitHub Actions run #40261837948 job log; persisted crawl commit ff273613"
   },
   "discovery": {
     "queries_logged": 52,
     "checkpoint": "runs/discovery_r332.jsonl",
     "verified_html_pointers": 12,
     "full_canonical_uniqueness": "pending idempotent merge",
-    "canonical_sources_baseline_r331": 2011
+    "canonical_sources_baseline_r331": 2011,
+    "canonical_sources_after_workflow": 2024,
+    "canonical_sources_added_from_r331": 13,
+    "r332_pointers_canonical_merged": 0
   },
   "review": {
     "resource_shard": "resource_000337.jsonl",
@@ -47,7 +57,10 @@
     "checkpoint_sha": "7ec38afed96a12719a766c5700f8f41f14adb73d",
     "sha_pinned_in": "merge_review_checkpoints.py",
     "canonical_merge": "pending next ordinary workflow",
-    "canonical_labels_baseline_r331": 7556
+    "canonical_labels_baseline_r331": 7556,
+    "canonical_labels_after_workflow": 7656,
+    "r331_labels_merged": 100,
+    "r332_labels_canonical_merged": 0
   },
   "audit": {
     "checkpoint": "runs/r332_audit.jsonl",
@@ -57,17 +70,19 @@
   "mime": {
     "checkpoint": "runs/r332_mime_audit.json",
     "last_confirmed_observations_r331": 3707,
-    "current_count": "pending",
+    "current_count": "not independently verified; resource_observations blob changed, large file unreadable",
     "binary_files_saved": false
   },
   "verified_blob_sha": {
     "source_discovery/run_trigger.json": "3740225d86a8514f89fab6edf07218b8ff9a3104",
-    "source_discovery/sources.jsonl": "8ae2a24afaec9d5a59503addc38c8c4930337701",
-    "source_discovery/link_labels.jsonl": "95bebce7313edd9f0ce05fd011639da7cfc84074",
+    "source_discovery/sources.jsonl": "a7bcc97dc175633f6c594e5acee354e69fb65fa8",
+    "source_discovery/link_labels.jsonl": "02a5edba6bd3ca082ef0fb04e9f290ad2ab5673b",
     "source_discovery/backlog.jsonl": "bc93ba2f27159f3854a6c7e40eeb473a441e34d3",
-    "source_discovery/review_state.json": "fdcec9fdc9dcf5742fd75e31584c50cb2c202e1d",
+    "source_discovery/review_state.json": "3cc9107d2f549b841b6252252177c971fe9c73f8",
     "source_discovery/runs/discovery_r332.jsonl": "218bd0b5a99b8af9d430478a3115b7b44fc694a8",
-    "source_discovery/runs/r332_review_r337.jsonl": "7ec38afed96a12719a766c5700f8f41f14adb73d"
+    "source_discovery/runs/r332_review_r337.jsonl": "7ec38afed96a12719a766c5700f8f41f14adb73d",
+    "source_discovery/crawl_state.json": "f21fe3794c54395c29b596dc133fecf3c5a5a544",
+    "source_discovery/resource_observations.jsonl": "ea4763ef462ed8fdd6b24b920e23aee964a68304"
   },
   "safeguards": {
     "binary_documents_saved": false,
@@ -78,10 +93,10 @@
     "extra_automation_created": false
   },
   "unresolved": [
-    "Workflow #40261837948 has not yet persisted crawler results",
-    "12 verified HTML pointers require canonical uniqueness check and merge",
-    "100 r332 reviewed labels require canonical merge",
-    "5 ambiguous resources remain review (four JOI/JOIG judge-data ZIPs and one KöMaL statistics page)",
-    "Large crawl_state and MIME ledgers not directly readable; year/stage/rights gaps remain open"
+    "12 r332 discovery HTML pointers await idempotent canonical source merge and full uniqueness verification",
+    "100 SHA-pinned r332 review labels await canonical merge in next ordinary workflow",
+    "Five ambiguous resources remain review: four official JOI/JOIG judge-data ZIPs and one KöMaL statistics page",
+    "Current MIME/PDF counts not independently readable in large resource_observations.jsonl",
+    "Historical years, stages, solutions, criteria, participant rights and JS pagination gaps remain open"
   ]
 }
