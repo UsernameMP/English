@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T00:05:31.000Z",
+  "updated_at": "2026-10-26T00:12:26.000Z",
   "deferred_shards": [
     1,
     2,
@@ -13,12 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r328_review_r333.jsonl",
     "runs/r329_review_r334.jsonl"
   ],
-  "pending_labels_count": 200,
-  "canonical_merge_status": "RIFT r329 trigger commit 2c73197; GitHub Actions #40247681034 in progress at checkpoint. r328 checkpoint scheduled for merge in this workflow; r329 100 unique resource labels SHA-pinned for subsequent merge. No canonical r329 merge claimed.",
-  "canonical_merged_in_cycle": 327,
+  "pending_labels_count": 100,
+  "canonical_merge_status": "RIFT Link Enumeration #40247681034 completed success 2026-10-26T00:12:25Z. Job log: 100 r328 labels merged, canonical 7256 -> 7356; sources 1989 -> 1997 (+8 r328). r329 100 labels SHA-pinned in runs/r329_review_r334.jsonl; r329 canonical merge pending. Operational cursor held at resource_000334.jsonl.",
+  "canonical_merged_in_cycle": 328,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -2463,27 +2462,9 @@
     "notes": "78 Náboj event-gallery WebP images unrelated; 19 KöMaL Hungarian 'megoldás, statisztika' solution links and 3 A-series task/statistics links. Metadata-only, no image or document bodies downloaded."
   },
   "r328_pending": {
-    "cycle": "r328-20261025T230015983Z",
     "resource_shard": "resource_000333.jsonl",
-    "unique_resources_reviewed": 100,
-    "raw_occurrences_matched": 100,
-    "raw_shards": [
-      "batch_000855.jsonl",
-      "batch_000856.jsonl",
-      "batch_000857.jsonl"
-    ],
-    "counts": {
-      "unrelated": 78,
-      "solution": 19,
-      "task": 3
-    },
-    "checkpoint": "runs/r328_review_r333.jsonl",
-    "checkpoint_sha": "9e340a0ae9a3f7674827201528faa62cb84b9d59",
-    "sha_allowlisted_in": "merge_review_checkpoints.py",
-    "canonical_merged": 0,
-    "cursor_advanced": false,
-    "rights": "unknown_or_reserved",
-    "binary_downloaded": false
+    "canonical_merged": 100,
+    "merge_run_id": 40247681034
   },
   "r329_pending": {
     "resource_shard": "resource_000334.jsonl",
@@ -2504,6 +2485,7 @@
     },
     "checkpoint": "runs/r329_review_r334.jsonl",
     "checkpoint_sha": "8815e098f2d5f05124739f3f2b7e3ff258e6f9c8",
-    "canonical_merged": 0
+    "canonical_merged": 0,
+    "merge_pending": true
   }
 }
