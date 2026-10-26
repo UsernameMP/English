@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T13:27:35.020Z",
+  "updated_at": "2026-10-26T13:38:30.998Z",
   "deferred_shards": [
     1,
     2,
@@ -12,12 +12,9 @@
     4,
     5
   ],
-  "pending_label_checkpoints": [
-    "runs/r342_review_r347_348_00_49.jsonl",
-    "runs/r342_review_r347_348_50_99.jsonl"
-  ],
-  "pending_labels_count": 100,
-  "canonical_merge_status": "Workflow #40329738806 merged 100 r341 labels, canonical 8556->8656; 100 r342 labels in two SHA-pinned checkpoints, merge script updated, canonical merge awaits next ordinary workflow. Historical noncontiguous checkpoints remain separately unresolved.",
+  "pending_label_checkpoints": [],
+  "pending_labels_count": 0,
+  "canonical_merge_status": "Automatic GitHub workflow #40330861906 merged all 100 SHA-pinned r342 labels, canonical 8656->8756; older noncontiguous historical checkpoints remain separately unresolved.",
   "canonical_merged_in_cycle": 342,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -2901,8 +2898,22 @@
         "rows": 50
       }
     ],
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "canonical_labels_after_current_workflow": 8656,
-    "unresolved": "Six IYPT administrative ZIP attachments remain review; no ZIP bodies fetched."
+    "unresolved": "Six IYPT administrative ZIP attachments remain review; no ZIP bodies fetched.",
+    "pending": 0,
+    "canonical_labels_after_followup_workflow": 8756,
+    "merge_workflow_run_id": 40330861906
+  },
+  "r342_merged": {
+    "cycle": "r342-20261026T132025874Z",
+    "merged_labels": 100,
+    "canonical_labels": 8756,
+    "workflow_run_id": 40330861906,
+    "review_cursor": {
+      "next_resource_shard": "resource_000348.jsonl",
+      "next_row_index": 35
+    },
+    "historical_unreconciled_remain": true
   }
 }
