@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T15:13:21.903Z",
+  "updated_at": "2026-10-26T15:22:12.061Z",
   "deferred_shards": [
     1,
     2,
@@ -12,13 +12,10 @@
     4,
     5
   ],
-  "pending_label_checkpoints": [
-    "runs/r344_review_r349_350_00_49.jsonl",
-    "runs/r344_review_r349_350_50_99.jsonl"
-  ],
-  "pending_labels_count": 100,
-  "canonical_merge_status": "r344: 100 unique resources SHA-pinned in two checkpoint files; awaiting audited merge workflow; prior r343 canonical 8856 labels.",
-  "canonical_merged_in_cycle": 343,
+  "pending_label_checkpoints": [],
+  "pending_labels_count": 0,
+  "canonical_merge_status": "RIFT r344: workflow #40347869977 succeeded; 100 SHA-pinned labels merged into canonical link_labels.jsonl, 8856->8956. Older historical noncontiguous checkpoints still require reconciliation.",
+  "canonical_merged_in_cycle": 344,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -2827,8 +2824,8 @@
     "uncertain_resources": 1,
     "raw_unchanged": true
   },
-  "canonical_labels_confirmed": 8456,
-  "canonical_labels_verified_at": "2026-10-26T11:12:03.240Z",
+  "canonical_labels_confirmed": 8956,
+  "canonical_labels_verified_at": "2026-10-26T15:22:12.061Z",
   "r341_pending": {
     "cycle": "r341-20261026T120508689Z",
     "resource_ranges": [
@@ -2969,8 +2966,9 @@
       "8d22e0276e11252d16d53f8ce5ff175344eba5ec",
       "b2a32a5500874161d40312dd5bc0ca1e24ccfacd"
     ],
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "next_resource_shard": "resource_000350.jsonl",
-    "next_row_index": 35
+    "next_row_index": 35,
+    "canonical_merge_run_id": 40347869977
   }
 }
