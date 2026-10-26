@@ -1,0 +1,139 @@
+{
+  "cycle": "r341-20261026T120508689Z",
+  "reported_at": "2026-10-26T12:17:43.784Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z",
+    "base": "main"
+  },
+  "trigger": {
+    "requested_at": "2026-10-26T12:05:08.689Z",
+    "commit": "8511ca1c94b906426e89405a7d17376828701861",
+    "blob_sha": "2b43eddf949f27ec475710dc7a1f194bbcac59dd"
+  },
+  "workflow": {
+    "run_id": 40319844160,
+    "status": "completed",
+    "conclusion": "success",
+    "output_commit": "cc13ec7211d8548b0f9f9c7dac43795cee3f810b",
+    "completed_at": "2026-10-26T12:09:22Z",
+    "additional_workflow_launched": false
+  },
+  "crawl": {
+    "html_pages_processed": 60,
+    "new_raw_occurrences_reported": 2752,
+    "raw_total_from_one_based_shards": 1430370,
+    "raw_last_shard": "batch_014304.jsonl",
+    "raw_last_shard_rows": 70,
+    "unique_resource_urls": 301816,
+    "resource_last_shard": "resource_003019.jsonl",
+    "resource_last_shard_rows": 16,
+    "pending_html_pages": 136231,
+    "blocked_or_failed_cumulative": 3220,
+    "frontier_not_completeness": true
+  },
+  "discovery": {
+    "search_queries": 51,
+    "initial_verified_HTML_pointers": 22,
+    "already_present_in_canonical": 19,
+    "new_unique_verified_sources": 3,
+    "canonical_sources_before_cycle": 2080,
+    "canonical_sources_after_workflow": 2082,
+    "canonical_sources_after_manual_sha_write": 2085,
+    "canonical_source_commit": "e373df736dddec26ab0ca8543cec7916332baf80",
+    "canonical_source_blob_sha": "619be69c994355b6603b270e6ffed716931cee8f",
+    "deduplicated_checkpoint": "runs/discovery_r341.jsonl",
+    "deduplicated_checkpoint_sha": "e754b078c62589217dfd773515a3e162f9f0a5e2",
+    "query_log": "runs/r341_queries.jsonl",
+    "new_urls": [
+      "https://stary.nivam.sk/olympiady-a-sutaze/dejepisna-olympiada/",
+      "https://rickardsinvitational.github.io/past-tests.html",
+      "https://www.iynt.icm.hr/seminarski-rad/"
+    ]
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 101,
+    "resource_ranges": [
+      "resource_000346.jsonl:35-99",
+      "resource_000347.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000883.jsonl",
+      "batch_000884.jsonl",
+      "batch_000885.jsonl",
+      "batch_000886.jsonl",
+      "batch_000888.jsonl"
+    ],
+    "counts": {
+      "solution": 64,
+      "task": 5,
+      "source": 9,
+      "unrelated": 20,
+      "review": 2
+    },
+    "canonical_labels_before_cycle": 8456,
+    "canonical_labels_after_workflow": 8556,
+    "merged_from_previous_cycle": 100,
+    "new_labels_checkpointed": 100,
+    "new_labels_canonical_merged": 0,
+    "checkpoints": [
+      {
+        "path": "runs/r341_review_r346_347_00_49.jsonl",
+        "rows": 50,
+        "blob_sha": "965c20d55b508f4c93ea30b529c3d296347382ec"
+      },
+      {
+        "path": "runs/r341_review_r346_347_50_99.jsonl",
+        "rows": 50,
+        "blob_sha": "3f920b666720aaa5ef43b3209cb338c904005cd5"
+      }
+    ],
+    "merge_script_sha": "eec884c55bc0f515f814bb1f48eb392c86584eec",
+    "canonical_blob_sha_unchanged": "5e41c21e30ef8ec1192930b1d7a588e8ff9b69d8",
+    "direct_merge_error": "h2 protocol error: error reading a body from connection",
+    "review_state_sha": "50c728dad940ec3bd60a60917b6d5b1e78439768",
+    "next_resource_shard": "resource_000347.jsonl",
+    "next_row_index": 35,
+    "unresolved_resources": [
+      "JuniorNT information presentation on Google Docs",
+      "KöMaL informatics auxiliary hetforras.txt"
+    ]
+  },
+  "mime": {
+    "observations": 3867,
+    "application_pdf": 1641,
+    "pdf_urls_without_dot_pdf": 1483,
+    "blob_sha": "7082aa9e2bf10c7879d7c0bad90f11f8d6ee0192",
+    "mime_only_not_document_validity": true,
+    "binary_bodies_downloaded": false
+  },
+  "audit": {
+    "new_entries": 17,
+    "canonical_backlog_before": 1385,
+    "canonical_backlog_after": 1402,
+    "canonical_backlog_commit": "ea1d65e6a53e6d7dc5c7c333caeb99c2d7a3ac66",
+    "canonical_blob_sha": "d3cc1ccd22d1f5b54d93ff7294c566c3c2a5a439",
+    "checkpoint": "runs/r341_audit.jsonl",
+    "coverage_not_exhaustive": true
+  },
+  "safeguards": {
+    "binary_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_manually_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false,
+    "extra_workflow_launched": false,
+    "robots_or_access_bypassed": false,
+    "rights_assumed": false
+  },
+  "unresolved": [
+    "100 new labels are SHA-pinned but canonical link_labels.jsonl direct update failed with h2 protocol error; next ordinary crawler workflow should merge them idempotently.",
+    "Two resource URLs remain review due to ambiguous auxiliary content; binary or restricted material was not opened.",
+    "Older historical noncontiguous checkpoints require separate reconciliation.",
+    "Direct Luxembourg archive access returned 403 while search index shows pages; no bypass.",
+    "No source or resource index count establishes exhaustive country/year/stage coverage."
+  ]
+}
