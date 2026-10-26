@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T18:09:09.035Z",
+  "updated_at": "2026-10-26T18:16:35.873Z",
   "deferred_shards": [
     1,
     2,
@@ -12,13 +12,10 @@
     4,
     5
   ],
-  "pending_label_checkpoints": [
-    "runs/r346_review_r351_352_00_49.jsonl",
-    "runs/r346_review_r351_352_50_99.jsonl"
-  ],
-  "pending_labels_count": 100,
-  "canonical_merge_status": "RIFT r346: workflow 40365531517 merged 100 r345 labels (8956->9056). R346's 100 labels are SHA-pinned in two checkpoint files, registered in merge_review_checkpoints.py, and pending next normal workflow merge; no extra run requested.",
-  "canonical_merged_in_cycle": 345,
+  "pending_label_checkpoints": [],
+  "pending_labels_count": 0,
+  "canonical_merge_status": "RIFT r347: subsequent source-triggered normal GitHub workflow merged both r346 and r347 SHA-pinned 100-resource checkpoints; canonical labels 9056 -> 9256, verified by resource_id/type readback. Historical noncontiguous checkpoints remain separately unresolved.",
+  "canonical_merged_in_cycle": 347,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -2827,8 +2824,8 @@
     "uncertain_resources": 1,
     "raw_unchanged": true
   },
-  "canonical_labels_confirmed": 8956,
-  "canonical_labels_verified_at": "2026-10-26T15:22:12.061Z",
+  "canonical_labels_confirmed": 9256,
+  "canonical_labels_verified_at": "2026-10-26T18:16:35.873Z",
   "r341_pending": {
     "cycle": "r341-20261026T120508689Z",
     "resource_ranges": [
@@ -3027,7 +3024,8 @@
       "2a527077a5065638ab18b0249fd5e934b57cb770",
       "b6585fd1f66c5474edef3fc5911067e72b4e7a39"
     ],
-    "canonical_merged": 0
+    "canonical_merged": 100,
+    "canonical_merge_verified": true
   },
   "r345_review_canonical_merge_verified": {
     "workflow_run_id": 40365531517,
@@ -3067,9 +3065,11 @@
       "71ebcb66c7f72b2bb24d272c464a5ae486da6a3e",
       "5ca38586a22331ef963d1bbb572b357f636fe122"
     ],
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "merge_registered": true,
     "canonical_raw_cursor_unchanged": true,
-    "ambiguous_crosslinked_grades_7_8": 3
+    "ambiguous_crosslinked_grades_7_8": 3,
+    "canonical_merge_verified": true,
+    "canonical_labels_verified_total": 9256
   }
 }
