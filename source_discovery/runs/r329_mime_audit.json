@@ -1,8 +1,8 @@
 {
   "cycle": "r329-20261026T000531000Z",
   "observed_at": "2026-10-26T00:05:31.000Z",
-  "observation_count": 3680,
-  "unique_resource_ids": 3680,
+  "observation_count": 3685,
+  "unique_resource_ids": 3685,
   "application_pdf_count": 1584,
   "pdf_url_without_dot_pdf": 1412,
   "zip_count": 61,
@@ -106,5 +106,7 @@
       "parent_url": "",
       "file_candidate": true
     }
-  ]
+  ],
+  "after_workflow_run_id": 40247681034,
+  "after_workflow_verified_at": "2026-10-26T00:12:26.000Z"
 }
