@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T19:03:27.092Z",
+  "updated_at": "2026-10-26T19:14:25.289Z",
   "deferred_shards": [
     1,
     2,
@@ -12,9 +12,12 @@
     4,
     5
   ],
-  "pending_label_checkpoints": [],
-  "pending_labels_count": 0,
-  "canonical_merge_status": "RIFT r347: subsequent source-triggered normal GitHub workflow merged both r346 and r347 SHA-pinned 100-resource checkpoints; canonical labels 9056 -> 9256, verified by resource_id/type readback. Historical noncontiguous checkpoints remain separately unresolved.",
+  "pending_label_checkpoints": [
+    "runs/r348_review_r353_354_00_49.jsonl",
+    "runs/r348_review_r353_354_50_99.jsonl"
+  ],
+  "pending_labels_count": 100,
+  "canonical_merge_status": "RIFT r348: two successful crawler runs, but r348 SHA-pinned 100 labels not yet in canonical link_labels.jsonl (9256 unchanged); checkpoint registration committed after second workflow checkout. Next normal workflow should merge; do not mark canonical until readback.",
   "canonical_merged_in_cycle": 347,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -3101,6 +3104,8 @@
       "shard": "resource_000354.jsonl",
       "row": 35
     },
-    "unresolved_review": 3
+    "unresolved_review": 3,
+    "canonical_labels_after_second_run": 9256,
+    "workflow_merge_pending": true
   }
 }
