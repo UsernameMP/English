@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T11:09:22.262Z",
+  "updated_at": "2026-10-26T11:12:03.240Z",
   "deferred_shards": [
     1,
     2,
@@ -17,8 +17,8 @@
     "runs/r340_review_r345_346_50_99.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "r340 100 unique-resource labels SHA-pinned and allowlisted for next ordinary workflow; r339 checkpoint merge status must be reverified from canonical ledger after active workflow.",
-  "canonical_merged_in_cycle": 338,
+  "canonical_merge_status": "Workflow #40312165068 successfully merged r339 100 labels: canonical 8356->8456; r340 100 labels remain SHA-pinned pending next ordinary workflow.",
+  "canonical_merged_in_cycle": 340,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -2783,12 +2783,14 @@
       "92c03eb9ae0ca9187f286014439f5be7f5896446",
       "831e9801e0e43f2c3b7b78467aa5abe6361549cb"
     ],
-    "canonical_merged": 0,
-    "merge_pending": true,
+    "canonical_merged": 100,
+    "merge_pending": false,
     "next_resource_shard": "resource_000345.jsonl",
     "next_row_index": 35,
     "uncertain_resources": 12,
-    "raw_unchanged": true
+    "raw_unchanged": true,
+    "merged_by_workflow_run_id": 40312165068,
+    "merged_in_cycle": "r340"
   },
   "r340_pending": {
     "cycle": "r340-20261026T110303000Z",
@@ -2824,5 +2826,7 @@
     "next_row_index": 35,
     "uncertain_resources": 1,
     "raw_unchanged": true
-  }
+  },
+  "canonical_labels_confirmed": 8456,
+  "canonical_labels_verified_at": "2026-10-26T11:12:03.240Z"
 }
