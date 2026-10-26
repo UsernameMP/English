@@ -1,6 +1,6 @@
 {
   "cycle": "r344-20261026T150744295Z",
-  "reported_at": "2026-10-26T15:19:32.451Z",
+  "reported_at": "2026-10-26T15:22:22.247Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "pr188": {
@@ -19,8 +19,10 @@
     },
     "automatic_followup": {
       "run_id": 40347869977,
-      "status": "in_progress",
-      "cause": "sources.jsonl push; automatic GitHub Actions event, not an extra scheduled task"
+      "status": "completed",
+      "cause": "sources.jsonl push; automatic GitHub Actions event, not an extra scheduled task",
+      "conclusion": "success",
+      "crawl_commit": "e605f1d6"
     }
   },
   "crawl": {
@@ -30,7 +32,14 @@
     "unique_url_resources_after_primary": 305231,
     "html_frontier_after_primary": 138038,
     "blocked_or_failed_after_primary": 3321,
-    "not_exhaustiveness": true
+    "not_exhaustiveness": true,
+    "html_pages_total": 120,
+    "new_raw_occurrences_followup": 3359,
+    "new_raw_occurrences_total": 5503,
+    "raw_total_final": 1452808,
+    "unique_url_resources_final": 305739,
+    "html_frontier_final": 138365,
+    "blocked_or_failed_final": 3333
   },
   "discovery": {
     "search_queries": 60,
@@ -64,17 +73,23 @@
       "b2a32a5500874161d40312dd5bc0ca1e24ccfacd"
     ],
     "canonical_labels_before": 8856,
-    "canonical_merge_status": "pending followup workflow commit",
+    "canonical_merge_status": "merged by GitHub Actions #40347869977; confirmed from canonical blob",
     "next_cursor": {
       "shard": "resource_000350.jsonl",
       "row": 35
-    }
+    },
+    "canonical_labels_after": 8956,
+    "canonical_labels_sha": "dbb6733485cd5988915eee018d59a91742ad6205",
+    "review_state_sha": "a2e96fc62d18a8d18b4a04f389aedaa102386e82"
   },
   "mime": {
     "observations_after_primary": 3908,
     "application_pdf": 1653,
     "pdf_without_terminal_dot_pdf": 1495,
-    "non_html_is_not_error": true
+    "non_html_is_not_error": true,
+    "observations_final": 3917,
+    "application_pdf_final": 1653,
+    "pdf_without_terminal_dot_pdf_final": 1495
   },
   "audit": {
     "canonical_before": 1435,
@@ -91,7 +106,7 @@
     "permissions_assumed": false
   },
   "unresolved": [
-    "Await canonical merge of 100 SHA-pinned review labels and followup workflow completion.",
+    "Seven reviewed URL candidates remain in review; secondary Serbian archive provenance and historical year/grade conflicts require follow-up.",
     "Serbian school-year and grade aliases; dynamic print-to-PDF MIME; official provenance and reuse rights.",
     "Older noncontiguous historical review checkpoints not reconciled."
   ]
