@@ -1,0 +1,111 @@
+{
+  "cycle": "r345-20261026T160105811Z",
+  "reported_at": "2026-10-26T16:08:44.562Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "requested_at": "2026-10-26T16:01:05.811Z",
+    "commit": "b89ca82a1f57046bdb114cc579f16bfe8a331fef",
+    "sha": "bde03ed067b355cd8b22dbe3719ec4d8933c65da"
+  },
+  "workflow": {
+    "run_id": 40355038089,
+    "conclusion": "success",
+    "completed_at": "2026-10-26T16:05:44Z",
+    "crawl_commit": "3cb8252e",
+    "no_additional_runs_requested": true
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_occurrences": 3227,
+    "raw_total": 1456035,
+    "unique_resource_urls": 305951,
+    "html_frontier_pending": 138491,
+    "blocked_or_failed_cumulative": 3333,
+    "raw_last_shard": "batch_014561.jsonl",
+    "raw_last_shard_rows": 35,
+    "resource_last_shard": "resource_003060.jsonl",
+    "resource_last_shard_rows": 51,
+    "not_exhaustiveness": true
+  },
+  "discovery": {
+    "unique_search_queries": 69,
+    "verified_html_pointers_checkpointed": 20,
+    "canonical_sources_before": 2095,
+    "canonical_sources_after": 2095,
+    "canonical_merge_pending": true,
+    "checkpoint": "runs/discovery_r345.jsonl",
+    "checkpoint_sha": "6d8d721c3a4b834d2e034449453cf8071c5e6dce",
+    "query_log": "runs/r345_search_queries.json",
+    "deduplication": "Idempotent merge_sources.py will normalize and deduplicate against canonical registry; unique new count is not yet confirmed."
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "task": 79,
+      "solution": 12,
+      "unrelated": 4,
+      "review": 5
+    },
+    "resource_ranges": [
+      "resource_000350.jsonl:35-99",
+      "resource_000351.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000904.jsonl",
+      "batch_000905.jsonl",
+      "batch_000906.jsonl",
+      "batch_000907.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r345_review_r350_351_00_49.jsonl",
+      "runs/r345_review_r350_351_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "741112f86f67b13af908da7a130952cfe801a7f9",
+      "58ecb928aca5589440d01c408a571e77d178fbb0"
+    ],
+    "merge_script_updated": true,
+    "canonical_labels_before": 8956,
+    "canonical_labels_after": 8956,
+    "canonical_merge_pending": true,
+    "next_cursor": {
+      "shard": "resource_000351.jsonl",
+      "row": 35
+    },
+    "unresolved_review": 5
+  },
+  "mime": {
+    "previous_confirmed_observations": 3917,
+    "latest_blob_sha": "c1e1c919262b5b4c7ff209e7def301d4f7772ea7",
+    "current_count": "not_independently_counted; large file content unavailable via connector",
+    "binary_downloads": false
+  },
+  "audit": {
+    "new_findings_checkpointed": 23,
+    "canonical_backlog_before": 1450,
+    "canonical_backlog_after": 1450,
+    "canonical_merge_pending": true,
+    "checkpoint": "runs/r345_audit.jsonl",
+    "checkpoint_sha": "5b4323b91e129a3b9cd157f7cbcc14ce6c8547b9"
+  },
+  "safeguards": {
+    "binaries_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_manually_modified": false,
+    "schedule_modified": false,
+    "extra_automation_instances_created": false,
+    "robots_bypassed": false,
+    "redistribution_rights_assumed": false
+  },
+  "unresolved": [
+    "20 HTML pointers await canonical URL-level deduplication/merge; 100 labels await next scheduled workflow canonical merge; 23 audit notes are in checkpoint because backlog.jsonl is too large for safe full read/replace via connector.",
+    "Four dynamic print-to-PDF URLs lack confirmed MIME and a 1996 Serbian grade-4 URL is malformed; all five remain review.",
+    "MIME observation count cannot be independently recalculated from oversized file; historical noncontiguous label checkpoints still require reconciliation."
+  ]
+}
