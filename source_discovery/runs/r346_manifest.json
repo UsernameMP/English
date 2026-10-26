@@ -1,0 +1,120 @@
+{
+  "cycle": "r346-20261026T170635796Z",
+  "reported_at": "2026-10-26T17:14:01.489Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z",
+    "verified_via": "GitHub REST /pulls/188"
+  },
+  "trigger": {
+    "requested_at": "2026-10-26T17:06:35.796Z",
+    "commit": "b1fcbc171a096d5f93b48df5bbe3eb8646cfc5f1",
+    "blob_sha": "63dd9fde359127b97a952de27191d68d5fe02aca"
+  },
+  "workflow": {
+    "run_id": 40365531517,
+    "name": "RIFT Link Enumeration",
+    "conclusion": "success",
+    "completed_at": "2026-10-26T17:13:04Z",
+    "crawl_commit": "d0eccbea",
+    "safe_rebase": true,
+    "extra_runs_requested": false
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_occurrences": 3223,
+    "raw_total": 1459258,
+    "raw_last_shard": "batch_014593.jsonl",
+    "raw_last_shard_rows": 58,
+    "unique_resource_urls": 306731,
+    "html_frontier_pending": 138532,
+    "blocked_or_failed_cumulative": 3344,
+    "resource_shards_changed": 10,
+    "not_exhaustiveness": true
+  },
+  "canonical": {
+    "sources": 2099,
+    "sources_added_by_workflow_from_prior_discovery": 4,
+    "reviewed_labels": 9056,
+    "reviewed_labels_added_by_workflow_from_r345": 100,
+    "backlog": 1450
+  },
+  "discovery": {
+    "unique_search_queries": 68,
+    "verified_html_pointers_checkpointed": 25,
+    "canonical_new_sources_from_r346": 0,
+    "canonical_uniqueness_verified": false,
+    "checkpoint": "runs/discovery_r346.jsonl",
+    "checkpoint_blob_sha": "b921c355a7c0c7e5791cfc0fd6992ade514ce628",
+    "search_log": "runs/r346_search_queries.json",
+    "pending_merge_via": "merge_sources.py on next normal workflow"
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 105,
+    "counts": {
+      "task": 55,
+      "solution": 26,
+      "unrelated": 7,
+      "review": 6,
+      "source": 6
+    },
+    "resource_ranges": [
+      "resource_000351.jsonl:35-99",
+      "resource_000352.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000907.jsonl",
+      "batch_000908.jsonl",
+      "batch_000909.jsonl",
+      "batch_000910.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r346_review_r351_352_00_49.jsonl",
+      "runs/r346_review_r351_352_50_99.jsonl"
+    ],
+    "checkpoint_blob_shas": [
+      "2a527077a5065638ab18b0249fd5e934b57cb770",
+      "b6585fd1f66c5474edef3fc5911067e72b4e7a39"
+    ],
+    "merge_script_updated": true,
+    "canonical_new_labels_from_r346": 0,
+    "canonical_merge_pending": true,
+    "next_cursor": {
+      "shard": "resource_000352.jsonl",
+      "row": 35
+    },
+    "unresolved_review": 6
+  },
+  "mime": {
+    "latest_blob_sha": "400e334929ac2c1e3f2908ff8ee68449553b09ee",
+    "current_observation_count": "not independently counted; oversized file unavailable via connector",
+    "pdf_candidates": "may include extensionless application/pdf; do not treat MIME alone as task proof",
+    "binary_downloads": false
+  },
+  "audit": {
+    "new_findings_checkpointed": 23,
+    "canonical_backlog_added": 0,
+    "checkpoint": "runs/r346_audit.jsonl",
+    "checkpoint_blob_sha": "8d51e9c59aabd356d6bf2d7ccc5d9b2583da183d",
+    "merge_pending": true
+  },
+  "safeguards": {
+    "binary_task_material_downloaded": false,
+    "dropbox_modified": false,
+    "raw_ledger_manually_modified": false,
+    "schedule_modified": false,
+    "additional_automation_created": false,
+    "robots_bypassed": false,
+    "rights_assumed": false
+  },
+  "unresolved": [
+    "25 HTML pointers require normalized URL dedup and canonical source merge; no direct overwrite of oversized sources.jsonl.",
+    "100 r346 labels are SHA-pinned and registered but not yet canonically merged; 6 dynamic print-to-PDF endpoints remain review without MIME confirmation.",
+    "23 audit notes remain in checkpoint because safe append to oversized backlog.jsonl is not available via connector.",
+    "MIME observation count not independently recalculated; historical noncontiguous checkpoints remain to reconcile.",
+    "Review of original raw occurrences completed for this 100-resource slice only; frontier not exhausted."
+  ]
+}
