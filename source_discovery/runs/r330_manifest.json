@@ -1,0 +1,106 @@
+{
+  "cycle": "r330-20261026T010536261Z",
+  "reported_at": "2026-10-26T01:10:58.658Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "917016a4afdcd3f0201991b21d95cc23e0a93b59",
+    "workflow_run_id": 40252497353,
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-26T01:10:03Z",
+    "url": "https://github.com/UsernameMP/English/actions/runs/40252497353"
+  },
+  "crawl": {
+    "html_pages": 60,
+    "new_raw_occurrences": 3816,
+    "unique_resource_urls_before": 286979,
+    "unique_resource_urls_after": 287187,
+    "unique_resource_delta": 208,
+    "pending_html_pages": 130240,
+    "blocked_or_failed_cumulative": 3056,
+    "source": "GitHub Actions job logs"
+  },
+  "discovery": {
+    "queries_logged": 55,
+    "checkpoint": "runs/discovery_r330.jsonl",
+    "metadata_verified_pointers": 11,
+    "checked_against_recent_discovery_r326_r329": true,
+    "full_canonical_uniqueness": "pending idempotent merge",
+    "canonical_sources_after_workflow": 2008,
+    "canonical_sources_added_from_r329": 11,
+    "r330_sources_canonical_merged": 0
+  },
+  "review": {
+    "resource_shard": "resource_000335.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000861.jsonl",
+      "batch_000862.jsonl",
+      "batch_000863.jsonl",
+      "batch_000864.jsonl",
+      "batch_000865.jsonl",
+      "batch_000866.jsonl",
+      "batch_000867.jsonl"
+    ],
+    "counts": {
+      "unrelated": 62,
+      "archive": 4,
+      "task": 7,
+      "review": 3,
+      "solution": 20,
+      "source": 4
+    },
+    "checkpoint": "runs/r330_review_r335.jsonl",
+    "checkpoint_sha": "32159fe2fbe0eaefef89f6002a8d4c211d34ff48",
+    "sha_pinned_in": "merge_review_checkpoints.py",
+    "canonical_labels_before": 7356,
+    "canonical_labels_after": 7456,
+    "r329_labels_merged": 100,
+    "r330_labels_canonical_merged": 0,
+    "operational_cursor": "resource_000335.jsonl"
+  },
+  "audit": {
+    "checkpoint": "runs/r330_audit.jsonl",
+    "added_to_canonical_backlog": 18,
+    "canonical_backlog_after": 1210,
+    "issues": "year/grade/stage gaps; rights metadata conflict; 403 restricted search-index-only sources; task annexes; language and historical mirrors"
+  },
+  "mime": {
+    "checkpoint": "runs/r330_mime_audit.json",
+    "last_confirmed_observations": 3685,
+    "last_confirmed_pdf": 1584,
+    "current_counts": "unavailable due to large-file connector read limitation",
+    "binary_bodies_downloaded": false,
+    "non_html_not_error": true
+  },
+  "verified_blob_sha": {
+    "source_discovery/run_trigger.json": "3b331af91748f2dab32597e09393f69188bcd725",
+    "source_discovery/sources.jsonl": "af566ad76cbe9d6146410bf609101af4e81096a2",
+    "source_discovery/link_labels.jsonl": "fca97a0f6ffc0af1d254aa0beb374f0c5b698141",
+    "source_discovery/backlog.jsonl": "427d7bff3ffb78f33d512d80c0ef995cd93ab81d",
+    "source_discovery/review_state.json": "d11767acf9b5c5fdf4ded9de573cdb5647ad6872",
+    "source_discovery/runs/discovery_r330.jsonl": "c81ab9e055f725a1a2be42494c155dab579050a4",
+    "source_discovery/runs/r330_review_r335.jsonl": "32159fe2fbe0eaefef89f6002a8d4c211d34ff48",
+    "source_discovery/runs/r330_audit.jsonl": "a629d68e9d514501bfb17283822e313624022e04",
+    "source_discovery/runs/r330_queries.jsonl": "4332b04137a15159e628e220f407398024e2a653",
+    "source_discovery/runs/r330_mime_audit.json": "36ab9ae7047b1cfbf06f4b467a450e7d24848c78",
+    "source_discovery/merge_review_checkpoints.py": "812eb5bbaeee167b1bd1787b96785381aaf72ab3",
+    "source_discovery/resource_observations.jsonl": "b8be21f65a6ec6eaaaacdb6c15218a3c496c2ad8"
+  },
+  "safeguards": {
+    "binary_documents_downloaded": false,
+    "dropbox_modified": false,
+    "raw_occurrences_modified": false,
+    "schedule_modified": false,
+    "extra_workflow_instances_requested": false
+  },
+  "unresolved": [
+    "11 r330 HTML pointers await idempotent canonical source merge and uniqueness verification",
+    "100 r330 SHA-pinned reviewed labels await canonical merge",
+    "3 German IJSO 2027 ancillary resources remain review",
+    "Large MIME file prevents current count; 403 Polish indexes remain unverified",
+    "Historical year/stage/rights gaps remain open"
+  ]
+}
