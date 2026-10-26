@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-26T02:05:06.343Z",
+  "updated_at": "2026-10-26T03:05:04.331Z",
   "deferred_shards": [
     1,
     2,
@@ -13,10 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r331_review_r336.jsonl"
+    "runs/r331_review_r336.jsonl",
+    "runs/r332_review_r337.jsonl"
   ],
-  "pending_labels_count": 100,
-  "canonical_merge_status": "GitHub Actions RIFT Link Enumeration #40256838263 completed success 2026-10-26T02:02:33Z; commit 6c180eff added 100 canonical labels from r330. r331 100 labels SHA-pinned in runs/r331_review_r336.jsonl and merge_review_checkpoints.py; r331 canonical merge pending. Operational cursor held at resource_000336.jsonl.",
+  "pending_labels_count": 200,
+  "canonical_merge_status": "r332 workflow #40261837948 started; r331 checkpoint merge step succeeded but canonical write not yet verified. r332 100 labels in SHA-pinned runs/r332_review_r337.jsonl; canonical merge pending next ordinary workflow. Operational cursor held at resource_000337.jsonl.",
   "canonical_merged_in_cycle": 330,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -156,10 +157,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000336.jsonl",
-    "last_completed_shard": "resource_000336.jsonl",
-    "cycle": "r331-20261026T015901280Z",
-    "reason": "100 unique URLs semantically classified using 105 original occurrences from three raw shards; checkpoint SHA-pinned, cursor held pending canonical merge."
+    "next_resource_shard": "resource_000337.jsonl",
+    "last_completed_shard": "resource_000337.jsonl",
+    "cycle": "r332-20261026T025944015Z",
+    "reason": "100 unique URL resources classified using 101 original occurrences from batch_000869..000871; checkpoint SHA-pinned, cursor held until canonical merge."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2540,5 +2541,26 @@
     "merge_pending": true,
     "uncertain_resources": 5,
     "notes": "Three official JOI ZIP data bundles and two KöMaL .txt auxiliary files left review; no binary content downloaded; original raw ledger untouched."
+  },
+  "r332_pending": {
+    "resource_shard": "resource_000337.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 101,
+    "raw_shards": [
+      "batch_000869.jsonl",
+      "batch_000870.jsonl",
+      "batch_000871.jsonl"
+    ],
+    "counts": {
+      "solution": 58,
+      "review": 5,
+      "source": 2,
+      "archive": 7,
+      "task": 27,
+      "unrelated": 1
+    },
+    "checkpoint": "runs/r332_review_r337.jsonl",
+    "checkpoint_sha": "7ec38afed96a12719a766c5700f8f41f14adb73d",
+    "canonical_merged": 0
   }
 }
