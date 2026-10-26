@@ -2688,8 +2688,12 @@
     "candidate_html_pointers": 20,
     "canonical_uniqueness": "pending full-registry merge_sources.py dedup",
     "audit_checkpoint": "runs/r336_audit.jsonl",
-    "audit_rows": 16,
+    "audit_rows": 17,
     "backlog_canonical_merge_pending": true,
-    "reason": "Large canonical sources.jsonl and backlog.jsonl cannot be safely replaced via connector (empty text reads)."
+    "reason": "Large canonical sources.jsonl and backlog.jsonl cannot be safely replaced via connector (empty text reads).",
+    "raw_total_verified_from_last_shard": 1417065,
+    "raw_total_difference_vs_r335_manifest": 8319,
+    "workflow_new_links": 4740,
+    "raw_count_discrepancy_unresolved": true
   }
 }
