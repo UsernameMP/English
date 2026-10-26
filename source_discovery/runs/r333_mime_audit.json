@@ -1,0 +1,15 @@
+{
+  "cycle": "r333-20261026T040035640Z",
+  "checked_at": "2026-10-26T04:09:31.237Z",
+  "resource_observations_sha": "25d6cdf35de8d8a9dc7c0965eb97aea8c158ca84",
+  "observations": 3729,
+  "application_pdf": 1598,
+  "pdf_without_dot_pdf_in_url": 1426,
+  "application_zip": 61,
+  "application_octet_stream": 237,
+  "example_extensionless_pdf": "https://www.jpho.jp/office/media-download/437/7a980cda3e491f7f/PDF/",
+  "non_html_responses_are_not_crawler_errors": true,
+  "robots_denied_or_unavailable_count": 2025,
+  "binary_bodies_downloaded": false,
+  "notes": "MIME evidence does not establish task/solution semantics. No PDF, ZIP, image, DOC or archive bodies fetched."
+}
