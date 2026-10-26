@@ -1,6 +1,6 @@
 {
   "cycle": "r333-20261026T040035640Z",
-  "reported_at": "2026-10-26T04:10:27.011Z",
+  "reported_at": "2026-10-26T04:11:09.692Z",
   "repository": "UsernameMP/English",
   "branch": "rift-source-index",
   "trigger": {
@@ -36,14 +36,15 @@
     "queries_logged": 75,
     "checkpoint": "runs/discovery_r333.jsonl",
     "verified_html_pointers_checkpointed": 16,
-    "verified_not_in_current_canonical": 16,
+    "verified_not_in_current_canonical": 0,
     "canonical_sources_before": 2024,
-    "canonical_sources_after": 2032,
+    "canonical_sources_after": 2048,
     "r332_sources_merged": 8,
-    "r333_canonical_merged": 0,
-    "canonical_merge": "r333 pending next ordinary workflow",
+    "r333_canonical_merged": 16,
+    "canonical_merge": "completed by SHA-checked direct update_file; 16 new sources appended without duplicates",
     "dedup_report": "runs/r333_source_dedup.json",
-    "excluded_existing_canonical_duplicates": 9
+    "excluded_existing_canonical_duplicates": 9,
+    "direct_merge_commit": "6b589aa5d7a169087e78d2604fbfea7c7139d5fe"
   },
   "review": {
     "resource_shard": "resource_000338.jsonl",
@@ -68,7 +69,8 @@
     "canonical_labels_after": 7756,
     "r332_labels_merged": 100,
     "r333_labels_merged": 0,
-    "canonical_merge": "r333 pending next ordinary workflow"
+    "canonical_merge": "direct canonical update attempted with current SHA but blocked by h2 protocol error; 100 labels remain SHA-pinned in checkpoint and merger script",
+    "direct_merge_error": "h2 protocol error: error reading a body from connection"
   },
   "audit": {
     "checkpoint": "runs/r333_audit.jsonl",
@@ -89,7 +91,7 @@
   "verified_blob_sha": {
     "source_discovery/run_trigger.json": "6e7670a31f642c85e92446232fc103dfc4b869b0",
     "source_discovery/crawl_state.json": "46a01882199e4649d78c0455cd326e36853296af",
-    "source_discovery/sources.jsonl": "75f3d034fe38606ef14716f3e7abce4733cfcbb1",
+    "source_discovery/sources.jsonl": "42e1c0a9da542dfaed15fd491580a99980a6e2bf",
     "source_discovery/link_labels.jsonl": "5916ca5901011b751326b7fdb0ceaa5c5cade9c0",
     "source_discovery/backlog.jsonl": "570ac7beeec411e5b26bebcfad141e4e296bed74",
     "source_discovery/review_state.json": "117ee23020ceef7d88f9189bdf806d367068724f",
@@ -109,7 +111,7 @@
     "extra_automation_created": false
   },
   "unresolved": [
-    "16 r333 HTML source pointers await idempotent canonical merge",
+    "100 r333 review labels remain SHA-pinned but canonical publication blocked by h2 protocol error; next ordinary workflow merge pending",
     "100 r333 review labels await canonical merge; legacy raw cursor unchanged",
     "Six JOI/JOIG ZIP judge-data URLs remain review",
     "Historical coverage, solutions, grading, language duplicates, JS indices, licensing and access restrictions remain open",
