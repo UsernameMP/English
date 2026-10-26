@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-25T23:07:10.484Z",
+  "updated_at": "2026-10-26T00:05:31.000Z",
   "deferred_shards": [
     1,
     2,
@@ -13,10 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r328_review_r333.jsonl"
+    "runs/r328_review_r333.jsonl",
+    "runs/r329_review_r334.jsonl"
   ],
-  "pending_labels_count": 100,
-  "canonical_merge_status": "RIFT Link Enumeration #40242759386 completed success 2026-10-25T23:06:22Z; workflow job log merged 100 r327 labels, canonical 7156 -> 7256. r328 resource_000333 100 distinct resources / 100 raw occurrences saved and SHA-pinned; canonical r328 merge pending. Operational cursor held at r333.",
+  "pending_labels_count": 200,
+  "canonical_merge_status": "RIFT r329 trigger commit 2c73197; GitHub Actions #40247681034 in progress at checkpoint. r328 checkpoint scheduled for merge in this workflow; r329 100 unique resource labels SHA-pinned for subsequent merge. No canonical r329 merge claimed.",
   "canonical_merged_in_cycle": 327,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -156,10 +157,10 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000332.jsonl",
-    "last_completed_shard": "resource_000332.jsonl",
-    "cycle": "r327-20261025T220445213Z",
-    "reason": "r326 100 labels canonical-merged by verified workflow; r327 100 unique resources checkpointed and SHA-pinned pending next normal merge; hold cursor at r332."
+    "next_resource_shard": "resource_000334.jsonl",
+    "last_completed_shard": "resource_000334.jsonl",
+    "cycle": "r329-20261026T000531000Z",
+    "reason": "100 unique resources classified and checkpoint SHA-pinned; cursor held at r334 pending canonical merge."
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2483,5 +2484,26 @@
     "cursor_advanced": false,
     "rights": "unknown_or_reserved",
     "binary_downloaded": false
+  },
+  "r329_pending": {
+    "resource_shard": "resource_000334.jsonl",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "raw_shards": [
+      "batch_000857.jsonl",
+      "batch_000858.jsonl",
+      "batch_000859.jsonl",
+      "batch_000860.jsonl",
+      "batch_000861.jsonl"
+    ],
+    "counts": {
+      "unrelated": 77,
+      "review": 2,
+      "solution": 17,
+      "task": 4
+    },
+    "checkpoint": "runs/r329_review_r334.jsonl",
+    "checkpoint_sha": "8815e098f2d5f05124739f3f2b7e3ff258e6f9c8",
+    "canonical_merged": 0
   }
 }
