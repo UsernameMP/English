@@ -1,0 +1,32 @@
+{
+  "cycle": "r342-20261026T132025874Z",
+  "checked_at": "2026-10-26T13:31:10.917Z",
+  "canonical_registry_count_at_dedup": 2085,
+  "canonical_registry_sha_before_verification": "619be69c994355b6603b270e6ffed716931cee8f",
+  "canonical_registry_sha_after_IOAA_update": "ba38eb6911272d71af3dfe80dc676e9f975ad09c",
+  "verified_HTML_checked": 10,
+  "previously_registered": 8,
+  "previously_registered_urls": [
+    "https://www.jgs.lv/p/uzdevumi.html",
+    "https://olimpiadas.spm.pt/Downloads/Ficheiros/Provas/",
+    "https://olympiads.hbcse.tifr.res.in/past-papers-sample-questions/",
+    "https://olimpiadasquimica.es/problemas/",
+    "https://oni.dcc.fc.up.pt/loop/solucoes/",
+    "https://phoxiv.org/",
+    "https://ioaastrophysics.org/resources/problems-from-past-ioaa",
+    "https://archive.iypt.org/"
+  ],
+  "existing_record_upgraded": "https://ioaastrophysics.org/resources/problems-from-past-ioaa",
+  "new_unique_verified_HTML_checkpointed": 2,
+  "new_urls": [
+    "https://armaganka.org.mk/Competitions.aspx?id=260",
+    "https://pregatirematematicaolimpiadejuniori.wordpress.com/cipru/"
+  ],
+  "pending_index_only_not_promoted": [
+    "https://www.viaa.gov.lv/lv/macibu-prieksmetu-olimpiazu-uzdevumi",
+    "https://edu.gov.mn/public/article/c/5"
+  ],
+  "new_sources_canonical_merged": false,
+  "reason": "The two new HTML pointers were SHA-checkpointed in discovery_r342_addendum.jsonl; a future normal merge_sources.py run must recheck current canonical URLs before adding. No additional manual trigger requested.",
+  "rights": "Only URLs and provenance; no binary task documents downloaded."
+}
