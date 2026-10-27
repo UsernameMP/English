@@ -1,0 +1,116 @@
+{
+  "cycle": "r359-20261027T060628926Z",
+  "date": "2026-10-27",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "d1f725f0adc5391f41b9ef5f9c43a9242187e3fa",
+    "workflow_run_id": 40459139957,
+    "url": "https://github.com/UsernameMP/English/actions/runs/40459139957",
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-27T06:12:34Z",
+    "tests_passed": 22
+  },
+  "discovery": {
+    "search_queries_logged": 60,
+    "queries_file": "runs/r359_queries.jsonl",
+    "direct_html_verified_pointers_checkpointed": 22,
+    "pointers_file": "runs/discovery_r359.jsonl",
+    "pointer_commit": "a5266d77403bae376e5a10847b53156395e50af6",
+    "canonical_uniqueness": "Pending normalized dedup on next existing workflow; r359 discovery checkpoint created after current workflow's source merge step",
+    "source_registry_after_r359_workflow": 2164,
+    "source_registry_increment_this_workflow": 0
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "resource_shards": [
+      "resource_000364.jsonl rows35-99",
+      "resource_000365.jsonl rows0-34"
+    ],
+    "raw_shards": [
+      "batch_000966.jsonl",
+      "batch_000967.jsonl",
+      "batch_000968.jsonl"
+    ],
+    "types": {
+      "task": 8,
+      "solution": 6,
+      "archive": 26,
+      "source": 10,
+      "criteria": 2,
+      "unrelated": 20,
+      "review": 28
+    },
+    "label_checkpoints": [
+      "runs/r359_review_r364_365_00_49.jsonl",
+      "runs/r359_review_r364_365_50_99.jsonl"
+    ],
+    "checkpoint_blob_shas": [
+      "415a54ecac7d7268586d8516d6a5792739d143e6",
+      "870065e6f404095c35e28cba0a94039b6b21936e"
+    ],
+    "registered_in": "merge_review_checkpoints.py",
+    "registration_commit": "24920ca2b7bba746abee12a67c245ad388e2f82d",
+    "canonical_merged_r359": false,
+    "canonical_merged_r358": true,
+    "canonical_labels_after_workflow": 10356,
+    "next_cursor": {
+      "shard": "resource_000365.jsonl",
+      "row": 35
+    },
+    "review_state_commit": "d52daf75f532f7f8e0b6ed48f185beb6ce1b7fa0",
+    "classification_basis": "Unique resource_id, first occurrence and raw batches, official HTML competition context, no reliance on type_hint alone"
+  },
+  "audit": {
+    "findings": 26,
+    "checkpoint": "runs/r359_audit.jsonl",
+    "canonical_backlog_before": 1519,
+    "canonical_backlog_after": 1545,
+    "commit": "58fe570f065551c032e3a42a8dd358f6798226a7",
+    "notable": [
+      "IYNT 2026 direct HTML 429: rate-limit, not absence or robots denial",
+      "IBECC 2019 missing in inspected year menu; event existence unknown",
+      "WSDC 2020 no official championship per organizer",
+      "UW Math Olympiad 2020 and 2021 explicitly cancelled",
+      "IBECC 2025 scoring page URL includes 2024 slug",
+      "Participant executive summaries and memorials require separate rights assessment"
+    ]
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_occurrences": 5420,
+    "raw_occurrences_total_inferred_from_last_shard": 1527032,
+    "raw_occurrences_before_run_inferred": 1521612,
+    "raw_count_basis": "batch_015271.jsonl contains 32 rows; 1-based contiguous 100-row shards assumed, preceding batch_015270 has 100. Prior r358 report baseline 1518497 was stale and is not used for this cycle.",
+    "unique_resource_urls": 322440,
+    "unique_resource_increment_relative_to_r358_report": 3187,
+    "pending_html_pages": 143318,
+    "blocked_or_failed_cumulative": 3576,
+    "canonical_sources": 2164,
+    "canonical_labels": 10356,
+    "resource_shards_changed": 34,
+    "workflow_crawl_commit": "31fc4eff"
+  },
+  "mime": {
+    "observation_ledger_changed": true,
+    "independent_count": "unavailable because large file returns empty text in connector",
+    "rule": "Extensionless application/pdf or other non-HTML MIME are candidates, not crawler errors; no binary body downloaded; robots-denied separate."
+  },
+  "constraints": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_workflow_instances": 0
+  },
+  "unresolved": [
+    "22 verified source pointers await canonical dedup and merge on next existing workflow; no direct rewrite of oversized sources.jsonl.",
+    "100 r359 unique-resource labels SHA-pinned and registered but not yet merged into oversized link_labels.jsonl.",
+    "28 r359 links remain review, not discarded.",
+    "Large MIME observations and crawl_state could not be independently read; workflow output supplies crawl counters.",
+    "Historical checkpoint reconciliation remains incomplete.",
+    "Raw total inferred from contiguous shards; prior report's count differs from actual pre-run shard count."
+  ]
+}
