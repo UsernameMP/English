@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T12:03:56.468Z",
+  "updated_at": "2026-10-27T12:05:16.038Z",
   "deferred_shards": [
     1,
     2,
@@ -13,14 +13,12 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r364_review_r369_370_00_49.jsonl",
-    "runs/r364_review_r369_370_50_99.jsonl",
     "runs/r365_review_r370_371_00_49.jsonl",
     "runs/r365_review_r370_371_50_99.jsonl"
   ],
-  "pending_labels_count": 200,
-  "canonical_merge_status": "r364 GitHub Actions run 40493225896 completed success; Review merge step completed success and log confirms existing=10656 added=200 total=10856, merging r362-r363. r364 100 labels SHA-pinned after workflow checkout, pending next existing workflow. Historical unregistered checkpoints remain separately unresolved.",
-  "canonical_merged_in_cycle": 363,
+  "pending_labels_count": 100,
+  "canonical_merge_status": "r365 GitHub Actions run 40500544151 completed success at 2026-10-27T12:04:52Z; review merge existing=10856 added=100 total=10956, merging r364. r365 100 labels SHA-pinned after workflow checkout and registered for next existing workflow; historical unresolved checkpoints remain separate.",
+  "canonical_merged_in_cycle": 364,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -3570,5 +3568,11 @@
     ],
     "registered_for_canonical_merge": true,
     "canonical_merge_completed": false
+  },
+  "r364_review_merged": {
+    "run_id": 40500544151,
+    "added": 100,
+    "total": 10956,
+    "verified_at": "2026-10-27T12:05:16.038Z"
   }
 }
