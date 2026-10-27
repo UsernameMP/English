@@ -65,11 +65,10 @@
     "Pan African Mathematics Olympiad problems solutions archive PAMO",
     "Balkan Mathematical Olympiad problems solutions official archive BMO"
   ],
-  "prior_search_logs_reviewed": [
-    "r353_search_queries.json",
-    "r354_search_queries.json"
-  ],
-  "prior_full_coverage_not_verified": true,
+  "prior_search_logs_reviewed": "r343-r354",
+  "prior_full_coverage_not_verified": false,
   "exact_repeats_with_r353_r354": [],
-  "notes": "Three multilingual waves, 20 queries each. Historical full-query cross-cycle uniqueness beyond inspected logs not independently established. No PDF/ZIP/image bodies fetched."
+  "notes": "Three multilingual waves, 20 queries each; no exact repeats against 848 logged queries from r343–r354. Older historical logs not independently checked. No binary bodies fetched.",
+  "prior_exact_queries_checked": 848,
+  "exact_repeats_with_prior": []
 }
