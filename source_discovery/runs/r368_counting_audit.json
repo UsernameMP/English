@@ -1,0 +1,28 @@
+{
+  "cycle": "r368-20261027T150655501Z",
+  "recorded_at": "2026-10-27T15:11:38.877Z",
+  "finding": "Previous manifests r366/r367 overcounted both raw occurrences and unique resources by 100 due to 1-based shard filenames.",
+  "evidence": {
+    "first_raw_shard": "batch_000001.jsonl contains 100 records; batch_000000.jsonl absent",
+    "last_r367_raw_shard": "batch_015715.jsonl contains 50 records",
+    "correct_r367_raw_total": 1571450,
+    "incorrect_r367_manifest_raw_total": 1571550,
+    "first_resource_shard": "resource_000001.jsonl contains 100 records; resource_000000.jsonl absent",
+    "last_r367_resource_shard": "resource_003279.jsonl contains 89 records",
+    "correct_r367_unique_resources": 327889,
+    "incorrect_r367_manifest_unique_resources": 327989,
+    "r367_workflow_log": {
+      "run_id": 40517518060,
+      "new_links": 3569,
+      "html_pages": 60,
+      "pending_pages": 146558,
+      "blocked_or_failed": 3717,
+      "unique_resource_urls": 327889,
+      "canonical_sources": 2209,
+      "canonical_labels": 11156
+    }
+  },
+  "formula": "For 1-based shards with all prior shards full, total=(last_shard_number-1)*100 + last_shard_row_count",
+  "action": "Use workflow's index count and 1-based shard correction for r368 and subsequent reports; do not mutate raw ledger.",
+  "binary_downloads": 0
+}
