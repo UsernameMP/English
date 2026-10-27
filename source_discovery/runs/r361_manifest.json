@@ -1,0 +1,113 @@
+{
+  "cycle": "r361-20261027T075955847Z",
+  "date": "2026-10-27",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "requested_at": "2026-10-27T07:59:55.847Z",
+    "commit": "265534f67861a8b11c0b5a2759e52692a06686d5",
+    "content_sha": "1e33e76e3b3e1e24b8872112a56a992367ee5b8f",
+    "workflow": "RIFT Link Enumeration",
+    "workflow_path": ".github/workflows/rift-link-enumeration.yml",
+    "conclusion": "not independently obtainable through available push-run GitHub Actions connector",
+    "persisted_crawl_state_sha": "4bda2c1d7979a528f9ae30c9694b033526de0769",
+    "evidence": "crawl_state blob changed from 07259e8d... and raw shards advanced after trigger; full Actions run ID/conclusion not retrieved"
+  },
+  "discovery": {
+    "queries": 40,
+    "query_file": "runs/r361_queries.jsonl",
+    "query_sha": "1fc192a50bd24137c389e30c37968703ecfb0a3a",
+    "prior_logs_checked": [
+      "r356",
+      "r358",
+      "r359",
+      "r360"
+    ],
+    "exact_repeats_in_available_logs": 0,
+    "verified_direct_html_pointers": 26,
+    "search_index_only_unverified_direct": 1,
+    "total_checkpointed": 27,
+    "checkpoint": "runs/discovery_r361.jsonl",
+    "checkpoint_sha": "8c4af17b9ed38b89e957143d4291265005c26757",
+    "canonical_uniqueness": "not independently established; merge_sources.py normalizes/deduplicates when workflow sees checkpoint",
+    "canonical_sources_sha": "374bcf343c66894a1c7457ffcc50b0c701c6606e",
+    "canonical_merge_completed": false
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "resource_shards": [
+      "resource_000366.jsonl rows35-99",
+      "resource_000367.jsonl rows0-34"
+    ],
+    "raw_shards": [
+      "batch_000968.jsonl",
+      "batch_000969.jsonl"
+    ],
+    "types": {
+      "unrelated": 79,
+      "archive": 17,
+      "source": 4
+    },
+    "checkpoints": [
+      "runs/r361_review_r366_367_00_49.jsonl",
+      "runs/r361_review_r366_367_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "4f5cf2d3ff355c98c129268e579b8dd40260696f",
+      "dc6b07e61c4d434068bfeec5cac36e3ba35f5e08"
+    ],
+    "registered_in": "merge_review_checkpoints.py",
+    "registration_commit": "7d0640db7c3d8bc02a832bfeefefb5f07b1b5838",
+    "review_state_commit": "2460f8f5eac6e3f8b945a45283326de2075bba8a",
+    "next_cursor": {
+      "shard": "resource_000367.jsonl",
+      "row": 35
+    },
+    "canonical_labels_sha": "d7ee136b353fa0f1c43bf086a4faf7d067199f49",
+    "canonical_merge_completed": false
+  },
+  "audit": {
+    "findings": 27,
+    "checkpoint": "runs/r361_audit.jsonl",
+    "checkpoint_sha": "ca966ad724bff872d9415a14a157343155d5969a",
+    "backlog_before": 1576,
+    "backlog_added": 27,
+    "backlog_after": 1603,
+    "backlog_sha": "cc0a81b7b32883cfeaffb83b455caa1331ea89bc"
+  },
+  "crawler": {
+    "prior_confirmed_raw_after_intermediate_workflow": 1533984,
+    "prior_raw_basis": "batch_015339.jsonl had 84 rows at 08:04Z",
+    "current_confirmed_raw": 1541158,
+    "current_raw_basis": "batch_015411.jsonl has 58 rows, batch_015412 absent at 08:08Z",
+    "observed_raw_delta": 7174,
+    "prior_unique_resources": 325433,
+    "current_unique_resources": 325433,
+    "resource_index_basis": "resource_003254.jsonl 33 rows and resource_003255 absent; no observed unique resource increment",
+    "crawl_state_sha": "4bda2c1d7979a528f9ae30c9694b033526de0769",
+    "pending_html_pages": "not independently readable from oversized crawl_state.json; last known r360 pre-intermediate-run 144632, not current"
+  },
+  "mime": {
+    "observations_sha": "9f30d1be2c3685be62d974680e1582ab707a0793",
+    "current_counts": "not independently readable; extensionless application/pdf remains eligible for review based on MIME evidence, never on URL extension alone",
+    "binary_bodies_downloaded": 0
+  },
+  "constraints": {
+    "raw_ledger_modified_by_assistant": false,
+    "dropbox_modified": false,
+    "schedule_modified": false,
+    "extra_automation_instances_created": 0
+  },
+  "unresolved": [
+    "27 discovered pointers await canonical normalized source dedup and merge; one search-index-only pointer needs direct verification.",
+    "100 r361 labels await canonical merge; 100 r360 labels may also remain pending because canonical SHA has not changed.",
+    "Historical review checkpoints require separate reconciliation.",
+    "GitHub Actions push-run ID and terminal conclusion unavailable from connector; persisted crawler changes observed.",
+    "Oversized crawl_state.json and MIME ledger cannot be fully inspected with current contents connector."
+  ]
+}
