@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T08:03:32.333Z",
+  "updated_at": "2026-10-27T09:11:00Z",
   "deferred_shards": [
     1,
     2,
@@ -14,10 +14,12 @@
   ],
   "pending_label_checkpoints": [
     "runs/r361_review_r366_367_00_49.jsonl",
-    "runs/r361_review_r366_367_50_99.jsonl"
+    "runs/r361_review_r366_367_50_99.jsonl",
+    "runs/r362_review_r367_368_00_49.jsonl",
+    "runs/r362_review_r367_368_50_99.jsonl"
   ],
-  "pending_labels_count": 100,
-  "canonical_merge_status": "r361 100 unique resources reviewed in two SHA-pinned checkpoints; canonical link_labels merge pending next successful workflow. r360 prior checkpoints also registered; historical reconciliation separate.",
+  "pending_labels_count": 200,
+  "canonical_merge_status": "r362 labels registered in merge_review_checkpoints.py, pending next successful workflow. Earlier r361 checkpoints retained until merge verification; historical reconciliation remains separate.",
   "canonical_merged_in_cycle": 360,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -157,13 +159,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000367.jsonl",
+    "next_resource_shard": "resource_000368.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000367.jsonl",
-    "last_completed_cycle": "r361-20261027T075955847Z",
-    "cycle": "r361-20261027T075955847Z",
-    "reason": "100 unique URLs from resource_000366 rows35-99 and resource_000367 rows0-34, one raw occurrence each in batch_000968/969. 79 unrelated, 4 source, 17 archive. Year-index links are not confirmed case documents; labels saved in two SHA-pinned checkpoints.",
-    "skip_already_reviewed": "resource_000367.jsonl rows0-34 complete; resume row35"
+    "last_completed_shard": "resource_000368.jsonl",
+    "last_completed_cycle": "r362-20261027T090346560Z",
+    "cycle": "r362-20261027T090346560Z",
+    "reason": "100 unique URL resources from resource_000367 rows35-99 and resource_000368 rows0-34; matched raw occurrence IDs in batch_000969/970; art-history and JOL organizer HTML independently inspected; 100 full labels SHA-pinned.",
+    "skip_already_reviewed": "resource_000368.jsonl rows0-34 complete; resume row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -3398,5 +3400,38 @@
       "batch_000968.jsonl",
       "batch_000969.jsonl"
     ]
+  },
+  "r362_pending": {
+    "cycle": "r362-20261027T090346560Z",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "resource_shards": [
+      "resource_000367.jsonl rows35-99",
+      "resource_000368.jsonl rows0-34"
+    ],
+    "raw_shards": [
+      "batch_000969.jsonl",
+      "batch_000970.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r362_review_r367_368_00_49.jsonl",
+      "runs/r362_review_r367_368_50_99.jsonl"
+    ],
+    "checkpoint_blob_shas": [
+      "273e002b64ea58fa82dfe8a7dc22a424e2b0933b",
+      "baa502e0f2e4b4e23d8a52456e380aa958823783"
+    ],
+    "types": {
+      "unrelated": 39,
+      "source": 10,
+      "review": 6,
+      "criteria": 3,
+      "task": 20,
+      "archive": 11,
+      "solution": 11
+    },
+    "canonical_merged": 0,
+    "next_operational_shard": "resource_000368.jsonl",
+    "next_row_index": 35
   }
 }
