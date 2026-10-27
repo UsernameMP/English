@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T09:08:30Z",
+  "updated_at": "2026-10-27T10:02:50.482Z",
   "deferred_shards": [
     1,
     2,
@@ -13,11 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r362_review_r367_368_00_49.jsonl",
-    "runs/r362_review_r367_368_50_99.jsonl"
+    "runs/r363_review_r368_369_00_49.jsonl",
+    "runs/r363_review_r368_369_50_99.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "r361 checkpoints merged successfully by RIFT Link Enumeration run 40477956017 (2026-10-27 09:08 UTC); canonical labels 10656. r362 100 labels SHA-registered but not yet merged; historical reconciliation remains separate.",
+  "canonical_merge_status": "r363 100 labels SHA-registered, canonical merge awaiting next workflow. r362 merge status must be verified from workflow log and canonical labels; historical reconciliation separate.",
   "canonical_merged_in_cycle": 361,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -157,13 +157,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000368.jsonl",
+    "next_resource_shard": "resource_000369.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000368.jsonl",
-    "last_completed_cycle": "r362-20261027T090346560Z",
-    "cycle": "r362-20261027T090346560Z",
-    "reason": "100 unique URL resources from resource_000367 rows35-99 and resource_000368 rows0-34; matched raw occurrence IDs in batch_000969/970; art-history and JOL organizer HTML independently inspected; 100 full labels SHA-pinned.",
-    "skip_already_reviewed": "resource_000368.jsonl rows0-34 complete; resume row35"
+    "last_completed_shard": "resource_000369.jsonl",
+    "last_completed_cycle": "r363-20261027T095959600Z",
+    "cycle": "r363-20261027T095959600Z",
+    "reason": "100 unique URL resources resource_000368 rows35-99 and resource_000369 rows0-34; 100 original raw occurrences crosschecked in batch_000969..000973; Czech astronomy official HTML confirms JPG gallery versus solutions; JOL organizer HTML confirms problem database indexes.",
+    "skip_already_reviewed": "resource_000369.jsonl rows0-34 complete; resume row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -3438,5 +3438,39 @@
     "merged_labels": 100,
     "canonical_total": 10656,
     "verified_at": "2026-10-27T09:08:09Z"
+  },
+  "r363_pending": {
+    "cycle": "r363-20261027T095959600Z",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "resource_ranges": [
+      "resource_000368.jsonl rows35-99",
+      "resource_000369.jsonl rows0-34"
+    ],
+    "raw_shards": [
+      "batch_000969.jsonl",
+      "batch_000970.jsonl",
+      "batch_000971.jsonl",
+      "batch_000972.jsonl",
+      "batch_000973.jsonl"
+    ],
+    "counts": {
+      "archive": 8,
+      "solution": 8,
+      "unrelated": 84
+    },
+    "checkpoints": [
+      "runs/r363_review_r368_369_00_49.jsonl",
+      "runs/r363_review_r368_369_50_99.jsonl"
+    ],
+    "checkpoint_blob_shas": [
+      "afb38d47450bf96bae0230fb2531810c482ab446",
+      "6b640648bd9daae511b0cedbb4c08d24b1a1a073"
+    ],
+    "canonical_merged": 0,
+    "merge_script_registered": true,
+    "next_operational_shard": "resource_000369.jsonl",
+    "next_row_index": 35,
+    "notes": "JPEG gallery photographs explicitly confirmed by Czech organizer HTML; no image bodies retrieved."
   }
 }
