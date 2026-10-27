@@ -11,6 +11,7 @@ from .db import (connect,import_resources,claim,recover,set_status,begin_attempt
                  finish_attempt,event,completed,staged,pause,is_paused,summary)
 from .http import PoliteHttp
 from .backup import backup_index,last_backup_count
+from .report import export_report
 
 def records(patterns):
     for pattern in patterns:
@@ -120,8 +121,7 @@ def main(argv=None):
     elif args.command in ('pause','resume'):
         pause(db,args.command=='pause');result={'paused':is_paused(db)}
     elif args.command=='export-report':
-        result=summary(db);Path(args.output).parent.mkdir(parents=True,exist_ok=True)
-        Path(args.output).write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+        result={'exported':export_report(db,args.output),'report':summary(db)}
     else:
         if args.limit_success<=0 or args.max_checks<1 or args.min_delay<10 or args.max_file_mb<1 or args.backup_every<1:
             parser.error('Pilot requires limit>0, max_checks>0, min_delay>=10 sec, max_file_mb>=1')
