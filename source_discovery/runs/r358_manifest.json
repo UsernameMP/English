@@ -7,7 +7,10 @@
     "commit": "3b63542cd56194e1343893fe5604e2e813287a63",
     "workflow_run_id": 40453001081,
     "url": "https://github.com/UsernameMP/English/actions/runs/40453001081",
-    "status_at_checkpoint": "in_progress"
+    "status_at_checkpoint": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-27T05:06:43Z",
+    "tests_passed": 22
   },
   "discovery": {
     "queries_logged": 58,
@@ -18,7 +21,7 @@
       "runs/r358_queries.jsonl",
       "runs/r358_queries_supplemental.jsonl"
     ],
-    "canonical_source_merge": "pending next existing workflow; oversized sources.jsonl unreadable through connector"
+    "canonical_source_merge": "22 checkpoint pointers await next existing workflow normalized dedup; r358 workflow merged 3 prior-cycle sources only"
   },
   "review": {
     "unique_resources": 100,
@@ -41,7 +44,8 @@
       "batch_000965.jsonl",
       "batch_000966.jsonl"
     ],
-    "parent": "https://mos-law.olimpiada.ru/tasks"
+    "parent": "https://mos-law.olimpiada.ru/tasks",
+    "r357_prior_cycle_merged": true
   },
   "audit": {
     "findings": 32,
@@ -62,7 +66,22 @@
       "canonical_sources": 2156,
       "canonical_labels": 10156
     },
-    "r358_final": "pending workflow completion"
+    "r358_final": {
+      "html_pages": 60,
+      "new_raw_occurrences": 6531,
+      "raw_occurrences_total": 1518497,
+      "unique_resource_urls": 319253,
+      "unique_resource_increment": 2056,
+      "pending_html_pages": 142822,
+      "blocked_or_failed_cumulative": 3559,
+      "canonical_sources": 2159,
+      "canonical_sources_increment_from_r357": 3,
+      "canonical_labels": 10256,
+      "canonical_labels_increment_from_r357": 100,
+      "resource_shards_changed": 24,
+      "raw_count_basis": "Previous confirmed 1511966 plus workflow log 6531; last raw shard batch_015184 contains 97 rows",
+      "unique_count_basis": "Workflow log and resource_003193 last shard 53 rows"
+    }
   },
   "constraints": {
     "binary_downloads": 0,
@@ -72,10 +91,11 @@
     "extra_workflow_instances": 0
   },
   "unresolved": [
-    "r358 workflow in progress at manifest creation; final metrics and status pending.",
-    "22 candidate source pointers require normalized dedup and merge.",
-    "100 r358 review labels await canonical merge by existing workflow.",
-    "MIME and crawl_state files too large for independent connector content reads.",
-    "Historical label checkpoints still need separate reconciliation."
-  ]
+    "22 r358 source pointers await normalized canonical merge in next existing workflow; 3 prior-cycle pointers merged this run.",
+    "100 r358 review labels SHA-pinned and registered, pending next existing workflow.",
+    "MIME observations and crawl_state too large for independent connector content reads; crawler summary from successful workflow.",
+    "Historical label checkpoints still require separate reconciliation.",
+    "Some archive sources are search-indexed only or transiently unavailable; their accessibility is not asserted."
+  ],
+  "finalized_at": "2026-10-27T05:07:05.438Z"
 }
