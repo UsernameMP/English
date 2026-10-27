@@ -41,7 +41,13 @@
     ],
     "registered_sha_pinned": true,
     "canonical_merged": false,
-    "cursor_not_advanced_at_last_read": true
+    "cursor_not_advanced_at_last_read": false,
+    "cursor_advanced": true,
+    "next_cursor": {
+      "shard": "resource_000363.jsonl",
+      "row": 35
+    },
+    "review_state_commit": "1375fffbed6a6693dfff8e2fbcb193b54f81ce30"
   },
   "supplemental": {
     "verified_html_pointers_checkpointed": 16,
@@ -72,10 +78,10 @@
     "extra_workflow_triggers": 0
   },
   "unresolved": [
-    "r357 review_state cursor not yet advanced in the last read; concurrent primary cycle may update it.",
     "Canonical sources.jsonl too large to read via GitHub connector; 16 pointers await normalized merge.",
     "Supplemental audit findings are checkpoint-only, not appended to canonical backlog.",
     "Only r356 query log was available under standard name for exact query dedup; older logs and in-progress r357 query list unavailable.",
-    "MIME observation ledger and crawl_state too large for independent connector count."
+    "MIME observation ledger and crawl_state too large for independent connector count.",
+    "Canonical r357 labels remain pending the next existing crawler workflow; 100 checkpoint labels are not yet in link_labels.jsonl."
   ]
 }
