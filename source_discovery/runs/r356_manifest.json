@@ -1,0 +1,128 @@
+{
+  "cycle": "r356-20261027T030519000Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "6d166caca313d955e596269e5527a9588de6675f",
+    "blob_sha": "5073ad5b0e31e8482a38f98f9da41d64da215ed5",
+    "workflow_run_id": 40442215273,
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40442215273",
+    "status": "completed",
+    "conclusion": "success",
+    "finished_at": "2026-10-27T03:09:44Z",
+    "tests_passed": 22,
+    "extra_workflow_instances_requested": 0
+  },
+  "discovery": {
+    "queries": 48,
+    "query_log": "runs/r356_queries.jsonl",
+    "query_log_sha": "884c93759183a04605a5070d9a9fb8e6d33949dc",
+    "previous_query_texts_not_fully_available": true,
+    "verified_html_pointers_checkpointed": 23,
+    "checkpoint": "runs/discovery_r356.jsonl",
+    "checkpoint_sha": "78eef40c24ecd9ff8f1abeba120fc0e025af3a54",
+    "canonical_uniqueness_pending": true,
+    "canonical_merge_pending": true
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 101,
+    "counts": {
+      "task": 44,
+      "solution": 20,
+      "archive": 15,
+      "source": 3,
+      "unrelated": 16,
+      "review": 2
+    },
+    "ranges": [
+      "resource_000361.jsonl:35-99",
+      "resource_000362.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000962.jsonl",
+      "batch_000963.jsonl",
+      "batch_000964.jsonl"
+    ],
+    "checkpoints": [
+      {
+        "path": "runs/r356_review_r361_362_00_49.jsonl",
+        "sha": "0dbbfec4670b19bc4f52afc0f2797c2e96d962cc",
+        "rows": 50
+      },
+      {
+        "path": "runs/r356_review_r361_362_50_99.jsonl",
+        "sha": "827d2b74c358eec9740ef100528cb96ad32c8a33",
+        "rows": 50
+      }
+    ],
+    "merge_script_sha": "11f00bd87075ab97d61e1aa528aedbfab0df2b86",
+    "review_state_sha": "be70eb6cf81c30df4b2ef9fc26fa829530fedbba",
+    "canonical_merged": false,
+    "next_cursor": {
+      "shard": "resource_000362.jsonl",
+      "row": 35
+    },
+    "ambiguous_errata": 2
+  },
+  "audit": {
+    "findings": 32,
+    "checkpoint": "runs/r356_audit.jsonl",
+    "sha": "f926c0cb800a9ba6264440533fcc74ba1f7f46f4",
+    "canonical_backlog_merged": false
+  },
+  "crawler": {
+    "html_pages_processed": 60,
+    "new_raw_occurrences": 4107,
+    "raw_occurrences_before": 1503268,
+    "raw_occurrences_total": 1507375,
+    "raw_last_shard": "batch_015073.jsonl",
+    "raw_last_rows": 75,
+    "unique_resource_urls_before": 316044,
+    "unique_resource_urls_total": 316448,
+    "new_unique_resource_urls": 404,
+    "resource_last_shard": "resource_003165.jsonl",
+    "resource_last_rows": 48,
+    "pending_html_frontier": 142001,
+    "blocked_or_failed_cumulative": 3553,
+    "post_crawl_commit": "8e48d877",
+    "metric_source": "GitHub Actions run #40442215273 job logs, shard readback; crawler error metric is cumulative",
+    "non_html_note": "MIME-only responses not counted as errors; binary bodies not retrieved"
+  },
+  "mime": {
+    "observations_file_sha": "35376c697af4e9840373037e1a17559c6a763d15",
+    "observation_file_too_large_for_connector": true,
+    "independent_count_unavailable": true,
+    "extensionless_candidates_require_context": true
+  },
+  "canonical": {
+    "sources": 2154,
+    "sources_added_from_r355": 5,
+    "sources_blob_sha": "d2f0cd2f360aa9bc44e793a111779ac0a7b2e511",
+    "labels": 10056,
+    "labels_added_from_r355": 100,
+    "labels_blob_sha": "0d35f6ca8cb987b4ba7f8a96a5be23a1b7f47416",
+    "r356_sources_merged": 0,
+    "r356_labels_merged": 0,
+    "r356_audit_merged": 0
+  },
+  "unresolved": [
+    "23 r356 verified HTML pointers await normalized dedup and canonical merge by next existing workflow.",
+    "100 r356 review labels SHA-registered, not yet canonical; next existing workflow must merge them.",
+    "32 r356 audit findings checkpointed but not appended to oversized canonical backlog.",
+    "Two IESO errata resources remain review (no suitable taxonomy without content).",
+    "IESO 2020–2023, UNAM OUC 2020, Brazilian OBMEP 2020 and per-stage/solution gaps require targeted investigation.",
+    "Large MIME observations and crawl_state files cannot be independently counted/read through connector.",
+    "Historical compact checkpoints still require separate reconciliation.",
+    "Previous search query texts were not available for exhaustive exact-repeat verification; r356 exact queries now logged."
+  ],
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automation_instances_created": false,
+    "workflow_trigger_count": 1
+  },
+  "reported_at": "2026-10-27T03:11:22.161Z"
+}
