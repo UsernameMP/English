@@ -1,0 +1,95 @@
+{
+  "cycle": "r367-20261027T140318842Z",
+  "created_at": "2026-10-27T14:07:10.276Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z",
+    "merge_commit_sha": "a4fb3912e1e3321f9917570544d2a43fe0c7f072"
+  },
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "0481dc8cd6c95480512e5d1f578fb534a346b793",
+    "workflow_run_id": 40517518060,
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40517518060",
+    "last_checked_status": "queued",
+    "conclusion": null
+  },
+  "baseline": {
+    "from_cycle": "r366",
+    "raw_occurrences_total": 1567981,
+    "unique_resource_urls_total": 327721,
+    "canonical_sources_total": 2205,
+    "canonical_labels_total": 11056,
+    "canonical_backlog_total": 1727
+  },
+  "discovery": {
+    "search_queries": 60,
+    "queries_file": "runs/r367_queries.jsonl",
+    "verified_html_pointers": 24,
+    "checkpoint": "runs/discovery_r367.jsonl",
+    "canonical_merge": "pending",
+    "direct_sources_write": "blocked: canonical sources.jsonl returned empty content on full/ranged fetch despite nonempty blob SHA; safe checkpoint via merge_sources.py",
+    "historical_query_exact_dedup": "not exhaustively verified against all historical logs"
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences_inspected": 102,
+    "counts": {
+      "solution": 29,
+      "unrelated": 57,
+      "review": 14
+    },
+    "resource_ranges": [
+      "resource_000372.jsonl:35-99",
+      "resource_000373.jsonl:0-34"
+    ],
+    "raw_shards": "batch_000975.jsonl through batch_000983.jsonl",
+    "checkpoints": [
+      "runs/r367_review_r372_373_00_49.jsonl",
+      "runs/r367_review_r372_373_50_99.jsonl"
+    ],
+    "checkpoint_blob_shas": [
+      "a835f43ea75a8faaed29e8454441145555bd8ed5",
+      "71a183f1f596beb6a1b06fa9c46c7cf5f5905d51"
+    ],
+    "merge_script_registration_commit": "cfe3f43401f61b2cbc092d4fb409a73e110b26a6",
+    "canonical_merge": "pending",
+    "cursor": "resource_000373.jsonl:35",
+    "cursor_commit": "ac14eb62174a211e30e128fb381b0450eb198c00"
+  },
+  "audit": {
+    "new_audits": 29,
+    "canonical_backlog_total": 1756,
+    "backlog_commit": "944503b2fef218f6cc0ca5be314703c8576e4ea7",
+    "gaps": [
+      "2018/19 Czech finale date mismatch",
+      "2019/20 Czech PDF attachment without known role",
+      "KöMaL detail page timeouts",
+      "multilingual APLO grid",
+      "Spanish economics local/national year gaps",
+      "IOAA mirrors and rights"
+    ]
+  },
+  "mime": {
+    "resource_observations_sha_before": "d354d8e48f85be3d23e4be48ac13a700b75bae7e",
+    "independent_count": "not available: oversized GitHub connector read returns empty",
+    "extensionless_pdf_evidence": "Czech organizer /f/detail/ labels application/pdf; no body fetched"
+  },
+  "constraints": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false
+  },
+  "pending": [
+    "RIFT Actions run 40517518060 queued, no success claim",
+    "Canonical dedup/merge of 24 source pointers",
+    "Canonical merge of 100 labels r367",
+    "14 review resources need target confirmation or context",
+    "Historic checkpoints unresolved",
+    "HTML queue/errors unavailable until fresh crawl_state"
+  ]
+}
