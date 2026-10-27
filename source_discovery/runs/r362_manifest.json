@@ -1,0 +1,133 @@
+{
+  "cycle": "r362-20261027T090346560Z",
+  "date": "2026-10-27",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "requested_at": "2026-10-27T09:03:46.560Z",
+    "commit": "15180f9af8a576890e89fa8129495af6c42fa111",
+    "content_sha": "4fc6522091a6cf0c1f245bda5e18022fec542db5",
+    "workflow": "RIFT Link Enumeration",
+    "run_id": 40477956017,
+    "conclusion": "success",
+    "completed_at": "2026-10-27T09:08:09Z",
+    "tests_passed": 22
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_occurrences": 6962,
+    "total_raw_occurrences": 1548120,
+    "raw_count_basis": "batch_015481.jsonl has 20 rows; batch_015482 absent",
+    "unique_resource_urls": 325693,
+    "prior_unique_resource_urls": 325433,
+    "unique_resource_delta": 260,
+    "pending_html_pages": 145464,
+    "blocked_or_failed": 3657,
+    "canonical_sources": 2184,
+    "canonical_sources_added_from_previous_cycle": 7,
+    "canonical_labels": 10656,
+    "canonical_labels_added_from_previous_cycle": 100,
+    "crawl_state_sha": "400e1aec0868b3be4027024460c190ab0bbadeca",
+    "sources_sha": "c0b4edc6af7e3e195a1f87f7456ccf7c66e94e40",
+    "labels_sha": "9f95d38bf159f0590808530233885c077aadf7ac"
+  },
+  "discovery": {
+    "queries_executed": 53,
+    "query_log": "runs/r362_queries.jsonl",
+    "query_sha": "6ff6cd8c1bdf0522b90b13bc3c0a0d3c09d07485",
+    "exact_repeats_in_available_r356_r358_r359_r360_r361_logs": 0,
+    "all_historical_queries_checked": false,
+    "verified_html_or_github_readme_pointers": 25,
+    "verified_checkpoint": "runs/discovery_r362.jsonl",
+    "verified_checkpoint_sha": "dbcfbae16b199d827dea1bd0f8bc3b58896d1552",
+    "search_index_only_or_direct_fetch_blocked": 6,
+    "unverified_checkpoint": "runs/r362_unverified_pointers.jsonl",
+    "unverified_checkpoint_sha": "0bd5797ccb56d26a4a039a836512f3aa45e52635",
+    "canonical_merge_completed": false,
+    "canonical_uniqueness": "pending merge_sources.py normalized dedup on next scheduled workflow",
+    "geographies": [
+      "PL",
+      "IT",
+      "BR",
+      "RU",
+      "GLOBAL",
+      "BY",
+      "CN",
+      "ID",
+      "AR",
+      "TH"
+    ]
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "resource_shards": [
+      "resource_000367.jsonl rows35-99",
+      "resource_000368.jsonl rows0-34"
+    ],
+    "raw_shards": [
+      "batch_000969.jsonl",
+      "batch_000970.jsonl"
+    ],
+    "types": {
+      "unrelated": 39,
+      "source": 10,
+      "review": 6,
+      "criteria": 3,
+      "task": 20,
+      "archive": 11,
+      "solution": 11
+    },
+    "checkpoints": [
+      "runs/r362_review_r367_368_00_49.jsonl",
+      "runs/r362_review_r367_368_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "273e002b64ea58fa82dfe8a7dc22a424e2b0933b",
+      "f86ff3bb074b33261e202e90e4932c97e10b1a63"
+    ],
+    "registered_in": "merge_review_checkpoints.py",
+    "registration_sha": "810c4d15e68810926c4cd2acf87b65d327009093",
+    "canonical_merge_completed": false,
+    "next_cursor": {
+      "shard": "resource_000368.jsonl",
+      "row": 35
+    },
+    "review_state_sha": "2a78103db6717adc2298c9b53ccddc6712d160c1",
+    "method": "Unique URL resource_id with raw occurrence context and independently inspected JOL/art history organizer HTML; no binary bodies"
+  },
+  "audit": {
+    "findings": 24,
+    "checkpoint": "runs/r362_audit.jsonl",
+    "checkpoint_sha": "0eb9ffa62413272db8da07ef2ab72ece09afed22",
+    "canonical_backlog_updated": false,
+    "canonical_backlog_sha": "cc0a81b7b32883cfeaffb83b455caa1331ea89bc",
+    "known_canonical_backlog_count": 1603,
+    "unverified_discovery_leads": 6
+  },
+  "mime": {
+    "observations_sha": "9f30d1be2c3685be62d974680e1582ab707a0793",
+    "unchanged_from_previous_cycle": true,
+    "latest_independent_count": "4207 as of r360, not independently re-counted r362",
+    "classification_rule": "non-HTML MIME is not crawler error; extensionless application/pdf remains candidate requiring context; no binary body retrieved"
+  },
+  "constraints": {
+    "binary_documents_downloaded": 0,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "additional_automation_instances_created": 0
+  },
+  "unresolved": [
+    "25 r362 source pointers await canonical normalized dedup and merge; not yet counted as new canonical sources.",
+    "100 r362 labels registered and checkpointed but not yet merged into link_labels.jsonl.",
+    "24 audit findings and 6 access-limited pointers preserved in separate checkpoints; canonical backlog not updated.",
+    "6 reviewed resources remain review; some are task-associated MP3 audio, not standalone tasks.",
+    "Historical review checkpoint reconciliation remains open.",
+    "Oversized MIME and crawl state files cannot be independently read through contents connector; crawler counters verified from successful workflow logs."
+  ]
+}
