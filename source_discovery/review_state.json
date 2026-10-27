@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T01:03:46.692Z",
+  "updated_at": "2026-10-27T02:03:00Z",
   "deferred_shards": [
     1,
     2,
@@ -13,11 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r354_review_r359_360_00_49.jsonl",
-    "runs/r354_review_r359_360_50_99.jsonl"
+    "runs/r355_review_r360_361_00_49.jsonl",
+    "runs/r355_review_r360_361_50_99.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "r354: 100 unique-resource SHA-pinned labels registered in merge_review_checkpoints.py; awaiting next existing workflow; r353 prior merge status must be checked against canonical file.",
+  "canonical_merge_status": "r355: 100 unique-resource SHA-pinned labels registered in merge_review_checkpoints.py; canonical merge awaiting existing workflow; prior r354 merge must be verified.",
   "canonical_merged_in_cycle": 350,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -157,13 +157,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000360.jsonl",
+    "next_resource_shard": "resource_000361.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000360.jsonl",
-    "last_completed_cycle": "r354-20261027T010128805Z",
-    "cycle": "r354-20261027T010128805Z",
-    "reason": "100 unique resource IDs (r359 rows35-99, r360 rows0-34), 106 raw occurrences from batches 960-962; reviewed against multilingual parent/heading context",
-    "skip_already_reviewed": "r360 rows0-34 complete; resume row35"
+    "last_completed_shard": "resource_000361.jsonl",
+    "last_completed_cycle": "r355-20261027T015850000Z",
+    "cycle": "r355-20261027T015850000Z",
+    "reason": "100 unique resource IDs (r360 rows35-99, r361 rows0-34); 150 matching raw occurrences across batch_000960..963; multilingual Japanese anchor and heading classification",
+    "skip_already_reviewed": "r361 rows0-34 complete; resume row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
