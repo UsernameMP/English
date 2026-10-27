@@ -1,0 +1,96 @@
+{
+  "cycle": "r355-20261027T015850000Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "d0b6d3961926be7b26231ad94491473e69acbc3f",
+    "blob_sha": "97c537b246ba5bfaa3bfdaba123481ee1a74ff5c",
+    "workflow_run_id": 40435763247,
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40435763247",
+    "status": "in_progress",
+    "conclusion": null
+  },
+  "discovery": {
+    "queries": 60,
+    "previous_logged_queries_checked": 848,
+    "exact_repeats": 0,
+    "verified_html_pointers_checkpointed": 22,
+    "checkpoint": "runs/discovery_r355.jsonl",
+    "checkpoint_sha": "94d52e1e3dda5f3ad118f1ef6eda8bf02014cf1f",
+    "canonical_merge_pending": true,
+    "canonical_uniqueness_pending": true
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 150,
+    "counts": {
+      "source": 5,
+      "archive": 22,
+      "unrelated": 22,
+      "review": 2,
+      "task": 25,
+      "solution": 24
+    },
+    "ranges": [
+      "resource_000360.jsonl:35-99",
+      "resource_000361.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000960.jsonl",
+      "batch_000961.jsonl",
+      "batch_000962.jsonl",
+      "batch_000963.jsonl"
+    ],
+    "checkpoints": [
+      {
+        "path": "runs/r355_review_r360_361_00_49.jsonl",
+        "sha": "ad8f6c57759dcaebc8580af20c4082f19a54237c"
+      },
+      {
+        "path": "runs/r355_review_r360_361_50_99.jsonl",
+        "sha": "c94d05eb22a5677f526c07896047d519a881b7e3"
+      }
+    ],
+    "merge_script_sha": "a4a9131196ea8c90425166b1d362322e8a6a1abf",
+    "review_state_sha": "6af69c6e7040f25623f9aecfa3c4bbc53a6da480",
+    "canonical_merged": false,
+    "next_cursor": {
+      "shard": "resource_000361.jsonl",
+      "row": 35
+    }
+  },
+  "audit": {
+    "findings": 23,
+    "checkpoint": "runs/r355_audit.jsonl",
+    "sha": "26831bd334f520590b9857089b075fbb87994662",
+    "canonical_backlog_merged": false
+  },
+  "crawler": {
+    "last_confirmed_from_r354": {
+      "raw_occurrences": 1498737,
+      "unique_resource_urls": 315828,
+      "pending_html_frontier": 141853
+    },
+    "current_run_pending": true
+  },
+  "mime": {
+    "observation_file_too_large_for_connector": true,
+    "classification_requires_context": true
+  },
+  "unresolved": [
+    "Workflow r355 not yet completed; post-run metrics pending.",
+    "22 source pointers require canonical normalized dedup/merge.",
+    "100 review labels are SHA-registered for next existing workflow, not yet canonical.",
+    "23 audit findings remain checkpoint-only.",
+    "Two ambiguous Japanese URLs retained as review; no binary inspected.",
+    "Older historical checkpoints require separate reconciliation."
+  ],
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automation_instances_created": false,
+    "workflow_trigger_count": 1
+  }
+}
