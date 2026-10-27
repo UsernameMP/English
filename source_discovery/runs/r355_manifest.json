@@ -7,8 +7,10 @@
     "blob_sha": "97c537b246ba5bfaa3bfdaba123481ee1a74ff5c",
     "workflow_run_id": 40435763247,
     "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40435763247",
-    "status": "in_progress",
-    "conclusion": null
+    "status": "completed",
+    "conclusion": "success",
+    "finished_at": "2026-10-27T02:06:20Z",
+    "tests_passed": 22
   },
   "discovery": {
     "queries": 60,
@@ -66,24 +68,34 @@
     "canonical_backlog_merged": false
   },
   "crawler": {
-    "last_confirmed_from_r354": {
-      "raw_occurrences": 1498737,
-      "unique_resource_urls": 315828,
-      "pending_html_frontier": 141853
-    },
-    "current_run_pending": true
+    "html_pages_processed": 60,
+    "new_raw_occurrences": 4531,
+    "raw_occurrences_before": 1498737,
+    "raw_occurrences_total": 1503268,
+    "raw_last_shard": "batch_015032.jsonl",
+    "raw_last_rows": 68,
+    "unique_resource_urls_before": 315828,
+    "unique_resource_urls_total": 316044,
+    "new_unique_resource_urls": 216,
+    "resource_last_shard": "resource_003161.jsonl",
+    "resource_last_rows": 44,
+    "pending_html_frontier": 141939,
+    "blocked_or_failed_cumulative": 3550,
+    "post_crawl_commit": "e572cdfd",
+    "metric_source": "GitHub Actions run #40435763247 job logs and last shard readback",
+    "non_html_note": "MIME-only responses are not counted as crawler errors; binary bodies not retrieved."
   },
   "mime": {
     "observation_file_too_large_for_connector": true,
     "classification_requires_context": true
   },
   "unresolved": [
-    "Workflow r355 not yet completed; post-run metrics pending.",
-    "22 source pointers require canonical normalized dedup/merge.",
-    "100 review labels are SHA-registered for next existing workflow, not yet canonical.",
-    "23 audit findings remain checkpoint-only.",
-    "Two ambiguous Japanese URLs retained as review; no binary inspected.",
-    "Older historical checkpoints require separate reconciliation."
+    "22 r355 discovery pointers await normalized dedup and canonical merge by next existing workflow.",
+    "100 r355 review labels SHA-registered but not yet canonical; next existing workflow must merge them.",
+    "23 r355 audit findings checkpointed but not appended to oversized backlog.jsonl.",
+    "Two Japanese links remain review: a correction PDF and external JST contest index.",
+    "MIME observation file remains too large for independent line count; extensionless PDF candidate semantics unresolved.",
+    "Historical checkpoints and per-year/round coverage require separate reconciliation."
   ],
   "safeguards": {
     "binary_downloads": 0,
@@ -92,5 +104,17 @@
     "schedule_modified": false,
     "extra_automation_instances_created": false,
     "workflow_trigger_count": 1
+  },
+  "reported_at": "2026-10-27T02:07:00Z",
+  "canonical": {
+    "sources": 2149,
+    "sources_added_from_r354": 11,
+    "sources_blob_sha": "8b3388dd1cd767fad9d0f02ade349851b4081401",
+    "labels": 9956,
+    "labels_added_from_r354": 100,
+    "labels_blob_sha": "a2a322938142c24c188bcd6ae71450033d05bef1",
+    "r355_source_merged": 0,
+    "r355_labels_merged": 0,
+    "r355_audit_merged": 0
   }
 }
