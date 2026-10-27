@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T05:06:58.776Z",
+  "updated_at": "2026-10-27T06:09:18.397Z",
   "deferred_shards": [
     1,
     2,
@@ -13,10 +13,12 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r358_review_r363_364.jsonl"
+    "runs/r358_review_r363_364.jsonl",
+    "runs/r359_review_r364_365_00_49.jsonl",
+    "runs/r359_review_r364_365_50_99.jsonl"
   ],
-  "pending_labels_count": 100,
-  "canonical_merge_status": "r357: 100 labels merged in successful workflow #40453001081; r358: 100 SHA-pinned unique-resource labels registered and pending next existing workflow. Historical checkpoints remain separately pending.",
+  "pending_labels_count": 200,
+  "canonical_merge_status": "r359: 100 unique-resource labels SHA-pinned in two checkpoints, registered for next existing workflow; r358 status must be verified from workflow logs. Historical checkpoints require separate reconciliation.",
   "canonical_merged_in_cycle": 357,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -156,13 +158,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000364.jsonl",
+    "next_resource_shard": "resource_000365.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000364.jsonl",
-    "last_completed_cycle": "r358-20261027T050156921Z",
-    "cycle": "r358-20261027T050156921Z",
-    "reason": "100 unique Moscow Law Olympiad resources, 100 raw occurrences from resource_000363 rows35-99 and resource_000364 rows0-34; official HTML index and raw batches965-966 checked; SHA-pinned checkpoint registered; 77 task, 17 criteria, 5 solution, 1 source.",
-    "skip_already_reviewed": "resource_000364.jsonl rows0-34 complete; resume row35"
+    "last_completed_shard": "resource_000365.jsonl",
+    "last_completed_cycle": "r359-20261027T060628926Z",
+    "cycle": "r359-20261027T060628926Z",
+    "reason": "100 unique resources from resource_000364 rows35-99 and resource_000365 rows0-34; 100 raw occurrences matched in batches966-968; 8 task, 6 solution, 26 archive, 10 source, 2 criteria, 20 unrelated, 28 review; public official HTML navigation checked; two SHA-pinned checkpoints registered.",
+    "skip_already_reviewed": "resource_000365.jsonl rows0-34 complete; resume row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -3316,6 +3318,32 @@
     ],
     "canonical_merged": false,
     "next_resource_shard": "resource_000363.jsonl",
+    "next_row_index": 35
+  },
+  "r359_pending": {
+    "cycle": "r359-20261027T060628926Z",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "classification_counts": {
+      "task": 8,
+      "solution": 6,
+      "archive": 26,
+      "source": 10,
+      "criteria": 2,
+      "unrelated": 20,
+      "review": 28
+    },
+    "label_checkpoints": [
+      "runs/r359_review_r364_365_00_49.jsonl",
+      "runs/r359_review_r364_365_50_99.jsonl"
+    ],
+    "canonical_merged": 0,
+    "raw_shards": [
+      "batch_000966.jsonl",
+      "batch_000967.jsonl",
+      "batch_000968.jsonl"
+    ],
+    "next_operational_shard": "resource_000365.jsonl",
     "next_row_index": 35
   }
 }
