@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T13:07:06.266Z",
+  "updated_at": "2026-10-27T13:09:51.899Z",
   "deferred_shards": [
     1,
     2,
@@ -13,12 +13,10 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r365_review_r370_371_00_49.jsonl",
-    "runs/r365_review_r370_371_50_99.jsonl",
     "runs/r366_review_r371_372_00_49.jsonl",
     "runs/r366_review_r371_372_50_99.jsonl"
   ],
-  "pending_labels_count": 200,
+  "pending_labels_count": 100,
   "canonical_merge_status": "r365 GitHub Actions run 40500544151 completed success at 2026-10-27T12:04:52Z; review merge existing=10856 added=100 total=10956, merging r364. r365 100 labels SHA-pinned after workflow checkout and registered for next existing workflow; historical unresolved checkpoints remain separate.",
   "canonical_merged_in_cycle": 364,
   "noncontiguous_review": {
@@ -3613,6 +3611,30 @@
       "row_index": 35
     },
     "review_basis": "Unique resource IDs; raw occurrence context and organizer HTML. Binary bodies not fetched.",
-    "r365_merge_note": "r366 workflow merge step succeeded but workflow persist not yet confirmed at checkpoint time"
+    "r365_merge_note": "r365 100 labels merged into canonical link_labels.jsonl by successful r366 workflow"
+  },
+  "r365_review_merged_in_r366": {
+    "workflow_run_id": 40508637197,
+    "workflow_conclusion": "success",
+    "canonical_labels_before": 10956,
+    "canonical_labels_after": 11056,
+    "merged": 100,
+    "verified_at": "2026-10-27T13:09:51.899Z"
+  },
+  "r366_crawler": {
+    "workflow_run_id": 40508637197,
+    "conclusion": "success",
+    "html_pages_processed": 60,
+    "raw_occurrences_total": 1567981,
+    "raw_occurrences_added": 4630,
+    "unique_resource_urls_total": 327721,
+    "unique_resource_urls_added": 596,
+    "canonical_sources_total": 2205,
+    "canonical_sources_added": 3,
+    "canonical_labels_total": 11056,
+    "canonical_labels_added": 100,
+    "queue_length": "not independently retrievable via large crawl_state.json",
+    "mime_observations": "SHA unchanged from previous cycle",
+    "verified_at": "2026-10-27T13:09:51.899Z"
   }
 }
