@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T03:08:18Z",
+  "updated_at": "2026-10-27T03:10:00Z",
   "deferred_shards": [
     1,
     2,
@@ -17,8 +17,8 @@
     "runs/r356_review_r361_362_50_99.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "r356: 100 resource-level reviewed labels SHA-registered in merge_review_checkpoints.py; canonical merge awaiting next existing workflow; r355 merge verification pending.",
-  "canonical_merged_in_cycle": 350,
+  "canonical_merge_status": "r355: 100 labels merged in workflow #40442215273; r356: 100 SHA-pinned unique-resource labels registered, awaiting next existing workflow; historical checkpoints remain separately pending.",
+  "canonical_merged_in_cycle": 355,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -3265,7 +3265,10 @@
       "runs/r355_review_r360_361_50_99.jsonl"
     ],
     "pending_labels_count": 100,
-    "canonical_merge_status": "r355: 100 unique-resource SHA-pinned labels registered in merge_review_checkpoints.py; canonical merge awaiting existing workflow; prior r354 merge must be verified."
+    "canonical_merge_status": "r355: 100 unique-resource SHA-pinned labels registered in merge_review_checkpoints.py; canonical merge awaiting existing workflow; prior r354 merge must be verified.",
+    "merged_by_workflow_run": 40442215273,
+    "canonical_added": 100,
+    "canonical_total_after_merge": 10056
   },
   "r356_review": {
     "unique_resources": 100,
