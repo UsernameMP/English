@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T03:10:00Z",
+  "updated_at": "2026-10-27T04:15:51.340Z",
   "deferred_shards": [
     1,
     2,
@@ -13,12 +13,12 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r356_review_r361_362_00_49.jsonl",
-    "runs/r356_review_r361_362_50_99.jsonl"
+    "runs/r357_review_r362_363_00_49.jsonl",
+    "runs/r357_review_r362_363_50_99.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "r355: 100 labels merged in workflow #40442215273; r356: 100 SHA-pinned unique-resource labels registered, awaiting next existing workflow; historical checkpoints remain separately pending.",
-  "canonical_merged_in_cycle": 355,
+  "canonical_merge_status": "r356: 100 labels merged in workflow #40448075671; r357: 100 SHA-pinned unique-resource labels registered and pending next existing workflow; historical checkpoints remain separately pending.",
+  "canonical_merged_in_cycle": 356,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -157,13 +157,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000362.jsonl",
+    "next_resource_shard": "resource_000363.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000362.jsonl",
-    "last_completed_cycle": "r356-20261027T030519000Z",
-    "cycle": "r356-20261027T030519000Z",
-    "reason": "100 unique resources (r361 rows35-99, r362 rows0-34), 101 raw occurrences from batch_000962..964; official IESO Japanese exam/solution context, UNAM historical years, UAEM navigation",
-    "skip_already_reviewed": "r362 rows0-34 complete; resume row35"
+    "last_completed_shard": "resource_000363.jsonl",
+    "last_completed_cycle": "r357-20261027T040821055Z",
+    "cycle": "r357-20261027T040821055Z",
+    "reason": "100 unique resources, 100 raw occurrences from resource_000362 rows35-99 and resource_000363 rows0-34; checkpoints SHA-pinned and registered; 84 unrelated, 4 source, 10 task, 2 archive.",
+    "skip_already_reviewed": "resource_000363.jsonl rows0-34 complete; resume row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -3296,6 +3296,27 @@
     ],
     "canonical_merged": false,
     "next_resource_shard": "resource_000362.jsonl",
+    "next_row_index": 35
+  },
+  "r357_review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 84,
+      "source": 4,
+      "task": 10,
+      "archive": 2
+    },
+    "resource_ranges": [
+      "resource_000362.jsonl:35-99",
+      "resource_000363.jsonl:0-34"
+    ],
+    "checkpoints": [
+      "runs/r357_review_r362_363_00_49.jsonl",
+      "runs/r357_review_r362_363_50_99.jsonl"
+    ],
+    "canonical_merged": false,
+    "next_resource_shard": "resource_000363.jsonl",
     "next_row_index": 35
   }
 }
