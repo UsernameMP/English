@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T06:13:09.680Z",
+  "updated_at": "2026-10-27T07:05:21.732Z",
   "deferred_shards": [
     1,
     2,
@@ -14,10 +14,12 @@
   ],
   "pending_label_checkpoints": [
     "runs/r359_review_r364_365_00_49.jsonl",
-    "runs/r359_review_r364_365_50_99.jsonl"
+    "runs/r359_review_r364_365_50_99.jsonl",
+    "runs/r360_review_r365_366_00_49.jsonl",
+    "runs/r360_review_r365_366_50_99.jsonl"
   ],
-  "pending_labels_count": 100,
-  "canonical_merge_status": "RIFT Link Enumeration #40459139957 completed successfully; 100 r358 labels merged into canonical link_labels.jsonl (10256→10356). r359: 100 unique-resource labels SHA-pinned in two registered checkpoints, pending next existing workflow. Historical checkpoints require separate reconciliation.",
+  "pending_labels_count": 200,
+  "canonical_merge_status": "r360: 100 unique-resource labels SHA-pinned in two checkpoints and allowlisted in merge_review_checkpoints.py; canonical merge not independently confirmed. r359 pending state retained until workflow result verified. Historical checkpoints require reconciliation.",
   "canonical_merged_in_cycle": 358,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -157,13 +159,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000365.jsonl",
+    "next_resource_shard": "resource_000366.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000365.jsonl",
-    "last_completed_cycle": "r359-20261027T060628926Z",
-    "cycle": "r359-20261027T060628926Z",
-    "reason": "100 unique resources from resource_000364 rows35-99 and resource_000365 rows0-34; 100 raw occurrences matched in batches966-968; 8 task, 6 solution, 26 archive, 10 source, 2 criteria, 20 unrelated, 28 review; public official HTML navigation checked; two SHA-pinned checkpoints registered.",
-    "skip_already_reviewed": "resource_000365.jsonl rows0-34 complete; resume row35"
+    "last_completed_shard": "resource_000366.jsonl",
+    "last_completed_cycle": "r360-20261027T070210912Z",
+    "cycle": "r360-20261027T070210912Z",
+    "reason": "100 unique URLs from resource_000365 rows35-99 and resource_000366 rows0-34; 100 raw occurrences in batch_000967/968; 17 source, 2 criteria, 59 unrelated, 9 archive, 6 participant_work, 7 review. Official IBECC HTML inspected; UCI 403 handled as access restriction, not absent; two SHA-pinned checkpoints registered.",
+    "skip_already_reviewed": "resource_000366.jsonl rows0-34 complete; resume row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -3343,6 +3345,34 @@
       "batch_000968.jsonl"
     ],
     "next_operational_shard": "resource_000365.jsonl",
+    "next_row_index": 35
+  },
+  "r360_pending": {
+    "cycle": "r360-20261027T070210912Z",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "classification_counts": {
+      "source": 17,
+      "criteria": 2,
+      "unrelated": 59,
+      "archive": 9,
+      "participant_work": 6,
+      "review": 7
+    },
+    "label_checkpoints": [
+      "runs/r360_review_r365_366_00_49.jsonl",
+      "runs/r360_review_r365_366_50_99.jsonl"
+    ],
+    "checkpoint_blob_shas": [
+      "9cae381083b532e6e142f85873f92f440711e8ab",
+      "32b65d56e0d325ade5fbf2a9f6c5e783a06e886d"
+    ],
+    "canonical_merged": 0,
+    "raw_shards": [
+      "batch_000967.jsonl",
+      "batch_000968.jsonl"
+    ],
+    "next_operational_shard": "resource_000366.jsonl",
     "next_row_index": 35
   }
 }
