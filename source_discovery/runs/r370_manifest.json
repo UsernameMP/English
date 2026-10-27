@@ -1,0 +1,149 @@
+{
+  "cycle": "r370-20261027T170214450Z",
+  "created_at": "2026-10-27T17:07:37.593Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "requested_at": "2026-10-27T17:02:14.450Z",
+    "commit": "41b294f20663ab071ce2f9ef1734f325e1912ffd",
+    "workflow_run_id": 40546747749,
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40546747749",
+    "status": "completed",
+    "conclusion": "success",
+    "updated_at": "2026-10-27T17:05:42Z",
+    "workflow_persist_commit": "46fa00d0",
+    "tests_passed": 22,
+    "steps": {
+      "merge_sources": "success",
+      "merge_review": "success",
+      "enumeration": "success",
+      "resource_index": "success",
+      "persist": "success"
+    }
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_links_reported": 4618,
+    "raw_occurrences_total": 1584767,
+    "raw_last_shard": "batch_015848.jsonl",
+    "raw_last_shard_rows": 67,
+    "raw_count_method": "(15848-1)*100+67",
+    "unique_resource_urls_total": 330287,
+    "unique_resource_last_shard": "resource_003303.jsonl",
+    "unique_resource_last_shard_rows": 87,
+    "unique_count_method": "(3303-1)*100+87",
+    "pending_html_pages": 148217,
+    "blocked_or_failed": 3752,
+    "prior_r369_report_raw": 1578288,
+    "delta_from_prior_report_raw": 6479,
+    "delta_vs_new_links_discrepancy": 1861,
+    "discrepancy_status": "Not independently reconciled; crawler uses legacy+new sharded records, and new_links only counts new. Do not equate ledger delta to current run discoveries.",
+    "canonical_sources_total": 2229,
+    "canonical_sources_added_by_workflow": 0,
+    "canonical_labels_total": 11456,
+    "canonical_labels_added_by_workflow": 100,
+    "canonical_labels_from_cycle": 369,
+    "backlog_total": 1846
+  },
+  "discovery": {
+    "search_queries": 53,
+    "queries_checkpoint": "runs/r370_queries.jsonl",
+    "prior_query_cycles_checked": "r360-r369",
+    "prior_unique_queries_checked": 565,
+    "exact_repeats_in_checked_queries": 0,
+    "all_historical_checked": false,
+    "verified_html_pointers": 20,
+    "checkpoint": "runs/discovery_r370.jsonl",
+    "checkpoint_blob_sha": "fce213bfb16af3f5c5d902285ca87a5f64644f17",
+    "checkpoint_commit": "8d7e05e1cadd7507096fb40fa4ddf20ee5a72623",
+    "canonical_uniqueness": "pending merge_sources.py; oversized canonical sources.jsonl not safely rewritable through connector",
+    "representative_sources": [
+      "https://www.lingolympiad.org/ovning/",
+      "https://krlo.kr/problems/",
+      "https://olympiads.hbcse.tifr.res.in/past-papers-sample-questions/",
+      "https://kman.kyiv.ua/ua/Zavdannya-ta-vidpovidi-2025-2026",
+      "https://iypt.org/problems/",
+      "https://iynt.org/eskisehir/",
+      "https://www.stetson.edu/law/international/iemcc/archive.php"
+    ]
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 100
+    },
+    "photo_galleries": 95,
+    "non_task_stats_news": 5,
+    "resource_ranges": [
+      "resource_000375.jsonl:35-99",
+      "resource_000376.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000984.jsonl",
+      "batch_000985.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r370_review_r375_376_00_49.jsonl",
+      "runs/r370_review_r375_376_50_99.jsonl"
+    ],
+    "checkpoint_blob_shas": [
+      "3dd88bbfb0a15097e01ac0e9eec6d50593c47a31",
+      "4c6d56a661296ec02f5f51cb8bf243c964aff2ff"
+    ],
+    "checkpoint_commits": [
+      "83643d69f9ba54ec6dcd039682d419e88ffe3b89",
+      "c970703c17e567d960939516ce2c63fdd7e79c83"
+    ],
+    "merge_registration_commit": "af8ab19167d198825c7ee0fee655e4f4d8804890",
+    "review_state_commit": "5f72f94de91c36af7a981982a794abbe18a0e512",
+    "next_cursor": "resource_000376.jsonl:35",
+    "canonical_merge": "pending next normal workflow",
+    "basis": "Official Czech Astronomická olympiáda 2016/17 HTML calls Finale and Soustředění images photo galleries; 2015/16 HTML confirms results and news context; no images downloaded."
+  },
+  "audit": {
+    "canonical_backlog_added": 27,
+    "canonical_backlog_total": 1846,
+    "checkpoint": "runs/r370_audit.jsonl",
+    "checkpoint_blob_sha": "65389e73e21eefaebe5b130382f30aec4ee593ad",
+    "canonical_commit": "af396d65a9bd7380b83a74e594f016d77210be4d",
+    "notable": [
+      "KLO pre-2016 private and commercial restrictions; errata",
+      "Lingolympiaden 2020 final cancelled; 2026/2021 final answer gaps",
+      "IYPT pre-1994 Russian/English original restoration uncertainty",
+      "IYNT 2013 historical mirror and grading criteria",
+      "USNCO 2020/21 Part III omitted",
+      "HBCSE rights notice",
+      "CNBA missing historical years and national solutions",
+      "Kyiv MAN stages and language audio dependencies",
+      "German math 403, Polish IRO 403, Brazilian ONHB 503"
+    ]
+  },
+  "mime": {
+    "observations_sha": "ce25fd60a3220c2eef39421d6a05f7559dbca2df",
+    "changed_since_pre_trigger": false,
+    "independent_count": "not available; oversized connector file read empty",
+    "policy": "Extensionless application/pdf observations are candidates only; no binary body or suitability inference."
+  },
+  "constraints": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_manually_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false,
+    "rights_not_inferred": true,
+    "robots_respected": true
+  },
+  "pending": [
+    "Merge and deduplicate 20 verified r370 HTML source pointers into sources.jsonl via next normal workflow",
+    "Merge 100 SHA-pinned r370 labels into link_labels.jsonl via next normal workflow",
+    "Reconcile historical review checkpoints and 1861 raw-ledger delta not explained by new_links count",
+    "Check 27 backlog audit items, including access restrictions without bypass",
+    "MIME observation total unavailable; use SHA only"
+  ]
+}
