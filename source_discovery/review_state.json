@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T09:11:00Z",
+  "updated_at": "2026-10-27T09:08:30Z",
   "deferred_shards": [
     1,
     2,
@@ -13,14 +13,12 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r361_review_r366_367_00_49.jsonl",
-    "runs/r361_review_r366_367_50_99.jsonl",
     "runs/r362_review_r367_368_00_49.jsonl",
     "runs/r362_review_r367_368_50_99.jsonl"
   ],
-  "pending_labels_count": 200,
-  "canonical_merge_status": "r362 labels registered in merge_review_checkpoints.py, pending next successful workflow. Earlier r361 checkpoints retained until merge verification; historical reconciliation remains separate.",
-  "canonical_merged_in_cycle": 360,
+  "pending_labels_count": 100,
+  "canonical_merge_status": "r361 checkpoints merged successfully by RIFT Link Enumeration run 40477956017 (2026-10-27 09:08 UTC); canonical labels 10656. r362 100 labels SHA-registered but not yet merged; historical reconciliation remains separate.",
+  "canonical_merged_in_cycle": 361,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -3433,5 +3431,12 @@
     "canonical_merged": 0,
     "next_operational_shard": "resource_000368.jsonl",
     "next_row_index": 35
+  },
+  "r361_canonical_merge_verified": {
+    "workflow_run_id": 40477956017,
+    "conclusion": "success",
+    "merged_labels": 100,
+    "canonical_total": 10656,
+    "verified_at": "2026-10-27T09:08:09Z"
   }
 }
