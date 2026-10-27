@@ -2,8 +2,8 @@
   "cycle": "r354-20261027T010128805Z",
   "searched_at": "2026-10-27",
   "engine": "web fast",
-  "query_count": 52,
-  "unique_query_count": 52,
+  "query_count": 67,
+  "unique_query_count": 67,
   "prior_queries_checked": 781,
   "prior_cycles_checked": "r343-r353",
   "prior_cycles_unavailable": [],
@@ -61,7 +61,22 @@
     "International Youth Math Challenge research modeling contest archive past problems university",
     "Tournament of Young Physicists archive problems jury reports years 1988 2025",
     "International Young Naturalists Tournament archive problems past years official",
-    "International Young Physicists Tournament national reports evaluation criteria scoring past problems"
+    "International Young Physicists Tournament national reports evaluation criteria scoring past problems",
+    "site:olimpiadadehistoria.com.br provas gabaritos fases anteriores ONHB 2009 2025",
+    "olimpiada nacional em história do Brasil provas questões fases anos anteriores",
+    "site:olimpiadafilosofia.org.br provas edições anteriores olimpíada filosofia",
+    "olimpíada brasileira de linguagens humanas questões gabaritos arquivo",
+    "Olimpiada de Filosofía Uruguay consignas trabajos ganadores archivo",
+    "Olimpiada de Historia Chile pruebas años anteriores archivo nacional",
+    "Olimpiada de Letras Paraguay pruebas anteriores guaraní español",
+    "Olympiades de Philosophie France sujets essais archives lycéens",
+    "British philosophy olympiad essay topics archive previous years",
+    "International Ethics Olympiad case studies past competitions 2018 2025",
+    "International Earth Science Olympiad past problems fieldwork data tasks archive",
+    "European Geosciences Union youth competition past research projects archives",
+    "International Geography Olympiad fieldwork exercise marking schemes old years archive",
+    "Canadian Geography Challenge past exam questions archived",
+    "National Ocean Sciences Bowl questions past competitions archive high school"
   ],
-  "notes": "HTML and search-result metadata only. Search queries are not proof of source coverage; unverified leads retained separately."
+  "notes": "Two waves of 52+15 multilingual searches; no binary retrieval; all exact queries logged. Search results are not proof of archive completeness."
 }
