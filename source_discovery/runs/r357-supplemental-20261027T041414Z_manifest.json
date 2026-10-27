@@ -1,0 +1,81 @@
+{
+  "cycle": "r357-supplemental-20261027T041414Z",
+  "relation_to_primary": "Supplemental independent discovery/audit during already-triggered r357. No second run_trigger update or additional GitHub Actions run requested.",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "primary_trigger": {
+    "cycle": "r357-20261027T040821055Z",
+    "commit": "472623aabdc33ce60511ab4cfcbaaed5d8413a78",
+    "workflow_run_id": 40448075671,
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40448075671",
+    "status": "completed",
+    "conclusion": "success",
+    "tests_passed": 22
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_occurrences": 4591,
+    "raw_total": 1511966,
+    "unique_urls": 317197,
+    "pending_html_pages": 142443,
+    "blocked_or_failed_cumulative": 3557
+  },
+  "canonical_after_primary_workflow": {
+    "sources": 2156,
+    "labels": 10156,
+    "source_increment_from_r356": 2,
+    "labels_increment_from_r356": 100
+  },
+  "primary_review_checkpointed": {
+    "unique_resources": 100,
+    "unique_raw_occurrences": 100,
+    "types": {
+      "unrelated": 84,
+      "source": 4,
+      "task": 10,
+      "archive": 2
+    },
+    "checkpoints": [
+      "runs/r357_review_r362_363_00_49.jsonl",
+      "runs/r357_review_r362_363_50_99.jsonl"
+    ],
+    "registered_sha_pinned": true,
+    "canonical_merged": false,
+    "cursor_not_advanced_at_last_read": true
+  },
+  "supplemental": {
+    "verified_html_pointers_checkpointed": 16,
+    "audit_gaps_checkpointed": 14,
+    "exact_queries_logged": 40,
+    "files": [
+      {
+        "path": "source_discovery/runs/discovery_r357-supplemental-20261027T041414Z.jsonl",
+        "sha": "ea673db9c442bfe95436b299a910708dcdd27bb4"
+      },
+      {
+        "path": "source_discovery/runs/r357-supplemental-20261027T041414Z_audit.jsonl",
+        "sha": "8cc937a3a00dd392b6180074a104555550202590"
+      },
+      {
+        "path": "source_discovery/runs/r357-supplemental-20261027T041414Z_queries.jsonl",
+        "sha": "efde6719038182d95cc3d31d4d8e4d1f9ec5aced"
+      }
+    ],
+    "canonical_source_dedup_pending": true,
+    "canonical_audit_merge_pending": true
+  },
+  "constraints": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_workflow_triggers": 0
+  },
+  "unresolved": [
+    "r357 review_state cursor not yet advanced in the last read; concurrent primary cycle may update it.",
+    "Canonical sources.jsonl too large to read via GitHub connector; 16 pointers await normalized merge.",
+    "Supplemental audit findings are checkpoint-only, not appended to canonical backlog.",
+    "Only r356 query log was available under standard name for exact query dedup; older logs and in-progress r357 query list unavailable.",
+    "MIME observation ledger and crawl_state too large for independent connector count."
+  ]
+}
