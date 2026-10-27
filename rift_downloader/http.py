@@ -28,6 +28,11 @@ USER_AGENT='RIFT-ResearchArchive/0.1 (polite pilot; respects robots and Retry-Af
 
 class UnsafeURL(ValueError):pass
 class RobotsDenied(ValueError):pass
+class RobotsRetry(RuntimeError):
+    def __init__(self,status,delay=None):
+        self.status=status
+        self.delay=delay
+        super().__init__(f'robots.txt returned HTTP {status}')
 
 def safe_url(url,resolve=True):
     parts=urlparse(url)
@@ -117,23 +122,32 @@ class PoliteHttp:
         origin=f'{parts.scheme}://{parts.netloc}'
         if origin in self.robots_cache:return self.robots_cache[origin]
         target=origin+'/robots.txt'
-        response,wait=self._request(target)
-        try:
-            if response.status_code in (404,410):
-                value=(None,0)
-            elif response.status_code!=200:
-                raise RobotsDenied(f'robots.txt unavailable HTTP {response.status_code} (fail closed)')
-            else:
-                body=b''
-                for chunk in response.iter_content(8192):
-                    body+=chunk
-                    if len(body)>1024*1024:raise RobotsDenied('robots.txt too large')
-                parser=RobotFileParser()
-                parser.parse(body.decode('utf-8','replace').splitlines())
-                value=(parser,float(parser.crawl_delay(USER_AGENT) or parser.crawl_delay('*') or 0))
-        finally:response.close()
-        self.robots_cache[origin]=value
-        return value
+        for _ in range(4):
+            response,wait=self._request(target)
+            with response:
+                code=response.status_code
+                if code in (301,302,303,307,308):
+                    location=response.headers.get('Location')
+                    if not location:raise RobotsDenied('robots redirect missing location')
+                    target=urljoin(target,location)
+                    continue
+                if code in (404,410):
+                    value=(None,0)
+                elif code in (429,500,502,503,504):
+                    raise RobotsRetry(code,retry_after(response.headers.get('Retry-After')))
+                elif code!=200:
+                    raise RobotsDenied(f'robots.txt unavailable HTTP {code} (fail closed)')
+                else:
+                    body=b''
+                    for chunk in response.iter_content(8192):
+                        body+=chunk
+                        if len(body)>1024*1024:raise RobotsDenied('robots.txt too large')
+                    parser=RobotFileParser()
+                    parser.parse(body.decode('utf-8','replace').splitlines())
+                    value=(parser,float(parser.crawl_delay(USER_AGENT) or parser.crawl_delay('*') or 0))
+                self.robots_cache[origin]=value
+                return value
+        raise RobotsDenied('too many redirects in robots.txt')
     def fetch(self,url,spool):
         """Return event dict. Caller owns database transitions and retry scheduling."""
         started=time.monotonic();wait_ms=0;final_url=url
@@ -203,6 +217,10 @@ class PoliteHttp:
                 except BaseException:
                     if os.path.exists(tmp):os.unlink(tmp)
                     raise
+        except RobotsRetry as exc:
+            self.limiter.postpone(host,exc.delay or 0)
+            return {'outcome':'retry','http_status':exc.status,'retry_after':exc.delay,
+                    'error':str(exc),'wait_ms':wait_ms,'elapsed_ms':int((time.monotonic()-started)*1000)}
         except (UnsafeURL,RobotsDenied) as exc:
             return {'outcome':'blocked','error':str(exc),'wait_ms':wait_ms,
                     'elapsed_ms':int((time.monotonic()-started)*1000)}
