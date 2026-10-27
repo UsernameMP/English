@@ -33,10 +33,15 @@
     "direct_sources_write": "blocked: canonical sources.jsonl returned empty content on full/ranged fetch despite nonempty blob SHA; safe checkpoint via merge_sources.py",
     "historical_query_exact_dedup": "not exhaustively verified against all historical logs",
     "recent_query_dedup": {
-      "checked_cycles": "r360–r366",
-      "prior_queries_checked": 361,
+      "checked_cycles": "r356, r358–r366",
+      "prior_queries_checked": 515,
       "current_queries": 60,
       "exact_repeats": 0,
+      "unavailable_query_logs": [
+        "r354",
+        "r355",
+        "r357"
+      ],
       "all_historical_queries_checked": false
     },
     "checked_recent_discovery_cycles": "r360–r366",
