@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T18:10:51.030Z",
+  "updated_at": "2026-10-27T19:06:00Z",
   "deferred_shards": [
     1,
     2,
@@ -13,12 +13,12 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r370_review_r375_376_00_49.jsonl",
-    "runs/r370_review_r375_376_50_99.jsonl"
+    "runs/r372_review_r377_378_00_49.jsonl",
+    "runs/r372_review_r377_378_50_99.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "GitHub Actions #40546747749 completed success 2026-10-27T17:05:42Z; merge_review_checkpoints.py existing=11356 added=100 total=11456, so r369 merged. r370 100 labels saved as SHA-pinned checkpoints and registered after this workflow; pending next normal workflow.",
-  "canonical_merged_in_cycle": 369,
+  "canonical_merge_status": "RIFT GitHub Actions #40565036722 success 2026-10-27T19:04:38Z; existing=11556 added=100 total=11656, r371 labels merged. r372 100 SHA-pinned labels registered after workflow; pending next normal workflow.",
+  "canonical_merged_in_cycle": 371,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -157,13 +157,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000377.jsonl",
+    "next_resource_shard": "resource_000378.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000377.jsonl",
-    "last_completed_cycle": "r371-20261027T180746933Z",
-    "cycle": "r371-20261027T180746933Z",
-    "reason": "100 unique resource IDs: resource_000376 rows35-99 and resource_000377 rows0-34; 100 raw occurrences in batch_000985-000986; organizer 2015/16 HTML explicitly calls 98 Finale JPEGs photo galleries; two other pages are final results/news, not tasks. No binary bodies fetched.",
-    "skip_already_reviewed": "resource_000377.jsonl rows0-34 complete; resume row35"
+    "last_completed_shard": "resource_000378.jsonl",
+    "last_completed_cycle": "r372-20261027T185929755Z",
+    "cycle": "r372-20261027T185929755Z",
+    "reason": "100 unique resource IDs; resource_000377 rows35-99 and resource_000378 rows0-34; 100 raw occurrences cross-checked in six small raw shards; KöMaL problem/solution context validated on official monthly HTML, three statistics-only links retained review; no binary bodies fetched.",
+    "skip_already_reviewed": "resource_000378.jsonl rows0-34 complete; resume row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -2827,8 +2827,8 @@
     "uncertain_resources": 1,
     "raw_unchanged": true
   },
-  "canonical_labels_confirmed": 10456,
-  "canonical_labels_verified_at": "2026-10-27T07:12:11.031Z",
+  "canonical_labels_confirmed": 11656,
+  "canonical_labels_verified_at": "2026-10-27T19:04:38Z",
   "r341_pending": {
     "cycle": "r341-20261026T120508689Z",
     "resource_ranges": [
@@ -3713,7 +3713,7 @@
       "3dd88bbfb0a15097e01ac0e9eec6d50593c47a31",
       "4c6d56a661296ec02f5f51cb8bf243c964aff2ff"
     ],
-    "canonical_merged": 0
+    "canonical_merged": 100
   },
   "r371_pending": {
     "cycle": "r371-20261027T180746933Z",
@@ -3739,11 +3739,51 @@
       "cfc6599da718c8902992dc39ed193b5d4703773d"
     ],
     "registered_for_merge": true,
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "next_cursor": {
       "shard": "resource_000377.jsonl",
       "row_index": 35
     },
     "basis": "Official https://olympiada.astro.cz/archiv/13-rocnik-2015-16 HTML explicitly labels Finale galleries; raw occurrence context cross-matched."
+  },
+  "r372_pending": {
+    "cycle": "r372-20261027T185929755Z",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 51,
+      "task": 6,
+      "source": 1,
+      "solution": 39,
+      "review": 3
+    },
+    "resource_ranges": [
+      "resource_000377.jsonl:35-99",
+      "resource_000378.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000986.jsonl",
+      "batch_000987.jsonl",
+      "batch_000988.jsonl",
+      "batch_000989.jsonl",
+      "batch_000990.jsonl",
+      "batch_000991.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r372_review_r377_378_00_49.jsonl",
+      "runs/r372_review_r377_378_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "c9504f3b4286177a20076ba195124b8b1cd90177",
+      "30e9c8f84b09876063a8f065e91bd2fc32f36b6a"
+    ],
+    "registered_for_merge": true,
+    "canonical_merged": 0,
+    "next_cursor": {
+      "shard": "resource_000378.jsonl",
+      "row_index": 35
+    },
+    "uncertain_resource_count": 3,
+    "basis": "Unique resource index, six raw occurrence shards, official KöMaL monthly HTML, official Czech astronomy gallery context."
   }
 }
