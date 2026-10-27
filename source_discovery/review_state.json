@@ -3624,7 +3624,6 @@
   "r366_crawler": {
     "workflow_run_id": 40508637197,
     "conclusion": "success",
-    "html_pages_processed": 60,
     "raw_occurrences_total": 1567981,
     "raw_occurrences_added": 4630,
     "unique_resource_urls_total": 327721,
@@ -3635,6 +3634,8 @@
     "canonical_labels_added": 100,
     "queue_length": "not independently retrievable via large crawl_state.json",
     "mime_observations": "SHA unchanged from previous cycle",
-    "verified_at": "2026-10-27T13:09:51.899Z"
+    "verified_at": "2026-10-27T13:09:51.899Z",
+    "html_pages_budget": 60,
+    "html_pages_processed": "not independently confirmed from inaccessible crawl_state"
   }
 }
