@@ -1,0 +1,126 @@
+{
+  "cycle": "r364-20261027T110314251Z",
+  "date": "2026-10-27",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "requested_at": "2026-10-27T11:03:14.251Z",
+    "commit": "aca612bfa0608c3c07da6d36c3661a71b6952422",
+    "blob_sha": "1aa601f3a852c135132633738fda120098ff95d6",
+    "workflow": "RIFT Link Enumeration",
+    "run_id": 40493225896,
+    "status": "completed",
+    "conclusion": "success",
+    "tests_passed": 22,
+    "review_merge_step": "success",
+    "review_merge_added": 200,
+    "review_merge_total": 10856
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_occurrences_this_run": 1586,
+    "raw_occurrences_total": 1560692,
+    "raw_count_basis": "batch_015606.jsonl has 92 records; 15606 preceding complete shards",
+    "unique_resource_urls": 326961,
+    "pending_html_pages": 146138,
+    "blocked_or_failed": 3668,
+    "canonical_sources": 2201,
+    "canonical_labels": 10856,
+    "resource_shards_changed": 6,
+    "canonical_sources_added_by_workflow": 0,
+    "source_registry_sha": "4cb2e9e135497cd5d1c43874459f103fdf39a47f",
+    "labels_sha": "694ffeea4e47ede7b4594c3591ed7bd641a369c3",
+    "notes": "No comparison to r363 raw total: intervening workflow(s) altered the baseline; blocked_or_failed is not equivalent to robots.txt denials."
+  },
+  "discovery": {
+    "queries_executed": 54,
+    "query_checkpoint": "runs/r364_queries.jsonl",
+    "query_blob_sha": "25df27e3f16765c0da5483ff98e68023e87f0cd0",
+    "prior_query_logs_checked": [
+      "r359",
+      "r360",
+      "r361",
+      "r362",
+      "r363"
+    ],
+    "prior_queries_checked": 261,
+    "exact_repeats_in_checked_logs": 0,
+    "all_historical_queries_checked": false,
+    "verified_html_pointers": 12,
+    "verified_checkpoint": "runs/discovery_r364.jsonl",
+    "verified_blob_sha": "83af9f2b1de3a42037a39def6c64370115bb9b28",
+    "canonical_uniqueness": "pending normalized merge_sources.py against large sources.jsonl; direct safe replacement unavailable",
+    "canonical_merge_completed": false,
+    "unverified_leads": 6,
+    "unverified_checkpoint": "runs/r364_unverified_pointers.jsonl",
+    "unverified_blob_sha": "8b5ff71053c90c3f25c01dbee7ca227a9516934e"
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "solution": 20,
+      "unrelated": 80
+    },
+    "resource_ranges": [
+      "resource_000369.jsonl:35-99",
+      "resource_000370.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000973.jsonl",
+      "batch_000974.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r364_review_r369_370_00_49.jsonl",
+      "runs/r364_review_r369_370_50_99.jsonl"
+    ],
+    "checkpoint_blob_shas": [
+      "1c04d4ad6479ca3c7e49e92c839133ca42167d53",
+      "13ec454b1c6ba674d81f8ce3626581f2c709852b"
+    ],
+    "merge_script_commit": "848e4ef9a079a2dc26c5dc680a24279dd6fa170c",
+    "canonical_merge_completed": false,
+    "canonical_merge_pending": 100,
+    "next_cursor": {
+      "shard": "resource_000370.jsonl",
+      "row_index": 35
+    },
+    "review_state_commit": "0e09e29601fd9d2ad7603f44c581ae9fedc58115",
+    "evidence": "Official Czech Astronomická olympiáda HTML editions 2024/25 and 2025/26 identifies PDF solution links and photo galleries; no binary bodies retrieved"
+  },
+  "audit": {
+    "findings": 20,
+    "audit_checkpoint": "runs/r364_audit.jsonl",
+    "audit_blob_sha": "eba00e7eb25092058cacd2bd6f326ceaab115504",
+    "unverified_leads": 6,
+    "canonical_backlog_added": 25,
+    "canonical_backlog_skipped_duplicates": 1,
+    "canonical_backlog_total": 1660,
+    "canonical_backlog_commit": "a65f7dac3ef273796c63e16208d2cd65832c29a3",
+    "canonical_backlog_sha": "35590c0d16375babfdd333477a9097e5ca253b9c"
+  },
+  "mime": {
+    "observations_sha": "c0abe2fc3b16272a8f83916610b0ce1eaeaeb77c",
+    "independent_count": "not computed; large journal unreadable through connector",
+    "extensionless_pdf_handling": "HTML anchor application/pdf can support solution classification, but no binary body fetched"
+  },
+  "safeguards": {
+    "binary_downloads": false,
+    "dropbox_mutated": false,
+    "raw_occurrences_deleted": false,
+    "schedule_modified": false,
+    "extra_workflow_runs_created": false,
+    "rights_unknown_until_proven": true
+  },
+  "unresolved": [
+    "12 discovery pointers require canonical merge and dedup on next existing workflow",
+    "100 r364 reviewed labels SHA-pinned but not yet canonically merged",
+    "Historical unregistered compact checkpoints remain separately unresolved",
+    "6 discovery leads pending, including one 403 and one previously recorded duplicate",
+    "MIME observation counts not independently recomputed"
+  ]
+}
