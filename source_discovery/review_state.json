@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T11:06:26.114Z",
+  "updated_at": "2026-10-27T11:07:16.031Z",
   "deferred_shards": [
     1,
     2,
@@ -13,16 +13,12 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r362_review_r367_368_00_49.jsonl",
-    "runs/r362_review_r367_368_50_99.jsonl",
-    "runs/r363_review_r368_369_00_49.jsonl",
-    "runs/r363_review_r368_369_50_99.jsonl",
     "runs/r364_review_r369_370_00_49.jsonl",
     "runs/r364_review_r369_370_50_99.jsonl"
   ],
-  "pending_labels_count": 200,
-  "canonical_merge_status": "r363 workflow 40485064123 completed success overall, but continue-on-error label merge FAILED: r362_review_r367_368_00_49.jsonl expected 100 got 50. Fixed EXPECTED_ROWS for r362 and r363 in merge_review_checkpoints.py commit 13efb4d3; canonical labels remain 10656. Await next existing workflow; no additional run triggered.",
-  "canonical_merged_in_cycle": 361,
+  "pending_labels_count": 100,
+  "canonical_merge_status": "r364 GitHub Actions run 40493225896 completed success; Review merge step completed success and log confirms existing=10656 added=200 total=10856, merging r362-r363. r364 100 labels SHA-pinned after workflow checkout, pending next existing workflow. Historical unregistered checkpoints remain separately unresolved.",
+  "canonical_merged_in_cycle": 363,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -3517,7 +3513,8 @@
     "merge_script_registered": true,
     "next_operational_shard": "resource_000370.jsonl",
     "next_row_index": 35,
-    "notes": "Official HTML confirms extensionless /f/detail PDF solutions and JPEG final galleries; no binary bodies fetched."
+    "notes": "Official HTML confirms extensionless /f/detail PDF solutions and JPEG final galleries; no binary bodies fetched.",
+    "canonical_labels_at_workflow_completion": 10856
   },
   "r364_discovery_audit": {
     "cycle": "r364-20261027T110314251Z",
@@ -3530,7 +3527,27 @@
     "audit_checkpoint": "runs/r364_audit.jsonl",
     "unverified_leads_checkpointed": 6,
     "unverified_checkpoint": "runs/r364_unverified_pointers.jsonl",
-    "canonical_sources_merged": "pending workflow verification",
-    "canonical_backlog_merged": false
+    "canonical_sources_merged": "r364 discovery_r364 checkpoint created after workflow source merge; 12 pointers pending next existing workflow",
+    "canonical_backlog_merged": true,
+    "canonical_backlog_added": 25,
+    "canonical_backlog_total": 1660
+  },
+  "r364_crawler": {
+    "workflow_run_id": 40493225896,
+    "workflow_status": "completed",
+    "workflow_conclusion": "success",
+    "html_pages": 60,
+    "new_raw_occurrences_this_workflow": 1586,
+    "raw_occurrences_total_from_last_shard": 1560692,
+    "unique_resource_urls": 326961,
+    "pending_html_pages": 146138,
+    "blocked_or_failed": 3668,
+    "canonical_sources": 2201,
+    "canonical_labels": 10856,
+    "tests_passed": 22,
+    "merge_review_added": 200,
+    "resource_shards_changed": 6,
+    "source_registry_new_from_this_workflow": 0,
+    "notes": "Raw total is calculated from batch_015606.jsonl (92 records); do not compare it directly to r363 manifest because intervening workflows changed the baseline. MIME observations SHA changed but counts not independently recomputed."
   }
 }
