@@ -1,19 +1,7 @@
 name: RIFT Link Enumeration
+# Paused by user for RIFT 200-file downloader pilot. Manual invocation only.
 on:
-  push:
-    branches: [rift-source-index]
-    paths:
-      - source_discovery/sources.jsonl
-      - source_discovery/run_trigger.json
-      - source_discovery/crawl_links.py
-      - source_discovery/link_intelligence.py
-      - source_discovery/build_resource_index.py
-      - source_discovery/test_link_intelligence.py
-      - source_discovery/merge_sources.py
-      - source_discovery/test_discovery.py
   workflow_dispatch:
-  schedule:
-    - cron: "19 * * * *"
 
 permissions:
   contents: write
