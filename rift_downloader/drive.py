@@ -61,7 +61,7 @@ class DriveUploader:
         if int(obj.get('size',-1))!=int(size) or obj.get('md5Checksum','').lower()!=md5.lower():
             raise DriveError(f'Verification mismatch for Drive object {file_id}')
         return file_id
-    def upload(self,sha,path,mime,filename):
+    def upload(self,sha,path,mime,filename,*,category='raw'):
         """Idempotent across crashes, including completed upload before SQLite commit."""
         try:
             from googleapiclient.http import MediaFileUpload
@@ -80,14 +80,16 @@ class DriveUploader:
                 if int(obj.get('size',-1))==size and obj.get('md5Checksum')==md5:
                     return self._verified(obj['id'],size,md5)
             root=self._folder('RIFT')
-            raw=self._folder('raw',root)
-            bucket=self._folder(sha[:2],raw)
+            if category not in ('raw','index'):
+                raise DriveError('Unsupported Drive storage category')
+            folder=self._folder(category,root)
+            bucket=self._folder(sha[:2],folder) if category=='raw' else folder
             suffix=Path(filename or '').suffix.lower()
             if not suffix or len(suffix)>12:suffix=mimetypes.guess_extension(mime or '') or '.bin'
             media=MediaFileUpload(str(path),mimetype=mime or 'application/octet-stream',
                                   resumable=True,chunksize=8*1024*1024)
             body={'name':sha+suffix,'parents':[bucket],
-                  'appProperties':{'rift_sha256':sha,'rift_format':'raw-v1'}}
+                  'appProperties':{'rift_sha256':sha,'rift_format':category+'-v1'}}
             request=self.service.files().create(body=body,media_body=media,fields='id,size,md5Checksum')
             response=None
             for attempt in range(7):
