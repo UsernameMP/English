@@ -137,5 +137,14 @@
     "errors_and_blockers": "unavailable from oversized crawl_state",
     "crawl_state_sha": "c198bff489586396604d49b0c92cea1f517dd35a",
     "resource_observations_sha": "8010fabe816f729d6c794371035658d0a01942d4"
+  },
+  "posthoc_correction_r368": {
+    "verified_at": "2026-10-27",
+    "evidence": "runs/r368_counting_audit.json; GitHub Actions run 40517518060; 1-based shard numbering",
+    "raw_occurrences_total_corrected": 1571450,
+    "unique_resource_urls_total_corrected": 327889,
+    "raw_occurrences_original_manifest": 1571550,
+    "unique_resource_urls_original_manifest": 327989,
+    "reason": "Shards start at batch_000001/resource_000001; previous manifest used last_shard_number*100 rather than (last_shard_number-1)*100."
   }
 }
