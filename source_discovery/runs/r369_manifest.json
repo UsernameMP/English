@@ -1,0 +1,147 @@
+{
+  "cycle": "r369-20261027T160552649Z",
+  "created_at": "2026-10-27T16:11:39.143Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "882925519f01ca140d0132225916f1450e3f3a4a",
+    "requested_at": "2026-10-27T16:05:52.649Z",
+    "workflow_run_id": 40537544387,
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40537544387",
+    "status": "completed",
+    "conclusion": "success",
+    "workflow_persist_commit": "80859d19524369836ea0379b1a40843918ad1260",
+    "steps": {
+      "merge_sources": "success",
+      "merge_review": "success",
+      "enumeration": "success",
+      "resource_index": "success",
+      "persist": "success"
+    },
+    "canonical_labels_merged_from_r368": 100
+  },
+  "crawler": {
+    "raw_occurrences_total": 1578288,
+    "raw_occurrences_added": 4425,
+    "raw_last_shard": "batch_015783.jsonl",
+    "raw_last_shard_rows": 88,
+    "raw_count_method": "(15783-1)*100+88",
+    "unique_resource_urls_total": 329813,
+    "unique_resource_urls_added": 1746,
+    "resource_last_shard": "resource_003299.jsonl",
+    "resource_last_shard_rows": 13,
+    "unique_count_method": "(3299-1)*100+13",
+    "baseline_r368": {
+      "raw_occurrences": 1573863,
+      "unique_resource_urls": 328067
+    },
+    "html_frontier": "not independently readable: crawl_state.json oversized",
+    "blocked_or_failed": "not independently readable",
+    "canonical_sources_total": "not independently readable: sources.jsonl oversized",
+    "canonical_labels_added": 100,
+    "canonical_labels_total_inferred": 11356,
+    "canonical_labels_total_method": "r368 manifest 11256 + GitHub commit diff 100",
+    "backlog_total": 1819,
+    "shard_read_verified": true
+  },
+  "discovery": {
+    "search_queries": 85,
+    "queries_checkpoint": "runs/r369_queries.jsonl",
+    "recent_prior_queries_checked": 421,
+    "cycles_checked": "r361-r368",
+    "exact_repeats": 0,
+    "all_historical_queries_checked": false,
+    "verified_html_pointers": 23,
+    "checkpoint": "runs/discovery_r369.jsonl",
+    "checkpoint_commit": "ef93e1a25a68fbef1d01ab86e67875d6a17091c3",
+    "canonical_uniqueness": "pending merge_sources.py; sources.jsonl too large for safe direct rewrite",
+    "representative_sources": [
+      "https://www.eko.ut.ee/eko/lv/",
+      "https://sisu.ut.ee/imc/arhiiv/",
+      "https://hkoi.org/zh/past-problems/",
+      "https://imosuisse.github.io/exams/",
+      "https://teaduskool.ut.ee/et/olumpiaadid/eesti/emakeeleolumpiaad/arhiiv",
+      "https://myeso.com.my/past-year-questions",
+      "https://ukmt.org.uk/competition-papers"
+    ]
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 99,
+      "archive": 1
+    },
+    "ranges": [
+      "resource_000374.jsonl:35-99",
+      "resource_000375.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000982.jsonl",
+      "batch_000983.jsonl",
+      "batch_000984.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r369_review_r374_375_00_49.jsonl",
+      "runs/r369_review_r374_375_50_99.jsonl"
+    ],
+    "checkpoint_blob_shas": [
+      "1dc785ab3124551202081116d09e35bb3a9584d6",
+      "d203ee0b9e11b8011d2e2abcf3f10c2169bd30d0"
+    ],
+    "checkpoint_commits": [
+      "5400cce9a67706f5ecc477a788bb861f7b93f318",
+      "d9c44662686e2dc13d2c737e7e14bfb348f302fe"
+    ],
+    "merge_registration_commit": "6b58133876c05bb8db880337cdd72e3786fdb7a3",
+    "review_state_commit": "9b93075191404b6fcef0b20ec248cff9cd1b9875",
+    "cursor": "resource_000375.jsonl:35",
+    "canonical_merge": "pending next normal workflow",
+    "basis": "Official Czech Astronomická olympiáda 2016/17 and 2017/18 HTML identifies Finale JPEG sequences as event photo galleries; no image downloaded."
+  },
+  "audit": {
+    "new_canonical_backlog_entries": 29,
+    "canonical_backlog_total": 1819,
+    "commit": "4e7ef37577a185e6f501a16c25be65c11b5e39b6",
+    "notable": [
+      "HKOI 2019/20 final row dash, status unresolved",
+      "HKOI 2001/2002 preliminary solutions absent from visible index",
+      "Swiss Mathematical Olympiad original-vs-edited wording and historical language gaps",
+      "University of Tartu 1999–2012 papers absent from visible HTML index; 2025 onward discontinued not missing",
+      "Estonian mother-tongue 2019/20 final explicitly cancelled",
+      "MyESO older/newer host reconciliation and 2023 Paper 2 missing answer",
+      "Czech final JPEGs confirmed photo galleries",
+      "ANISN archive pointer not directly verified"
+    ]
+  },
+  "mime": {
+    "observations_sha_before": "1091475747d5aaa444a1c62600737cfe448ee276",
+    "observations_sha_after": "b3f31a0bd797b01d902d9a7e799d458a260aabd5",
+    "changed": true,
+    "independent_count": "not available; oversized connector file read empty",
+    "classification_policy": "extensionless application/pdf may be candidate, but no content or fitness inferred; non-HTML not treated as crawler error",
+    "binary_bodies_fetched": 0
+  },
+  "constraints": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_manually_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false,
+    "robots_respected": true,
+    "rights_not_inferred": true
+  },
+  "pending": [
+    "Merge/deduplicate 23 verified r369 source pointers into canonical sources.jsonl on next normal workflow",
+    "Merge 100 SHA-pinned r369 labels into canonical link_labels.jsonl on next normal workflow",
+    "Reconcile historical review checkpoint backlog",
+    "Check unverified ANISN and other archives without bypass",
+    "MIME observation count unavailable from oversized connector read",
+    "Review cursor resource_000375 row35; no previous resource IDs reclassified"
+  ]
+}
