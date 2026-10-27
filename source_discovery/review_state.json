@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T02:03:00Z",
+  "updated_at": "2026-10-27T03:20:00Z",
   "deferred_shards": [
     1,
     2,
@@ -13,11 +13,11 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r355_review_r360_361_00_49.jsonl",
-    "runs/r355_review_r360_361_50_99.jsonl"
+    "runs/r356_review_r361_362_00_49.jsonl",
+    "runs/r356_review_r361_362_50_99.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "r355: 100 unique-resource SHA-pinned labels registered in merge_review_checkpoints.py; canonical merge awaiting existing workflow; prior r354 merge must be verified.",
+  "canonical_merge_status": "r356: 100 resource-level reviewed labels SHA-registered in merge_review_checkpoints.py; canonical merge awaiting next existing workflow; r355 merge verification pending.",
   "canonical_merged_in_cycle": 350,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
@@ -157,13 +157,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000361.jsonl",
+    "next_resource_shard": "resource_000362.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000361.jsonl",
-    "last_completed_cycle": "r355-20261027T015850000Z",
-    "cycle": "r355-20261027T015850000Z",
-    "reason": "100 unique resource IDs (r360 rows35-99, r361 rows0-34); 150 matching raw occurrences across batch_000960..963; multilingual Japanese anchor and heading classification",
-    "skip_already_reviewed": "r361 rows0-34 complete; resume row35"
+    "last_completed_shard": "resource_000362.jsonl",
+    "last_completed_cycle": "r356-20261027T030519000Z",
+    "cycle": "r356-20261027T030519000Z",
+    "reason": "100 unique resources (r361 rows35-99, r362 rows0-34), 101 raw occurrences from batch_000962..964; official IESO Japanese exam/solution context, UNAM historical years, UAEM navigation",
+    "skip_already_reviewed": "r362 rows0-34 complete; resume row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -3258,5 +3258,41 @@
     ],
     "canonical_merged": 0,
     "reviewed_at": "2026-10-27T00:05:22.888Z"
+  },
+  "r355_pending_at_r356": {
+    "pending_label_checkpoints": [
+      "runs/r355_review_r360_361_00_49.jsonl",
+      "runs/r355_review_r360_361_50_99.jsonl"
+    ],
+    "pending_labels_count": 100,
+    "canonical_merge_status": "r355: 100 unique-resource SHA-pinned labels registered in merge_review_checkpoints.py; canonical merge awaiting existing workflow; prior r354 merge must be verified."
+  },
+  "r356_review": {
+    "unique_resources": 100,
+    "raw_occurrences": 101,
+    "counts": {
+      "task": 44,
+      "solution": 20,
+      "archive": 15,
+      "source": 3,
+      "unrelated": 16,
+      "review": 2
+    },
+    "raw_shards": [
+      "batch_000962.jsonl",
+      "batch_000963.jsonl",
+      "batch_000964.jsonl"
+    ],
+    "resource_ranges": [
+      "resource_000361.jsonl:35-99",
+      "resource_000362.jsonl:0-34"
+    ],
+    "checkpoints": [
+      "runs/r356_review_r361_362_00_49.jsonl",
+      "runs/r356_review_r361_362_50_99.jsonl"
+    ],
+    "canonical_merged": false,
+    "next_resource_shard": "resource_000362.jsonl",
+    "next_row_index": 35
   }
 }
