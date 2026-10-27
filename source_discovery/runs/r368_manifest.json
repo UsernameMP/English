@@ -1,0 +1,148 @@
+{
+  "cycle": "r368-20261027T150655501Z",
+  "created_at": "2026-10-27T15:13:39.475Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "b6767905de1b109d9502f7614592a2b13316871b",
+    "workflow_run_id": 40527768817,
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40527768817",
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-27T15:12:55Z",
+    "regression_tests": 22,
+    "steps": {
+      "merge_sources": "success",
+      "merge_review": "success",
+      "enumeration": "success",
+      "resource_index": "success",
+      "persist": "success"
+    }
+  },
+  "baseline_corrected_from_r367": {
+    "raw_occurrences_total": 1571450,
+    "unique_resource_urls_total": 327889,
+    "canonical_sources_total": 2209,
+    "canonical_labels_total": 11156,
+    "canonical_backlog_total": 1756,
+    "html_frontier": 146558,
+    "blocked_or_failed": 3717,
+    "correction_ref": "runs/r368_counting_audit.json",
+    "note": "r367 original manifest raw and unique counts were each 100 too high because shards are 1-based."
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_occurrences": 2413,
+    "raw_occurrences_total": 1573863,
+    "raw_last_shard": "batch_015739.jsonl",
+    "raw_last_shard_rows": 63,
+    "unique_resource_urls_total": 328067,
+    "unique_resource_urls_added": 178,
+    "resource_last_shard": "resource_003281.jsonl",
+    "resource_last_shard_rows": 67,
+    "html_frontier": 146637,
+    "blocked_or_failed": 3740,
+    "canonical_sources_total": 2212,
+    "canonical_sources_added_from_previous_checkpoints": 3,
+    "canonical_labels_total": 11256,
+    "canonical_labels_added_from_previous_checkpoints": 100,
+    "canonical_backlog_total": 1790,
+    "raw_count_method": "(15739-1)*100+63",
+    "unique_count_method": "(3281-1)*100+67",
+    "log_verified": true
+  },
+  "discovery": {
+    "search_queries": 60,
+    "queries_file": "runs/r368_queries.jsonl",
+    "recent_prior_queries_checked": 421,
+    "recent_cycles_checked": "r360-r367",
+    "exact_repeats_in_checked_logs": 0,
+    "all_historical_queries_checked": false,
+    "html_verified_pointers": 26,
+    "checkpoint": "runs/discovery_r368.jsonl",
+    "checkpoint_commit": "f8a39bb4f1fe382c674b7169bb2ce842224af7b0",
+    "recent_discovery_dedup": "r362-r367 checkpoint URL lists inspected; 0 exact/normalized duplicates in these",
+    "canonical_merge": "pending next existing workflow; large canonical sources.jsonl returns empty content through connector",
+    "representative_sources": [
+      "https://www.olaa-astro.org/p/pruebas_3.html",
+      "https://aee.edu.md/content/olimpiade-%C8%99i-concursuri-republicane-2024-probeteste-bareme",
+      "https://geography.mn/olympiad/archive",
+      "https://www.lgeo.chgf.vu.lt/lgeo/uzduotys/",
+      "https://olymp.hse.ru/mmo/tasks-journ"
+    ]
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 99,
+      "archive": 1
+    },
+    "ranges": [
+      "resource_000373.jsonl:35-99",
+      "resource_000374.jsonl:0-34"
+    ],
+    "raw_shards": "batch_000981.jsonl through batch_000993.jsonl",
+    "checkpoints": [
+      "runs/r368_review_r373_374_00_49.jsonl",
+      "runs/r368_review_r373_374_50_99.jsonl"
+    ],
+    "checkpoint_blob_shas": [
+      "8081dcf265ed47084f80bcbe554dac50851108a2",
+      "9f8fc4c9e0f0a63b3badb7174c7d6a7f8cdc1d66"
+    ],
+    "merge_registration_commit": "8d2130609477e4f43314f24929a87e4ce5aac1a8",
+    "cursor": "resource_000374.jsonl:35",
+    "cursor_commit": "864b5ec7837296fb241da502b1023b9a4e88d53d",
+    "canonical_merge": "pending next existing workflow",
+    "context": "Official Czech 2017/18 and 2018/19 HTML identifies final JPEGs as galleries, not problems; results page classified archive. No images downloaded."
+  },
+  "audit": {
+    "new_backlog_entries": 34,
+    "canonical_backlog_total": 1790,
+    "coverage_and_access_findings": 33,
+    "internal_counting_correction": 1,
+    "backlog_commits": [
+      "54ddb5e17ed91869f297c5d94d7c70f4b7dff6b7",
+      "5fd5958d7b854552aa61f0c14b0d0072fe8a6f98"
+    ],
+    "counting_audit": "runs/r368_counting_audit.json",
+    "r367_manifest_correction_commit": "be8a09ec1b7d37719a73632c74211a21f8296670",
+    "notable": [
+      "Lithuanian geomosciences missing V edition in visible task index",
+      "Mongolian 2020/2021 explicitly cancelled rather than missing",
+      "Mongolian 2024 participant results not archived",
+      "Moldovan multi-subject 2024 grading rubrics on cross-host links",
+      "Portuguese chemistry years and OLAA round coverage gaps",
+      "RIFT 1-based shard count correction"
+    ]
+  },
+  "mime": {
+    "resource_observations_sha_before": "8010fabe816f729d6c794371035658d0a01942d4",
+    "resource_observations_sha_after": "1091475747d5aaa444a1c62600737cfe448ee276",
+    "changed": true,
+    "independent_count": "not available; oversized connector fetch empty",
+    "binary_bodies_fetched": 0
+  },
+  "constraints": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_manually_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false,
+    "robots_respected": true,
+    "rights_not_inferred": true
+  },
+  "pending": [
+    "Merge/dedup 26 verified source pointers r368 in next normal workflow",
+    "Merge 100 SHA-pinned r368 semantic labels in next normal workflow",
+    "Resolve historical checkpoint backlog and prior review entries",
+    "Inspect unverified direct HTML 403/timeout/empty pointers without bypass",
+    "Independent MIME observation count unavailable from oversized GitHub connector read"
+  ]
+}
