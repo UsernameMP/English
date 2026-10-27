@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T16:11:03.056Z",
+  "updated_at": "2026-10-27T17:06:24.078Z",
   "deferred_shards": [
     1,
     2,
@@ -13,12 +13,12 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r369_review_r374_375_00_49.jsonl",
-    "runs/r369_review_r374_375_50_99.jsonl"
+    "runs/r370_review_r375_376_00_49.jsonl",
+    "runs/r370_review_r375_376_50_99.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "r368 100 labels merged in GitHub Actions #40537544387 (workflow success; commit diff +100 link_labels.jsonl). r369 100 labels saved as SHA-pinned checkpoints and registered in merge_review_checkpoints.py; pending next normal workflow.",
-  "canonical_merged_in_cycle": 368,
+  "canonical_merge_status": "GitHub Actions #40546747749 completed success 2026-10-27T17:05:42Z; merge_review_checkpoints.py existing=11356 added=100 total=11456, so r369 merged. r370 100 labels saved as SHA-pinned checkpoints and registered after this workflow; pending next normal workflow.",
+  "canonical_merged_in_cycle": 369,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -157,13 +157,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000375.jsonl",
+    "next_resource_shard": "resource_000376.jsonl",
     "next_row_index": 35,
     "last_completed_shard": "resource_000375.jsonl",
-    "last_completed_cycle": "r369-20261027T160552649Z",
-    "cycle": "r369-20261027T160552649Z",
-    "reason": "100 unique resources: resource_000374 rows35–99 and resource_000375 rows0–34; 100 raw occurrences in batch_000982–000984; official 2016/17 and 2017/18 Czech organizer HTML explicitly describes 94 JPEGs as final event photo galleries; one historical results archive; 5 other news/organization pages; no binaries downloaded.",
-    "skip_already_reviewed": "resource_000375.jsonl rows0–34 complete; resume row35"
+    "last_completed_cycle": "r370-20261027T170214450Z",
+    "cycle": "r370-20261027T170214450Z",
+    "reason": "100 unique resource IDs: resource_000375 rows35–99 and resource_000376 rows0–34, 100 raw occurrences in batch_000984–000985; official Czech 2016/17 HTML identifies 95 Finale/Soustredeni JPEGs as photos and five non-task news/statistics pages; no binary downloaded.",
+    "skip_already_reviewed": "resource_000376.jsonl rows0–34 complete; resume row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -3687,6 +3687,31 @@
     "checkpoint_shas": [
       "1dc785ab3124551202081116d09e35bb3a9584d6",
       "d203ee0b9e11b8011d2e2abcf3f10c2169bd30d0"
+    ],
+    "canonical_merged": 100
+  },
+  "r370_pending": {
+    "cycle": "r370-20261027T170214450Z",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 100
+    },
+    "resource_ranges": [
+      "resource_000375.jsonl:35-99",
+      "resource_000376.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000984.jsonl",
+      "batch_000985.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r370_review_r375_376_00_49.jsonl",
+      "runs/r370_review_r375_376_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "3dd88bbfb0a15097e01ac0e9eec6d50593c47a31",
+      "4c6d56a661296ec02f5f51cb8bf243c964aff2ff"
     ],
     "canonical_merged": 0
   }
