@@ -17,7 +17,7 @@ Independent, resumable archive importer for existing `source_discovery/resources
 ```bash
 git clone https://github.com/UsernameMP/English.git
 cd English
-git checkout feature/rift-downloader-mvp
+git checkout rift-source-index
 python3 -m venv .venv
 . .venv/bin/activate
 pip install -r rift_downloader/requirements.txt
