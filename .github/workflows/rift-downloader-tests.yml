@@ -26,3 +26,7 @@ jobs:
         run: |
           python -m compileall -q rift_downloader
           python -m unittest discover -s rift_downloader/tests -v
+      - name: Offline import and count existing RIFT resource shards
+        run: |
+          python -m rift_downloader.cli --db /tmp/rift_pilot_smoke.sqlite3 import 'source_discovery/resources_shards/resource_*.jsonl'
+          python -m rift_downloader.cli --db /tmp/rift_pilot_smoke.sqlite3 status
