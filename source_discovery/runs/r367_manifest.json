@@ -13,8 +13,17 @@
     "commit": "0481dc8cd6c95480512e5d1f578fb534a346b793",
     "workflow_run_id": 40517518060,
     "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40517518060",
-    "last_checked_status": "queued",
-    "conclusion": null
+    "last_checked_status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-27T14:11:13Z",
+    "jobs": {
+      "regression": "success",
+      "merge_sources": "success",
+      "merge_review": "success",
+      "enumeration": "success",
+      "resource_index": "success",
+      "persist": "success"
+    }
   },
   "baseline": {
     "from_cycle": "r366",
@@ -95,7 +104,9 @@
   "mime": {
     "resource_observations_sha_before": "d354d8e48f85be3d23e4be48ac13a700b75bae7e",
     "independent_count": "not available: oversized GitHub connector read returns empty",
-    "extensionless_pdf_evidence": "Czech organizer /f/detail/ labels application/pdf; no body fetched"
+    "extensionless_pdf_evidence": "Czech organizer /f/detail/ labels application/pdf; no body fetched",
+    "resource_observations_sha_after": "8010fabe816f729d6c794371035658d0a01942d4",
+    "observations_changed": true
   },
   "constraints": {
     "binary_downloads": 0,
@@ -105,11 +116,26 @@
     "extra_automation_created": false
   },
   "pending": [
-    "RIFT Actions run 40517518060 queued, no success claim",
     "Canonical dedup/merge of 9 source pointers",
     "Canonical merge of 100 labels r367",
     "14 review resources need target confirmation or context",
     "Historic checkpoints unresolved",
-    "HTML queue/errors unavailable until fresh crawl_state"
-  ]
+    "HTML queue/errors unavailable until fresh crawl_state",
+    "r367 trigger workflow succeeded, but 9 r367 discovery pointers and 100 r367 labels remain in checkpoints until next normal workflow; current workflow checkout preceded these checkpoints."
+  ],
+  "crawler": {
+    "raw_occurrences_total": 1571550,
+    "raw_occurrences_added": 3569,
+    "raw_count_method": "last raw shard batch_015715.jsonl 50 records; preceding complete 100-record shards",
+    "unique_resource_urls_total": 327989,
+    "unique_resource_urls_added": 268,
+    "unique_count_method": "last resource shard resource_003279.jsonl 89 records; preceding complete 100-record shards",
+    "canonical_sources_sha": "a204937868c7bc952ac07de612e42897a49f3b6d",
+    "canonical_labels_sha": "61f8a8e14493057b8b13816fc998a6c8a94c6226",
+    "canonical_source_and_label_counts": "oversized connector reads empty; SHA changed and merge steps succeeded, exact row counts not independently verified",
+    "html_queue_length": "unavailable from oversized crawl_state",
+    "errors_and_blockers": "unavailable from oversized crawl_state",
+    "crawl_state_sha": "c198bff489586396604d49b0c92cea1f517dd35a",
+    "resource_observations_sha": "8010fabe816f729d6c794371035658d0a01942d4"
+  }
 }
