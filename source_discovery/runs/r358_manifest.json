@@ -1,0 +1,81 @@
+{
+  "cycle": "r358-20261027T050156921Z",
+  "date": "2026-10-27",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "trigger": {
+    "commit": "3b63542cd56194e1343893fe5604e2e813287a63",
+    "workflow_run_id": 40453001081,
+    "url": "https://github.com/UsernameMP/English/actions/runs/40453001081",
+    "status_at_checkpoint": "in_progress"
+  },
+  "discovery": {
+    "queries_logged": 58,
+    "verified_or_search_indexed_pointers_checkpointed": 22,
+    "files": [
+      "runs/discovery_r358.jsonl",
+      "runs/discovery_r358_supplemental.jsonl",
+      "runs/r358_queries.jsonl",
+      "runs/r358_queries_supplemental.jsonl"
+    ],
+    "canonical_source_merge": "pending next existing workflow; oversized sources.jsonl unreadable through connector"
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "types": {
+      "task": 77,
+      "criteria": 17,
+      "solution": 5,
+      "source": 1
+    },
+    "checkpoint": "runs/r358_review_r363_364.jsonl",
+    "checkpoint_blob_sha": "72d0642210d37e57405c92c5799d03eddd1f4475",
+    "registered_in": "merge_review_checkpoints.py",
+    "canonical_merged": false,
+    "next_cursor": {
+      "shard": "resource_000364.jsonl",
+      "row": 35
+    },
+    "raw_shards": [
+      "batch_000965.jsonl",
+      "batch_000966.jsonl"
+    ],
+    "parent": "https://mos-law.olimpiada.ru/tasks"
+  },
+  "audit": {
+    "findings": 32,
+    "files": [
+      "runs/r358_audit.jsonl",
+      "runs/r358_audit_supplemental.jsonl"
+    ],
+    "canonical_backlog_before": 1487,
+    "canonical_backlog_after": 1519,
+    "commit": "672dbfb4ddc4a334055d2e877148e3c95cf5751f"
+  },
+  "crawler": {
+    "last_confirmed_r357": {
+      "raw_occurrences": 1511966,
+      "unique_urls": 317197,
+      "pending_html": 142443,
+      "blocked_or_failed_cumulative": 3557,
+      "canonical_sources": 2156,
+      "canonical_labels": 10156
+    },
+    "r358_final": "pending workflow completion"
+  },
+  "constraints": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_workflow_instances": 0
+  },
+  "unresolved": [
+    "r358 workflow in progress at manifest creation; final metrics and status pending.",
+    "22 candidate source pointers require normalized dedup and merge.",
+    "100 r358 review labels await canonical merge by existing workflow.",
+    "MIME and crawl_state files too large for independent connector content reads.",
+    "Historical label checkpoints still need separate reconciliation."
+  ]
+}
