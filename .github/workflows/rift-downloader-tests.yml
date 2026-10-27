@@ -1,0 +1,32 @@
+name: RIFT Downloader Unit Tests
+on:
+  push:
+    branches: [feature/rift-downloader-mvp, rift-source-index]
+    paths:
+      - 'rift_downloader/**'
+      - '.github/workflows/rift-downloader-tests.yml'
+  pull_request:
+    paths:
+      - 'rift_downloader/**'
+      - '.github/workflows/rift-downloader-tests.yml'
+permissions:
+  contents: read
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install minimal dependencies
+        run: python -m pip install 'requests>=2.31,<3'
+      - name: Compile and test without external HTTP / Drive
+        run: |
+          python -m compileall -q rift_downloader
+          python -m unittest discover -s rift_downloader/tests -v
+      - name: Offline import and count existing RIFT resource shards
+        run: |
+          python -m rift_downloader.cli --db /tmp/rift_pilot_smoke.sqlite3 import 'source_discovery/resources_shards/resource_*.jsonl'
+          python -m rift_downloader.cli --db /tmp/rift_pilot_smoke.sqlite3 status
