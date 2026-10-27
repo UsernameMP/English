@@ -1,0 +1,143 @@
+{
+  "cycle": "r372-20261027T185929755Z",
+  "created_at": "2026-10-27T19:06:55.299Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "scope": "URL and HTML metadata only; no binary downloads; no Dropbox changes",
+  "trigger": {
+    "requested_at": "2026-10-27T18:59:29.755Z",
+    "commit": "f548118bb9c7b6a46c98ea5a94903663b5c65736",
+    "workflow_run_id": 40565036722,
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40565036722",
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-27T19:04:38Z",
+    "tests_passed": 22,
+    "steps": {
+      "merge_sources": "success",
+      "merge_review": "success",
+      "enumeration": "success",
+      "resource_index": "success",
+      "persist": "success"
+    },
+    "persist_note": "Workflow rebase/push completed successfully; raw last shard and resource last shard independently checked."
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_occurrences": 8031,
+    "raw_occurrences_total": 1595783,
+    "raw_last_shard": "batch_015958.jsonl",
+    "raw_last_shard_rows": 83,
+    "unique_resource_urls_total": 332292,
+    "unique_last_shard": "resource_003323.jsonl",
+    "unique_last_shard_rows": 92,
+    "pending_html_pages": 148865,
+    "blocked_or_failed": 3776,
+    "canonical_sources_total": 2233,
+    "canonical_sources_added_by_workflow": 1,
+    "canonical_labels_total": 11656,
+    "canonical_labels_added_by_workflow": 100,
+    "canonical_labels_merged_from_cycle": 371,
+    "canonical_backlog_total_after_manual_audit": 1893,
+    "mime_observations_sha_changed": true,
+    "mime_observations_current_sha": "f1303416f40235b7f1ac1983325aaee3b2d61230",
+    "mime_observations_count": "not independently counted"
+  },
+  "discovery": {
+    "queries_executed": 60,
+    "queries_checkpoint": "runs/r372_queries.jsonl",
+    "queries_sha": "fe8762cb1f733b961d08ebe04d88cf272e4cd3ce",
+    "available_previous_queries_checked": 845,
+    "previous_query_logs_unavailable": [
+      "r350",
+      "r351",
+      "r352",
+      "r353",
+      "r354",
+      "r355",
+      "r357"
+    ],
+    "exact_repeats_in_available_logs": 0,
+    "all_historical_checked": false,
+    "html_pointers_total": 15,
+    "direct_html_inspected": 9,
+    "search_indexed_html_need_live_recheck": 6,
+    "checkpoint": "runs/discovery_r372.jsonl",
+    "checkpoint_sha": "0599433ccd9073d7f89a92f205503fac44d9eaa1",
+    "canonical_uniqueness": "pending next merge_sources.py; canonical sources.jsonl too large to read via connector",
+    "notable": [
+      "Latvian state multi-subject 2017-2020 compilations",
+      "Cyprus chemistry and IJSO past papers",
+      "Croatian biology state/county stage",
+      "Algerian Summer Math Camp 2025 three research selection rounds",
+      "OzCLO linguistics 2008-2026",
+      "Victorian Young Physicists Tournament 2011",
+      "ITYM research problems 2009-2025 and quizzes",
+      "Romanian astronomy county junior/senior marking schemes",
+      "Polish economics central round",
+      "IYNT Belgrade 2015 historical mirrors"
+    ]
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 51,
+      "task": 6,
+      "source": 1,
+      "solution": 39,
+      "review": 3
+    },
+    "resource_ranges": [
+      "resource_000377.jsonl:35-99",
+      "resource_000378.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000986.jsonl",
+      "batch_000987.jsonl",
+      "batch_000988.jsonl",
+      "batch_000989.jsonl",
+      "batch_000990.jsonl",
+      "batch_000991.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r372_review_r377_378_00_49.jsonl",
+      "runs/r372_review_r377_378_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "c9504f3b4286177a20076ba195124b8b1cd90177",
+      "30e9c8f84b09876063a8f065e91bd2fc32f36b6a"
+    ],
+    "registered_in_merge_review_checkpoints_py": true,
+    "review_state_updated": true,
+    "canonical_merge": "pending next normal workflow",
+    "next_cursor": "resource_000378.jsonl:35",
+    "uncertain_count": 3,
+    "basis": "Official KöMaL 2013 monthly HTML plus raw anchor/heading/source contexts; Czech astronomy 2015/16 gallery evidence; binary bodies not fetched."
+  },
+  "audit": {
+    "findings": 19,
+    "canonical_backlog_appended": 19,
+    "checkpoint": "runs/r372_audit.jsonl",
+    "checkpoint_sha": "afb41848e566df5237b60af373f4737cae48377f",
+    "canonical_backlog_total": 1893,
+    "commit": "83c3a8f747b39e1adc4ca0c981a3467876accbf4",
+    "notable": [
+      "Cyprus chemistry missing visible years",
+      "OzCLO 2025 missing from index and older solution gaps",
+      "Latvian 2021+ course access",
+      "ITYM historical Google Drive links and quiz coverage",
+      "IYNT 2015 rate-limited 429 and historical snapshots",
+      "KöMaL 3 statistics-only resources retained review"
+    ]
+  },
+  "pending": [
+    "15 discovery pointers await canonical dedup/merge; 6 require direct HTML recheck",
+    "100 reviewed labels await next workflow merge",
+    "3 KöMaL statistics-only resources remain review",
+    "Historical checkpoint reconciliation and incomplete source coverage",
+    "MIME observation count not independently verified",
+    "No PDF/DOC/ZIP/image/archive bodies downloaded",
+    "No schedule change or new automation instance"
+  ]
+}
