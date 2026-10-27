@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T06:09:18.397Z",
+  "updated_at": "2026-10-27T06:13:09.680Z",
   "deferred_shards": [
     1,
     2,
@@ -13,13 +13,12 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r358_review_r363_364.jsonl",
     "runs/r359_review_r364_365_00_49.jsonl",
     "runs/r359_review_r364_365_50_99.jsonl"
   ],
-  "pending_labels_count": 200,
-  "canonical_merge_status": "r359: 100 unique-resource labels SHA-pinned in two checkpoints, registered for next existing workflow; r358 status must be verified from workflow logs. Historical checkpoints require separate reconciliation.",
-  "canonical_merged_in_cycle": 357,
+  "pending_labels_count": 100,
+  "canonical_merge_status": "RIFT Link Enumeration #40459139957 completed successfully; 100 r358 labels merged into canonical link_labels.jsonl (10256→10356). r359: 100 unique-resource labels SHA-pinned in two registered checkpoints, pending next existing workflow. Historical checkpoints require separate reconciliation.",
+  "canonical_merged_in_cycle": 358,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
