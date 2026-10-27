@@ -1,0 +1,137 @@
+{
+  "cycle": "r363-20261027T095959600Z",
+  "date": "2026-10-27",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "requested_at": "2026-10-27T09:59:59.600Z",
+    "commit": "1439fdb5572544a77b1b4ce3f4fdd0c889dd42bb",
+    "content_sha": "2e4614e318347a9a5692c9361c0a28a0c852cda6",
+    "workflow": "RIFT Link Enumeration",
+    "run_id": 40485064123,
+    "conclusion": "success",
+    "job_conclusion": "success",
+    "tests_passed": 22,
+    "critical_caveat": "Review merge step failed but workflow remained success due continue-on-error"
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_occurrences": 5461,
+    "raw_occurrences_total": 1553581,
+    "raw_count_basis": "batch_015535.jsonl 81 rows, batch_015536 absent",
+    "unique_resource_urls": 326388,
+    "prior_unique_resource_urls": 325693,
+    "unique_resource_delta": 695,
+    "pending_html_pages": 145987,
+    "blocked_or_failed": 3658,
+    "canonical_sources": 2190,
+    "canonical_sources_added_from_r362": 6,
+    "canonical_labels": 10656,
+    "canonical_labels_added": 0,
+    "crawl_state_sha": "9ad568d5638eff6c7c0a8aa97e69d311f58228f3",
+    "sources_sha": "17a72d2082133bdd5118295899fbf94db04e0e26",
+    "labels_sha": "9f95d38bf159f0590808530233885c077aadf7ac",
+    "workflow_checkpoint_commit": "de0bdb0929ac"
+  },
+  "discovery": {
+    "queries_executed": 48,
+    "query_checkpoint": "runs/r363_queries.jsonl",
+    "query_sha": "e06725a9ff6d0545475b26f4d0bd9a9c34a751bb",
+    "prior_query_logs_checked": 307,
+    "exact_repeats_in_available_logs": 0,
+    "all_historical_queries_checked": false,
+    "verified_html_pointers": 26,
+    "verified_checkpoint": "runs/discovery_r363.jsonl",
+    "verified_checkpoint_sha": "65cd4a25e233e1590ec05c7fb297d48cc011053d",
+    "canonical_uniqueness": "pending merge_sources.py; oversized sources.jsonl could not be safely read/replaced",
+    "canonical_merge_completed": false,
+    "unverified_followups": 7,
+    "unverified_checkpoint": "runs/r363_unverified_pointers.jsonl",
+    "unverified_checkpoint_sha": "c931749c4ad714a06f444cf85862952a6bc31863",
+    "geographies": [
+      "AM",
+      "MX",
+      "BR",
+      "CO",
+      "UY",
+      "GR",
+      "ES",
+      "RU",
+      "GLOBAL"
+    ]
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "resource_ranges": [
+      "resource_000368.jsonl:35-99",
+      "resource_000369.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000969.jsonl",
+      "batch_000970.jsonl",
+      "batch_000971.jsonl",
+      "batch_000972.jsonl",
+      "batch_000973.jsonl"
+    ],
+    "counts": {
+      "archive": 8,
+      "solution": 8,
+      "unrelated": 84
+    },
+    "checkpoints": [
+      "runs/r363_review_r368_369_00_49.jsonl",
+      "runs/r363_review_r368_369_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "afb38d47450bf96bae0230fb2531810c482ab446",
+      "6b640648bd9daae511b0cedbb4c08d24b1a1a073"
+    ],
+    "merge_script_sha": "250dc9cc3f552c51527afea2ffab285bf245ace7",
+    "canonical_merged": 0,
+    "pending_from_r362": 100,
+    "pending_from_r363": 100,
+    "merge_failure": "r362_review_r367_368_00_49.jsonl: expected 100 records, got 50",
+    "fix_commit": "13efb4d3c0daad10c042698f74b59368026071fb",
+    "fix_status": "EXPECTED_ROWS corrected for r362 and r363 split checkpoints; not yet tested by next existing workflow",
+    "next_cursor": {
+      "shard": "resource_000369.jsonl",
+      "row": 35
+    },
+    "method": "Unique resource_id, original raw occurrences and official Czech astronomy/Japanese linguistics organizer HTML; JPEG final galleries classified unrelated without downloading images"
+  },
+  "audit": {
+    "findings": 25,
+    "unverified_leads": 7,
+    "canonical_backlog_added": 32,
+    "canonical_backlog_total": 1635,
+    "backlog_sha": "8d68bd123f853606b26980abc708b8ce87a7b49b",
+    "checkpoint": "runs/r363_audit.jsonl",
+    "checkpoint_sha": "358f1d4072af0af59787ecf87e88fb1c848b94a0"
+  },
+  "mime": {
+    "observations_sha": "be8e492e6cd0fb9d6f828bb4b31d36319d38fd99",
+    "changed_from_r362": true,
+    "independent_count": "not obtainable through oversized file connector",
+    "rule": "non-HTML MIME observations are not crawler errors; extensionless PDF may be candidate, not confirmed task; no binary bodies fetched"
+  },
+  "constraints": {
+    "binary_documents_downloaded": 0,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "additional_automation_instances_created": 0
+  },
+  "unresolved": [
+    "Canonical merge of 26 r363 verified pointers pending existing workflow normalized dedup.",
+    "Canonical labels 10656 unchanged because Review merge step failed; 100 r362 and 100 r363 labels checkpointed and pending next existing workflow.",
+    "EXPECTED_ROWS split-checkpoint validation fixed in commit 13efb4d3; not yet verified by workflow.",
+    "Historical checkpoint reconciliation remains open.",
+    "MIME observations changed by crawler but cannot independently count from oversized file; do not infer task usability from MIME.",
+    "Access-limited and incomplete archives remain backlog, no exhaustion asserted."
+  ]
+}
