@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T07:05:21.732Z",
+  "updated_at": "2026-10-27T07:12:11.031Z",
   "deferred_shards": [
     1,
     2,
@@ -13,14 +13,12 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r359_review_r364_365_00_49.jsonl",
-    "runs/r359_review_r364_365_50_99.jsonl",
     "runs/r360_review_r365_366_00_49.jsonl",
     "runs/r360_review_r365_366_50_99.jsonl"
   ],
-  "pending_labels_count": 200,
-  "canonical_merge_status": "r360: 100 unique-resource labels SHA-pinned in two checkpoints and allowlisted in merge_review_checkpoints.py; canonical merge not independently confirmed. r359 pending state retained until workflow result verified. Historical checkpoints require reconciliation.",
-  "canonical_merged_in_cycle": 358,
+  "pending_labels_count": 100,
+  "canonical_merge_status": "r360 trigger's existing RIFT crawler persisted state at 2026-10-27T07:06:49Z; canonical link_labels grew 10356→10456, merging 100 r359 labels. r360 100 labels remain SHA-pinned in two allowlisted checkpoints, not yet merged at this verification. Historical checkpoints remain separately unresolved.",
+  "canonical_merged_in_cycle": 359,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -2829,8 +2827,8 @@
     "uncertain_resources": 1,
     "raw_unchanged": true
   },
-  "canonical_labels_confirmed": 9256,
-  "canonical_labels_verified_at": "2026-10-26T18:16:35.873Z",
+  "canonical_labels_confirmed": 10456,
+  "canonical_labels_verified_at": "2026-10-27T07:12:11.031Z",
   "r341_pending": {
     "cycle": "r341-20261026T120508689Z",
     "resource_ranges": [
@@ -3338,14 +3336,15 @@
       "runs/r359_review_r364_365_00_49.jsonl",
       "runs/r359_review_r364_365_50_99.jsonl"
     ],
-    "canonical_merged": 0,
+    "canonical_merged": 100,
     "raw_shards": [
       "batch_000966.jsonl",
       "batch_000967.jsonl",
       "batch_000968.jsonl"
     ],
     "next_operational_shard": "resource_000365.jsonl",
-    "next_row_index": 35
+    "next_row_index": 35,
+    "canonical_merge_verified_at": "2026-10-27T07:12:11.031Z"
   },
   "r360_pending": {
     "cycle": "r360-20261027T070210912Z",
