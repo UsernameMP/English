@@ -27,7 +27,7 @@
   "discovery": {
     "search_queries": 60,
     "queries_file": "runs/r367_queries.jsonl",
-    "verified_html_pointers": 21,
+    "verified_html_pointers": 9,
     "checkpoint": "runs/discovery_r367.jsonl",
     "canonical_merge": "pending",
     "direct_sources_write": "blocked: canonical sources.jsonl returned empty content on full/ranged fetch despite nonempty blob SHA; safe checkpoint via merge_sources.py",
@@ -45,10 +45,13 @@
       "all_historical_queries_checked": false
     },
     "checked_recent_discovery_cycles": "r360–r366",
-    "recent_duplicate_pointers_removed": 3,
+    "recent_duplicate_pointers_removed": 15,
     "recent_discovery_urls_not_seen": 21,
-    "canonical_uniqueness": "not independently provable against full oversized sources.jsonl; merge_sources.py will deduplicate",
-    "checkpoint_cleanup_commit": "39c587f7e5ae27a4987f4d7c225f1ef857411177"
+    "canonical_uniqueness": "9 pointers not present in inspected discovery checkpoint files; full canonical sources.jsonl still unreadable, final merge dedup pending",
+    "checkpoint_cleanup_commit": "3d07a6f4d154f152405462d99b44858b31fe4ca3",
+    "html_verified_candidates_before_dedup": 24,
+    "checked_historical_discovery_cycles": "r270–r366 (available discovery files; some missing)",
+    "historical_discovery_urls_not_seen": 9
   },
   "review": {
     "unique_resources": 100,
@@ -103,7 +106,7 @@
   },
   "pending": [
     "RIFT Actions run 40517518060 queued, no success claim",
-    "Canonical dedup/merge of 21 source pointers",
+    "Canonical dedup/merge of 9 source pointers",
     "Canonical merge of 100 labels r367",
     "14 review resources need target confirmation or context",
     "Historic checkpoints unresolved",
