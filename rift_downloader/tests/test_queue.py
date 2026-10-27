@@ -1,7 +1,7 @@
 import tempfile
 import unittest
 from pathlib import Path
-from rift_downloader.db import connect, import_resources, claim, recover, stats
+from rift_downloader.db import connect, import_resources, claim, recover, summary
 
 class QueueTests(unittest.TestCase):
     def test_import_deduplicates_and_recovers(self):
@@ -12,7 +12,7 @@ class QueueTests(unittest.TestCase):
             self.assertEqual(claim(db)["resource_id"],"r1")
             self.assertIsNone(claim(db))
             self.assertEqual(recover(db)['requeued'],1)
-            self.assertEqual(stats(db),{"pending":1})
+            self.assertEqual(summary(db)["resource_statuses"],{"pending":1})
             db.close()
             reopened = connect(Path(directory)/"queue.db")
             self.assertEqual(claim(reopened)["resource_id"],"r1")
