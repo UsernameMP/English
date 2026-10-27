@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T12:05:16.038Z",
+  "updated_at": "2026-10-27T13:07:06.266Z",
   "deferred_shards": [
     1,
     2,
@@ -14,9 +14,11 @@
   ],
   "pending_label_checkpoints": [
     "runs/r365_review_r370_371_00_49.jsonl",
-    "runs/r365_review_r370_371_50_99.jsonl"
+    "runs/r365_review_r370_371_50_99.jsonl",
+    "runs/r366_review_r371_372_00_49.jsonl",
+    "runs/r366_review_r371_372_50_99.jsonl"
   ],
-  "pending_labels_count": 100,
+  "pending_labels_count": 200,
   "canonical_merge_status": "r365 GitHub Actions run 40500544151 completed success at 2026-10-27T12:04:52Z; review merge existing=10856 added=100 total=10956, merging r364. r365 100 labels SHA-pinned after workflow checkout and registered for next existing workflow; historical unresolved checkpoints remain separate.",
   "canonical_merged_in_cycle": 364,
   "noncontiguous_review": {
@@ -157,13 +159,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000371.jsonl",
+    "next_resource_shard": "resource_000372.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000370.jsonl",
-    "last_completed_cycle": "r365-20261027T120127298Z",
-    "cycle": "r365-20261027T120127298Z",
-    "reason": "100 unique resources semantically classified: resource_000370 rows35-99 and resource_000371 rows0-34; raw occurrences checked in batch_000974 through batch_000976; Czech Astronomická olympiáda 2023/24–2024/25 PDF solution links, results filters and photo galleries separated.",
-    "skip_already_reviewed": "resource_000371.jsonl rows0-34 complete; resume row35"
+    "last_completed_shard": "resource_000371.jsonl",
+    "last_completed_cycle": "r366-20261027T130241865Z",
+    "cycle": "r366-20261027T130241865Z",
+    "reason": "100 unique resources reviewed: resource_000371 rows35–99 and resource_000372 rows0–34; original occurrences checked in batch_000975 through batch_000978; 18 solutions, 1 student poster, 1 ambiguous auxiliary data link, 80 unrelated.",
+    "skip_already_reviewed": "resource_000372.jsonl rows0–34 complete; resume row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -3574,5 +3576,43 @@
     "added": 100,
     "total": 10956,
     "verified_at": "2026-10-27T12:05:16.038Z"
+  },
+  "r366_review": {
+    "cycle": "r366-20261027T130241865Z",
+    "unique_resources": 100,
+    "raw_occurrences_in_inspected_shards": 101,
+    "counts": {
+      "solution": 18,
+      "participant_work": 1,
+      "review": 1,
+      "unrelated": 80
+    },
+    "ranges": [
+      "resource_000371.jsonl:35-99",
+      "resource_000372.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000975.jsonl",
+      "batch_000976.jsonl",
+      "batch_000977.jsonl",
+      "batch_000978.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r366_review_r371_372_00_49.jsonl",
+      "runs/r366_review_r371_372_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "ae590ede2091b36b49e0ed9af0d54486341019d3",
+      "a2fe806d04d9257bd2048428b5d4105d68cc9000"
+    ],
+    "registered_for_merge": true,
+    "canonical_merge_completed": false,
+    "canonical_merge_pending": 100,
+    "next_cursor": {
+      "shard": "resource_000372.jsonl",
+      "row_index": 35
+    },
+    "review_basis": "Unique resource IDs; raw occurrence context and organizer HTML. Binary bodies not fetched.",
+    "r365_merge_note": "r366 workflow merge step succeeded but workflow persist not yet confirmed at checkpoint time"
   }
 }
