@@ -1,0 +1,129 @@
+{
+  "cycle": "r365-20261027T120127298Z",
+  "date": "2026-10-27",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "requested_at": "2026-10-27T12:01:27.298Z",
+    "commit": "6f8afa271353ff3d0e34199bee368ca6ceb60d14",
+    "run_id": 40500544151,
+    "workflow": "RIFT Link Enumeration",
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-27T12:04:52Z",
+    "tests_passed": 22,
+    "review_merge_step": "success",
+    "canonical_review_merge": {
+      "existing": 10856,
+      "added": 100,
+      "total": 10956
+    },
+    "canonical_source_merge": {
+      "total": 2202,
+      "added": 1
+    }
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_occurrences": 2659,
+    "raw_occurrences_total": 1563351,
+    "raw_count_basis": "15633 complete 100-row shards plus batch_015633.jsonl with 51 rows",
+    "unique_resource_urls": 327125,
+    "pending_html_pages": 146118,
+    "blocked_or_failed": 3676,
+    "resource_shards_changed": 6,
+    "canonical_sources": 2202,
+    "canonical_labels": 10956,
+    "notes": "blocked_or_failed is not equivalent to robots.txt denials; no binary response bodies fetched"
+  },
+  "discovery": {
+    "queries_executed": 40,
+    "prior_logs_checked": [
+      "r359",
+      "r360",
+      "r361",
+      "r362",
+      "r363",
+      "r364"
+    ],
+    "prior_queries_checked": 315,
+    "exact_query_repeats": 0,
+    "all_historical_queries_checked": false,
+    "query_checkpoint": "runs/r365_queries.jsonl",
+    "query_sha": "0db524deacbde366a8f8c54bff90bc8be5db98c6",
+    "verified_html_pointers": 20,
+    "verified_checkpoint": "runs/discovery_r365.jsonl",
+    "verified_sha": "c796cf16475f356aa7428859ad623657d10b31a8",
+    "canonical_dedup": "pending merge_sources.py next existing workflow; oversized sources.jsonl unreadable through connector",
+    "unverified_leads": 6,
+    "unverified_checkpoint": "runs/r365_unverified_pointers.jsonl",
+    "unverified_sha": "c7de0d50505c52b3f5943a5e35174498b9fe411e"
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "solution": 14,
+      "unrelated": 86
+    },
+    "ranges": [
+      "resource_000370.jsonl:35-99",
+      "resource_000371.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000974.jsonl",
+      "batch_000975.jsonl",
+      "batch_000976.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r365_review_r370_371_00_49.jsonl",
+      "runs/r365_review_r370_371_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "fbece57aacd76443a6b760fe0e76d6a74f9fb013",
+      "a6e8ace7826bd281d8ff28bec589107e8cc4231e"
+    ],
+    "registered_for_merge": true,
+    "canonical_merge_completed": false,
+    "canonical_merge_pending": 100,
+    "next_cursor": {
+      "shard": "resource_000371.jsonl",
+      "row_index": 35
+    },
+    "review_state_sha": "c51b46946c89028b11d41b9c5bc05a3bf8b8eb83",
+    "method": "unique resource IDs checked against raw occurrence metadata and Czech organizer HTML context; no image or PDF bodies downloaded"
+  },
+  "audit": {
+    "findings": 22,
+    "unverified_leads": 6,
+    "canonical_backlog_added": 28,
+    "canonical_backlog_total": 1688,
+    "checkpoint": "runs/r365_audit.jsonl",
+    "checkpoint_sha": "1452fe702e7cdef834dca893708fbcbebc716f60",
+    "canonical_backlog_sha": "bcc608a73f9340d7331dcf774dd793cdc4754da0"
+  },
+  "mime": {
+    "observations_sha": "d354d8e48f85be3d23e4be48ac13a700b75bae7e",
+    "independent_count": "not computed: large journal unreadable through GitHub connector",
+    "rule": "non-HTML MIME not crawler error; application/pdf for extensionless /f/detail/ supported by HTML anchor but no PDF body fetched"
+  },
+  "safeguards": {
+    "binary_downloads": false,
+    "dropbox_mutated": false,
+    "raw_occurrences_deleted": false,
+    "schedule_modified": false,
+    "extra_workflow_runs_created": false,
+    "rights_unknown_until_proven": true
+  },
+  "unresolved": [
+    "20 discovery pointers require canonical normalized dedup/merge next existing workflow",
+    "100 r365 reviewed labels registered after workflow checkout; merge next existing workflow",
+    "historical unregistered review checkpoints remain unresolved",
+    "independent MIME observation count unavailable",
+    "coverage gaps are not proof of source exhaustion"
+  ]
+}
