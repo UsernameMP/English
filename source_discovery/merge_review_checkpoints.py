@@ -13,6 +13,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 TARGET = ROOT / "link_labels.jsonl"
 CHECKPOINTS = {
+    "r363_review_r368_369_00_49.jsonl": "afb38d47450bf96bae0230fb2531810c482ab446",
+    "r363_review_r368_369_50_99.jsonl": "6b640648bd9daae511b0cedbb4c08d24b1a1a073",
     "r362_review_r367_368_00_49.jsonl": "273e002b64ea58fa82dfe8a7dc22a424e2b0933b",
     "r362_review_r367_368_50_99.jsonl": "f86ff3bb074b33261e202e90e4932c97e10b1a63",
     "r361_review_r366_367_00_49.jsonl": "4f5cf2d3ff355c98c129268e579b8dd40260696f",
