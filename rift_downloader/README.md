@@ -9,6 +9,7 @@ Independent, resumable archive importer for existing `source_discovery/resources
 - Per-domain minimum 10 seconds (robots.txt fetch counts); respects robots directives/crawl delay, Retry-After and backoff after 429/5xx. No logins, proxy rotation, bypasses or flooding.
 - URL/redirect screening rejects non-public IPs and non-HTTP(S) targets. DNS checked before connection. DNS pinning/TOCTOU rebinding protection is **not** implemented: deploy in a restricted egress environment for untrusted URLs.
 - MIME evidence from headers/extensions/file signatures. HTML pages are deferred without storing their body. Preserves PDFs, Office, ZIP/RAR/7z, TEX and other documents as original bytes; does not extract/classify contents.
+- SQLite online backup snapshots of the URL-to-Drive index are uploaded to `RIFT/index` every 25 newly verified files and again when stopping if newer entries exist. Every snapshot is SHA-256 addressed, remotely checked via size/MD5 and recorded as an index event; failure halts the pilot rather than continuing without a recoverable index.
 - Content-addressed SHA-256 with Google Drive `appProperties.rift_sha256` supports deduplication after upload/DB crash. Confirms Drive size and MD5 metadata before deleting the staged file.
 - Pilot hard cap: 200 **unique verified Drive objects**, not 200 inspected URLs. `--max-checks` also limits HTTP attempts.
 
@@ -47,7 +48,7 @@ python -m rift_downloader.cli --db state/rift.sqlite3 run --token /private/googl
 python -m rift_downloader.cli --db state/rift.sqlite3 run \
     --token /private/google_token.json --spool state/spool \
     --limit-success 200 --max-checks 3000 \
-    --min-delay 10 --max-file-mb 100 --spool-max-gb 10
+    --min-delay 10 --max-file-mb 100 --spool-max-gb 10 --backup-every 25
 python -m rift_downloader.cli --db state/rift.sqlite3 export-report --output state/pilot_report.json
 ```
 
@@ -58,7 +59,7 @@ python -m rift_downloader.cli --db state/rift.sqlite3 recover
 python -m rift_downloader.cli --db state/rift.sqlite3 status
 ```
 
-The database contains HTTP attempts, wait timings, source URLs and Drive IDs; JSON report summarizes MIME, errors, codes, bytes and top domains. Upload failures leave staged original bytes on VPS and stop processing to prevent buffer exhaustion. Re-running `run` retries the staged upload, checking the remote hash before recreating it.
+The database contains HTTP attempts, wait timings, source URLs and Drive IDs; JSON report summarizes MIME, errors, codes, bytes and top domains. Upload failures leave staged original bytes on VPS and stop processing to prevent buffer exhaustion. Google Drive contains content-addressed `RIFT/raw/xx` files as well as consistent `RIFT/index` SQLite snapshots, avoiding VPS-only index dependence. Re-running `run` retries the staged upload, checking the remote hash before recreating it.
 
 ## Operating constraints
 
