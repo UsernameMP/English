@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T13:09:51.899Z",
+  "updated_at": "2026-10-27T14:06:07.453Z",
   "deferred_shards": [
     1,
     2,
@@ -13,12 +13,12 @@
     5
   ],
   "pending_label_checkpoints": [
-    "runs/r366_review_r371_372_00_49.jsonl",
-    "runs/r366_review_r371_372_50_99.jsonl"
+    "runs/r367_review_r372_373_00_49.jsonl",
+    "runs/r367_review_r372_373_50_99.jsonl"
   ],
   "pending_labels_count": 100,
-  "canonical_merge_status": "r365 GitHub Actions run 40500544151 completed success at 2026-10-27T12:04:52Z; review merge existing=10856 added=100 total=10956, merging r364. r365 100 labels SHA-pinned after workflow checkout and registered for next existing workflow; historical unresolved checkpoints remain separate.",
-  "canonical_merged_in_cycle": 364,
+  "canonical_merge_status": "r367 checkpoints 100 SHA-pinned and registered in merge_review_checkpoints.py; canonical merge not yet confirmed. Prior r366 100 labels may merge in the current triggered workflow; historical reconciliation remains separate.",
+  "canonical_merged_in_cycle": 365,
   "noncontiguous_review": {
     "resource_shard": "resource_000413.jsonl",
     "reviewed_row_range": "0-36",
@@ -157,13 +157,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000372.jsonl",
+    "next_resource_shard": "resource_000373.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000371.jsonl",
-    "last_completed_cycle": "r366-20261027T130241865Z",
-    "cycle": "r366-20261027T130241865Z",
-    "reason": "100 unique resources reviewed: resource_000371 rows35–99 and resource_000372 rows0–34; original occurrences checked in batch_000975 through batch_000978; 18 solutions, 1 student poster, 1 ambiguous auxiliary data link, 80 unrelated.",
-    "skip_already_reviewed": "resource_000372.jsonl rows0–34 complete; resume row35"
+    "last_completed_shard": "resource_000372.jsonl",
+    "last_completed_cycle": "r367-20261027T140318842Z",
+    "cycle": "r367-20261027T140318842Z",
+    "reason": "100 unique resource URLs reviewed: resource_000372 rows35-99 and resource_000373 rows0-34; 102 raw occurrences in batch_000975–000983; 29 solutions, 57 unrelated, 14 review; extensionless Czech /f/detail/ PDFs classified from organizer HTML without body downloads.",
+    "skip_already_reviewed": "resource_000373.jsonl rows0–34 complete; resume row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
