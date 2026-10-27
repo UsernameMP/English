@@ -1,0 +1,139 @@
+{
+  "cycle": "r353-20261027T000056114Z",
+  "reported_at": "2026-10-27T00:09:03.707Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z",
+    "verified_from": "GitHub PR API"
+  },
+  "trigger": {
+    "requested_at": "2026-10-27T00:00:56.114Z",
+    "commit": "6501cfccd3d3418b7c85501b42102184aa931489",
+    "blob_sha": "8df3049f5d5f8ea4998fdcb35874bc8454777c95",
+    "count": 1
+  },
+  "workflow": {
+    "run_id": 40423617952,
+    "url": "https://github.com/UsernameMP/English/actions/runs/40423617952",
+    "status": "completed",
+    "conclusion": "success",
+    "finished_at": "2026-10-27T00:08:08Z",
+    "head_after": "5073877586c87b909e433e6df5ad15da71d5ddd4",
+    "tests_passed": true
+  },
+  "crawler": {
+    "html_pages_processed": 60,
+    "new_raw_occurrences": 3326,
+    "raw_occurrences_at_trigger": 1491823,
+    "raw_occurrences_total": 1495149,
+    "raw_last_shard": "batch_014951.jsonl",
+    "raw_last_rows": 49,
+    "unique_resource_urls_at_trigger": 313504,
+    "unique_resource_urls_total": 314556,
+    "new_unique_resource_urls": 1052,
+    "resource_last_shard": "resource_003146.jsonl",
+    "resource_last_rows": 56,
+    "pending_html_frontier": 141583,
+    "blocked_or_failed_cumulative": 3496,
+    "metric_source": "GitHub Actions logs plus GitHub pre-trigger and post-run shard readback",
+    "note": "Historical r352 manifest is not the pre-trigger baseline; use actual ref 6501cfcc for delta. Non-HTML MIME observations are not counted automatically as crawler errors."
+  },
+  "canonical": {
+    "sources": 2131,
+    "sources_added_by_r353_run": 0,
+    "sources_blob_sha": "e955e571a229434bd477e4e301ff95dbed79cc6f",
+    "labels": 9756,
+    "labels_added_from_r352": 100,
+    "labels_blob_sha": "9c1aa37a9312ad8f563b2ab24e1c0601149aa2ec",
+    "backlog_blob_sha": "fe98d37a0a61a4f0267b34d7c8837144b1707e47",
+    "backlog_added_by_r353": 0
+  },
+  "discovery": {
+    "search_queries": 70,
+    "prior_queries_checked": 711,
+    "exact_query_repeats": 0,
+    "verified_html_pointers_checkpointed": 27,
+    "canonical_added_from_r353": 0,
+    "checkpoint": "runs/discovery_r353.jsonl",
+    "checkpoint_sha": "8116837799c730aeb16f7367fd8965c853d853a1",
+    "search_log": "runs/r353_search_queries.json",
+    "search_log_sha": "a502a88bc15ae6f76d2f3a081a5261f43f191d8f",
+    "canonical_merge_pending": true,
+    "notes": "27 pointers deduplicated against r343-r352 discovery checkpoints; cannot independently read oversized canonical sources.jsonl, so canonical uniqueness not asserted. Two unverified competition portals deferred to audit."
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "task": 1,
+      "review": 1,
+      "source": 15,
+      "unrelated": 42,
+      "archive": 39,
+      "criteria": 2
+    },
+    "ranges": [
+      "resource_000358.jsonl:35-99",
+      "resource_000359.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000959.jsonl",
+      "batch_000960.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r353_review_r358_359_00_49.jsonl",
+      "runs/r353_review_r358_359_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "da203e16ad8213a3bd21851bb9d7c83b3f941834",
+      "ce3cfa583f214b2707ebc3a94302107d74cd0208"
+    ],
+    "merge_script_sha": "ea44a7a44295f87e084f3a57c9fe2460871153f4",
+    "review_state_sha": "9c0337d8822e4ab5783c2582bc2e69bdd87a024c",
+    "canonical_r353_merged": 0,
+    "next_cursor": {
+      "shard": "resource_000359.jsonl",
+      "row": 35
+    },
+    "uncertain": "Google redirect to current UNAM competition homepage left review; compressed RAR task/criteria bundles classified by official anchor metadata, contents not inspected."
+  },
+  "audit": {
+    "checkpoint": "runs/r353_audit.jsonl",
+    "checkpoint_sha": "cfb24bf8609667a4d381f3663bd5dd9f717d8f30",
+    "findings": 32,
+    "canonical_backlog_added": 0,
+    "notable": [
+      "UNAM OUC historical 2020 absent from visible menu; Google redirect wrappers for annual archives",
+      "Mexico Metropolitan Physics first/second/third round years sparse, no exhaustion claim",
+      "Romania USV 2021 junior/senior questions and marking RAR archives not opened",
+      "Romanian linguistics older solution/criteria links incomplete",
+      "Brazilian linguistics historical phase numbering changed",
+      "IOI 2025 CC BY license limited to 2025 tasks",
+      "Portugal DGE archive direct HTML 503; official site indexed but unverified direct",
+      "Two unverified Brain Bee and FISP competition portals deferred to audit"
+    ]
+  },
+  "mime": {
+    "observations_blob_sha": "c5ecc4594d253244d49c3502941717da39991e6d",
+    "exact_current_count": "not independently readable through GitHub connector size limit",
+    "notes": "MIME-only non-HTML responses and extensionless PDFs remain candidates, not confirmed tasks. No binary response bodies downloaded."
+  },
+  "unresolved": [
+    "27 discovery pointers await canonical URL dedup and merge in next existing workflow.",
+    "100 SHA-pinned r353 labels await canonical merge in next existing workflow.",
+    "32 audit findings are checkpointed, not appended to oversized backlog.jsonl.",
+    "One UNAM Google redirect remains review; compressed RAR contents deliberately uninspected.",
+    "Historical checkpoints require separate reconciliation; no exhaustive coverage claims."
+  ],
+  "safeguards": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automation_instances_created": false,
+    "workflow_trigger_count": 1,
+    "source_redistribution": false
+  }
+}
