@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T11:07:16.031Z",
+  "updated_at": "2026-10-27T12:03:56.468Z",
   "deferred_shards": [
     1,
     2,
@@ -14,9 +14,11 @@
   ],
   "pending_label_checkpoints": [
     "runs/r364_review_r369_370_00_49.jsonl",
-    "runs/r364_review_r369_370_50_99.jsonl"
+    "runs/r364_review_r369_370_50_99.jsonl",
+    "runs/r365_review_r370_371_00_49.jsonl",
+    "runs/r365_review_r370_371_50_99.jsonl"
   ],
-  "pending_labels_count": 100,
+  "pending_labels_count": 200,
   "canonical_merge_status": "r364 GitHub Actions run 40493225896 completed success; Review merge step completed success and log confirms existing=10656 added=200 total=10856, merging r362-r363. r364 100 labels SHA-pinned after workflow checkout, pending next existing workflow. Historical unregistered checkpoints remain separately unresolved.",
   "canonical_merged_in_cycle": 363,
   "noncontiguous_review": {
@@ -157,13 +159,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000370.jsonl",
+    "next_resource_shard": "resource_000371.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000369.jsonl",
-    "last_completed_cycle": "r364-20261027T110314251Z",
-    "cycle": "r364-20261027T110314251Z",
-    "reason": "100 unique URL resources reviewed: resource_000369 rows35-99 and resource_000370 rows0-34; original raw occurrences checked in batch_000973 and batch_000974; official 22nd/23rd Czech astronomy HTML separates PDF solutions from photographic galleries and standings.",
-    "skip_already_reviewed": "resource_000370.jsonl rows0-34 complete; resume row35"
+    "last_completed_shard": "resource_000370.jsonl",
+    "last_completed_cycle": "r365-20261027T120127298Z",
+    "cycle": "r365-20261027T120127298Z",
+    "reason": "100 unique resources semantically classified: resource_000370 rows35-99 and resource_000371 rows0-34; raw occurrences checked in batch_000974 through batch_000976; Czech Astronomická olympiáda 2023/24–2024/25 PDF solution links, results filters and photo galleries separated.",
+    "skip_already_reviewed": "resource_000371.jsonl rows0-34 complete; resume row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -3549,5 +3551,24 @@
     "resource_shards_changed": 6,
     "source_registry_new_from_this_workflow": 0,
     "notes": "Raw total is calculated from batch_015606.jsonl (92 records); do not compare it directly to r363 manifest because intervening workflows changed the baseline. MIME observations SHA changed but counts not independently recomputed."
+  },
+  "r365_review": {
+    "cycle": "r365-20261027T120127298Z",
+    "resource_ranges": [
+      "resource_000370.jsonl:35-99",
+      "resource_000371.jsonl:0-34"
+    ],
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 86,
+      "solution": 14
+    },
+    "checkpoint_files": [
+      "runs/r365_review_r370_371_00_49.jsonl",
+      "runs/r365_review_r370_371_50_99.jsonl"
+    ],
+    "registered_for_canonical_merge": true,
+    "canonical_merge_completed": false
   }
 }
