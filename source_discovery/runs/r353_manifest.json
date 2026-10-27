@@ -54,14 +54,16 @@
     "search_queries": 70,
     "prior_queries_checked": 711,
     "exact_query_repeats": 0,
-    "verified_html_pointers_checkpointed": 27,
+    "verified_html_pointers_checkpointed": 26,
     "canonical_added_from_r353": 0,
     "checkpoint": "runs/discovery_r353.jsonl",
     "checkpoint_sha": "8116837799c730aeb16f7367fd8965c853d853a1",
     "search_log": "runs/r353_search_queries.json",
     "search_log_sha": "a502a88bc15ae6f76d2f3a081a5261f43f191d8f",
     "canonical_merge_pending": true,
-    "notes": "27 pointers deduplicated against r343-r352 discovery checkpoints; cannot independently read oversized canonical sources.jsonl, so canonical uniqueness not asserted. Two unverified competition portals deferred to audit."
+    "notes": "26 directly inspected HTML archive pointers and 1 Belgian archive cross-referenced from an official Olympiades page; deduplicated against r343-r352 discovery checkpoints, not independently against oversized canonical sources.jsonl.",
+    "officially_cross_referenced_pointers_checkpointed": 1,
+    "total_source_pointers_checkpointed": 27
   },
   "review": {
     "unique_resources": 100,
