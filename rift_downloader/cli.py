@@ -3,14 +3,17 @@ import argparse
 import glob
 import json
 import random
+import re
 import shutil
 import time
 from pathlib import Path
 from urllib.parse import urlparse
 from .db import (connect,import_resources,claim,recover,set_status,begin_attempt,
+                 exclusive_runner,
                  finish_attempt,event,completed,staged,pause,is_paused,summary)
 from .http import PoliteHttp
 from .backup import backup_index,last_backup_count
+from .report import export_report
 
 def records(patterns):
     for pattern in patterns:
@@ -50,10 +53,34 @@ def upload_one(db,uploader,row):
         event(db,row['resource_id'],'upload_error',str(exc))
         return False
 
+def cleanup_orphans(db,spool):
+    """Remove incomplete transfer files after crashes, never referenced staged originals."""
+    spool=Path(spool)
+    removed=0
+    for item in spool.iterdir():
+        if not item.is_file():
+            continue
+        temporary=item.name.startswith(('.downloading-','.index-backup-'))
+        content_addressed=bool(re.fullmatch(r'[0-9a-f]{64}',item.name))
+        if not temporary and not content_addressed:
+            continue
+        if content_addressed and db.execute(
+             "SELECT 1 FROM resources WHERE staged_path=? AND status IN ('staged','uploading') LIMIT 1",
+             (str(item),)).fetchone():
+            continue
+        try:
+            item.unlink()
+            removed+=1
+        except OSError as exc:
+            event(db,None,'orphan_cleanup_error',str(exc))
+    if removed:event(db,None,'orphan_cleanup',str(removed))
+    return removed
+
 def run_pilot(db,args,uploader,worker=None):
     recover(db)
     worker=worker or PoliteHttp(delay=args.min_delay,max_bytes=args.max_file_mb*1024*1024)
     spool=Path(args.spool);spool.mkdir(parents=True,exist_ok=True)
+    cleanup_orphans(db,spool)
     checks=0
     while completed(db)<args.limit_success:
         if is_paused(db):return 'paused'
@@ -120,23 +147,24 @@ def main(argv=None):
     elif args.command in ('pause','resume'):
         pause(db,args.command=='pause');result={'paused':is_paused(db)}
     elif args.command=='export-report':
-        result=summary(db);Path(args.output).parent.mkdir(parents=True,exist_ok=True)
-        Path(args.output).write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+        result={'exported':export_report(db,args.output),'report':summary(db)}
     else:
         if args.limit_success<=0 or args.max_checks<1 or args.min_delay<10 or args.max_file_mb<1 or args.backup_every<1:
             parser.error('Pilot requires limit>0, max_checks>0, min_delay>=10 sec, max_file_mb>=1')
         if args.dry_run:result={'dry_run':True,'network_requests':0,'report':summary(db)}
         else:
-            from .drive import DriveUploader,build_service
-            uploader=DriveUploader(build_service(args.token))
-            stop_reason=run_pilot(db,args,uploader)
-            checkpoint=None
-            if completed(db)>last_backup_count(db):
-                try:checkpoint=backup_index(db,uploader,args.spool)
-                except Exception as exc:
-                    event(db,None,'index_backup_error',str(exc))
-                    stop_reason='index_backup_error'
-            result={'stop_reason':stop_reason,'index_checkpoint':checkpoint,'report':summary(db)}
+            # A second accidental service start cannot overshoot the hard cap.
+            with exclusive_runner(args.db):
+                from .drive import DriveUploader,build_service
+                uploader=DriveUploader(build_service(args.token))
+                stop_reason=run_pilot(db,args,uploader)
+                checkpoint=None
+                if completed(db)>last_backup_count(db):
+                    try:checkpoint=backup_index(db,uploader,args.spool)
+                    except Exception as exc:
+                        event(db,None,'index_backup_error',str(exc))
+                        stop_reason='index_backup_error'
+                result={'stop_reason':stop_reason,'index_checkpoint':checkpoint,'report':summary(db)}
     print(json.dumps(result,ensure_ascii=False,indent=2))
 
 if __name__=='__main__':main()

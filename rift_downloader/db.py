@@ -1,6 +1,7 @@
 """Crash-tolerant SQLite ledger for the independent RIFT 200-file pilot."""
 import sqlite3
 import time
+from contextlib import contextmanager
 from pathlib import Path
 
 DDL = """
@@ -145,3 +146,20 @@ def summary(db):
             'uploaded_bytes':uploaded['bytes'],
             'requests_attempted':db.execute('SELECT COUNT(*) FROM attempts').fetchone()[0],
             'duplicate_links':db.execute("SELECT COUNT(*) FROM events WHERE kind='deduplicated'").fetchone()[0]}
+
+
+@contextmanager
+def exclusive_runner(db_path):
+    """Linux VPS process-wide lock: two pilots cannot cross the 200-file cap."""
+    import fcntl
+    lock_path=Path(str(db_path)+'.runner.lock')
+    lock_path.parent.mkdir(parents=True,exist_ok=True)
+    with lock_path.open('a+') as handle:
+        try:
+            fcntl.flock(handle.fileno(),fcntl.LOCK_EX|fcntl.LOCK_NB)
+        except BlockingIOError as exc:
+            raise RuntimeError('A RIFT pilot worker is already active for this SQLite database') from exc
+        try:
+            yield
+        finally:
+            fcntl.flock(handle.fileno(),fcntl.LOCK_UN)

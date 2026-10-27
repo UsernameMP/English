@@ -90,10 +90,20 @@ def kind(mime,url,prefix):
     first=prefix[:256].lstrip().lower()
     if first.startswith((b'<!doctype html',b'<html',b'<?xml')) and b'<html' in first[:256]:
         return 'html',mime
+    # A recognizable file signature overrides misleading HTML Content-Type or URL suffix.
+    if prefix.startswith(b'%PDF-'):return 'file','application/pdf'
+    if prefix.startswith(b'PK\x03\x04'):
+        office={'.docx':'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                '.xlsx':'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                '.pptx':'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+                '.ods':'application/vnd.oasis.opendocument.spreadsheet',
+                '.odt':'application/vnd.oasis.opendocument.text',
+                '.epub':'application/epub+zip'}
+        if mime in MIMES and mime not in ('application/zip','application/x-zip-compressed'):
+            return 'file',mime
+        return 'file',office.get(ext,mime if mime in MIMES else 'application/zip')
     if mime in ('text/html','application/xhtml+xml') or ext in ('.html','.htm'):
         return 'html',mime
-    if prefix.startswith(b'%PDF-'):return 'file','application/pdf'
-    if prefix.startswith(b'PK\x03\x04'):return 'file',mime if mime in MIMES else 'application/zip'
     if prefix.startswith(b'Rar!\x1a\x07'):return 'file','application/vnd.rar'
     if prefix.startswith(b'7z\xbc\xaf\x27\x1c'):return 'file','application/x-7z-compressed'
     if prefix.startswith(b'\x1f\x8b'):return 'file','application/gzip'
@@ -106,7 +116,8 @@ class PoliteHttp:
     def __init__(self,delay=10,timeout=30,max_bytes=100*1024*1024,session=None,limiter=None,dns_check=True):
         self.session=session or requests.Session()
         self.session.trust_env=False
-        self.session.headers.update({'User-Agent':USER_AGENT,'Accept':'*/*'})
+        self.session.headers.update({'User-Agent':USER_AGENT,'Accept':'*/*',
+                                     'Accept-Encoding':'identity'})
         self.limiter=limiter or RateLimiter(delay)
         self.timeout=timeout
         self.max_bytes=max_bytes
@@ -181,7 +192,11 @@ class PoliteHttp:
                 if code in (404,410):return dict(base,outcome='skipped',error=f'HTTP {code}')
                 if code!=200:return dict(base,outcome='failed',error=f'HTTP {code}')
                 expected=response.headers.get('Content-Length')
-                if expected and expected.isdigit() and int(expected)>self.max_bytes:
+                # requests.iter_content decodes HTTP Content-Encoding. A compressed
+                # transfer length differs from the uncompressed document length.
+                encoded=(response.headers.get('Content-Encoding','').strip().lower()
+                         not in ('','identity'))
+                if expected and expected.isdigit() and not encoded and int(expected)>self.max_bytes:
                     return dict(base,outcome='skipped',error='file exceeds max size')
                 chunks=response.iter_content(chunk_size=65536)
                 prefix=next(chunks,b'')
@@ -204,7 +219,7 @@ class PoliteHttp:
                             if size>self.max_bytes:raise ValueError('max file size exceeded')
                             sha.update(chunk);md5.update(chunk);f.write(chunk)
                         f.flush();os.fsync(f.fileno())
-                    if expected and expected.isdigit() and int(expected)!=size:
+                    if expected and expected.isdigit() and not encoded and int(expected)!=size:
                         raise IOError(f'content length mismatch {expected} != {size}')
                     if size==0:raise IOError('zero byte document')
                     digest=sha.hexdigest()

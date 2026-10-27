@@ -69,3 +69,46 @@ The database contains HTTP attempts, wait timings, source URLs and Drive IDs; JS
 - HTML and its embedded images, MathJax, OCR, archives unpacking and content classification are out of scope.
 - The MVP does not create a background cron or systemd timer and does not resume discovery. Its first real run must be monitored; the 200-file cap is hard.
 - Never commit OAuth secrets, refresh tokens, downloaded bodies, spool, or SQLite database to GitHub.
+
+
+## VPS one-shot user service (no interference with other services)
+
+After generating your Google Drive OAuth token on a trusted computer, place it on
+the VPS **outside the Git checkout** with permissions 600. The service installer
+does **not** start or schedule downloads or change system-wide services.
+
+```bash
+cd /opt/rift/English
+git checkout rift-source-index
+python3 -m venv .venv
+.venv/bin/python -m pip install -r rift_downloader/requirements.txt
+mkdir -p ~/.local/share/rift-downloader
+.venv/bin/python -m rift_downloader.cli \
+   --db ~/.local/share/rift-downloader/rift.sqlite3 \
+   import 'source_discovery/resources_shards/resource_*.jsonl'
+chmod 600 ~/.config/rift/drive-token.json
+.venv/bin/python -m rift_downloader.deploy_service \
+   --token ~/.config/rift/drive-token.json \
+   --state-dir ~/.local/share/rift-downloader
+systemctl --user daemon-reload
+systemctl --user start rift-downloader-pilot.service
+journalctl --user -u rift-downloader-pilot.service -f
+```
+
+The one-shot service stops after 200 successfully verified unique objects, at
+the maximum-check limit, or on a controlled error. No restart policy and no
+timer. The service contains paths to the private token, never its contents.
+Login-session termination can stop a user service unless user lingering is
+configured; only enable lingering deliberately after inspecting VPS policies.
+
+The command `export-report` now creates an audit bundle alongside the JSON
+summary: `pilot_report_manifest.csv`, `pilot_report_attempts.csv`,
+`pilot_report_hosts.csv` and `pilot_report_noncompleted.csv`.
+For every object: original URL, discovery source, checksum, Drive ID and MIME.
+For HTTP requests: status code, enforced wait and elapsed time.
+Per host: request count, average/p95/max latency, 403/429/503, retries.
+Failed/deferred/blocked links remain recoverably indexed.
+
+A Linux file lock prevents two workers using the same database concurrently;
+crash recovery removes orphaned partial transfers but preserves referenced
+staged bodies. Verify index backups in Google Drive before relying on them.
