@@ -13,7 +13,6 @@ CREATE TABLE IF NOT EXISTS resources (
  next_attempt_at REAL NOT NULL DEFAULT 0, object_sha256 TEXT,
  staged_path TEXT, filename TEXT, last_error TEXT, updated_at REAL NOT NULL DEFAULT 0
 );
-CREATE INDEX IF NOT EXISTS resources_queue ON resources(status,next_attempt_at,file_candidate);
 CREATE TABLE IF NOT EXISTS objects (
  sha256 TEXT PRIMARY KEY, size_bytes INTEGER NOT NULL, mime_type TEXT,
  drive_file_id TEXT UNIQUE, verified_at REAL
@@ -47,6 +46,7 @@ def connect(path):
         for col,definition in columns.items():
             if col not in existing:
                 db.execute(f'ALTER TABLE {table} ADD COLUMN {col} {definition}')
+    db.execute('CREATE INDEX IF NOT EXISTS resources_queue ON resources(status,next_attempt_at,file_candidate)')
     return db
 
 def import_resources(db,rows):
