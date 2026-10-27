@@ -11,7 +11,7 @@ class QueueTests(unittest.TestCase):
             self.assertEqual(import_resources(db,[sample,sample]),1)
             self.assertEqual(claim(db)["resource_id"],"r1")
             self.assertIsNone(claim(db))
-            self.assertEqual(recover(db),1)
+            self.assertEqual(recover(db)['requeued'],1)
             self.assertEqual(stats(db),{"pending":1})
             db.close()
             reopened = connect(Path(directory)/"queue.db")
