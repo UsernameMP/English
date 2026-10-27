@@ -10,6 +10,7 @@ from urllib.parse import urlparse
 from .db import (connect,import_resources,claim,recover,set_status,begin_attempt,
                  finish_attempt,event,completed,staged,pause,is_paused,summary)
 from .http import PoliteHttp
+from .backup import backup_index,last_backup_count
 
 def records(patterns):
     for pattern in patterns:
@@ -58,7 +59,15 @@ def run_pilot(db,args,uploader,worker=None):
         if is_paused(db):return 'paused'
         row=staged(db)
         if row:
+            before=completed(db)
             if not upload_one(db,uploader,row):return 'upload_error'
+            after=completed(db)
+            interval=getattr(args,'backup_every',0)
+            if interval and after>before and after%interval==0:
+                try:backup_index(db,uploader,spool)
+                except Exception as exc:
+                    event(db,None,'index_backup_error',str(exc))
+                    return 'index_backup_error'
             continue
         if checks>=args.max_checks:return 'max_checks'
         used=sum(p.stat().st_size for p in spool.iterdir() if p.is_file())
@@ -101,6 +110,7 @@ def main(argv=None):
     run.add_argument('--max-file-mb',type=int,default=100)
     run.add_argument('--spool-max-gb',type=int,default=10)
     run.add_argument('--max-retries',type=int,default=4)
+    run.add_argument('--backup-every',type=int,default=25)
     run.add_argument('--dry-run',action='store_true')
     args=parser.parse_args(argv)
     db=connect(args.db)
@@ -113,13 +123,20 @@ def main(argv=None):
         result=summary(db);Path(args.output).parent.mkdir(parents=True,exist_ok=True)
         Path(args.output).write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
     else:
-        if args.limit_success<=0 or args.max_checks<1 or args.min_delay<10 or args.max_file_mb<1:
+        if args.limit_success<=0 or args.max_checks<1 or args.min_delay<10 or args.max_file_mb<1 or args.backup_every<1:
             parser.error('Pilot requires limit>0, max_checks>0, min_delay>=10 sec, max_file_mb>=1')
         if args.dry_run:result={'dry_run':True,'network_requests':0,'report':summary(db)}
         else:
             from .drive import DriveUploader,build_service
             uploader=DriveUploader(build_service(args.token))
-            result={'stop_reason':run_pilot(db,args,uploader),'report':summary(db)}
+            stop_reason=run_pilot(db,args,uploader)
+            checkpoint=None
+            if completed(db)>last_backup_count(db):
+                try:checkpoint=backup_index(db,uploader,args.spool)
+                except Exception as exc:
+                    event(db,None,'index_backup_error',str(exc))
+                    stop_reason='index_backup_error'
+            result={'stop_reason':stop_reason,'index_checkpoint':checkpoint,'report':summary(db)}
     print(json.dumps(result,ensure_ascii=False,indent=2))
 
 if __name__=='__main__':main()
