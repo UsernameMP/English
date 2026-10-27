@@ -98,6 +98,22 @@ class PilotTests(unittest.TestCase):
             result=worker.fetch('https://example.org/file.pdf',d)
             self.assertEqual(result['outcome'],'retry')
             self.assertEqual(result['retry_after'],60)
+    def test_robots_retry_and_redirect(self):
+        with tempfile.TemporaryDirectory() as d:
+            session=FakeSession([FakeResponse(429,headers={'Retry-After':'90'})])
+            worker=PoliteHttp(session=session,limiter=RateLimiter(0,sleep=lambda _:None),dns_check=False)
+            result=worker.fetch('https://example.org/file.pdf',d)
+            self.assertEqual(result['outcome'],'retry')
+            self.assertEqual(result['http_status'],429)
+            self.assertEqual(result['retry_after'],90)
+        with tempfile.TemporaryDirectory() as d:
+            body=b'%PDF-1.7\noriginal'
+            session=FakeSession([
+                FakeResponse(301,headers={'Location':'https://example.org/robots.txt'}),
+                FakeResponse(404),
+                FakeResponse(200,body)])
+            worker=PoliteHttp(session=session,limiter=RateLimiter(0,sleep=lambda _:None),dns_check=False)
+            self.assertEqual(worker.fetch('http://example.org/file.pdf',d)['outcome'],'staged')
     def test_upload_duplicate(self):
         with tempfile.TemporaryDirectory() as d:
             db=connect(Path(d)/'state.db');spool=Path(d)/'spool';spool.mkdir()
