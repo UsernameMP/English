@@ -1,7 +1,7 @@
 name: RIFT Downloader Unit Tests
 on:
   push:
-    branches: [feature/rift-downloader-mvp]
+    branches: [feature/rift-downloader-mvp, rift-source-index]
     paths:
       - 'rift_downloader/**'
       - '.github/workflows/rift-downloader-tests.yml'
