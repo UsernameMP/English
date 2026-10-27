@@ -4,7 +4,7 @@
     "shard": "batch_000006.jsonl",
     "next_row_index": 24
   },
-  "updated_at": "2026-10-27T17:06:24.078Z",
+  "updated_at": "2026-10-27T18:10:51.030Z",
   "deferred_shards": [
     1,
     2,
@@ -157,13 +157,13 @@
     "note": "Canonical cursor resource_000056 unchanged pending reconciliation."
   },
   "operational_review_cursor": {
-    "next_resource_shard": "resource_000376.jsonl",
+    "next_resource_shard": "resource_000377.jsonl",
     "next_row_index": 35,
-    "last_completed_shard": "resource_000375.jsonl",
-    "last_completed_cycle": "r370-20261027T170214450Z",
-    "cycle": "r370-20261027T170214450Z",
-    "reason": "100 unique resource IDs: resource_000375 rows35–99 and resource_000376 rows0–34, 100 raw occurrences in batch_000984–000985; official Czech 2016/17 HTML identifies 95 Finale/Soustredeni JPEGs as photos and five non-task news/statistics pages; no binary downloaded.",
-    "skip_already_reviewed": "resource_000376.jsonl rows0–34 complete; resume row35"
+    "last_completed_shard": "resource_000377.jsonl",
+    "last_completed_cycle": "r371-20261027T180746933Z",
+    "cycle": "r371-20261027T180746933Z",
+    "reason": "100 unique resource IDs: resource_000376 rows35-99 and resource_000377 rows0-34; 100 raw occurrences in batch_000985-000986; organizer 2015/16 HTML explicitly calls 98 Finale JPEGs photo galleries; two other pages are final results/news, not tasks. No binary bodies fetched.",
+    "skip_already_reviewed": "resource_000377.jsonl rows0-34 complete; resume row35"
   },
   "r124_pending": {
     "resource_shard": "resource_000093.jsonl",
@@ -3714,5 +3714,36 @@
       "4c6d56a661296ec02f5f51cb8bf243c964aff2ff"
     ],
     "canonical_merged": 0
+  },
+  "r371_pending": {
+    "cycle": "r371-20261027T180746933Z",
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 100
+    },
+    "resource_ranges": [
+      "resource_000376.jsonl:35-99",
+      "resource_000377.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000985.jsonl",
+      "batch_000986.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r371_review_r376_377_00_49.jsonl",
+      "runs/r371_review_r376_377_50_99.jsonl"
+    ],
+    "checkpoint_shas": [
+      "752b3b9a46ae4bcb9513788e41dc2150e3581273",
+      "cfc6599da718c8902992dc39ed193b5d4703773d"
+    ],
+    "registered_for_merge": true,
+    "canonical_merged": 0,
+    "next_cursor": {
+      "shard": "resource_000377.jsonl",
+      "row_index": 35
+    },
+    "basis": "Official https://olympiada.astro.cz/archiv/13-rocnik-2015-16 HTML explicitly labels Finale galleries; raw occurrence context cross-matched."
   }
 }
