@@ -31,7 +31,14 @@
     "checkpoint": "runs/discovery_r367.jsonl",
     "canonical_merge": "pending",
     "direct_sources_write": "blocked: canonical sources.jsonl returned empty content on full/ranged fetch despite nonempty blob SHA; safe checkpoint via merge_sources.py",
-    "historical_query_exact_dedup": "not exhaustively verified against all historical logs"
+    "historical_query_exact_dedup": "not exhaustively verified against all historical logs",
+    "recent_query_dedup": {
+      "checked_cycles": "r360–r366",
+      "prior_queries_checked": 361,
+      "current_queries": 60,
+      "exact_repeats": 0,
+      "all_historical_queries_checked": false
+    }
   },
   "review": {
     "unique_resources": 100,
