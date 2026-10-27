@@ -1,0 +1,144 @@
+{
+  "cycle": "r371-20261027T180746933Z",
+  "created_at": "2026-10-27T18:13:57.859Z",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "requested_at": "2026-10-27T18:07:46.933Z",
+    "commit": "a8856cc1ad819b46691a7f5c4b0ff0ef796b348f",
+    "workflow_run_id": 40557063063,
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40557063063",
+    "status": "completed",
+    "conclusion": "success",
+    "tests_passed": 22,
+    "steps": {
+      "merge_sources": "success",
+      "merge_review": "success",
+      "enumeration": "success",
+      "resource_index": "success",
+      "persist": "success"
+    },
+    "persisted_head_after_retry": "c1cadc6e",
+    "push_note": "Initial push rejected due to concurrent branch writes; workflow fetched/rebased and successfully pushed on retry at 18:12:24Z. Final persisted GitHub branch files independently read."
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_links_reported": 2985,
+    "raw_occurrences_total": 1587752,
+    "raw_last_shard": "batch_015878.jsonl",
+    "raw_last_shard_rows": 52,
+    "raw_count_method": "(15878-1)*100+52",
+    "delta_from_r370_raw": 2985,
+    "unique_resource_urls_total": 330916,
+    "unique_last_shard": "resource_003310.jsonl",
+    "unique_last_shard_rows": 16,
+    "unique_count_method": "(3310-1)*100+16",
+    "delta_from_r370_unique": 629,
+    "pending_html_pages": 148375,
+    "blocked_or_failed": 3759,
+    "canonical_sources_total": 2232,
+    "canonical_sources_added_by_workflow": 3,
+    "canonical_labels_total": 11556,
+    "canonical_labels_added_by_workflow": 100,
+    "canonical_labels_from_cycle": 370,
+    "canonical_backlog_total": 1874
+  },
+  "discovery": {
+    "search_queries": 72,
+    "query_checkpoint": "runs/r371_queries.jsonl",
+    "query_checkpoint_sha": "c2c597e2edeee6571ca26f1cc2668833e9e7527c",
+    "prior_query_cycles_checked": "r361-r370",
+    "prior_queries_checked": 559,
+    "exact_repeats_in_checked_queries": 0,
+    "all_historical_queries_checked": false,
+    "verified_html_pointers": 10,
+    "checkpoint": "runs/discovery_r371.jsonl",
+    "checkpoint_sha": "c418ebbccf0445e31de531c99ce21aa8de54b236",
+    "canonical_uniqueness": "Pending next normal merge_sources.py run; oversized canonical sources.jsonl unreadable through connector; recent discovery checkpoint URL checks r350-r370 found no exact duplicates for selected 10.",
+    "notable": [
+      "Bolivia UTO 12-discipline solucionario",
+      "Uruguay chemistry tasks and answers",
+      "South Africa Business Studies past papers",
+      "Poland civics olympiad tasks and keys",
+      "Russia Moscow School Biology Olympiad historical mirrors",
+      "Spain geology regional and national archives",
+      "Spain Madrid economics corrected exams",
+      "Portugal philosophy winning essay index (names only)"
+    ]
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "counts": {
+      "unrelated": 100
+    },
+    "photo_gallery_images": 98,
+    "results_pages": 2,
+    "resource_ranges": [
+      "resource_000376.jsonl:35-99",
+      "resource_000377.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000985.jsonl",
+      "batch_000986.jsonl"
+    ],
+    "checkpoints": [
+      "runs/r371_review_r376_377_00_49.jsonl",
+      "runs/r371_review_r376_377_50_99.jsonl"
+    ],
+    "checkpoint_blob_shas": [
+      "752b3b9a46ae4bcb9513788e41dc2150e3581273",
+      "cfc6599da718c8902992dc39ed193b5d4703773d"
+    ],
+    "merge_registration_commit": "52b2fabaad27fa1608b62394fa328f4f20a5e1a9",
+    "review_state_commit": "1fd7806a636db40af6f403daa4af2b254cc72146",
+    "next_cursor": "resource_000377.jsonl:35",
+    "canonical_merge": "pending next normal workflow; r371 checkpoints created after r371 workflow checkout",
+    "basis": "Official 2015/16 Astronomická olympiáda organizer HTML explicitly labels Finale AB/CD/EFGH JPEG series as photo galleries; two linked pages are results/news, not tasks; raw occurrence IDs and context cross-matched; binary images not fetched."
+  },
+  "audit": {
+    "findings": 23,
+    "unverified_directions": 5,
+    "canonical_backlog_added": 28,
+    "canonical_backlog_total": 1874,
+    "checkpoint": "runs/r371_audit.jsonl",
+    "checkpoint_sha": "7193e1d3d9a460b12038331f4d7cb3c647e1a424",
+    "canonical_commit": "4900b1d6a192b6dfb78e0fbb1876f056a5479fde",
+    "notable": [
+      "2024/25 Polish civics annulled and retaken school test",
+      "2021 geology practical/year gaps in Spain",
+      "Uruguay chemistry 2019/2018 filename mismatch",
+      "Portugal philosophy medalists indexed without confirmed essay text",
+      "Historical biology mirrors and rights",
+      "2020/21 missing ShBO navigation",
+      "South Africa grade/answer alignment",
+      "Portuguese language 503 and Ecuador portal timeout"
+    ]
+  },
+  "mime": {
+    "observations_sha": "ce25fd60a3220c2eef39421d6a05f7559dbca2df",
+    "changed_since_r370": false,
+    "independent_count": "unavailable; connector returns empty for oversized journal",
+    "policy": "Extensionless application/pdf observations are MIME-only candidate evidence; no body downloaded or suitability asserted."
+  },
+  "constraints": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_manually_modified": false,
+    "schedule_modified": false,
+    "extra_automation_created": false,
+    "robots_respected": true,
+    "rights_not_inferred": true
+  },
+  "pending": [
+    "Merge and deduplicate 10 r371 HTML pointers into sources.jsonl through next existing workflow",
+    "Merge 100 r371 SHA-pinned review labels into link_labels.jsonl through next existing workflow",
+    "Investigate 28 canonical backlog findings/leads without bypassing access restrictions",
+    "Reconcile old review checkpoints and r370 1861 raw-ledger count discrepancy",
+    "Independent MIME observation count unavailable"
+  ]
+}
