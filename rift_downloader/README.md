@@ -1,20 +1,70 @@
-# RIFT Downloader — MVP (Issue #239)
+# RIFT Downloader — 200-file pilot
 
-Independent offline queue foundation for a future **200 successfully uploaded files** pilot.
+Independent, resumable archive importer for existing `source_discovery/resources_shards/resource_*.jsonl`. **It never discovers new URLs and never touches the old crawler.** The pilot stops once **200 distinct original binary files** have been verified in Google Drive. Nothing is automatically downloaded during installation or import.
 
-## Current capabilities
-- Imports `source_discovery/resources_shards/resource_*.jsonl` without downloading any documents.
-- SQLite WAL durable state, deduplicated `resource_id` / URL, status inspection, interrupted checking-lease recovery.
-- Schema for attempts, content-hash objects and audit events.
-- No downloader, Google Drive upload, OAuth, or automatic network requests implemented **yet**.
+## Design
 
-## Run
+- SQLite WAL local ledger: source URL, progress, attempts, HTTP statuses, response times and enforced waits, SHA-256, verified Drive ID; restart recovery.
+- Separate HTTP staging and Google Drive upload stages. The first pilot processes them serially (one worker, safer than three), with independent persisted states.
+- Per-domain minimum 10 seconds (robots.txt fetch counts); respects robots directives/crawl delay, Retry-After and backoff after 429/5xx. No logins, proxy rotation, bypasses or flooding.
+- URL/redirect screening rejects non-public IPs and non-HTTP(S) targets. DNS checked before connection. DNS pinning/TOCTOU rebinding protection is **not** implemented: deploy in a restricted egress environment for untrusted URLs.
+- MIME evidence from headers/extensions/file signatures. HTML pages are deferred without storing their body. Preserves PDFs, Office, ZIP/RAR/7z, TEX and other documents as original bytes; does not extract/classify contents.
+- Content-addressed SHA-256 with Google Drive `appProperties.rift_sha256` supports deduplication after upload/DB crash. Confirms Drive size and MD5 metadata before deleting the staged file.
+- Pilot hard cap: 200 **unique verified Drive objects**, not 200 inspected URLs. `--max-checks` also limits HTTP attempts.
+
+## Installation on VPS (Python 3.11+)
+
 ```bash
-python -m rift_downloader.cli --db ./state/rift.sqlite3 import 'source_discovery/resources_shards/resource_*.jsonl'
-python -m rift_downloader.cli --db ./state/rift.sqlite3 status
-python -m rift_downloader.cli --db ./state/rift.sqlite3 recover
+git clone https://github.com/UsernameMP/English.git
+cd English
+git checkout feature/rift-downloader-mvp
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r rift_downloader/requirements.txt
 python -m unittest discover -s rift_downloader/tests -v
+python -m rift_downloader.cli --db state/rift.sqlite3 import 'source_discovery/resources_shards/resource_*.jsonl'
+python -m rift_downloader.cli --db state/rift.sqlite3 status
 ```
 
-Never commit SQLite databases, credentials, downloaded files, or OAuth tokens.
-The paused Discovery automation must remain paused. A future downloader must enforce robots.txt, host throttling, SSRF protections, and rights checks before any live requests.
+Do not launch two concurrent workers against the same queue during this pilot. Note: the 331k link shards may make this Git checkout sizable.
+
+## Google Drive authorization — once, requires the account owner
+
+1. In Google Cloud Console create a project, enable Google Drive API, configure OAuth consent, and create an **OAuth Desktop Application** client. Download its JSON **to a trusted computer**, not GitHub.
+2. Install the requirements on that computer and authorize in the browser:
+
+```bash
+python -m rift_downloader.auth --client-secrets /private/client_secret.json --token /private/google_token.json
+```
+
+3. Securely transfer the generated refresh token to the VPS *outside the Git worktree* (`chmod 600`). For sustained operation avoid Google OAuth external **Testing** mode refresh tokens that can expire after 7 days.
+4. The app requests only the `drive.file` scope; it creates its own `RIFT/raw/00...ff` hierarchy in My Drive. Credentials belonging to the ChatGPT Google Drive connector **cannot be passed to a standalone VPS daemon**.
+
+## Dry run and 200-file pilot
+
+```bash
+python -m rift_downloader.cli --db state/rift.sqlite3 run --token /private/google_token.json --dry-run
+python -m rift_downloader.cli --db state/rift.sqlite3 run \
+    --token /private/google_token.json --spool state/spool \
+    --limit-success 200 --max-checks 3000 \
+    --min-delay 10 --max-file-mb 100 --spool-max-gb 10
+python -m rift_downloader.cli --db state/rift.sqlite3 export-report --output state/pilot_report.json
+```
+
+```bash
+python -m rift_downloader.cli --db state/rift.sqlite3 pause
+python -m rift_downloader.cli --db state/rift.sqlite3 resume
+python -m rift_downloader.cli --db state/rift.sqlite3 recover
+python -m rift_downloader.cli --db state/rift.sqlite3 status
+```
+
+The database contains HTTP attempts, wait timings, source URLs and Drive IDs; JSON report summarizes MIME, errors, codes, bytes and top domains. Upload failures leave staged original bytes on VPS and stop processing to prevent buffer exhaustion. Re-running `run` retries the staged upload, checking the remote hash before recreating it.
+
+## Operating constraints
+
+- Check website terms and local rules governing private archival. Public downloadability/robots allow does not grant redistribution rights.
+- Initial concurrency is intentionally **one**. We will measure actual delays/errors before raising it.
+- The 5 TB Google One capacity does not eliminate Drive API rate limits or account upload restrictions; API credentials and quotas are distinct.
+- HTML and its embedded images, MathJax, OCR, archives unpacking and content classification are out of scope.
+- The MVP does not create a background cron or systemd timer and does not resume discovery. Its first real run must be monitored; the 200-file cap is hard.
+- Never commit OAuth secrets, refresh tokens, downloaded bodies, spool, or SQLite database to GitHub.
