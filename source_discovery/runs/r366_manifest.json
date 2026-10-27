@@ -1,0 +1,102 @@
+{
+  "cycle": "r366-20261027T130241865Z",
+  "created_at": "2026-10-27T13:10:24.769Z",
+  "branch": "rift-source-index",
+  "repository": "UsernameMP/English",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "path": "source_discovery/run_trigger.json",
+    "commit": "b5c7eb4700ccf2ce26990f02580eee4cde1362c3",
+    "workflow_run_id": 40508637197,
+    "workflow_url": "https://github.com/UsernameMP/English/actions/runs/40508637197",
+    "status": "completed",
+    "conclusion": "success",
+    "completed_at": "2026-10-27T13:09:06Z"
+  },
+  "crawler": {
+    "configured_html_page_budget": 60,
+    "actual_html_pages_processed": "not independently readable from crawl_state",
+    "raw_occurrences_total": 1567981,
+    "raw_occurrences_added": 4630,
+    "unique_resource_urls_total": 327721,
+    "unique_resource_urls_added": 596,
+    "canonical_sources_total": 2205,
+    "canonical_sources_added": 3,
+    "canonical_labels_total": 11056,
+    "canonical_labels_added": 100,
+    "html_queue_length": "not independently readable from oversized crawl_state",
+    "error_and_block_count": "not independently readable from oversized crawl_state",
+    "resource_observations": "SHA unchanged from previous cycle"
+  },
+  "discovery": {
+    "search_queries": 66,
+    "queries_file": "runs/r366_queries.jsonl",
+    "verified_html_pointers": 24,
+    "verified_pointers_file": "runs/discovery_r366.jsonl",
+    "canonical_dedup": "pending next normal workflow",
+    "historical_query_dedup": "checked available recent logs, not entire historical archive",
+    "unverified_directions": 9
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences_in_inspected_shards": 101,
+    "counts": {
+      "unrelated": 80,
+      "solution": 18,
+      "participant_work": 1,
+      "review": 1
+    },
+    "resource_ranges": [
+      "resource_000371.jsonl:35-99",
+      "resource_000372.jsonl:0-34"
+    ],
+    "raw_shards": [
+      "batch_000975.jsonl",
+      "batch_000976.jsonl",
+      "batch_000977.jsonl",
+      "batch_000978.jsonl"
+    ],
+    "checkpoint_files": [
+      "runs/r366_review_r371_372_00_49.jsonl",
+      "runs/r366_review_r371_372_50_99.jsonl"
+    ],
+    "checkpoint_blob_shas": [
+      "ae590ede2091b36b49e0ed9af0d54486341019d3",
+      "a2fe806d04d9257bd2048428b5d4105d68cc9000"
+    ],
+    "registered_in_merge_script": true,
+    "canonical_merge": "pending next normal workflow",
+    "next_cursor": "resource_000372.jsonl:35"
+  },
+  "audit": {
+    "new_audits": 30,
+    "new_unverified_directions": 9,
+    "canonical_backlog_rows": 1727,
+    "backlog_commits": [
+      "bdb5f37ddef8621507f11f40043d466856468e86",
+      "ece9568a7a7dc883fc47bdcf01e6731adcc18e37"
+    ]
+  },
+  "mime": {
+    "observation_file": "resource_observations.jsonl",
+    "sha_unchanged": true,
+    "extensionless_pdf_candidates": "Only organizer HTML context was used; no new count asserted",
+    "binary_downloads": 0
+  },
+  "constraints": {
+    "dropbox_changed": false,
+    "raw_ledger_deleted": false,
+    "schedule_changed": false,
+    "extra_automation_created": false
+  },
+  "pending": [
+    "Canonical dedup of 24 discovery pointers",
+    "Canonical merge of 100 reviewed labels",
+    "Resolve one auxiliary KöMaL .txt resource in review",
+    "Check 9 unverified directions and 30 audit gaps",
+    "Read HTML queue and error counts from crawl_state with an alternative safe metadata path"
+  ]
+}
