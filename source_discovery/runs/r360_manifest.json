@@ -1,0 +1,126 @@
+{
+  "cycle": "r360-20261027T070210912Z",
+  "date": "2026-10-27",
+  "repository": "UsernameMP/English",
+  "branch": "rift-source-index",
+  "pr188": {
+    "merged": true,
+    "merged_at": "2026-10-11T15:35:04Z"
+  },
+  "trigger": {
+    "requested_at": "2026-10-27T07:02:10.912Z",
+    "commit": "16409698a64c7a442d50e699cc29f1e8349d106b",
+    "content_sha": "2ddb6f63128a93266ac1a56e17b2a28c7a408f89",
+    "workflow": "RIFT Link Enumeration",
+    "evidence": "Workflow path filter includes run_trigger.json; later crawler state and canonical merges changed.",
+    "run_id": "not exposed by available commit-workflow connector for push-triggered runs",
+    "conclusion": "not independently read from Actions API",
+    "persisted_crawl_state_updated_at": "2026-10-27T07:06:49+00:00"
+  },
+  "discovery": {
+    "queries": 60,
+    "queries_file": "runs/r360_queries.jsonl",
+    "candidate_pointers_checked": 21,
+    "already_canonical": 12,
+    "search_indexed_only_to_backlog": 1,
+    "new_verified_unique": 8,
+    "checkpoint": "runs/discovery_r360.jsonl",
+    "checkpoint_sha": "4727019e1345a548c5752817266b36b98e627ef4",
+    "canonical_sources_before_trigger": 2164,
+    "canonical_sources_after_trigger_workflow": 2169,
+    "canonical_sources_after_direct_r360_add": 2177,
+    "source_commit": "aee50737d8d51d9ae2445c57a4ebeab9ffcb5aa5",
+    "source_sha": "374bcf343c66894a1c7457ffcc50b0c701c6606e",
+    "caveat": "Direct sources.jsonl write is a watched workflow path and may enqueue a subsequent automatic GitHub Actions run; no manual rerun or extra scheduled task was created."
+  },
+  "review": {
+    "unique_resources": 100,
+    "raw_occurrences": 100,
+    "resource_shards": [
+      "resource_000365.jsonl rows35-99",
+      "resource_000366.jsonl rows0-34"
+    ],
+    "raw_shards": [
+      "batch_000967.jsonl",
+      "batch_000968.jsonl"
+    ],
+    "types": {
+      "source": 17,
+      "criteria": 2,
+      "unrelated": 59,
+      "archive": 9,
+      "participant_work": 6,
+      "review": 7
+    },
+    "label_checkpoints": [
+      "runs/r360_review_r365_366_00_49.jsonl",
+      "runs/r360_review_r365_366_50_99.jsonl"
+    ],
+    "checkpoint_blob_shas": [
+      "9cae381083b532e6e142f85873f92f440711e8ab",
+      "32b65d56e0d325ade5fbf2a9f6c5e783a06e886d"
+    ],
+    "registered_in": "merge_review_checkpoints.py",
+    "registration_commit": "b1df2d67434f0293bb4f13018fbbe4428090ff0d",
+    "canonical_r359_merged_in_trigger_workflow": 100,
+    "canonical_labels_after_trigger_workflow": 10456,
+    "canonical_r360_merged_at_manifest": false,
+    "review_state_commit": "6475636ae72666efe9fbd4fac402337567f9af0e",
+    "next_cursor": {
+      "shard": "resource_000366.jsonl",
+      "row": 35
+    }
+  },
+  "audit": {
+    "findings": 30,
+    "checkpoint": "runs/r360_audit.jsonl",
+    "canonical_backlog_before": 1545,
+    "added_audit": 30,
+    "added_discovery_followup": 1,
+    "canonical_backlog_after": 1576,
+    "backlog_commits": [
+      "cefdd5673d79097c4ede6812a69e313b46475145",
+      "3ed62013666ef06a5301ca6a36a782514228385e"
+    ]
+  },
+  "crawler": {
+    "html_pages": 60,
+    "new_raw_occurrences": 4174,
+    "raw_occurrences_total": 1531306,
+    "raw_previous_actual": 1527132,
+    "raw_previous_reported": 1527032,
+    "raw_count_correction": 100,
+    "raw_count_basis": "batch_015313.jsonl has 6 rows after 15313 full 100-row batches",
+    "unique_resource_urls": 324223,
+    "unique_resource_increment_from_previous_report": 1783,
+    "pending_html_pages": 144632,
+    "blocked_or_failed_cumulative": 3606,
+    "canonical_sources_after_workflow": 2169,
+    "canonical_labels_after_workflow": 10456,
+    "crawl_state_sha": "ded09a90648351163f48923164fb3aa6b6fd01d1"
+  },
+  "mime": {
+    "observations": 4207,
+    "unique_observed_urls": 4207,
+    "application_pdf": 1725,
+    "pdf_without_dot_pdf_extension": 1567,
+    "observations_sha": "6a0399d97b1613a50d3bf188fedd81b963157b0d",
+    "audit_file": "runs/r360_mime_audit.json",
+    "ambiguous_robots_denied_or_unavailable": 2364,
+    "interpretation": "No binary bodies; non-HTML not error; ambiguous robots-denied-or-unavailable must not be treated as confirmed robots prohibition."
+  },
+  "constraints": {
+    "binary_downloads": 0,
+    "dropbox_modified": false,
+    "raw_ledger_modified_by_assistant": false,
+    "schedule_modified": false,
+    "extra_automation_instances_created": 0
+  },
+  "unresolved": [
+    "7 r360 resources remain review, not discarded.",
+    "100 r360 labels await canonical merge unless another existing workflow has already merged them.",
+    "Historical checkpoint reconciliation remains open.",
+    "GitHub Actions push-run ID and terminal conclusion not directly available from connector; successful persisted crawler state verified.",
+    "Potential automatic workflow push triggered by direct source registry update."
+  ]
+}
