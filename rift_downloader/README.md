@@ -112,3 +112,30 @@ Failed/deferred/blocked links remain recoverably indexed.
 A Linux file lock prevents two workers using the same database concurrently;
 crash recovery removes orphaned partial transfers but preserves referenced
 staged bodies. Verify index backups in Google Drive before relying on them.
+
+
+## Offline inventory and persistent politeness (pilot hardening)
+
+Before any network activity, inspect an **estimate**, not verified file counts:
+
+```bash
+python -m rift_downloader.cli --db state/rift.sqlite3 plan --sample 10
+```
+
+The output uses only existing RIFT resource shard URLs and observed MIME metadata,
+showing likely PDF/Word/archive/presentation/spreadsheet counts, candidate domain
+distribution, and selected URL examples. No URLs are visited; unknowns remain unknown.
+
+**Rate limits now survive worker restarts** in the `host_pacing` SQLite table.
+Every attempted actual HTTP request, including `robots.txt`, redirects and final
+resource responses, is recorded in `http_events`. The downloader enforces
+a crawl-delay as the full minimum gap since the preceding request, not
+an incremental partial delay. The fresh HTTP telemetry is exported into
+`pilot_report_http_events.csv` and `pilot_report_http_hosts.csv`.
+These are distinct from the per-URL `attempts` audit: one URL may issue several
+HTTP requests (robots, redirects), and the exact count matters for assessing
+the sites' tolerance.
+
+A loopback HTTP fixture tests real streaming/redirect/robots handling without
+requesting any public website. It is test-only and deliberately uses an
+injected transport; never disable DNS checks in production.
