@@ -183,21 +183,24 @@ def restore_index_snapshot(root,local_db):
             candidates.append(file)
     candidates.sort(key=lambda path:path.stat().st_mtime,reverse=True)
     for backup in candidates:
+        temp=db_path.with_suffix('.restore.tmp')
         try:
-            sha,_=hash_file(backup)
+            # SQLite must never open a database directly on mounted Drive.
+            db_path.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copy2(backup,temp)
+            sha,_=hash_file(temp)
             if sha!=backup.stem:continue
-            conn=sqlite3.connect(backup.as_uri()+"?mode=ro",uri=True)
+            conn=sqlite3.connect(temp)
             try:
                 ok=conn.execute('PRAGMA quick_check').fetchone()[0]
                 if ok!='ok':continue
                 n=conn.execute('SELECT COUNT(*) FROM resources').fetchone()[0]
                 if not n:continue
             finally:conn.close()
-            db_path.parent.mkdir(parents=True,exist_ok=True)
-            temp=db_path.with_suffix('.restore.tmp')
-            shutil.copy2(backup,temp)
             os.replace(temp,db_path)
             return {'restored':True,'snapshot':backup.name,'resources':n}
         except (OSError,sqlite3.Error,ValueError):
             continue
+        finally:
+            temp.unlink(missing_ok=True)
     return {'restored':False,'reason':'no verified index snapshot'}
