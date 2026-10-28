@@ -1,5 +1,35 @@
 # RIFT Downloader — 200-file pilot
 
+## Первый запуск без VPS и OAuth — Google Colab
+
+**[Открыть RIFT 200 File Pilot в Google Colab](https://colab.research.google.com/github/UsernameMP/English/blob/rift-source-index/rift_downloader/RIFT_200_File_Pilot.ipynb)**
+
+Это самый простой вариант для первого эксперимента. Не требует SSH-доступа,
+Google Cloud Console, OAuth client ID, refresh token и правок существующей VPS.
+
+1. Откройте блокнот под своим Google-аккаунтом.
+2. В меню Colab выберите **Среда выполнения → Выполнить все**.
+3. При запросе Google подтвердите подключение Google Drive.
+4. Файлы и отчёты появятся в **Мой диск / RIFT**.
+
+Колаб выполняет код из этого GitHub-репозитория с доступом к Google Drive.
+Подтверждайте запрос только при доверии этому исходному коду. Google Drive
+mount предоставляет исполняемому коду широкий доступ к Диску; в рамках
+нашего проекта запись ограничена папкой `RIFT`. Для 200 файлов Colab
+подходит как экспериментальная среда, но **не гарантирует непрерывную работу**:
+при прерывании сеанса запустите блокнот повторно. SQLite восстанавливается
+из `RIFT/index`, а последние записи — из `RIFT/receipts`. Файлы
+хранятся индивидуально по SHA-256 в `RIFT/raw`, а не в GitHub.
+
+Контрольная проверка смонтированных файлов — по SHA-256 при чтении с
+Google Drive mount; это **не** подтверждение ответа Drive API о завершении
+облачной синхронизации. После запуска наличие файлов можно проверить в
+обычном веб-интерфейсе Google Drive.
+
+**Вариант ниже с OAuth и VPS сохранён как вариант будущей постоянной службы.**
+Не следует устанавливать его на потенциально скомпрометированный сервер.
+
+
 Independent, resumable archive importer for existing `source_discovery/resources_shards/resource_*.jsonl`. **It never discovers new URLs and never touches the old crawler.** The pilot stops once **200 distinct original binary files** have been verified in Google Drive. Nothing is automatically downloaded during installation or import.
 
 ## Design
