@@ -56,7 +56,8 @@ def connect(path):
     db.executescript(DDL)
     for table,columns in {
         'resources': {'next_attempt_at':'REAL NOT NULL DEFAULT 0','staged_path':'TEXT',
-                      'filename':'TEXT','updated_at':'REAL NOT NULL DEFAULT 0'},
+                      'filename':'TEXT','updated_at':'REAL NOT NULL DEFAULT 0',
+                      'pilot_rank':'INTEGER'},
         'attempts': {'domain':'TEXT','wait_ms':'INTEGER','elapsed_ms':'INTEGER',
                     'bytes_received':'INTEGER','outcome':'TEXT','error':'TEXT'},
     }.items():
@@ -67,6 +68,8 @@ def connect(path):
     db.execute('CREATE INDEX IF NOT EXISTS resources_queue ON resources(status,next_attempt_at,file_candidate)')
     db.execute("""CREATE INDEX IF NOT EXISTS resources_pilot_pick ON resources(file_candidate DESC,resource_id)
                   WHERE status IN ('pending','retry')""")
+    db.execute("""CREATE INDEX IF NOT EXISTS resources_rank_queue ON resources(pilot_rank)
+                  WHERE pilot_rank IS NOT NULL AND status IN ('pending','retry')""")
     return db
 
 def import_resources(db,rows):
@@ -92,8 +95,16 @@ def claim(db,now=None):
     now=time.time() if now is None else now
     db.execute('BEGIN IMMEDIATE')
     try:
-        row=db.execute('''SELECT resource_id FROM resources WHERE status IN ('pending','retry')
-            AND next_attempt_at<=? ORDER BY file_candidate DESC,resource_id LIMIT 1''',(now,)).fetchone()
+        # Prefer a prepared, domain-diversified pilot sample; unranked
+        # candidates remain available if all ranked records are exhausted or
+        # waiting on Retry-After. An interrupted pilot keeps the same ranks.
+        row=db.execute('''SELECT resource_id FROM resources
+            WHERE pilot_rank IS NOT NULL AND status IN ('pending','retry')
+            AND next_attempt_at<=? ORDER BY pilot_rank LIMIT 1''',(now,)).fetchone()
+        if row is None:
+            row=db.execute('''SELECT resource_id FROM resources WHERE status IN ('pending','retry')
+                AND next_attempt_at<=? ORDER BY file_candidate DESC,resource_id LIMIT 1''',
+                (now,)).fetchone()
         if row is None:
             db.execute('COMMIT')
             return None

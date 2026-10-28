@@ -139,3 +139,43 @@ the sites' tolerance.
 A loopback HTTP fixture tests real streaming/redirect/robots handling without
 requesting any public website. It is test-only and deliberately uses an
 injected transport; never disable DNS checks in production.
+
+
+## Preparing a representative, multi-domain 200-file pilot (October 2026)
+
+Use the existing archive index; **do not restart Link Discovery**. The
+pilot sample is deterministic, uses only original URL/MIME metadata, and
+selects one likely downloadable file per source host in its first sweep,
+then a second file from each host in subsequent sweeps. It is not AI
+classification and never alters the original source resource shards.
+
+```bash
+# Import if not already completed:
+python -m rift_downloader.cli --db state/rift.sqlite3 import \
+    'source_discovery/resources_shards/resource_*.jsonl'
+# Optional: create a persistent, idempotent first-5000 URL ordering offline.
+python -m rift_downloader.cli --db state/rift.sqlite3 seed --limit 5000
+# Check local prerequisites without any remote connections:
+python -m rift_downloader.cli --db state/rift.sqlite3 doctor \
+    --token /private/google_token.json --spool state/spool
+# With explicit network authorization, check Drive metadata only:
+python -m rift_downloader.cli --db state/rift.sqlite3 doctor \
+    --token /private/google_token.json --spool state/spool --check-drive
+# This does not require an OAuth token and makes zero network requests:
+python -m rift_downloader.cli --db state/rift.sqlite3 run --dry-run
+```
+
+When the actual pilot starts, the program **automatically seeds the same
+stable queue** if not already prepared and uses existing ranks after a
+restart. The first 200 saved objects therefore tend to represent many
+servers instead of an arbitrary cluster of URLs in one archive. Since
+some hosts may deny access, the number of *successful* source hosts will
+be measured, not assumed.
+
+The `doctor` command reports only booleans, scope presence and disk
+capacity. No token values, OAuth client identifiers or secrets are emitted.
+`--check-drive` issues a single Drive metadata list request, but does
+not create any file. The live downloader **refuses** a Google token that
+is readable by group/other Linux users. OAuth scope must be
+`https://www.googleapis.com/auth/drive.file`. Keep the token outside
+the repository and back up the SQLite index to a user-owned Drive folder.
