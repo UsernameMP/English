@@ -59,6 +59,30 @@ class MountedDriveTests(unittest.TestCase):
                 MountedDriveUploader(root).upload(sha,source,'application/zip','paper.zip')
             self.assertEqual(remote.read_bytes(),b'wrong file content')
             self.assertEqual(source.read_bytes(),b'PK\x03\x04original')
+    def test_same_file_different_extensions_uses_one_blob_and_two_receipts(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)/'RIFT';root.mkdir()
+            source=Path(td)/'pdf';data=b'%PDF-1.5\nSame problem'
+            source.write_bytes(data);sha=hashlib.sha256(data).hexdigest()
+            db=connect(Path(td)/'state.db')
+            import_resources(db,[
+                {'resource_id':'first','url':'https://math.example.org/file.pdf',
+                 'first_source_url':'https://math.example.org/archive'},
+                {'resource_id':'second','url':'https://other.example.org/download',
+                 'first_source_url':'https://other.example.org/index'}])
+            uploader=MountedDriveUploader(root)
+            first=db.execute("SELECT * FROM resources WHERE resource_id='first'").fetchone()
+            uploader.set_context(first)
+            ref=uploader.upload(sha,source,'application/pdf','source.pdf')
+            second=db.execute("SELECT * FROM resources WHERE resource_id='second'").fetchone()
+            uploader.set_context(second)
+            again=uploader.upload(sha,source,'application/pdf','download.zip')
+            self.assertEqual(again,ref)
+            uploader.record_existing(second,sha,ref)
+            self.assertEqual(len(list((root/'raw'/sha[:2]).iterdir())),1)
+            self.assertEqual(len(list((root/'receipts').glob('*.json'))),2)
+            self.assertEqual(json.loads((root/'receipts'/'second.json').read_text())['url'],
+                             'https://other.example.org/download')
     def test_index_snapshot_can_be_restored_to_local_sqlite(self):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td)/'RIFT';root.mkdir()
