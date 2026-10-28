@@ -25,7 +25,7 @@ class ReportingTests(unittest.TestCase):
             id2=begin_attempt(db,'x2','math.example.org')
             finish_attempt(db,id2,elapsed_ms=500,wait_ms=0,code=429,outcome='retry',error='HTTP 429')
             report=export_report(db,Path(td)/'pilot.json')
-            self.assertEqual(len(report),5)
+            self.assertEqual(len(report),7)
             result=json.loads(Path(report['summary_json']).read_text())
             self.assertEqual(result['host_count'],1)
             self.assertEqual(result['hosts_with_429'],1)
@@ -42,6 +42,8 @@ class ReportingTests(unittest.TestCase):
                 hosts=list(csv.DictReader(f))
             self.assertEqual(hosts[0]['avg_latency_ms'],'310')
             self.assertEqual(hosts[0]['http_429'],'1')
+            self.assertTrue(Path(report['http_events_csv']).is_file())
+            self.assertTrue(Path(report['http_hosts_csv']).is_file())
             with open(report['noncompleted_csv'],newline='',encoding='utf-8') as f:
                 failures=list(csv.DictReader(f))
             self.assertEqual(failures[0]['status'],'blocked')
