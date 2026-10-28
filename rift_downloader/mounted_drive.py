@@ -70,7 +70,37 @@ class MountedDriveUploader:
             ext='.bin' if category=='raw' else '.sqlite3'
         base=self.root/category
         folder=base/sha[:2] if category=='raw' else base
+        if category=='raw' and folder.is_dir():
+            # Deduplicate by digest, NOT by extension: the same PDF may appear
+            # as task.pdf, task.zip, download?id=123 on different sites.
+            existing=sorted(folder.glob(sha+'.*'))
+            if existing:return existing[0]
         return folder/(sha+ext)
+    def record_existing(self,row,sha,locator):
+        """Persist a receipt for an additional URL to an already stored blob."""
+        if not locator.startswith('drivefs:'):
+            raise MountedDriveError('Unexpected mounted Drive object locator')
+        rid=row['resource_id']
+        if not RID.fullmatch(rid) or not SHA.fullmatch(sha):
+            raise MountedDriveError('Unsafe receipt identifier')
+        rel=locator.removeprefix('drivefs:')
+        target=(self.root/rel).resolve()
+        if not target.is_relative_to((self.root/'raw').resolve()):
+            raise MountedDriveError('Invalid raw blob location')
+        if not target.is_file():
+            raise MountedDriveError('Missing previously archived raw object')
+        digest,size=hash_file(target)
+        if digest!=sha:
+            raise MountedDriveError('Previously archived raw file corrupted')
+        atomic_json(self.root/'receipts'/(rid+'.json'),{
+            'resource_id':rid,'url':row['url'],
+            'source_url':row['source_url'],'sha256':sha,
+            'size_bytes':size,'mime_type':row['mime_hint'],
+            'file_name':row['filename'],
+            'relative_path':target.relative_to(self.root).as_posix(),
+            'archive_state':'verified','verified_at':time.time()
+        })
+
     def upload(self,sha,path,mime,filename,*,category='raw'):
         original=Path(path)
         if not original.is_file():
