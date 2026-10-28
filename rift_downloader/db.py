@@ -29,6 +29,23 @@ CREATE TABLE IF NOT EXISTS events (
  at REAL NOT NULL, kind TEXT NOT NULL, details TEXT
 );
 CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY,value TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS host_pacing (
+  host TEXT PRIMARY KEY,
+  last_request_at REAL NOT NULL DEFAULT 0,
+  next_allowed_at REAL NOT NULL DEFAULT 0,
+  last_updated_at REAL NOT NULL DEFAULT 0
+);
+CREATE TABLE IF NOT EXISTS http_events (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  at REAL NOT NULL,
+  url TEXT NOT NULL,
+  domain TEXT NOT NULL,
+  purpose TEXT NOT NULL,
+  http_status INTEGER,
+  elapsed_ms INTEGER,
+  wait_ms INTEGER
+);
+CREATE INDEX IF NOT EXISTS http_events_domain_idx ON http_events(domain,id);
 """
 
 def connect(path):
@@ -163,3 +180,11 @@ def exclusive_runner(db_path):
             yield
         finally:
             fcntl.flock(handle.fileno(),fcntl.LOCK_UN)
+
+def record_http_event(db,url,domain,purpose,code,elapsed_ms,wait_ms):
+    """Record each actual HTTP response, including robots.txt and redirects."""
+    with db:
+        db.execute('''INSERT INTO http_events
+            (at,url,domain,purpose,http_status,elapsed_ms,wait_ms)
+            VALUES (?,?,?,?,?,?,?)''',
+            (time.time(),url,domain,purpose,code,elapsed_ms,wait_ms))
