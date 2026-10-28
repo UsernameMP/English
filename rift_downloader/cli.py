@@ -9,11 +9,12 @@ import time
 from pathlib import Path
 from urllib.parse import urlparse
 from .db import (connect,import_resources,claim,recover,set_status,begin_attempt,
-                 exclusive_runner,
+                 exclusive_runner,record_http_event,
                  finish_attempt,event,completed,staged,pause,is_paused,summary)
-from .http import PoliteHttp
+from .http import PoliteHttp,RateLimiter
 from .backup import backup_index,last_backup_count
 from .report import export_report
+from .inventory import inventory
 
 def records(patterns):
     for pattern in patterns:
@@ -78,7 +79,13 @@ def cleanup_orphans(db,spool):
 
 def run_pilot(db,args,uploader,worker=None):
     recover(db)
-    worker=worker or PoliteHttp(delay=args.min_delay,max_bytes=args.max_file_mb*1024*1024)
+    if worker is None:
+        # Durable request-level pacing across VPS restarts, including robots.txt
+        # and redirects; see host_pacing and http_events in SQLite.
+        limiter=RateLimiter(delay=args.min_delay,state=db)
+        worker=PoliteHttp(delay=args.min_delay,max_bytes=args.max_file_mb*1024*1024,
+            limiter=limiter,on_response=lambda url,host,purpose,code,elapsed,wait:
+                record_http_event(db,url,host,purpose,code,elapsed,wait))
     spool=Path(args.spool);spool.mkdir(parents=True,exist_ok=True)
     cleanup_orphans(db,spool)
     checks=0
@@ -129,6 +136,7 @@ def main(argv=None):
     sub=parser.add_subparsers(dest='command',required=True)
     imp=sub.add_parser('import');imp.add_argument('shards',nargs='+')
     sub.add_parser('status');sub.add_parser('recover');sub.add_parser('pause');sub.add_parser('resume')
+    plan=sub.add_parser('plan');plan.add_argument('--sample',type=int,default=12)
     report=sub.add_parser('export-report');report.add_argument('--output',required=True)
     run=sub.add_parser('run');run.add_argument('--token',required=True)
     run.add_argument('--spool',default='state/spool');run.add_argument('--limit-success',type=int,default=200)
@@ -143,6 +151,7 @@ def main(argv=None):
     db=connect(args.db)
     if args.command=='import':result={'imported':import_resources(db,records(args.shards)),'report':summary(db)}
     elif args.command=='status':result=summary(db)
+    elif args.command=='plan':result=inventory(db,sample=max(0,min(100,args.sample)))
     elif args.command=='recover':result=recover(db)
     elif args.command in ('pause','resume'):
         pause(db,args.command=='pause');result={'paused':is_paused(db)}

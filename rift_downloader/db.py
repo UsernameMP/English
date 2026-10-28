@@ -29,6 +29,23 @@ CREATE TABLE IF NOT EXISTS events (
  at REAL NOT NULL, kind TEXT NOT NULL, details TEXT
 );
 CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY,value TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS host_pacing (
+  host TEXT PRIMARY KEY,
+  last_request_at REAL NOT NULL DEFAULT 0,
+  next_allowed_at REAL NOT NULL DEFAULT 0,
+  last_updated_at REAL NOT NULL DEFAULT 0
+);
+CREATE TABLE IF NOT EXISTS http_events (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  at REAL NOT NULL,
+  url TEXT NOT NULL,
+  domain TEXT NOT NULL,
+  purpose TEXT NOT NULL,
+  http_status INTEGER,
+  elapsed_ms INTEGER,
+  wait_ms INTEGER
+);
+CREATE INDEX IF NOT EXISTS http_events_domain_idx ON http_events(domain,id);
 """
 
 def connect(path):
@@ -48,6 +65,8 @@ def connect(path):
             if col not in existing:
                 db.execute(f'ALTER TABLE {table} ADD COLUMN {col} {definition}')
     db.execute('CREATE INDEX IF NOT EXISTS resources_queue ON resources(status,next_attempt_at,file_candidate)')
+    db.execute("""CREATE INDEX IF NOT EXISTS resources_pilot_pick ON resources(file_candidate DESC,resource_id)
+                  WHERE status IN ('pending','retry')""")
     return db
 
 def import_resources(db,rows):
@@ -141,7 +160,13 @@ def summary(db):
       SUM(CASE WHEN http_status=429 THEN 1 ELSE 0 END) http_429
       FROM attempts WHERE domain IS NOT NULL GROUP BY domain ORDER BY requests DESC LIMIT 30''')]
     uploaded=db.execute('SELECT COUNT(*) n,COALESCE(SUM(size_bytes),0) bytes FROM objects WHERE verified_at IS NOT NULL').fetchone()
-    return {'resource_statuses':status,'attempt_outcomes':outcomes,'http_codes':http,
+    physical_http=db.execute('SELECT COUNT(*) FROM http_events').fetchone()[0]
+    physical_codes={str(r['http_status']):r['n'] for r in db.execute('''SELECT http_status,COUNT(*) n
+        FROM http_events WHERE http_status IS NOT NULL GROUP BY http_status''')}
+    robots_requests=db.execute("SELECT COUNT(*) FROM http_events WHERE purpose='robots'").fetchone()[0]
+    return {'http_requests':physical_http,'http_response_codes':physical_codes,
+            'robots_requests':robots_requests,
+            'resource_statuses':status,'attempt_outcomes':outcomes,'http_codes':http,
             'stored_mime':mime,'top_domains':domains,'uploaded_files':uploaded['n'],
             'uploaded_bytes':uploaded['bytes'],
             'requests_attempted':db.execute('SELECT COUNT(*) FROM attempts').fetchone()[0],
@@ -163,3 +188,11 @@ def exclusive_runner(db_path):
             yield
         finally:
             fcntl.flock(handle.fileno(),fcntl.LOCK_UN)
+
+def record_http_event(db,url,domain,purpose,code,elapsed_ms,wait_ms):
+    """Record each actual HTTP response, including robots.txt and redirects."""
+    with db:
+        db.execute('''INSERT INTO http_events
+            (at,url,domain,purpose,http_status,elapsed_ms,wait_ms)
+            VALUES (?,?,?,?,?,?,?)''',
+            (time.time(),url,domain,purpose,code,elapsed_ms,wait_ms))

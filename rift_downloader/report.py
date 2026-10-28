@@ -68,8 +68,38 @@ def export_report(db,output):
                                FROM attempts ORDER BY id''')
     failures_columns=['resource_id','url','source_url','status','attempts','last_error']
     failures=db.execute('''SELECT resource_id,url,source_url,status,attempts,last_error
-                           FROM resources WHERE status IN ('failed','blocked','retry','skipped','html_deferred')
+                           FROM resources WHERE status IN ('failed','blocked','retry','skipped','html_deferred','image_deferred')
                            ORDER BY status,resource_id''')
+    # HTTP-level ledger counts robots.txt and redirect requests separately from
+    # the URL-level attempt table, which only records its final outcome.
+    http_columns=['id','at','url','domain','purpose','http_status','elapsed_ms','wait_ms']
+    actual_http=db.execute('''SELECT id,at,url,domain,purpose,http_status,elapsed_ms,wait_ms
+                              FROM http_events ORDER BY id''')
+    per_host={}
+    for record in db.execute('''SELECT domain,http_status,purpose,elapsed_ms,wait_ms
+                                FROM http_events ORDER BY id'''):
+        h=per_host.setdefault(record['domain'],{'domain':record['domain'],'requests':0,
+             'robots_requests':0,'wait_total_ms':0,'latencies':[],'http_403':0,'http_429':0,
+             'http_503':0})
+        h['requests']+=1
+        h['robots_requests']+=int(record['purpose']=='robots')
+        h['wait_total_ms']+=int(record['wait_ms'] or 0)
+        h['latencies'].append(int(record['elapsed_ms'] or 0))
+        for code in (403,429,503):
+            if record['http_status']==code:h[f'http_{code}']+=1
+    http_hosts=[]
+    for host,raw in sorted(per_host.items(),key=lambda x:(-x[1]['requests'],x[0])):
+        times=sorted(raw['latencies'])
+        total=raw['requests']
+        http_hosts.append({'domain':host,'requests':total,
+            'robots_requests':raw['robots_requests'],
+            'avg_wait_ms':round(raw['wait_total_ms']/total),
+            'p95_response_ms':times[int(.95*(total-1))],
+            'max_response_ms':times[-1],
+            'http_403':raw['http_403'],'http_429':raw['http_429'],
+            'http_503':raw['http_503']})
+    actual_hosts_columns=['domain','requests','robots_requests','avg_wait_ms',
+         'p95_response_ms','max_response_ms','http_403','http_429','http_503']
     hosts_columns=['domain','requests','avg_latency_ms','p95_latency_ms','max_latency_ms',
                    'avg_wait_ms','max_wait_ms','http_403','http_429','http_503','blocked','retry']
     return {
@@ -78,4 +108,6 @@ def export_report(db,output):
         'attempts_csv':_write_csv(stem.with_name(stem.name+'_attempts.csv'),attempts_columns,attempts),
         'hosts_csv':_write_csv(stem.with_name(stem.name+'_hosts.csv'),hosts_columns,hosts),
         'noncompleted_csv':_write_csv(stem.with_name(stem.name+'_noncompleted.csv'),failures_columns,failures),
+        'http_events_csv':_write_csv(stem.with_name(stem.name+'_http_events.csv'),http_columns,actual_http),
+        'http_hosts_csv':_write_csv(stem.with_name(stem.name+'_http_hosts.csv'),actual_hosts_columns,http_hosts),
     }
