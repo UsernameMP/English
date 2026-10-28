@@ -41,6 +41,10 @@ def upload_one(db,uploader,row):
         return False
     set_status(db,row['resource_id'],'uploading')
     try:
+        # The Colab backend writes per-resource recovery receipts to Drive
+        # before storing original bytes; API backend remains unchanged.
+        if hasattr(uploader,'set_context'):
+            uploader.set_context(row)
         file_id=uploader.upload(sha,path,row['mime_hint'] or 'application/octet-stream',row['filename'])
         with db:
             db.execute('''INSERT INTO objects(sha256,size_bytes,mime_type,drive_file_id,verified_at)
