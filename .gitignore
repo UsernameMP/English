@@ -5,3 +5,15 @@ local.properties
 *.iml
 app/src/main/assets/audio/
 !app/src/main/assets/.gitkeep
+
+# RIFT Downloader runtime files (never commit raw task files, Drive indexes or OAuth credentials)
+/state/
+/.rift_state/
+/rift_downloader/state/
+/rift_downloader/spool/
+/rift_downloader/*.sqlite3
+/rift_downloader/*.sqlite3-shm
+/rift_downloader/*.sqlite3-wal
+/google_token.json
+/client_secret.json
+/.env
