@@ -32,6 +32,15 @@ def upload_one(db,uploader,row):
     sha=row['object_sha256'];path=Path(row['staged_path'] or '')
     obj=db.execute('SELECT * FROM objects WHERE sha256=? AND verified_at IS NOT NULL',(sha,)).fetchone()
     if obj:
+        # Mounted Drive receipts preserve the provenance of each duplicate URL
+        # even if SQLite crashes before its next cloud checkpoint.
+        if hasattr(uploader,'record_existing'):
+            try:
+                uploader.record_existing(row,sha,obj['drive_file_id'])
+            except Exception as exc:
+                set_status(db,row['resource_id'],'staged',error=str(exc)[:300])
+                event(db,row['resource_id'],'duplicate_receipt_error',str(exc))
+                return False
         set_status(db,row['resource_id'],'completed')
         event(db,row['resource_id'],'deduplicated',sha)
         if path.is_file():path.unlink(missing_ok=True)
