@@ -65,6 +65,8 @@ def connect(path):
             if col not in existing:
                 db.execute(f'ALTER TABLE {table} ADD COLUMN {col} {definition}')
     db.execute('CREATE INDEX IF NOT EXISTS resources_queue ON resources(status,next_attempt_at,file_candidate)')
+    db.execute("""CREATE INDEX IF NOT EXISTS resources_pilot_pick ON resources(file_candidate DESC,resource_id)
+                  WHERE status IN ('pending','retry')""")
     return db
 
 def import_resources(db,rows):
