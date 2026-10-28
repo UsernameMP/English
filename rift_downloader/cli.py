@@ -92,7 +92,19 @@ def cleanup_orphans(db,spool):
     if removed:event(db,None,'orphan_cleanup',str(removed))
     return removed
 
-def run_pilot(db,args,uploader,worker=None):
+def run_pilot(db,args,uploader,worker=None,progress_callback=None):
+    """Run until the verified-unique-file cap, emitting optional live progress.
+
+    A progress callback takes (database, state_string). Failures are audited
+    but never jeopardize the already-downloaded original files.
+    """
+    def report_progress(state):
+        if progress_callback is None:
+            return
+        try:
+            progress_callback(db,state)
+        except Exception as exc:
+            event(db,None,'live_progress_error',type(exc).__name__+': '+str(exc)[:160])
     recover(db)
     seed_pilot(db,limit=getattr(args,'seed_limit',5000))
     if worker is None:
@@ -104,6 +116,7 @@ def run_pilot(db,args,uploader,worker=None):
                 record_http_event(db,url,host,purpose,code,elapsed,wait))
     spool=Path(args.spool);spool.mkdir(parents=True,exist_ok=True)
     cleanup_orphans(db,spool)
+    report_progress('running')
     checks=0
     while completed(db)<args.limit_success:
         if is_paused(db):return 'paused'
@@ -117,7 +130,11 @@ def run_pilot(db,args,uploader,worker=None):
                 try:backup_index(db,uploader,spool)
                 except Exception as exc:
                     event(db,None,'index_backup_error',str(exc))
+                    report_progress('index_backup_error')
                     return 'index_backup_error'
+            progress_every=getattr(args,'progress_every',5)
+            if progress_every and after>before and after%progress_every==0:
+                report_progress('running')
             continue
         if checks>=args.max_checks:return 'max_checks'
         used=sum(p.stat().st_size for p in spool.iterdir() if p.is_file())
@@ -144,6 +161,7 @@ def run_pilot(db,args,uploader,worker=None):
                 seconds=max(float(result.get('retry_after') or 0),min(3600,2**min(count,10)+random.uniform(0,1)))
                 set_status(db,rid,'retry',delay=seconds,error=result.get('error'))
         else:set_status(db,rid,outcome,error=result.get('error'))
+    report_progress('limit_reached')
     return 'limit_reached'
 
 def main(argv=None):
