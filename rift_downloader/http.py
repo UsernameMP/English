@@ -135,11 +135,8 @@ def kind(mime,url,prefix):
     # Images belong to a later HTML/visual-asset archival stage, not this pilot.
     # Magic signatures take precedence over misleading server MIME headers.
     if (prefix.startswith((b'\x89PNG\r\n\x1a\n',b'\xff\xd8\xff',
-                           b'GIF87a',b'GIF89a',b'RIFF')) and
-        not prefix.startswith(b'Rar!')):
-        return 'image',mime
-    if mime.startswith('image/') or Path(unquote(urlparse(url).path)).suffix.lower() in (
-        '.png','.jpg','.jpeg','.gif','.webp','.svg','.bmp','.tiff','.tif'):
+                           b'GIF87a',b'GIF89a')) or
+        (prefix.startswith(b'RIFF') and prefix[8:12]==b'WEBP')):
         return 'image',mime
     if first.startswith((b'<!doctype html',b'<html',b'<?xml')) and b'<html' in first[:256]:
         return 'html',mime
@@ -161,6 +158,9 @@ def kind(mime,url,prefix):
     if prefix.startswith(b'7z\xbc\xaf\x27\x1c'):return 'file','application/x-7z-compressed'
     if prefix.startswith(b'\x1f\x8b'):return 'file','application/gzip'
     if prefix.startswith(b'\xd0\xcf\x11\xe0'):return 'file',mime if mime in MIMES else 'application/msword'
+    if mime.startswith('image/') or Path(unquote(urlparse(url).path)).suffix.lower() in (
+        '.png','.jpg','.jpeg','.gif','.webp','.svg','.bmp','.tiff','.tif'):
+        return 'image',mime
     if mime in MIMES:return 'file',mime
     if ext in EXTENSIONS:return 'file',mime or 'application/octet-stream'
     return 'other',mime
