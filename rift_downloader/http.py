@@ -60,19 +60,63 @@ def safe_url(url,resolve=True):
     return host
 
 class RateLimiter:
-    def __init__(self,delay=10.0,clock=time.monotonic,sleep=time.sleep):
-        self.delay=delay
+    """Conservative per-host pacing, persisted to SQLite across process restarts.
+
+    A host cooldown is set *before* each request; if the process crashes during
+    a request, a restarted worker still waits. Caller must own a singleton lock.
+    """
+    def __init__(self,delay=10.0,clock=time.monotonic,sleep=time.sleep,
+                 state=None,wall_clock=time.time):
+        self.delay=float(delay)
         self.clock=clock
         self.sleep=sleep
+        self.wall_clock=wall_clock
+        self.state=state
         self.next_at={}
+        self.last_at={}
+        self.last_wall={}
+    def _saved(self,host):
+        if self.state is None:return (0.,0.)
+        row=self.state.execute(
+            'SELECT last_request_at,next_allowed_at FROM host_pacing WHERE host=?',
+            (host,)).fetchone()
+        return (float(row[0]),float(row[1])) if row else (0.,0.)
+    def _write(self,host,previous,next_allowed):
+        if self.state is not None:
+            with self.state:
+                self.state.execute('''INSERT INTO host_pacing
+                    (host,last_request_at,next_allowed_at,last_updated_at)
+                    VALUES (?,?,?,?)
+                    ON CONFLICT(host) DO UPDATE SET
+                    last_request_at=MAX(host_pacing.last_request_at,excluded.last_request_at),
+                    next_allowed_at=MAX(host_pacing.next_allowed_at,excluded.next_allowed_at),
+                    last_updated_at=excluded.last_updated_at''',
+                    (host,previous,next_allowed,self.wall_clock()))
     def wait(self,host,minimum=None):
+        interval=max(self.delay,float(minimum or 0))
         now=self.clock()
-        remaining=max(0,self.next_at.get(host,0)-now)
-        if remaining:self.sleep(remaining)
-        self.next_at[host]=self.clock()+max(self.delay,minimum or 0)
-        return int(remaining*1000)
+        wall=self.wall_clock()
+        last_saved,next_saved=self._saved(host)
+        last=max(self.last_wall.get(host,0),last_saved)
+        wait=max(0.,self.next_at.get(host,0)-now,
+                 next_saved-wall,
+                 last+interval-wall if last else 0.)
+        if wait:self.sleep(wait)
+        now=self.clock()
+        wall=self.wall_clock()
+        self.next_at[host]=now+interval
+        self.last_at[host]=now
+        self.last_wall[host]=wall
+        self._write(host,wall,wall+interval)
+        return int(round(wait*1000))
     def postpone(self,host,seconds):
-        self.next_at[host]=max(self.next_at.get(host,0),self.clock()+seconds)
+        seconds=max(0.,float(seconds))
+        deadline=self.clock()+seconds
+        self.next_at[host]=max(self.next_at.get(host,0.),deadline)
+        if self.state is not None:
+            previous,next_saved=self._saved(host)
+            wall_deadline=max(next_saved,self.wall_clock()+seconds)
+            self._write(host,previous,wall_deadline)
 
 def retry_after(header):
     if not header:return None
@@ -113,7 +157,7 @@ def kind(mime,url,prefix):
     return 'other',mime
 
 class PoliteHttp:
-    def __init__(self,delay=10,timeout=30,max_bytes=100*1024*1024,session=None,limiter=None,dns_check=True):
+    def __init__(self,delay=10,timeout=30,max_bytes=100*1024*1024,session=None,limiter=None,dns_check=True,on_response=None):
         self.session=session or requests.Session()
         self.session.trust_env=False
         self.session.headers.update({'User-Agent':USER_AGENT,'Accept':'*/*',
@@ -122,11 +166,16 @@ class PoliteHttp:
         self.timeout=timeout
         self.max_bytes=max_bytes
         self.dns_check=dns_check
+        self.on_response=on_response
         self.robots_cache={}
-    def _request(self,url):
+    def _request(self,url,*,minimum=None,purpose='resource'):
         host=safe_url(url,self.dns_check)
-        waited=self.limiter.wait(host)
+        waited=self.limiter.wait(host,minimum=minimum)
+        started=time.monotonic()
         response=self.session.get(url,stream=True,timeout=(10,self.timeout),allow_redirects=False)
+        elapsed=int((time.monotonic()-started)*1000)
+        if self.on_response is not None:
+            self.on_response(url,host,purpose,response.status_code,elapsed,waited)
         return response,waited
     def _robots(self,url):
         parts=urlparse(url)
@@ -134,7 +183,7 @@ class PoliteHttp:
         if origin in self.robots_cache:return self.robots_cache[origin]
         target=origin+'/robots.txt'
         for _ in range(4):
-            response,wait=self._request(target)
+            response,wait=self._request(target,purpose='robots')
             with response:
                 code=response.status_code
                 if code in (301,302,303,307,308):
@@ -243,5 +292,6 @@ class PoliteHttp:
             return {'outcome':'retry','error':str(exc)[:400],'wait_ms':wait_ms,
                     'elapsed_ms':int((time.monotonic()-started)*1000)}
     def _request_with_delay(self,url,host,crawl_delay):
-        if crawl_delay:self.limiter.postpone(host,max(0,crawl_delay-self.limiter.delay))
-        return self._request(url)
+        # A robots crawl-delay is the full interval since the previous request.
+        # The limiter accounts for the previous robot fetch and persisted state.
+        return self._request(url,minimum=crawl_delay,purpose='resource')
