@@ -68,7 +68,7 @@ def export_report(db,output):
                                FROM attempts ORDER BY id''')
     failures_columns=['resource_id','url','source_url','status','attempts','last_error']
     failures=db.execute('''SELECT resource_id,url,source_url,status,attempts,last_error
-                           FROM resources WHERE status IN ('failed','blocked','retry','skipped','html_deferred')
+                           FROM resources WHERE status IN ('failed','blocked','retry','skipped','html_deferred','image_deferred')
                            ORDER BY status,resource_id''')
     # HTTP-level ledger counts robots.txt and redirect requests separately from
     # the URL-level attempt table, which only records its final outcome.
