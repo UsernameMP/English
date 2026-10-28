@@ -19,6 +19,9 @@ def build_service(token_file):
         raise DriveError('Install requirements.txt before using Google Drive') from exc
     token_file=Path(token_file)
     if not token_file.is_file():raise DriveError(f'Missing OAuth token: {token_file}; see README')
+    import stat
+    if stat.S_IMODE(token_file.stat().st_mode) & (stat.S_IRWXG|stat.S_IRWXO):
+        raise DriveError('OAuth token file is not private; run chmod 600 on the VPS token')
     creds=Credentials.from_authorized_user_file(str(token_file),SCOPES)
     if not creds.valid:
         if not creds.refresh_token:raise DriveError('OAuth refresh token missing; authorize again')
