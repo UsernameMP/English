@@ -158,7 +158,13 @@ def summary(db):
       SUM(CASE WHEN http_status=429 THEN 1 ELSE 0 END) http_429
       FROM attempts WHERE domain IS NOT NULL GROUP BY domain ORDER BY requests DESC LIMIT 30''')]
     uploaded=db.execute('SELECT COUNT(*) n,COALESCE(SUM(size_bytes),0) bytes FROM objects WHERE verified_at IS NOT NULL').fetchone()
-    return {'resource_statuses':status,'attempt_outcomes':outcomes,'http_codes':http,
+    physical_http=db.execute('SELECT COUNT(*) FROM http_events').fetchone()[0]
+    physical_codes={str(r['http_status']):r['n'] for r in db.execute('''SELECT http_status,COUNT(*) n
+        FROM http_events WHERE http_status IS NOT NULL GROUP BY http_status''')}
+    robots_requests=db.execute("SELECT COUNT(*) FROM http_events WHERE purpose='robots'").fetchone()[0]
+    return {'http_requests':physical_http,'http_response_codes':physical_codes,
+            'robots_requests':robots_requests,
+            'resource_statuses':status,'attempt_outcomes':outcomes,'http_codes':http,
             'stored_mime':mime,'top_domains':domains,'uploaded_files':uploaded['n'],
             'uploaded_bytes':uploaded['bytes'],
             'requests_attempted':db.execute('SELECT COUNT(*) FROM attempts').fetchone()[0],
