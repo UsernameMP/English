@@ -17,7 +17,7 @@ FIELDS=('resource_id','original_filename','url','source_url','mime_type',
 
 RULES=(
     ('likely_unrelated','high',
-     r'(?<![a-z])(catalog(?:ue)?|databook|campus|site.?map|ynu_map|privacy|terms.?of.?use|staff.?directory)(?![a-z])'),
+     r'(?<![a-z])(catalog(?:ue)?|databook|campus|site.?map|ynu.?map|map|privacy|terms.?of.?use|staff.?directory)(?![a-z])'),
     ('results_or_rankings','high',
      r'(?<![a-z])(results?|rezultate|rezultat|ranking|rankings|classific|winner|winners|medals?|scores?)(?![a-z])'),
     ('grading_and_criteria','medium',
