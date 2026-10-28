@@ -132,6 +132,15 @@ def kind(mime,url,prefix):
     mime=(mime or '').split(';')[0].strip().lower()
     ext=Path(unquote(urlparse(url).path)).suffix.lower()
     first=prefix[:256].lstrip().lower()
+    # Images belong to a later HTML/visual-asset archival stage, not this pilot.
+    # Magic signatures take precedence over misleading server MIME headers.
+    if (prefix.startswith((b'\x89PNG\r\n\x1a\n',b'\xff\xd8\xff',
+                           b'GIF87a',b'GIF89a',b'RIFF')) and
+        not prefix.startswith(b'Rar!')):
+        return 'image',mime
+    if mime.startswith('image/') or Path(unquote(urlparse(url).path)).suffix.lower() in (
+        '.png','.jpg','.jpeg','.gif','.webp','.svg','.bmp','.tiff','.tif'):
+        return 'image',mime
     if first.startswith((b'<!doctype html',b'<html',b'<?xml')) and b'<html' in first[:256]:
         return 'html',mime
     # A recognizable file signature overrides misleading HTML Content-Type or URL suffix.
@@ -252,8 +261,9 @@ class PoliteHttp:
                 mime=response.headers.get('Content-Type','')
                 category,mime=kind(mime,final_url,prefix)
                 if category!='file':
-                    return dict(base,outcome='html_deferred' if category=='html' else 'skipped',
-                                mime=mime,error=None if category=='html' else 'unsupported media')
+                    outcome={'html':'html_deferred','image':'image_deferred'}.get(category,'skipped')
+                    return dict(base,outcome=outcome,mime=mime,
+                                error=None if outcome.endswith('_deferred') else 'unsupported media')
                 filename=Path(unquote(urlparse(final_url).path)).name[:140] or 'download'
                 fd,tmp=tempfile.mkstemp(dir=spool,prefix='.downloading-')
                 size=0;sha=hashlib.sha256();md5=hashlib.md5()
