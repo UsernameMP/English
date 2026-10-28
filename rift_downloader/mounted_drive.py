@@ -59,7 +59,7 @@ class MountedDriveUploader:
         self.context=None
     def set_context(self,row):
         self.context={'resource_id':row['resource_id'],'url':row['url'],
-                      'source_url':row['source_url']}
+                      'source_url':row['source_url'] if 'source_url' in row.keys() else None}
     def _destination(self,sha,filename,category):
         if category not in ('raw','index'):
             raise MountedDriveError('Unknown archive category')
