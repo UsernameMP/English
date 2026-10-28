@@ -33,3 +33,4 @@ jobs:
           python -m rift_downloader.cli --db /tmp/rift_pilot_smoke.sqlite3 import 'source_discovery/resources_shards/resource_*.jsonl'
           python -m rift_downloader.cli --db /tmp/rift_pilot_smoke.sqlite3 status
           python -m rift_downloader.cli --db /tmp/rift_pilot_smoke.sqlite3 plan --sample 5
+          python -m rift_downloader.cli --db /tmp/rift_pilot_smoke.sqlite3 seed --limit 5000
