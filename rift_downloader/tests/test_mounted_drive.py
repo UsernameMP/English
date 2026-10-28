@@ -15,6 +15,7 @@ class MountedDriveTests(unittest.TestCase):
     def test_original_bytes_and_receipt_recover_index_after_interruption(self):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td)/'MyDrive'/'RIFT'
+            root.parent.mkdir(parents=True)
             work=Path(td)/'work';work.mkdir()
             staged=work/'source.pdf';data=b'%PDF-1.7\nGeometry diagram\n'*10
             staged.write_bytes(data)
