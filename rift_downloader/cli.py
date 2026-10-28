@@ -15,6 +15,7 @@ from .http import PoliteHttp,RateLimiter
 from .backup import backup_index,last_backup_count
 from .report import export_report
 from .inventory import inventory
+from .pilot_sample import seed_pilot
 
 def records(patterns):
     for pattern in patterns:
@@ -79,6 +80,7 @@ def cleanup_orphans(db,spool):
 
 def run_pilot(db,args,uploader,worker=None):
     recover(db)
+    seed_pilot(db,limit=getattr(args,'seed_limit',5000))
     if worker is None:
         # Durable request-level pacing across VPS restarts, including robots.txt
         # and redirects; see host_pacing and http_events in SQLite.
@@ -137,6 +139,7 @@ def main(argv=None):
     imp=sub.add_parser('import');imp.add_argument('shards',nargs='+')
     sub.add_parser('status');sub.add_parser('recover');sub.add_parser('pause');sub.add_parser('resume')
     plan=sub.add_parser('plan');plan.add_argument('--sample',type=int,default=12)
+    seed=sub.add_parser('seed');seed.add_argument('--limit',type=int,default=5000)
     report=sub.add_parser('export-report');report.add_argument('--output',required=True)
     run=sub.add_parser('run');run.add_argument('--token',required=True)
     run.add_argument('--spool',default='state/spool');run.add_argument('--limit-success',type=int,default=200)
@@ -146,19 +149,22 @@ def main(argv=None):
     run.add_argument('--spool-max-gb',type=int,default=10)
     run.add_argument('--max-retries',type=int,default=4)
     run.add_argument('--backup-every',type=int,default=25)
+    run.add_argument('--seed-limit',type=int,default=5000)
     run.add_argument('--dry-run',action='store_true')
     args=parser.parse_args(argv)
     db=connect(args.db)
     if args.command=='import':result={'imported':import_resources(db,records(args.shards)),'report':summary(db)}
     elif args.command=='status':result=summary(db)
     elif args.command=='plan':result=inventory(db,sample=max(0,min(100,args.sample)))
+    elif args.command=='seed':
+        with exclusive_runner(args.db):result=seed_pilot(db,limit=args.limit)
     elif args.command=='recover':result=recover(db)
     elif args.command in ('pause','resume'):
         pause(db,args.command=='pause');result={'paused':is_paused(db)}
     elif args.command=='export-report':
         result={'exported':export_report(db,args.output),'report':summary(db)}
     else:
-        if args.limit_success<=0 or args.max_checks<1 or args.min_delay<10 or args.max_file_mb<1 or args.backup_every<1:
+        if args.limit_success<=0 or args.max_checks<1 or args.min_delay<10 or args.max_file_mb<1 or args.backup_every<1 or args.seed_limit<1:
             parser.error('Pilot requires limit>0, max_checks>0, min_delay>=10 sec, max_file_mb>=1')
         if args.dry_run:result={'dry_run':True,'network_requests':0,'report':summary(db)}
         else:
