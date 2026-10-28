@@ -9,9 +9,9 @@ import time
 from pathlib import Path
 from urllib.parse import urlparse
 from .db import (connect,import_resources,claim,recover,set_status,begin_attempt,
-                 exclusive_runner,
+                 exclusive_runner,record_http_event,
                  finish_attempt,event,completed,staged,pause,is_paused,summary)
-from .http import PoliteHttp
+from .http import PoliteHttp,RateLimiter
 from .backup import backup_index,last_backup_count
 from .report import export_report
 
@@ -78,7 +78,13 @@ def cleanup_orphans(db,spool):
 
 def run_pilot(db,args,uploader,worker=None):
     recover(db)
-    worker=worker or PoliteHttp(delay=args.min_delay,max_bytes=args.max_file_mb*1024*1024)
+    if worker is None:
+        # Durable request-level pacing across VPS restarts, including robots.txt
+        # and redirects; see host_pacing and http_events in SQLite.
+        limiter=RateLimiter(delay=args.min_delay,state=db)
+        worker=PoliteHttp(delay=args.min_delay,max_bytes=args.max_file_mb*1024*1024,
+            limiter=limiter,on_response=lambda url,host,purpose,code,elapsed,wait:
+                record_http_event(db,url,host,purpose,code,elapsed,wait))
     spool=Path(args.spool);spool.mkdir(parents=True,exist_ok=True)
     cleanup_orphans(db,spool)
     checks=0
