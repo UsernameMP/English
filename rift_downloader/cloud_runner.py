@@ -141,6 +141,7 @@ def run(argv=None):
     p.add_argument('--source-glob',default='source_discovery/resources_shards/resource_*.jsonl')
     p.add_argument('--drive-root-id',default=os.getenv('RIFT_DRIVE_ROOT_ID',CURRENT_RIFT_ROOT))
     p.add_argument('--limit-urls',type=int,default=200)
+    p.add_argument('--queue-mode',choices=['new','retry'],default='new')
     p.add_argument('--max-checks',type=int,default=500)
     p.add_argument('--min-delay',type=float,default=10.0)
     p.add_argument('--max-file-mb',type=int,default=100)
@@ -172,7 +173,7 @@ def run(argv=None):
         try:
             if args.mode=='batch':
                 settings=SimpleNamespace(limit_success=1000000000,limit_urls=args.limit_urls,
-                    max_checks=args.max_checks,min_delay=args.min_delay,
+                    max_checks=args.max_checks,queue_mode=args.queue_mode,min_delay=args.min_delay,
                     max_file_mb=args.max_file_mb,spool=str(work/'spool'),
                     spool_max_gb=10,max_retries=4,backup_every=25,
                     seed_limit=5000,progress_every=10)
