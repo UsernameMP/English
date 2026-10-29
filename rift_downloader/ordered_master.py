@@ -93,6 +93,8 @@ def sync_ordered_master(db,pattern='auto',minimum=1):
     files=resolve_sources(pattern)
     h=hashlib.sha256()
     seen=0
+    unsafe_count=0
+    duplicate_count=0
     db.execute('BEGIN IMMEDIATE')
     try:
         db.execute('''CREATE TEMP TABLE IF NOT EXISTS rift_master_stage (
@@ -105,7 +107,13 @@ def sync_ordered_master(db,pattern='auto',minimum=1):
         )''')
         db.execute('DELETE FROM rift_master_stage')
         for line,row in iter_master(pattern):
-            url=_valid(row['url'].strip())
+            try:
+                url=_valid(row['url'].strip())
+            except (MasterError,ValueError,AttributeError):
+                # Legacy Discovery indexes include malformed links and URLs
+                # with embedded passwords. Never send them to the HTTP worker.
+                unsafe_count+=1
+                continue
             # For bare TXT/CSV links this ID is stable on every reordering.
             rid=row.get('resource_id') or 'url-'+hashlib.sha256(url.encode('utf-8')).hexdigest()[:32]
             if not isinstance(rid,str) or not rid:
@@ -121,8 +129,12 @@ def sync_ordered_master(db,pattern='auto',minimum=1):
                 seen+=1
                 h.update(url.encode('utf-8'))
                 h.update(b'\n')
+            else:
+                duplicate_count+=1
         if seen<minimum:
             raise MasterError('Master has only '+str(seen)+' unique HTTP(S) URLs')
+        if unsafe_count>max(10,(seen+unsafe_count)//100):
+            raise MasterError('Too many malformed/unsafe entries in master: '+str(unsafe_count))
         # Do not overwrite history or change resource_id, even if the source
         # JSONL was regenerated with different IDs for the same URL.
         db.execute('''INSERT OR IGNORE INTO resources
@@ -154,7 +166,9 @@ def sync_ordered_master(db,pattern='auto',minimum=1):
     first=[dict(row) for row in db.execute('''SELECT source_position,url,status,attempts
        FROM resources WHERE source_position IS NOT NULL
        ORDER BY source_position LIMIT 5''')]
-    return {'master_rows':seen,'master_sha256':digest,'files':files,'first_five':first}
+    return {'master_rows':seen,'master_sha256':digest,'files':files,
+            'ignored_unsafe':unsafe_count,'ignored_duplicates':duplicate_count,
+            'first_five':first}
 
 def lookup_resource(db,*,position=None,url=None,sha=None):
     """User-facing addressability by master line, source URL or content hash."""
