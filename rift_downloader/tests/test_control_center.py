@@ -55,7 +55,7 @@ class ControlCenterTests(unittest.TestCase):
             self.assertEqual(again,'url_limit_reached')
             self.assertEqual(len(worker.urls),12)
             self.assertEqual(db.execute('SELECT COUNT(DISTINCT resource_id) FROM attempts').fetchone()[0],12)
-    def test_live_metrics_have_distinct_attempts_sources_and_no URLs(self):
+    def test_live_metrics_have_distinct_attempts_sources_and_no_urls(self):
         with tempfile.TemporaryDirectory() as path:
             path=Path(path);db=connect(path/'state.db')
             url='https://private.example.org/never-publish-this.pdf'
