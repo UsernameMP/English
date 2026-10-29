@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>RIFT / Downloader Control</title>
+<style>
+:root{color-scheme:dark;--bg:#080e1b;--panel:#111c2e;--border:#263550;--text:#f3f6ff;--muted:#8ea2bc;--blue:#8ab5ff;--cyan:#56d8ed;--green:#65dbac;--amber:#ffc17b;--red:#fc7f90;--purple:#bcabff;--grid:#243248}
+*{box-sizing:border-box}body{font-family:Inter,"Segoe UI",system-ui,-apple-system,sans-serif;color:var(--text);background:radial-gradient(ellipse at 80% -20%,#1c3157 0,transparent 50%),var(--bg);margin:0;line-height:1.45}
+main{max-width:1390px;margin:auto;padding:28px clamp(14px,3vw,42px) 72px}
+header,.top,.actions,.meta,.panel-head,.kpi-foot,.track-meta{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+header{border-bottom:1px solid var(--border);padding-bottom:22px;margin-bottom:30px}
+.logo{display:flex;align-items:center;gap:11px;font-size:13px;font-weight:800;letter-spacing:.14em}
+.logo-mark{display:grid;place-items:center;width:36px;height:36px;background:linear-gradient(150deg,#466ead,#183c57);border:1px solid #4c688a;border-radius:11px;color:#93dfff;font-size:20px}
+.eyebrow{color:var(--cyan);font-weight:700;letter-spacing:.13em;font-size:10px;text-transform:uppercase}
+h1{font-size:clamp(27px,3.7vw,45px);letter-spacing:-.045em;font-weight:720;margin:6px 0 4px}
+h2{font-size:15px;margin:0;letter-spacing:-.015em;font-weight:700}
+p{color:var(--muted);margin:0;font-size:13px;line-height:1.55}
+.small{color:var(--muted);font-size:11px}
+.tag{display:inline-flex;align-items:center;gap:7px;font-size:11px;border-radius:100px;border:1px solid #345271;background:#172944;padding:7px 11px;color:#b0d9ff;font-weight:650}
+.tag:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue)}
+.tag.live:before{background:var(--green)}
+.tag.archive:before{background:var(--amber)}
+a.btn,button{appearance:none;border:1px solid #3a4c67;background:#1a2a42;border-radius:9px;padding:10px 14px;color:#eaf1ff;font-size:12px;font-weight:650;text-decoration:none;cursor:pointer;font-family:inherit;white-space:nowrap}
+a.btn:hover,button:hover{border-color:#86b5ff;background:#243a59}
+button.active{background:#2a4670;border-color:#8bb4ff}
+.top{margin-bottom:24px;align-items:end}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.kpi{min-width:0;border-radius:14px;background:linear-gradient(180deg,#18263b,#111c30);border:1px solid var(--border);padding:18px 19px 15px}
+.kpi-label{font-size:11px;color:#a1b2ca;font-weight:550}
+.kpi-value{font-variant-numeric:tabular-nums;font-size:clamp(26px,3.2vw,37px);letter-spacing:-.05em;font-weight:760;line-height:1.2;margin:9px 0 10px}
+.kpi-foot{font-size:11px;color:var(--muted)}
+.accent{color:var(--green)}.warn{color:var(--amber)}.bad{color:var(--red)}
+.panels{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(290px,1fr);gap:14px;margin-top:14px}
+.panel{min-width:0;border:1px solid var(--border);border-radius:14px;background:rgba(17,28,46,.95);padding:21px}
+.panel-head{margin-bottom:17px}.subhead{color:var(--muted);font-size:11px;margin-top:4px}
+.meter{height:12px;border-radius:12px;background:#25344d;overflow:hidden;margin:14px 0 11px}
+.meter>div{height:100%;background:linear-gradient(90deg,#5d90e8,#60d7d5);border-radius:12px;width:0;transition:width .3s}
+.track-meta{color:var(--muted);font-size:12px}
+.progress-panel{margin-top:14px}
+.ru-note{border-left:2px solid var(--cyan);padding-left:12px;margin-top:14px;color:var(--muted);font-size:12px;word-break:break-word}
+.ru-note.warning{border-color:var(--amber)}
+.vertical{height:220px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:6px;align-items:end;border-bottom:1px solid #465674;padding-bottom:16px;margin-top:24px;position:relative}
+.vertical:before{content:"";position:absolute;inset:0 0 16px 0;pointer-events:none;background:repeating-linear-gradient(to top,transparent 0,transparent calc(25% - 1px),rgba(110,140,178,.16) 25%);z-index:0}
+.column{position:relative;min-width:0;height:100%;display:flex;gap:2px;align-items:end;justify-content:center;z-index:1}
+.column>div{width:42%;min-height:0;background:linear-gradient(0deg,#487bd0,#81b4fa);border-radius:4px 4px 0 0;transition:height .25s;cursor:default}
+.column>div:last-child{background:linear-gradient(0deg,#178d9f,#6ce0d7)}
+.column>div:hover{filter:brightness(1.27)}
+.axis-labels{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:6px;margin-top:9px;font-size:9px;color:#8a9fb9;text-align:center}
+.legend{display:flex;gap:18px;align-items:center;flex-wrap:wrap;font-size:11px;color:#b3c6dd;margin-top:12px}
+.dot{width:8px;height:8px;border-radius:2px;display:inline-block;margin-right:6px;background:var(--blue)}
+.dot.second{background:var(--cyan)}
+.empty{display:grid;place-items:center;text-align:center;min-height:200px;border:1px dashed #35465e;border-radius:10px;color:#9eafc5;font-size:12px;padding:26px}
+.donut-layout{display:flex;align-items:center;gap:25px;justify-content:center;flex-wrap:wrap;min-height:218px}
+.donut{width:168px;height:168px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#6076aa 0 100%);flex:0 0 auto}
+.donut-hole{height:116px;width:116px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;background:#111c2e;text-align:center}
+.donut-hole strong{font-size:29px;font-variant-numeric:tabular-nums;letter-spacing:-.04em}
+.donut-hole small{font-size:11px;color:var(--muted)}
+.donut-legend{flex:1 1 155px;min-width:145px;display:grid;gap:10px;font-size:12px}
+.donut-item{display:flex;justify-content:space-between;gap:9px}
+.donut-key{display:flex;align-items:center;gap:7px;color:#b9c9de}
+.donut-key i{height:9px;width:9px;border-radius:3px;flex:0 0 9px}
+.bar-list{display:grid;gap:13px}
+.bar-item{display:grid;grid-template-columns:minmax(80px,1fr) minmax(120px,3fr) 58px;gap:12px;align-items:center;font-size:11px}
+.bar-label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#b8c9df}
+.bar-value{font-variant-numeric:tabular-nums;text-align:right;font-size:12px;font-weight:600}
+.bar-track{background:#263550;height:10px;border-radius:12px;overflow:hidden}
+.bar-fill{height:100%;background:linear-gradient(90deg,#5b86df,#a1bdff);border-radius:12px}
+.bar-fill.warn{background:linear-gradient(90deg,#c57e57,#ffd389)}
+.bar-fill.fail{background:linear-gradient(90deg,#b64a63,#fb8594)}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+.code-chart{height:180px;display:flex;align-items:end;gap:8px;border-bottom:1px solid #465674;padding:0 4px 20px;position:relative;margin-top:18px}
+.code-chart:before{content:"";position:absolute;inset:0 0 20px;pointer-events:none;background:repeating-linear-gradient(to top,transparent 0,transparent calc(25% - 1px),rgba(110,140,178,.15) 25%)}
+.code-bar{min-width:0;flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;position:relative;z-index:1}
+.code-block{width:100%;max-width:54px;min-height:2px;background:linear-gradient(#6b9cea,#345d9f);border-radius:5px 5px 0 0}
+.code-block.warning{background:linear-gradient(#ffcb7f,#ba7a49)}
+.code-block.error{background:linear-gradient(#f58ba0,#ac445a)}
+.code-value{color:#dce7fa;font-size:10px;font-variant-numeric:tabular-nums;line-height:1.6}
+.code-caption{color:#91a6c1;font-size:10px;position:absolute;bottom:-20px}
+.table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:11px}
+.table th{text-align:left;color:#93a7bd;font-weight:550;border-bottom:1px solid #34445e;padding:9px 7px}
+.table td{padding:10px 7px;color:#c6d5e9;border-bottom:1px solid #23324a;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.table td:last-child,.table th:last-child{text-align:right}
+.table td:nth-child(2),.table th:nth-child(2){text-align:right}
+.mini-data{display:grid;gap:0}
+.mini-data div{display:flex;justify-content:space-between;gap:15px;padding:10px 0;border-bottom:1px solid var(--border);font-size:12px}
+.mini-data span{color:var(--muted)}
+.notice{border-radius:10px;border:1px solid #304862;background:rgba(20,47,71,.45);padding:12px;margin-top:17px;color:#b7c9df;font-size:11px}
+footer{border-top:1px solid var(--border);margin-top:21px;padding-top:20px;color:var(--muted);font-size:11px;line-height:1.7}
+@media(max-width:1120px){.panels{grid-template-columns:1fr 1fr}.donut-layout{gap:8px}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:740px){.panels,.grid-2{grid-template-columns:1fr}.panel{padding:17px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.vertical{height:170px}.top{align-items:start}}
+@media(max-width:420px){.stats{grid-template-columns:1fr 1fr;gap:8px}.kpi{padding:12px}.kpi-value{font-size:24px}.kpi-label{font-size:10px}.kpi-foot{font-size:10px}main{padding:18px 12px 48px}}
+</style></head><body><main>
+<header>
+ <div class="logo"><div class="logo-mark">R</div><div>RIFT <span style="color:#647d9c">/</span> DOWNLOADER</div></div>
+ <div class="meta"><span class="tag" id="state">Снимок данных</span><span class="small" id="timestamp"></span></div>
+</header>
+<div class="top">
+ <div><div class="eyebrow">ARCHIVE OPERATIONS / MONITORING</div><h1>Панель загрузки</h1><p>Наблюдение за URL, оригиналами, ошибками и источниками — без обращения к сайтам.</p></div>
+ <div class="actions"><a class="btn" id="actions" target="_blank" rel="noopener noreferrer">Запуски GitHub</a>
+ <a class="btn" id="drive" target="_blank" rel="noopener noreferrer">Открыть архив Drive</a>
+ <button type="button" onclick="location.reload()">Обновить снимок</button></div>
+</div>
+<div class="stats">
+ <div class="kpi"><div class="kpi-label">Проверено уникальных URL</div><div class="kpi-value" id="urls">—</div><div class="kpi-foot" id="attempts">—</div></div>
+ <div class="kpi"><div class="kpi-label">Оригинальных файлов</div><div class="kpi-value accent" id="files">—</div><div class="kpi-foot" id="size">—</div></div>
+ <div class="kpi"><div class="kpi-label">Отказы 403 + 429</div><div class="kpi-value warn" id="denials">—</div><div class="kpi-foot" id="deny-detail">—</div></div>
+ <div class="kpi"><div class="kpi-label">Не найдено (404)</div><div class="kpi-value bad" id="not-found">—</div><div class="kpi-foot" id="total-http">—</div></div>
+</div>
+<section class="panel progress-panel">
+ <div class="panel-head"><div><h2>Обработка мастер-списка</h2><p class="subhead">Уникальные проверенные URL относительно общего количества в мастер-файле</p></div><div class="tag" id="progress-percentage">—</div></div>
+ <div class="track-meta"><strong id="progress-count">—</strong><span id="progress-total">—</span></div>
+ <div class="meter"><div id="progress-bar"></div></div>
+ <div class="ru-note" id="master-head">Приоритет списка не проверен.</div>
+</section>
+<div class="panels">
+ <section class="panel">
+  <div class="panel-head"><div><h2>Темп работы</h2><p class="subhead">Сколько URL впервые проверено и сколько оригиналов сохранено в день</p></div>
+  <div class="actions"><button type="button" id="days7">7 дней</button><button type="button" class="active" id="days14">14 дней</button><button type="button" id="days30">30 дней</button></div></div>
+  <div id="daily-chart"></div><div class="legend"><span><i class="dot"></i>Проверено URL</span><span><i class="dot second"></i>Сохранено файлов</span></div>
+ </section>
+ <section class="panel">
+  <div class="panel-head"><div><h2>Библиотека оригиналов</h2><p class="subhead">Распределение сохранённых файлов по типам</p></div></div>
+  <div class="donut-layout"><div class="donut" id="donut"><div class="donut-hole"><strong id="donut-total">—</strong><small>файлов</small></div></div>
+  <div class="donut-legend" id="donut-legend"></div></div>
+ </section>
+</div>
+<div class="grid-2">
+ <section class="panel"><div class="panel-head"><div><h2>Результаты проверки URL</h2><p class="subhead">Состояния обработанной очереди, без сотен тысяч ожидающих</p></div></div><div class="bar-list" id="statuses"></div></section>
+ <section class="panel"><div class="panel-head"><div><h2>HTTP-коды</h2><p class="subhead">Все ответы серверов: документы, robots.txt и перенаправления</p></div></div><div id="http-histogram"></div></section>
+</div>
+<div class="grid-2">
+ <section class="panel"><div class="panel-head"><div><h2>Наиболее активные домены</h2><p class="subhead">Частота HTTP-запросов и число отказов 403/429</p></div></div><div id="hosts-table"></div></section>
+ <section class="panel"><div class="panel-head"><div><h2>Состояние системы</h2><p class="subhead">Диагностика и происхождение показателей</p></div></div>
+ <div class="mini-data">
+  <div><span>Режим</span><strong id="mode">—</strong></div>
+  <div><span>Последняя активность</span><strong id="last">—</strong></div>
+  <div><span>Запросы robots.txt</span><strong id="robots">—</strong></div>
+  <div><span>95-й перцентиль ответа</span><strong id="latency">—</strong></div>
+  <div><span>Домены с сохранёнными файлами</span><strong id="domains">—</strong></div>
+  <div><span>Остановка</span><strong id="stop">—</strong></div>
+ </div><div class="notice" id="summary-note">Статистика привязана к последнему сохранённому отчёту.</div></section>
+</div>
+<footer><div id="notes"></div><div>Панель отображает исключительно сохранённые агрегаты; нажатие «Обновить снимок» не запускает скачиватель.
+Для нового запуска и управления расписанием используйте GitHub Actions. Сырые документы остаются в папке RIFT/raw.</div></footer>
+<script id="metrics" type="application/json">__METRICS__</script>
+<script>
+"use strict";
+const $=id=>document.getElementById(id);
+const fmt=n=>new Intl.NumberFormat('ru-RU').format(Number(n||0));
+const set=(id,value)=>{$(id).textContent=String(value)};
+const bytes=n=>{let i=0;n=Number(n)||0;while(n>=1024&&i<4){n/=1024;i++}return n.toFixed(i?1:0)+' '+['Б','КиБ','МиБ','ГиБ','ТиБ'][i]};
+const palette=['#8ab5ff','#65dbac','#ffc17b','#bcabff','#fc7f90','#56d8ed','#68819e'];
+const statusNames={completed:'Сохранено',failed:'Ошибки',blocked:'Запрещено robots',skipped:'Пропущено',
+ retry:'Повторная попытка',html_deferred:'HTML, отложено',image_deferred:'Изображения',checking:'В обработке',downloading:'Загружается',staged:'Скачано локально',uploading:'Запись на Drive'};
+function statusColor(key){if(key==='completed')return '#65dbac';if(key==='failed'||key==='blocked')return '#fc7f90';if(key==='retry')return '#ffc17b';return '#8ab5ff'}
+function create(tag,cls,txt){const el=document.createElement(tag);if(cls)el.className=cls;if(txt!==undefined)el.textContent=String(txt);return el}
+function statusBars(statuses){const root=$('statuses');root.replaceChildren();
+ const items=Object.entries(statuses||{}).filter(x=>x[1]>0&&x[0]!=='pending').sort((a,b)=>b[1]-a[1]);
+ if(!items.length){root.append(create('div','empty','Пока не было обработанных ссылок'));return}
+ const max=Math.max(...items.map(x=>x[1]));
+ for(const [key,n] of items){const el=create('div','bar-item');const name=create('div','bar-label',statusNames[key]||key);name.title=key;
+ const track=create('div','bar-track');const fill=create('div','bar-fill');fill.style.width=(n/max*100).toFixed(1)+'%';
+ fill.style.background=statusColor(key);track.append(fill);
+ el.append(name,track,create('strong','bar-value',fmt(n)));root.append(el)}
+}
+function httpHistogram(codes){const root=$('http-histogram');root.replaceChildren();
+ const entries=Object.entries(codes||{}).map(([code,value])=>[code,Number(value)]).filter(x=>x[1]>0).sort((a,b)=>Number(a[0])-Number(b[0]));
+ if(!entries.length){root.append(create('div','empty','Нет HTTP-статистики'));return}
+ const max=Math.max(...entries.map(x=>x[1]));const plot=create('div','code-chart');
+ for(const [code,value] of entries){const col=create('div','code-bar');col.title='HTTP '+code+': '+fmt(value);
+ const label=create('div','code-value',fmt(value));const bar=create('div','code-block');
+ bar.style.height=Math.max(2,value/max*132)+'px';
+ if(Number(code)>=400&&Number(code)<500)bar.classList.add('warning');
+ if(Number(code)>=500)bar.classList.add('error');
+ col.append(label,bar,create('div','code-caption',code));plot.append(col)}
+ root.append(plot);
+}
+function donut(groups){const root=$('donut-legend');root.replaceChildren();
+ const entries=Object.entries(groups||{}).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]);
+ const total=entries.reduce((sum,x)=>sum+x[1],0);set('donut-total',fmt(total));
+ if(!total){$('donut').style.background='#263550';root.append(create('div','small','Нет сохранённых файлов'));return}
+ let start=0;const fragments=[];
+ for(let i=0;i<entries.length;i++){const [name,n]=entries[i];const color=palette[i%palette.length];
+ const end=start+n/total*100;fragments.push(color+' '+start.toFixed(3)+'% '+end.toFixed(3)+'%');start=end;
+ const item=create('div','donut-item');const label=create('span','donut-key');const key=create('i');
+ key.style.background=color;label.append(key,create('span',null,name));
+ item.append(label,create('strong',null,fmt(n)));root.append(item)}
+ $('donut').style.background='conic-gradient('+fragments.join(',')+')';
+}
+function dailyChart(days,range){const root=$('daily-chart');root.replaceChildren();
+ const items=(days||[]).slice(-range);
+ if(!items.length){root.append(create('div','empty','Для исторического отчёта нет ежедневного ряда. После первого запуска GitHub Actions здесь появятся реальные столбики загрузок.'));return}
+ const max=Math.max(1,...items.map(x=>Math.max(x.urls||0,x.files||0)));
+ const plot=create('div','vertical');plot.style.gridTemplateColumns='repeat('+items.length+',minmax(0,1fr))';
+ const axis=create('div','axis-labels');axis.style.gridTemplateColumns='repeat('+items.length+',minmax(0,1fr))';
+ for(const item of items){const col=create('div','column');
+ const first=create('div');first.style.height=(item.urls?Math.max(2,item.urls/max*100):0)+'%';
+ first.title=item.day+': '+fmt(item.urls)+' URL проверено';
+ const second=create('div');second.style.height=(item.files?Math.max(2,item.files/max*100):0)+'%';
+ second.title=item.day+': '+fmt(item.files)+' файлов сохранено, '+bytes(item.bytes);
+ col.append(first,second);plot.append(col);
+ const label=create('div',null,item.day.slice(8));label.title=item.day;axis.append(label)}
+ root.append(plot,axis);
+}
+function hostTable(items){const root=$('hosts-table');root.replaceChildren();
+ if(!(items||[]).length){root.append(create('div','empty','Статистика доменов появится после следующего запуска'));return}
+ const table=create('table','table');const thead=create('thead');const tr=create('tr');
+ for(const name of ['Домен','Запросов','Отказы'])tr.append(create('th',null,name));
+ thead.append(tr);table.append(thead);const body=create('tbody');
+ for(const h of items.slice(0,8)){const row=create('tr');
+ const name=create('td',null,h.domain||'—');name.title=h.domain||'';
+ row.append(name,create('td',null,fmt(h.requests)),create('td',null,fmt(h.rejections)));body.append(row)}
+ table.append(body);root.append(table);
+}
+function render(d){const m=d.metrics||{};const historical=d.state==='historical';
+ set('state',historical?'Исторический пилот · не live':d.state||'состояние не определено');
+ $('state').classList.toggle('archive',historical);
+ $('state').classList.toggle('live',d.state==='running'||d.state==='completed');
+ set('timestamp','Сформировано: '+(d.generated_at?new Date(d.generated_at).toLocaleString('ru-RU'):'неизвестно'));
+ set('urls',fmt(m.unique_urls_checked));set('attempts',fmt(m.total_url_attempts)+' проверок URL');
+ set('files',fmt(m.unique_files));set('size',bytes(m.stored_bytes)+' сохранено в архив');
+ set('denials',fmt((m.http_403||0)+(m.http_429||0)));
+ set('deny-detail','403: '+fmt(m.http_403)+' / 429: '+fmt(m.http_429));
+ set('not-found',fmt(m.http_404));set('total-http',fmt(m.http_requests)+' HTTP-запросов');
+ const master=d.master||{};const total=master.rows||m.indexed_urls||0;const done=m.unique_urls_checked||0;
+ const pct=total?Math.min(100,done/total*100):0;
+ set('progress-percentage',pct.toFixed(2)+'%');set('progress-count',fmt(done)+' проверено');
+ set('progress-total','Всего: '+fmt(total)+' URL');$('progress-bar').style.width=pct+'%';
+ const head=$('master-head');
+ if(master.first_domain){head.textContent='Первая ссылка мастер-файла: '+master.first_domain+
+   ' · российских доменов среди первых '+fmt(master.head_count)+': '+fmt(master.head_ru_count)+
+   (master.head_ru_expected?' · приоритет RU подтверждён':' · российский приоритет НЕ подтверждён');
+   head.classList.toggle('warning',!master.head_ru_expected);
+ }else{head.textContent='Мастер-файл в этой версии отчёта ещё не синхронизирован. Приоритет RU не проверен.';
+   head.classList.add('warning')}
+ set('mode',d.state||'—');
+ set('last',d.last_activity_at?new Date(d.last_activity_at).toLocaleString('ru-RU'):'—');
+ set('robots',fmt(m.robots_requests));
+ set('latency',m.http_p95_ms==null?'—':fmt(m.http_p95_ms)+' мс');
+ set('domains',fmt(m.successful_domains));set('stop',d.stop_reason||'—');
+ const links=d.links||{};
+ $('actions').href=links.github_actions||'https://github.com/UsernameMP/English/actions';
+ $('drive').href=links.drive_folder||'https://drive.google.com/drive/u/0/my-drive';
+ statusBars(d.url_statuses);httpHistogram(d.http_codes);donut(d.file_groups||d.mime_types);hostTable(d.top_hosts);
+ function choose(days){dailyChart(d.daily,days);
+  for(const range of [7,14,30])$('days'+range).classList.toggle('active',range===days)}
+ for(const range of [7,14,30])$('days'+range).addEventListener('click',()=>choose(range));
+ choose(14);
+ set('summary-note',historical?'Исторический пилот. Эти данные не обновляются автоматически. Откройте последний GitHub Actions отчёт, чтобы увидеть актуальное состояние.':'Отчёт сформирован из SQLite. Это снимок на указанное время; обновление страницы не инициирует проверку новых URL.');
+ set('notes',(d.source||'RIFT')+' · '+(d.notes||[]).join(' '));
+}
+try{render(JSON.parse($('metrics').textContent))}catch(e){set('state','Ошибка чтения отчёта')}
+</script>
+</main></body></html>
