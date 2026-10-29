@@ -22,7 +22,16 @@ def build_service(token_file):
     import stat
     if stat.S_IMODE(token_file.stat().st_mode) & (stat.S_IRWXG|stat.S_IRWXO):
         raise DriveError('OAuth token file is not private; run chmod 600 on the VPS token')
-    creds=Credentials.from_authorized_user_file(str(token_file),SCOPES)
+    import json
+    # Do not silently downscope the previously user-authorized OAuth grant:
+    # unattended Actions migration of Colab files needs broader Drive scope.
+    # The separate cloud runner checks that broader scope explicitly first.
+    grant=json.loads(token_file.read_text(encoding='utf-8'))
+    authorized=grant.get('scopes') or SCOPES
+    if isinstance(authorized,str):authorized=authorized.split()
+    if not set(authorized).issubset(set(SCOPES)|{'https://www.googleapis.com/auth/drive'}):
+        raise DriveError('Unexpected OAuth scopes; refuse to run without review')
+    creds=Credentials.from_authorized_user_file(str(token_file),authorized)
     if not creds.valid:
         if not creds.refresh_token:raise DriveError('OAuth refresh token missing; authorize again')
         creds.refresh(Request())
