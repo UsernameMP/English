@@ -1,0 +1,2564 @@
+[
+  {
+    "host": "olymp.ppms22.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://olymp.ppms22.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "vega28.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1390,
+    "pending": 163,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "xn--29-dlciebkck8c6a.xn--p1ai",
+    "seed_urls": 1,
+    "visited": 56,
+    "html_attempted": 40,
+    "discovered_links": 8348,
+    "pending": 166,
+    "errors": 16,
+    "error_samples": [
+      {
+        "url": "https://созвездие29.рф/olymp/vo/zadaniya-vsosh-proshlykh-let/regionalnyy-etap/zadaniya-regionalnogo-etapa-2021-2022-uchebnogo-goda/",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://созвездие29.рф/olymp/vo/zadaniya-vsosh-proshlykh-let/regionalnyy-etap/zadaniya-regionalnogo-etapa-2024-2025-uchebnogo-goda/",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://созвездие29.рф/olymp/vo/zadaniya-vsosh-proshlykh-let/regionalnyy-etap/zadaniya-regionalnogo-etapa-2025-2026-uchebnogo-goda/",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "xn--80ajlddcoceflnu7byb2cp.xn--p1ai",
+    "seed_urls": 1,
+    "visited": 7,
+    "html_attempted": 1,
+    "discovered_links": 14,
+    "pending": 0,
+    "errors": 6,
+    "error_samples": [
+      {
+        "url": "https://школьныйтехнопарк.рф",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://школьныйтехнопарк.рф/about-rsht/",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://школьныйтехнопарк.рф/contacts",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "aucentr.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 3768,
+    "pending": 596,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://aucentr.ru/архив-образовательных-программ-2020-2023-год/",
+        "kind": "UnicodeEncodeError"
+      }
+    ]
+  },
+  {
+    "host": "talant32.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://talant32.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "viro33.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 6001,
+    "pending": 211,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://viro33.ru/nauchno-metodicheskoe-soprovozhdenie-regionalnoy-sistemy-obrazovaniya/monitoringi-/monitoring.php",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "vgapo.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://vgapo.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "olymp.viro35.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2128,
+    "pending": 74,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "orioncentr.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 7975,
+    "pending": 908,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "eruditolimp.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 226,
+    "pending": 8,
+    "errors": 34,
+    "error_samples": [
+      {
+        "url": "https://eruditolimp.ru/vsosh26-27",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://eruditolimp.ru/vsoh2025",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://eruditolimp.ru/vsosh",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "evrikachita.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1134,
+    "pending": 115,
+    "errors": 28,
+    "error_samples": [
+      {
+        "url": "https://evrikachita.ru/1",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://evrikachita.ru/team",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://evrikachita.ru/obr",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "iv-edu.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://iv-edu.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "perseusirk.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 1,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "antareskbr.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://antareskbr.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "vsosh39.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://vsosh39.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "vsosh40.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 3135,
+    "pending": 40,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://vsosh40.ru/media/documents/2026/07/maks_ball.png",
+        "kind": "non-html:image/png"
+      }
+    ]
+  },
+  {
+    "host": "voshod41.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 6326,
+    "pending": 333,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "sputnik09.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2276,
+    "pending": 50,
+    "errors": 4,
+    "error_samples": [
+      {
+        "url": "https://sputnik09.ru/sites/default/files/styles/max_650x650/public/2026-03/DSC00395.jpg?itok=gga4dRMc",
+        "kind": "non-html:image/jpeg"
+      },
+      {
+        "url": "https://sputnik09.ru/sites/default/files/styles/max_650x650/public/2026-03/DSC00396.jpg?itok=9PkwVVAJ",
+        "kind": "non-html:image/jpeg"
+      },
+      {
+        "url": "https://sputnik09.ru/sites/default/files/styles/max_650x650/public/2026-03/DSC00397.jpg?itok=o1-xG6rQ",
+        "kind": "non-html:image/jpeg"
+      }
+    ]
+  },
+  {
+    "host": "kemsirius.kemobl.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://kemsirius.kemobl.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "olimp43.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1812,
+    "pending": 42,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://olimp43.ru/about/delivery/",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "cdoosh.gosuslugi.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2326,
+    "pending": 108,
+    "errors": 3,
+    "error_samples": [
+      {
+        "url": "https://cdoosh.gosuslugi.ru/netcat_files/24/81/Mishinev_2.jpg",
+        "kind": "non-html:image/jpeg"
+      },
+      {
+        "url": "https://cdoosh.gosuslugi.ru/netcat_files/24/81/Moskaleva.jpg",
+        "kind": "non-html:image/jpeg"
+      },
+      {
+        "url": "https://cdoosh.gosuslugi.ru/netcat_files/24/81/Lagoyda_2.jpg",
+        "kind": "non-html:image/jpeg"
+      }
+    ]
+  },
+  {
+    "host": "prisma23.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://prisma23.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "sputnik.cosmoschool.ru",
+    "seed_urls": 1,
+    "visited": 41,
+    "html_attempted": 40,
+    "discovered_links": 939,
+    "pending": 82,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://sputnik.cosmoschool.ru/auth/login",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "crsk45.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 1,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "uspeh-cod46.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 4074,
+    "pending": 152,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "center-intellect.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://center-intellect.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "vsosh48.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2226,
+    "pending": 129,
+    "errors": 2,
+    "error_samples": [
+      {
+        "url": "https://vsosh48.ru/rss.xml",
+        "kind": "non-html:application/rss+xml; charset=utf-8"
+      },
+      {
+        "url": "https://vsosh48.ru/files/2019-2020",
+        "kind": "URLError"
+      }
+    ]
+  },
+  {
+    "host": "xn--49-6kchoavp6bbkmq.xn--p1ai",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://xn--49-6kchoavp6bbkmq.xn--p1ai",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "xn--l1afu.xn--p1ai",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://цпм.рф",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "olympmo.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 3147,
+    "pending": 182,
+    "errors": 2,
+    "error_samples": [
+      {
+        "url": "https://olympmo.ru/archive-sport.html",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://olympmo.ru/archive-science.html",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "talented51.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 6541,
+    "pending": 229,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "cronao.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 3613,
+    "pending": 162,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://cronao.ru/?Itemid=491",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "vega52.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 4310,
+    "pending": 478,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://vega52.ru/mentoring",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "xn--e1agmcafnpvn.xn--p1ai",
+    "seed_urls": 1,
+    "visited": 41,
+    "html_attempted": 40,
+    "discovered_links": 4497,
+    "pending": 187,
+    "errors": 4,
+    "error_samples": [
+      {
+        "url": "https://центронфим.рф/events/nauka/2trenirovochnye-sbory-po-khimii/",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://xn--e1agmcafnpvn.xn--p1ai/events/",
+        "kind": "UnicodeEncodeError"
+      },
+      {
+        "url": "https://xn--e1agmcafnpvn.xn--p1ai/events/nauka/?period=nowandfuture",
+        "kind": "UnicodeEncodeError"
+      }
+    ]
+  },
+  {
+    "host": "olymp.detinso.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 1,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "sirius55.obr55.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://sirius55.obr55.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "orengagarin.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1820,
+    "pending": 516,
+    "errors": 13,
+    "error_samples": [
+      {
+        "url": "https://orengagarin.ru/assets/02_Sob_centr/MeVOSh/2526/ZD/MHK_zd_10_5.mp4",
+        "kind": "non-html:video/mp4"
+      },
+      {
+        "url": "https://orengagarin.ru/assets/02_Sob_centr/MeVOSh/2526/ZD/MHK_zd_9_5.5.mp3",
+        "kind": "non-html:audio/mpeg"
+      },
+      {
+        "url": "https://orengagarin.ru/assets/02_Sob_centr/MeVOSh/2526/ZD/MHK_zd_9_5.4.mp3",
+        "kind": "non-html:audio/mpeg"
+      }
+    ]
+  },
+  {
+    "host": "xn--h1albh.xn--p1ai",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 14692,
+    "pending": 400,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "licpnz.ru",
+    "seed_urls": 1,
+    "visited": 42,
+    "html_attempted": 40,
+    "discovered_links": 5054,
+    "pending": 372,
+    "errors": 3,
+    "error_samples": [
+      {
+        "url": "https://licpnz.ru/news/rss/",
+        "kind": "non-html:text/xml; charset=utf-8"
+      },
+      {
+        "url": "https://licpnz.ru/register",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://licpnz.ru/index/10",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "academy-1.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 3111,
+    "pending": 182,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "sirius-prim.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1209,
+    "pending": 19,
+    "errors": 3,
+    "error_samples": [
+      {
+        "url": "https://sirius-prim.ru/about/history",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://sirius-prim.ru/about/team",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://sirius-prim.ru/events",
+        "kind": "html-page-too-large"
+      }
+    ]
+  },
+  {
+    "host": "geniuscentr.pskovedu.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1695,
+    "pending": 44,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "remshagu.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://remshagu.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "altaysirius.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 4494,
+    "pending": 147,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "avroracenter.com",
+    "seed_urls": 1,
+    "visited": 2,
+    "html_attempted": 2,
+    "discovered_links": 364,
+    "pending": 0,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "astorium03.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://astorium03.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "olimp.dgunh.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://olimp.dgunh.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "minobr06.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 5580,
+    "pending": 107,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "rcdt-rk.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2969,
+    "pending": 208,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "sirius10.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 5117,
+    "pending": 307,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://sirius10.ru/?page_id=1679",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "vsoh.ricoko.ru",
+    "seed_urls": 1,
+    "visited": 6,
+    "html_attempted": 6,
+    "discovered_links": 772,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://vsoh.ricoko.ru/подготовка-к-всош/",
+        "kind": "UnicodeEncodeError"
+      }
+    ]
+  },
+  {
+    "host": "krippo.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2245,
+    "pending": 477,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "pedagog13.gosuslugi.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2244,
+    "pending": 122,
+    "errors": 7,
+    "error_samples": [
+      {
+        "url": "https://pedagog13.gosuslugi.ru/netcat_files/multifile/78/530/JL8wnXxfcIsriihZ3uDaqp6_2fCietRuL9ileJg8KwkjlxUHhgl15_op0oTWgCpRzBuFeSIgZ9OPALnjkjXCHoDP_1_.jpg",
+        "kind": "non-html:image/jpeg"
+      },
+      {
+        "url": "https://pedagog13.gosuslugi.ru/netcat_files/multifile/78/530/8NDeFfJuPIU7l3T2MJk7P7dK9IyzCmNOQS8qNL8PwkcQ5g3jIYbdaARw3n8kG_mpBOUEKaO7x_36Oq2F7eKFpQHp_1_.jpg",
+        "kind": "non-html:image/jpeg"
+      },
+      {
+        "url": "https://pedagog13.gosuslugi.ru/netcat_files/18/74/iV2KRa7DbnhD20tIT4tjf1DN1otu9ipnBw6qIZ1DC8Xe1gAdj1OIw0hAc0Mms7i4xO3qtpUxqhlkBi8WD2tPhEjR_1_.jpg",
+        "kind": "non-html:image/jpeg"
+      }
+    ]
+  },
+  {
+    "host": "lensky-kray.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2977,
+    "pending": 417,
+    "errors": 5,
+    "error_samples": [
+      {
+        "url": "https://lensky-kray.ru/index.php?r=projects/view&id=9",
+        "kind": "TimeoutError"
+      },
+      {
+        "url": "https://lensky-kray.ru/bargaryy.ykt.ru",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://lensky-kray.ru/aostng.ru",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "xn--15-6kchps9aw6e.xn--p1ai",
+    "seed_urls": 1,
+    "visited": 41,
+    "html_attempted": 40,
+    "discovered_links": 2892,
+    "pending": 352,
+    "errors": 2,
+    "error_samples": [
+      {
+        "url": "https://xn--15-6kchps9aw6e.xn--p1ai/intelligence/",
+        "kind": "html-page-too-large"
+      },
+      {
+        "url": "https://xn--15-6kchps9aw6e.xn--p1ai/conf/",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "olimprocrt.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://olimprocrt.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "ipk19.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 7215,
+    "pending": 196,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "rcoi61.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2733,
+    "pending": 37,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "62cod.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://62cod.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "iro63.ru",
+    "seed_urls": 1,
+    "visited": 109,
+    "html_attempted": 40,
+    "discovered_links": 12498,
+    "pending": 73,
+    "errors": 69,
+    "error_samples": [
+      {
+        "url": "https://iro63.ru/razvitie-potentsiala/pedagogicheskie-soobshchestva/uchebno-metodicheskoe-obedinenie-po-problemam-vospitaniya/",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://iro63.ru/upload/iblock/221/221747b2ffa2d25cffd480168e75611f.jpg",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://iro63.ru/upload/iblock/253/25330e311b918b8f424eeb622ca03b79.jpg",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "olymp.academtalant.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 716,
+    "pending": 30,
+    "errors": 16,
+    "error_samples": [
+      {
+        "url": "https://olymp.academtalant.ru/main",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "http://olymp.academtalant.ru/docs",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "http://olymp.academtalant.ru/struve",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "olymp.soiro.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://olymp.soiro.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "cvipod.rcoko65.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://cvipod.rcoko65.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "zsfond.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://zsfond.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "sev-iro.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 5455,
+    "pending": 165,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "smololimp.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2842,
+    "pending": 123,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "olymp.ncfu.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://olymp.ncfu.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "olympiada.68edu.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://olympiada.68edu.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "oriontver69.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 4406,
+    "pending": 76,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "pulsar70.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 1,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "education.tularegion.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://education.tularegion.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "np.fmschool72.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2457,
+    "pending": 116,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "tau18.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2198,
+    "pending": 53,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "odarendeti73.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 6773,
+    "pending": 303,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "obr-khv.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 6250,
+    "pending": 347,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://obr-khv.ru/worldskills/?bitrix_include_areas=N&clear_cache=Y",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "olymp.iro86.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://olymp.iro86.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "khano.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://khano.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "chiro74.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://chiro74.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "rctt.dod95.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://rctt.dod95.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "etker.rchuv.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 1,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://etker.rchuv.ru",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "chao.chiroipk.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 5056,
+    "pending": 107,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "riro.yanao.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://riro.yanao.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "newschool-yar.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2876,
+    "pending": 36,
+    "errors": 13,
+    "error_samples": [
+      {
+        "url": "https://newschool-yar.ru/component/content/category/медиаархив",
+        "kind": "UnicodeEncodeError"
+      },
+      {
+        "url": "https://newschool-yar.ru/svedeniya/доступная-среда",
+        "kind": "UnicodeEncodeError"
+      },
+      {
+        "url": "https://newschool-yar.ru/obrashcheniya-grazhdan/нормативные-правовые-акты,-регулирующие-порядок-рассмотрения-обращений",
+        "kind": "UnicodeEncodeError"
+      }
+    ]
+  },
+  {
+    "host": "olimpiada.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2668,
+    "pending": 776,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "siriusolymp.ru",
+    "seed_urls": 1,
+    "visited": 42,
+    "html_attempted": 40,
+    "discovered_links": 2649,
+    "pending": 123,
+    "errors": 15,
+    "error_samples": [
+      {
+        "url": "https://siriusolymp.ru/school2026/participant",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://siriusolymp.ru/school2026/organizers",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://siriusolymp.ru/{{link@url}}",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "vserosolimp.edsoo.ru",
+    "seed_urls": 1,
+    "visited": 42,
+    "html_attempted": 40,
+    "discovered_links": 2462,
+    "pending": 19,
+    "errors": 13,
+    "error_samples": [
+      {
+        "url": "https://vserosolimp.edsoo.ru/economy",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://vserosolimp.edsoo.ru/obshestvo",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://vserosolimp.edsoo.ru/osnovybezopasn",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "mccme.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1660,
+    "pending": 397,
+    "errors": 3,
+    "error_samples": [
+      {
+        "url": "https://mccme.ru/matematicheskie-shkoly-i-klassy",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://mccme.ru/zhurnaly",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://mccme.ru/matematicheskie-kruzhki-i-konferencii-shkolnikov",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "problems.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1141,
+    "pending": 193,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "vos.olimpiada.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 3456,
+    "pending": 117,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "www.pdmi.ras.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://www.pdmi.ras.ru/~olymp/",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "anokmc.ru",
+    "seed_urls": 2,
+    "visited": 32,
+    "html_attempted": 32,
+    "discovered_links": 886,
+    "pending": 0,
+    "errors": 13,
+    "error_samples": [
+      {
+        "url": "https://anokmc.ru/events",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://anokmc.ru/event-mat-game",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://anokmc.ru/event-gor-olimp",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "olimpinno.ru",
+    "seed_urls": 1,
+    "visited": 41,
+    "html_attempted": 40,
+    "discovered_links": 913,
+    "pending": 193,
+    "errors": 2,
+    "error_samples": [
+      {
+        "url": "https://olimpinno.ru/account/",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://olimpinno.ru/videos/mif-april-2026-light.mp4",
+        "kind": "non-html:video/mp4"
+      }
+    ]
+  },
+  {
+    "host": "coko-eao.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://coko-eao.ru/",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "www.crokk.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://www.crokk.ru/pages/olimp/russia/",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "olymp.lpr-reg.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 1,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "vsosh.rtyva.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://vsosh.rtyva.ru/",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "talant22.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2445,
+    "pending": 157,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://talant22.ru/proekty/",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "xn--d1atx.xn--80ajlddcoceflnu7byb2cp.xn--p1ai",
+    "seed_urls": 1,
+    "visited": 42,
+    "html_attempted": 40,
+    "discovered_links": 5193,
+    "pending": 315,
+    "errors": 11,
+    "error_samples": [
+      {
+        "url": "http://цод.школьныйтехнопарк.рф/решение-олимпиадных-задач-по-математ/",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "http://цод.школьныйтехнопарк.рф/большиевызовы/",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://xn--d1atx.xn--80ajlddcoceflnu7byb2cp.xn--p1ai/образовательные-программы/",
+        "kind": "UnicodeEncodeError"
+      }
+    ]
+  },
+  {
+    "host": "siriusbaikonur.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://siriusbaikonur.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "cpod.viro33.ru",
+    "seed_urls": 1,
+    "visited": 41,
+    "html_attempted": 40,
+    "discovered_links": 6689,
+    "pending": 178,
+    "errors": 3,
+    "error_samples": [
+      {
+        "url": "https://cpod.viro33.ru/nashi-sobytiya/",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://cpod.viro33.ru/search/",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://cpod.viro33.ru/nashi-meropriyatiya/konkursy/oblastnoy-konkurs-na-znanie-russkogo-yazyka-sredi-shkolnikov-vladimirskoy-oblasti-gramotei-ru/oblastnoy-konkurs-na-znanie-russkogo-yazyka-sredi-shkolnikov-vladimirskoy-oblasti-gramotei-ru.php",
+        "kind": "URLError"
+      }
+    ]
+  },
+  {
+    "host": "volna-talant.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 8933,
+    "pending": 517,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://volna-talant.ru/roditelyam1/chasto-zadavaemye-voprosy.php",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "impulse35.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 3722,
+    "pending": 216,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "alye-parusa-eao.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 1,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://alye-parusa-eao.ru",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "solaris37.ru",
+    "seed_urls": 1,
+    "visited": 17,
+    "html_attempted": 17,
+    "discovered_links": 223,
+    "pending": 0,
+    "errors": 8,
+    "error_samples": [
+      {
+        "url": "https://solaris37.ru/docs",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://solaris37.ru/gimn",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://solaris37.ru/faq",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "tsod39.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2622,
+    "pending": 70,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "kalugacod.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 4600,
+    "pending": 290,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "kemsirius.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://kemsirius.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "cdoosh.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://cdoosh.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "ant44.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1500,
+    "pending": 242,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://ant44.ru/author/admin/",
+        "kind": "URLError"
+      }
+    ]
+  },
+  {
+    "host": "strategy48.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1983,
+    "pending": 206,
+    "errors": 4,
+    "error_samples": [
+      {
+        "url": "https://strategy48.ru/node/27",
+        "kind": "URLError"
+      },
+      {
+        "url": "https://strategy48.ru/olympconf",
+        "kind": "URLError"
+      },
+      {
+        "url": "https://strategy48.ru/node/62",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "mayak83.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2997,
+    "pending": 45,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "altairdonso.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 4588,
+    "pending": 724,
+    "errors": 5,
+    "error_samples": [
+      {
+        "url": "https://altairdonso.ru/wp-content/uploads/razbor-zadanij_fizika_1-100-1024x576.jpg",
+        "kind": "non-html:image/jpeg"
+      },
+      {
+        "url": "https://altairdonso.ru/wp-content/uploads/razbor-zadanij_biologiya_1-100-1024x576.jpg",
+        "kind": "non-html:image/jpeg"
+      },
+      {
+        "url": "https://altairdonso.ru/wp-content/uploads/razbor-zadanij_himiya_1-100-1024x576.jpg",
+        "kind": "non-html:image/jpeg"
+      }
+    ]
+  },
+  {
+    "host": "xn--e1aqjhr.xn----8sbeiebkck6ayi0ad.xn--p1ai",
+    "seed_urls": 1,
+    "visited": 42,
+    "html_attempted": 40,
+    "discovered_links": 2149,
+    "pending": 235,
+    "errors": 2,
+    "error_samples": [
+      {
+        "url": "http://центр.созвездие-орла.рф/kalendar-programm_sub3.html",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "http://центр.созвездие-орла.рф/kalendar-programm_sub11.html",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "kluchevskycenter.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 396,
+    "pending": 20,
+    "errors": 34,
+    "error_samples": [
+      {
+        "url": "https://kluchevskycenter.ru/faq",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://kluchevskycenter.ru/structura",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://kluchevskycenter.ru/documents",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "vega.pskovedu.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://vega.pskovedu.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "polaris-adygea.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://polaris-adygea.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "altair-rd.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 823,
+    "pending": 159,
+    "errors": 16,
+    "error_samples": [
+      {
+        "url": "https://altair-rd.ru/courses",
+        "kind": "html-page-too-large"
+      },
+      {
+        "url": "https://altair-rd.ru/news/3547-ваш-билет-в-мир-творчества-и-медиа-уже-доступен.html",
+        "kind": "UnicodeEncodeError"
+      },
+      {
+        "url": "https://altair-rd.ru/news/3548-роботы-коды-схемы-и-инженерия-ждут-вас.html",
+        "kind": "UnicodeEncodeError"
+      }
+    ]
+  },
+  {
+    "host": "codolimp.gosuslugi.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 6858,
+    "pending": 191,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "talant.rkomi.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://talant.rkomi.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "odarennye-deti.crm.eduru.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://odarennye-deti.crm.eduru.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "volgenche.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://volgenche.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "mira.edurm.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 810,
+    "pending": 18,
+    "errors": 18,
+    "error_samples": [
+      {
+        "url": "https://mira.edurm.ru/архив-программ/",
+        "kind": "UnicodeEncodeError"
+      },
+      {
+        "url": "https://mira.edurm.ru/план-программ/",
+        "kind": "UnicodeEncodeError"
+      },
+      {
+        "url": "https://mira.edurm.ru/состав-попечительского-совета/",
+        "kind": "UnicodeEncodeError"
+      }
+    ]
+  },
+  {
+    "host": "utalents.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1988,
+    "pending": 21,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://utalents.ru/mentors-and-experts",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "deti.rtyva.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://deti.rtyva.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "altair19.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://altair19.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "stupeni-uspeha.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 4629,
+    "pending": 663,
+    "errors": 13,
+    "error_samples": [
+      {
+        "url": "https://stupeni-uspeha.ru/informasia/informasia/chasto-zadavaemyie-voprosyi",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://stupeni-uspeha.ru/o-nas/svedeniya-ob-uchrezhdenii/informasia/chasto-zadavaemyie-voprosyi",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://stupeni-uspeha.ru/o-nas/informasia/chasto-zadavaemyie-voprosyi",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "codsamara.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 9493,
+    "pending": 203,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "academtalant.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://academtalant.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "galaktika64.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 1,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "altair.one",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2088,
+    "pending": 75,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "xn--26-vlca3bedp.xn--p1ai",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 14864,
+    "pending": 812,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "talant.68edu.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 3825,
+    "pending": 132,
+    "errors": 4,
+    "error_samples": [
+      {
+        "url": "https://talant.68edu.ru/дооп-работа-с-олимпиадными-заданиям/",
+        "kind": "UnicodeEncodeError"
+      },
+      {
+        "url": "https://talant.68edu.ru/дооп-теория-и-практика-решения-олимп/",
+        "kind": "UnicodeEncodeError"
+      },
+      {
+        "url": "https://talant.68edu.ru/контакты/",
+        "kind": "UnicodeEncodeError"
+      }
+    ]
+  },
+  {
+    "host": "kompleksyasnopolyanskij-r71.gosweb.gosuslugi.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 7793,
+    "pending": 290,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "sirius27.kco27.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://sirius27.kco27.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "xn--b1acg7bcla5a1cv.xn--p1ai",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 4342,
+    "pending": 112,
+    "errors": 23,
+    "error_samples": [
+      {
+        "url": "https://xn--b1acg7bcla5a1cv.xn--p1ai/summer-vacation/archive",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://xn--b1acg7bcla5a1cv.xn--p1ai/contacts",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://xn--b1acg7bcla5a1cv.xn--p1ai/sveden/common",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "kurchatovcenter.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://kurchatovcenter.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "talent.chopl.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 3059,
+    "pending": 53,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "newschool.yar.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://newschool.yar.ru",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "rsr-olymp.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2669,
+    "pending": 96,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "matol.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2159,
+    "pending": 21,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "codolymp.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1116,
+    "pending": 76,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "dovuz.sfu.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 28404,
+    "pending": 321,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://dovuz.sfu.ru/http:/admissions.sfu-kras.ru/exams",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "matznanie.ru",
+    "seed_urls": 1,
+    "visited": 36,
+    "html_attempted": 30,
+    "discovered_links": 995,
+    "pending": 0,
+    "errors": 20,
+    "error_samples": [
+      {
+        "url": "http://www.matznanie.ru/examples/examples.html",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://www.matznanie.ru/examples/examples.html",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "https://matznanie.ru/competitions/oo25_pub_results.ods",
+        "kind": "non-html:application/vnd.oasis.opendocument.spreadsheet"
+      }
+    ]
+  },
+  {
+    "host": "turgor.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1095,
+    "pending": 43,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://turgor.ru/problems/23/resh.115",
+        "kind": "non-html:"
+      }
+    ]
+  },
+  {
+    "host": "turlom.olimpiada.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 1,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://turlom.olimpiada.ru/old",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "math.mosolymp.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2086,
+    "pending": 229,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "olimpiadakurchatov.ru",
+    "seed_urls": 1,
+    "visited": 13,
+    "html_attempted": 13,
+    "discovered_links": 543,
+    "pending": 0,
+    "errors": 3,
+    "error_samples": [
+      {
+        "url": "https://olimpiadakurchatov.ru/tpost/g4y225tyk1-opublikovani-prohodnie-balli",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://olimpiadakurchatov.ru/instruction",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "http://olimpiadakurchatov.ru/instructions",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "olymp.msu.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1830,
+    "pending": 325,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "olympiads.mccme.ru",
+    "seed_urls": 2,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 721,
+    "pending": 169,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "sesc.nsu.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 6095,
+    "pending": 152,
+    "errors": 9,
+    "error_samples": [
+      {
+        "url": "https://sesc.nsu.ru/enrollees/",
+        "kind": "URLError"
+      },
+      {
+        "url": "https://sesc.nsu.ru/school/why-sesc/",
+        "kind": "TimeoutError"
+      },
+      {
+        "url": "https://sesc.nsu.ru/education/",
+        "kind": "URLError"
+      }
+    ]
+  },
+  {
+    "host": "yumsh.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 3099,
+    "pending": 86,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "odkzn.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1551,
+    "pending": 96,
+    "errors": 2,
+    "error_samples": [
+      {
+        "url": "https://odkzn.ru/✍️Примерные задания (подготовка)✍️",
+        "kind": "InvalidURL"
+      },
+      {
+        "url": "https://odkzn.ru/files/009/932/246/9932246/original/%D0%A1%D0%BE%D0%B3%D0%BB%D0%B0%D1%81%D0%B8%D0%B5_%D0%BD%D0%B0_%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D1%83_%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85__%D1%80%D0%B0%D0%B7%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BD%D0%B0_%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D1%84%D0%BE%D1%82%D0%BE_%D0%B8_%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B8__%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B8%D1%85_%D0%B2_%D1%81%D0%B5%D1%82%D0%B8_%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82.pdf.crdownload",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "olymp.kazan-math.info",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 875,
+    "pending": 9,
+    "errors": 25,
+    "error_samples": [
+      {
+        "url": "https://olymp.kazan-math.info/2026/03/18/final_solutions/kazan-math.info/svedeniya/",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://olymp.kazan-math.info/kazan-math.info/svedeniya/",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://olymp.kazan-math.info/final_prelim/",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "vsosh-vrn.orioncentr.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1777,
+    "pending": 264,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "mon.zo.gov.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1734,
+    "pending": 113,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "olimpiada48.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 1,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "regionolymp.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 5658,
+    "pending": 96,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://regionolymp.ru/задания-муниципального-этапа-всерос/",
+        "kind": "UnicodeEncodeError"
+      }
+    ]
+  },
+  {
+    "host": "edu.mari.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://edu.mari.ru/",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "ntcontest.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 4352,
+    "pending": 112,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "rm.kirov.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://rm.kirov.ru/",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "olymp.bmstu.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 6105,
+    "pending": 217,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "olymp.mephi.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 0,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 1,
+    "error_samples": [
+      {
+        "url": "https://olymp.mephi.ru/rosatom/about",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "ptlab.mccme.ru",
+    "seed_urls": 1,
+    "visited": 42,
+    "html_attempted": 40,
+    "discovered_links": 3423,
+    "pending": 79,
+    "errors": 2,
+    "error_samples": [
+      {
+        "url": "http://ptlab.mccme.ru/node/add/question?gids[]=1493",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "http://ptlab.mccme.ru/node/add/question?gids[]=330",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  },
+  {
+    "host": "olymp-online.mipt.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1559,
+    "pending": 285,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "olymp.itmo.ru",
+    "seed_urls": 1,
+    "visited": 1,
+    "html_attempted": 1,
+    "discovered_links": 0,
+    "pending": 0,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "olympiada.spbu.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 2655,
+    "pending": 54,
+    "errors": 0,
+    "error_samples": []
+  },
+  {
+    "host": "dovuz.urfu.ru",
+    "seed_urls": 1,
+    "visited": 40,
+    "html_attempted": 40,
+    "discovered_links": 1739,
+    "pending": 137,
+    "errors": 2,
+    "error_samples": [
+      {
+        "url": "https://dovuz.urfu.ru/olymps/site/privacy",
+        "kind": "HTTPError"
+      },
+      {
+        "url": "https://dovuz.urfu.ru/olymps/izumrud/site/privacy",
+        "kind": "HTTPError"
+      }
+    ]
+  },
+  {
+    "host": "dovuz.innopolis.university",
+    "seed_urls": 1,
+    "visited": 46,
+    "html_attempted": 40,
+    "discovered_links": 1879,
+    "pending": 17,
+    "errors": 15,
+    "error_samples": [
+      {
+        "url": "http://dovuz.innopolis.university/offline-programms",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "http://dovuz.innopolis.university/pre-olympiads",
+        "kind": "robots_denied_or_unavailable"
+      },
+      {
+        "url": "http://dovuz.innopolis.university/preparation",
+        "kind": "robots_denied_or_unavailable"
+      }
+    ]
+  }
+]

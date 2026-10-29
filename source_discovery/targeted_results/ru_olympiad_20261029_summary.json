@@ -1,0 +1,20 @@
+{
+  "seed_urls": 171,
+  "seed_hosts": 169,
+  "existing_unique_resources": 332292,
+  "target_priority_unique_urls": 59085,
+  "new_unique_resource_urls": 53863,
+  "new_raw_link_occurrences": 238018,
+  "visited_html_pages": 4192,
+  "hosts_with_html": 120,
+  "hosts_with_discoveries": 109,
+  "hosts_blocked_or_unreachable": 49,
+  "pending_targeted_pages": 20506,
+  "new_source_registry_entries": 171,
+  "new_raw_shards": 2381,
+  "new_resource_shards": 539,
+  "download_priority_all_count": 386225,
+  "download_priority_file_candidate_count": 105052,
+  "download_priority_manifest": "targeted_results/ru_olympiad_20261029_downloader_priority_urls.txt.gz",
+  "download_file_candidate_manifest": "targeted_results/ru_olympiad_20261029_downloader_priority_documents.txt.gz"
+}
