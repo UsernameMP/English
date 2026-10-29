@@ -1,5 +1,45 @@
 # RIFT Downloader — 200-file pilot
 
+## Актуальный мастер-список: строгий порядок сверху вниз
+
+GitHub Actions **при каждом запуске** перечитывает мастер-файл ссылок из
+`rift-source-index`. Новые URL, добавленные в его начало, идут первыми;
+старый приоритет по доменам (`pilot_rank`) для новых запусков игнорируется.
+Прошлые попытки и загруженные файлы сопоставляются по URL и SHA-256:
+передвижение ссылки на другую строку **не вызывает повторной загрузки**.
+
+При выборе `source_path=auto` загрузчик берёт первый доступный файл:
+
+- `source_discovery/download_master.jsonl`
+- `source_discovery/download_master.csv`
+- `source_discovery/download_master.txt`
+- если единого файла ещё нет, существующие
+  `source_discovery/resources_shards/resource_*.jsonl` по порядку шарда и строки.
+
+Путь можно переопределить в параметре `source_path` на экране
+GitHub Actions или в переменной репозитория `RIFT_MASTER_PATH` для расписания.
+Если явно указанный мастер-файл не найден, запуск **останавливается с ошибкой**,
+не подменяя его другим индексом. Все сохранённые файлы остаются в
+`RIFT/raw` (никакого `TMP`). Уже существующие 200 оригиналов
+не перемещаются и не удаляются.
+
+```bash
+# Пересчитать позиции ссылок без обращений к сайтам:
+python -m rift_downloader.cli --db state/rift.sqlite3 sync-master --source auto
+
+# Найти конкретный ресурс по позиции, URL или хешу файла:
+python -m rift_downloader.cli --db state/rift.sqlite3 lookup --position 1
+python -m rift_downloader.cli --db state/rift.sqlite3 lookup --url 'https://example.org/tasks.pdf'
+python -m rift_downloader.cli --db state/rift.sqlite3 lookup --sha256 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+```
+
+Отчёт содержит `pilot_report_url_ledger.csv` с каждой обработанной ссылкой,
+позицией в мастере, URL страницы-источника, результатом HTTP, ошибкой,
+SHA-256, MIME, размером и идентификатором файла в Drive. Старые файлы,
+которых в текущем мастер-списке нет, сохраняются в архиве и учёте,
+но больше не попадают в новую очередь.
+
+
 ## Автоматическая работа и дашборд через GitHub Actions
 
 **Новый режим:** [инструкция по управлению загрузчиком и настройке GitHub Actions](ACTIONS_SETUP.md).
