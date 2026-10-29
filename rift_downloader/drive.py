@@ -48,8 +48,9 @@ def file_md5(path):
     return md5.hexdigest()
 
 class DriveUploader:
-    def __init__(self,service):
+    def __init__(self,service,root_folder_id=None):
         self.service=service
+        self.root_folder_id=root_folder_id
         self.folder_cache={}
     def _folder(self,name,parent=None):
         key=(name,parent)
@@ -91,7 +92,9 @@ class DriveUploader:
             for obj in self._hash_remote(sha):
                 if int(obj.get('size',-1))==size and obj.get('md5Checksum')==md5:
                     return self._verified(obj['id'],size,md5)
-            root=self._folder('RIFT')
+            # A pinned existing folder is essential when using a dedicated
+            # Google account with the owner's RIFT folder shared into it.
+            root=self.root_folder_id or self._folder('RIFT')
             if category not in ('raw','index'):
                 raise DriveError('Unsupported Drive storage category')
             folder=self._folder(category,root)
