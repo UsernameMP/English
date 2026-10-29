@@ -132,6 +132,59 @@ def actions_summary(metrics,folder_id,checkpoint):
         lines.append('Verified SQLite checkpoint SHA-256: '+checkpoint['sha256'])
     return '\n'.join(lines)
 
+def upload_run_reports(service,root_id,outdir,run_id=None):
+    """Write a *new*, isolated per-run report folder without altering old files.
+
+    The Google Drive API returns IDs and MD5 hashes; no Drive FUSE cache is used.
+    Repeating the same GitHub run is idempotent by name+MD5 verification.
+    """
+    import mimetypes
+    from googleapiclient.http import MediaFileUpload
+    from .drive import file_md5
+    reports_id=existing_folder(service,root_id,'reports')
+    suffix=str(run_id) if run_id else str(int(__import__('time').time()))
+    if not re.fullmatch(r'[A-Za-z0-9_-]{1,90}',suffix):
+        raise CloudRunError('Unsafe report run identifier')
+    name='actions-'+suffix
+    q=(f"name = '{name}' and mimeType = 'application/vnd.google-apps.folder' "
+       f"and '{reports_id}' in parents and trashed = false")
+    previous=service.files().list(q=q,fields='files(id)',page_size=100).execute().get('files',[])
+    if len(previous)>1:
+        raise CloudRunError('Duplicate report run folders found; refusing ambiguous write')
+    if previous:
+        target=previous[0]['id']
+    else:
+        target=service.files().create(body={
+            'name':name,'mimeType':'application/vnd.google-apps.folder',
+            'parents':[reports_id]},fields='id').execute()['id']
+    saved=[]
+    for path in sorted(Path(outdir).iterdir()):
+        if not path.is_file() or path.suffix.lower() not in ('.html','.json','.csv','.md'):
+            continue
+        mime=mimetypes.guess_type(path.name)[0] or 'application/octet-stream'
+        md5=file_md5(path)
+        size=path.stat().st_size
+        escaped=path.name.replace('\\','\\\\').replace("'","\\'")
+        existing=service.files().list(q=(
+            f"name = '{escaped}' and '{target}' in parents and trashed = false"),
+            fields='files(id,name,size,md5Checksum)',page_size=100).execute().get('files',[])
+        if len(existing)>1:
+            raise CloudRunError('Duplicate names in run report folder')
+        if existing:
+            file_id=existing[0]['id']
+        else:
+            result=service.files().create(
+                body={'name':path.name,'parents':[target]},
+                media_body=MediaFileUpload(str(path),mimetype=mime,resumable=True),
+                fields='id').execute()
+            file_id=result['id']
+        check=service.files().get(fileId=file_id,
+                                   fields='id,size,md5Checksum').execute()
+        if int(check.get('size',-1))!=size or check.get('md5Checksum','').lower()!=md5:
+            raise CloudRunError('Report upload MD5 mismatch: '+path.name)
+        saved.append({'name':path.name,'id':file_id,'bytes':size})
+    return {'folder_id':target,'reports':saved}
+
 def run(argv=None):
     p=argparse.ArgumentParser(description='RIFT Actions bounded source URL batch')
     p.add_argument('--mode',choices=['report','batch'],required=True)
@@ -205,6 +258,14 @@ def run(argv=None):
                 'unique_files':metrics['metrics']['unique_files']},
                 ensure_ascii=False,indent=2),encoding='utf-8')
             db.close()
+    try:
+        report_upload=upload_run_reports(service,args.drive_root_id,out,args.run_id)
+        (out/'reports_drive_upload.json').write_text(
+            json.dumps(report_upload,ensure_ascii=False,indent=2),encoding='utf-8')
+    except Exception as exc:
+        (out/'reports_drive_upload_error.txt').write_text(
+            type(exc).__name__,encoding='utf-8')
+        raise CloudRunError('Failed to verify Drive report folder uploads: '+type(exc).__name__) from exc
     if err:raise CloudRunError(err)
     return state
 
