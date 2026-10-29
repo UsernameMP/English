@@ -19,6 +19,7 @@ from .db import connect,exclusive_runner,import_resources
 from .drive import DriveUploader,build_service
 from .ops_metrics import build_metrics,write_dashboard
 from .report import export_report
+from .ordered_master import sync_ordered_master
 
 SHA_BACKUP=re.compile(r'^[a-f0-9]{64}\.sqlite3$')
 CURRENT_RIFT_ROOT='1uyPU91NHIfIf-wGXO5UAAnNCG9CqQD1o'
@@ -191,7 +192,8 @@ def run(argv=None):
     p.add_argument('--token',required=True)
     p.add_argument('--workdir',default='state/actions')
     p.add_argument('--output-dir',default='rift_ops_output')
-    p.add_argument('--source-glob',default='source_discovery/resources_shards/resource_*.jsonl')
+    p.add_argument('--source',default='auto',help='Ordered master path/glob; auto prefers download_master.* then resource shards')
+    p.add_argument('--source-glob',dest='source',help=argparse.SUPPRESS)
     p.add_argument('--drive-root-id',default=os.getenv('RIFT_DRIVE_ROOT_ID',CURRENT_RIFT_ROOT))
     p.add_argument('--limit-urls',type=int,default=200)
     p.add_argument('--queue-mode',choices=['new','retry'],default='new')
@@ -218,15 +220,18 @@ def run(argv=None):
     with exclusive_runner(database):
         recovered=restore_latest(service,args.drive_root_id,database)
         db=connect(database)
-        if not recovered['restored']:
-            added=import_resources(db,records([args.source_glob]))
-            if added<1000:raise CloudRunError(f'Original RIFT index unavailable ({added} URLs)')
+        # Re-read the GitHub master on EVERY run, including a restored snapshot.
+        # This is crucial when newly discovered links are prepended to 332k
+        # existing URLs. Preserve completed and failed states by original URL.
+        master=sync_ordered_master(db,args.source,minimum=1000)
+        if not recovered['restored'] and master['master_rows']<1000:
+            raise CloudRunError('Incomplete master file; refusing download')
         state='report_only' if args.mode=='report' else 'running'
         stop='no_source_requests' if args.mode=='report' else 'not_started'
         try:
             if args.mode=='batch':
                 settings=SimpleNamespace(limit_success=1000000000,limit_urls=args.limit_urls,
-                    max_checks=args.max_checks,queue_mode=args.queue_mode,min_delay=args.min_delay,
+                    max_checks=args.max_checks,queue_mode='ordered_'+args.queue_mode,min_delay=args.min_delay,
                     max_file_mb=args.max_file_mb,spool=str(work/'spool'),
                     spool_max_gb=10,max_retries=4,backup_every=25,
                     seed_limit=5000,progress_every=10)
@@ -253,6 +258,7 @@ def run(argv=None):
                 actions_summary(metrics,args.drive_root_id,checkpoint),encoding='utf-8')
             (out/'run_result.json').write_text(json.dumps({
                 'state':state,'stop_reason':stop,'restored':recovered,
+                'ordered_master':master,
                 'checkpoint':checkpoint,'error':err,
                 'urls_total':metrics['metrics']['unique_urls_checked'],
                 'unique_files':metrics['metrics']['unique_files']},
