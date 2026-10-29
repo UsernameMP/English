@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "bank_id": "english-olympiad-6-7-bridge",
+  "title": "English Olympiad Bridge 6–7",
+  "locale": "en",
+  "content_version": "0.1.0",
+  "pack": {
+    "id": "english.olympiad.6-7.global.2026",
+    "subject": "english",
+    "grade_min": 6,
+    "grade_max": 7,
+    "competition": "Olympiad bridge",
+    "region": "Global",
+    "season": "2026-2027",
+    "title": {"en": "English Sprint 6–7", "ru": "English Sprint 6–7"},
+    "subtitle": {"en": "Olympiad bridge · Grades 6–7", "ru": "Олимпиадный мост · 6–7 класс"}
+  },
+  "questions": [
+    {
+      "id": "bridge_articles_001", "subject": "english", "grade_min": 6, "grade_max": 7,
+      "interaction": "single_choice", "mode": "grammar", "skills": ["articles"], "difficulty": 2,
+      "source": {"competition": "Olympiad bridge", "region": "Global", "year": "training", "original": true},
+      "stimulus": {}, "prompt": "We watched ___ sun disappear behind the hills.",
+      "options": [{"id":"a","text":"a"},{"id":"b","text":"an"},{"id":"c","text":"the"}], "answer": ["c"],
+      "feedback": {"short":{"en":"Use the definite article for the unique sun.","ru":"Для уникального объекта sun нужен определённый артикль."},"full":{"en":"The sun is treated as unique in this context, so use the.","ru":"Солнце в этом контексте уникально, поэтому используется the."},"rule":{"en":"Unique objects normally take the.","ru":"Уникальные объекты обычно употребляются с the."}},
+      "review":{"status":"published"}, "knowledge":[{"id":"ENG.GRAMMAR.ARTICLES","weight":1}], "prerequisites":[]
+    },
+    {
+      "id": "bridge_articles_002", "subject": "english", "grade_min": 6, "grade_max": 7,
+      "interaction": "single_choice", "mode": "grammar", "skills": ["articles"], "difficulty": 3,
+      "source": {"competition": "Olympiad bridge", "region": "Global", "year": "training", "original": true},
+      "stimulus": {}, "prompt": "Maya wants to become ___ engineer.",
+      "options": [{"id":"a","text":"a"},{"id":"b","text":"an"},{"id":"c","text":"the"}], "answer": ["b"],
+      "feedback": {"short":{"en":"Choose by the initial sound.","ru":"Выбирай по начальному звуку."},"full":{"en":"Engineer begins with a vowel sound, so the indefinite article is an.","ru":"Engineer начинается с гласного звука, поэтому нужен an."},"rule":{"en":"Use an before a vowel sound.","ru":"Перед гласным звуком используется an."}},
+      "review":{"status":"published"}, "knowledge":[{"id":"ENG.GRAMMAR.ARTICLES","weight":1}], "prerequisites":[]
+    },
+    {
+      "id": "bridge_past_001", "subject": "english", "grade_min": 6, "grade_max": 7,
+      "interaction": "single_choice", "mode": "grammar", "skills": ["past_simple"], "difficulty": 2,
+      "source": {"competition": "Olympiad bridge", "region": "Global", "year": "training", "original": true},
+      "stimulus": {}, "prompt": "Last Saturday we ___ the science museum.",
+      "options": [{"id":"a","text":"visit"},{"id":"b","text":"visited"},{"id":"c","text":"are visiting"}], "answer": ["b"],
+      "feedback": {"short":{"en":"Last Saturday marks a completed past event.","ru":"Last Saturday указывает на завершённое событие в прошлом."},"full":{"en":"A finished event at a stated past time requires Past Simple.","ru":"Завершённое событие с указанным временем требует Past Simple."},"rule":{"en":"Use Past Simple for completed past actions.","ru":"Past Simple используется для завершённых действий в прошлом."}},
+      "review":{"status":"published"}, "knowledge":[{"id":"ENG.GRAMMAR.TENSE.PAST_SIMPLE","weight":1}], "prerequisites":[]
+    },
+    {
+      "id": "bridge_past_002", "subject": "english", "grade_min": 6, "grade_max": 7,
+      "interaction": "single_choice", "mode": "grammar", "skills": ["past_simple"], "difficulty": 3,
+      "source": {"competition": "Olympiad bridge", "region": "Global", "year": "training", "original": true},
+      "stimulus": {}, "prompt": "She ___ the answer but did not say it aloud.",
+      "options": [{"id":"a","text":"knew"},{"id":"b","text":"knowed"},{"id":"c","text":"knows"}], "answer": ["a"],
+      "feedback": {"short":{"en":"Know is irregular in the past.","ru":"Know — неправильный глагол."},"full":{"en":"The Past Simple form of know is knew.","ru":"Форма Past Simple глагола know — knew."},"rule":{"en":"Irregular past forms must be learned as forms.","ru":"Формы неправильных глаголов запоминаются отдельно."}},
+      "review":{"status":"published"}, "knowledge":[{"id":"ENG.GRAMMAR.TENSE.PAST_SIMPLE","weight":1}], "prerequisites":[]
+    },
+    {
+      "id": "bridge_quant_001", "subject": "english", "grade_min": 6, "grade_max": 7,
+      "interaction": "single_choice", "mode": "grammar", "skills": ["quantifiers"], "difficulty": 2,
+      "source": {"competition": "Olympiad bridge", "region": "Global", "year": "training", "original": true},
+      "stimulus": {}, "prompt": "There is very ___ water left in the bottle.",
+      "options": [{"id":"a","text":"few"},{"id":"b","text":"little"},{"id":"c","text":"many"}], "answer": ["b"],
+      "feedback": {"short":{"en":"Water is uncountable.","ru":"Water — неисчисляемое существительное."},"full":{"en":"Use little with an uncountable noun to mean not much.","ru":"Little используется с неисчисляемым существительным в значении «мало»."},"rule":{"en":"Few: countable; little: uncountable.","ru":"Few — исчисляемые; little — неисчисляемые."}},
+      "review":{"status":"published"}, "knowledge":[{"id":"ENG.GRAMMAR.QUANTIFIERS","weight":1}], "prerequisites":[]
+    },
+    {
+      "id": "bridge_quant_002", "subject": "english", "grade_min": 6, "grade_max": 7,
+      "interaction": "single_choice", "mode": "grammar", "skills": ["quantifiers"], "difficulty": 3,
+      "source": {"competition": "Olympiad bridge", "region": "Global", "year": "training", "original": true},
+      "stimulus": {}, "prompt": "Only ___ students solved the final puzzle.",
+      "options": [{"id":"a","text":"a few"},{"id":"b","text":"a little"},{"id":"c","text":"much"}], "answer": ["a"],
+      "feedback": {"short":{"en":"Students are countable plural.","ru":"Students — исчисляемое существительное во множественном числе."},"full":{"en":"A few means a small positive number of countable items.","ru":"A few означает небольшое, но ненулевое число исчисляемых объектов."},"rule":{"en":"Use a few with countable plurals.","ru":"A few используется с исчисляемыми во множественном числе."}},
+      "review":{"status":"published"}, "knowledge":[{"id":"ENG.GRAMMAR.QUANTIFIERS","weight":1}], "prerequisites":[]
+    },
+    {
+      "id": "bridge_reading_001", "subject": "english", "grade_min": 6, "grade_max": 7,
+      "interaction": "single_choice", "mode": "reading", "skills": ["reading"], "difficulty": 2,
+      "source": {"competition": "Olympiad bridge", "region": "Global", "year": "training", "original": true},
+      "stimulus": {"text":"The library closes at six, but returns can be placed in the blue box until midnight."},
+      "prompt": "Where can a book be returned after six?",
+      "options": [{"id":"a","text":"At the main desk"},{"id":"b","text":"In the blue box"},{"id":"c","text":"At school"}], "answer": ["b"],
+      "feedback": {"short":{"en":"Use the explicit location in the text.","ru":"Найди прямо указанное место."},"full":{"en":"The text says returns can be placed in the blue box until midnight.","ru":"В тексте сказано, что книги можно положить в синий ящик до полуночи."},"rule":{"en":"Prefer explicit textual evidence.","ru":"Опирайся на прямое доказательство в тексте."}},
+      "evidence":"returns can be placed in the blue box", "review":{"status":"published"}, "knowledge":[{"id":"ENG.READING.COMPREHENSION","weight":1}], "prerequisites":[]
+    },
+    {
+      "id": "bridge_reading_002", "subject": "english", "grade_min": 6, "grade_max": 7,
+      "interaction": "single_choice", "mode": "reading", "skills": ["reading"], "difficulty": 3,
+      "source": {"competition": "Olympiad bridge", "region": "Global", "year": "training", "original": true},
+      "stimulus": {"text":"Nora took an umbrella although the sky was clear because the forecast warned of an afternoon storm."},
+      "prompt": "Why did Nora take an umbrella?",
+      "options": [{"id":"a","text":"It was already raining"},{"id":"b","text":"The forecast predicted a storm"},{"id":"c","text":"She wanted shade"}], "answer": ["b"],
+      "feedback": {"short":{"en":"Distinguish current weather from the forecast.","ru":"Отдели текущую погоду от прогноза."},"full":{"en":"The sky was clear, but the forecast warned of a later storm.","ru":"Небо было ясным, но прогноз предупреждал о более поздней грозе."},"rule":{"en":"A reason may contrast with the current situation.","ru":"Причина может противопоставляться текущей ситуации."}},
+      "evidence":"the forecast warned of an afternoon storm", "review":{"status":"published"}, "knowledge":[{"id":"ENG.READING.COMPREHENSION","weight":1}], "prerequisites":[]
+    }
+  ]
+}
