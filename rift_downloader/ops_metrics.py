@@ -19,6 +19,51 @@ from .db import connect,summary
 def _utc(timestamp=None):
     return datetime.fromtimestamp(timestamp,tz=timezone.utc).isoformat() if timestamp else datetime.now(timezone.utc).isoformat()
 
+def _activity(db):
+    """Actual daily first-checked URLs and independently verified files."""
+    from datetime import timedelta
+    checks={r['day']:r['n'] for r in db.execute("""SELECT date(first_at,'unixepoch') day,COUNT(*) n
+        FROM (SELECT resource_id,MIN(started_at) first_at FROM attempts GROUP BY resource_id)
+        GROUP BY day ORDER BY day DESC LIMIT 30""")}
+    saved={r['day']:(r['n'],r['total']) for r in db.execute("""SELECT date(verified_at,'unixepoch') day,
+        COUNT(*) n,COALESCE(SUM(size_bytes),0) total FROM objects
+        WHERE verified_at IS NOT NULL GROUP BY day ORDER BY day DESC LIMIT 30""")}
+    days=sorted(set(checks)|set(saved))
+    if not days:return []
+    last=datetime.strptime(days[-1],'%Y-%m-%d').date()
+    return [{'day':(day:=last-timedelta(days=i)).isoformat(),
+             'urls':checks.get(day.isoformat(),0),
+             'files':saved.get(day.isoformat(),(0,0))[0],
+             'bytes':saved.get(day.isoformat(),(0,0))[1]} for i in range(29,-1,-1)]
+
+def _file_groups(mime):
+    from collections import Counter
+    groups=Counter()
+    for raw,n in mime.items():
+        name=(raw or '').lower()
+        if name=='application/pdf':group='PDF'
+        elif any(t in name for t in ('zip','rar','7z','gzip','tar')):group='Архивы'
+        elif any(t in name for t in ('word','msword','opendocument.text','rtf','text/x-tex')):group='Документы'
+        elif any(t in name for t in ('sheet','excel')):group='Таблицы'
+        elif any(t in name for t in ('presentation','powerpoint')):group='Презентации'
+        else:group='Другое'
+        groups[group]+=int(n)
+    return dict(groups)
+
+def _master_health(db):
+    from urllib.parse import urlsplit
+    value=db.execute("SELECT value FROM settings WHERE key='master_sha256'").fetchone()
+    rows=db.execute("SELECT value FROM settings WHERE key='master_rows'").fetchone()
+    domains=[urlsplit(r[0]).hostname or '' for r in db.execute(
+        "SELECT url FROM resources WHERE source_position IS NOT NULL ORDER BY source_position LIMIT 20")]
+    ru=lambda host:host.lower().endswith(('.ru','.рф','.xn--p1ai'))
+    return {'sha256':value[0] if value else None,
+            'rows':int(rows[0]) if rows else None,
+            'first_domain':domains[0] if domains else None,
+            'head_count':len(domains),
+            'head_ru_count':sum(ru(x) for x in domains),
+            'head_ru_expected':bool(domains and ru(domains[0]))}
+
 def build_metrics(db, *, run_state='snapshot', stop_reason=None, limit_new_urls=None, run_id=None):
     data=summary(db)
     codes=data['http_response_codes']
@@ -85,6 +130,9 @@ def build_metrics(db, *, run_state='snapshot', stop_reason=None, limit_new_urls=
       'error_categories':errors,
       'top_hosts':hosts,
       'hourly':timeline,
+      'daily':_activity(db),
+      'file_groups':_file_groups(mime),
+      'master':_master_health(db),
       'links':{
          'drive_folder':'https://drive.google.com/drive/folders/1uyPU91NHIfIf-wGXO5UAAnNCG9CqQD1o',
          'github_actions':'https://github.com/UsernameMP/English/actions',
@@ -123,7 +171,9 @@ def make_baseline():
                     'text/x-tex':2,'application/vnd.oasis.opendocument.text':1,
                     'application/vnd.openxmlformats-officedocument.presentationml.presentation':1,
                     'application/gzip':1,'application/postscript':1},
-      'top_hosts':[],'hourly':[],
+      'top_hosts':[],'hourly':[],'daily':[],
+      'file_groups':_file_groups({'application/pdf':151,'application/zip':20,'application/msword':6,'application/vnd.openxmlformats-officedocument.wordprocessingml.document':8,'application/vnd.rar':5,'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':4,'text/x-tex':2,'application/vnd.oasis.opendocument.text':1,'application/vnd.openxmlformats-officedocument.presentationml.presentation':1,'application/gzip':1,'application/postscript':1}),
+      'master':{'sha256':None,'rows':None,'first_domain':None,'head_count':0,'head_ru_count':0,'head_ru_expected':False},
       'links':{
          'drive_folder':'https://drive.google.com/drive/folders/1uyPU91NHIfIf-wGXO5UAAnNCG9CqQD1o',
          'github_actions':'https://github.com/UsernameMP/English/actions',
@@ -237,7 +287,9 @@ try{draw(JSON.parse(document.getElementById('metrics').textContent))}catch(e){se
 def render_html(data):
     # A literal JSON script tag requires escaping HTML interpretation.
     blob=json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
-    return TEMPLATE.replace('__METRICS__',blob)
+    template=Path(__file__).with_name('dashboard_v2.html')
+    source=template.read_text(encoding='utf-8') if template.is_file() else TEMPLATE
+    return source.replace('__METRICS__',blob)
 
 def write_dashboard(data,html_path,json_path=None):
     path=Path(html_path);path.parent.mkdir(parents=True,exist_ok=True)
