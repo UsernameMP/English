@@ -57,7 +57,7 @@ def connect(path):
     for table,columns in {
         'resources': {'next_attempt_at':'REAL NOT NULL DEFAULT 0','staged_path':'TEXT',
                       'filename':'TEXT','updated_at':'REAL NOT NULL DEFAULT 0',
-                      'pilot_rank':'INTEGER'},
+                      'pilot_rank':'INTEGER','source_position':'INTEGER'},
         'attempts': {'domain':'TEXT','wait_ms':'INTEGER','elapsed_ms':'INTEGER',
                     'bytes_received':'INTEGER','outcome':'TEXT','error':'TEXT'},
     }.items():
@@ -70,6 +70,10 @@ def connect(path):
                   WHERE status IN ('pending','retry')""")
     db.execute("""CREATE INDEX IF NOT EXISTS resources_rank_queue ON resources(pilot_rank)
                   WHERE pilot_rank IS NOT NULL AND status IN ('pending','retry')""")
+    db.execute("""CREATE INDEX IF NOT EXISTS resources_master_new ON resources(source_position)
+                  WHERE source_position IS NOT NULL AND status='pending' AND attempts=0""")
+    db.execute("""CREATE INDEX IF NOT EXISTS resources_master_retry ON resources(source_position)
+                  WHERE source_position IS NOT NULL AND status IN ('pending','retry')""")
     return db
 
 def import_resources(db,rows):
@@ -96,7 +100,9 @@ def claim(db,now=None,mode='all'):
     modes={
         'all':"status IN ('pending','retry')",
         'new':"status='pending' AND attempts=0",
-        'retry':"(status='retry' OR (status='pending' AND attempts>0))"
+        'retry':"(status='retry' OR (status='pending' AND attempts>0))",
+        'ordered_new':"source_position IS NOT NULL AND status='pending' AND attempts=0",
+        'ordered_retry':"source_position IS NOT NULL AND (status='retry' OR (status='pending' AND attempts>0))"
     }
     if mode not in modes:raise ValueError('Unknown queue mode')
     condition=modes[mode]
@@ -106,13 +112,18 @@ def claim(db,now=None,mode='all'):
         # Prefer a prepared, domain-diversified pilot sample; unranked
         # candidates remain available if all ranked records are exhausted or
         # waiting on Retry-After. An interrupted pilot keeps the same ranks.
-        row=db.execute(f'''SELECT resource_id FROM resources
-            WHERE pilot_rank IS NOT NULL AND {condition}
-            AND next_attempt_at<=? ORDER BY pilot_rank LIMIT 1''',(now,)).fetchone()
-        if row is None:
+        if mode.startswith('ordered_'):
             row=db.execute(f'''SELECT resource_id FROM resources WHERE {condition}
-                AND next_attempt_at<=? ORDER BY file_candidate DESC,resource_id LIMIT 1''',
+                AND next_attempt_at<=? ORDER BY source_position LIMIT 1''',
                 (now,)).fetchone()
+        else:
+            row=db.execute(f'''SELECT resource_id FROM resources
+                WHERE pilot_rank IS NOT NULL AND {condition}
+                AND next_attempt_at<=? ORDER BY pilot_rank LIMIT 1''',(now,)).fetchone()
+            if row is None:
+                row=db.execute(f'''SELECT resource_id FROM resources WHERE {condition}
+                    AND next_attempt_at<=? ORDER BY file_candidate DESC,resource_id LIMIT 1''',
+                    (now,)).fetchone()
         if row is None:
             db.execute('COMMIT')
             return None
