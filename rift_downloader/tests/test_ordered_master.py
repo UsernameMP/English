@@ -117,6 +117,23 @@ class MasterOrderTests(unittest.TestCase):
             with self.assertRaises(MasterError):
                 sync_ordered_master(db,str(folder/'missing.jsonl'))
 
+    def test_embedded_credentials_and_invalid_urls_are_never_scheduled(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder=Path(tmp)
+            master=folder/'legacy.txt'
+            master.write_text(
+                'https://example.org/one.pdf\n'
+                'https://username:secret@example.org/password.pdf\n'
+                'file:///etc/passwd\n'
+                'https://example.org/two.pdf\n')
+            db=connect(folder/'db.sqlite3')
+            outcome=sync_ordered_master(db,str(master))
+            self.assertEqual(outcome['master_rows'],2)
+            self.assertEqual(outcome['ignored_unsafe'],2)
+            self.assertEqual(claim(db,mode='ordered_new')['url'],'https://example.org/one.pdf')
+            self.assertEqual(claim(db,mode='ordered_new')['url'],'https://example.org/two.pdf')
+            self.assertIsNone(claim(db,mode='ordered_new'))
+
     def test_removed_links_keep_history_but_are_not_scheduled(self):
         with tempfile.TemporaryDirectory() as tmp:
             folder=Path(tmp)
