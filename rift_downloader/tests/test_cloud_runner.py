@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 
 from rift_downloader.cloud_runner import (
-    CloudRunError,candidates,verify_snapshot,verify_token_scopes,actions_summary)
+    CloudRunError,candidates,verify_snapshot,verify_token_scopes,actions_summary,require_ru_first)
 from rift_downloader.db import connect,import_resources,claim
 from rift_downloader.ops_metrics import make_baseline
 
@@ -36,6 +36,16 @@ class FakeService:
     def files(self):return self.f
 
 class ResumeTests(unittest.TestCase):
+    def test_new_url_batches_refuse_legacy_non_ru_first_master(self):
+        with self.assertRaises(CloudRunError) as failure:
+            require_ru_first({'first_five':[{'url':'http://www.imc-math.org.uk'}]})
+        self.assertIn('RU-first',str(failure.exception))
+        self.assertIn('download_master.jsonl',str(failure.exception))
+        self.assertEqual(require_ru_first({'first_five':[{'url':'https://olympiada.ru/tasks.pdf'}]}),'olympiada.ru')
+        self.assertEqual(require_ru_first({'first_five':[{'url':'https://пример.рф/'}]}),'пример.рф')
+        with self.assertRaises(CloudRunError):
+            require_ru_first({'first_five':[]})
+
     def test_snapshot_discovery_excludes_other_files_and_paginates(self):
         service=FakeService()
         selected=candidates(service,'existing-index-id')
