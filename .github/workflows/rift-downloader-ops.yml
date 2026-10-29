@@ -32,7 +32,7 @@ jobs:
     env:
       OPERATION: ${{ github.event_name == 'schedule' && 'download-new' || inputs.operation }}
       URL_COUNT: ${{ inputs.url_count || '200' }}
-      OUT_DIR: ${{ runner.temp }}/rift-output
+      OUT_DIR: rift-output
     steps:
       - name: Fetch trusted RIFT worker code and source URL index
         uses: actions/checkout@v4
@@ -117,10 +117,10 @@ jobs:
         with:
           name: rift-dashboard-${{ github.run_id }}
           path: |
-            ${{ runner.temp }}/rift-output/index.html
-            ${{ runner.temp }}/rift-output/status.json
-            ${{ runner.temp }}/rift-output/run_result.json
-            ${{ runner.temp }}/rift-output/github_step_summary.md
-            ${{ runner.temp }}/rift-output/reports_drive_upload.json
+            rift-output/index.html
+            rift-output/status.json
+            rift-output/run_result.json
+            rift-output/github_step_summary.md
+            rift-output/reports_drive_upload.json
           retention-days: 30
           if-no-files-found: warn
