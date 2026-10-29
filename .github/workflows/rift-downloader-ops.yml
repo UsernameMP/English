@@ -1,5 +1,10 @@
 name: RIFT Downloader Control Center
 on:
+  # One-time push entrypoint: editing this workflow starts one bounded batch.
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rift-downloader-ops.yml'
   workflow_dispatch:
     inputs:
       operation:
@@ -31,13 +36,13 @@ concurrency:
   cancel-in-progress: false
 jobs:
   rift-worker:
-    if: ${{ github.event_name == 'workflow_dispatch' || vars.RIFT_AUTORUN_ENABLED == 'true' }}
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' || vars.RIFT_AUTORUN_ENABLED == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 300
     env:
-      OPERATION: ${{ github.event_name == 'schedule' && 'download-new' || inputs.operation }}
-      URL_COUNT: ${{ inputs.url_count || '200' }}
-      SOURCE_PATTERN: ${{ inputs.source_path || vars.RIFT_MASTER_PATH || 'auto' }}
+      OPERATION: ${{ github.event_name == 'workflow_dispatch' && inputs.operation || 'download-new' }}
+      URL_COUNT: ${{ github.event_name == 'push' && '1000' || inputs.url_count || '200' }}
+      SOURCE_PATTERN: ${{ github.event_name == 'push' && 'source_discovery/download_master.txt' || inputs.source_path || vars.RIFT_MASTER_PATH || 'auto' }}
       OUT_DIR: rift-output
     steps:
       - name: Fetch trusted RIFT worker code and source URL index
