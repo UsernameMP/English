@@ -41,6 +41,18 @@ jobs:
               compile(''.join(cell['source']),'<RIFT_Colab>', 'exec')
           print('Colab notebook: JSON valid, three Python cells compile')
           PY
+      - name: Validate standalone dashboard JavaScript
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          html=Path('rift_downloader/dashboard_v2.html').read_text(encoding='utf-8')
+          assert html.count('<script') == 2, 'Unexpected dashboard script tag'
+          assert 'id="daily-chart"' in html and 'id="http-histogram"' in html
+          javascript=html.split('<script>\n',1)[1].split('</script>',1)[0]
+          Path('/tmp/rift-dashboard-check.js').write_text(javascript,encoding='utf-8')
+          PY
+          node --check /tmp/rift-dashboard-check.js
       - name: Offline import and count existing RIFT resource shards
         run: |
           python -m rift_downloader.cli --db /tmp/rift_pilot_smoke.sqlite3 import 'source_discovery/resources_shards/resource_*.jsonl'
