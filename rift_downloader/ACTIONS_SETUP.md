@@ -17,6 +17,38 @@ Generated HTML is standalone. The Actions run Summary also shows counters.
 Source URLs, credentials, and file bodies are NOT included in the public
 metrics file.
 
+## Russian-first master verification
+
+The current GitHub checkout is NOT YET confirmed to contain the newly sorted
+Russian-first master list. The known original shard
+`source_discovery/resources_shards/resource_000001.jsonl` starts with
+`http://www.imc-math.org.uk`, not `.ru`.
+
+Publish the corrected ordered file at
+`source_discovery/download_master.jsonl` on branch `rift-source-index`,
+or provide its exact relative GitHub path in the workflow `source_path`
+input. Every new batch re-reads the file and follows its row order.
+The new-URL GitHub runner will **refuse to download** when the first URL
+has a non-Russian domain. It will report a source-priority mismatch instead
+of silently crawling the old index. `dashboard` remains usable without
+new source traffic, and `retry-failed` handles old retries independently.
+
+The expected 380k+ URL master should show a Russian domain in position 1.
+The dashboard displays the first actual domain, count of .ru/.рф among
+the first 20 links, and a warning if the priority has not been confirmed.
+
+## Dashboard v2
+
+The standalone HTML report now includes vertical histograms of real daily
+URL checks and saved files (7 / 14 / 30-day controls), distribution of HTTP
+codes, file-format donut, status bars, per-host rejection table and archive
+progress. Historical pilots without day-level data intentionally show an
+empty activity graph rather than fabricated activity.
+
+The HTML panel remains a **snapshot** generated for each workflow run;
+it is saved as an Actions artifact and in the RIFT reports folder.
+Refreshing a downloaded HTML file does not initiate a new GitHub Action.
+
 ## One-time setup (no VPS needed)
 
 1. Open the default-branch GitHub workflow:
