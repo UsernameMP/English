@@ -22,7 +22,16 @@ def build_service(token_file):
     import stat
     if stat.S_IMODE(token_file.stat().st_mode) & (stat.S_IRWXG|stat.S_IRWXO):
         raise DriveError('OAuth token file is not private; run chmod 600 on the VPS token')
-    creds=Credentials.from_authorized_user_file(str(token_file),SCOPES)
+    import json
+    # Do not silently downscope the previously user-authorized OAuth grant:
+    # unattended Actions migration of Colab files needs broader Drive scope.
+    # The separate cloud runner checks that broader scope explicitly first.
+    grant=json.loads(token_file.read_text(encoding='utf-8'))
+    authorized=grant.get('scopes') or SCOPES
+    if isinstance(authorized,str):authorized=authorized.split()
+    if not set(authorized).issubset(set(SCOPES)|{'https://www.googleapis.com/auth/drive'}):
+        raise DriveError('Unexpected OAuth scopes; refuse to run without review')
+    creds=Credentials.from_authorized_user_file(str(token_file),authorized)
     if not creds.valid:
         if not creds.refresh_token:raise DriveError('OAuth refresh token missing; authorize again')
         creds.refresh(Request())
@@ -39,8 +48,9 @@ def file_md5(path):
     return md5.hexdigest()
 
 class DriveUploader:
-    def __init__(self,service):
+    def __init__(self,service,root_folder_id=None):
         self.service=service
+        self.root_folder_id=root_folder_id
         self.folder_cache={}
     def _folder(self,name,parent=None):
         key=(name,parent)
@@ -82,7 +92,9 @@ class DriveUploader:
             for obj in self._hash_remote(sha):
                 if int(obj.get('size',-1))==size and obj.get('md5Checksum')==md5:
                     return self._verified(obj['id'],size,md5)
-            root=self._folder('RIFT')
+            # A pinned existing folder is essential when using a dedicated
+            # Google account with the owner's RIFT folder shared into it.
+            root=self.root_folder_id or self._folder('RIFT')
             if category not in ('raw','index'):
                 raise DriveError('Unsupported Drive storage category')
             folder=self._folder(category,root)

@@ -1,5 +1,31 @@
 # RIFT Downloader — 200-file pilot
 
+## Автоматическая работа и дашборд через GitHub Actions
+
+**Новый режим:** [инструкция по управлению загрузчиком и настройке GitHub Actions](ACTIONS_SETUP.md).
+
+Для пробных заданий различайте **200 URL** и **200 успешных файлов**.
+Параметр `run --limit-urls 200 --queue-mode new` проверяет 200 ранее не
+проверенных URL; он не обещает 200 сохранённых оригиналов.
+Ошибки и повторные попытки обрабатываются отдельно, а в отчёт записываются
+URL, коды HTTP, паузы, MIME и статистика Google Drive.
+
+Генерация автономного HTML-дашборда без интернет-запросов:
+
+```bash
+python -m rift_downloader.ops_metrics --baseline \
+  --output rift-dashboard.html --json rift-status.json
+python -m rift_downloader.ops_metrics --db state/rift.sqlite3 \
+  --output rift-dashboard.html --json rift-status.json
+```
+
+Для независимого ежедневного запуска используется отдельный
+GitHub Actions workflow на ветке main, **автозагрузка по расписанию
+по умолчанию выключена**. Google Drive хранит снимки SQLite, оригиналы
+и результаты каждого запуска; GitHub Actions показывает сводку и
+прикладывает HTML-панель. Старый Discovery не затрагивается.
+
+
 ## Первый запуск без VPS и OAuth — Google Colab
 
 **[Открыть RIFT 200 File Pilot в Google Colab](https://colab.research.google.com/github/UsernameMP/English/blob/rift-source-index/rift_downloader/RIFT_200_File_Pilot.ipynb)**

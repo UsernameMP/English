@@ -7,6 +7,7 @@ import random
 import socket
 import tempfile
 import time
+from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin,urlparse,unquote
@@ -28,6 +29,34 @@ USER_AGENT='RIFT-ResearchArchive/0.1 (polite pilot; respects robots and Retry-Af
 
 class UnsafeURL(ValueError):pass
 class RobotsDenied(ValueError):pass
+
+@contextmanager
+def guarded_dns():
+    """Check the address actually used by urllib3, not only the preflight DNS.
+
+    The worker is intentionally single-threaded; this temporary resolver
+    wrapper is confined to an HTTP connect and restored before any Drive API
+    request. A DNS rebinding to 127.0.0.1 or metadata/private networks is
+    rejected before a socket connect is attempted.
+    """
+    original=socket.getaddrinfo
+    def public_only(host,port,*args,**kwargs):
+        entries=original(host,port,*args,**kwargs)
+        if not entries:
+            raise UnsafeURL('DNS lookup returned no addresses')
+        for entry in entries:
+            ip=ipaddress.ip_address(entry[4][0])
+            if getattr(ip,'ipv4_mapped',None):
+                ip=ip.ipv4_mapped
+            if not ip.is_global:
+                raise UnsafeURL('DNS changed to a non-public address')
+        return entries
+    socket.getaddrinfo=public_only
+    try:
+        yield
+    finally:
+        socket.getaddrinfo=original
+
 class RobotsRetry(RuntimeError):
     def __init__(self,status,delay=None):
         self.status=status
@@ -181,7 +210,11 @@ class PoliteHttp:
         host=safe_url(url,self.dns_check)
         waited=self.limiter.wait(host,minimum=minimum)
         started=time.monotonic()
-        response=self.session.get(url,stream=True,timeout=(10,self.timeout),allow_redirects=False)
+        if self.dns_check:
+            with guarded_dns():
+                response=self.session.get(url,stream=True,timeout=(10,self.timeout),allow_redirects=False)
+        else:
+            response=self.session.get(url,stream=True,timeout=(10,self.timeout),allow_redirects=False)
         elapsed=int((time.monotonic()-started)*1000)
         if self.on_response is not None:
             self.on_response(url,host,purpose,response.status_code,elapsed,waited)

@@ -91,18 +91,26 @@ def import_resources(db,rows):
         raise
     return inserted
 
-def claim(db,now=None):
+def claim(db,now=None,mode='all'):
+    """Atomically claim one URL; new batches never silently recheck old failures."""
+    modes={
+        'all':"status IN ('pending','retry')",
+        'new':"status='pending' AND attempts=0",
+        'retry':"(status='retry' OR (status='pending' AND attempts>0))"
+    }
+    if mode not in modes:raise ValueError('Unknown queue mode')
+    condition=modes[mode]
     now=time.time() if now is None else now
     db.execute('BEGIN IMMEDIATE')
     try:
         # Prefer a prepared, domain-diversified pilot sample; unranked
         # candidates remain available if all ranked records are exhausted or
         # waiting on Retry-After. An interrupted pilot keeps the same ranks.
-        row=db.execute('''SELECT resource_id FROM resources
-            WHERE pilot_rank IS NOT NULL AND status IN ('pending','retry')
+        row=db.execute(f'''SELECT resource_id FROM resources
+            WHERE pilot_rank IS NOT NULL AND {condition}
             AND next_attempt_at<=? ORDER BY pilot_rank LIMIT 1''',(now,)).fetchone()
         if row is None:
-            row=db.execute('''SELECT resource_id FROM resources WHERE status IN ('pending','retry')
+            row=db.execute(f'''SELECT resource_id FROM resources WHERE {condition}
                 AND next_attempt_at<=? ORDER BY file_candidate DESC,resource_id LIMIT 1''',
                 (now,)).fetchone()
         if row is None:
