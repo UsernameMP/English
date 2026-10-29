@@ -1,0 +1,39 @@
+{
+  "rule": "0=.ru and targeted; 1=other .ru; 2=targeted non-.ru; 3=other non-.ru",
+  "files": {
+    "ru_olympiad_20261029_ru_first_downloader_urls.txt.gz": {
+      "input": "ru_olympiad_20261029_downloader_priority_urls.txt.gz",
+      "total": 386225,
+      "tier_counts": {
+        "0": 50952,
+        "1": 12218,
+        "2": 8133,
+        "3": 314922
+      },
+      "first_urls": [
+        "https://vega28.ru/upload/iblock/659/ob886fe7faelz17wckxlax8esvicsd6x/Prikaz-Ob-organizatsii-provedeniya-munitsipalnogo-etapa.pdf",
+        "https://vega28.ru/upload/iblock/92a/5ets8t4kanb19b4r4stafpkxc19c96bq/POMOSHCHNIK-PO-VYDACHE-KODOV.pdf",
+        "https://vega28.ru/upload/iblock/6ab/2j5tjfe91iljoek1691ia68gnvjvowny/ilovepdf_merged-_1_.pdf",
+        "https://vega28.ru/upload/iblock/84f/p63gyl88mim46u61lhrivk4vrqc1sc80/Grafik-provedeniya-shkolnogo-etapa-VsOSH.pdf",
+        "https://vega28.ru/upload/iblock/009/05ntdgdvr0mp1wkwcd2657k4ebtvstnq/Prikaz-SHE_968_ot-03.09.2026-_1_.pdf"
+      ]
+    },
+    "ru_olympiad_20261029_ru_first_downloader_documents.txt.gz": {
+      "input": "ru_olympiad_20261029_downloader_priority_documents.txt.gz",
+      "total": 105052,
+      "tier_counts": {
+        "0": 19329,
+        "1": 6451,
+        "2": 1411,
+        "3": 77861
+      },
+      "first_urls": [
+        "https://vega28.ru/upload/iblock/659/ob886fe7faelz17wckxlax8esvicsd6x/Prikaz-Ob-organizatsii-provedeniya-munitsipalnogo-etapa.pdf",
+        "https://vega28.ru/upload/iblock/92a/5ets8t4kanb19b4r4stafpkxc19c96bq/POMOSHCHNIK-PO-VYDACHE-KODOV.pdf",
+        "https://vega28.ru/upload/iblock/6ab/2j5tjfe91iljoek1691ia68gnvjvowny/ilovepdf_merged-_1_.pdf",
+        "https://vega28.ru/upload/iblock/84f/p63gyl88mim46u61lhrivk4vrqc1sc80/Grafik-provedeniya-shkolnogo-etapa-VsOSH.pdf",
+        "https://vega28.ru/upload/iblock/009/05ntdgdvr0mp1wkwcd2657k4ebtvstnq/Prikaz-SHE_968_ot-03.09.2026-_1_.pdf"
+      ]
+    }
+  }
+}
