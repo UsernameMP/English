@@ -16,6 +16,11 @@ on:
         required: true
         default: '200'
         type: string
+      source_path:
+        description: "Ordered URL master: auto prefers download_master.* then existing resource shards"
+        required: false
+        default: auto
+        type: string
   # No new source-site HTTP requests until repo variable RIFT_AUTORUN_ENABLED=true.
   schedule:
     - cron: '17 2 * * *'
@@ -32,6 +37,7 @@ jobs:
     env:
       OPERATION: ${{ github.event_name == 'schedule' && 'download-new' || inputs.operation }}
       URL_COUNT: ${{ inputs.url_count || '200' }}
+      SOURCE_PATTERN: ${{ inputs.source_path || vars.RIFT_MASTER_PATH || 'auto' }}
       OUT_DIR: rift-output
     steps:
       - name: Fetch trusted RIFT worker code and source URL index
@@ -41,7 +47,7 @@ jobs:
           persist-credentials: false
           sparse-checkout: |
             rift_downloader
-            source_discovery/resources_shards
+            source_discovery
       - name: Install Python
         uses: actions/setup-python@v5
         with:
@@ -93,6 +99,7 @@ jobs:
           python -m rift_downloader.cloud_runner \
             --mode "$MODE" \
             --queue-mode "$QUEUE" \
+            --source "$SOURCE_PATTERN" \
             --token "$RUNNER_TEMP/rift-google-token.json" \
             --drive-root-id "1uyPU91NHIfIf-wGXO5UAAnNCG9CqQD1o" \
             --limit-urls "$((10#$URL_COUNT))" \
