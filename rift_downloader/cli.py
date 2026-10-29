@@ -147,7 +147,8 @@ def run_pilot(db,args,uploader,worker=None,progress_callback=None):
         used=sum(p.stat().st_size for p in spool.iterdir() if p.is_file())
         if used>=args.spool_max_gb*1024**3 or shutil.disk_usage(spool).free<max(1024**3,args.max_file_mb*1024**2):
             return 'spool_capacity'
-        row=claim(db)
+        mode=getattr(args,'queue_mode',None) or ('new' if limit_urls is not None else 'all')
+        row=claim(db,mode=mode)
         if row is None:return 'queue_empty_or_retry_later'
         checks+=1
         rid=row['resource_id'];domain=urlparse(row['url']).hostname
@@ -187,6 +188,8 @@ def main(argv=None):
     run.add_argument('--max-checks',type=int,default=3000)
     run.add_argument('--limit-urls',type=int,default=None,
                      help='Stop after this many DISTINCT source URLs checked in this run; ignores --limit-success')
+    run.add_argument('--queue-mode',choices=['all','new','retry'],
+                     default=None,help='URL batch defaults to previously unattempted URLs; retry mode is separate')
     run.add_argument('--min-delay',type=float,default=10.0)
     run.add_argument('--max-file-mb',type=int,default=100)
     run.add_argument('--spool-max-gb',type=int,default=10)
