@@ -1,0 +1,71 @@
+name: RIFT priority queue RU-first reorder (one-time)
+on:
+  push:
+    paths:
+      - '.github/workflows/rift-ru-first-sort-once.yml'
+permissions:
+  contents: write
+jobs:
+  reorder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: rift-source-index
+          persist-credentials: true
+          fetch-depth: 1
+      - name: Stable sorting of complete downloader queues, Russian .ru first
+        shell: bash
+        run: |
+          python - <<'PY'
+          import gzip
+          import json
+          from collections import Counter
+          from pathlib import Path
+          from urllib.parse import urlsplit
+          p=Path('source_discovery/targeted_results')
+          prior={u.strip() for u in (p/'ru_olympiad_20261029_priority_urls.txt').open(encoding='utf-8') if u.strip()}
+          files=[
+              ('ru_olympiad_20261029_downloader_priority_urls.txt.gz','ru_olympiad_20261029_ru_first_downloader_urls.txt.gz'),
+              ('ru_olympiad_20261029_downloader_priority_documents.txt.gz','ru_olympiad_20261029_ru_first_downloader_documents.txt.gz'),
+          ]
+          def russian_ru(u):
+              try:
+                  h=(urlsplit(u).hostname or '').rstrip('.').lower()
+                  return h.endswith('.ru')
+              except ValueError:
+                  return False
+          def priority_tier(u):
+              ru=russian_ru(u)
+              target=u in prior
+              return (0 if ru and target else 1 if ru else 2 if target else 3)
+          result={'rule':'0=.ru and targeted; 1=other .ru; 2=targeted non-.ru; 3=other non-.ru', 'files':{}}
+          for src,dst in files:
+              with gzip.open(p/src,'rt',encoding='utf-8') as f:
+                  original=[u.strip() for u in f if u.strip()]
+              assert len(original)==len(set(original)), 'Duplicate input URLs: '+src
+              sorted_urls=sorted(original,key=priority_tier)
+              assert len(sorted_urls)==len(original) and set(sorted_urls)==set(original),'URLs lost/added'
+              assert all(priority_tier(sorted_urls[i])<=priority_tier(sorted_urls[i+1]) for i in range(len(sorted_urls)-1)), 'Incorrect sort'
+              with gzip.open(p/dst,'wt',encoding='utf-8',compresslevel=6) as f:
+                  for u in sorted_urls:
+                      f.write(u+'\n')
+              with gzip.open(p/dst,'rt',encoding='utf-8') as f:
+                  assert sum(1 for line in f)==len(original), 'Output verification failed'
+              counts=Counter(priority_tier(u) for u in sorted_urls)
+              result['files'][dst]={'input':src,'total':len(sorted_urls),'tier_counts':{str(i):counts[i] for i in range(4)},'first_urls':sorted_urls[:5]}
+          (p/'ru_olympiad_20261029_ru_first_summary.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print('RU_FIRST_SUMMARY_START')
+          print(json.dumps(result,ensure_ascii=False,indent=2))
+          print('RU_FIRST_SUMMARY_END')
+          PY
+      - name: Commit newly sorted manifests only
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add source_discovery/targeted_results/ru_olympiad_20261029_ru_first_downloader_urls.txt.gz source_discovery/targeted_results/ru_olympiad_20261029_ru_first_downloader_documents.txt.gz source_discovery/targeted_results/ru_olympiad_20261029_ru_first_summary.json
+          git commit -m "RIFT: reorder 386k downloader URLs with .ru sites first, target priority retained"
+          git pull --rebase origin rift-source-index
+          git push origin HEAD:rift-source-index
