@@ -212,7 +212,7 @@ def run(argv=None):
     work.mkdir(parents=True,exist_ok=True)
     out.mkdir(parents=True,exist_ok=True)
     database=work/'rift.sqlite3'
-    uploader=DriveUploader(service)
+    uploader=DriveUploader(service,root_folder_id=args.drive_root_id)
     checkpoint=None
     err=None
     with exclusive_runner(database):
