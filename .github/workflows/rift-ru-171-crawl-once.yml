@@ -1,0 +1,57 @@
+name: RIFT RU olympiad 171-site targeted crawl
+on:
+  push:
+    paths:
+      - '.github/workflows/rift-ru-171-crawl-once.yml'
+permissions:
+  contents: write
+concurrency:
+  group: rift-ru-171-targeted-crawl
+  cancel-in-progress: false
+jobs:
+  crawl-and-prioritize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - name: Checkout RIFT source index
+        uses: actions/checkout@v4
+        with:
+          ref: rift-source-index
+          persist-credentials: true
+          fetch-depth: 1
+      - name: Validate crawler and tests
+        run: |
+          python -m py_compile source_discovery/crawl_ru_priority.py source_discovery/crawl_links.py source_discovery/link_intelligence.py
+          python -m unittest discover -s source_discovery -p 'test_*.py' -v
+      - name: Crawl all 171 seed URLs (169 hosts), save links only
+        env:
+          RIFT_RU_DEPTH: "6"
+          RIFT_RU_PAGES_PER_HOST: "40"
+          RIFT_RU_WORKERS: "24"
+        run: python -u source_discovery/crawl_ru_priority.py
+      - name: Verify prioritized manifest and resource indexes
+        shell: bash
+        run: |
+          python - <<'PY'
+          import gzip,json,pathlib
+          base=pathlib.Path('source_discovery')
+          s=json.loads((base/'targeted_results/ru_olympiad_20261029_summary.json').read_text(encoding='utf-8'))
+          p=base/s['download_priority_manifest']
+          with gzip.open(p,'rt',encoding='utf-8') as f:
+            lines=[v.strip() for v in f if v.strip()]
+          assert len(lines)==len(set(lines)), 'Duplicate literal URL in priority manifest'
+          assert len(lines)==s['download_priority_all_count'], 'Incorrect manifest count'
+          assert len(lines)>=s['existing_unique_resources'], 'Existing resources lost'
+          assert s['seed_hosts']==169 and s['seed_urls']==171, 'Missing seed hosts/URLs'
+          print('VALIDATED',len(lines),'urls; new unique',s['new_unique_resource_urls'],'priority',s['target_priority_unique_urls'])
+          PY
+      - name: Commit index and priority-first download queue
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add source_discovery/sources.jsonl source_discovery/links_shards source_discovery/resources_shards source_discovery/targeted_results
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "RIFT: crawl 171 RU olympiad URLs and prioritize deduplicated downloader queue"
+          git pull --rebase origin rift-source-index
+          git push origin HEAD:rift-source-index
