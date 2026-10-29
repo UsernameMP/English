@@ -133,7 +133,10 @@ def scan_host(pair):
             output.append(row)
             if depth < MAX_DEPTH and is_same_host(target,h) and not signal["file_candidate"]:
                 if target not in queued and target not in visited:
-                    queue.append((target,root,depth+1))
+                    if signal["priority"] >= 2:
+                        queue.appendleft((target,root,depth+1))
+                    else:
+                        queue.append((target,root,depth+1))
                     queued.add(target)
         time.sleep(.20)
     return {"host":h,"seeds":roots,"html_attempted":attempts,"visited":len(visited),
@@ -213,6 +216,16 @@ def main():
                     "file_candidate":row["file_candidate"],"mime":None,
                     "review_status":"unreviewed","targeted_batch":STAMP
                 })
+    # Also bring previously indexed links from targeted hosts to the front.
+    for url, file_flag in old_urls:
+        h = host(url)
+        if any(h == seedhost or h.endswith("." + seedhost) for seedhost in groups):
+            rid = resource_id(url)
+            if rid and rid not in priority_ids:
+                priority_ids.add(rid)
+                priority_urls.append((url, file_flag))
+    # Download files first, without dropping non-document URL observations.
+    priority_urls.sort(key=lambda entry: (not entry[1], resource_id(entry[0]) in known_ids))
     # Register seed URLs, including unreachable ones, for future monitoring.
     source_path=ROOT/"sources.jsonl"
     existing_source_urls={canonical_resource_url(s.get("url","")) for s in load_records("sources.jsonl")}
