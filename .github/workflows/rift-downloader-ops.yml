@@ -55,17 +55,17 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p "$OUT_DIR"
-          if ${{ "$OPERATION" == "dashboard" && -z "$RIFT_GOOGLE_TOKEN_JSON" }}; then
+          if [[ "$OPERATION" == "dashboard" && -z "$RIFT_GOOGLE_TOKEN_JSON" ]]; then
             echo "No Drive token. Dashboard will be labeled HISTORICAL."
             python -m rift_downloader.ops_metrics --baseline \
               --output "$OUT_DIR/index.html" --json "$OUT_DIR/status.json"
             exit 0
           fi
-          if ${{ -z "$RIFT_GOOGLE_TOKEN_JSON" }}; then
+          if [[ -z "$RIFT_GOOGLE_TOKEN_JSON" ]]; then
             echo "::error::Configure RIFT_GOOGLE_TOKEN_JSON as a GitHub Actions secret. Do not put credentials in workflow inputs."
             exit 1
           fi
-          if ! ${{ "$URL_COUNT" =~ ^[0-9]{1,4}$ }} || (( 10#$URL_COUNT < 1 || 10#$URL_COUNT > 1000 )); then
+          if ! [[ "$URL_COUNT" =~ ^[0-9]{1,4}$ ]] || (( 10#$URL_COUNT < 1 || 10#$URL_COUNT > 1000 )); then
             echo "::error::url_count must be from 1 to 1000"
             exit 1
           fi
@@ -77,13 +77,13 @@ jobs:
           p.write_text(token,encoding="utf-8")
           p.chmod(0o600)
           PY
-          if ${{ "$OPERATION" == "dashboard" }}; then
+          if [[ "$OPERATION" == "dashboard" ]]; then
             MODE=report
             QUEUE=new
-          elif ${{ "$OPERATION" == "retry-failed" }}; then
+          elif [[ "$OPERATION" == "retry-failed" ]]; then
             MODE=batch
             QUEUE=retry
-          elif ${{ "$OPERATION" == "download-new" }}; then
+          elif [[ "$OPERATION" == "download-new" ]]; then
             MODE=batch
             QUEUE=new
           else
@@ -104,9 +104,9 @@ jobs:
         if: always()
         shell: bash
         run: |
-          if ${{ -f "$OUT_DIR/github_step_summary.md" }}; then
+          if [[ -f "$OUT_DIR/github_step_summary.md" ]]; then
             cat "$OUT_DIR/github_step_summary.md" >> "$GITHUB_STEP_SUMMARY"
-          elif ${{ -f "$OUT_DIR/status.json" }}; then
+          elif [[ -f "$OUT_DIR/status.json" ]]; then
             echo "RIFT: historical-only dashboard, not a live downloader run." >> "$GITHUB_STEP_SUMMARY"
           else
             echo "RIFT: no data was generated. Check the failure logs." >> "$GITHUB_STEP_SUMMARY"
