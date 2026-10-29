@@ -17,6 +17,7 @@ from .report import export_report
 from .inventory import inventory
 from .pilot_sample import seed_pilot
 from .preflight import preflight
+from .ordered_master import sync_ordered_master,lookup_resource
 
 def records(patterns):
     for pattern in patterns:
@@ -106,7 +107,9 @@ def run_pilot(db,args,uploader,worker=None,progress_callback=None):
         except Exception as exc:
             event(db,None,'live_progress_error',type(exc).__name__+': '+str(exc)[:160])
     recover(db)
-    seed_pilot(db,limit=getattr(args,'seed_limit',5000))
+    queue_mode=getattr(args,'queue_mode',None)
+    if not (queue_mode and queue_mode.startswith('ordered_')):
+        seed_pilot(db,limit=getattr(args,'seed_limit',5000))
     if worker is None:
         # Durable request-level pacing across VPS restarts, including robots.txt
         # and redirects; see host_pacing and http_events in SQLite.
@@ -183,12 +186,18 @@ def main(argv=None):
     seed=sub.add_parser('seed');seed.add_argument('--limit',type=int,default=5000)
     doctor=sub.add_parser('doctor');doctor.add_argument('--token');doctor.add_argument('--spool',default='state/spool');doctor.add_argument('--check-drive',action='store_true')
     report=sub.add_parser('export-report');report.add_argument('--output',required=True)
+    master=sub.add_parser('sync-master');master.add_argument('--source',default='auto')
+    lookup=sub.add_parser('lookup')
+    group=lookup.add_mutually_exclusive_group(required=True)
+    group.add_argument('--position',type=int)
+    group.add_argument('--url')
+    group.add_argument('--sha256')
     run=sub.add_parser('run');run.add_argument('--token')
     run.add_argument('--spool',default='state/spool');run.add_argument('--limit-success',type=int,default=200)
     run.add_argument('--max-checks',type=int,default=3000)
     run.add_argument('--limit-urls',type=int,default=None,
                      help='Stop after this many DISTINCT source URLs checked in this run; ignores --limit-success')
-    run.add_argument('--queue-mode',choices=['all','new','retry'],
+    run.add_argument('--queue-mode',choices=['all','new','retry','ordered_new','ordered_retry'],
                      default=None,help='URL batch defaults to previously unattempted URLs; retry mode is separate')
     run.add_argument('--min-delay',type=float,default=10.0)
     run.add_argument('--max-file-mb',type=int,default=100)
@@ -205,6 +214,10 @@ def main(argv=None):
     elif args.command=='seed':
         with exclusive_runner(args.db):result=seed_pilot(db,limit=args.limit)
     elif args.command=='doctor':result=preflight(db,args.token,args.spool,args.check_drive)
+    elif args.command=='sync-master':
+        with exclusive_runner(args.db):result=sync_ordered_master(db,args.source)
+    elif args.command=='lookup':
+        result={'matches':lookup_resource(db,position=args.position,url=args.url,sha=args.sha256)}
     elif args.command=='recover':result=recover(db)
     elif args.command in ('pause','resume'):
         pause(db,args.command=='pause');result={'paused':is_paused(db)}

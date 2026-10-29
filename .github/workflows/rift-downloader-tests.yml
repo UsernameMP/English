@@ -47,6 +47,8 @@ jobs:
           python -m rift_downloader.cli --db /tmp/rift_pilot_smoke.sqlite3 status
           python -m rift_downloader.cli --db /tmp/rift_pilot_smoke.sqlite3 plan --sample 5
           python -m rift_downloader.cli --db /tmp/rift_pilot_smoke.sqlite3 seed --limit 5000
+          python -m rift_downloader.cli --db /tmp/rift_pilot_smoke.sqlite3 sync-master --source auto
+          python -m rift_downloader.cli --db /tmp/rift_pilot_smoke.sqlite3 lookup --position 1
           python -m rift_downloader.ops_metrics --baseline --output /tmp/rift_baseline.html --json /tmp/rift_baseline.json
           python -m rift_downloader.ops_metrics --db /tmp/rift_pilot_smoke.sqlite3 --output /tmp/rift_live.html --json /tmp/rift_live.json
           python -m rift_downloader.cloud_runner --help

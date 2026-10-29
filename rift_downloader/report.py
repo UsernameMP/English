@@ -55,9 +55,9 @@ def export_report(db,output):
     report['hosts_with_429']=sum(h['http_429']>0 for h in hosts)
     target.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     stem=target.with_suffix('')
-    manifest_columns=['resource_id','url','source_url','status','attempts',
+    manifest_columns=['resource_id','source_position','url','source_url','status','attempts',
                       'object_sha256','size_bytes','mime_type','drive_file_id','verified_at']
-    manifest=db.execute('''SELECT r.resource_id,r.url,r.source_url,r.status,r.attempts,
+    manifest=db.execute('''SELECT r.resource_id,r.source_position,r.url,r.source_url,r.status,r.attempts,
          r.object_sha256,o.size_bytes,o.mime_type,o.drive_file_id,o.verified_at
          FROM resources r INNER JOIN objects o ON r.object_sha256=o.sha256
          WHERE r.status='completed' AND o.verified_at IS NOT NULL ORDER BY r.resource_id''')
@@ -66,10 +66,25 @@ def export_report(db,output):
     attempts=db.execute('''SELECT id,resource_id,domain,started_at,elapsed_ms,wait_ms,
                                http_status,bytes_received,outcome,error
                                FROM attempts ORDER BY id''')
-    failures_columns=['resource_id','url','source_url','status','attempts','last_error']
-    failures=db.execute('''SELECT resource_id,url,source_url,status,attempts,last_error
+    failures_columns=['resource_id','source_position','url','source_url','status','attempts','last_error']
+    failures=db.execute('''SELECT resource_id,source_position,url,source_url,status,attempts,last_error
                            FROM resources WHERE status IN ('failed','blocked','retry','skipped','html_deferred','image_deferred')
                            ORDER BY status,resource_id''')
+    # One row per attempted URL, preserving master position and file identity.
+    # Unattempted original links remain in SQLite without bloating this CSV.
+    ledger_columns=['source_position','resource_id','url','source_url',
+        'status','attempts','http_status','last_error','object_sha256',
+        'filename','mime_type','size_bytes','drive_file_id']
+    ledger=db.execute("""SELECT r.source_position,r.resource_id,r.url,
+        r.source_url,r.status,r.attempts,
+        (SELECT a.http_status FROM attempts a
+         WHERE a.resource_id=r.resource_id ORDER BY a.id DESC LIMIT 1) http_status,
+        r.last_error,r.object_sha256,r.filename,
+        o.mime_type,o.size_bytes,o.drive_file_id
+        FROM resources r LEFT JOIN objects o ON r.object_sha256=o.sha256
+        WHERE r.attempts>0 OR r.status='completed'
+        ORDER BY CASE WHEN r.source_position IS NULL THEN 1 ELSE 0 END,
+            r.source_position,r.resource_id""")
     # HTTP-level ledger counts robots.txt and redirect requests separately from
     # the URL-level attempt table, which only records its final outcome.
     http_columns=['id','at','url','domain','purpose','http_status','elapsed_ms','wait_ms']
@@ -105,6 +120,7 @@ def export_report(db,output):
     return {
         'summary_json':str(target),
         'manifest_csv':_write_csv(stem.with_name(stem.name+'_manifest.csv'),manifest_columns,manifest),
+        'url_ledger_csv':_write_csv(stem.with_name(stem.name+'_url_ledger.csv'),ledger_columns,ledger),
         'attempts_csv':_write_csv(stem.with_name(stem.name+'_attempts.csv'),attempts_columns,attempts),
         'hosts_csv':_write_csv(stem.with_name(stem.name+'_hosts.csv'),hosts_columns,hosts),
         'noncompleted_csv':_write_csv(stem.with_name(stem.name+'_noncompleted.csv'),failures_columns,failures),
