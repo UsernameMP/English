@@ -1,0 +1,70 @@
+name: RIFT KMC index audit (one-time)
+on:
+  push:
+    paths:
+      - '.github/workflows/rift-kmc-index-audit-once.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout source index
+        uses: actions/checkout@v4
+        with:
+          ref: rift-source-index
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Scan all indexed links and canonical resources (read-only)
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, pathlib, collections
+          root=pathlib.Path('source_discovery')
+          needles = {
+            'anokmc_domain': ('anokmc.ru','anokmc'),
+            'olimpinno_domain': ('olimpinno.ru','olimpinno'),
+            'kmc_name': ('казанский математический центр','казанского математического центра','kmc.ru'),
+            'drive_folder': ('1W9PhHk5eyyNxzlvvAmyHkvjMnnZXODXu',),
+            'pdf_2021_task': ('13xCXtrsAmnSkASGiPmQvk5XbkE3s2YnM',),
+            'pdf_2021_key': ('1iwMmJ-2_JE3h2d1t2j_D2Tw_GmrgCgdZ',),
+            'pdf_2022_task': ('1Z7my61igl2WZVq667wmWBJL4gdOs4NjC',),
+            'pdf_2022_key': ('1xjUuoqYqDdoUn287Gwhr-x-lUvc2IGoS',),
+            'pdf_2023_task': ('1ldANfDfCz6aocM7QAwF_stvKz-x9zoZB',),
+            'pdf_2023_key': ('1pxPY8z-eLlp8qDNGy1l2C2aDrsVMysKY',),
+            'pdf_2024_task': ('1vBQiBazchxk91YtoQjn5VHBs_lrBEmh4',),
+            'pdf_2024_key': ('1OmYeohIxMDurXG5lLgDHCZgfgVNGQDL-',),
+            'pdf_2025_task': ('1q5-aF7Q4I_kU6Zq1vRBUrr35LjDNa0eR',),
+            'pdf_2025_key': ('1nYoInMq22-ZK28fBtYNojhP0_zL7MG-Y',)
+          }
+          dirs=['links_shards','resources_shards']
+          summary={}
+          for directory in dirs:
+            fns=sorted((root/directory).glob('*.jsonl'))
+            rows=0; matched=[]; counts=collections.Counter()
+            for fn in fns:
+              for n,line in enumerate(fn.open(encoding='utf-8'),1):
+                rows+=1
+                txt=line.casefold()
+                labs=[k for k,values in needles.items() if any(v.casefold() in txt for v in values)]
+                if labs:
+                  counts.update(labs)
+                  try: obj=json.loads(line)
+                  except: obj={'raw':line[:500]}
+                  if len(matched)<100:
+                    matched.append({'file':fn.name,'line':n,'matched':labs,'url':obj.get('url'),'parent_url':obj.get('parent_url',obj.get('first_parent_url')),'source_url':obj.get('source_url',obj.get('first_source_url')),'anchor_text':obj.get('anchor_text','')})
+            summary[directory]={'shards':len(fns),'rows':rows,'match_counts':dict(counts),'sample_matches':matched,'first_shard':fns[0].name if fns else None,'last_shard':fns[-1].name if fns else None}
+          for name in ['sources.jsonl','backlog.jsonl','link_labels.jsonl']:
+            p=root/name
+            c=collections.Counter(); lines=0
+            if p.exists():
+              for line in p.open(encoding='utf-8'):
+                lines+=1; txt=line.casefold()
+                for k,values in needles.items():
+                  if any(v.casefold() in txt for v in values): c[k]+=1
+            summary[name]={'rows':lines,'match_counts':dict(c)}
+          print('KMC_AUDIT_RESULT_START')
+          print(json.dumps(summary,ensure_ascii=False,indent=2))
+          print('KMC_AUDIT_RESULT_END')
+          PY
