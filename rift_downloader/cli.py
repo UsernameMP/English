@@ -118,7 +118,11 @@ def run_pilot(db,args,uploader,worker=None,progress_callback=None):
     cleanup_orphans(db,spool)
     report_progress('running')
     checks=0
-    while completed(db)<args.limit_success:
+    limit_urls=getattr(args,'limit_urls',None)
+    checked_this_run=set()
+    # URL mode stops after N distinct source URLs, regardless of their file
+    # type or success. File mode retains the historical verified-file limit.
+    while limit_urls is not None or completed(db)<args.limit_success:
         if is_paused(db):return 'paused'
         row=staged(db)
         if row:
@@ -136,6 +140,9 @@ def run_pilot(db,args,uploader,worker=None,progress_callback=None):
             if progress_every and after>before and after%progress_every==0:
                 report_progress('running')
             continue
+        if limit_urls is not None and len(checked_this_run)>=limit_urls:
+            report_progress('url_limit_reached')
+            return 'url_limit_reached'
         if checks>=args.max_checks:return 'max_checks'
         used=sum(p.stat().st_size for p in spool.iterdir() if p.is_file())
         if used>=args.spool_max_gb*1024**3 or shutil.disk_usage(spool).free<max(1024**3,args.max_file_mb*1024**2):
@@ -144,6 +151,7 @@ def run_pilot(db,args,uploader,worker=None,progress_callback=None):
         if row is None:return 'queue_empty_or_retry_later'
         checks+=1
         rid=row['resource_id'];domain=urlparse(row['url']).hostname
+        checked_this_run.add(rid)
         attempt=begin_attempt(db,rid,domain)
         result=worker.fetch(row['url'],spool)
         outcome=result['outcome']
@@ -177,6 +185,8 @@ def main(argv=None):
     run=sub.add_parser('run');run.add_argument('--token')
     run.add_argument('--spool',default='state/spool');run.add_argument('--limit-success',type=int,default=200)
     run.add_argument('--max-checks',type=int,default=3000)
+    run.add_argument('--limit-urls',type=int,default=None,
+                     help='Stop after this many DISTINCT source URLs checked in this run; ignores --limit-success')
     run.add_argument('--min-delay',type=float,default=10.0)
     run.add_argument('--max-file-mb',type=int,default=100)
     run.add_argument('--spool-max-gb',type=int,default=10)
@@ -198,7 +208,9 @@ def main(argv=None):
     elif args.command=='export-report':
         result={'exported':export_report(db,args.output),'report':summary(db)}
     else:
-        if args.limit_success<=0 or args.max_checks<1 or args.min_delay<10 or args.max_file_mb<1 or args.backup_every<1 or args.seed_limit<1:
+        if (args.limit_success<=0 or args.max_checks<1 or args.min_delay<10
+            or args.max_file_mb<1 or args.backup_every<1 or args.seed_limit<1
+            or (args.limit_urls is not None and args.limit_urls<1)):
             parser.error('Pilot requires limit>0, max_checks>0, min_delay>=10 sec, max_file_mb>=1')
         if args.dry_run:result={'dry_run':True,'network_requests':0,'report':summary(db)}
         else:
