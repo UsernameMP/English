@@ -115,6 +115,19 @@ class DriveSdkTests(unittest.TestCase):
             with self.assertRaises(DriveError):
                 DriveUploader(service).upload(sha,path,'application/zip','task.zip')
             self.assertTrue(path.exists())
+    def test_pinned_folder_never_creates_a_second_root(self):
+        with tempfile.TemporaryDirectory() as td:
+            source=Path(td)/'official.pdf';source.write_bytes(b'%PDF-1.7\nfile')
+            sha=hashlib.sha256(source.read_bytes()).hexdigest()
+            drive=FakeDrive()
+            ref=DriveUploader(drive,root_folder_id='already-owned-RIFT-folder').upload(
+                sha,source,'application/pdf','official.pdf')
+            self.assertEqual(len(drive.files().entries),3)
+            folders=[item for item in drive.files().entries.values()
+                if item['mimeType']=='application/vnd.google-apps.folder']
+            self.assertEqual({item['name'] for item in folders},{'raw',sha[:2]})
+            self.assertTrue(any('already-owned-RIFT-folder' in item['parents'] for item in folders))
+
     def test_index_backups_go_to_separate_folder(self):
         with tempfile.TemporaryDirectory() as td:
             path=Path(td)/'index.sqlite3';path.write_bytes(b'SQLite format 3\x00temporary')
