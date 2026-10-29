@@ -120,7 +120,7 @@ def scan_host(pair):
                 continue
             signal = hint(target, anchor["text"],anchor["title"],anchor["heading"])
             row = {
-                "id":hashlib.sha256((root+"\\n"+url+"\\n"+target).encode()).hexdigest()[:24],
+                "id":hashlib.sha256((root+"\n"+url+"\n"+target).encode()).hexdigest()[:24],
                 "url":target, "parent_url":url,"source_url":root,
                 "anchor_text":anchor["text"],"title":anchor["title"],
                 "heading":anchor["heading"],"resource_id":resource_id(target),
@@ -152,7 +152,7 @@ def append_shards(folder, prefix, rows):
         target = d / (prefix + f"{last:06d}.jsonl")
         with target.open("w", encoding="utf-8") as f:
             for row in rows[i:i+MAX_NEW_RECORDS_PER_SHARD]:
-                f.write(json.dumps(row,ensure_ascii=False)+"\\n")
+                f.write(json.dumps(row,ensure_ascii=False)+"\n")
         n += 1
     return n
 
@@ -225,7 +225,7 @@ def main():
                     f.write(json.dumps({"url":url,"name":"Russian olympiad centre (targeted seed)",
                         "country":"RU","subject":"multisubject","status":"unverified",
                         "origin":"RIFT targeted Russian olympiad centres 2026-10-29",
-                        "first_seen":"2026-10-29","next_action":"targeted_crawled"},ensure_ascii=False)+"\\n")
+                        "first_seen":"2026-10-29","next_action":"targeted_crawled"},ensure_ascii=False)+"\n")
                     existing_source_urls.add(canon);source_added+=1
     # The ordered downloader list is new+known target-site URLs FIRST, then rest of old index.
     # Exact resource-id duplicates are excluded. No destructive reorder of evidence shards.
@@ -236,13 +236,13 @@ def main():
     all_count=0; file_count=0
     with gzip.open(manifest_path,"wt",encoding="utf-8",compresslevel=6) as f, gzip.open(file_manifest,"wt",encoding="utf-8",compresslevel=6) as ff, first_plain.open("w",encoding="utf-8") as fp:
         for url,file_candidate in priority_urls:
-            fp.write(url+"\\n");f.write(url+"\\n");all_count+=1
-            if file_candidate:ff.write(url+"\\n");file_count+=1
+            fp.write(url+"\n");f.write(url+"\n");all_count+=1
+            if file_candidate:ff.write(url+"\n");file_count+=1
         for url,file_candidate in old_urls:
             rid=resource_id(url)
             if rid in tail_exclusions:continue
-            f.write(url+"\\n");all_count+=1
-            if file_candidate:ff.write(url+"\\n");file_count+=1
+            f.write(url+"\n");all_count+=1
+            if file_candidate:ff.write(url+"\n");file_count+=1
     raw_shards_added=append_shards("links_shards","batch_",new_links)
     resource_shards_added=append_shards("resources_shards","resource_",new_resources)
     host_results=[{"host":h,"seed_urls":len(by_host[h]["seeds"]),"visited":by_host[h]["visited"],
@@ -266,7 +266,7 @@ def main():
         "download_priority_all_count":all_count,"download_priority_file_candidate_count":file_count,
         "download_priority_manifest":str(manifest_path.relative_to(ROOT)),
         "download_file_candidate_manifest":str(file_manifest.relative_to(ROOT))}
-    (OUTPUT/(STAMP+"_summary.json")).write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+    (OUTPUT/(STAMP+"_summary.json")).write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print("RU_TARGET_CRAWL_RESULT_START")
     print(json.dumps(result,ensure_ascii=False,indent=2))
     print("RU_TARGET_CRAWL_RESULT_END",flush=True)
