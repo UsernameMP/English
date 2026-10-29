@@ -186,6 +186,19 @@ def upload_run_reports(service,root_id,outdir,run_id=None):
         saved.append({'name':path.name,'id':file_id,'bytes':size})
     return {'folder_id':target,'reports':saved}
 
+def require_russian_head(master,allow_override=False):
+    """Refuse to crawl old foreign-domain-first shards by accidental fallback."""
+    from urllib.parse import urlsplit
+    head=master.get('first_five') or []
+    domain=(urlsplit(head[0]['url']).hostname or '').lower() if head else ''
+    if not allow_override and not domain.endswith(('.ru','.рф','.xn--p1ai')):
+        raise CloudRunError(
+            'Expected Russian-first master, but actual GitHub source begins with '
+            + (domain or 'no URL') +
+            '. Publish source_discovery/download_master.jsonl on rift-source-index '
+            'or supply the correct --source file. No source documents were fetched.')
+    return domain
+
 def run(argv=None):
     p=argparse.ArgumentParser(description='RIFT Actions bounded source URL batch')
     p.add_argument('--mode',choices=['report','batch'],required=True)
@@ -232,14 +245,7 @@ def run(argv=None):
         # the new master. Fail closed instead of quietly downloading the old
         # IMC (.uk)-first shard list when the new file is not yet committed.
         if args.mode=='batch' and args.queue_mode=='new' and not args.allow_non_ru_first:
-            from urllib.parse import urlsplit
-            head=master['first_five']
-            hostname=urlsplit(head[0]['url']).hostname.lower() if head else ''
-            if not hostname.endswith(('.ru','.рф','.xn--p1ai')):
-                raise CloudRunError(
-                    'Expected Russian domains first, but the actual GitHub master begins with '
-                    +hostname+'. Publish the updated master in rift-source-index or supply --source '
-                    'to that file. No source URLs have been downloaded.')
+            require_russian_head(master,args.allow_non_ru_first)
         state='report_only' if args.mode=='report' else 'running'
         stop='no_source_requests' if args.mode=='report' else 'not_started'
         try:
