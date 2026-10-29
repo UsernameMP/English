@@ -199,6 +199,24 @@ def require_russian_head(master,allow_override=False):
             'or supply the correct --source file. No source documents were fetched.')
     return domain
 
+def require_ru_first(master):
+    """Refuse fresh batches until the newly prioritized .ru master is deployed.
+
+    A previous version silently fell back to the original UK-first shards;
+    this fail-closed gate prevents a user from unknowingly downloading the
+    wrong segment. Retries and read-only dashboard remain unaffected.
+    """
+    from urllib.parse import urlsplit
+    first=(master.get('first_five') or [{}])[0].get('url','')
+    host=(urlsplit(first).hostname or '').lower().rstrip('.')
+    if not host.endswith(('.ru','.рф','.xn--p1ai')):
+        raise CloudRunError(
+            'RIFT master is not RU-first. Fresh URL downloads blocked. '
+            'Publish the updated ordered source in rift-source-index at '
+            'source_discovery/download_master.jsonl (or specify source_path). '
+            'Current first domain: '+(host[:128] or 'unknown'))
+    return host
+
 def run(argv=None):
     p=argparse.ArgumentParser(description='RIFT Actions bounded source URL batch')
     p.add_argument('--mode',choices=['report','batch'],required=True)
@@ -239,6 +257,8 @@ def run(argv=None):
         # This is crucial when newly discovered links are prepended to 332k
         # existing URLs. Preserve completed and failed states by original URL.
         master=sync_ordered_master(db,args.source,minimum=1000)
+        if args.mode=='batch' and args.queue_mode=='new':
+            require_ru_first(master)
         if not recovered['restored'] and master['master_rows']<1000:
             raise CloudRunError('Incomplete master file; refusing download')
         # The user explicitly put Russian (.ru/.рф) sources at the start of
