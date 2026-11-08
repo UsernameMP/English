@@ -376,7 +376,7 @@ public class MainActivity extends Activity {
         Button all=primaryButton(getString(R.string.all_olympiads)); all.setOnClickListener(v->selectFirstApplicable(courses,grade)); root.addView(all,matchWrap());
         root.addView(space(10));
         if ("mathematics".equals(subject) && grade == 5) {
-            Button kmo = secondaryButton("КМО · 10 оригинальных интерактивных задач");
+            Button kmo = secondaryButton("КМО · 16 оригинальных интерактивных задач");
             kmo.setOnClickListener(v -> showKmoOriginals(true));
             LinearLayout.LayoutParams kmoLp = matchWrap(); kmoLp.bottomMargin = dp(8);
             root.addView(kmo, kmoLp);
@@ -418,7 +418,7 @@ public class MainActivity extends Activity {
         context.setContentDescription(getString(R.string.change_course));
         context.setOnClickListener(v->showCourseStorefront()); root.addView(context,matchWrap()); root.addView(space(14));
         if ("mathematics".equals(QuestionBank.currentPack().subject) && learningContext.grade() == 5) {
-            Button kmo = primaryButton("КМО · оригинальные интерактивные задачи (10)");
+            Button kmo = primaryButton("КМО · оригинальные интерактивные задачи (16)");
             kmo.setOnClickListener(v -> showKmoOriginals(false));
             root.addView(kmo, matchWrap()); root.addView(space(12));
         }
