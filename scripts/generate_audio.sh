@@ -16,10 +16,33 @@ LESSAC_CONFIG="$VOICE_HOME/en_US-lessac-medium.onnx.json"
 RYAN_MODEL="$VOICE_HOME/en_US-ryan-medium.onnx"
 RYAN_CONFIG="$VOICE_HOME/en_US-ryan-medium.onnx.json"
 
+# The original GitHub asset occasionally returns HTTP 504 on Actions runners.
+# Try the exact versioned release, then a mirrored copy of the same archive.
+download_archive() {
+  local url tmp
+  tmp="$CACHE/piper.download.$$"
+  for url in \
+    "https://github.com/rhasspy/piper/releases/download/2023.11.14-2/piper_linux_x86_64.tar.gz" \
+    "https://downloads.sourceforge.net/project/piper-tts.mirror/2023.11.14-2/piper_linux_x86_64.tar.gz"; do
+    echo "Fetching Piper runtime: $url"
+    rm -f "$tmp"
+    if curl --fail --location --silent --show-error \
+        --connect-timeout 15 --max-time 240 --retry 2 --retry-delay 2 \
+        --output "$tmp" "$url" && tar -tzf "$tmp" >/dev/null 2>&1; then
+      mv -f "$tmp" "$CACHE/piper.tar.gz"
+      return 0
+    fi
+    echo "Piper runtime unavailable or invalid archive at this mirror"
+  done
+  rm -f "$tmp"
+  echo >&2 "ERROR: Neither verified Piper archive source is available."
+  return 1
+}
 if [ ! -x "$PIPER_BIN" ]; then
   echo "Downloading Piper neural TTS runtime..."
-  curl -L --fail --retry 3     "https://github.com/rhasspy/piper/releases/download/2023.11.14-2/piper_linux_x86_64.tar.gz"     -o "$CACHE/piper.tar.gz"
+  download_archive
   tar -xzf "$CACHE/piper.tar.gz" -C "$PIPER_HOME"
+  test -x "$PIPER_BIN" || { echo >&2 "Piper executable not present in archive"; exit 1; }
 fi
 
 download_voice() {
