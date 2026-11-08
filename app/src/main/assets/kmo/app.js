@@ -37,8 +37,8 @@ function draw(){
  $("task-title").textContent=t.title;$("task-prompt").textContent=t.prompt;$("solution").textContent=t.solution;
  $("navigation").innerHTML=tasks.map((t,i)=>'<button class="'+(i===current?"active ":m(i).solved?"done":"")+'" data-nav="'+i+'" title="'+t.title+'">'+(i+1)+"</button>").join("");
  $("prev").disabled=current===0;$("next").disabled=current===tasks.length-1;
- let f=[cut,baskets,hexSvg,digits,brackets,packing,boat,calendar,cards,color][current];
- $("workarea").innerHTML=f();clearMsg();
+ let f=({cut,baskets,hex:hexSvg,digits,brackets,packing,boat,months:calendar,cards,color})[t.kind];
+ $("workarea").innerHTML=f?f():window.KMO24.render(t.kind);clearMsg();
  if(showHint)msg(t.hint);
 }
 function feedback(result){m().checks++;if(result.ok)m().solved=true;else m().invalid++;save();msg(result.text,result.ok);$("navigation").querySelectorAll("button")[current].classList.toggle("done",result.ok);}
@@ -199,11 +199,11 @@ function color(){
 function colorCount(bits){let n=0;for(let y=0;y<4;y++)for(let x=0;x<4;x++){let i=y*4+x;if(x<3&&bits[i]!==bits[i+1])n++;if(y<3&&bits[i]!==bits[i+4])n++;}return n;}
 function checkColor(){let c=colorCount(states[9].bits);return c===16?{ok:true,text:"Получилась допустимая раскраска: ровно 16 разноцветных соседств!"}:{ok:false,text:"Сейчас "+c+" разноцветных соседств, требуется ровно 16."};}
 
-function applyCheck(){const result=[checkCut,checkBaskets,checkHex,checkDigits,checkBrackets,checkPacking,checkBoat,checkCalendar,checkCards,checkColor][current]();feedback(result);}
+function applyCheck(){const t=tasks[current],fn=({cut:checkCut,baskets:checkBaskets,hex:checkHex,digits:checkDigits,brackets:checkBrackets,packing:checkPacking,boat:checkBoat,months:checkCalendar,cards:checkCards,color:checkColor})[t.kind];feedback(fn?fn():window.KMO24.check(t.kind));}
 $("navigation").addEventListener("click",e=>{let el=e.target.closest("[data-nav]");if(el)selectTask(+el.dataset.nav);});
 $("prev").addEventListener("click",()=>selectTask(current-1));$("next").addEventListener("click",()=>selectTask(current+1));
 $("check").addEventListener("click",applyCheck);
-$("reset").addEventListener("click",()=>{states[current]=init()[current];act();draw();});
+$("reset").addEventListener("click",()=>{const kind=tasks[current].kind;if(kind.startsWith("k24_"))window.KMO24.reset(kind);else if(kind==="color")states[9]=init()[9];else states[current]=init()[current];act();draw();});
 $("hint").addEventListener("click",()=>{m().hints++;save();msg(tasks[current].hint);});
 let brushOn=false, brushPrev=null, suppressClickUntil=0;
 function brushCellAt(clientX,clientY,first=false){
