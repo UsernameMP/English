@@ -68,7 +68,9 @@ jobs:
       - name: Validate KMO original interactive mechanics
         run: |
           node --check app/src/main/assets/kmo/app.js
+          node --check app/src/main/assets/kmo/app_2024.js
           node scripts/validate_kmo_originals.cjs
+          node scripts/validate_kmo_2024.cjs
 
       - name: Validate 5–6 grade law olympiad pilot
         run: python3 scripts/validate_law_g5_6.py
