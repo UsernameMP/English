@@ -1,0 +1,46 @@
+name: One-time delete obsolete RIFT v0.6.42 Actions artifacts
+on:
+  push:
+    paths:
+      - '.github/workflows/rift-artifact-cleanup-once.yml'
+  workflow_dispatch:
+permissions:
+  actions: write
+  contents: read
+jobs:
+  remove-obsolete-rift-artifacts:
+    if: github.repository == 'UsernameMP/English' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Delete only verified v0.6.42 artifacts, preserve Releases
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          ids=(13611024494 13611501946 12933116362 12929967632 12926958587 12928016980 12927917380 12927381013 12927465491 12926811599 12926332016 12924679682 12925813071 12925747206 12885430969)
+          deleted=0
+          skipped=0
+          for id in "${ids[@]}"; do
+            artifact="$(gh api "repos/$REPO/actions/artifacts/$id" --jq '.name' 2>/dev/null || true)"
+            if [[ -z "$artifact" ]]; then
+              echo "Already deleted or not found: $id"
+              skipped=$((skipped + 1))
+              continue
+            fi
+            if [[ "$artifact" != 'rift-v0.6.42-pilot' ]]; then
+              echo "::error::Artifact $id has unexpected name '$artifact'; refusing deletion."
+              exit 1
+            fi
+            gh api -X DELETE "repos/$REPO/actions/artifacts/$id" --silent
+            echo "Deleted Actions artifact $id: $artifact"
+            deleted=$((deleted + 1))
+          done
+          {
+            echo "## RIFT artifact cleanup"
+            echo "Deleted old Actions artifacts: $deleted"
+            echo "Already absent: $skipped"
+            echo "No GitHub Release assets touched."
+          } >> "$GITHUB_STEP_SUMMARY"
