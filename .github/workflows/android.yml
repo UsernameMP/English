@@ -185,12 +185,13 @@ jobs:
           "$BUILD_TOOLS/apksigner" verify --verbose --print-certs "$APK"
 
       - name: Upload CI artifact
+        if: github.event_name != 'push' || github.ref != 'refs/heads/main'
         uses: actions/upload-artifact@v4
         with:
           name: rift-v${{ env.VERSION_NAME }}-pilot
           path: ${{ env.APK_NAME }}
           if-no-files-found: error
-          retention-days: 14
+          retention-days: 1
 
       - name: Publish public pilot content channel
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
