@@ -1,0 +1,1337 @@
+{
+  "schema_version": "1.0",
+  "bank_id": "history-vsosh-7-ru-2026",
+  "title": "История · ВСОШ",
+  "locale": "ru",
+  "content_version": "0.1.0",
+  "pack": {
+    "id": "history.vsosh.7.ru.2026",
+    "subject": "history",
+    "grade_min": 7,
+    "grade_max": 7,
+    "competition": "VSOSh",
+    "region": "RU",
+    "season": "2026-2027",
+    "title": {
+      "ru": "История · ВСОШ",
+      "en": "История · ВСОШ"
+    },
+    "subtitle": {
+      "ru": "Оригинальные задания по механикам школьного этапа · 7 класс",
+      "en": "Оригинальные задания по механикам школьного этапа · 7 класс"
+    }
+  },
+  "questions": [
+    {
+      "id": "hist_source_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "hist_source_interpretation"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "В тексте говорится о призыве западных рыцарей идти на помощь христианам Востока и освободить святыни. Какие явления связаны с этим призывом?",
+      "answer": [
+        "a",
+        "b",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Описание связано с эпохой крестовых походов и религиозных экспедиций на Восток."
+        },
+        "full": {
+          "ru": "Описание связано с эпохой крестовых походов и религиозных экспедиций на Восток."
+        },
+        "rule": {
+          "ru": "Источник сначала помещают в исторический контекст."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.SOURCE.INTERPRETATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Крестовые походы"
+        },
+        {
+          "id": "b",
+          "text": "Паломничество в Святую землю"
+        },
+        {
+          "id": "c",
+          "text": "Монгольское нашествие на Русь"
+        },
+        {
+          "id": "d",
+          "text": "Военные экспедиции западноевропейских феодалов на Восток"
+        }
+      ]
+    },
+    {
+      "id": "hist_chrono_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "hist_chronology"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Расположите события в хронологическом порядке.",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "988 → 1240 → 1380 → 1480."
+        },
+        "full": {
+          "ru": "988 → 1240 → 1380 → 1480."
+        },
+        "rule": {
+          "ru": "Хронология строится по датам событий."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.CHRONOLOGY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Крещение Руси"
+        },
+        {
+          "id": "b",
+          "text": "Невская битва"
+        },
+        {
+          "id": "c",
+          "text": "Куликовская битва"
+        },
+        {
+          "id": "d",
+          "text": "Стояние на Угре"
+        }
+      ]
+    },
+    {
+      "id": "hist_people_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "hist_people_events"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите исторического деятеля и событие.",
+      "answer": [
+        "l1:r2",
+        "l2:r4",
+        "l3:r3",
+        "l4:r1"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Каждый деятель связан с характерным событием своей эпохи."
+        },
+        "full": {
+          "ru": "Каждый деятель связан с характерным событием своей эпохи."
+        },
+        "rule": {
+          "ru": "Связывай личность с конкретным действием и временем."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.PEOPLE.EVENTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Княгиня Ольга"
+        },
+        {
+          "id": "l2",
+          "text": "Александр Невский"
+        },
+        {
+          "id": "l3",
+          "text": "Дмитрий Донской"
+        },
+        {
+          "id": "l4",
+          "text": "Иван III"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Стояние на Угре"
+        },
+        {
+          "id": "r2",
+          "text": "Установление уроков и погостов"
+        },
+        {
+          "id": "r3",
+          "text": "Куликовская битва"
+        },
+        {
+          "id": "r4",
+          "text": "Ледовое побоище"
+        }
+      ]
+    },
+    {
+      "id": "hist_source_002",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "hist_source_interpretation"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "В источнике упомянуты вече, посадник и торговые связи с Ганзой. О каком политическом центре Руси вероятнее всего идёт речь?",
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Вече и посадник особенно характерны для Новгородской земли."
+        },
+        "full": {
+          "ru": "Вече и посадник особенно характерны для Новгородской земли."
+        },
+        "rule": {
+          "ru": "Набор институтов и терминов помогает локализовать источник."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.SOURCE.INTERPRETATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Владимир"
+        },
+        {
+          "id": "b",
+          "text": "Новгород"
+        },
+        {
+          "id": "c",
+          "text": "Рязань"
+        },
+        {
+          "id": "d",
+          "text": "Москва"
+        }
+      ]
+    },
+    {
+      "id": "hist_term_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "free_response",
+      "mode": "practice",
+      "skills": [
+        "hist_terms_institutions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Как называется погодовая запись событий в Древней Руси?",
+      "answer": [
+        "летопись",
+        "летописью"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Это летопись."
+        },
+        "full": {
+          "ru": "Это летопись."
+        },
+        "rule": {
+          "ru": "Исторический термин определяется по функции источника."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.TERMS.INSTITUTIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "hist_cause_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "hist_cause_effect"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какие факторы способствовали политической раздробленности Руси?",
+      "answer": [
+        "a",
+        "b",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Раздробленность усиливали местные центры и ослабление общерусской власти."
+        },
+        "full": {
+          "ru": "Раздробленность усиливали местные центры и ослабление общерусской власти."
+        },
+        "rule": {
+          "ru": "Причины должны объяснять изменение политической структуры."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.CAUSE.EFFECT",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Рост самостоятельности крупных земель"
+        },
+        {
+          "id": "b",
+          "text": "Укрепление местных княжеских династий"
+        },
+        {
+          "id": "c",
+          "text": "Полное исчезновение городов"
+        },
+        {
+          "id": "d",
+          "text": "Ослабление единого центра"
+        }
+      ]
+    },
+    {
+      "id": "hist_terms_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "hist_terms_institutions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите термин и значение.",
+      "answer": [
+        "l1:r2",
+        "l2:r4",
+        "l3:r1",
+        "l4:r3"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Термины описывают разные институты и практики древнерусского общества."
+        },
+        "full": {
+          "ru": "Термины описывают разные институты и практики древнерусского общества."
+        },
+        "rule": {
+          "ru": "Определение должно отражать функцию термина."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.TERMS.INSTITUTIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Полюдье"
+        },
+        {
+          "id": "l2",
+          "text": "Вече"
+        },
+        {
+          "id": "l3",
+          "text": "Вотчина"
+        },
+        {
+          "id": "l4",
+          "text": "Посадник"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Наследственное земельное владение"
+        },
+        {
+          "id": "r2",
+          "text": "Сбор дани князем при объезде земель"
+        },
+        {
+          "id": "r3",
+          "text": "Должностное лицо в Новгороде"
+        },
+        {
+          "id": "r4",
+          "text": "Городское собрание"
+        }
+      ]
+    },
+    {
+      "id": "hist_mongol_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "hist_chronology"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Расположите события по времени.",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "1223 → 1237 → 1240 (Киев) → 1240 (Невская битва, позже в году)."
+        },
+        "full": {
+          "ru": "1223 → 1237 → 1240 (Киев) → 1240 (Невская битва, позже в году)."
+        },
+        "rule": {
+          "ru": "При близких датах учитывай не только год, но и последовательность событий."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.CHRONOLOGY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Битва на Калке"
+        },
+        {
+          "id": "b",
+          "text": "Начало похода Батыя на Северо-Восточную Русь"
+        },
+        {
+          "id": "c",
+          "text": "Разорение Киева войсками Батыя"
+        },
+        {
+          "id": "d",
+          "text": "Невская битва"
+        }
+      ]
+    },
+    {
+      "id": "hist_source_003",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "hist_source_interpretation"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Что из перечисленного является первичным историческим источником для изучения средневекового города?",
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Археологическая находка возникла в изучаемую эпоху."
+        },
+        "full": {
+          "ru": "Археологическая находка возникла в изучаемую эпоху."
+        },
+        "rule": {
+          "ru": "Первичный источник непосредственно связан с исследуемым временем."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.SOURCE.INTERPRETATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Современный учебник"
+        },
+        {
+          "id": "b",
+          "text": "Археологическая находка из культурного слоя"
+        },
+        {
+          "id": "c",
+          "text": "Документальный фильм XXI века"
+        },
+        {
+          "id": "d",
+          "text": "Статья энциклопедии"
+        }
+      ]
+    },
+    {
+      "id": "hist_frag_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "hist_cause_effect"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какие явления характерны для периода раздробленности?",
+      "answer": [
+        "a",
+        "b",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Раздробленность не означала полного прекращения связей, но усиливала политическую самостоятельность и соперничество."
+        },
+        "full": {
+          "ru": "Раздробленность не означала полного прекращения связей, но усиливала политическую самостоятельность и соперничество."
+        },
+        "rule": {
+          "ru": "Не путай политическую раздробленность с полной изоляцией."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.CAUSE.EFFECT",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Существование самостоятельных княжеских центров"
+        },
+        {
+          "id": "b",
+          "text": "Различия политических порядков земель"
+        },
+        {
+          "id": "c",
+          "text": "Полное прекращение торговли между землями"
+        },
+        {
+          "id": "d",
+          "text": "Соперничество князей"
+        }
+      ]
+    },
+    {
+      "id": "hist_city_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "hist_terms_institutions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите центр и характерный признак.",
+      "answer": [
+        "l1:r3",
+        "l2:r4",
+        "l3:r1",
+        "l4:r2"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Политические центры различались ролью и институтами."
+        },
+        "full": {
+          "ru": "Политические центры различались ролью и институтами."
+        },
+        "rule": {
+          "ru": "Историческая география связывает место с функцией во времени."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.TERMS.INSTITUTIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Новгород"
+        },
+        {
+          "id": "l2",
+          "text": "Владимир"
+        },
+        {
+          "id": "l3",
+          "text": "Москва"
+        },
+        {
+          "id": "l4",
+          "text": "Киев"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Центр объединения Северо-Восточной Руси в XIV–XV вв."
+        },
+        {
+          "id": "r2",
+          "text": "Древний центр на Днепре"
+        },
+        {
+          "id": "r3",
+          "text": "Вечевая традиция и посадники"
+        },
+        {
+          "id": "r4",
+          "text": "Столица Владимиро-Суздальской земли"
+        }
+      ]
+    },
+    {
+      "id": "hist_term_002",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "free_response",
+      "mode": "practice",
+      "skills": [
+        "hist_terms_institutions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Как называлось собрание горожан, игравшее особенно заметную роль в Новгороде?",
+      "answer": [
+        "вече"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Это вече."
+        },
+        "full": {
+          "ru": "Это вече."
+        },
+        "rule": {
+          "ru": "Термин определяется по политической функции."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.TERMS.INSTITUTIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "hist_olga_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "hist_cause_effect"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какой результат имела налоговая реформа княгини Ольги?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Ольга упорядочила сбор дани через уроки и погосты."
+        },
+        "full": {
+          "ru": "Ольга упорядочила сбор дани через уроки и погосты."
+        },
+        "rule": {
+          "ru": "Реформа отвечает на конкретную проблему управления."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.CAUSE.EFFECT",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Установление уроков и погостов"
+        },
+        {
+          "id": "b",
+          "text": "Отмена дани"
+        },
+        {
+          "id": "c",
+          "text": "Введение крепостного права"
+        },
+        {
+          "id": "d",
+          "text": "Создание Земского собора"
+        }
+      ]
+    },
+    {
+      "id": "hist_sourcecrit_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "hist_source_interpretation"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Что важно учитывать при оценке достоверности письменного источника?",
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Время, автор и цель помогают понять ограничения источника."
+        },
+        "full": {
+          "ru": "Время, автор и цель помогают понять ограничения источника."
+        },
+        "rule": {
+          "ru": "Критика источника учитывает происхождение и намерение автора."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.SOURCE.INTERPRETATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Время создания"
+        },
+        {
+          "id": "b",
+          "text": "Положение и интересы автора"
+        },
+        {
+          "id": "c",
+          "text": "Цель текста"
+        },
+        {
+          "id": "d",
+          "text": "Только длину текста"
+        }
+      ]
+    },
+    {
+      "id": "hist_moscow_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "hist_chronology"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Расположите события процесса объединения русских земель.",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "XIV век → 1380 → 1478 → 1480."
+        },
+        "full": {
+          "ru": "XIV век → 1380 → 1478 → 1480."
+        },
+        "rule": {
+          "ru": "Процесс объединения прослеживается через последовательность политических событий."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.CHRONOLOGY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Возвышение Москвы при Иване Калите"
+        },
+        {
+          "id": "b",
+          "text": "Куликовская битва"
+        },
+        {
+          "id": "c",
+          "text": "Присоединение Новгорода к Москве"
+        },
+        {
+          "id": "d",
+          "text": "Стояние на Угре"
+        }
+      ]
+    },
+    {
+      "id": "hist_docs_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "hist_people_events"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите памятник права и связанную эпоху.",
+      "answer": [
+        "l1:r3",
+        "l2:r1",
+        "l3:r2",
+        "l4:r4"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Памятники и реформы привязаны к определённым правителям и эпохам."
+        },
+        "full": {
+          "ru": "Памятники и реформы привязаны к определённым правителям и эпохам."
+        },
+        "rule": {
+          "ru": "Связывай документ или реформу с политическим контекстом."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.PEOPLE.EVENTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Русская Правда"
+        },
+        {
+          "id": "l2",
+          "text": "Судебник 1497 года"
+        },
+        {
+          "id": "l3",
+          "text": "Уроки и погосты"
+        },
+        {
+          "id": "l4",
+          "text": "Крещение Руси"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Иван III"
+        },
+        {
+          "id": "r2",
+          "text": "Княгиня Ольга"
+        },
+        {
+          "id": "r3",
+          "text": "Ярослав Мудрый и его эпоха"
+        },
+        {
+          "id": "r4",
+          "text": "Князь Владимир"
+        }
+      ]
+    },
+    {
+      "id": "hist_trade_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "hist_source_interpretation"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Источник описывает путь по рекам от Балтики к Чёрному морю через земли восточных славян. Какой маршрут имеется в виду?",
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Балтика и Чёрное море связывал путь «из варяг в греки»."
+        },
+        "full": {
+          "ru": "Балтика и Чёрное море связывал путь «из варяг в греки»."
+        },
+        "rule": {
+          "ru": "География маршрута помогает идентифицировать историческое явление."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.SOURCE.INTERPRETATION",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Шёлковый путь"
+        },
+        {
+          "id": "b",
+          "text": "Путь «из варяг в греки»"
+        },
+        {
+          "id": "c",
+          "text": "Соляной путь"
+        },
+        {
+          "id": "d",
+          "text": "Великий чайный путь"
+        }
+      ]
+    },
+    {
+      "id": "hist_nevsky_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "hist_people_events"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Кто мог быть современником Александра Невского?",
+      "answer": [
+        "a",
+        "b",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Батый, Даниил Галицкий и Ярослав Всеволодович жили в XIII веке."
+        },
+        "full": {
+          "ru": "Батый, Даниил Галицкий и Ярослав Всеволодович жили в XIII веке."
+        },
+        "rule": {
+          "ru": "Современников проверяют по пересечению дат жизни и деятельности."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.PEOPLE.EVENTS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Батый"
+        },
+        {
+          "id": "b",
+          "text": "Даниил Галицкий"
+        },
+        {
+          "id": "c",
+          "text": "Иван Грозный"
+        },
+        {
+          "id": "d",
+          "text": "Ярослав Всеволодович"
+        }
+      ]
+    },
+    {
+      "id": "hist_century_001",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "hist_chronology"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите событие и век.",
+      "answer": [
+        "l1:r1",
+        "l2:r2",
+        "l3:r3",
+        "l4:r4"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "События распределяются от X до XV века."
+        },
+        "full": {
+          "ru": "События распределяются от X до XV века."
+        },
+        "rule": {
+          "ru": "Переводи год в век и проверяй последовательность."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.CHRONOLOGY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Крещение Руси"
+        },
+        {
+          "id": "l2",
+          "text": "Невская битва"
+        },
+        {
+          "id": "l3",
+          "text": "Куликовская битва"
+        },
+        {
+          "id": "l4",
+          "text": "Стояние на Угре"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "X век"
+        },
+        {
+          "id": "r2",
+          "text": "XIII век"
+        },
+        {
+          "id": "r3",
+          "text": "XIV век"
+        },
+        {
+          "id": "r4",
+          "text": "XV век"
+        }
+      ]
+    },
+    {
+      "id": "hist_term_003",
+      "subject": "history",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "free_response",
+      "mode": "practice",
+      "skills": [
+        "hist_terms_institutions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Назовите одним словом народное собрание в средневековом Новгороде.",
+      "answer": [
+        "вече"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Это вече."
+        },
+        "full": {
+          "ru": "Это вече."
+        },
+        "rule": {
+          "ru": "Короткий ответ должен точно называть исторический институт."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "HIST.TERMS.INSTITUTIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    }
+  ]
+}

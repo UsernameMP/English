@@ -1,0 +1,1332 @@
+{
+  "schema_version": "1.0",
+  "bank_id": "social_science-vsosh-7-ru-2026",
+  "title": "Обществознание · ВСОШ",
+  "locale": "ru",
+  "content_version": "0.1.0",
+  "pack": {
+    "id": "social_science.vsosh.7.ru.2026",
+    "subject": "social_science",
+    "grade_min": 7,
+    "grade_max": 7,
+    "competition": "VSOSh",
+    "region": "RU",
+    "season": "2026-2027",
+    "title": {
+      "ru": "Обществознание · ВСОШ",
+      "en": "Обществознание · ВСОШ"
+    },
+    "subtitle": {
+      "ru": "Оригинальные задания по механикам школьного этапа · 7 класс",
+      "en": "Оригинальные задания по механикам школьного этапа · 7 класс"
+    }
+  },
+  "questions": [
+    {
+      "id": "soc_logic_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "soc_logic_inference"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Из утверждений «Все лиры умеют плавать» и «Ни один умеющий плавать не является тором» выберите выводы, которые обязательно верны.",
+      "answer": [
+        "a",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Лир → плавает, а плавающий → не тор; значит лир → не тор."
+        },
+        "full": {
+          "ru": "Лир → плавает, а плавающий → не тор; значит лир → не тор."
+        },
+        "rule": {
+          "ru": "В формальной логике вывод должен следовать из посылок без дополнительных предположений."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.LOGIC.INFERENCE",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Ни один лир не является тором"
+        },
+        {
+          "id": "b",
+          "text": "Все торы не умеют плавать"
+        },
+        {
+          "id": "c",
+          "text": "Некоторые лиры — торы"
+        },
+        {
+          "id": "d",
+          "text": "Если кто-то лир, то он не тор"
+        }
+      ]
+    },
+    {
+      "id": "soc_law_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "soc_law_responsibility"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите ситуацию и вид юридической ответственности.",
+      "answer": [
+        "l1:r3",
+        "l2:r4",
+        "l3:r1",
+        "l4:r2"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Вид ответственности зависит от отрасли права и характера нарушения."
+        },
+        "full": {
+          "ru": "Вид ответственности зависит от отрасли права и характера нарушения."
+        },
+        "rule": {
+          "ru": "Сначала определи, какие правоотношения нарушены."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.LAW.RESPONSIBILITY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Кража телефона"
+        },
+        {
+          "id": "l2",
+          "text": "Неоплата штрафа за безбилетный проезд"
+        },
+        {
+          "id": "l3",
+          "text": "Нарушение работником трудовой дисциплины"
+        },
+        {
+          "id": "l4",
+          "text": "Невыполнение условий договора поставки"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Дисциплинарная"
+        },
+        {
+          "id": "r2",
+          "text": "Гражданско-правовая"
+        },
+        {
+          "id": "r3",
+          "text": "Уголовная"
+        },
+        {
+          "id": "r4",
+          "text": "Административная"
+        }
+      ]
+    },
+    {
+      "id": "soc_inst_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "soc_society_institutions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какой социальный институт прежде всего связан с воспроизводством населения и первичной социализацией ребёнка?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Эти функции прежде всего выполняет семья."
+        },
+        "full": {
+          "ru": "Эти функции прежде всего выполняет семья."
+        },
+        "rule": {
+          "ru": "Социальный институт узнают по его устойчивым функциям."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.SOCIETY.INSTITUTIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Семья"
+        },
+        {
+          "id": "b",
+          "text": "Рынок"
+        },
+        {
+          "id": "c",
+          "text": "Государство"
+        },
+        {
+          "id": "d",
+          "text": "Наука"
+        }
+      ]
+    },
+    {
+      "id": "soc_econ_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "soc_economy_choice"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Ученик может вечером либо пойти на тренировку, либо выполнить оплачиваемую подработку. Если он выбирает тренировку, что является альтернативной стоимостью решения?",
+      "answer": [
+        "b"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Альтернативная стоимость — ценность лучшей отвергнутой возможности."
+        },
+        "full": {
+          "ru": "Альтернативная стоимость — ценность лучшей отвергнутой возможности."
+        },
+        "rule": {
+          "ru": "Сравнивай выбранный вариант с лучшей доступной альтернативой."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.ECONOMY.CHOICE",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Стоимость спортивной формы"
+        },
+        {
+          "id": "b",
+          "text": "Доход от подработки, от которого он отказался"
+        },
+        {
+          "id": "c",
+          "text": "Любые карманные расходы"
+        },
+        {
+          "id": "d",
+          "text": "Цена проезда до школы"
+        }
+      ]
+    },
+    {
+      "id": "soc_law_002",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "soc_law_responsibility"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какие признаки характерны для правовой нормы?",
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Право формально закреплено, общеобязательно и поддерживается государством."
+        },
+        "full": {
+          "ru": "Право формально закреплено, общеобязательно и поддерживается государством."
+        },
+        "rule": {
+          "ru": "Правовая норма отличается способом установления и обеспечения."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.LAW.RESPONSIBILITY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Формальная определённость"
+        },
+        {
+          "id": "b",
+          "text": "Общеобязательность"
+        },
+        {
+          "id": "c",
+          "text": "Обеспеченность государственным принуждением"
+        },
+        {
+          "id": "d",
+          "text": "Существование только в устной традиции"
+        }
+      ]
+    },
+    {
+      "id": "soc_power_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "soc_politics_rules"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите ветвь власти и типичный федеральный орган.",
+      "answer": [
+        "l1:r2",
+        "l2:r1",
+        "l3:r3"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Разделение властей распределяет основные государственные функции."
+        },
+        "full": {
+          "ru": "Разделение властей распределяет основные государственные функции."
+        },
+        "rule": {
+          "ru": "Соотноси функцию власти с органом, который её реализует."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.POLITICS.RULES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Законодательная"
+        },
+        {
+          "id": "l2",
+          "text": "Исполнительная"
+        },
+        {
+          "id": "l3",
+          "text": "Судебная"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Правительство РФ"
+        },
+        {
+          "id": "r2",
+          "text": "Федеральное Собрание"
+        },
+        {
+          "id": "r3",
+          "text": "Суды"
+        }
+      ]
+    },
+    {
+      "id": "soc_choice_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "soc_economy_choice"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Расположите шаги рационального выбора.",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Сначала определяется цель, затем анализируются варианты и только после этого принимается решение."
+        },
+        "full": {
+          "ru": "Сначала определяется цель, затем анализируются варианты и только после этого принимается решение."
+        },
+        "rule": {
+          "ru": "Рациональный выбор требует последовательного сравнения альтернатив."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.ECONOMY.CHOICE",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Сформулировать цель"
+        },
+        {
+          "id": "b",
+          "text": "Собрать существенную информацию"
+        },
+        {
+          "id": "c",
+          "text": "Сравнить альтернативы и последствия"
+        },
+        {
+          "id": "d",
+          "text": "Выбрать вариант"
+        }
+      ]
+    },
+    {
+      "id": "soc_law_003",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "free_response",
+      "mode": "practice",
+      "skills": [
+        "soc_law_responsibility"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Как одним словом называется система общеобязательных норм, установленных или санкционированных государством?",
+      "answer": [
+        "право"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Это право."
+        },
+        "full": {
+          "ru": "Это право."
+        },
+        "rule": {
+          "ru": "Короткий ответ должен называть понятие по его существенным признакам."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.LAW.RESPONSIBILITY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "soc_need_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "soc_society_institutions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Что из перечисленного относится к социальной потребности человека?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Общение связано с взаимодействием с другими людьми."
+        },
+        "full": {
+          "ru": "Общение связано с взаимодействием с другими людьми."
+        },
+        "rule": {
+          "ru": "Потребности различают по источнику и способу удовлетворения."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.SOCIETY.INSTITUTIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Потребность в общении"
+        },
+        {
+          "id": "b",
+          "text": "Потребность в кислороде"
+        },
+        {
+          "id": "c",
+          "text": "Потребность во сне"
+        },
+        {
+          "id": "d",
+          "text": "Потребность в воде"
+        }
+      ]
+    },
+    {
+      "id": "soc_family_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "soc_society_institutions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какие функции может выполнять семья?",
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Семья воспитывает, ведёт совместное хозяйство и поддерживает членов."
+        },
+        "full": {
+          "ru": "Семья воспитывает, ведёт совместное хозяйство и поддерживает членов."
+        },
+        "rule": {
+          "ru": "Не приписывай институту функции органов государства."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.SOCIETY.INSTITUTIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Воспитательная"
+        },
+        {
+          "id": "b",
+          "text": "Экономическая"
+        },
+        {
+          "id": "c",
+          "text": "Эмоциональная поддержка"
+        },
+        {
+          "id": "d",
+          "text": "Издание федеральных законов"
+        }
+      ]
+    },
+    {
+      "id": "soc_actor_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "soc_economy_choice"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите экономического субъекта и действие.",
+      "answer": [
+        "l1:r3",
+        "l2:r4",
+        "l3:r2",
+        "l4:r1"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "У субъектов экономики разные типичные функции."
+        },
+        "full": {
+          "ru": "У субъектов экономики разные типичные функции."
+        },
+        "rule": {
+          "ru": "Определи роль участника в экономическом обмене."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.ECONOMY.CHOICE",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Домохозяйство"
+        },
+        {
+          "id": "l2",
+          "text": "Фирма"
+        },
+        {
+          "id": "l3",
+          "text": "Государство"
+        },
+        {
+          "id": "l4",
+          "text": "Банк"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Выдаёт кредит"
+        },
+        {
+          "id": "r2",
+          "text": "Устанавливает и собирает налоги"
+        },
+        {
+          "id": "r3",
+          "text": "Покупает товары для личного потребления"
+        },
+        {
+          "id": "r4",
+          "text": "Производит товар на продажу"
+        }
+      ]
+    },
+    {
+      "id": "soc_demo_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "soc_politics_rules"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Какая форма непосредственного участия граждан в принятии государственного решения предполагает голосование по вопросу, а не выбор кандидата?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "На референдуме граждане голосуют по вопросу или проекту решения."
+        },
+        "full": {
+          "ru": "На референдуме граждане голосуют по вопросу или проекту решения."
+        },
+        "rule": {
+          "ru": "Различай выбор представителей и непосредственное решение вопроса."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.POLITICS.RULES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Референдум"
+        },
+        {
+          "id": "b",
+          "text": "Парламентские выборы"
+        },
+        {
+          "id": "c",
+          "text": "Судебное заседание"
+        },
+        {
+          "id": "d",
+          "text": "Перепись населения"
+        }
+      ]
+    },
+    {
+      "id": "soc_rights_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "soc_law_responsibility"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Что относится к конституционным обязанностям гражданина России?",
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Соблюдение законов, уплата налогов и бережное отношение к природе закреплены как обязанности."
+        },
+        "full": {
+          "ru": "Соблюдение законов, уплата налогов и бережное отношение к природе закреплены как обязанности."
+        },
+        "rule": {
+          "ru": "Права дают возможность действия, обязанности требуют определённого поведения."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.LAW.RESPONSIBILITY",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Соблюдать законы"
+        },
+        {
+          "id": "b",
+          "text": "Платить законно установленные налоги"
+        },
+        {
+          "id": "c",
+          "text": "Беречь природу"
+        },
+        {
+          "id": "d",
+          "text": "Обязательно состоять в политической партии"
+        }
+      ]
+    },
+    {
+      "id": "soc_norm_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "soc_society_institutions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите вид социальной нормы и пример.",
+      "answer": [
+        "l1:r2",
+        "l2:r3",
+        "l3:r4",
+        "l4:r1"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Нормы различаются по источнику и способу поддержания."
+        },
+        "full": {
+          "ru": "Нормы различаются по источнику и способу поддержания."
+        },
+        "rule": {
+          "ru": "Определи, кто устанавливает норму и чем обеспечивается её соблюдение."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.SOCIETY.INSTITUTIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Правовая"
+        },
+        {
+          "id": "l2",
+          "text": "Моральная"
+        },
+        {
+          "id": "l3",
+          "text": "Обычай"
+        },
+        {
+          "id": "l4",
+          "text": "Корпоративная"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Правило внутреннего распорядка организации"
+        },
+        {
+          "id": "r2",
+          "text": "Запрет кражи в уголовном законе"
+        },
+        {
+          "id": "r3",
+          "text": "Уступить место пожилому человеку"
+        },
+        {
+          "id": "r4",
+          "text": "Традиция отмечать семейный праздник"
+        }
+      ]
+    },
+    {
+      "id": "soc_demo_002",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "free_response",
+      "mode": "practice",
+      "skills": [
+        "soc_politics_rules"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Как называется общенародное голосование по важному государственному вопросу?",
+      "answer": [
+        "референдум"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Это референдум."
+        },
+        "full": {
+          "ru": "Это референдум."
+        },
+        "rule": {
+          "ru": "Термин определяется по форме участия граждан."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.POLITICS.RULES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "soc_law_004",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "sequence",
+      "mode": "practice",
+      "skills": [
+        "soc_politics_rules"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Расположите упрощённые этапы принятия федерального закона.",
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Закон проходит инициативу, парламентское рассмотрение, подписание и опубликование."
+        },
+        "full": {
+          "ru": "Закон проходит инициативу, парламентское рассмотрение, подписание и опубликование."
+        },
+        "rule": {
+          "ru": "Юридическая процедура важна именно как последовательность."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.POLITICS.RULES",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Внесение законопроекта"
+        },
+        {
+          "id": "b",
+          "text": "Рассмотрение и принятие парламентом"
+        },
+        {
+          "id": "c",
+          "text": "Подписание Президентом"
+        },
+        {
+          "id": "d",
+          "text": "Официальное опубликование"
+        }
+      ]
+    },
+    {
+      "id": "soc_market_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "soc_economy_choice"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Если при прежней цене спрос на товар стал заметно выше предложения, какое давление на цену обычно возникает?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Дефицит при прочих равных создаёт давление на цену вверх."
+        },
+        "full": {
+          "ru": "Дефицит при прочих равных создаёт давление на цену вверх."
+        },
+        "rule": {
+          "ru": "Сопоставляй спрос и предложение при данной цене."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.ECONOMY.CHOICE",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "В сторону роста"
+        },
+        {
+          "id": "b",
+          "text": "В сторону снижения"
+        },
+        {
+          "id": "c",
+          "text": "Цена обязательно станет нулевой"
+        },
+        {
+          "id": "d",
+          "text": "Никакого"
+        }
+      ]
+    },
+    {
+      "id": "soc_socialize_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "multi_choice",
+      "mode": "practice",
+      "skills": [
+        "soc_society_institutions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "К агентам социализации подростка могут относиться:",
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Социализация идёт через разные группы и институты."
+        },
+        "full": {
+          "ru": "Социализация идёт через разные группы и институты."
+        },
+        "rule": {
+          "ru": "Агент социализации передаёт нормы, ценности и модели поведения."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.SOCIETY.INSTITUTIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Семья"
+        },
+        {
+          "id": "b",
+          "text": "Школа"
+        },
+        {
+          "id": "c",
+          "text": "Группа сверстников"
+        },
+        {
+          "id": "d",
+          "text": "Только органы власти"
+        }
+      ]
+    },
+    {
+      "id": "soc_culture_001",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "matching",
+      "mode": "practice",
+      "skills": [
+        "soc_society_institutions"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Соотнесите форму культуры и пример.",
+      "answer": [
+        "l1:r2",
+        "l2:r3",
+        "l3:r1"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Формы культуры различаются по происхождению, аудитории и способу создания."
+        },
+        "full": {
+          "ru": "Формы культуры различаются по происхождению, аудитории и способу создания."
+        },
+        "rule": {
+          "ru": "Смотри на автора, аудиторию и способ распространения."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.SOCIETY.INSTITUTIONS",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "matching_left": [
+        {
+          "id": "l1",
+          "text": "Народная"
+        },
+        {
+          "id": "l2",
+          "text": "Массовая"
+        },
+        {
+          "id": "l3",
+          "text": "Элитарная"
+        }
+      ],
+      "matching_right": [
+        {
+          "id": "r1",
+          "text": "Авторская симфония сложной формы"
+        },
+        {
+          "id": "r2",
+          "text": "Фольклорная песня без известного автора"
+        },
+        {
+          "id": "r3",
+          "text": "Популярный развлекательный телесериал"
+        }
+      ]
+    },
+    {
+      "id": "soc_logic_002",
+      "subject": "social_science",
+      "grade_min": 7,
+      "grade_max": 7,
+      "interaction": "single_choice",
+      "mode": "practice",
+      "skills": [
+        "soc_logic_inference"
+      ],
+      "difficulty": 2,
+      "source": {
+        "competition": "VSOSh-inspired",
+        "region": "RU",
+        "year": "2025-2026 patterns",
+        "original": true
+      },
+      "stimulus": {},
+      "prompt": "Все участники кружка сдали проект. Маша — участница кружка. Что обязательно следует?",
+      "answer": [
+        "a"
+      ],
+      "feedback": {
+        "short": {
+          "ru": "Из общего правила и принадлежности Маши к группе следует, что она сдала проект."
+        },
+        "full": {
+          "ru": "Из общего правила и принадлежности Маши к группе следует, что она сдала проект."
+        },
+        "rule": {
+          "ru": "Не обращай импликацию в обратную сторону."
+        }
+      },
+      "review": {
+        "status": "published"
+      },
+      "knowledge": [
+        {
+          "id": "SOC.LOGIC.INFERENCE",
+          "weight": 1
+        }
+      ],
+      "prerequisites": [],
+      "options": [
+        {
+          "id": "a",
+          "text": "Маша сдала проект"
+        },
+        {
+          "id": "b",
+          "text": "Маша получила высшую оценку"
+        },
+        {
+          "id": "c",
+          "text": "Все сдавшие проект состоят в кружке"
+        },
+        {
+          "id": "d",
+          "text": "Маша руководит кружком"
+        }
+      ]
+    }
+  ]
+}
