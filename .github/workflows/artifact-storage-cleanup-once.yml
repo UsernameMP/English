@@ -1,0 +1,54 @@
+name: One-time Actions artifact storage cleanup
+on:
+  push:
+    paths:
+      - '.github/workflows/artifact-storage-cleanup-once.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Delete Actions artifacts older than 48 hours
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          cutoff="$(date -u -d '48 hours ago' +%s)"
+          deleted=0
+          deleted_bytes=0
+          kept=0
+          tmp="$(mktemp)"
+
+          gh api --paginate "repos/$REPO/actions/artifacts?per_page=100" \
+            --jq '.artifacts[] | [.id,.name,.created_at,.size_in_bytes] | @tsv' > "$tmp"
+
+          while IFS=$'\t' read -r id name created size; do
+            [[ -z "${id:-}" ]] && continue
+            created_epoch="$(date -u -d "$created" +%s)"
+            if (( created_epoch < cutoff )); then
+              gh api -X DELETE "repos/$REPO/actions/artifacts/$id" --silent
+              echo "Deleted: $id | $name | $created | $size bytes"
+              deleted=$((deleted + 1))
+              deleted_bytes=$((deleted_bytes + size))
+            else
+              echo "Kept (<48h): $id | $name | $created | $size bytes"
+              kept=$((kept + 1))
+            fi
+          done < "$tmp"
+
+          {
+            echo "## Actions artifact storage cleanup"
+            echo "Repository: $REPO"
+            echo "Deleted artifacts: $deleted"
+            echo "Deleted bytes: $deleted_bytes"
+            echo "Kept artifacts newer than 48h: $kept"
+            echo "GitHub Releases were not touched."
+          } >> "$GITHUB_STEP_SUMMARY"
